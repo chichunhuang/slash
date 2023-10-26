@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktotem=self.webpackChunktotem||[]).push([[9897],{9196:e=>{e.exports=JSON.parse('{"permalink":"/totem/en/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
