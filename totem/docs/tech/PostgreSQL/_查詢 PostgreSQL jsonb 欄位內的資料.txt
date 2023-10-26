@@ -1,0 +1,262 @@
+
+# 查詢 PostgreSQL jsonb 欄位內的資料
+Skip to end of metadata
+*  jsonb 欄位, 特性是不需限定 table 欄位個數,  對儲存動態資料非常好用, 也可以說是帶入 NoSQL 的特性
+
+
+* PostgreSQL 9.4 版之後加入 jsonb 資料格式, 與原先的 json 資料格式相比較
+
+* 缺點
+所佔的空間較大
+insert 可能要花比較久的時間 (需要轉換)
+資料存入會自動做排序, 要維持原有順序請以 json array 存入
+
+* 優點
+查詢比較有效率
+可以建 index 加速查詢
+
+
+## 如何查詢 jsob 欄位的資料
+* 目的  probe_set_id : result 轉為 json 物件, 儲存在 jsonb 欄位內
+
+* table 結構如下
+<code>
+--table: vcf_result
+create table vcf_result (
+  id serial primary key, sample_id text, json_data jsonb   
+);
+
+-- 註: id 欄位加上 "serial", PostgreSQL 會自動幫忙建立 sequence, 不用自己建立
+</code>
+
+
+
+## 查詢資料所佔空間
+<code>
+--query table size
+SELECT pg_size_pretty(pg_table_size('vcf_result'));
+ 
+--result
+ pg_size_pretty
+----------------
+ 6952 kB
+(1 row)
+ 
+--query jsonb column total size / average size
+select
+  pg_size_pretty( sum(pg_column_size(json_data)) ) as json_total_size
+  , pg_size_pretty( avg(pg_column_size(json_data)) ) as json_average_size
+from vcf_result;
+ 
+--result
+ json_total_size |      json_average_size
+-----------------+-----------------------------
+ 6051 kB         | 2181.5911971830985915 bytes
+(1 row)
+</code>
+
+
+## 也可以用 psql 指令查詢
+<code>
+tpmi_3=# \dt+ vcf_result
+                      List of relations
+ Schema |    Name    | Type  | Owner |  Size   | Description
+--------+------------+-------+-------+---------+-------------
+ public | vcf_result | table | tpmi  | 6952 kB |
+(1 row)
+</code>
+
+
+## 檢視 jsonb 資料內容
+* json 物件格式
+<code>
+select jsonb_pretty(json_data) from vcf_result where id = 1
+ 
+--result
+{
+    "AX-11087145": "1/1",
+    "AX-11090493": "0/1",
+    "AX-11276237": "0/1",
+    "AX-11344563": "0/1",
+    "AX-11344636": "1/1",
+    "AX-11344850": "0/1",
+    ...
+}
+</code>
+
+
+## table column 格式
+<code>
+select t.key as probe_set_id, t.value as result
+from vcf_result q, jsonb_each_text(json_data) t 
+where q.id = 1;
+ 
+--result
+ probe_set_id | result
+--------------+--------
+ AX-11087145  | "1/1"
+ AX-11090493  | "0/1"
+ AX-11276237  | "0/1"
+ AX-11344563  | "0/1"
+ AX-11344636  | "1/1"
+ AX-11344850  | "0/1"
+ ...
+ 
+--trim() double quotes from jsonb column
+select t.key as probe_set_id, t.value as result
+from vcf_result q, jsonb_each_text(json_data) t 
+where q.id = 1;
+ 
+--result
+ probe_set_id | result
+--------------+--------
+ AX-11087145  | 1/1
+ AX-11090493  | 0/1
+ AX-11276237  | 0/1
+ AX-11344563  | 0/1
+ AX-11344636  | 1/1
+ AX-11344850  | 0/1
+ ...
+</code>
+
+##  查詢 jsonb 欄位內的資料筆數
+
+
+<code>
+select a.sample_id, count(t)
+from vcf_result a, jsonb_object_keys(a.json_data) t
+group by a.sample_id
+order by a.sample_id;
+ 
+--result
+ sample_id | count
+-----------+-------
+ 1-1       |   328
+ 1-10      |   343
+ 1-11      |   294
+ 1-12      |   237
+ 1-13      |   206
+ 1-14      |   322
+ 1-15      |   279
+ ...
+ 
+ -- 註: 這裡的 sql 寫法比較特別, 是用 jsonb_object_keys() 列出 jsonb 內所有的 json key, 然後去加總數量
+</code>
+
+
+##  如果指定 json key 來查詢內容, 這時候可以 jsonb 物件, 或是文字來查
+<code>
+--return jsonb
+select json_data -> 'AX-11087145' as probe_set_id
+from vcf_result
+where id = 1;
+ 
+ 
+--another query type
+select json_data #> '{"AX-11087145"}' as probe_set_id
+from vcf_result
+where id = 1;
+</code>
+
+
+<code>
+--return text
+select json_data ->> 'AX-11087145' as probe_set_id
+from vcf_result
+where id = 1;
+ 
+ 
+--another query type
+select json_data #>> '{"AX-11087145"}' as probe_set_id
+from vcf_result
+where id = 1
+</code>
+
+##  指定條件查詢
+<code>
+--用 '->' 查詢, 要對每個 json key 分別產生常用的 b-tree index
+select *
+from vcf_result
+where json_data -> 'AX-83301932' is not null
+ 
+--用 '?' 查詢, 可以用 gin index, 不需分別建立
+select *
+from vcf_result
+where json_data ? 'AX-83301932'
+ 
+--用 '@>' 查詢, 可以用 gin index, 不需分別建立
+select count(*)
+from vcf_result
+where json_data @> '{"AX-83301932":"2/1"}'
+ 
+--測試: 建立 gin index, 可用在 '?' 或 '@>' 查詢
+CREATE INDEX idx_vcf_result_gin ON vcf_result USING GIN (json_data);
+--drop index idx_vcf_result_gin;
+analyze vcf_result;
+select * from pg_indexes where tablename = 'vcf_result';
+ 
+--5072 kB
+select pg_size_pretty(pg_indexes_size('vcf_result'));
+</code>
+
+
+##  查詢與 RET 基因相關的資料
+* 需要先把 clinva 與疾病有關的 probe_set_id 輸入資料庫
+<code>
+--clinva data in table: probset_disease
+select probe_set_id from probset_disease where clinvargenename = 'RET'
+order by probe_set_id;
+ 
+--result
+ probe_set_id
+--------------
+ AX-118434594
+ AX-118434595
+ AX-118482480
+ AX-118482482
+ AX-168642107
+ AX-168642135
+ ...
+</code>
+
+
+## 查詢 RET 相關 probe_set_id, 並忽略掉 "./." 的資料 
+<code>
+select * from
+(
+select id, sample_id
+, t.key as probe_set_id
+, t.value as alter
+from vcf_result q, jsonb_each_text(json_data) t 
+where t.key in (
+    (
+        select probe_set_id from probset_disease where clinvargenename = 'RET'
+    )
+)
+ 
+) q
+where alter <> './.'
+order by id;
+ 
+--result
+  id  |   sample_id    | probe_set_id | alter
+------+----------------+--------------+-------
+    3 | 1-12           | AX-83491391  | 0/1
+   16 | 1-24           | AX-83491391  | 0/1
+   28 | 1-35           | AX-90057622  | 0/1
+   53 | 1-58           | AX-86704876  | 0/1
+   53 | 1-58           | AX-179113319 | 0/1
+   53 | 1-58           | AX-179132104 | 0/1
+   57 | 1-61           | AX-86704876  | 0/1
+   79 | 1-81           | AX-86704876  | 0/1
+   81 | 1-83           | AX-83491391  | 0/1
+   97 | 100010         | AX-179113319 | 0/1
+   97 | 100010         | AX-179132104 | 0/1
+   98 | 100011         | AX-86704876  | 0/1
+   98 | 100011         | AX-179113319 | 0/1
+</code>
+
+##  
+<code>
+
+</code>

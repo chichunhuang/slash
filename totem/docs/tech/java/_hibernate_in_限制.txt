@@ -1,0 +1,79 @@
+
+## ??
+
+Hibernate支援的 in-collection 查詢最多只有1000個。例如有一個2000人的user清單，現在想找出 user table中不在此清單中的user，通常寫法是
+
+from User u where u.username not in (:userList)
+
+但是userList的長度不能超過1000，否則在執行期就會出錯。
+
+所以只好用一個抽象類別，將userList切割開來查詢:
+
+```
+abstract class QuerySpliter<T1, T2> {
+
+    private int span;
+
+
+
+    public abstract List<T2> doQuery(List<T1> queryParams);
+
+
+
+    public QuerySpliter(int span) {
+
+        this.span = span;
+
+    }
+
+
+
+    public List<T2> query(List<T1> queryParams) {
+
+        List<T2> ret = Lists.newArrayList();
+
+
+
+        int n = 0;
+
+
+
+        while (true) {
+
+            if (n + span > queryParams.size()) {
+
+                ret.addAll(doQuery(queryParams.subList(n, queryParams.size())));
+
+                break;
+
+            }
+
+
+
+            ret.addAll(doQuery(queryParams.subList(n, n += span)));
+
+        }
+
+
+
+        return ret;
+
+    }
+
+}
+
+//Example
+
+List<User> foundUsers = new QuerySpliter<String, User>(900) {
+
+            @Override
+
+            public List<User> doQuery(List<String> subUserList) {
+
+                return userDAO.findUsersInNameList(subUserList);
+
+            }
+
+        }.query(fullUserList);
+```
+

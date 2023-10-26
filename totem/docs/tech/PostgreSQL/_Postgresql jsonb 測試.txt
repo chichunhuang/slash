@@ -1,0 +1,296 @@
+# Postgresql jsonb 練習
+
+## json 的特性:
+* 不保證順序, 要維持順序請放在陣列裏
+* key重複的時候, 以後面的為主
+
+## 在比較的時候需要注意
+<code>
+"->" object
+"->>" object field as text
+"#>" object at specified path
+"#>>" object at specified path as text
+  
+select raw_data -> '健康參與者調查問卷' as qn
+from data_land_test
+where id = 1
+ 
+select raw_data ->> '健康參與者調查問卷' as qn
+from data_land_test
+where id = 1
+ 
+select raw_data #> '{"健康參與者調查問卷"}'
+from data_land_test
+where id = 1
+</code>
+
+
+## 也可以這樣搜尋
+<code>
+--找出下列路徑下資料: '調查問卷', 'BIRTH_DATE'
+select * from json_extract_path(
+ '{ "調查問卷": { "Release_No":1, "FOLLOW":0, "SURVEY_DATE":0, "BIRTH_DATE":1, "AGE":0, "SEX":0 } }'
+, '調查問卷', 'BIRTH_DATE'
+ )
+</code>
+
+
+## 統計 jsonb 裏面 key 的數量
+<code>
+--列出最外層的 key
+select jsonb_object_keys(raw_data) as crf_name
+from data_land_test
+where id = 1
+  
+--573
+select array_length(array_agg(OA.key), 1)
+from (
+select jsonb_object_keys( raw_data -> '健康參與者調查問卷' ) as key
+from data_land_test
+where id = 1
+) OA
+  
+--29
+select array_length(array_agg(HC.key), 1)
+from (
+select jsonb_object_keys( raw_data -> '肺功能資料' ) as key
+from data_land_test
+where id = 1
+) HC
+  
+--28
+select array_length(array_agg(PF.key), 1)
+from (
+select jsonb_object_keys( raw_data -> '體檢記錄單' ) as key
+from data_land_test
+where id = 1
+) PF
+  
+--84
+select array_length(array_agg(LD.key), 1)
+from (
+select jsonb_object_keys( raw_data -> '長庚檢驗-基本項目' ) as key
+from data_land_test
+where id = 1
+) LD
+</code>
+
+
+## 下 sql 查詢時, 似乎轉成文字格式比較不會遇到怪問題
+<code>
+-- better compared in text form
+select count(*)
+from data_land_test
+where
+raw_data -> '健康參與者調查問卷' -> 'FOLLOW' = '0'
+and raw_data -> '體檢記錄單' -> 'Z_SCORE' = '0'
+and raw_data -> '肺功能資料' -> 'VC_HT' = '0'
+and raw_data -> '長庚檢驗-基本項目' -> 'Urine_MicroALB_Note' = '0'
+ 
+select ( raw_data -> '健康參與者調查問卷' -> 'Release_No' ) as qn
+from data_land_test
+where
+raw_data -> '健康參與者調查問卷' -> 'FOLLOW' = '0'
+and raw_data -> '體檢記錄單' -> 'Z_SCORE' = '0'
+and raw_data -> '肺功能資料' -> 'VC_HT' = '0'
+and raw_data -> '長庚檢驗-基本項目' -> 'Urine_MicroALB_Note' = '0'
+</code>
+
+
+## Add or remove jsonb key/value
+<code>
+--concatenate or replace
+SELECT '{"name": "Jane", "contact": {"fax": "0000","phone": "01234 567890", "mobile": "07890 123456"}}'::jsonb || '{"contact": {"fax": "01987 654321"}}'::jsonb
+ 
+--concatenate or replace
+SELECT '{"name": "Jane", "contact": {"fax": "0000","phone": "01234 567890", "mobile": "07890 123456"}}'::jsonb || '{"email": "aaa@bbb.com"}'::jsonb
+  
+--jsonb_set: replace
+SELECT jsonb_set('{"name": "Jane", "contact": {"fax": "0000","phone": "01234 567890", "mobile": "07890 123456"}}'::jsonb,'{contact,fax}', '"1111"'::jsonb);
+ 
+--jsonb_set: add
+SELECT jsonb_pretty(
+jsonb_set('{"name": "Jane", "contact": {"fax": "0000","phone": "01234 567890", "mobile": "07890 123456"}}'::jsonb,'{contact,email}', '"aaa@bbb.com"'::jsonb)
+)
+ 
+-- remove
+SELECT '{"name": "James", "contact": {"phone": "01234 567890", "fax": "01987 543210"}}'::jsonb #- '{contact,fax}';
+ 
+-- remove
+SELECT '["red","green","blue"]'::jsonb - 0;
+ 
+-- remove with specified path
+SELECT '{"name": "James", "contact": {"phone": "01234 567890", "fax": "01987 543210"}}'::jsonb #- '{contact,fax}';
+ 
+-- remove with specified path
+SELECT '{"name": "James", "aliases": ["Jamie","The Jamester","J Man"]}'::jsonb #- '{aliases,0}';
+</code>
+
+
+## Index 測試 
+* Postgresql index 預設格式為 btree, 也可選用 hash 等其他格式
+<code>
+--create index, default: btree
+CREATE INDEX idx_data_land_test_001 ON data_land_test ((raw_data -> '健康參與者調查問卷'  -> 'FOLLOW'));
+CREATE INDEX idx_data_land_test_002 ON data_land_test ((raw_data -> '體檢記錄單' -> 'Z_SCORE'));
+CREATE INDEX idx_data_land_test_003 ON data_land_test ((raw_data -> '肺功能資料' -> 'VC_HT'));
+CREATE INDEX idx_data_land_test_004 ON data_land_test ((raw_data -> '長庚檢驗-基本項目' -> 'Urine_MicroALB_Note'));
+ 
+--list index on table
+select * from pg_indexes where tablename = 'data_land_test';
+ 
+--index total size
+SELECT pg_size_pretty(pg_indexes_size('data_land_test'));
+  
+--table size
+SELECT pg_size_pretty(pg_table_size('data_land_test'));
+  
+--測試所用的 sql
+select ( raw_data -> '健康參與者調查問卷' -> 'Release_No' ) as oa
+, ( raw_data -> '長庚檢驗-基本項目' -> 'RBC' ) as ld
+from data_land_test
+where
+raw_data -> '健康參與者調查問卷' -> 'FOLLOW' = '0'
+and raw_data -> '體檢記錄單' -> 'Z_SCORE' = '0'
+and raw_data -> '肺功能資料' -> 'VC_HT' = '0'
+and raw_data -> '長庚檢驗-基本項目' -> 'Urine_MicroALB_Note' = '0'
+</code>
+
+
+## GIN Index
+* 可使用 GIN Index (Generalized Inverted Index)    
+* [json indexing](https://www.postgresql.org/docs/9.5/static/datatype-json.html#JSON-INDEXING)    
+* [functions-json](https://www.postgresql.org/docs/9.5/static/functions-json.html)
+* GIN indexes do not work with any jsonb operators EXCEPT ? ?& ?| @>  
+
+<code>
+--default jsonb_ops, 可用 ? ?& ?| @>
+CREATE INDEX idx_data_land_test_001 ON data_land_test USING GIN (raw_data);
+  
+--jsonb_path_ops 只能用 @>, 但速度快很多
+CREATE INDEX idx_data_land_test_001 ON data_land_test USING GIN (raw_data jsonb_path_ops);
+</code>
+
+
+## 測試所用的 sql 
+<code>
+--Test A
+select count(*)
+from data_land_test
+where
+raw_data @> '{"健康參與者調查問卷": {"FOLLOW": 0} }'::jsonb
+  
+--Test B
+select count(*)
+from data_land_test
+where
+    raw_data @> '{"健康參與者調查問卷": {"FOLLOW": 0} }'::jsonb
+and raw_data @> '{"體檢記錄單": {"Z_SCORE": 0} }'::jsonb
+and raw_data @> '{"肺功能資料": {"VC_HT": 0} }'::jsonb
+and raw_data @> '{"長庚檢驗-基本項目": {"Urine_MicroALB_Note": 0} }'::jsonb
+  
+--Test C
+select ( raw_data -> '健康參與者調查問卷' -> 'Release_No' ) as oa
+, ( raw_data -> '長庚檢驗-基本項目' -> 'RBC' ) as ld
+from data_land_test
+where
+    raw_data @> '{"健康參與者調查問卷": {"FOLLOW": 0} }'::jsonb
+and raw_data @> '{"體檢記錄單": {"Z_SCORE": 0} }'::jsonb
+and raw_data @> '{"肺功能資料": {"VC_HT": 0} }'::jsonb
+and raw_data @> '{"長庚檢驗-基本項目": {"Urine_MicroALB_Note": 0} }'::jsonb
+</code>
+
+
+## 避免用空的 {} 做查詢, 速度非常慢
+<code>
+--gin jsonb_path_ops: Total query runtime: 8.3 secs
+--very slow while not containing any values! e.g. {"key": {}}
+select count(*)
+from data_land_test
+where
+    raw_data @> '{"健康參與者調查問卷": {} }'::jsonb
+and raw_data @> '{"體檢記錄單": {"Z_SCORE": 0} }'::jsonb
+and raw_data @> '{"肺功能資料": {} }'::jsonb
+and raw_data @> '{"長庚檢驗-基本項目": {"Urine_MicroALB_Note": 0} }'::jsonb
+</code>
+
+
+## 也可以建立 view, 以一般方式來查詢資料
+<code>
+--建立調查問卷用的 view: json_view_crf
+do
+$$
+declare
+  p_keys text;
+  l_keys text;
+begin
+   drop view if exists json_view_crf cascade;
+  
+   select 'id, subject_code, visit, sds_id, ' into p_keys;
+  
+   select string_agg(distinct format('raw_data -> ''健康參與者調查問卷'' -> %L as %s',jkey, jkey), ', ')
+     into l_keys
+   from data_land_test, jsonb_object_keys(raw_data -> '健康參與者調查問卷') as t(jkey)
+   where id = 1;
+  
+   p_keys := p_keys || l_keys;
+  
+   execute 'create view json_view_crf as select ' || p_keys || ' from data_land_test';
+end;
+$$
+;
+  
+--建立長庚檢驗用的 view: json_view_cgmh
+do
+$$
+declare
+  p_keys text;
+  l_keys text;
+begin
+   drop view if exists json_view_cgmh cascade;
+  
+   select 'id, subject_code, visit, sds_id, ' into p_keys;
+  
+   select string_agg(distinct format('raw_data -> ''長庚檢驗-基本項目'' -> %L as %s',jkey, jkey), ', ')
+     into l_keys
+   from data_land_test, jsonb_object_keys(raw_data -> '長庚檢驗-基本項目') as t(jkey)
+   where id = 1;
+  
+   p_keys := p_keys || l_keys;
+  
+   execute 'create view json_view_cgmh as select ' || p_keys || ' from data_land_test';
+end;
+$$
+;
+</code>
+
+
+## 
+<code>
+
+</code>
+
+
+## 
+<code>
+
+</code>
+
+
+## 
+<code>
+
+</code>
+
+
+## 
+<code>
+
+</code>
+
+
+## 
+<code>
+
+</code>
+

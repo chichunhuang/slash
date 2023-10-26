@@ -1,0 +1,15 @@
+
+## tomcat hide version
+* 老機器、老系統、老版本一切都是千年老妖等級......但依舊法力無邊。
+* 總統府資安稽核員不滿意。也懶得給客製化的 ErrorPage。那只好偷吃步了......
+* 直接隱藏版本看你怎麼開 NC。
+
+* %SPECROOT%\tomcat\conf\Server.xml
+
+<Host>
+<!-- tomcat 錯誤畫面不顯示版本 -->
+<Valve className="org.apache.catalina.valves.ErrorReportValve"
+    showReport="false"
+    showServerInfo="false"/>
+
+</Host>

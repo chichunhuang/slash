@@ -1,0 +1,114 @@
+Parallel Query
+9.6 版開始提供
+CPU 平行處理提升查詢速度
+大約可提升 2-4 倍速度
+如果由大量資料中過濾出少量資料, 加速效果最顯著
+系統會自行判斷是否該用
+ 
+
+設定方法
+修改 postgresql.conf 內的參數, 然後重啟 postgresql
+
+max_parallel_workers_per_gather: 設定大於 0 即可, 一般為 2 ~ 8
+
+force_parallel_mode: (非必須), 預設為 off, 設定為 on 可強制系統使用 parallel query, 但效果不一定好
+
+ 
+
+使用限制 
+目前 9.6 / 10 無法在下列狀況使用 Parallel Query
+
+writes any data or locks any database rows, CTE
+PL/pgSQL cursor, for loop
+user-defined functions are marked PARALLEL UNSAFE by default (can be modified to SAFE)
+The transaction isolation level is serializable (也就是連query都會被lock)
+query is running inside of another query
+ 
+
+用之前的資料來測試
+
+--SET max_parallel_workers_per_gather TO 4;
+show max_parallel_workers_per_gather
+  
+--SET force_parallel_mode TO on;
+show force_parallel_mode
+  
+SELECT pg_size_pretty(pg_indexes_size('data_land_test'));
+ 
+select * from pg_indexes where tablename = 'data_land_test';
+  
+--2.6 secs (w/o Parallel Query: 4.8 secs)
+select count(*)
+from json_view_cgmh
+where
+visit = 'Baseline'
+and AC_GLUCOSE_Ref_1 = '0'
+and ANTI_HBS_AB_1 = '0'
+and microALB = '0'
+and WBC_Ref_2 = '0'
+  
+explain analyse select count(*) from sds_view where ecrf_data is not null;
+ 
+explain analyse select count(id) from sample where sample_type_id = 0;
+ 
+explain analyse select project_spec_id, count(id) from sample where project_spec_id < 10 group by project_spec_id;
+ 
+EXPLAIN analyse SELECT subject_id, count(*) FROM sample WHERE subject_id >15000 and subject_id < 50000 GROUP BY subject_id;
+ 
+EXPLAIN analyse select sample_type_id, count(id) from sample where sample_type_id < 5 group by sample_type_id;
+ 
+--demo: Parallel Index Scan
+explain analyse select count(id) from sample where id > 400000 and id < 600000;
+ 
+
+Postgres 10 可配合 index 運作 參考資料
+
+
+show max_parallel_workers_per_gather
+ 
+--create testing data
+CREATE TABLE foo AS SELECT row_number() OVER() AS id, generate_series%100 AS c_100, generate_series%500 AS c_500 FROM generate_series(1,20000000);
+ 
+ALTER TABLE foo ADD CONSTRAINT pk_foo PRIMARY KEY (id);
+ 
+CREATE INDEX idx_foo ON foo (c_100);
+ 
+--table size
+SELECT pg_size_pretty(pg_table_size('foo'));
+ 
+--list all index on table
+select * from pg_indexes where tablename = 'foo';
+ 
+--Parallel Index-Only Scan
+EXPLAIN SELECT count(*) FROM foo WHERE id >10 AND id < 500000;
+ 
+--Parallel Index Scan
+EXPLAIN SELECT count(c_100) FROM foo WHERE id < 5000000;
+ 
+--Parallel Bitmap Heap Scan
+EXPLAIN SELECT count(*), c_100 FROM foo WHERE c_100 <10 GROUP BY c_100;
+ 
+--SubPlan
+EXPLAIN SELECT * FROM foo WHERE c_100 NOT IN (SELECT c_500 FROM foo GROUP BY c_500 HAVING c_500 <5);
+ 
+--Parallel Merge Join / Gather Merge
+EXPLAIN SELECT count(*) FROM foo f1 INNER JOIN foo f2 ON f2.c_100 = f1.c_100;
+ 
+--PREPARE / EXECUTE statement
+PREPARE pr_1 AS SELECT count(*) FROM foo WHERE id < 5000000;
+EXPLAIN EXECUTE pr_1;
+ 
+
+ 
+
+ 
+
+參考資料: 
+
+[官網 parallel-query 說明](https://www.postgresql.org/docs/10/static/parallel-query.html)
+
+[PostgreSQL 10 Parallel Queries and Performance](https://blog.rustprooflabs.com/2018/02/pg10_parallel_queries)
+
+[What’s new in PostgreSQL 10? Part 1 – Additional Parallelism.](https://postgrespro.co.il/blog/whats-new-in-postgresql-10-part-1-additional-parallelism/)
+
+ 
