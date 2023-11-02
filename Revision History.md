@@ -19,7 +19,7 @@
 ![GitHub Personal access token](https://i.stack.imgur.com/NSDoK.jpg "NSDoK.jpg") 
 * Steps
     * at upper right, click Personal Icon > 
-    * Settings > Developer settings (left down) > Personal Access Tokens > Tokens (class)
+    * Settings > Developer settings (lower down) > Personal Access Tokens > Tokens (class)
     * Generate new token
     * Set Note
     * Set Expired Date
