@@ -14,7 +14,7 @@ import logo from "@site/static/img/800_374.jpg";
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx( styles.heroBanner)}  style={{backgroundImage: `url('../../totem/img/bg_Plain_SVG.svg')`}}  >
+    <header className={clsx( styles.heroBanner)}  style={{backgroundImage: `url('../../slash/img/bg_Plain_SVG.svg')`}}  >
       <div className="container">
 	    
 		<img src={logo} />
