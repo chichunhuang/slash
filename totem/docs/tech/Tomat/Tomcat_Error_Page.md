@@ -9,8 +9,9 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * [於 Tomcat 進行全域設定，Container下所有 WeApps 接生效](#global-setting)
 * [針對單一 Application 設定](#ap-only-id)
 * [若單純只想隱藏 Tomcat 錯誤資訊，不想客製的話...](./Hide_Tomcat_Version)
+* [Web Container 其他常見客製化錯誤頁設定範例](#full-examples)
 
-# Tomcat 錯誤頁全域設定 {#global-setting}
+# Tomcat 錯誤頁全域設定 <span id="global-setting"></span>
 
 1. 此處以 404 錯誤頁為範例，其他錯誤頁設定方式相同。
 1. 先準備一個自訂的404.html頁面.例如: customized404.html
@@ -34,7 +35,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 ---
 
-# 單一 Application 設定 {#ap-only-id}
+# 單一 Application 設定 <span id="ap-only-id"></span>
 1. 先準備客製好的錯誤頁 
     * 專案根目錄下相對應資料夾建立 /pages/customized404.html
 1. 單一 App 則在在專案的 web.xml 中加入下列設定即可。
@@ -72,7 +73,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 ---
       
-# Web Container 其他常見客製化錯誤頁設定範例
+# Web Container 其他常見客製化錯誤頁設定範例<span id="full-examples"></span>
 
 <CodeBlock text={`
 
