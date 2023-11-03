@@ -67,7 +67,9 @@ server.xml
       
 context.xml
 <CodeBlock text={`
+<Context>
     <CookieProcessor className="org.apache.tomcat.util.http.Rfc6265CookieProcessor" sameSiteCookies="strict" />      
+</Context>    
     `}
       language='xml'
       showLineNumbers='true'
@@ -97,7 +99,10 @@ $.cookie("testName", "Test Name",{ expires : 365, path: "/;SameSite=Lax"});
 ```
 
 ```
-html: not working 
+html: 
+sameSite not working 
+secure OK (JSESSIONID OK, 但其他無用)
+
    $.cookie("showLeftColumn", $("#leftColumn").is(":visible"), { expires: 30, path: '/', secure: true, sameSite: 'strict' });
 
 ```
