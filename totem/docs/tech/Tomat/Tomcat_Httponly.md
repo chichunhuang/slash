@@ -24,11 +24,16 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 ---
 
 # Secure 用途 <span id="Secure-id"></span>
+> Secure 設為 true 意味著 Cookie 僅能在加密的管道使用。
+> 舉例來說，降低風險的機制為當一個 https 網站若被嵌在 http 的釣魚網站內時。因為 Cookie 被限制只能在 https 之下使用。
+> 所以釣魚網站部分功能會失效。若是該 Cookie 為 Session Cookie (如: JSESSIONID)則會自動被登出。
 
 
 ---
 
 # SameSite 用途 <span id="SameSite-id"></span>
+> 同源，這邊解釋就更容易理解了。Cookie 無法跨 Domain 使用。所以當網站被內嵌時，
+> 由於釣魚網站的網址 Domain 是偽造的一定與原始網站不同。因此無法取用 Cookies。
 
 
 ---
