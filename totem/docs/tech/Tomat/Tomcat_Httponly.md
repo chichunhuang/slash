@@ -11,8 +11,8 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Tomcat 中與 JSESSIONID/Cookie 相關案全性設定
 * 主要會討論到下列三項
-    * [HttpOnly](#HttpOnly-id) : Cookie 僅能經由 Http(s) Protocol 存取。
-    * [Secure](#Secure-id) : Cooki 僅能在加密的連下情境下使用。
+    * [HttpOnly](#HttpOnly-id) : 限制 Cookie 僅能經由 Http(s) Protocol 存取。
+    * [Secure](#Secure-id) : Cookie 僅能在加密的連下情境下使用。
     * [SameSite](#SameSite-id) : 同源，Cookie 不能跨網站分享。
 
 # HttpOnly 用途 <span id="HttpOnly-id"></span>
