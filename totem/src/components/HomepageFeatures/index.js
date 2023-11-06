@@ -15,7 +15,7 @@ const FeatureList = [
   },
   {
     title: 'About Me',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
         曾經以為自己會當一個生物學家，後來發現生物學家總是用老方法做事。所以開始開發系統輔佐生物學家進行研究。
@@ -24,7 +24,7 @@ const FeatureList = [
   },
   {
     title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
         這是一個網路筆記部落格，主要是使用 React 加 Docusaurus 製作。
