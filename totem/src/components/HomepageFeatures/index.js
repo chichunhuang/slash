@@ -4,22 +4,21 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Friendships',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+      <>	  
+	  	 <a href="https://chichunhuang.github.io/burning/">Burny's Gallery </a> : 布妮的美術作品區<br/>
+	  	 <a href="https://chichunhuang.github.io/rain/">Rain's Math Zone </a> : Rain 的學習紀錄	   
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'About Me',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        曾經以為自己會當一個生物學家，後來發現生物學家總是用老方法做事。所以開始開發系統輔佐生物學家進行研究。
       </>
     ),
   },
@@ -28,8 +27,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        這是一個網路筆記部落格，主要是使用 React 加 Docusaurus 製作。
       </>
     ),
   },

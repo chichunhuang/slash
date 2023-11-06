@@ -6,7 +6,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
-import logo from "@site/static/img/800_374.jpg";
+import logo from "@site/static/img/insect_totem_800_374.jpg";
 
 
 
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Insect Totem">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
