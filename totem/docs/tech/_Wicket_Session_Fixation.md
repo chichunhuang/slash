@@ -1,22 +1,34 @@
-!! Session Fixation 的非正規處理方式
-* 非正規: 因為還是會被工具掃出來。下列方法僅是降低被駭的機會。
+---
+title: 【非正規Session Fixation處理】
+description: 降低風險，並未完全即時
+keywords: [Session Fixation]
+---
 
-1. log in => replace Session
-* replace : 更換 Session(Session 還活著), 其他 cookies 會一併被清除。
+
+# Session Fixation 的非正規處理方式
+* 非正規: 因為還是會被工具掃出來。下列方法僅是降低被駭的機會。
+* 調整概念:
+    * 強行更換 JSESSIONID 值，縮短 ID 的效期。就讓你偷吧!我頻繁更換 key 總行了吧
+    * 離開頁面時，殺死當前 SESSION
+    * Container 縮短 Session Timeout 時間
+    * JSESSIONID 偽裝
+
+## 強行更換 JSESSIONID
+* 以 Wicket Framework 為範例
+
 ```
-// LoginPage.java
 
 SignInPanel {
   public String signIn(String username, String password) throws AuthenticationException {
-		//...
+        //更換 Session(Session 還活著), 其他 cookies 會一併被清除。
 		getBaseSession().replaceSession();
   }
 }
 
 ```
 
-
-2. switch dest => terminate session
+## 離開頁面時，殺死當前 SESSION。
+* 
 * invalidete : 整個 Session 被摧毀
 
 ```
