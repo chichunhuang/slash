@@ -135,9 +135,11 @@ UseDNS no
 
 ## 建置後佈署所需設定
 * 我們這邊習慣是在 Jenkins 呼叫 ant 作業，以建立應用程式的打包作業。然後將相關檔案佈署到其他機器中。
-* 例如佈署tar.gz檔案到練習機時，是使用scp指令，這時練習機的ip必須事先寫在~/.ssh/config裡.以下是現有的config內容:
+* 例如以 scp 佈署 doraemon-10-10-10.tar.gz 檔案到練習機時，此時練習機的 ip 需設定在 ~/.ssh/config。
 
 ```
+ex: 
+
 host doraemon_ex
     hostname demo-doraemon.cartoon.org
     user server
@@ -145,12 +147,11 @@ host doraemon_ex
 host hunter_ex
     hostname demo-hunter.cartoon.org
     user server
- 
 
 ```
 
-* 完成後還必須更新各練習機上"~/.ssh/authorized_hosts"裡ci的公鑰.
-  * 如果ci上沒有'~/.ssh/id_rsa.pub'，執行'ssh-keygen'指令以產生公私鑰.
+* 完成後還必須更新各練習機上 "~/.ssh/authorized_hosts" 裡 ci 的公鑰。
+  * 如果 ci 上沒有'~/.ssh/id_rsa.pub'，執行 'ssh-keygen' 指令以產生公私鑰。
   * 執行下列指令，將公鑰匯到各練習機(將"EX_HOST"換成各練習機的IP或"~/.ssh/config"裡的別名):
 
 ```
@@ -171,16 +172,16 @@ iface lo inet loopback
 auto eth0
  
 iface eth0 inet static
-        address 192.168.6.176
+        address 192.168.X.176
         netmask 255.255.255.0
-        network 192.168.6.0
-        broadcast 192.168.6.255
-        gateway 192.168.6.253
+        network 192.168.X.0
+        broadcast 192.168.X.255
+        gateway 192.168.X.253
         metric 100
         dns-nameservers 8.8.8.8 192.168.19.10 192.168.19.12 192.168.9.254
 
 ```
-* 在家目錄"/home/server"下建一目錄"repository"，供BioinfoUtil.jar，Wicket*Util.jar存放.
+* 在家目錄 "/home/server" 下建一目錄 "repository"，供 Team*Util.jar，Wicket*Util.jar 等工具 jar 檔存放.
 
 
 
@@ -188,7 +189,7 @@ iface eth0 inet static
 
 ## 安裝所需軟體
 * JDK 7， ant 1.8， tomat 7安裝與設定.(參考<a href="http://jira.abc.def.org/confluence/display/XP/PinokioInstall">Pinokio練習機安裝</a>，"安裝Ant， "安裝 JDK6 64位元版本"， "安裝Apache Tomcat7"3個小節.
-* Odyssey的整合測試(Odyssey-Integration)需要額外的jar檔"jsch-0.1.51.jar"，放置在"ANT_HOME/lib".
+* odersea 的整合測試(odersea-Integration)需要額外的jar檔"jsch-0.1.51.jar"，放置在"ANT_HOME/lib".
 * 設定練習機的hostname
 * Postgresql XX.XX安裝與設定
   * 由套件庫安裝PostgreSQL XX.XX
