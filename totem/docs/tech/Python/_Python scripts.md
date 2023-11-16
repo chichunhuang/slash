@@ -7,7 +7,7 @@ keywords: [keywords, describing, the main topics]
 
 
 ## 【Python scripts】
-[https://jira.ncgm.sinica.edu.tw/confluence/pages/viewpage.action?spaceKey=~teddyyen&title=Python+scripts](https://jira.ncgm.sinica.edu.tw/confluence/pages/viewpage.action?spaceKey=~teddyyen&title=Python+scripts)
+[https://jira.abc.edf.org/confluence/pages/viewpage.action?spaceKey=~teddyyen&title=Python+scripts](https://jira.abc.edf.org/confluence/pages/viewpage.action?spaceKey=~teddyyen&title=Python+scripts)
 
 
 ## loc / iloc 在 loop 效率太差, 可改用 at/iat

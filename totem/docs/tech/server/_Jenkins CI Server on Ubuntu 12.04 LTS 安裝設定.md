@@ -15,7 +15,7 @@ keywords: [Jenkins，Ubuntu，CI，config]
 
 * 主機必須有 10GB 以上的硬碟空間。當然越大越好，這會影響到每次建置紀錄的保留次數。
 * 主機必須可以連線至網際網路。
-* 取得 Ubuntu 12.04LTS - 由Ubuntu正體中文站下載ISO檔。
+* 取得 Ubuntu 12.04LTS - 由[ Ubuntu 正體中文站](https://www.ubuntu-tw.org/modules/tinyd0/)下載ISO檔。
 
 
 # 製作開機光碟或是USB開機碟
@@ -24,8 +24,8 @@ keywords: [Jenkins，Ubuntu，CI，config]
 * USB 開機碟: Ubuntu 有提供工具(UNetbootin)，可以將 ISO 檔寫成具有開機功能的 USB 隨身碟。
 
 
+# Jenkins 主機所需程式作業系統
 ## 安裝　Ubuntu 12.04LTS　作業系統
-### 安裝　Ubuntu 12.04LTS　作業系統
 * 藉由光碟或　USB　碟開機: 
     * <span style={{color: '#0044FF'}}>Install Ubuntu Server</span>
 * 語系: 
@@ -75,7 +75,7 @@ vi:
 :%s/tw.archive.ubuntu.com/mirror.nttu.edu.tw/g
 ```
 
-### 安裝簡易的視窗環境
+## 安裝簡易的視窗環境: mate-core mdm
 * 在 /etc/apt/sources.list 裡加上:
 
 ```
@@ -93,7 +93,7 @@ sudo apt-get update
 sudo apt-get install mate-core mdm
 ```
 
-### 安裝中文字型
+## 為 Ubuntu 安裝中文字型
   * 先從下載教育部提字型檔
       * [宋體](http://www.edu.tw/files/site_content/MANDR/eduSong_Unicode.ttf)
   * 將字型檔放到:
@@ -102,9 +102,10 @@ sudo apt-get install mate-core mdm
       * sudo fc-cache -f -v
   * 需重啟動系統才生效。
 
-### 鐘訊同步 NTP 設定:
+## 為作業系統設定 NTP 鐘訊同步 - 方法1 :
   * 使用ntpdate命令每12小時校時。
   * 自行選擇 NTP server, ex:國家時間與頻率標準實驗室
+      * stdtime.sinica.edu.tw
       * time.stdtime.gov.tw
       * tock.stdtime.gov.tw
       * clock.stdtime.gov.tw
@@ -114,15 +115,17 @@ $sudo crontab -e
 
 0 */12 * * *     /usr/sbin/ntpdate time.stdtime.gov.tw > /dev/null 2>&1
 ```
-或使用ntpd服務自動校時.安裝ntp服務即可，不需再加crontab排程.
+
+## 為作業系統設定 NTP 鐘訊同步 - 方法2 :
+  * 使用 ntpd 服務自動校時。安裝 ntp 服務即可，不需再加 crontab 排程。
+  * 這方法其實比較不建議使用。畢竟依據一般 ISO 認定，鐘訊同步主要規範是整個 System(如:公司所有 ICT 設備) 統一指向相同的 NTP Server。各自為政有可能被開 NC。
   
 ```
 $sudo apt-get install ntp
 
 ```
 
-* 設定ssh server - 編輯'/etc/ssh/sshd_config'，修改:
-
+## 設定 ssh server - 編輯'/etc/ssh/sshd_config'，修改:
 
 ```
 GSSAPIAuthentication no
@@ -130,36 +133,19 @@ UseDNS no
 
 ```
 
-* 佈署tar.gz檔案到練習機時，是使用scp指令，這時練習機的ip必須事先寫在~/.ssh/config裡.以下是現有的config內容:
+## 建置後佈署所需設定
+* 我們這邊習慣是在 Jenkins 呼叫 ant 作業，以建立應用程式的打包作業。然後將相關檔案佈署到其他機器中。
+* 例如佈署tar.gz檔案到練習機時，是使用scp指令，這時練習機的ip必須事先寫在~/.ssh/config裡.以下是現有的config內容:
 
 ```
-host lims_ex
-    hostname demo-lims.ncgm.sinica.edu.tw
+host doraemon_ex
+    hostname demo-doraemon.cartoon.org
     user server
  
-host antar_ex
-    hostname demo-samportal.ncgm.sinica.edu.tw
+host hunter_ex
+    hostname demo-hunter.cartoon.org
     user server
  
-host ecrf_ex
-    hostname demo-iquestion.ncgm.sinica.edu.tw
-    user server
- 
-host ilab_ex
-    hostname demo-ilab.ncgm.sinica.edu.tw
-    user server
- 
-host tmc_ex
-    hostname 192.168.25.17
-    user server
- 
-host trc_ex
-    hostname 192.168.9.72
-    user server
- 
-host iirb_ex
-    hostname 192.168.9.64
-    user server
 
 ```
 
@@ -201,22 +187,22 @@ iface eth0 inet static
 
 
 ## 安裝所需軟體
-* JDK 7， ant 1.8， tomat 7安裝與設定.(參考<a href="http://jira.ncgm.sinica.edu.tw/confluence/display/XP/PinokioInstall">Pinokio練習機安裝</a>，"安裝Ant， "安裝 JDK6 64位元版本"， "安裝Apache Tomcat7"3個小節.
+* JDK 7， ant 1.8， tomat 7安裝與設定.(參考<a href="http://jira.abc.def.org/confluence/display/XP/PinokioInstall">Pinokio練習機安裝</a>，"安裝Ant， "安裝 JDK6 64位元版本"， "安裝Apache Tomcat7"3個小節.
 * Odyssey的整合測試(Odyssey-Integration)需要額外的jar檔"jsch-0.1.51.jar"，放置在"ANT_HOME/lib".
 * 設定練習機的hostname
-* Postgresql 8.4安裝與設定
-  * 由套件庫安裝PostgreSQL 8.4
+* Postgresql XX.XX安裝與設定
+  * 由套件庫安裝PostgreSQL XX.XX
  
 ```  
-sudo apt-get install postgresql-8.4
+sudo apt-get install postgresql-XX.XX
 ```
 
-  * 修改/etc/postgresql/8.4/main/postgresql.conf，去除下列的註解符號:
+  * 修改/etc/postgresql/XX.XX/main/postgresql.conf，去除下列的註解符號:
 ```
 listen_addresses='*'
 ```
 
-  * 修改/etc/postgresql/8.4/main/pg_hba.conf為:
+  * 修改/etc/postgresql/XX.XX/main/pg_hba.conf為:
 ```  
 local   all         postgres                          trust
         local   all         all                               trust
@@ -231,16 +217,16 @@ local   all         postgres                          trust
 ```
 
 * 複製原CI上的PostgreSQL相關的目錄到相同的位置(如果是重建DB則直接進行下一步):
-  * /var/lib/postgresql/8.4/main/
+  * /var/lib/postgresql/XX.XX/main/
   * /home/server/hudson/postgres_db_data
   *將此2個目錄的擁有者與群組都設為postgres:
 ```
-chown -R postgresql.postgresql /var/lib/postgresql/8.4/main/ /home/server/hudson/postgres_db_data
+chown -R postgresql.postgresql /var/lib/postgresql/XX.XX/main/ /home/server/hudson/postgres_db_data
 ```
 
 * 重建資料庫:
-  * 在磁碟上建立tablespace.執行http://jira.ncgm.sinica.edu.tw/secure/attachment/23580/create_tablespaces.sh裡的命令
-  * 建立postgresql的使用者、tablespace與schema.執行http://jira.ncgm.sinica.edu.tw/secure/attachment/23579/rebuild_db_2.sql
+  * 在磁碟上建立tablespace.執行http://jira.abc.def.org/secure/attachment/23580/create_tablespaces.sh裡的命令
+  * 建立postgresql的使用者、tablespace與schema.執行http://jira.abc.def.org/secure/attachment/23579/rebuild_db_2.sql
 * 安裝svn套件
 
 ```
