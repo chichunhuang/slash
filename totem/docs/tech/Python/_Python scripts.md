@@ -11,8 +11,9 @@ keywords: [keywords, describing, the main topics]
 
 
 ## loc / iloc 在 loop 效率太差, 可改用 at/iat
-* [Don’t use loc/iloc with Loops In Python, Instead, Use This!](https://medium.com/codex/dont-use-loc-iloc-with-loops-in-python-instead-use-this-f9243289dde7)
+* 參考: [Don’t use loc/iloc with Loops In Python, Instead, Use This!](https://medium.com/codex/dont-use-loc-iloc-with-loops-in-python-instead-use-this-f9243289dde7)
 
+```
 <code>
 import time
  
@@ -37,3 +38,4 @@ print(end - start)
 
 </code>
 
+```

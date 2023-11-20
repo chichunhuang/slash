@@ -125,7 +125,8 @@ $sudo apt-get install ntp
 
 ```
 
-## 設定 ssh server - 編輯'/etc/ssh/sshd_config'，修改:
+## 設定 ssh server 
+* 編輯'/etc/ssh/sshd_config'，修改:
 
 ```
 GSSAPIAuthentication no
@@ -133,7 +134,7 @@ UseDNS no
 
 ```
 
-## 建置後佈署所需設定
+## 建置後佈署練習機所需設定
 * 我們這邊習慣是在 Jenkins 呼叫 ant 作業，以建立應用程式的打包作業。然後將相關檔案佈署到其他機器中。
 * 例如以 scp 佈署 doraemon-10-10-10.tar.gz 檔案到練習機時，此時練習機的 ip 需設定在 ~/.ssh/config。
 
@@ -163,7 +164,9 @@ server@CI:~/.ssh$ ssh-copy-id server@<EX_HOST>
   * .ssh/id_rsa - 600
   * .ssh/config - 600
 
-* 設定網路卡，將CI的IP設定為靜態IP.編輯"/etc/network/interfaces":
+## 設定網路卡固定 IP
+* 避免停電或重啟 DHCP 等造成 IP 重新分配而使練習機佈署失敗。
+* 將CI的IP設定為靜態IP，編輯"/etc/network/interfaces":
 ```
 
 auto lo
@@ -180,30 +183,36 @@ iface eth0 inet static
         metric 100
         dns-nameservers 8.8.8.8 192.168.19.10 192.168.19.12 192.168.9.254
 
-```
+
+## 為公用工具準備作業資料夾
 * 在家目錄 "/home/server" 下建一目錄 "repository"，供 Team*Util.jar，Wicket*Util.jar 等工具 jar 檔存放.
+* 工具專案建置過程會打包並產生 *.jar 檔，並 scp 至指定 位置。
+* 功能專案在打包 *.war 時會將最新的 Team*Util.jar 等放入專案的 lib 資料夾。
+   * 參考 build.xml 內容 
 
 
+## 其他所需工具軟體安裝
+* 安裝Ant
+* 安裝 JDK6 64位元版本
+ *安裝 Apache Tomcat
+* 設定練習機的 hostname
+* Postgresql XX.XX 安裝與設定
+  
 
-
-
-## 安裝所需軟體
-* JDK 7， ant 1.8， tomat 7安裝與設定.(參考<a href="http://jira.abc.def.org/confluence/display/XP/PinokioInstall">Pinokio練習機安裝</a>，"安裝Ant， "安裝 JDK6 64位元版本"， "安裝Apache Tomcat7"3個小節.
-* odersea 的整合測試(odersea-Integration)需要額外的jar檔"jsch-0.1.51.jar"，放置在"ANT_HOME/lib".
-* 設定練習機的hostname
-* Postgresql XX.XX安裝與設定
-  * 由套件庫安裝PostgreSQL XX.XX
+### 由套件庫安裝PostgreSQL XX.XX
  
 ```  
 sudo apt-get install postgresql-XX.XX
 ```
 
-  * 修改/etc/postgresql/XX.XX/main/postgresql.conf，去除下列的註解符號:
+* 修改/etc/postgresql/XX.XX/main/postgresql.conf，去除下列的註解符號:
+
 ```
 listen_addresses='*'
 ```
 
-  * 修改/etc/postgresql/XX.XX/main/pg_hba.conf為:
+* 修改/etc/postgresql/XX.XX/main/pg_hba.conf為:
+
 ```  
 local   all         postgres                          trust
         local   all         all                               trust
@@ -212,49 +221,73 @@ local   all         postgres                          trust
         host    all         all         192.168.6.0 255.255.255.0        trust
 
 ```
+
 * 修改/etc/hosts，加入:
+
 ```
 127.0.0.1    insect.totem
 ```
 
-* 複製原CI上的PostgreSQL相關的目錄到相同的位置(如果是重建DB則直接進行下一步):
+* 複製原 CI 上的 PostgreSQL 相關的目錄到相同的位置(如果是重建DB則直接進行下一步):
   * /var/lib/postgresql/XX.XX/main/
   * /home/server/hudson/postgres_db_data
   *將此2個目錄的擁有者與群組都設為postgres:
+  
 ```
 chown -R postgresql.postgresql /var/lib/postgresql/XX.XX/main/ /home/server/hudson/postgres_db_data
 ```
 
 * 重建資料庫:
-  * 在磁碟上建立tablespace.執行http://jira.abc.def.org/secure/attachment/23580/create_tablespaces.sh裡的命令
-  * 建立postgresql的使用者、tablespace與schema.執行http://jira.abc.def.org/secure/attachment/23579/rebuild_db_2.sql
-* 安裝svn套件
+  * 在磁碟上建立tablespace > 執行 create_tablespaces.sh 裡的命令
+  * 建立 postgresql 的使用者、tablespace與schema。執行 rebuild_db_2.sql
+
+### 安裝svn套件
 
 ```
 sudo apt-get install subversion
 ```
 
-* 下載，安裝與設定Jenkins
-  * 下載jenkins.war(http://mirrors.jenkins-ci.org/war/latest/jenkins.war)
-  * 將jenkins.war複製到tomcat/webapps/
-  * 在~/tools/下建立jenkins/
-  * 在/etc/profile中加入一行
+### 下載安裝與設定Jenkins
+  * 下載 jenkins.war(http://mirrors.jenkins-ci.org/war/latest/jenkins.war)
+  * jenkins.war > tomcat/webapps/
+  * tomcat/webapps/jenkins/web.xml 設定 httponly 與 secure 屬性
+  * cd ~/tools/ mkdir jenkins/
+  * 在 /etc/profile 中設定 JENKINS_HOME 環境變數
+  
 ```  
+/jenkins/web.xml
+
+    <session-config>
+         <tracking-mode>COOKIE</tracking-mode>
+         <cookie-config>
+            <http-only>true</http-only>
+            <secure>true</secure>
+         </cookie-config>
+    </session-config>
+    
+```
+
+```  
+/etc/profile
+
 export JENKINS_HOME=/home/server/tools/jenkins
 ```
 
-  * 在tomcat/conf/server.xml中，找到port為8080的connector，加上URIEncoding屬性如下:
+### tomcat 相關設定
+* 在 tomcat/conf/server.xml 中，找到 port 為 8080 的connector，加上 URIEncoding 與 secure 屬性如下:
+    * URIEncoding
+    * secure (tomcat7)
 
 ```
 <Connector port="8080" protocol="HTTP/1.1"
    connectionTimeout="20000"
-   redirectPort="8443" URIEncoding="utf8"/>
+   redirectPort="8443" URIEncoding="utf8" secure="true"/>
 
 ```
 
-* 啟動tomcat7，連線到jenkins，到manage jenkins->configure system，修改
-  * jdk路徑
-  * ant路徑
+* 啟動tomcat，連線到 jenkins，到 manage jenkins->configure system，修改
+  * jdk 路徑
+  * ant 路徑
 
 * Jenkins URL
   * 加入plugin
@@ -279,15 +312,16 @@ export JENKINS_HOME=/home/server/tools/jenkins
   * Monitoring
 
 * 關閉jenkins，將Hudson備份檔解壓縮到$JENKINS_HOME
+
 ```
 jenkins$ tar vfxz hudson_backup.tar.gz
 
 ```
 
-* 然後重新啟動
-
+* 然後 tomcat 重新啟動 
 
 * 備份執行:
+
 ```
 server@ci1:~/hudson$ tar czf jenkins.tgz jenkins --exclude=builds --exclude=workspace --exclude=monitoring --exclude=fingerprints --verbose
 ```
