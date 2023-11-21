@@ -1,5 +1,5 @@
 ---
-title:Insert from Select
+title: Insert from Select
 description: Insert from select result
 keywords: [SQL,copy,insert from select]
 ---
