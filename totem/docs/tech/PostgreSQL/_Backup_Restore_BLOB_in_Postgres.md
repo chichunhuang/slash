@@ -1,5 +1,5 @@
 ---
-title:PostgreSQL Blob 備份與回存
+title: PostgreSQL Blob 備份與回存
 description: Backup and Restore BLOB in PostgreSQL
 keywords: [postgres,lob,restore,backup]
 ---
