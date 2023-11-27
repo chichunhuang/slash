@@ -1,6 +1,6 @@
 ---
-title: Java SHA 加解密
-description: 以 Java SHA 進行資料加解密
+title: Java SHA 雜湊
+description: 以 Java SHA 進行資料雜湊
 keywords: [sha,java,cipher,encrypt,decrypt]
 ---
 import { CodeBlock, dracula  } from "react-code-blocks";
@@ -19,8 +19,8 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 
 * ShaDigester.java
-<CodeBlock text={`
 
+```java
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -59,7 +59,4 @@ public class ShaDigester {
         return ret.toString();
     }
 }    
-    `}
-      language='java'
-      showLineNumbers='true'
-      /> 
+```

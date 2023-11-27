@@ -22,8 +22,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Java RSA 範例
 
-<CodeBlock text={`
-
+```java
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
 import java.security.KeyPair;
@@ -141,8 +140,4 @@ public class RsaCipher {
     }
 
 }
-
-    `}
-      language='java'
-      showLineNumbers='true'
-      />  
+```

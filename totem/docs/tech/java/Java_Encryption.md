@@ -1,5 +1,5 @@
 ---
-title: 【Java Cipher】
+title: Java Cipher Intro
 description: Java 加密方式簡介
 keywords: [java,cipher,aes,sha,hash]
 ---

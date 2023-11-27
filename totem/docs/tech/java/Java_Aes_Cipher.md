@@ -1,5 +1,5 @@
 ---
-title: 【Java AES 加解密】
+title: Java AES 加解密
 description: 以 Java AES 進行資料加解密
 keywords: [aes,java,cipher,encrypt,decrypt]
 ---
