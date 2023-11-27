@@ -15,7 +15,7 @@ keywords: [aes,java,cipher,encrypt,decrypt]
 
 # AES 進階加密標準
 
-* __對稱加密算法__ :AES算法使用 <span style={{color: '#0044FF'}}>[相同]</span> 的密鑰來對資料進行 <span style={{color: '#0044FF'}}>[加密]</span> 和 <span style={{color: '#0044FF'}}>[解密]</span>
+* __對稱加密演算法__ :AES算法使用 <span style={{color: '#0044FF'}}>[相同]</span> 的密鑰來對資料進行 <span style={{color: '#0044FF'}}>[加密]</span> 和 <span style={{color: '#0044FF'}}>[解密]</span>
 
 > 加密種類: 依加解密演算法種類分 __對稱式__ 和 __非對稱式__ 加密
 >       
@@ -129,29 +129,27 @@ public class Aes128Cipher {
         System.out.println(Arrays.toString(encodedByteArray));
     }
 
-    public Aes128Cipher() {
-        try {
-            SecretKeySpec skeySpec = new SecretKeySpec(keySalt, "AES");
+    public Aes128Cipher() throws EncryptDecryptException {
+        SecretKeySpec skeySpec = new SecretKeySpec(keySalt, "AES");
 
+        try {
             ecipher = Cipher.getInstance("AES");
             dcipher = Cipher.getInstance("AES");
             ecipher.init(Cipher.ENCRYPT_MODE, skeySpec);
             dcipher.init(Cipher.DECRYPT_MODE, skeySpec);
-
-        } catch (javax.crypto.NoSuchPaddingException e) {
-            throw new RuntimeException("NoSuchPaddingException");
-        } catch (java.security.NoSuchAlgorithmException e) {
-            throw new RuntimeException("NoSuchAlgorithmException");
-        } catch (java.security.InvalidKeyException e) {
-            throw new RuntimeException("InvalidKeyException");
+        } catch (NoSuchAlgorithmException | NoSuchPaddingException
+                | InvalidKeyException e) {
+            e.printStackTrace();
+            throw new EncryptDecryptException("unexpected", e);
         }
     }
 
-    public String encrypt(String str) {
+    public String encrypt(String str) throws EncryptDecryptException {
         return encrypt(str, CIPHER_TO_HEX);
     }
 
-    public String encrypt(String str, String cipherTo) {
+    public String encrypt(String str, String cipherTo)
+            throws EncryptDecryptException {
         try {
             // Encode the string into bytes using utf-8
             byte[] utf8 = str.getBytes(ENCODING_UTF8);
@@ -167,21 +165,19 @@ public class Aes128Cipher {
                 return HexStringUtil.toHexString(enc);
             }
 
-        } catch (javax.crypto.BadPaddingException e) {
-
-        } catch (IllegalBlockSizeException e) {
-
-        } catch (UnsupportedEncodingException e) {
-
+        } catch (javax.crypto.BadPaddingException | IllegalBlockSizeException
+                | UnsupportedEncodingException e) {
+            e.printStackTrace();
+            throw new EncryptDecryptException("unexpected", e);
         }
-        return null;
     }
 
-    public String decrypt(String str) {
+    public String decrypt(String str) throws EncryptDecryptException {
         return decrypt(str, CIPHER_TO_HEX);
     }
 
-    public String decrypt(String str, String cypherTo) {
+    public String decrypt(String str, String cypherTo)
+            throws EncryptDecryptException {
         try {
 
             if (CIPHER_TO_BASED64.equalsIgnoreCase(cypherTo)) {
@@ -199,14 +195,11 @@ public class Aes128Cipher {
                 return new String(utf8, ENCODING_UTF8);
             }
 
-        } catch (javax.crypto.BadPaddingException e) {
-
-        } catch (IllegalBlockSizeException e) {
-
-        } catch (UnsupportedEncodingException e) {
-
+        } catch (javax.crypto.BadPaddingException | IllegalBlockSizeException
+                | UnsupportedEncodingException e) {
+            e.printStackTrace();
+            throw new EncryptDecryptException("unexpected", e);
         }
-        return null;
     }
 
     private static class HexStringUtil {
@@ -277,7 +270,5 @@ public class Aes128Cipher {
 
     }
 }
-
-
 ```
 
