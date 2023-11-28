@@ -25,10 +25,10 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 為避免紛爭，所以提供系統管理員查詢畫面。
 
 # PathMatchingResourcePatternResolver 直接讀取屬性檔
-* 第一個方式直接讀取屬性檔，這邊是採用 <span style={{color: '#0044FF'}}>PathMatchingResourcePatternResolver</span> 類別，直接以 pattern 告知屬性檔位置。然後再看你想輸出到那裡囉。這邊先直接輸出到 Console.
-* 這邊假設屬性檔名為 config.properties。
+1. 第一個方式直接讀取屬性檔，這邊是採用 <span style={{color: '#0044FF'}}>PathMatchingResourcePatternResolver</span> 類別，直接以 pattern 告知屬性檔位置。然後再看你想輸出到那裡囉。這邊先直接輸出到 Console.
+1. 這邊假設屬性檔名為 config.properties。
 
-* PropertiesFactoryBeanServiceImpl.java
+* PropertiesFactoryBeanServiceImpl.java 範例
 <CodeBlock text={`
     @Service
     public class PropertiesFactoryBeanServiceImpl
@@ -67,9 +67,10 @@ import { CodeBlock, dracula  } from "react-code-blocks";
       /> 
  
 ## PropertiesFactoryBean Location 設定的其他方式
-* PathMatchingResourcePatternResolver
-* ClassPathResource
-* FileSystemResource
+1. PathMatchingResourcePatternResolver
+1. ClassPathResource
+1. FileSystemResource
+
 
 * ClassPathResource 範例
 ```
@@ -83,6 +84,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
   bean.setFileEncoding("UTF-8");
   bean.setLocation(new FileSystemResource("file:ENV_VAR/appConfig/3rdConfig.properties"));
 ```
+ 
  
 # 自 Spring Application Context 中取出 Property Bean
 * 部分舊專案可能混雜使用 xml 設定此時則可直接取出 property bean 即可。
@@ -100,7 +102,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
       showLineNumbers='true'
       /> 
 
-* PropertiesFactoryBeanServiceImpl.java
+* PropertiesFactoryBeanServiceImpl.java 範例
     * 註: 前面說過這邊習慣有多個 *.properties 檔，所以 inject 時使用 @Qualifier 注入。未再 by Type 自動 inject。
 <CodeBlock text={`
 @Service
