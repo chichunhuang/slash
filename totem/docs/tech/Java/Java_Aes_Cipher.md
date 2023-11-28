@@ -36,7 +36,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 >> ex: RSA、DSA、ECC
 
 
-# Aes128 Encypt and Ddecrypt Example
+# Aes128 Encryption and Decryption Example
 
 * Aes128EncrypterUtil.java
 
@@ -243,3 +243,23 @@ public class Aes128Cipher {
       showLineNumbers='true'
       /> 
 
+
+
+# Trouble shooting : InvalidKeyException
+> 以 256 bits 的 key 建立 AES 256 cipher 時
+> 可能會出現 __InvalidKeyException:Illegal key size or default parameters__ 錯誤
+> 這是 JDK 對加密金鑰長度的限制所致。
+
+* 下列 Code 可能拋出 InvalidKeyException 
+<CodeBlock text={`
+    cipher = Cipher.getInstance("AES");
+    cipher.init(Cipher.ENCRYPT_MODE, skeySpec);
+    `}
+      language='java'
+      showLineNumbers='true'
+      /> 
+      
+> 解決 InvalidKeyException 異常方式
+>> 到 __JAVA_HOME/jre/lib/security/java.scurity__
+>> 找出或增加 crypto.policy=unlimited 並設定為 unlimited
+>> 然後重啟 Java 即可解決
