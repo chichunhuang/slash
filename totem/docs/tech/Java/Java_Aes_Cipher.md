@@ -3,6 +3,7 @@ title: Java AES 加解密
 description: 以 Java AES 進行資料加解密
 keywords: [aes,java,cipher,encrypt,decrypt]
 ---
+import { CodeBlock, dracula  } from "react-code-blocks";
 
 * 有時會需要將資料進行可回復的加密。
 * 例如: ISO 27001 DLP(data leakage prevention)，一般在驗證時最低要求為密碼原則、硬碟資料與 DB 資料加密。
@@ -36,57 +37,53 @@ keywords: [aes,java,cipher,encrypt,decrypt]
 
 
 # Aes128 Encypt and Ddecrypt Example
-```java
 
-public class Aes128EncrypterUtil {
-    public static String encryptHex(String str) {
-        Aes128Cipher encrypter = new Aes128Cipher();
-        return encrypter.encrypt(str);
+* Aes128EncrypterUtil.java
+
+<CodeBlock text={`
+    public class Aes128EncrypterUtil {
+        public static String encryptHex(String str) {
+            Aes128Cipher encrypter = new Aes128Cipher();
+            return encrypter.encrypt(str);
+        }
+        public static String decryptHex(String str) {
+            Aes128Cipher encrypter = new Aes128Cipher();
+            return encrypter.decrypt(str);
+        }
+        public static String encryptBased64(String str) {
+            Aes128Cipher encrypter = new Aes128Cipher();
+            return encrypter.encrypt(str, "BASED64");
+        }
+        public static String decryptBased64(String str) {
+            Aes128Cipher encrypter = new Aes128Cipher();
+            return encrypter.decrypt(str, "BASED64");
+        }
     }
-
-    public static String decryptHex(String str) {
-        Aes128Cipher encrypter = new Aes128Cipher();
-        return encrypter.decrypt(str);
-    }
-    
-    public static String encryptBased64(String str) {
-        Aes128Cipher encrypter = new Aes128Cipher();
-        return encrypter.encrypt(str, "BASED64");
-    }
-
-    public static String decryptBased64(String str) {
-        Aes128Cipher encrypter = new Aes128Cipher();
-        return encrypter.decrypt(str, "BASED64");
-    }
-}
-
-```
+    `}
+      language='java'
+      showLineNumbers='true'
+      /> 
 
 
-# Aes128Cipher.java
+* Aes128Cipher.java
 
-```java
+<CodeBlock text={`
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Base64;
-
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-
 /**
  * <pre>
 <h1>進階加密標準</h1>
-
 <h2>對稱加密算法 :</h2> 
 AES算法使用[相同]的密鑰來對資料進行[加]密和[解]密
-
 <h2>加密過程包括以下步驟：</h2>
  ref: https://inbound.technology/%E4%BB%80%E9%BA%BC%E6%98%AF-aes-%E5%B0%8D%E7%A8%B1%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95%EF%BC%9Fphp-%E8%88%87-nodejs-%E7%AF%84%E4%BE%8B%E5%AF%A6%E4%BD%9C/
- 
 <ol>
 <li>密鑰擴展：將輸入的密鑰擴展為更長的密鑰序列，以供後續的加密和解密過程使用。</li>
 <li>初始輪：將明文數據按照一定的規則與密鑰序列進行異或操作。</li>
@@ -98,24 +95,16 @@ AES算法使用[相同]的密鑰來對資料進行[加]密和[解]密
 <li>最終輪：最後一輪操作中，省略列混淆步驟，只包括字節替換、行移位和密鑰加。</li>
 <li>輸出：輸出加密後的數據。</li>
 </ol>
- * 
  * </pre>
  */
 public class Aes128Cipher {
-
     public static final String CIPHER_TO_BASED64 = "BASED64";
-
     public static final String CIPHER_TO_HEX = "HEX";
-
     private Cipher ecipher;
-
     private Cipher dcipher;
-
     private final byte[] keySalt = new byte[] { 45, -42, 105, -110, 115, -101,
             99, -116, 45, -116, -111, 116, -101, 109, 42, -45 };
-
     private static final String ENCODING_UTF8 = "UTF8";
-
     public static void main(String[] args) {
         KeyGenerator kg = null;
         try {
@@ -128,10 +117,8 @@ public class Aes128Cipher {
         byte[] encodedByteArray = secretKey.getEncoded();
         System.out.println(Arrays.toString(encodedByteArray));
     }
-
     public Aes128Cipher() throws EncryptDecryptException {
         SecretKeySpec skeySpec = new SecretKeySpec(keySalt, "AES");
-
         try {
             ecipher = Cipher.getInstance("AES");
             dcipher = Cipher.getInstance("AES");
@@ -143,20 +130,16 @@ public class Aes128Cipher {
             throw new EncryptDecryptException("unexpected", e);
         }
     }
-
     public String encrypt(String str) throws EncryptDecryptException {
         return encrypt(str, CIPHER_TO_HEX);
     }
-
     public String encrypt(String str, String cipherTo)
             throws EncryptDecryptException {
         try {
             // Encode the string into bytes using utf-8
             byte[] utf8 = str.getBytes(ENCODING_UTF8);
-
             // Encrypt
             byte[] enc = ecipher.doFinal(utf8);
-
             if (CIPHER_TO_BASED64.equalsIgnoreCase(cipherTo)) {
                 Base64.Encoder encoder = Base64.getEncoder();
                 return encoder.encodeToString(enc);
@@ -164,22 +147,18 @@ public class Aes128Cipher {
                 // encrypt should produce url safe string, which best in HEX
                 return HexStringUtil.toHexString(enc);
             }
-
         } catch (javax.crypto.BadPaddingException | IllegalBlockSizeException
                 | UnsupportedEncodingException e) {
             e.printStackTrace();
             throw new EncryptDecryptException("unexpected", e);
         }
     }
-
     public String decrypt(String str) throws EncryptDecryptException {
         return decrypt(str, CIPHER_TO_HEX);
     }
-
     public String decrypt(String str, String cypherTo)
             throws EncryptDecryptException {
         try {
-
             if (CIPHER_TO_BASED64.equalsIgnoreCase(cypherTo)) {
                 Base64.Decoder decoder = Base64.getDecoder();
                 byte[] cipherText = decoder.decode(str.getBytes("UTF8"));
@@ -187,28 +166,22 @@ public class Aes128Cipher {
             } else {
                 // Decode base64 to get bytes
                 byte[] dec = HexStringUtil.fromHexString(str);
-
                 // Decrypt
                 byte[] utf8 = dcipher.doFinal(dec);
-
                 // Decode using utf-8
                 return new String(utf8, ENCODING_UTF8);
             }
-
         } catch (javax.crypto.BadPaddingException | IllegalBlockSizeException
                 | UnsupportedEncodingException e) {
             e.printStackTrace();
             throw new EncryptDecryptException("unexpected", e);
         }
     }
-
     private static class HexStringUtil {
-
         // table to convert a nibble to a hex char.
         private static char[] hexChar = { '0', '1', '2', '3', '4', '5', '6',
                 '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
-
-        /**
+       /**
          * Convert a hex string to a byte array. Permits upper or lower case
          * hex.
          * 
@@ -225,7 +198,6 @@ public class Aes128Cipher {
                         "fromHexString requires an even number of hex characters");
             }
             byte[] b = new byte[stringLength / 2];
-
             for (int i = 0, j = 0; i < stringLength; i += 2, j++) {
                 int high = charToNibble(s.charAt(i));
                 int low = charToNibble(s.charAt(i + 1));
@@ -233,7 +205,6 @@ public class Aes128Cipher {
             }
             return b;
         }
-
         /**
          * convert a single char to corresponding nibble.
          * 
@@ -255,20 +226,20 @@ public class Aes128Cipher {
                         "Invalid hex character: " + c);
             }
         }
-
         public static String toHexString(byte[] b) {
             StringBuffer sb = new StringBuffer(b.length * 2);
             for (int i = 0; i < b.length; i++) {
                 // look up high nibble char
                 sb.append(hexChar[(b[i] & 0xf0) >>> 4]);
-
                 // look up low nibble char
                 sb.append(hexChar[b[i] & 0x0f]);
             }
             return sb.toString();
         }
-
     }
 }
-```
+    `}
+      language='java'
+      showLineNumbers='true'
+      /> 
 
