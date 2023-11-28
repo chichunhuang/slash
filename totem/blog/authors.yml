@@ -1,17 +1,17 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+insect:
+  name: Insect Totem
+  url: https://github.com/chichunhuang
+  image_url: https://chichunhuang.github.io/slash/img/70_70.jpg
+  
+chichun:  
+  name: Huang Chichun 
+  title: 
+  url: https://github.com/chichunhuang
+  image_url: https://chichunhuang.github.io/slash/img/70_70.jpg
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+template:  
+  name:  
+  title: 
+  url: 
+  image_url: 
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png

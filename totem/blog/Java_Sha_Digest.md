@@ -2,6 +2,9 @@
 title: Java SHA 雜湊
 description: 以 Java SHA 進行資料雜湊
 keywords: [sha,java,cipher,encrypt,decrypt]
+slug: Java-SHA-digester
+authors: [insect]
+tags: [sha, cipher]
 ---
 import { CodeBlock, dracula  } from "react-code-blocks";
 
