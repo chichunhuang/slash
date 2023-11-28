@@ -5,13 +5,13 @@ insect:
   
 chichun:  
   name: Huang Chichun 
-  title: 
+  title: Developer
   url: https://github.com/chichunhuang
   image_url: https://chichunhuang.github.io/slash/img/70_70.jpg
 
 template:  
-  name:  
-  title: 
-  url: 
-  image_url: 
+  name:  template
+  title: template
+  url: https://github.com/chichunhuang
+  image_url: https://chichunhuang.github.io/slash/img/70_70.jpg
 
