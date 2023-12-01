@@ -1,5 +1,5 @@
 ---
-title: 【關閉 Browser or Tab 自動登出】
+title: 關閉 Browser or Tab 自動登出
 description: 關閉 Browser or Tab 自動登出
 keywords: [Session Fixation,logout,close browser]
 ---

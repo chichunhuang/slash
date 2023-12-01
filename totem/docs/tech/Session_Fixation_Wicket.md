@@ -1,5 +1,5 @@
 ---
-title: 【非正規Session Fixation處理】
+title: 非正規Session Fixation處理
 description: 降低風險，並未完全即時
 keywords: [Session Fixation,Wicket]
 ---

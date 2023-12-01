@@ -1,5 +1,5 @@
 ---
-title: 【隱藏 Tomcat 版本資訊】
+title: 隱藏 Tomcat 版本資訊
 description: Hide Tomcat Version Info:隱藏Tomcat版本資訊，避免暴露過多資訊
 keywords: [Tomcat,Version,Hide,隱藏]
 ---

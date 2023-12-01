@@ -1,5 +1,5 @@
 ---
-title: 【Gson fromJson】 拋出 ClassCastException
+title: Gson fromJson 拋出 ClassCastException
 description: Gson.fromJson throws java.lang.ClassCastException
 keywords: [Gson, TypeToken, JsonParseException]
 ---
