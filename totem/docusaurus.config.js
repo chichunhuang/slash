@@ -78,14 +78,14 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '程式技術文章',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://chichunhuang.github.io/slash/blog',
-            label: 'GitHub',
-            position: 'right',
-          },
+          //{
+          //  href: 'https://chichunhuang.github.io/slash/blog',
+          //  label: 'GitHub',
+          //  position: 'right',
+          //},
         ],
       },
       footer: {
@@ -95,8 +95,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: '程式技術文章',
+                to: '/docs/docs-map',
               },
             ],
           },
