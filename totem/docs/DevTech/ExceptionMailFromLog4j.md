@@ -1,5 +1,5 @@
 ---
-title: 【Log4j EmailAppender Configuration】
+title: Log4j EmailAppender Configuration
 description: 當log4j looger紀錄指定等級的訊息時，發信通知特定人員
 keywords: [log4j,mail,SMTPAppender]
 ---

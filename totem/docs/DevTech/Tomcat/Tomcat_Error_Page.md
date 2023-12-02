@@ -1,5 +1,5 @@
 ---
-title: 【Tomcat 客製錯誤頁】
+title: Tomcat 客製錯誤頁
 description: 自訂 Tomcat 錯誤頁顯示方式
 keywords: [Tomcat,404,error page]
 ---
