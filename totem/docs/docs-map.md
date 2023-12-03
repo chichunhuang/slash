@@ -24,5 +24,5 @@ sidebar_position: 1
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 ## Graphics
-* [Logo of Insect-Totem - The origin of Insect-Totem](/docs/Graphics/Logo_Of_Insecttotem)
+* [Logo of Insect-Totem - Insect-Totem 的起源](/docs/Graphics/Logo_Of_Insecttotem)
 
