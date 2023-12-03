@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Insect Totem Blog</title>
+        <link>https://chichunhuang.github.io/slash/zh-tw/blog</link>
+        <description>Insect Totem Blog</description>
+        <lastBuildDate>Tue, 28 Nov 2023 03:52:41 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>zh-tw</language>
+        <item>
+            <title><![CDATA[List Properties in Spring App]]></title>
+            <link>https://chichunhuang.github.io/slash/zh-tw/blog/List-Properties-in-Spring-App</link>
+            <guid>https://chichunhuang.github.io/slash/zh-tw/blog/List-Properties-in-Spring-App</guid>
+            <pubDate>Tue, 28 Nov 2023 03:52:41 GMT</pubDate>
+            <description><![CDATA[列出 Spring 專案中 properties 檔中的參數]]></description>
+            <content:encoded><![CDATA[<blockquote><p>不管是遵循 ISO 或是採納 DevOps 等流程。通常開發端與維運端必須 <strong>權責分離</strong> 。
+但畢竟是多組人共同協作，要如何釐清系統問題不是來自開發端而是維運端設定的問題呢?
+畢竟我這邊偶而發生 MIS 屬性檔設定錯誤而造成系統無法開啟的問題。
+例如: 與其他系統互動的 host name 或 IP 設錯，正式機指向練習機。
+或是你 bla bla~ 的連 DB 帳密都改錯。
+只好先小人提供 App 管理人查詢特定系統參數的功能。
+也順便寫了這份註記。</p></blockquote><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="一個專案該有幾個屬性檔呢">一個專案該有幾個屬性檔呢?<a href="#一個專案該有幾個屬性檔呢" class="hash-link" aria-label="一個專案該有幾個屬性檔呢?的直接連結" title="一個專案該有幾個屬性檔呢?的直接連結">​</a></h2><blockquote><p>我這邊的習慣是至少兩個。如此設定也是因為權責分離，減少 MIS 維護時出錯。
+一個是與維運相關: 例如 IP / DB 帳密 / Mail Server / Exception 發生時的告警對象。
+另一個是系統參數相關: 與應用相關的設定 MIS 不須知道。
+我這做是因為，這邊部分維運人員會以屬性檔更換的方式來改參數。請假時交接又不清楚，職代九成九會出錯。
+為避免紛爭，所以提供系統管理員查詢畫面。</p></blockquote><h1>PathMatchingResourcePatternResolver 直接讀取屬性檔</h1><ol><li>第一個方式直接讀取屬性檔，這邊是採用 <span style="color:#0044FF">PathMatchingResourcePatternResolver</span> 類別，直接以 pattern 告知屬性檔位置。然後再看你想輸出到那裡囉。這邊先直接輸出到 Console.</li><li>這邊假設屬性檔名為 config.properties。</li></ol><ul><li>PropertiesFactoryBeanServiceImpl.java 範例<span style="font-size:inherit;font-family:inherit;background:#fafafa;color:#383a42;border-radius:3px;display:flex;line-height:1.4285714285714286;overflow-x:auto;white-space:pre"><code style="font-size:inherit;font-family:inherit;line-height:1.6666666666666667;padding:8px;float:left;padding-right:10px"><span class="react-syntax-highlighter-line-number">1
+</span><span class="react-syntax-highlighter-line-number">2
+</span><span class="react-syntax-highlighter-line-number">3
+</span><span class="react-syntax-highlighter-line-number">4
+</span><span class="react-syntax-highlighter-line-number">5
+</span><span class="react-syntax-highlighter-line-number">6
+</span><span class="react-syntax-highlighter-line-number">7
+</span><span class="react-syntax-highlighter-line-number">8
+</span><span class="react-syntax-highlighter-line-number">9
+</span><span class="react-syntax-highlighter-line-number">10
+</span><span class="react-syntax-highlighter-line-number">11
+</span><span class="react-syntax-highlighter-line-number">12
+</span><span class="react-syntax-highlighter-line-number">13
+</span><span class="react-syntax-highlighter-line-number">14
+</span><span class="react-syntax-highlighter-line-number">15
+</span><span class="react-syntax-highlighter-line-number">16
+</span><span class="react-syntax-highlighter-line-number">17
+</span><span class="react-syntax-highlighter-line-number">18
+</span><span class="react-syntax-highlighter-line-number">19
+</span><span class="react-syntax-highlighter-line-number">20
+</span><span class="react-syntax-highlighter-line-number">21
+</span><span class="react-syntax-highlighter-line-number">22
+</span><span class="react-syntax-highlighter-line-number">23
+</span><span class="react-syntax-highlighter-line-number">24
+</span><span class="react-syntax-highlighter-line-number">25
+</span><span class="react-syntax-highlighter-line-number">26
+</span><span class="react-syntax-highlighter-line-number">27
+</span><span class="react-syntax-highlighter-line-number">28
+</span><span class="react-syntax-highlighter-line-number">29
+</span><span class="react-syntax-highlighter-line-number">30
+</span><span class="react-syntax-highlighter-line-number">31
+</span><span class="react-syntax-highlighter-line-number">32
+</span><span class="react-syntax-highlighter-line-number">33
+</span></code><code style="font-size:inherit;font-family:inherit;line-height:1.6666666666666667;padding:8px;white-space:pre">
+    @Service
+    public class PropertiesFactoryBeanServiceImpl
+            implements PropertiesFactoryBeanService {
+            
+        public PropertiesFactoryBean configProperties() throws Exception {
+            PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();
+            PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+            propertiesFactoryBean.setLocations(
+                    resolver.getResources("classpath*:config.properties"));
+            return propertiesFactoryBean;
+        }
+    
+        @Override
+        public void doPrintAllPrperties() {
+            try {
+                PropertiesFactoryBean factory = configProperties();
+                factory.afterPropertiesSet();
+                Properties props = factory.getObject();
+    
+                @SuppressWarnings("rawtypes")
+                Enumeration en = props.propertyNames();
+                while (en.hasMoreElements()) {
+                    String key = (String) en.nextElement();
+                    String Property = props.getProperty(key);
+                    System.out.println(key + Property);
+                }
+            } catch (Exception e) {
+                throw new RuntimeException("unexpected", e);
+            }
+        }
+    }
+    </code></span></li></ul><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="propertiesfactorybean-location-設定的其他方式">PropertiesFactoryBean Location 設定的其他方式<a href="#propertiesfactorybean-location-設定的其他方式" class="hash-link" aria-label="PropertiesFactoryBean Location 設定的其他方式的直接連結" title="PropertiesFactoryBean Location 設定的其他方式的直接連結">​</a></h2><ol><li>PathMatchingResourcePatternResolver</li><li>ClassPathResource</li><li>FileSystemResource</li></ol><ul><li>ClassPathResource 範例</li></ul><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  PropertiesFactoryBean bean = new PropertiesFactoryBean();</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  bean.setLocation(new ClassPathResource("bar/foo/app.properties"));</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="複製代碼至剪貼簿" title="複製" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><ul><li>FileSystemResource 範例</li></ul><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">  PropertiesFactoryBean bean = new PropertiesFactoryBean();</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  bean.setFileEncoding("UTF-8");</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  bean.setLocation(new FileSystemResource("file:ENV_VAR/appConfig/3rdConfig.properties"));</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="複製代碼至剪貼簿" title="複製" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><h1>自 Spring Application Context 中取出 Property Bean</h1><ul><li><p>部分舊專案可能混雜使用 xml 設定此時則可直接取出 property bean 即可。</p></li><li><p>applicationContext.xml : 這邊註冊了 id 為 configProperties 的 bean</p><span style="font-size:inherit;font-family:inherit;background:#fafafa;color:#383a42;border-radius:3px;display:flex;line-height:1.4285714285714286;overflow-x:auto;white-space:pre"><code style="font-size:inherit;font-family:inherit;line-height:1.6666666666666667;padding:8px;float:left;padding-right:10px"><span class="react-syntax-highlighter-line-number">1
+</span><span class="react-syntax-highlighter-line-number">2
+</span><span class="react-syntax-highlighter-line-number">3
+</span><span class="react-syntax-highlighter-line-number">4
+</span><span class="react-syntax-highlighter-line-number">5
+</span><span class="react-syntax-highlighter-line-number">6
+</span><span class="react-syntax-highlighter-line-number">7
+</span><span class="react-syntax-highlighter-line-number">8
+</span></code><code style="font-size:inherit;font-family:inherit;line-height:1.6666666666666667;padding:8px;white-space:pre">
+    &lt;bean id="configProperties" lazy-init="false"
+        class="org.springframework.beans.factory.config.PropertiesFactoryBean"&gt;
+        &lt;property name="location"&gt;
+            &lt;value&gt;classpath:config.properties&lt;/value&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+    </code></span></li><li><p>PropertiesFactoryBeanServiceImpl.java 範例</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">* 註: 前面說過這邊習慣有多個 *.properties 檔，所以 inject 時使用 @Qualifier 注入。未再 by Type 自動 inject。</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="複製代碼至剪貼簿" title="複製" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><span style="font-size:inherit;font-family:inherit;background:#fafafa;color:#383a42;border-radius:3px;display:flex;line-height:1.4285714285714286;overflow-x:auto;white-space:pre"><code style="font-size:inherit;font-family:inherit;line-height:1.6666666666666667;padding:8px;float:left;padding-right:10px"><span class="react-syntax-highlighter-line-number">1
+</span><span class="react-syntax-highlighter-line-number">2
+</span><span class="react-syntax-highlighter-line-number">3
+</span><span class="react-syntax-highlighter-line-number">4
+</span><span class="react-syntax-highlighter-line-number">5
+</span><span class="react-syntax-highlighter-line-number">6
+</span><span class="react-syntax-highlighter-line-number">7
+</span><span class="react-syntax-highlighter-line-number">8
+</span><span class="react-syntax-highlighter-line-number">9
+</span><span class="react-syntax-highlighter-line-number">10
+</span><span class="react-syntax-highlighter-line-number">11
+</span><span class="react-syntax-highlighter-line-number">12
+</span><span class="react-syntax-highlighter-line-number">13
+</span><span class="react-syntax-highlighter-line-number">14
+</span><span class="react-syntax-highlighter-line-number">15
+</span><span class="react-syntax-highlighter-line-number">16
+</span><span class="react-syntax-highlighter-line-number">17
+</span><span class="react-syntax-highlighter-line-number">18
+</span><span class="react-syntax-highlighter-line-number">19
+</span><span class="react-syntax-highlighter-line-number">20
+</span><span class="react-syntax-highlighter-line-number">21
+</span><span class="react-syntax-highlighter-line-number">22
+</span><span class="react-syntax-highlighter-line-number">23
+</span><span class="react-syntax-highlighter-line-number">24
+</span><span class="react-syntax-highlighter-line-number">25
+</span><span class="react-syntax-highlighter-line-number">26
+</span><span class="react-syntax-highlighter-line-number">27
+</span><span class="react-syntax-highlighter-line-number">28
+</span><span class="react-syntax-highlighter-line-number">29
+</span></code><code style="font-size:inherit;font-family:inherit;line-height:1.6666666666666667;padding:8px;white-space:pre">
+@Service
+public class PropertiesFactoryBeanServiceImpl
+        implements PropertiesFactoryBeanService {
+    private PropertiesFactoryBean configProperties;
+    @Autowired
+    @Qualifier("configProperties")
+    public void setconfigProperties(PropertiesFactoryBean configProperties) {
+        this.configProperties = configProperties;
+    }
+    @Override
+    public void doPrintAllPrperties() {
+        try {
+            PropertiesFactoryBean factory2 = configProperties;
+            factory2.afterPropertiesSet();
+            Properties props = factory2.getObject();
+            @SuppressWarnings("rawtypes")
+            Enumeration en = props.propertyNames();
+            while (en.hasMoreElements()) {
+                String key = (String) en.nextElement();
+                String Property = props.getProperty(key);
+                System.out.println(key + Property);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("unexpected", e);
+        }
+    }
+}
+    </code></span></li></ul><h1>相關 3rd party libraries</h1><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">* import java.util.Enumeration;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">* import java.util.Properties;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">* import org.springframework.beans.factory.annotation.Autowired;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">* import org.springframework.beans.factory.annotation.Qualifier;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">* import org.springframework.beans.factory.config.PropertiesFactoryBean;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">* import org.springframework.core.io.support.PathMatchingResourcePatternResolver;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">* import org.springframework.stereotype.Service;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="複製代碼至剪貼簿" title="複製" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content:encoded>
+            <category>property file</category>
+            <category>spring</category>
+        </item>
+        <item>
+            <title><![CDATA[Java SHA 雜湊]]></title>
+            <link>https://chichunhuang.github.io/slash/zh-tw/blog/Java-SHA-digester</link>
+            <guid>https://chichunhuang.github.io/slash/zh-tw/blog/Java-SHA-digester</guid>
+            <pubDate>Thu, 26 Oct 2023 04:09:23 GMT</pubDate>
+            <description><![CDATA[以 Java SHA 進行資料雜湊]]></description>
+            <content:encoded><![CDATA[<blockquote><p>SHA 並不算是異種加解密技術，僅能稱為是一種雜湊計算。
+將指定資料轉為不可逆的密文，與 MD5 相似。</p></blockquote><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="雜湊演算-hash">雜湊演算 (Hash)<a href="#雜湊演算-hash" class="hash-link" aria-label="雜湊演算 (Hash)的直接連結" title="雜湊演算 (Hash)的直接連結">​</a></h2><blockquote><p>又稱為 <strong>散列算法</strong> ,或 <strong>哈希函數</strong> 。
+雜湊演算也能將資料轉為密文，但是無法將密文轉回明文。
+所以，雜湊演算通常只是用來驗證資料傳遞過程是否遺漏封包。也就是驗證資料完整性(Integrity)時使用。</p><p>ex: MD5、SHA1、HMAC</p></blockquote><ul><li>ShaDigester.java</li></ul><div class="language-java codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-java codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">import java.security.MessageDigest;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">import java.security.NoSuchAlgorithmException;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">// SHA: 雜湊演算, 單向將資料轉密文。驗證資料完整性(Integrity)時使用。 </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">public class ShaDigester {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    private static final String DIGEST_ALGORITHM_512 = "sha-512";</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    private static final String DIGEST_ALGORITHM_256 = "sha-256";</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    public static String sha512Digest(String message, String salt)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            throws NoSuchAlgorithmException {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        MessageDigest md = MessageDigest.getInstance(DIGEST_ALGORITHM_512);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        md.update(String.format("%s%s", message, salt).getBytes());</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        StringBuffer ret = new StringBuffer();</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        for (byte b : md.digest()) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            ret.append(String.format("%02x", b));</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        return ret.toString();</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    public static String sha256Digest(String message, String salt)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            throws NoSuchAlgorithmException {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        MessageDigest md = MessageDigest.getInstance(DIGEST_ALGORITHM_256);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        md.update(String.format("%s%s", message, salt).getBytes());</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        StringBuffer ret = new StringBuffer();</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        for (byte b : md.digest()) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            ret.append(String.format("%02x", b));</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        return ret.toString();</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}    </span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="複製代碼至剪貼簿" title="複製" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content:encoded>
+            <category>sha</category>
+            <category>cipher</category>
+        </item>
+    </channel>
+</rss>

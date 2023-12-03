@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktotem=self.webpackChunktotem||[]).push([[8728],{8316:e=>{e.exports=JSON.parse('{"permalink":"/slash/zh-tw/blog/tags/cipher","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

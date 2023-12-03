@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktotem=self.webpackChunktotem||[]).push([[4243],{7619:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/slash/blog/tags/facebook","allTagsPath":"/slash/blog/tags","count":1}')}}]);

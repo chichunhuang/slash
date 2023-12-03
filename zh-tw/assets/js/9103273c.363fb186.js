@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktotem=self.webpackChunktotem||[]).push([[3757],{7724:e=>{e.exports=JSON.parse('{"label":"property file","permalink":"/slash/zh-tw/blog/tags/property-file","allTagsPath":"/slash/zh-tw/blog/tags","count":1}')}}]);
