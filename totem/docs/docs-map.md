@@ -3,7 +3,6 @@ sidebar_position: 1
 ---
 
 # Docs
-* [docs-map.md](/docs/docs-map)
 ### Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/DevTech/Java/ExceptionMailFromLog4j)
 * [Gson fromJson 拋出 ClassCastException - Gson.fromJson throws java.lang.ClassCastException](/docs/DevTech/Java/GSON_ClassCastException)
