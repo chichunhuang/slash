@@ -66,7 +66,7 @@ const config = {
       navbar: {
         title: 'Totem\'s',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Site Logo of TOtem\'s',
           src: 'img/70_70.jpg',
         },
 		
@@ -80,6 +80,7 @@ const config = {
             position: 'left',
             label: '程式技術文章',
           },
+          {to: '/docs/Graphics/docs-map', label: 'Graphics', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           //{
           //  href: 'https://chichunhuang.github.io/slash/blog',
@@ -97,6 +98,10 @@ const config = {
               {
                 label: '程式技術文章',
                 to: '/docs/docs-map',
+              },
+              {
+                label: '我的插圖',
+                to: '/docs/Graphics/docs-map',
               },
             ],
           },

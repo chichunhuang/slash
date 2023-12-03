@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Docs
+# Document List (docs)
 ### Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/DevTech/Java/ExceptionMailFromLog4j)
 * [Gson fromJson 拋出 ClassCastException - Gson.fromJson throws java.lang.ClassCastException](/docs/DevTech/Java/GSON_ClassCastException)
@@ -23,4 +23,6 @@ sidebar_position: 1
 * [隱藏 Tomcat 版本資訊 - ](/docs/DevTech/Tomcat/Hide_Tomcat_Version)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
+## Graphics
+* [Logo of Insect-Totem - The origin of Insect-Totem](/docs/Graphics/Logo_Of_Insecttotem)
 
