@@ -1,6 +1,6 @@
 ---
 title: List Properties in Spring App
-description: 列出 Spring 專案中 properties 黨中的參數
+description: 列出 Spring 專案中 properties 檔中的參數
 keywords: [property file,spring]
 slug: List-Properties-in-Spring-App 
 authors: [insect]
@@ -17,7 +17,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 只好先小人提供 App 管理人查詢特定系統參數的功能。
 > 也順便寫了這份註記。
 
-## 一個專案該有機個屬性檔呢?
+## 一個專案該有幾個屬性檔呢?
 > 我這邊的習慣是至少兩個。如此設定也是因為權責分離，減少 MIS 維護時出錯。
 > 一個是與維運相關: 例如 IP / DB 帳密 / Mail Server / Exception 發生時的告警對象。
 > 另一個是系統參數相關: 與應用相關的設定 MIS 不須知道。
