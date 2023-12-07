@@ -1,21 +1,14 @@
----
-title: List Properties in Spring App
-description: 列出 Spring 專案中 properties 檔中的參數
-keywords: [property file,spring]
-slug: List-Properties-in-Spring-App 
-authors: [insect]
-tags: [property file,spring]
----
 import { CodeBlock, dracula  } from "react-code-blocks";
 
 * 相關閱讀 
-    * [Spring framework 注入 property 檔方式: injected by xml configuration]()
-    * [Spring framework 注入 property 檔方式: @ConfigurationProperties]()
-    * [Spring framework 注入 property 檔方式: inject single value into bean's field]()
+>     * Spring framework 注入 property 檔方式: injected by xml configuration
+>     * Spring framework 注入 property 檔方式: @ConfigurationProperties
+>     * Spring framework 注入 property 檔方式: inject single value into bean's field
     
 
 
 # Properties 檔的功用
+
 > 不管是遵循 ISO 或是採納 DevOps 等流程。通常開發端與維運端必須 __權責分離__ 。
 > 但畢竟是多組人共同協作，要如何釐清系統問題不是來自開發端而是維運端設定的問題呢?
 > 畢竟我這邊偶而發生 MIS 屬性檔設定錯誤而造成系統無法開啟的問題。
