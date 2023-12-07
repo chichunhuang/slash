@@ -8,6 +8,13 @@ tags: [property file,spring]
 ---
 import { CodeBlock, dracula  } from "react-code-blocks";
 
+* 相關閱讀 
+    * [Spring framework 注入 property 檔方式: injected by xml configuration]()
+    * [Spring framework 注入 property 檔方式: @ConfigurationProperties]()
+    * [Spring framework 注入 property 檔方式: inject single value into bean's field]()
+    
+
+
 # Properties 檔的功用
 > 不管是遵循 ISO 或是採納 DevOps 等流程。通常開發端與維運端必須 __權責分離__ 。
 > 但畢竟是多組人共同協作，要如何釐清系統問題不是來自開發端而是維運端設定的問題呢?
