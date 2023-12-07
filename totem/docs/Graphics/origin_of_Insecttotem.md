@@ -1,5 +1,6 @@
 ---
-title: Logo of Insect-Totem
+sidebar_position: 1
+title: Origin of Insect-Totem
 description: Insect-Totem 的起源
 keywords: [Insect-totem,InsectTotem]
 ---

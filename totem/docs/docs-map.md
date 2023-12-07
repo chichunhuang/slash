@@ -24,5 +24,10 @@ sidebar_position: 1
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 ## Graphics
-* [Logo of Insect-Totem - Insect-Totem 的起源](/docs/Graphics/Logo_Of_Insecttotem)
+* ["Butterfly 01" - Insect-Totem Stag Beetle](/docs/Graphics/Butterfly_01)
+* ["Butterfly Papilio 01" - Insect-Totem Butterfly PapilioXuthus](/docs/Graphics/Butterfly_Papilio_xuthus_01)
+* ["Dynastes Hercules" - Insect-Totem - Dynastes Hercules](/docs/Graphics/Dynastes_Hercules_01)
+* ["Grass Hooper 01" - Insect-Totem Grass Hooper 01](/docs/Graphics/Hopper_01)
+* ["Stag Beetle 01" - Insect-Totem Stag Beetle 01](/docs/Graphics/Stag_Beetle_01)
+* [Origin of Insect-Totem - Insect-Totem 的起源](/docs/Graphics/origin_of_Insecttotem)
 
