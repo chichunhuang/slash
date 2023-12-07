@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktotem=self.webpackChunktotem||[]).push([[3068],{2935:e=>{e.exports=JSON.parse('{"permalink":"/zh-tw/blog/tags/property-file","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

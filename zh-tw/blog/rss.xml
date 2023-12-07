@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Insect Totem Blog</title>
-        <link>https://chichunhuang.github.io/slash/zh-tw/blog</link>
+        <link>https://chichunhuang.github.io/zh-tw/blog</link>
         <description>Insect Totem Blog</description>
         <lastBuildDate>Tue, 28 Nov 2023 03:52:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>zh-tw</language>
         <item>
             <title><![CDATA[List Properties in Spring App]]></title>
-            <link>https://chichunhuang.github.io/slash/zh-tw/blog/List-Properties-in-Spring-App</link>
-            <guid>https://chichunhuang.github.io/slash/zh-tw/blog/List-Properties-in-Spring-App</guid>
+            <link>https://chichunhuang.github.io/zh-tw/blog/List-Properties-in-Spring-App</link>
+            <guid>https://chichunhuang.github.io/zh-tw/blog/List-Properties-in-Spring-App</guid>
             <pubDate>Tue, 28 Nov 2023 03:52:41 GMT</pubDate>
             <description><![CDATA[列出 Spring 專案中 properties 檔中的參數]]></description>
             <content:encoded><![CDATA[<blockquote><p>不管是遵循 ISO 或是採納 DevOps 等流程。通常開發端與維運端必須 <strong>權責分離</strong> 。
@@ -167,8 +167,8 @@ public class PropertiesFactoryBeanServiceImpl
         </item>
         <item>
             <title><![CDATA[Java SHA 雜湊]]></title>
-            <link>https://chichunhuang.github.io/slash/zh-tw/blog/Java-SHA-digester</link>
-            <guid>https://chichunhuang.github.io/slash/zh-tw/blog/Java-SHA-digester</guid>
+            <link>https://chichunhuang.github.io/zh-tw/blog/Java-SHA-digester</link>
+            <guid>https://chichunhuang.github.io/zh-tw/blog/Java-SHA-digester</guid>
             <pubDate>Thu, 26 Oct 2023 04:09:23 GMT</pubDate>
             <description><![CDATA[以 Java SHA 進行資料雜湊]]></description>
             <content:encoded><![CDATA[<blockquote><p>SHA 並不算是異種加解密技術，僅能稱為是一種雜湊計算。

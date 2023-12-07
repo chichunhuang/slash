@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://chichunhuang.github.io/slash/blog</id>
+    <id>https://chichunhuang.github.io/blog</id>
     <title>Insect Totem Blog</title>
     <updated>2023-11-28T03:52:41.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://chichunhuang.github.io/slash/blog"/>
+    <link rel="alternate" href="https://chichunhuang.github.io/blog"/>
     <subtitle>Insect Totem Blog</subtitle>
-    <icon>https://chichunhuang.github.io/slash/img/70_70.jpg</icon>
+    <icon>https://chichunhuang.github.io/img/70_70.jpg</icon>
     <entry>
         <title type="html"><![CDATA[List Properties in Spring App]]></title>
-        <id>https://chichunhuang.github.io/slash/blog/List-Properties-in-Spring-App</id>
-        <link href="https://chichunhuang.github.io/slash/blog/List-Properties-in-Spring-App"/>
+        <id>https://chichunhuang.github.io/blog/List-Properties-in-Spring-App</id>
+        <link href="https://chichunhuang.github.io/blog/List-Properties-in-Spring-App"/>
         <updated>2023-11-28T03:52:41.000Z</updated>
         <summary type="html"><![CDATA[列出 Spring 專案中 properties 檔中的參數]]></summary>
         <content type="html"><![CDATA[<blockquote><p>不管是遵循 ISO 或是採納 DevOps 等流程。通常開發端與維運端必須 <strong>權責分離</strong> 。
@@ -170,8 +170,8 @@ public class PropertiesFactoryBeanServiceImpl
     </entry>
     <entry>
         <title type="html"><![CDATA[Java SHA 雜湊]]></title>
-        <id>https://chichunhuang.github.io/slash/blog/Java-SHA-digester</id>
-        <link href="https://chichunhuang.github.io/slash/blog/Java-SHA-digester"/>
+        <id>https://chichunhuang.github.io/blog/Java-SHA-digester</id>
+        <link href="https://chichunhuang.github.io/blog/Java-SHA-digester"/>
         <updated>2023-10-26T04:09:23.000Z</updated>
         <summary type="html"><![CDATA[以 Java SHA 進行資料雜湊]]></summary>
         <content type="html"><![CDATA[<blockquote><p>SHA 並不算是異種加解密技術，僅能稱為是一種雜湊計算。

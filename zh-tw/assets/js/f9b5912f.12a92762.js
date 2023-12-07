@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktotem=self.webpackChunktotem||[]).push([[4060],{2197:t=>{t.exports=JSON.parse('{"label":"spring","permalink":"/zh-tw/blog/tags/spring","allTagsPath":"/zh-tw/blog/tags","count":1}')}}]);
