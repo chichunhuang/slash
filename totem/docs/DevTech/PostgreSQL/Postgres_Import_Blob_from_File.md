@@ -4,6 +4,10 @@ description: Postgres Import Blob from File
 keywords: [Postgres,Lob,Import]
 ---
 
+* 其他參考資料
+* [PostgreSQL 匯出 Blob 欄位至檔案](/Postgres_Export_Blob_to_File)
+* [PostgreSQL Blob 備份與回存](/Backup_Restore_BLOB_in_Postgres)
+
 # PostgreSQL 上傳 Blob 檔案
 > 分為兩類執行方式
 >> 在 DB server 端執行
@@ -25,7 +29,7 @@ lo_import 123456
 
 # PostgreSQL Client side psql 執行檔案上傳方式
 
-* 新檔上傳方式:
+* __psql__ 下新檔上傳方式:
 
 ```sql
 \lo_import '/home/server/uploading_file.txt'

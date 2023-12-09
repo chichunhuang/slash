@@ -4,19 +4,24 @@ description: Backup and Restore BLOB in PostgreSQL
 keywords: [postgres,lob,restore,backup]
 ---
 
-# PostgreSQL Blob 備份與回存基本範例
-## 匯出單一 lob 檔案至指定位置範例<span id="single-clause-export"></span>
+* 其他參考資料
+* [PostgreSQL 匯出 Blob 欄位至檔案](/Postgres_Export_Blob_to_File)
+* [PostgreSQL 上傳 Blob 檔案](/Postgres_Import_Blob_from_File)
+
+
+# POSTGRESQL BLOB 備份與回存基本範例
+## __匯出__ 單一 LOB 檔案至指定位置範例<span id="single-clause-export"></span>
 
 ```
 by select clause
 SELECT lo_export(index_file, '/tmp/download_file.csv') FROM table_with_lob_column
 
-by LOID
+by LOID / psql
 psql -U doraemon -d doraemon -c '\lo_export given_oid /tmp/download_file.csv '
 
 ```
 
-## 匯入單一檔案並取得 loid 範例<span id="single-clause-import"></span>
+## __匯入__ 單一檔案並取得 loid 範例<span id="single-clause-import"></span>
 * 後續須再將 OID 指到對應 table column
 ```
 psql -U doraemon -d doraemon -c '\lo_import /tmp/import_file.txt'
@@ -41,21 +46,29 @@ lo_import 123456
 1. 導入事先備份的 blob 並更新 application_form 的 loid (stands for: lob object id)
 
 
-## 含 BLOB column 的 table 備份
+## 含 BLOB COLUMN 的 TABLE 備份
+* 需使用 pg_dump 指令
+
 ```sql
 pg_dump -t application_form
 ```
 
 
-## 查詢 schema 專案下的 lob 範例
-```
+## 查詢 SCHEMA 專案下的 LOB 範例
+* 查詢 DB 指定 Schema 下所有的 LOB objects
+* 關鍵在於 __pg_largeobject__ 這個內建的 table
+
+```sql
 psql -U postgres -d doraemon -c 'select loid from pg_largeobject'
 ```
 
 
-## 查詢 Doraemon 專案的 application_form table
-```
-psql -U postgres -d doraemon -c 'select id,file, file_name from application_form where file is not null order by id'
+# DORAEMON 專案匯出範例
+
+## 查詢 DORAEMON 專案的 APPLICATION_FORM TABLE
+
+```sql
+psql -U postgres -d doraemon -c 'select id, file, file_name from application_form where file is not null order by id'
 
  id |   file   | file_name                
 
@@ -69,7 +82,10 @@ psql -U postgres -d doraemon -c 'select id,file, file_name from application_form
 
 ```
 
-## 匯出 table 的 lob object ID 範例
+# LOB TABLE 匯出並匯入到另一個 TABLE 練習
+
+## 匯出 TABLE APPLICATION_FORM 的 LOB OBJECT ID 範例
+
 * 註(bash shell): eval is a built-in shell command used to evaluate and execute strings as a shell command.
 * 將 pk, oid, filenmae 串接後組成[單一 BLOB 檔匯出句子](#single-clause-export)
 * 組成 lo_export 句子以供匯出檔案用
@@ -86,7 +102,8 @@ done
 ```
 
 
-## 匯入 table 的 lob object ID 範例
+## 匯入 TABLE 的 LOB OBJECT ID 範例
+
 * 依序將檔案匯入並依序取得檔案的 LOID (lo_import 函數)
 * 參考[單一 BLOB 檔匯入句子](#single-clause-import)
 * 將 LOID 餵回新的 table record 之中
@@ -102,9 +119,12 @@ done
 ```
 
 
-## 清除 doraemon 未使用的 lob 範例
-* 使用 vacuumlo 指令
+## 清除 DORAEMON 未使用的 LOB
 
-```
+* 使用 vacuumlo 指令，用來清除 pg_largeobject 無人使用的孤兒資料。
+
+```sql
+
 vacuumlo -U doraemon -v doraemon
+
 ```
