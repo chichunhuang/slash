@@ -6,8 +6,8 @@ keywords: [Postgres,Lob,Export]
 import { CodeBlock, dracula  } from "react-code-blocks";
 
 * 其他參考資料
-* [PostgreSQL 上傳 Blob 檔案](/Postgres_Import_Blob_from_File)
-* [PostgreSQL Blob 備份與回存](/Backup_Restore_BLOB_in_Postgres)
+* [PostgreSQL 上傳 Blob 檔案](./Postgres_Import_Blob_from_File)
+* [PostgreSQL Blob 備份與回存](./Backup_Restore_BLOB_in_Postgres)
 
 # PostgreSQL 匯出 Blob 欄位至檔案
 

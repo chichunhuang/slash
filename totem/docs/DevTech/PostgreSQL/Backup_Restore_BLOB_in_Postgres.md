@@ -5,8 +5,8 @@ keywords: [postgres,lob,restore,backup]
 ---
 
 * 其他參考資料
-* [PostgreSQL 匯出 Blob 欄位至檔案](/Postgres_Export_Blob_to_File)
-* [PostgreSQL 上傳 Blob 檔案](/Postgres_Import_Blob_from_File)
+* [PostgreSQL 匯出 Blob 欄位至檔案](./Postgres_Export_Blob_to_File)
+* [PostgreSQL 上傳 Blob 檔案](./Postgres_Import_Blob_from_File)
 
 
 # POSTGRESQL BLOB 備份與回存基本範例
