@@ -2,11 +2,46 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chichunhuang.github.io/zh-tw/blog</id>
     <title>Insect Totem Blog</title>
-    <updated>2023-10-26T04:09:23.000Z</updated>
+    <updated>2023-12-09T09:00:01.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chichunhuang.github.io/zh-tw/blog"/>
     <subtitle>Insect Totem Blog</subtitle>
     <icon>https://chichunhuang.github.io/zh-tw/img/70_70.jpg</icon>
+    <entry>
+        <title type="html"><![CDATA[Document List (blog)]]></title>
+        <id>https://chichunhuang.github.io/zh-tw/blog/docs-map</id>
+        <link href="https://chichunhuang.github.io/zh-tw/blog/docs-map"/>
+        <updated>2023-12-09T09:00:01.000Z</updated>
+        <summary type="html"><![CDATA[* 昆蟲圖騰重新上架]]></summary>
+        <content type="html"><![CDATA[<ul><li><a href="/zh-tw/blog/insect-totem-is-coming">昆蟲圖騰重新上架</a></li><li><a href="/zh-tw/blog/insect-totem-release-log">FROM JSPWIKI TO MARKDOWN</a></li><li><a href="/zh-tw/blog/Java-SHA-digester">Java SHA 雜湊 - 以 Java SHA 進行資料雜湊</a></li></ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FROM JSPWIKI TO MARKDOWN]]></title>
+        <id>https://chichunhuang.github.io/zh-tw/blog/insect-totem-release-log</id>
+        <link href="https://chichunhuang.github.io/zh-tw/blog/insect-totem-release-log"/>
+        <updated>2023-12-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[從前都將筆記做在 portable jspwiki / atlassian conflence，慢慢搬遷到 markdown 來。]]></summary>
+        <content type="html"><![CDATA[<blockquote><p>從前都將筆記做在 portable jspwiki / atlassian conflence，慢慢搬遷到 markdown 來。
+雖然都算是 wiki 語法，但還是不全相同。當初賭錯了，再現轉換有些累人，不知道是否有工具可轉換。</p></blockquote>]]></content>
+        <author>
+            <name>Insect Totem</name>
+            <uri>https://github.com/chichunhuang</uri>
+        </author>
+        <category label="Insect-Totem" term="Insect-Totem"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[昆蟲圖騰重新上架]]></title>
+        <id>https://chichunhuang.github.io/zh-tw/blog/insect-totem-is-coming</id>
+        <link href="https://chichunhuang.github.io/zh-tw/blog/insect-totem-is-coming"/>
+        <updated>2023-12-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[* 以前註冊的是 www.insect-totem.tw]]></summary>
+        <content type="html"><![CDATA[<ul><li>以前註冊的是 <a href="http://www.insect-totem.tw" target="_blank" rel="noopener noreferrer">www.insect-totem.tw</a></li><li>現在改註冊 <a href="http://www.insect-totem.net" target="_blank" rel="noopener noreferrer">www.insect-totem.net</a><ul><li>由生物轉生態，再由生態轉行為生態，再到生物電腦模擬。現在在幫忙開發與醫療/醫學/醫研相關的系統。多了些資訊相關筆記所以改 net。</li></ul></li></ul>]]></content>
+        <author>
+            <name>Insect Totem</name>
+            <uri>https://github.com/chichunhuang</uri>
+        </author>
+        <category label="Insect-Totem" term="Insect-Totem"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Java SHA 雜湊]]></title>
         <id>https://chichunhuang.github.io/zh-tw/blog/Java-SHA-digester</id>

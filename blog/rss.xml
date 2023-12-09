@@ -4,10 +4,37 @@
         <title>Insect Totem Blog</title>
         <link>https://chichunhuang.github.io/blog</link>
         <description>Insect Totem Blog</description>
-        <lastBuildDate>Thu, 26 Oct 2023 04:09:23 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 Dec 2023 09:00:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Document List (blog)]]></title>
+            <link>https://chichunhuang.github.io/blog/docs-map</link>
+            <guid>https://chichunhuang.github.io/blog/docs-map</guid>
+            <pubDate>Sat, 09 Dec 2023 09:00:01 GMT</pubDate>
+            <description><![CDATA[* 昆蟲圖騰重新上架]]></description>
+            <content:encoded><![CDATA[<ul><li><a href="/blog/insect-totem-is-coming">昆蟲圖騰重新上架</a></li><li><a href="/blog/insect-totem-release-log">FROM JSPWIKI TO MARKDOWN</a></li><li><a href="/blog/Java-SHA-digester">Java SHA 雜湊 - 以 Java SHA 進行資料雜湊</a></li></ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[FROM JSPWIKI TO MARKDOWN]]></title>
+            <link>https://chichunhuang.github.io/blog/insect-totem-release-log</link>
+            <guid>https://chichunhuang.github.io/blog/insect-totem-release-log</guid>
+            <pubDate>Sat, 09 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[從前都將筆記做在 portable jspwiki / atlassian conflence，慢慢搬遷到 markdown 來。]]></description>
+            <content:encoded><![CDATA[<blockquote><p>從前都將筆記做在 portable jspwiki / atlassian conflence，慢慢搬遷到 markdown 來。
+雖然都算是 wiki 語法，但還是不全相同。當初賭錯了，再現轉換有些累人，不知道是否有工具可轉換。</p></blockquote>]]></content:encoded>
+            <category>Insect-Totem</category>
+        </item>
+        <item>
+            <title><![CDATA[昆蟲圖騰重新上架]]></title>
+            <link>https://chichunhuang.github.io/blog/insect-totem-is-coming</link>
+            <guid>https://chichunhuang.github.io/blog/insect-totem-is-coming</guid>
+            <pubDate>Sun, 03 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[* 以前註冊的是 www.insect-totem.tw]]></description>
+            <content:encoded><![CDATA[<ul><li>以前註冊的是 <a href="http://www.insect-totem.tw" target="_blank" rel="noopener noreferrer">www.insect-totem.tw</a></li><li>現在改註冊 <a href="http://www.insect-totem.net" target="_blank" rel="noopener noreferrer">www.insect-totem.net</a><ul><li>由生物轉生態，再由生態轉行為生態，再到生物電腦模擬。現在在幫忙開發與醫療/醫學/醫研相關的系統。多了些資訊相關筆記所以改 net。</li></ul></li></ul>]]></content:encoded>
+            <category>Insect-Totem</category>
+        </item>
         <item>
             <title><![CDATA[Java SHA 雜湊]]></title>
             <link>https://chichunhuang.github.io/blog/Java-SHA-digester</link>
