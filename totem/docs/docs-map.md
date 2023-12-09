@@ -5,15 +5,20 @@ sidebar_position: 1
 # Document List (docs)
 ### Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/DevTech/Java/ExceptionMailFromLog4j)
-* [Gson fromJson 拋出 ClassCastException - Gson.fromJson throws java.lang.ClassCastException](/docs/DevTech/Java/GSON_ClassCastException)
-* [Java AES 加解密 - 以 Java AES 進行資料加解密](/docs/DevTech/Java/Java_Aes_Cipher)
-* [Java Cipher Intro - Java 加密方式簡介](/docs/DevTech/Java/Java_Encryption)
-* [Java PBE 加解密 - "以 Java PBE PBEWITHMD5andDES 進行資料加解密"](/docs/DevTech/Java/Java_Pbe_Cipher)
-* [Java RSA 加解密 - 以 Java RSA 進行資料加解密](/docs/DevTech/Java/Java_Rsa_Cipher)
-* [Java SHA 雜湊 - 以 Java SHA 進行資料雜湊](/docs/DevTech/Java/Java_Sha_Digest)
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/DevTech/Java/Session_Fixation)
 * [非正規Session Fixation處理 - 降低風險，並未完全即時](/docs/DevTech/Java/Session_Fixation_Wicket)
-* [Spring_List_Proerties.md](/docs/DevTech/Java/Spring_List_Proerties)
+#### Cypher
+* [Java AES 加解密 - 以 Java AES 進行資料加解密](/docs/DevTech/Java/Cypher/Java_Aes_Cipher)
+* [Java Cipher Intro - Java 加密方式簡介](/docs/DevTech/Java/Cypher/Java_Encryption)
+* [Java PBE 加解密 - "以 Java PBE PBEWITHMD5andDES 進行資料加解密"](/docs/DevTech/Java/Cypher/Java_Pbe_Cipher)
+* [Java RSA 加解密 - 以 Java RSA 進行資料加解密](/docs/DevTech/Java/Cypher/Java_Rsa_Cipher)
+* [Java SHA 雜湊 - 以 Java SHA 進行資料雜湊](/docs/DevTech/Java/Cypher/Java_Sha_Digest)
+#### JSON
+* [Gson fromJson 拋出 ClassCastException - Gson.fromJson throws java.lang.ClassCastException](/docs/DevTech/Java/JSON/GSON_ClassCastException)
+#### Spring
+* [Spring 下 Properties 檔注入與使用範例 - Spring 下 Properties 檔注入與使用範例](/docs/DevTech/Java/Spring/Spring_List_Proerties)
+* [Spring Properties to PropertyFactoryBean by @Autowired - Spring Properties to PropertyFactoryBean by @Autowired](/docs/DevTech/Java/Spring/Spring_Property_inject_AtAutowired_to_PropertyFactoryBean)
+* [Spring Properties to Map by @Resource - Spring Properties to Map by @Resource](/docs/DevTech/Java/Spring/Spring_Property_inject_AtResource_to_Map)
 ### PostgreSQL
 * [PostgreSQL Blob 備份與回存 - Backup and Restore BLOB in PostgreSQL](/docs/DevTech/PostgreSQL/Backup_Restore_BLOB_in_Postgres)
 * [PostgreSQL 匯出 Blob 欄位 - Postgres Export Blob to File](/docs/DevTech/PostgreSQL/Postgres_Export_Blob_to_File)
@@ -24,7 +29,6 @@ sidebar_position: 1
 ### Python
 * [Send Mail by Python smtplib - Send Mail by Python smtplib](/docs/DevTech/Python/Send_Eail_By_Python)
 * ["Python-Sorting by pandas" - "Python Examples - Sorting](/docs/DevTech/Python/Sorting_by_pandas_Python)
-* [Title for search engines; can be different from the actual heading - A short description of this page](/docs/DevTech/Python/xxxx)
 ### Tomcat
 * [隱藏 Tomcat 版本資訊 - ](/docs/DevTech/Tomcat/Hide_Tomcat_Version)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)

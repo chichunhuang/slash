@@ -1,10 +1,16 @@
+---
+title: Spring 下 Properties 檔注入與使用範例
+description: Spring 下 Properties 檔注入與使用範例
+keywords: [Spring,Properties,PropertyFactoryBean]
+---
+
 import { CodeBlock, dracula  } from "react-code-blocks";
 
+# Spring 下 Properties 檔注入與使用範例
+
 * 相關閱讀 
->     * Spring framework 注入 property 檔方式: injected by xml configuration
->     * Spring framework 注入 property 檔方式: @ConfigurationProperties
->     * Spring framework 注入 property 檔方式: inject single value into bean's field
-    
+   * [Spring framework 注入 property 檔方式: by @Autowired to PropertyFactoryBean](./Spring_Property_inject_AtAutowired_to_PropertyFactoryBean)
+   * [Spring framework 注入 property 檔方式: by @Resource to Map](./Spring_Property_inject_AtResource_to_Map)
 
 
 # Properties 檔的功用
