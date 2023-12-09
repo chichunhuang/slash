@@ -12,7 +12,7 @@ keywords: [Postgres,Lob,Import]
 > 分為兩類執行方式
 >> 在 DB server 端執行
 >> 在 Client 端 psql 執行
-* * [參考 PostgreSQL 匯出 Blob 欄位至檔案](/Postgres_Export_Blob_to_File)
+* * [參考 PostgreSQL 匯出 Blob 欄位至檔案](./Postgres_Export_Blob_to_File)
 
 
 # PostgreSQL server side 執行檔案上傳方式
