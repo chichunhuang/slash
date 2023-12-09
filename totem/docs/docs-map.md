@@ -13,8 +13,14 @@ sidebar_position: 1
 * [Java SHA 雜湊 - 以 Java SHA 進行資料雜湊](/docs/DevTech/Java/Java_Sha_Digest)
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/DevTech/Java/Session_Fixation)
 * [非正規Session Fixation處理 - 降低風險，並未完全即時](/docs/DevTech/Java/Session_Fixation_Wicket)
+* [Spring_List_Proerties.md](/docs/DevTech/Java/Spring_List_Proerties)
+### PostgreSQL
+* [PostgreSQL Blob 備份與回存 - Backup and Restore BLOB in PostgreSQL](/docs/DevTech/PostgreSQL/Backup_Restore_BLOB_in_Postgres)
+* [PostgreSQL 匯出 Blob 欄位 - Postgres Export Blob to File](/docs/DevTech/PostgreSQL/Postgres_Export_Blob_to_File)
+* [PostgreSQL 上傳 Blob 檔案 - Postgres Import Blob from File](/docs/DevTech/PostgreSQL/Postgres_Import_Blob_from_File)
 #### SQL
 * [Insert from Select - Insert from select result](/docs/DevTech/PostgreSQL/SQL/Insert_From_Selection_Values)
+* [INSERT INTO VS SELECT INTO - Insert-Into 與 Select-Into 使用上差異](/docs/DevTech/PostgreSQL/SQL/Insert_Into_vs_Select_Into)
 ### Python
 * [Send Mail by Python smtplib - Send Mail by Python smtplib](/docs/DevTech/Python/Send_Eail_By_Python)
 * ["Python-Sorting by pandas" - "Python Examples - Sorting](/docs/DevTech/Python/Sorting_by_pandas_Python)
