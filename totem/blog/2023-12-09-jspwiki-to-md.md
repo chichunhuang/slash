@@ -1,6 +1,6 @@
 ---
 slug: insect-totem-release-log
-title: FROM JSPWIKI TO MARKDOWN
+title: From JspWiki To Markdown
 authors: [insect]
 tags: [Insect-Totem, insect totem]
 ---
