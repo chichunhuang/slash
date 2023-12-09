@@ -1,5 +1,5 @@
 ---
-title: "Butterfly 01"
+title: Butterfly 01
 description: Insect-Totem Stag Beetle
 keywords: [Insect-totem,InsectTotem,Butterfly]
 ---

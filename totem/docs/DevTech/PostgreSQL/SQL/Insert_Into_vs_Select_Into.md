@@ -1,5 +1,5 @@
 ---
-title: INSERT INTO VS SELECT INTO
+title: Insert Into v.s. Select Into
 description: Insert-Into 與 Select-Into 使用上差異
 keywords: [SQL,copy,insert into,select into]
 ---

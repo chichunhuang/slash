@@ -1,5 +1,5 @@
 ---
-title: "Butterfly Papilio 01"
+title: Butterfly Papilio 01
 description: Insect-Totem Butterfly PapilioXuthus
 keywords: [Insect-totem,InsectTotem,Butterfly]
 ---

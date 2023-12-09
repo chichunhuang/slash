@@ -1,5 +1,5 @@
 ---
-title: "Dynastes Hercules"
+title: Dynastes Hercules
 description: Insect-Totem - Dynastes Hercules
 keywords: [Insect-totem,InsectTotem,Dynastes Hercules]
 ---

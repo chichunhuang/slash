@@ -1,6 +1,6 @@
 ---
-title: "Python-Sorting by pandas"
-description: "Python Examples - Sorting, CSV parsing" 
+title: Python-Sorting by pandas
+description: Python - Sorting and Parsing CSV  
 keywords: [python,pandas,sort,parse,dateformat]
 ---
 

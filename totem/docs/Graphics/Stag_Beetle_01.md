@@ -1,5 +1,5 @@
 ---
-title: "Stag Beetle 01"
+title: Stag Beetle 01
 description: Insect-Totem Stag Beetle 01
 keywords: [Insect-totem,InsectTotem,Stag Beetle]
 ---
