@@ -69,7 +69,7 @@ select b.Author_ID, a.author,
      group by patient;
 ```
 
-* 欄位先合併在串接
+* 欄位先合併再串接
 
 ```
     string_agg(a.first_name || ' ' || a.last_name, ',' ) as full_names, 
