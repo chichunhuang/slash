@@ -17,7 +17,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * Customized Cookie : 這邊泛指開發時自行建立與維護的部分。
 * 3rd Cookie : 其他 Libs 所建立與使用。
 
-# Tomcat 中與 JSESSIONID/Cookie 相關案全性設定
+# Tomcat 中與 JSESSIONID/Cookie 相關全性設定
 * 主要會討論到下列三項
     * [HttpOnly](#HttpOnly-id) : 限制 Cookie 僅能經由 Http(s) Protocol 存取。所以其他  JavaScript 無法存取。
     * [Secure](#Secure-id) : Cookie 僅能在加密的連下情境下使用。也就是又再依縮限制只能在 Https 中使用。 
