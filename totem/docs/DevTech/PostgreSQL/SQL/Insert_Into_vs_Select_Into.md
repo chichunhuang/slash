@@ -12,7 +12,7 @@ keywords: [SQL,copy,insert into,select into]
 
 # INSERT INTO
 
->　insert into 是用來 __copy then insert__ 到另一個 table <br/>
+> insert into 是用來 __copy then insert__ 到另一個 table <br/>
 > => 背後是每筆 record 依次 insert <br/>
 > 所以 nextval('seq') 會執行多次  <br/>
 
@@ -40,7 +40,7 @@ INSERT INTO APPLICATION_FORM (ID, APPLIER, ISSUE_DATE, TYPE)
 > => 背後是整個 table __單次性轉移__  <br/>
 > 若 select 中使用 nextval('seq') 僅會執行一次  <br/>
 
-``sql
+```sql
 SELECT column1, column2, column3, ...
 	INTO newtable [IN externaldb]
 	FROM oldtable
