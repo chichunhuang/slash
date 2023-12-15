@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL Blob 備份與回存
 description: Backup and Restore BLOB in PostgreSQL
-keywords: [postgres,lob,restore,backup]
+keywords: [postgresql,lob,restore,backup]
 ---
 
 * 其他參考資料

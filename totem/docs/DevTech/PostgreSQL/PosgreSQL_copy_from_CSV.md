@@ -1,7 +1,7 @@
 ---
 title: PosgreSQL copy from CSV
 description: 自 CSV 檔匯入資料
-keywords: [postgres,copy,CSV]
+keywords: [postgresql,copy,CSV]
 ---
 
 # 自 CSV 檔匯入資料

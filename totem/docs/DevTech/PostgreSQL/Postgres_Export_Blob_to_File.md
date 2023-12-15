@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL 匯出 Blob 欄位
 description: Postgres Export Blob to File
-keywords: [Postgres,Lob,Export]
+keywords: [postgresql,Lob,Export]
 ---
 import { CodeBlock, dracula  } from "react-code-blocks";
 

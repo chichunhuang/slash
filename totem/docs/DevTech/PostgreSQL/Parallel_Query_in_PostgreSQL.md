@@ -1,7 +1,7 @@
 ---
 title: Parallel Query in PostgreSQL
 description: Parallel_Query_in_PostgreSQL
-keywords: [postgres,Parallel Query]
+keywords: [postgresql,Parallel Query]
 ---
 
 # Parallel Query in PostgreSQL

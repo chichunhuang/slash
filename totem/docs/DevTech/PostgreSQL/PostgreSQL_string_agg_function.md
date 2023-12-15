@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL string_agg Function
 description: PostgreSQL批次合併group by後,組內資料
-keywords: [Postgres,string_agg]
+keywords: [postgresql,string_agg]
 ---
 
 # PostgreSQL string_agg() 合併多筆 Records 的同欄位值

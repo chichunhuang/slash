@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL 上傳 Blob 檔案
 description: Postgres Import Blob from File
-keywords: [Postgres,Lob,Import]
+keywords: [postgresql,Lob,Import]
 ---
 
 * 其他參考資料
