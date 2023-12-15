@@ -18,7 +18,11 @@ keywords: [Nested select,subquery]
     * 查出不同年齡層每日平均使用手機的平均時間。
     * 查出每班級個科目考試的最高分數。
 
-* 注意下列範例中: from clause 必須給個別名，下方例子為 tmp
+* Syntax:  
+
+> select * from (query) alias
+
+* 注意下列範例中: from clause 必須給個別名，不可省略。下方例子為 tmp
 
 ```sql
 SELECT  max_score, class , subject
