@@ -31,11 +31,14 @@ pg_restore -U totem -F t -d totem -i -v totem.tar
   
 ```sql
 drop database totem;
+
 CREATE DATABASE totem
   WITH ENCODING='UNICODE'
        OWNER=totem
        TEMPLATE=template0
        TABLESPACE=totem;
+\c totem;
+       
 ALTER SCHEMA public OWNER TO totem;
 ```
 
