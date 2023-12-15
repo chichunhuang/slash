@@ -8,9 +8,12 @@ keywords: [Postgres,string_agg]
 * 批次合併 group by 後,每單一組內資料。
 * 呈現 group by 結果的集合資訊。  
 
-使用情境:  
-例如有一個 Book table，book FK 至 Author table  
-今天想列出 每一位作者所著的書名時，可採用 string_agg 方法，來將不同 book records 的書名整在一起。    
+> 查詢時若有使用 group by 語法時會依指定條件將查出的資料做分組  
+> 而同一組中分組條件外其他欄位，若想顯示時可以利用 string_agg (欄位名, 串接符號) 來取得 
+
+> 使用情境:  
+> 例如有一個 Book table，book FK 至 Author table  
+> 今天想列出 每一位作者所著的書名時，可採用 string_agg 方法，來將不同 book records 的書名整在一起。    
 
 Book table
 
@@ -30,6 +33,7 @@ Author table
 
 
 # string_agg 相關參數
+* string_agg():  
 * expression : 被組合的 column。expression 所以可以給予進一步變化。
     * ex: a.author || '-' || a.pen_name
 * separator : 
