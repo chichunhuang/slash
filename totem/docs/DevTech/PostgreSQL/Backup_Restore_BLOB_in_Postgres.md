@@ -34,20 +34,20 @@ lo_import 123456
 # PostgreSQL Blob 備份與回存(批次)
 
 緣由: 
-> Doraemon 專案的 Application_Form table 中有使用到 blob 欄位來存放上傳檔案。
-> 在例行的資料庫備份過程中會執行 pg_dump -t 指定 table 備份
-> 此時 blob 會被略過，因此需特別對該 table 與 blob 特別處理
-> 相關步驟如下:
+> Doraemon 專案的 Application_Form table 中有使用到 blob 欄位來存放上傳檔案。  
+> 在例行的資料庫備份過程中會執行 pg_dump -t 指定 table 備份  
+> 此時 blob 會被略過，因此需特別對該 table 與 blob 特別處理  
+> 相關步驟如下:  
 
 1. 備份 application_form table
-    * 在 pg_dump 命令中加入 `-t application_form`
+    * 在 pg_dump 命令中加入 __-t application_form__
 1. 匯出 application_form 使用到的 blob 的 lob object ID
 1. 回存 application_form
 1. 導入事先備份的 blob 並更新 application_form 的 loid (stands for: lob object id)
 
 
 ## 含 BLOB COLUMN 的 TABLE 備份
-* 需使用 pg_dump 指令
+* 需使用 pg_dump 指令  
 
 ```sql
 pg_dump -t application_form
@@ -55,8 +55,8 @@ pg_dump -t application_form
 
 
 ## 查詢 SCHEMA 專案下的 LOB 範例
-* 查詢 DB 指定 Schema 下所有的 LOB objects
-* 關鍵在於 __pg_largeobject__ 這個內建的 table
+* 查詢 DB 指定 Schema 下所有的 LOB objects  
+* 關鍵在於 __pg_largeobject__ 這個內建的 table  
 
 ```sql
 psql -U postgres -d doraemon -c 'select loid from pg_largeobject'
@@ -86,10 +86,10 @@ psql -U postgres -d doraemon -c 'select id, file, file_name from application_for
 
 ## 匯出 TABLE APPLICATION_FORM 的 LOB OBJECT ID 範例
 
-* 註(bash shell): eval is a built-in shell command used to evaluate and execute strings as a shell command.
-* 將 pk, oid, filenmae 串接後組成[單一 BLOB 檔匯出句子](#single-clause-export)
-* 組成 lo_export 句子以供匯出檔案用
-* 將檔案匯出到 lob 資料夾之下(pk_filename.lob)
+* 註(bash shell): eval is a built-in shell command used to evaluate and execute strings as a shell command.  
+* 將 pk, oid, filenmae 串接後組成[單一 BLOB 檔匯出句子](#single-clause-export)  
+* 組成 lo_export 句子以供匯出檔案用  
+* 將檔案匯出到 lob 資料夾之下(pk_filename.lob)  
 
 ```bash shell
 for i in `psql -U doraemon -t -S -c "select format('%s*%s*%s', id, file_name, file) from application_form where file is not null"`;

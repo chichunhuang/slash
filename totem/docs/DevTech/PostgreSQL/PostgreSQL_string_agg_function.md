@@ -9,10 +9,11 @@ keywords: [Postgres,string_agg]
 * 呈現 group by 結果的集合資訊。  
 
 使用情境:  
-例如有一個 Book table, book FK 至 Author table  
+例如有一個 Book table，book FK 至 Author table  
 今天想列出 每一位作者所著的書名時，可採用 string_agg 方法，來將不同 book records 的書名整在一起。    
 
 Book table
+
 |     Name    |ISBN     |Author_ID  |
 |-------------|---------|-----------|
 |  小金魚逃走了   |1234     |1          |
@@ -21,6 +22,7 @@ Book table
 |鱷魚怕怕、牙醫怕怕 |4234     |1          |
 
 Author table
+
 |     ID    |Author   |  Pen_Name |
 |-----------|---------|---------|
 |     1     |五味太郎   | 太郎   |
