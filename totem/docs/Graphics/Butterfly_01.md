@@ -1,6 +1,6 @@
 ---
-title: Butterfly 01
-description: Insect-Totem Stag Butterfly
+title: Butterfly
+description: Insect-Totem Butterfly
 keywords: [Insect-totem,InsectTotem,Butterfly]
 ---
 
