@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Insect Totem Blog</title>
-        <link>https://chichunhuang.github.io/zh-tw/blog</link>
+        <link>https://insect-totem.net/zh-tw/blog</link>
         <description>Insect Totem Blog</description>
         <lastBuildDate>Sat, 09 Dec 2023 09:00:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,16 +10,16 @@
         <language>zh-tw</language>
         <item>
             <title><![CDATA[Document List (blog)]]></title>
-            <link>https://chichunhuang.github.io/zh-tw/blog/docs-map</link>
-            <guid>https://chichunhuang.github.io/zh-tw/blog/docs-map</guid>
+            <link>https://insect-totem.net/zh-tw/blog/docs-map</link>
+            <guid>https://insect-totem.net/zh-tw/blog/docs-map</guid>
             <pubDate>Sat, 09 Dec 2023 09:00:01 GMT</pubDate>
             <description><![CDATA[* 昆蟲圖騰重新上架]]></description>
             <content:encoded><![CDATA[<ul><li><a href="/zh-tw/blog/insect-totem-is-coming">昆蟲圖騰重新上架</a></li><li><a href="/zh-tw/blog/insect-totem-release-log">From JspWiki To Markdown</a></li><li><a href="/zh-tw/blog/Java-SHA-digester">Java SHA 雜湊 - 以 Java SHA 進行資料雜湊</a></li></ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[From JspWiki To Markdown]]></title>
-            <link>https://chichunhuang.github.io/zh-tw/blog/insect-totem-release-log</link>
-            <guid>https://chichunhuang.github.io/zh-tw/blog/insect-totem-release-log</guid>
+            <link>https://insect-totem.net/zh-tw/blog/insect-totem-release-log</link>
+            <guid>https://insect-totem.net/zh-tw/blog/insect-totem-release-log</guid>
             <pubDate>Sat, 09 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[從前都將筆記做在 portable jspwiki / atlassian conflence，慢慢搬遷到 markdown 來。]]></description>
             <content:encoded><![CDATA[<blockquote><p>從前都將筆記做在 portable jspwiki / atlassian conflence，慢慢搬遷到 markdown 來。
@@ -28,8 +28,8 @@
         </item>
         <item>
             <title><![CDATA[昆蟲圖騰重新上架]]></title>
-            <link>https://chichunhuang.github.io/zh-tw/blog/insect-totem-is-coming</link>
-            <guid>https://chichunhuang.github.io/zh-tw/blog/insect-totem-is-coming</guid>
+            <link>https://insect-totem.net/zh-tw/blog/insect-totem-is-coming</link>
+            <guid>https://insect-totem.net/zh-tw/blog/insect-totem-is-coming</guid>
             <pubDate>Sun, 03 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[* 以前註冊的是 www.insect-totem.tw]]></description>
             <content:encoded><![CDATA[<ul><li>以前註冊的是 <a href="http://www.insect-totem.tw" target="_blank" rel="noopener noreferrer">www.insect-totem.tw</a></li><li>現在改註冊 <a href="http://www.insect-totem.net" target="_blank" rel="noopener noreferrer">www.insect-totem.net</a><ul><li>由生物轉生態，再由生態轉行為生態，再到生物電腦模擬。現在在幫忙開發與醫療/醫學/醫研相關的系統。多了些資訊相關筆記所以改 net。</li></ul></li></ul>]]></content:encoded>
@@ -37,8 +37,8 @@
         </item>
         <item>
             <title><![CDATA[Java SHA 雜湊]]></title>
-            <link>https://chichunhuang.github.io/zh-tw/blog/Java-SHA-digester</link>
-            <guid>https://chichunhuang.github.io/zh-tw/blog/Java-SHA-digester</guid>
+            <link>https://insect-totem.net/zh-tw/blog/Java-SHA-digester</link>
+            <guid>https://insect-totem.net/zh-tw/blog/Java-SHA-digester</guid>
             <pubDate>Thu, 26 Oct 2023 04:09:23 GMT</pubDate>
             <description><![CDATA[以 Java SHA 進行資料雜湊]]></description>
             <content:encoded><![CDATA[<blockquote><p>SHA 並不算是異種加解密技術，僅能稱為是一種雜湊計算。
