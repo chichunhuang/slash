@@ -1,0 +1,83 @@
+---
+title: PosrgreSQL -> ->> 運算子差異
+description: PosrgreSQL JSON Single Double Arrow Operators 
+keywords: [JSONB,PostgreSQL]
+---
+
+# PosrgreSQL -> ->> 運算子差異
+
+
+## Double Arrows Operator <span style={{backgroundColor: '#b3c4ff'}}>->></span> 查詢用語法
+* __<span style={{backgroundColor: '#b3c4ff'}}>->></span>__ 用來查出 JSON/JSONB 物件 field 內容，並以 __<span style={{backgroundColor: '#b3c4ff'}}>String 格式</span>__ 回傳結果。
+* 注意 PostgreSQL ->> 的查詢結果 __沒有__ 用 Double Quotes 包住。
+
+```
+  select address->>'country' as COUNTRY FROM profile;
+  
+COUNTRY
+--------
+TAIWAN
+KOREA
+JAPAN
+CHINA
+```
+
+
+## Single Arrow Operator <span style={{backgroundColor: '#b3ffb3'}}>-></span> 查詢用語法
+* __<span style={{backgroundColor: '#b3ffb3'}}>-></span>__ 用來查出 JSON/JSONB 物件內容，並以 __<span style={{backgroundColor: '#b3ffb3'}}>JSON/JSONB 物件格式</span>__ 回傳結果。
+* ->JSON 查詢，所得為 postgreSQL JSON 物件，所以可以 -> 繼續往內槽串查。最終再以 ->> 取值。
+* 注意 PostgreSQL -> 的查詢結果 __有__ 用 Double Quotes (為 JSON 物件)包住。
+
+
+```
+"student": {
+	"first_name": "insect",
+	"last_name": "totem",
+	"class": {
+		"class_name" : "A",
+		"grade" : {
+			"grade_name" : "3",
+			"school" :{
+				"school_name" : "Entomology"
+			}
+		}
+	}
+}
+```
+
+* ->> return __String__
+
+```
+select Student_column->'student'->'class'->'grade'->'school'->> 'school_name' as SCHOOL from Profile;
+
+SCHOOL
+text
+-------
+Entomology
+
+```
+
+* -> return __jsonb__
+
+```
+select Student_column->'student'->'class'->'grade'->'school'-> 'school_name' as SCHOOL from Profile;
+
+
+SCHOOL
+jsonb
+-------
+"Entomology"
+```
+
+* -> return __jsonb__
+
+```
+select Student_column->'student'->'class'->'grade'->'school'  as SCHOOL from Profile;
+
+
+SCHOOL
+jsonb
+-------
+"{"school_name": "Entomology"}"
+```
+
