@@ -1,5 +1,5 @@
 ---
-title: Grass Hooper 01
+title: Grass Hooper
 description: Insect-Totem Grass Hooper 01
 keywords: [Insect-totem,InsectTotem,Grass Hooper]
 ---

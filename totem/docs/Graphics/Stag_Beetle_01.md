@@ -1,6 +1,6 @@
 ---
-title: Stag Beetle 01
-description: Insect-Totem Stag Beetle 01
+title: Stag Beetle
+description: Insect-Totem Stag Beetle
 keywords: [Insect-totem,InsectTotem,Stag Beetle]
 ---
 
