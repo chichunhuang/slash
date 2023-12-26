@@ -81,3 +81,28 @@ jsonb
 "{"school_name": "Entomology"}"
 ```
 
+## 使用基本查詢運算子查詢 JSON Array 元素
+* zero-based index
+* Query String : <span style={{color: '#0044FF'}}>'profile'->'phones'-> 0 </span>
+
+* 範例情境
+
+```
+{
+    "profile": {
+                "first_name": "insect",
+                "last_name": "totem",
+                "phones": ["0922-222-222","0955-555-555"]
+            }
+}        
+```
+
+```
+SELECT last_name, raw_data #> 'profile'->'phones'->0  as phone_1 FROM Student
+  
+LAST_NAMR               PHONE_1  
+character varying       jsonb    
+----------------------------------------
+totem                   "0922-222-222"  
+
+```
