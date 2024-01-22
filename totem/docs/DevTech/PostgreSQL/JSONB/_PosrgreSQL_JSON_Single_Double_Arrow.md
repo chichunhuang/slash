@@ -4,6 +4,38 @@ description: PosrgreSQL JSON Single Double Arrow Operators
 keywords: [JSONB,PostgreSQL]
 ---
 
+
+
+
+
+
+
+
+
+這篇部署時會出錯
+
+>  when yarn deploying, change locale to en  
+>  
+>  /docs/DevTech/PostgreSQL/JSONB/PosrgreSQL_JSON_Single_Double_Arrow  
+>    
+>  [ERROR] Unable to build website for locale zh-tw.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # PosrgreSQL -> ->> 運算子差異
 
 

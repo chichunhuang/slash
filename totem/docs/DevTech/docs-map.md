@@ -31,7 +31,6 @@ sidebar_position: 1
 * [PostgreSQL 上傳 Blob 檔案 - Postgres Import Blob from File](/docs/DevTech/PostgreSQL/Postgres_Import_Blob_from_File)
 * [SQL Shell psql Basic - SQL Shell psql 基本使用](/docs/DevTech/PostgreSQL/SqlShell_psql_Basic)
 ### JSONB
-* [PosrgreSQL -> ->> 運算子差異 - PosrgreSQL JSON Single Double Arrow Operators](/docs/DevTech/PostgreSQL/JSONB/PosrgreSQL_JSON_Single_Double_Arrow)
 * [PostgreSQL Format JSONB Object - PostgreSQL Format JSONB Object](/docs/DevTech/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
 * [PostgreSQL Update JSONB Column - 更改 PostgreSQL JSONB 欄位資料值](/docs/DevTech/PostgreSQL/JSONB/PostgreSQL_Update_JSONB_Column)
 * [PostgreSQL find value by Attr from JSONB - PostgreSQL find value from JSONB column](/docs/DevTech/PostgreSQL/JSONB/Postgresql_find_value_by_Attr_of_JSONB_column)
