@@ -26,12 +26,18 @@ sidebar_position: 1
 * [PosgreSQL copy CSV to table - PosgreSQL 資料匯出成 CSV](/docs/DevTech/PostgreSQL/PosgreSQL_copy_CSV_to_table)
 * [PosgreSQL copy from CSV - 自 CSV 檔匯入資料](/docs/DevTech/PostgreSQL/PosgreSQL_copy_from_CSV)
 * [PostgreSQL FDW Setting - PostgreSQL DB link 設定](/docs/DevTech/PostgreSQL/PostgreSQL_FDW_Setting)
-* [PostgreSQL Update JSONB Column - 更改 PostgreSQL JSONB 欄位資料值](/docs/DevTech/PostgreSQL/PostgreSQL_Update_JSONB_Column)
 * [PostgreSQL string_agg Function - PostgreSQL批次合併group by後](/docs/DevTech/PostgreSQL/PostgreSQL_string_agg_function)
 * [PostgreSQL 匯出 Blob 欄位 - Postgres Export Blob to File](/docs/DevTech/PostgreSQL/Postgres_Export_Blob_to_File)
 * [PostgreSQL 上傳 Blob 檔案 - Postgres Import Blob from File](/docs/DevTech/PostgreSQL/Postgres_Import_Blob_from_File)
-* [PostgreSQL find value by Attr from JSONB - PostgreSQL find value from JSONB column](/docs/DevTech/PostgreSQL/Postgresql_find_value_by_Attr_of_JSONB_column)
 * [SQL Shell psql Basic - SQL Shell psql 基本使用](/docs/DevTech/PostgreSQL/SqlShell_psql_Basic)
+#### JSONB
+* [PosrgreSQL -> ->> 運算子差異 - PosrgreSQL JSON Single Double Arrow Operators](/docs/DevTech/PostgreSQL/JSONB/PosrgreSQL_JSON_Single_Double_Arrow)
+* [PostgreSQL Format JSONB Object - PostgreSQL Format JSONB Object](/docs/DevTech/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
+* [PostgreSQL Update JSONB Column - 更改 PostgreSQL JSONB 欄位資料值](/docs/DevTech/PostgreSQL/JSONB/PostgreSQL_Update_JSONB_Column)
+* [PostgreSQL find value by Attr from JSONB - PostgreSQL find value from JSONB column](/docs/DevTech/PostgreSQL/JSONB/Postgresql_find_value_by_Attr_of_JSONB_column)
+##### tmp
+* [PosrgreSQL ->> #>> 運算子差異 - PosrgreSQL JSON Single-Arrow and Sharp-Double-Arrow Operators](/docs/DevTech/PostgreSQL/JSONB/tmp/PosrgreSQL_JSON_DoubleArrow_SharpDoubleArrow)
+* [PosrgreSQL #> #>> 運算子使用方式 - PosrgreSQL JSON Sharp-Single-Arrow Sharp-Double-Arrow Operators](/docs/DevTech/PostgreSQL/JSONB/tmp/PosrgreSQL_JSON_SharpArrow_Operator)
 #### SQL
 * [Insert from Select - Insert from select result](/docs/DevTech/PostgreSQL/SQL/Insert_From_Selection_Values)
 * [Insert Into v.s. Select Into - Insert-Into 與 Select-Into 使用上差異](/docs/DevTech/PostgreSQL/SQL/Insert_Into_vs_Select_Into)
@@ -53,4 +59,5 @@ sidebar_position: 1
 * [Stag Beetle - Insect-Totem Stag Beetle](/docs/Graphics/Stag_Beetle_01)
 * [Stag Beetle-rainbow - Insect-Totem Stag Beetle-rainbow](/docs/Graphics/Stag_Beetle_Rainbow)
 * [Origin of Insect-Totem - Insect-Totem 的起源](/docs/Graphics/origin_of_Insecttotem)
+
 

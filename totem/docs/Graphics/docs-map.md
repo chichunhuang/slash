@@ -13,4 +13,6 @@ sidebar_position: 1
 * [Stag Beetle - Insect-Totem Stag Beetle](/docs/Graphics/Stag_Beetle_01)
 * [Stag Beetle-rainbow - Insect-Totem Stag Beetle-rainbow](/docs/Graphics/Stag_Beetle_Rainbow)
 * [Origin of Insect-Totem - Insect-Totem 的起源](/docs/Graphics/origin_of_Insecttotem)
+* [test.md](/docs/Graphics/test)
+* [test2.md](/docs/Graphics/test2)
 
