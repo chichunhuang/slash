@@ -31,7 +31,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 # 顯示物件資訊訊
 * help()
 
-```
+```python
     help()
     
     a=123
@@ -45,14 +45,14 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 # 列出資訊在 console
 * print()
 
-```
+```python
     print('message')
 ```
 
 # 返回物件類型
 * type()
 
-```
+```python
     b = 'another string'
     print(dir(type(b)))
     
@@ -63,7 +63,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 # 取得類別說明
 * __doc__
 
-```
+```python
     a ='it is a string'
     print(a.__doc__)  
     
@@ -75,7 +75,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 # 返回物件的內建屬性
 * __dict__ 可列出 instance 的所有 field/values
 
-```
+```python
     import hashlib
     print(hashlib.__dict__)
     
@@ -87,7 +87,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 # Multi-line String
 * 斷行處加上反斜線 \
 
-```
+```python
 print(
 'this \
 is \
@@ -103,8 +103,7 @@ book.'
 # __main__ 用途
 > runtime 時用來辨別 main module 或是 imported modules 時使用
 
-```
-
+```python
 if __name__ == '__main__':
     doSomething()
 ```
