@@ -1,0 +1,159 @@
+---
+title: Python Numeric Type
+description: Python 數值型別
+keywords: [Python,Numeric]
+---
+import { CodeBlock, dracula  } from "react-code-blocks";
+
+# Python Numeric Literals(數值型別與常量)
+
+## Integer and Floating-Point literals
+* 整數: 10進位，無窮精度
+* 浮點數: 小數點格式或加上 e 或 E (stands for exponent 指數)
+
+## Hexdecimal Literals(16進制常量)
+* 0==x== 或 0==X== 起始的常量 (x stands for he==X==decimal) 
+* 0\~9, A\~F 或 0\~9, a\~f
+
+## Octal Literals(8進制常量)
+* 0==o== 或 0==O== 起始的常量 (o stands for ==O==ctal) 
+* 0\~7
+
+## Binary Literals(2進制常量)
+* 0==b== 或 0==B== 起始的常量 (b stands for ==B==inary)
+* 0 or 1
+
+## Complex Literals(複數)
+* R + Ij
+* complex(Real, image)
+
+
+# 進制轉換
+## 整數轉換成其他進制的字串
+* syntax
+    * hex(int)
+    * oct(int)
+    * bin(int)
+
+```python
+
+num_integer = 9
+print(hex(num_integer))
+print(oct(num_integer))
+print(bin(num_integer))
+
+===
+0x9
+0o11
+0b1001
+```
+
+## 其他進制文字轉十進位整數
+* syntax: int('literal', base)
+
+```python
+hex_string ='0x9'
+print(int(hex_string, 16))
+===
+9
+
+oct_string ='0o11'
+print(int(oct_string, 8))
+===
+9
+
+bin_string ='0b1001'
+print(int(bin_string, 2))
+===
+9
+
+```
+
+# Python 數值運算
+* Python3 數值運算相關工具分三大類
+    * Expression operators: +, -, *, /, >>, **, &, ...
+    * Build-in Mathematical Functions: pow(), abs(), round(), ...
+    * Utility modules: random, math, ....(需要 import)
+    * Operators 也可被 overload
+* 常用運算:
+    * 同時取商與餘 : divmod(dividend,divisor)
+    * 真除法 : /, 保留餘數, 結果有小數點
+    * 向左取值 (注意負數) : //
+    * 向原點取值 : math.trunc(num)
+    * 取餘數 : %
+
+
+* 同時取商與餘
+
+```python
+# function : divmod(dividend,divisor)
+
+print(divmod(100,3))# tuple2
+print(divmod(100,3)[0]) # 商
+print(divmod(100,3)[1]) # 餘
+===
+(33, 1)
+33
+1
+```
+
+* 真除法
+
+```python
+# operator : /
+x = -100/3
+print(x)
+===
+33.333333333333336
+```
+
+* 向左取值 (注意負數)
+
+```python
+# operator : //
+
+x = -100//3
+print(x)
+===
+-34
+
+x = 100//3
+print(x)
+===
+33
+```
+
+* 向原點取值
+
+```python
+# function: math.trunc(num)
+
+import math
+print(math.trunc(-33.3))
+===
+-33
+
+
+import math
+print(math.trunc(33.3))
+===
+33
+```
+
+* 取餘數
+
+```python
+# operator : %
+
+print(100%3)
+===
+1
+
+```
+
+
+
+# 在 Python2 Compile Python3 程式碼會讓你出 Bug 的部分
+* python3 vs python2 取商 (//)與模(%) operators 定義不同
+
+

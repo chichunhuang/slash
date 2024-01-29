@@ -21,6 +21,25 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Indentation
 > 使用等量的 Space 或是 tab。建議 4 個 spaces。  
+> 注意: 整個檔案應該用同一種 indentation，避免混用。
+
+# Python 註解方式
+```python
+
+# 井字號後面可以寫一行的註解
+
+'''
+single quote x 3 or double quote x 3
+這裡是多行註解，
+不影響程式執行的結果。
+'''
+
+"""
+single quote x 3 or double quote x 3
+這也是多行註解，
+"""
+
+```
 
 # 總是選取工作中檔案
 > PyCharm 中的 Project 頁簽  
