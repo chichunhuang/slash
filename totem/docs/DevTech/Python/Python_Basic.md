@@ -7,6 +7,13 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 基本
 
+## 參考資料
+ * [Python Standard Library API Document](https://docs.python.org/3/library/index.html)
+ * [Python Data Structure](https://docs.python.org/3/reference/datamodel.html#objects-values-and-types)
+ * [Python Standard Type Hierarchy](https://zh.wikipedia.org/zh-tw/File:Python_3._The_standard_type_hierarchy-en.svg)
+ * [Python Data Structure : devopedia](https://devopedia.org/python-data-structures)
+
+
 ## Encoding
 
 > python script file Encoding 宣告方式，  

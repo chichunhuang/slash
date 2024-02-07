@@ -186,11 +186,74 @@ with localcontext() as ctx:
 ```
 
 ## Python Fraction(浮點)
+* 可將指定數值轉換成為 __分子__ 與 __分母__ 結構，且 Fractions 間可作數值操作。
+* Fraction 建構方式
+    * Fraction(numerator=0, denominator=1) : 分母為 0 時拋出 ZeroDivisionError
+    * Fraction(int|float|str|Decimal|Fraction) 
+    * Fraction(*tuple2) : 給予一個長度為二的 list / sequence，Asterisk(*)指的是 unpack。
+    
+* Fraction 建構範例
+
 ```python
+from fractions import *
+# from fractions import Fraction
 
+f_str = Fraction('.2')
+print(f_str)
+#　1/5
 
+f_float = Fraction(10.5)
+print(f_float)
+# 21/2
+
+f = Fraction(3,5)
+print(f)
+# 3/5
 ```
 
+* Fraction 操作範例
+
+```python
+from fractions import *
+
+f1 = Fraction(4,3) # 4/3
+f2 = Fraction(9, 8) # 9/8
+
+print(f1+f2)
+# 59/24
+
+print(f1/f2)
+# 32/27
+
+print(f1//f2)
+# 1
+
+print(f1%f2)
+# 5/24 通分後取餘數
+```
+
+* Fraction 轉換操作範例
+    * float.as_integer_ratio() : 將浮點數轉成 tuple2
+    
+```python
+from fractions import *
+fp = 2.5
+f = Fraction(fp)
+print(f)
+# 5/2 , 直接使用 Fraction(float 建構)
+
+f_tuple = (4, 3)
+f = Fraction(*f_tuple)
+print(f)
+# 4/3 , 使用 Fraction(*tuple2) 建構 
+
+
+fp = 2.5
+f = Fraction(*fp.as_integer_ratio())
+print(f)
+# 5/2 , fp 先經由 float.as_integer_ratio() 轉 tuple2, 再使用 Fraction(*tuple2) 建構
+
+```
 
 ## 在 Python2 Compile Python3 程式碼會讓你出 Bug 的部分
 * python3 vs python2 取商 (//)與模(%) operators 定義不同
