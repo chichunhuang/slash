@@ -42,6 +42,13 @@ sidebar_position: 1
 * [Insert Into v.s. Select Into - Insert-Into 與 Select-Into 使用上差異](/docs/DevTech/PostgreSQL/SQL/Insert_Into_vs_Select_Into)
 * [Using subqueries outside of WHERE - 在 sql from 中使用子查詢](/docs/DevTech/PostgreSQL/SQL/Using_subqueries_outside_of_WHERE)
 ## Python
+* [Anaconda 基本管理指令 - Anaconda 基本管理指令](/docs/DevTech/Python/Anaconda_Statements)
+* [PyCharm 中使用 Anaconda 管理 Envs - PyCharm 中以 Anaconda 管理 Python Envs](/docs/DevTech/Python/PyCharm_Anaconda_Envs_Mgmt)
+* [Python Basic - Python 學習所需基本操作](/docs/DevTech/Python/Python_Basic)
+* [Python Conventions - Python 變數命名慣例](/docs/DevTech/Python/Python_Convention)
+* [Python File Operation - Python 中操作 File 相關](/docs/DevTech/Python/Python_File)
+* [Python Typing - Python 型別](/docs/DevTech/Python/Python_Typing)
+* [Python Numeric Type - Python 數值型別](/docs/DevTech/Python/Python_Typing_Numeric)
 * [Send Mail by Python smtplib - Send Mail by Python smtplib](/docs/DevTech/Python/Send_Eail_By_Python)
 * [Python-Sorting by pandas - Python - Sorting and Parsing CSV](/docs/DevTech/Python/Sorting_by_pandas_Python)
 ## Tomcat
