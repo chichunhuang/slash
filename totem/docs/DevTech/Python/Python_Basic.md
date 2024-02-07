@@ -16,11 +16,16 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 <CodeBlock
       text={`
    # -*- coding: UTF-8 -*-  
-    />
+    `}
+      language='python'
+      showLineNumbers='true'
+      /> 
     
 
+
+
 # Indentation
-> 使用等量的 Space 或是 tab。建議 4 個 spaces。  
+> 使用等量的 Space 或是 tab。__建議 4 個 spaces__。  
 > 注意: 整個檔案應該用同一種 indentation，避免混用。
 
 # Python 註解方式
@@ -42,9 +47,9 @@ single quote x 3 or double quote x 3
 ```
 
 # 總是選取工作中檔案
-> PyCharm 中的 Project 頁簽  
-> 滑鼠右鍵  
-> Always Select Opened File  
+> PyCharm 中的 Project 頁簽->  
+> 滑鼠右鍵->  
+> Always Select Opened File->  
 > 可快速 highlight 作用中檔案
 
 # 顯示物件資訊訊
@@ -127,7 +132,7 @@ if __name__ == '__main__':
     doSomething()
 ```
 
->  __name__ => 模組名稱，由 interpreter 自動設定的內建變數  
+>  __\_\_name\_\___ => 模組名稱，由 interpreter 自動設定的內建變數  
 >  在 import modules 時，python 會先把模組相關 *.py 走一輪  
 >  程式入口的 py 檔，interpretor 會自動帶入 '__main__'  
 

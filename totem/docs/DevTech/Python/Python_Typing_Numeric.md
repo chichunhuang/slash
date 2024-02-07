@@ -28,8 +28,8 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * complex(Real, image)
 
 
-# 進制轉換
-## 整數轉換成其他進制的字串
+## 進制轉換
+### 整數轉換成其他進制的字串
 * syntax
     * hex(int)
     * oct(int)
@@ -48,7 +48,7 @@ print(bin(num_integer))
 0b1001
 ```
 
-## 其他進制文字轉十進位整數
+### 其他進制文字轉十進位整數
 * syntax: int('literal', base)
 
 ```python
@@ -69,7 +69,7 @@ print(int(bin_string, 2))
 
 ```
 
-# Python 數值運算
+## Python 數值運算
 * Python3 數值運算相關工具分三大類
     * Expression operators: +, -, *, /, >>, **, &, ...
     * Build-in Mathematical Functions: pow(), abs(), round(), ...
@@ -83,7 +83,7 @@ print(int(bin_string, 2))
     * 取餘數 : %
 
 
-* 同時取商與餘
+### 同時取商與餘
 
 ```python
 # function : divmod(dividend,divisor)
@@ -97,7 +97,7 @@ print(divmod(100,3)[1]) # 餘
 1
 ```
 
-* 真除法
+### 真除法(True Divisions)
 
 ```python
 # operator : /
@@ -107,7 +107,7 @@ print(x)
 33.333333333333336
 ```
 
-* 向左取值 (注意負數)
+### 向左取值 (Floor division, 注意負數)
 
 ```python
 # operator : //
@@ -123,7 +123,7 @@ print(x)
 33
 ```
 
-* 向原點取值
+### 向原點取值
 
 ```python
 # function: math.trunc(num)
@@ -140,7 +140,7 @@ print(math.trunc(33.3))
 33
 ```
 
-* 取餘數
+### 取餘數
 
 ```python
 # operator : %
@@ -152,8 +152,47 @@ print(100%3)
 ```
 
 
+## Python Decimal(十進位)
+* 用來修正 python 浮點數精確值不足問題
 
-# 在 Python2 Compile Python3 程式碼會讓你出 Bug 的部分
+### 為 Decimal 設定精確值(Precision)
+* Precision: 設定顯示的精確位數
+
+* Global (全域設定)
+
+```python
+from decimal import *
+
+getcontext().prec = 4
+print(Decimal(1) / Decimal(3))
+print(Decimal(1000) / Decimal(3))
+print(Decimal(100000) / Decimal(3))
+print(Decimal(1000000) / Decimal(3))
+===
+0.3333
+333.3
+3.333E+4
+3.333E+5
+```
+* Temporary (臨時精確設定)
+
+```python
+from decimal import *
+with localcontext() as ctx:
+    ctx.prec= 4
+    print(Decimal(1000000) / Decimal(3))
+===
+3.333E+5
+```
+
+## Python Fraction(浮點)
+```python
+
+
+```
+
+
+## 在 Python2 Compile Python3 程式碼會讓你出 Bug 的部分
 * python3 vs python2 取商 (//)與模(%) operators 定義不同
 
 
