@@ -1,5 +1,5 @@
 ---
-title: Python Numeric Type
+title: Python 數值型別
 description: Python 數值型別
 keywords: [Python,Numeric]
 ---

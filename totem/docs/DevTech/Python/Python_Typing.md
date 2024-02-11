@@ -1,5 +1,5 @@
 ---
-title: Python Typing
+title: Python Typing(比較)
 description: Python 型別
 keywords: [Python ,Tutorial]
 ---
@@ -13,6 +13,11 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * build-in type : call by value
     * build-in type: 建立後會存在於記憶體中供往後變數重複使用
 * 與 Java 觀念類似
+
+# Python Primitive Type
+* 小括號: tuple, immutable list
+* 中括號: list, mutable list
+* 大號: dict, key-value map
 
 # Python vs Java Opertors (運算子符號比較)    
 * Python vs Java 同符號但用於不同概念
@@ -38,8 +43,7 @@ name = 'John'
 tripleName = name * 3
 print(tripleName)
 
-===
-'JohnJohnJohn'
+# 'JohnJohnJohn'
 
 ```
 
@@ -51,7 +55,6 @@ scores =[10,20,30]
 tripleScors = scores * 3
 print(tripleScors)
 
-===
-[10, 20, 30, 10, 20, 30, 10, 20, 30]
+# [10, 20, 30, 10, 20, 30, 10, 20, 30]
 
 ```
