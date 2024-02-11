@@ -53,6 +53,16 @@ for x in dict1.items():
 # key...   
 ```
 
+```python
+# 另一種內建的 dict 迴圈方式
+# 但是，若 key 出現不同 type，上方範例 string/integer
+# 則會拋出 TypeError
+
+for key in sorted(dict1):
+    print(dict1[key])   
+```
+
+
 * Set:  大括號, iterable, 分為 set/frozenset 兩類
     * Set : mutable
     * s = set( [iterable] )  
