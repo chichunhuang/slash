@@ -8,6 +8,7 @@ keywords: [JSONB,PostgreSQL]
 * 情境: Table 入學考試資料表(Entrance_Examination)
 
 |  id(bigint)  |  Admission_Ticket(character)  |             raw_data(jsonb)        |
+|----------------|-------------------------------|-----------------------------|
 |      1       |           AAA001              |  {"City":"TPE", "School":"NTU" , "Score":"60"  }  |
 |      2       |           BBB001              |  {"City":"TYN", "School":"NCHU", "Score":"70" }   |
 |      3       |           CCC001              |  {"City":"HSZ", "School":"NCCU", "Score":"80" }   |
