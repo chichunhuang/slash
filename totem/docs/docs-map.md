@@ -3,7 +3,6 @@ sidebar_position: 1
 ---
 
 # Document List (docs)
-## DevTech
 ### Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/DevTech/Java/ExceptionMailFromLog4j)
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/DevTech/Java/Session_Fixation)
@@ -71,5 +70,4 @@ sidebar_position: 1
 * [Rhinoceros Beetles - Insect-Totem Rhinoceros Beetles](/docs/Graphics/Rhino_01)
 * [Stag Beetle - Insect-Totem Stag Beetle](/docs/Graphics/Stag_Beetle_01)
 * [Stag Beetle-rainbow - Insect-Totem Stag Beetle-rainbow](/docs/Graphics/Stag_Beetle_Rainbow)
-* [test google drive - test google drive](/docs/Graphics/test_googledrive)
 

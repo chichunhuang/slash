@@ -3,8 +3,6 @@ sidebar_position: 1
 ---
 
 # Document List (DevTech)
-
-* [-docs-map.md](/docs/DevTech/-docs-map)
 ## Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/DevTech/Java/ExceptionMailFromLog4j)
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/DevTech/Java/Session_Fixation)
@@ -50,7 +48,6 @@ sidebar_position: 1
 * [Python Basic - Python 學習所需基本操作](/docs/DevTech/Python/Python_Basic)
 * [Python Conventions - Python 變數命名慣例](/docs/DevTech/Python/Python_Convention)
 * [Python File Operation - Python 中操作 File 相關](/docs/DevTech/Python/Python_File)
-* [Python String - Python String](/docs/DevTech/Python/Python_Typing_String)
 * [Python Typing(比較) - Python 型別](/docs/DevTech/Python/Python_Typing)
 * [Python 基礎型別摘要 - ](/docs/DevTech/Python/Python_Typing_Types)
 * [Python 布林值 - Python Boolen](/docs/DevTech/Python/Python_Typing_Boolean)
