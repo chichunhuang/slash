@@ -209,6 +209,10 @@ print(f_float)
 f = Fraction(3,5)
 print(f)
 # 3/5
+
+f = Fraction( *(3,5) )
+print(f)
+# 3/5, unpack tuple2
 ```
 
 * Fraction 操作範例

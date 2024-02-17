@@ -1,5 +1,5 @@
 ---
-title: Python Types
+title: Python 基礎型別摘要
 description: Python 型別:List Dict Set String
 keywords: [Python ,Tutorial]
 ---
