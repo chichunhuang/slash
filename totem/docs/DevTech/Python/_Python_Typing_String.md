@@ -7,6 +7,35 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python String 介紹
 
+## Python String Escaping 脫逸字元與路徑分隔符 
+
+* Python 有兩種字元脫逸方式 __(反斜槓 \\)__ :  
+    * 以 <span style={{color: '#0044FF'}}> __反斜槓 \\__ </span> 做字元脫逸。  
+    * r String: 轉義序列(escape sequence) 前加上一個小寫 r。  
+
+```python
+
+# tempFile1 結果相同於 tempFile2  
+tmpFile1 = 'C:\\temp\\tmp.text'  
+tmpFile2 = r'C:\temp\tmp.text'  
+
+content = 'Python: in windows we use \\r\\n as break-line symbol.'
+print(content)
+# Python: in windows we use \r\n as break-line symbol.
+```
+
+* Python 路徑分隔符 __(正斜槓:除號 /)__ :  
+    * Python 已做最佳化，Linux/Windows 系統下皆可以<span style={{color: '#0044FF'}}>  __(除號 /)__ </span>作為檔案路經分隔符。  
+    
+```python
+
+# tempFile1 結果相同於 tempFile2  
+tmpFile1 = 'C:/temp/tmp.text'  # 語法糖: 除號
+tmpFile2 = r'C:\temp\tmp.text'  # r String
+tmpFile3 = 'C:\\temp\\tmp.text'  # escape character
+
+```
+
 ## Python String (字串，字符串)
 * immutable sequence 
 * 包括三大類
@@ -21,7 +50,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
     * Raw String : r"C:\tmp\text.txt" , __不做 escape__  
         * Kotlin 以 triple quotes 做 auto-escape  
     * Unicode String : u'\u65E9\u5B89'  
-    * Bytes String : b'\xe6\x97\xa9\xe5\xae\x89 Python', Bytes String 通常讓人聯想到的是一串 __數字__ 或是一串 __0與1__ 串接的 literal.而 Python 在以 b String 呈現時，則可以字母的方式呈現。例如65則以A呈現，方便英語系語言者閱讀。  
+    * Bytes String : b'\xe6\x97\xa9\xe5\xae\x89 Python', Bytes String 通常讓人聯想到的是一串 __數字__ 或是一串 __0與1__ 串接的 literal.而 Python 在以 b String 呈現時，則是以字母的方式呈現。例如65則以A呈現，方便英語系語言者閱讀。  
     
     
 ## Python Unicode String 轉換
@@ -67,9 +96,9 @@ print(uString)
 > 以 B String 呈現則為 b'Hello'  
 > 兩者概念相同。B String 則屏除數值轉字母時腦子思考的動作。    
 > bytes 集合/B String 兩者皆可轉成 Python 中內建的 <class 'bytes'> 來統一操作使用。  
-> <class 'bytes'> 與 <class 'str'> 兩類別間有轉換介面。  
+> 而 <class 'bytes'> 與 <class 'str'> 兩類別間則有轉換介面。  
 > 
-> 簡單來說，Python 中文字內碼為 <class 'bytes'>，而呈現上可以有多種方式(tuple/B String)。  
+> 簡單來說，可想成 Python 中文字內碼為 <class 'bytes'>，而呈現上可以有多種方式(tuple/B String)。  
 
 ### String vs bytes 轉換
    * bytes() 方法轉換 String/Tuple 為 <class 'bytes'>
@@ -184,4 +213,146 @@ bytes_content = content.encode('UTF-8')
 print(bytes_content.decode('UTF-8')) # 轉成指定編碼內容，不一定能正常顯示
 
 ```
+## String 與數值轉換
+* 整數轉換成其他進制的字串 (Integer -> String)
+* 非十進制文字轉十進位(String -> Number)
+* ASCII String 轉 Char
 
+### 整數轉換成其他進制的字串 (Integet -> String)
+* syntax
+    * __<span style={{color: '#0044FF'}}>str(int) : 十進位 </span>__
+    * hex(int) : 十六進位
+    * oct(int) : 八進位
+    * bin(int) : 二進位
+* 浮點數種其他進制字串
+    * 數學上可行，電腦中浮點數都不精確了要怎樣轉。  
+    * 需找專門的數學套件來使用。      
+
+```python
+
+num_integer = 9
+print(hex(num_integer)) 
+# 十六進位 0x9
+
+print(oct(num_integer))
+# 八進位 0o11
+
+print(bin(num_integer))
+#  二進位 0b1001
+
+print(str(num_integer))
+# 9
+print(str(5.5))
+# 5.5
+
+```
+
+
+### 其他進制文字轉十進位(String -> Number)
+* syntax: 
+    * __<span style={{color: '#0044FF'}}> int('literal', base) </span>__  
+    * float('literal')
+
+```python
+hex_string ='0x9'
+print(int(hex_string, 16)) # 9
+
+oct_string ='0o11'
+print(int(oct_string, 8)) # 9
+
+bin_string ='0b1001'
+print(int(bin_string, 2)) # 9
+
+# 預設為十進位
+five = int('5')
+print(five) # 5
+
+fiveAndHalf = float('5.5')
+print(fiveAndHalf) # 5.5
+```
+
+### ASCII String 轉 Char
+* ord('char') : char to integer
+* chr(int) : integer to char
+
+```python
+print(ord('a')) # 97
+print(chr(97)) # a
+```
+
+
+## 格式化 String (String Formatting)
+* 使用 formatting expression  
+
+```python
+print('I\'m %s, and I\'m %d-year-old.' % ('Totem', 10))
+```
+* 使用 String 的 format function  
+
+```python
+print('I\'m {1}, and I\'m {0}-year-old.'.format(10, 'Totem'))
+```
+
+### Formatting Expression 語法規則
+
+> 'pattern' % (v1, v2...)  
+> Formatting expression 指的是 pattern 中佔位符(placeholder)的部分。  
+> 例如: 'I am %s' 中的 %s  
+
+* Syntax of Formatting expression
+    * __<span style={{color: '#0044FF'}}>基本用法僅需 %typecode, ex: %s, %d </span>__即可  
+    * 下方擴充用來針對不同的 argument values 或是浮點數做進一步格式調整  
+
+```python
+ %[(name)][flags][width].[precision]typecode
+```
+
+* typecode: (必要)定義資料的類型  
+    * d: decimal  
+    * s: string  
+    * f: float  
+    * o: 八進制  
+    * x: 十六進制  
+    * e: 指數  
+* precision: (選用)精確位數，指小數點後的位數。  
+* width: (選用)整個回傳字串的最大長度，包含小數點。   
+* flag: (選用)整數位補齊符號  
+    * 目前 python3 測試，符號僅接受 __0__ 與 __空白__  
+    * width - precision - 小數點後，若還有剩餘長度則以指定符號於左側補齊。  
+* name: (選用)需用小括號包覆  
+    * 通常 formatting expression 以 index(zero-based) 來為 placeholder 取值。若值的來源為 dict(map) 則可以 key 來取值。  
+
+
+ _ flags / width / precision 整合範例 _
+
+* 將 0.123進行格式化
+    * 小數點下需五位
+    * 總長度含小數點為十位
+    * 以空白(ex1),零(ex2)於左側補齊
+     
+```python
+# ex1: 以空白補齊
+formatting = '% 10.5f' % 0.123
+print(formatting)
+#   0.12300
+
+# ex2: 以0補齊
+formatting = '%010.5f' % 0.123
+print(formatting)
+#0000.12300
+```
+    
+ _ Dict(map) 取值範例 _ 
+ 
+ ```python
+# map 取值範例
+data = {'nickname': 'Totem', 'age': 20}
+
+formatting = 'I am %(nickname)s, I\'m %(age)d.' % data
+print(formatting)
+# I am Totem, I'm 20.
+```
+ 
+
+from here 
+[](./fffffffff )

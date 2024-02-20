@@ -33,3 +33,13 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 ## PyCharm 客製化 Code Template
 * [Create live templates Tutorial ](https://docs.python.org/3.12/reference/datamodel.html#objects-values-and-types)
 * [Share live templates Tutorial ](https://www.jetbrains.com/help/pycharm/sharing-live-templates.html)
+
+
+## PyCharm 常用 Hotkey
+|  Tool   |   Hotkey       |
+|---------|----------------|
+| Reformat a code fragment | Ctrl+Alt+L |
+| Code completion | Alt+/,  Ctrl+Shift+Enter |
+
+
+﻿

@@ -29,7 +29,10 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 
 ## 進制轉換
-### 整數轉換成其他進制的字串
+> 電腦中浮點數本身並不精確，因故若不採用專用套件並無法十進位將浮點數轉成其他進制。  
+> 是故，下方範例僅 __十進位整數__ 轉其他進制範例。  
+
+### 整數轉換成其他進制的字串(Integer -> String)
 * syntax
     * hex(int)
     * oct(int)
@@ -48,8 +51,10 @@ print(bin(num_integer))
 0b1001
 ```
 
-### 其他進制文字轉十進位整數
+
+### 其他進制文字轉十進位整數(String -> Number)
 * syntax: int('literal', base)
+    * [Python String 處理: String 與數值轉換](./Python_Typing_String)
 
 ```python
 hex_string ='0x9'
@@ -67,6 +72,11 @@ print(int(bin_string, 2))
 ===
 9
 
+# 預設為十進位
+five = int('5')
+print(five)
+===
+5
 ```
 
 ## Python 數值運算
