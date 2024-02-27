@@ -10,9 +10,9 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 不討論 Python2 的部分。 
 
 > 這邊先將格式化方式拆分為三類  
-> A: 以 mode % 為 operator 的方式  
-> B: str class 所提供的 format function  
-> C: f 為前綴的 f-String
+> A: [以 modulo % 為 operator 的方式](#modeStyle)  
+> B: [str class 所提供的 format function](#functionStyle)  
+> C: [f 為前綴的 f-String](#fStyle)
 
 ## <span style={{color: '#0044FF'}}>格式化 String (String Formatting) 基礎範例</span>
 * <span style={{color: '#0044FF'}}>使用 % mode: formatting expression</span>   
@@ -37,7 +37,7 @@ print(f'I\'m {name}, and I\'m {age}-year-old.')
 
 
 
-## Formatting Expression 語法規則
+## Mod Formatting Expression 語法規則<span id="modeStyle"></span>
 
 > 'pattern' % (v1, v2...)  
 > Formatting expression 指的是 pattern 中佔位符(placeholder)的部分。  
@@ -98,7 +98,7 @@ print(formatting)
 ```
  
 
-## String Format Function 語法規則
+## String Format Function 語法規則<span id="functionStyle"></span>
 
 > pattern.format(varArgs)
 > 
@@ -203,7 +203,7 @@ print(f)
 * 註: 單一個 asterisk 代表 unpack sequence (list or tuple 等).
 
 
-## f-String 使用方式
+## f-String 使用方式<span id="fStyle"></span>
 
 > 可想像成是 format function 方式的語法糖，   
 > f-String 可直接讀取先前已定義的變數內容，  
