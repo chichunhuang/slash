@@ -7,6 +7,15 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python File 操作
 
+> 通常檔案會牽涉到字串處理，斷行處理  
+> 參考資訊:  
+>
+> [Python String 處理](./Python_Typing_String)  
+>> strip(), replace(), eval()    
+>
+> [Python String 格式化](./Python_Typing_StringFormatting)  
+>> str.format(), mod formatting expression  
+
 # 基本操作
 ## 檔案開啟
 * Syntax

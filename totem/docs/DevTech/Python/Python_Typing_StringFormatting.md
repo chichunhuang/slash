@@ -15,18 +15,21 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > C: [f 為前綴的 f-String](#fStyle)
 
 ## <span style={{color: '#0044FF'}}>格式化 String (String Formatting) 基礎範例</span>
-* <span style={{color: '#0044FF'}}>使用 % mode: formatting expression</span>   
+* <span style={{color: '#0044FF'}}>使用 % mode: formatting expression</span>  
+* %<span style={{color: '#009900'}}>typecode</span><span style={{color: '#0044FF'}}>formatSpec</span>
 
 ```python
 print('I\'m %s, and I\'m %d-year-old.' % ('Totem', 10))
 ```
 * <span style={{color: '#0044FF'}}>使用 String 的 format function</span>    
+* {<span style={{color: '#009900'}}>index</span>:<span style={{color: '#0044FF'}}>formatSpec</span>}
 
 ```python
 print('I\'m {1}, and I\'m {0}-year-old.'.format(10, 'Totem'))
 ```
 
 * <span style={{color: '#0044FF'}}>f-String 格式化字串: 直接讀取先前定義的變數</span>  
+* {<span style={{color: '#009900'}}>index</span>:<span style={{color: '#0044FF'}}>formatSpec</span>}
 
 ```python
 name = 'Totem'
@@ -105,7 +108,7 @@ print(formatting)
 > pattern 中以 __大括號__ 包覆要被取代的佔位符  
 > 佔位符可分為三類:  
 > A : by order, omit index  
-> B : <span style={{backgroundColor: '#b3c4ff'}}> __by zero-based index__ </span>:推薦用法   
+> B : <span style={{color: '#0044FF'}}> __by zero-based index__ :推薦用法</span>   
 > C : by place-holders  
 
 

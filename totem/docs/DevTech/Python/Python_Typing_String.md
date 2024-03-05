@@ -36,6 +36,32 @@ tmpFile3 = 'C:\\temp\\tmp.text'  # escape character
 
 ```
 
+## Python String 移除斷行符號, strip(), replace()
+* python 額外提供一個 strip 方法，移除字串前後的斷行符號(僅限行末)。  
+    * strip() 整個字串的最前面跟最後面的斷行符號都會移除。  
+    * rstrip() r 僅最後面的斷行符號移除。(r stands for reverse?)  
+    * lstrip() l 僅最前面的斷行符號移除。(l stands for leader?)  
+    * 注意字串中間的斷行符號不會做處理。  
+* 通常在 Java 我直接 replacelast 斷行符號。  
+    * python 相似 function 為 replace(_self,_old, _new, _count)。 無法直接選定字尾。  
+
+```python
+s = '\r\nGoodbye,Tom!\r\nSee you next day, Jen!\r\n'
+
+strip_s = s.strip()
+print(strip_s)
+print('----')
+
+replace_previous3 = s.replace('\r\n', '', 3)
+print(replace_previous3)
+# Goodbye,Tom!
+# See you next day, Jen!
+# ----
+# Goodbye,Tom!See you next day, Jen!
+
+```   
+ 
+
 ## Python String (字串，字符串)
 * immutable sequence 
 * 包括三大類
@@ -285,3 +311,21 @@ print(chr(97)) # a
 ### [字串格式化 String Formatting](./Python_Typing_StringFormatting)
 
 
+## eval(_str) 程式片段字串轉成 Python script
+> 這裡指的是例如 parse 一個 *.py。  
+> 所得到的字串內容是可以直接轉成可執行的 python script 內容。  
+> 結果類似 import 一段程式碼。  
+
+```python
+# Python eval() : from string to python script
+strA = '[1,2,3]'
+print(type(strA))
+# <class 'str'>
+
+listA = eval(strA)
+print(type(listA))
+print(listA)
+# <class 'list'>
+# [1, 2, 3]
+
+```

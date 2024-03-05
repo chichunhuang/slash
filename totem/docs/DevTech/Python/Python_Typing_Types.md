@@ -10,15 +10,16 @@ import { CodeBlock, dracula  } from "react-code-blocks";
     * 操作基本上與 List 相同，但 tuple 是 immutable。
     * 不知為何要額為定義 immutable list?
     
-* List: 中括號, iterable
-   * l.slice[0:-1] # 與 String slicing 操作相同
-   * l.append(e)
-   * l.pop(index) : 取出並移除
-   * l.[index] : 查出
-   * l.sort()
-   * l.reverse()
-   * nested ok
-   * comprehension ok [expression for item in listA]
+* List: 中括號, iterable  
+   * <span style={{color: '#0044FF'}}> __注意: Python list 操作中有些是 in-plce(直接套用到既有物件)__ </span>，沒回傳值直接生效，可想成類似 Java 中的 by reference 操作。   
+   * l.slice[0:-1] # 與 String slicing 操作相同  
+   * l.append(e)  
+   * l.pop(index) : 取出並移除  
+   * l.[index] : 查出  
+   * l.sort()  
+   * l.reverse()  
+   * nested ok  
+   * comprehension ok [expression for item in listA]  
    
 ```python
 list2 = [1,2,3,4,5]
