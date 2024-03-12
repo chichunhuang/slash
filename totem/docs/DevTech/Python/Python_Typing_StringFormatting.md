@@ -12,9 +12,9 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 這邊先將格式化方式拆分為三類  
 > A: [以 modulo % 為 operator 的方式](#modeStyle)  
 > B: [str class 所提供的 format function](#functionStyle)  
-> C: [f 為前綴的 f-String](#fStyle)
+> C: [f 為前綴的 f-String](#fStyle)  
 
-## <span style={{color: '#0044FF'}}>格式化 String (String Formatting) 基礎範例</span>
+## 格式化 String (String Formatting) 基礎範例
 * <span style={{color: '#0044FF'}}>使用 % mode: formatting expression</span>  
 * %<span style={{color: '#009900'}}>typecode</span><span style={{color: '#0044FF'}}>formatSpec</span>
 

@@ -1,5 +1,5 @@
 ---
-title: Python Basic
+title: Python 快速回憶
 description: Python 學習所需基本操作
 keywords: [Python,Tutorial]
 ---

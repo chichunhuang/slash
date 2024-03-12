@@ -1,5 +1,5 @@
 ---
-title: Python File Operation
+title: Python 檔案操作
 description: Python 中操作 File 相關
 keywords: [Python,File]
 ---
@@ -11,7 +11,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 參考資訊:  
 >
 > [Python String 處理](./Python_Typing_String)  
->> strip(), replace(), eval()    
+>> strip(), replace(), eval(), pickle module      
 >
 > [Python String 格式化](./Python_Typing_StringFormatting)  
 >> str.format(), mod formatting expression  
@@ -63,9 +63,12 @@ with open(<filename>) as f:
 * Syntax
     * file.read() 
     * file.read([size]) : 依指定 size 決定回傳內容
-    * file.readline() : 回傳結果包含換行符號
     * file.readlines() : 回傳 String list
-* closable : 可混搭上方 closable 語法由 VM 自動關閉資料流。
+    * file.readline() : 回傳結果<span style={{color: '#0044FF'}}> __包含換行符號__ </span>  
+* closable : 可混搭上方 closable 語法由 VM 自動關閉資料流。  
+* Python <span style={{color: '#0044FF'}}> __文末__ </span> 與 <span style={{color: '#0044FF'}}> __文中__ </span> <span style={{backgroundColor: '#ffffb3'}}>空行</span> 在讀取時的差異。  
+    * 文中空行: readline 回傳換行符號 (\\n) 
+    * 文末空行: readline 回傳空字串  
 
 ```python
 dataFile=fp.read()
@@ -86,6 +89,7 @@ print(content)
 file.close()
 
 
+# 一次讀一行 line
 file = open("statements.txt", "r")
 while True:
     content=file.readline()
@@ -94,6 +98,11 @@ while True:
     print(content)
 file.close()
 
+# 一次讀一行 line
+with open ('note.txt', 'r') as f:
+    for line in f:
+        doSomething()
+f.close()        
 
 file = open("statements.txt", "r")
 content=file.readlines()
@@ -133,7 +142,7 @@ finally:
 
 ```
 
-# with as: 定義一個__臨時的 codeblock__
+## with as: 定義一個__臨時的 codeblock__
 
 * with as 用在檔案開啟的__暫時__資料流區塊範例
 * 注意: 這邊需要一個冒號 : 做 Multi-line Block 範圍限定 
@@ -141,6 +150,19 @@ finally:
 ```python
 with open(file_path) as file_alias:
     # do....
+
+
+# 一次讀一行 line
+with open ('note.txt', 'r') as f:
+    for line in f:
+        doSomething()
+f.close()   
+
+
+# 一次讀全補行 lines
+with open ('note.txt', 'r') as f:
+    content=f.readlines() # list of strings
+f.close()       
 ```
 
 
@@ -154,7 +176,7 @@ with with decimal.localcontext() as ctx:
 ```
 
 
-# pandas
+## pandas
 * 使用 pandas 讀取資料
 
 ```python
@@ -169,7 +191,7 @@ data1.to_csv()
 ```
 
 
-# Text File Parsing 完整範例
+## Text File Parsing 完整範例
 
 ```python
 from datetime import datetime
@@ -184,7 +206,7 @@ finally:
     print("Finished: ", datetime.now().strftime("%H:%M:%S")) 
 ```
 
-# Text File Writing 完整範例
+## Text File Writing 完整範例
 
 ```python
 from datetime import datetime
@@ -199,3 +221,56 @@ except:
 finally:
     print("Finished: ", datetime.now().strftime("%H:%M:%S")) 
 ```
+
+
+## eval(_str) 程式片段字串轉成 Python script
+* 
+> 這裡指的是例如 parse 一個 *.py。  
+> 所得到的字串內容是可以直接轉成可執行的 python script 內容。  
+> 結果類似 import 一段程式碼。  
+
+```python
+# Python eval() : from string to python script
+strA = '[1,2,3]'
+print(type(strA))
+# <class 'str'>
+
+listA = eval(strA)
+print(type(listA))
+print(listA)
+# <class 'list'>
+# [1, 2, 3]
+
+```
+
+
+## misc 相關 modules(未整理...)
+* pandas
+* sys.stdout, sys.stderr
+* os
+    * https://docs.python.org/zh-tw/3/library/os.html
+
+
+
+<CodeBlock text={`
+# print() 的預設
+print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+#
+#下兩者相同(差在換行)
+import sys
+print('hello world!')
+## hello world!
+sys.stdout.write('hello world!\n')
+## hello world!
+#
+#
+# 輸出至 file, console 不再顯示
+with open('test.log', 'a') as f:
+    print('hello world!', file=f)
+##
+import sys
+print('hello world!', file=sys.stderr)
+    `}
+      language='python'
+      showLineNumbers='true'
+      /> 

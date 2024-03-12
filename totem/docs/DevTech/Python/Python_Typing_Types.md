@@ -40,6 +40,7 @@ print(l_double)
     * 可混用不同型別的 keys
     * values1 = dict1.values(), return dict_values 
     * keyValue_dict_items = dict1.items(), return dict_items, collection of tuple2s
+    * 以中括號取值(與 list 的  slice 操作同符號)
     
 ```python
 dict1 = {'k1':100, 'k2':'abc', 100:'XYZ'}

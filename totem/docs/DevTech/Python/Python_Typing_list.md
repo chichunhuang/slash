@@ -1,6 +1,6 @@
 ---
 title: Python List
-description: Python List
+description: Python List 資料結構與操作
 keywords: [Python,List]
 ---
 import { CodeBlock, dracula  } from "react-code-blocks";
@@ -13,7 +13,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 另外就是 Python 提供原生的工具方法可以使用，例如: sorted, reversed。  
 > 原生的工具方法通常都會複製出新的回傳值，不影響既有 instance。
 > 
-> 再來就是 Python 中有 operator module，  
+> 再來就是 Python 中有<span style={{color: '#0044FF'}}> __operator module__ </span>，  
 > operator module 也提供了些 list 的比對操作。
 > 
 > 最特殊的是，Python 中 operator 的 overloading，  
@@ -22,6 +22,15 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 嗯. 如果能有一個整合好的 module 會更好，  
 > 分散太多地方反倒是造成學習與使用上的困難。  
   
+
+## Python List 建構方式
+> 就中括號包起來便是，  
+> 允許放入不同型別的元素，  
+> 但，若不同型別在迴圈與 Comprehension 走訪時需注意可能出錯。   
+
+```python
+list = [1,2,3, 'A', 'B', 'C']
+```
 
 ## Python List 操作
 > 

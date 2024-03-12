@@ -13,7 +13,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
     * 以 <span style={{color: '#0044FF'}}> __反斜槓 \\__ </span> 做字元脫逸。  
     * r String: 轉義序列(escape sequence) 前加上一個小寫 r。  
 
-```python
+```python=
 
 # tempFile1 結果相同於 tempFile2  
 tmpFile1 = 'C:\\temp\\tmp.text'  
@@ -27,7 +27,7 @@ print(content)
 * Python 路徑分隔符 __(正斜槓:除號 /)__ :  
     * Python 已做最佳化，Linux/Windows 系統下皆可以<span style={{color: '#0044FF'}}>  __(除號 /)__ </span>作為檔案路經分隔符。  
     
-```python
+```python=
 
 # tempFile1 結果相同於 tempFile2  
 tmpFile1 = 'C:/temp/tmp.text'  # 語法糖: 除號
@@ -307,14 +307,13 @@ print(chr(97)) # a
 ```
 
 
-## 格式化 String (String Formatting)
-### [字串格式化 String Formatting](./Python_Typing_StringFormatting)
-
-
-## eval(_str) 程式片段字串轉成 Python script
+## eval(str) 程式片段字串轉成 Python script
 > 這裡指的是例如 parse 一個 *.py。  
 > 所得到的字串內容是可以直接轉成可執行的 python script 內容。  
 > 結果類似 import 一段程式碼。  
+
+* 參考: [序列化與反序列化物件]./Python_module_pickle
+    * 比較 pickle module vs eval()
 
 ```python
 # Python eval() : from string to python script
@@ -329,3 +328,6 @@ print(listA)
 # [1, 2, 3]
 
 ```
+
+## 格式化 String (String Formatting)
+### [字串格式化 String Formatting](./Python_Typing_StringFormatting)
