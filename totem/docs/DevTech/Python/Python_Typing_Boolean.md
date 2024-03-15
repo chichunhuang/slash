@@ -6,8 +6,12 @@ keywords: [Python,Boolean]
 import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python Boolean 
-
+> 寫在前面:  
+> Python 中的<span style={{color: '#0044FF'}}> __ 不等於 __ </span>，  
+> 新版為 <span style={{color: '#0044FF'}}> __!=__ </span>。  
+>> 舊版的不等於(&lt;&gt;)已棄用。  
 > Python 與 Javascript 一樣空值/零/空集合等部分情境也可直接視為布林使用。
+
 
 
 ## 也是 Boolean

@@ -11,7 +11,12 @@ keywords: [Python,Convention]
 
 
 ## Python 變數命名慣例
+>
+> 與 Java 相同，變數需以底線、字母、數字命名。  
+> 同樣必可以數字起始。  
+>
 
+### _Variable Scope_
 |                |說明                          |
 |----------------|-------------------------------|
 |varName|public|
@@ -19,18 +24,49 @@ keywords: [Python,Convention]
 |__varName|local variable 類別內|
 |__varName__|系統變數 system variables|
 
+### _Variable Naming Rules_ 說明
+> 
+> class name 以大寫字母開頭(same as Java)  
+> module name (package name) 以小寫字母開頭(J)  
+> 
+> 與 Java 不同處:  
+>> underscore _ (物件封裝) : 當不希望 caller 直接使用時的規則  
+> 
+> \_x (單一底線變數: weak internal use indicator,隱含的 import 語法):  
+>> 告知這個變數或方法應該限制在 class 之內使用，  
+>> 不應該備任意 import。  
+>> 但需注意的是 <span style={{backgroundColor: '#ffd1b3'}}>single underscore 並非一種限制，只是告知</span>。    
+>
+> \_\_x (雙底線變數:類似私有變數)  
+>> 會被 Python 的 name managling 機制改名為， _className__x。 
+>> 因此無法經由 class.__x 取得，而<span style={{backgroundColor: '#ffd1b3'}}>避免資訊被誤用</span>。  
+>> 進而產生出 __類似私有變數__ (private variable)的結果。  
+>> 但設計本意是，避免資料被誤用，或是方法被子類覆寫等情境。  
+>
+> \_\_x\_\_ (前後雙底線:Python 系統所使用與定義的變數)  
+>> 用來提醒該變數是 Python 系統內建使用的變數。   
+>> 特殊長相，一方面可用作提醒，另一方面也可避免與使用者自訂變數相衝突。  
+>
+
+
+ 
 
 ## Python vs Java Opertors (運算子符號比較)    
 * Python vs Java 同符號但用於不同概念
 * Python operator:
-    * same value: ==
-    * same object: is
+    * same value: == (內容相等 <span style={{color: '#0044FF'}}> __會遞迴比較集合物件內容__ </span>)  
+    * same object: is (是否為相同 reference)  
 
 |                |  Python | Java |
 |:---------------|:--------|:-----|
 |相同物件比較(reference)| is   | == |
 |同內容值比較| ==, !=   | equals |
 
+## Python 物件比較
+* 數值: 依字面常量大小比較  
+* String: 依序轉 ASCII 比對。  
+* Dict: 不比大小，只比 item value (by ==)，會先將 keys 排序後型進行比較。  
+* python3 不接受 __內容型別混合__ 的集合物件比較。
 
 ## Python Types
 
