@@ -15,7 +15,13 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 讓 IDE 幫我解決這個問題，當然你有錢的話訂閱 copilot 也行啦。  
 > 我，窮啦!  
 
-## Loop: for/while
+## 迴圈( Loop: for/while )
+
+>
+> 我曾經讀到一本 Python 書，當中寫 <span style={{backgroundColor: '#ffd1b3'}}> for 比 while loop 快 </span> 且簡潔易寫。  
+> 所以這邊也建議用 for loop 取代 while loop。
+>
+
 * PyCharm 中 Code Assistant / Live Template 的 key 是 __iter__ 
 * 我習慣會把他改成 __for__ (#code-template)  
 
@@ -58,7 +64,7 @@ while n < 0:
     print('hello')
 ```
 
-## Condition : if/elif/else
+## 條件判斷( Condition : if/elif/else )
 
 > 寫在前面 Python 中 Boolean 判斷的語法糖清參考: [Python Boolean](./Python_Typing_Boolean) 
 
@@ -106,7 +112,66 @@ else:
     print("else")        
 ```
 
-## Type checking
+## 三元運算子 ( Ternary Operator )
+* 沒有類似 Java 的 ?: operator
+* Python 採用的是  result = A <span style={{backgroundColor: '#ffd1b3'}}>if</span>  <span style={{color: '#009900'}}> condition </span> <span style={{backgroundColor: '#ffd1b3'}}>else</span> B
+
+__Tenary Operator Syntax_
+
+```python
+result = A if condition else B
+```
+
+_Tenary Operator: fundamental example _
+
+```python
+def say_hi():
+    print('Hi~')
+    return 'HI'
+
+def say_hello():
+    print('Hello~')
+    return 'HELLO'
+
+cond = False # 大寫
+a = say_hi() if cond else say_hello()
+print(a)
+```
+
+## or 這也算多元運算嗎?
+>
+> 應該是 or 的 operator overloaded。  
+> 
+> python 可以連續串多個 or operator 與 operands，
+> 若 operand (運算子) 是一個 __物件__ 的話(相較於 True/False/或條件判斷結果)，  
+> 結果回傳的會是一個 __非空物件__ 。而不是 Boolean。  
+> 
+
+__or overloaded__
+* None 視為 False
+* 空物件視為 False
+* 沒回傳值的函數也為 False
+
+```python
+def say_hi():
+    print('Hi~')
+
+v = None
+w = []
+x = False
+y = say_hi()
+z = {1: 1, 2: 2} # 非空物件
+
+result = v or w or x or y or z
+print(type(result))
+# <class 'dict'>
+print(result)
+# {1: 1, 2: 2}
+```
+
+
+
+## 型別檢查 ( Type checking )
 * <span style={{backgroundColor: '#ffd1b3'}}>type checking</span> : Java 中的 instance of
 
     * by isinstance function:   
@@ -186,6 +251,63 @@ print(result_set)
 # 1,4,9
 ```
   
+  
+## Loop Else Block: 
+
+> 使用情境: 檢查 '遇到 break 或 iterable sequence 中無 elements 時使用。'
+> 習慣上我會先確認 items size 加上是否 contains 指定 item 來做前處理。
+>  
+
+_Loops and Else Block_
+
+```python
+l = [1,2,3,4]
+l = []
+
+for a in l:
+    print(a)
+    if (a == 4):
+        break
+else:
+    print("NO Break Found/No Items Found")
+
+
+count = 0
+while (count < 1):
+    count = count+1
+    print(count)
+    break
+else:
+    print("No Break Found")
+```  
+
+
+_Python Contains_
+* iterable 類使用 <span style={{color: '#0044FF'}}> __ if in syntax__ </span>。  
+* map 則可先取 keys 或 values 轉成 iterable，再做後續處理。  
+* 數量則可用 len(col) 處理。  
+
+```python
+l = [1, 2, 3]
+
+print("length of list: ", len(l))
+if 1 in l:
+    print('contains')
+
+s = {4, 5}
+print("length of list: ", len(s))
+if 4 in s:
+    print('contains')
+
+m = {4: "A", 5: "B", 6: "C"}
+print("length of map: ", len(m))
+if 4 in m:
+# 同於 m.keys()
+    print('map contains given key')
+
+if "A" in m.values():
+    print('map contains given value')
+```
 
 ## PyCharm 客製化 Code Template <span id="code-template"></span>
 > 我通常會依據自己需求異動預設的 code assistant，畢竟每一種程式語言的迴圈或條件判斷在語法上都有些差異。   

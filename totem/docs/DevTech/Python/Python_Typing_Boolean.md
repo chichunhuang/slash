@@ -12,6 +12,26 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 >> 舊版的不等於(&lt;&gt;)已棄用。  
 > Python 與 Javascript 一樣空值/零/空集合等部分情境也可直接視為布林使用。
 
+## True False (大寫)
+注意: Python 中的 boolean 值皆是用 <span style={{backgroundColor: '#ffd1b3'}}>大寫</span>  <br/>
+ex: <span style={{color: '#0044FF', backgroundColor: '#ffd1b3'} }> __True, False__ </span> <br/>
+(JavaMan : __大寫, 大寫, 大寫 講三次!__)
+
+_boolean example_
+
+```python
+def say_hi():
+    print('Hi~')
+    return 'HI'
+
+def say_hello():
+    print('Hello~')
+    return 'HELLO'
+
+cond = False # 大寫 True / False
+a = say_hi() if cond else say_hello()
+print(a)
+```
 
 
 ## 也是 Boolean
