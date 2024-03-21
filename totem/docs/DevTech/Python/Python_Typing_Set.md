@@ -12,8 +12,8 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 ## Python set 無序的資料結構 : set<span id="custom-id-set"></span>
 * 建構方式
     * s = set( [iterable] )  
-    * s = set((e1,e2,e3)) : build-in method, 傳入 tuple  
-    * s = set([e1,e2,e3]) : build-in method, 傳入 list  
+    * s = set((e1,e2,e3)) : built-in method, 傳入 tuple  
+    * s = set([e1,e2,e3]) : built-in method, 傳入 list  
     * s = set('string') : string 也是 iterable  
     * s = {e1, e2, e3} : 原生非物件的建立方式
     
@@ -31,14 +31,14 @@ for s in s1:
 print(s1)
 # {8, 9, 10, 7}
 
-# build-in method 來建立
+# built-in method 來建立
 s2 = set((7,8,9,10,11))
 for s in s2:
     print(s)
 print(s2)
 # {7, 8, 9, 10, 11}
 
-# build-in method 來建立 : iterable String
+# built-in method 來建立 : iterable String
 s3= set('Hello World')
 for s in s3:
     print(s)

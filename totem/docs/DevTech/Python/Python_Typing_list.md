@@ -38,7 +38,7 @@ list = [1,2,3, 'A', 'B', 'C']
 > A: instance operation: list 資料結構本身提供的方法。  
 >> 這類操作通常 __沒有 return__ 值, 如 append  
 >
-> B: Python build-in utility: 類似 Util 類別，相關操作不影響 instance 本身  
+> B: Python built-in utility: 類似 Util 類別，相關操作不影響 instance 本身  
 >> 這類操作通常 <span style={{color: '#0044FF'}}>__會有 return__ 值, 如 slice, reversed fun, sorted fun</span>  
 >
 > C: 額外獨立的特殊 operators  

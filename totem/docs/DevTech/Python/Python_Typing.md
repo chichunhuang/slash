@@ -10,8 +10,8 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python Variables and Reference (變數與參用)
 * object type : call by reference
-* build-in type : call by value
-    * build-in type: 建立後會存在於記憶體中供往後變數重複使用
+* built-in type : call by value
+    * built-in type: 建立後會存在於記憶體中供往後變數重複使用
 * 與 Java 觀念類似
 
 # Python Primitive Type
