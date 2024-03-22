@@ -170,7 +170,7 @@ f.close()
 
 ```python
 import decimal
-with with decimal.localcontext() as ctx:
+with decimal.localcontext() as ctx:
     ctx.prec = 5
     #do something
 ```

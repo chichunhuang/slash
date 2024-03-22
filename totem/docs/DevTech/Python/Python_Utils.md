@@ -11,17 +11,25 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 也似乎沒做模組歸類加上本身語言的特性。  
 > 若沒付費版的 IDE，且像我不是 Python 的重度使用者的話。  
 > 想找特定工具時真的很麻煩，所以放在這列表囉。  
-> 以後在做歸類...  
+> 以後再做歸類...  
 
 <div hidden> https://www.geeksforgeeks.org/python-map-function/ 
 </div>
 
 
+> 這一區: 類似 Java 的 stream. Java 的 lambda api. DSL style.
+
+
 |         |   工具簡述    |  metaphor |  注意 |
 |---------|-------------|-----|-----|
 | builtins.py [map()](#map_function) | 迭代執行特定動作 |  Java stream 的 foreach | generator(資料只能讀一次,next()取值) |
+| builtins.py [filter()](#filter_function) | 與 map() 使用方法一樣，只差在 function 須回傳 boolean |  Java stream 的 filter | generator(資料只能讀一次,next()取值) |
 | builtins.py [zip()](#zip_function) | 把多個 iterable objects 依序組合成 tuples | Java stream 的 map | generator(資料只能讀一次,next()取值) |
 | [enumerate()](#enumerate_function) | 把 iterable object 轉成 index, element tuples | placeholder_metaphor | generator(資料只能讀一次,next()取值) |
+
+
+
+
 | [zip()](#placeholder) | placeholder_desc | placeholder_metaphor | placeholder_note |
 | [zip()](#placeholder) | placeholder_desc | placeholder_metaphor | placeholder_note |
 
@@ -93,6 +101,66 @@ for i in range(0, size):
     print(multiple(arg1[i], arg2[i]))
 ```
 
+
+
+
+
+
+
+
+## <span id="filter_function">filter() : 利用制定方法過濾 iterable object</span>
+
+_Syntax of filter function_
+
+```python
+result = filter(funReturnBool, iterable)
+
+```
+
+
+_filter function_
+
+```python
+
+class Exam:
+    # Python 的型別(冒號後面)僅只是 [提示]。所以應該自行檢查。
+    def __init__(self, name: str, score: int, penalty: int):
+        if not isinstance(name, str):
+            raise TypeError('name should be str')
+        self.score = score
+        self.penalty = penalty
+        self.name = name
+
+    def win(self):
+        self.score += 1
+
+    def lose(self):
+        self.penalty += 1
+
+    def get_points(self):
+        return self.score - self.penalty
+
+    def display(self):
+        return self.name + "-" + str(self.get_points())
+
+exe1 = Exam("Tom", 80, 10)
+exe2 = Exam("Jack", 95, 30)
+exe3 = Exam("May", 60, 20)
+exe1.win()
+exe2.lose()
+
+exams = [exe1, exe2, exe3]
+
+def is_pass(exam: Exam):
+    return exam.get_points() > 60
+
+result = filter(is_pass, exams)
+
+for r in result:
+    print(type(r), r.display())
+# <class '__main__.Exam'> Tom-71
+# <class '__main__.Exam'> Jack-64
+```
 
 ## <span id="zip_function">zip() : 把多個 iterable objects 依序組合成 tuples</span>
 

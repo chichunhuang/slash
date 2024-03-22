@@ -63,7 +63,7 @@ single quote x 3 or double quote x 3
 >
 
 ## 顯示物件資訊訊
-* help()
+* help(): 列出物件或函數模組的 API 文件內容。
 
 ```python
     help()
@@ -73,29 +73,12 @@ single quote x 3 or double quote x 3
 ```
 
 ## 列出物件屬性與方法
-* dir()
+* dir(x): 列出物件 x 所有屬性與方法。回傳的是 list。
 
 
-## 列出資訊在 console
-* print()
-
-```python
-    print('message')
-```
-
-## 返回物件類型
-* type()
-
-```python
-    b = 'another string'
-    print(dir(type(b)))
-    
-    ----
-    <class 'int'>
-```
 
 ## 取得類別說明
-* __doc__
+* __doc__: 類別或方法最上方 triple quotes 包覆範圍的內容。  
 
 ```python
     a ='it is a string'
@@ -117,6 +100,25 @@ single quote x 3 or double quote x 3
     {'__name__': 'hashlib', '__doc__': 'hashlib module - A common interface to many hash functions.\n\nnew(name, data=b\'\', **kwargs) ...
 ```
 
+
+
+## 列出資訊在 console
+* print()
+
+```python
+    print('message')
+```
+
+## 返回物件類型
+* type()
+
+```python
+    b = 'another string'
+    print(dir(type(b)))
+    
+    ----
+    <class 'int'>
+```
 
 ## Multi-line String
 * 斷行處加上反斜線 \
