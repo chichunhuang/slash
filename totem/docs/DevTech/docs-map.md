@@ -42,14 +42,13 @@ sidebar_position: 1
 * [Insert from Select - Insert from select result](/docs/DevTech/PostgreSQL/SQL/Insert_From_Selection_Values)
 * [Using subqueries outside of WHERE - 在 sql from 中使用子查詢](/docs/DevTech/PostgreSQL/SQL/Using_subqueries_outside_of_WHERE)
 ## Python
-* [Anaconda 基本管理指令 - Anaconda 基本管理指令](/docs/DevTech/Python/Anaconda_Statements)
 * [Pickle 序列化與反序列化 - Python 物件序列化與反序列化](/docs/DevTech/Python/Python_module_pickle)
-* [PyCharm 中使用 Anaconda 管理 Envs - PyCharm 中以 Anaconda 管理 Python Envs](/docs/DevTech/Python/PyCharm_Anaconda_Envs_Mgmt)
-* [PyCharm 中自訂 Snippet Templates - PyCharm 中自訂 Live Templates](/docs/DevTech/Python/PyCharm_Snippet_Template)
 * [Python Dict - Python Dict 資料結構與操作](/docs/DevTech/Python/Python_Typing_dict)
 * [Python List - Python List 資料結構與操作](/docs/DevTech/Python/Python_Typing_list)
+* [Python Print - Python Print 方法](/docs/DevTech/Python/Python_Basic_Print)
 * [Python String - Python String](/docs/DevTech/Python/Python_Typing_String)
 * [Python Typing(比較) - Python 型別](/docs/DevTech/Python/Python_Typing)
+* [Python Utils - 雜七雜八的工具](/docs/DevTech/Python/Python_Utils)
 * [Python 基礎型別摘要 - ](/docs/DevTech/Python/Python_Typing_Types)
 * [Python 布林值 - Python Boolen](/docs/DevTech/Python/Python_Typing_Boolean)
 * [Python 快速回憶 - Python 學習所需基本操作](/docs/DevTech/Python/Python_Basic)
@@ -62,6 +61,15 @@ sidebar_position: 1
 * [Python-Sorting by pandas - Python - Sorting and Parsing CSV](/docs/DevTech/Python/Sorting_by_pandas_Python)
 * [Send Mail by Python smtplib - Send Mail by Python smtplib](/docs/DevTech/Python/Send_Eail_By_Python)
 * [Set 資料結構 - Python Set 資料結構](/docs/DevTech/Python/Python_Typing_Set)
+### IDE
+* [Anaconda 基本管理指令 - Anaconda 基本管理指令](/docs/DevTech/Python/IDE/Anaconda_Statements)
+* [PyCharm 中使用 Anaconda 管理 Envs - PyCharm 中以 Anaconda 管理 Python Envs](/docs/DevTech/Python/IDE/PyCharm_Anaconda_Envs_Mgmt)
+* [PyCharm 中的快速鍵 - PyCharm 中的快速鍵](/docs/DevTech/Python/IDE/PyCharm_HotKeys)
+* [PyCharm 中自訂 Snippet Templates - PyCharm 中自訂 Live Templates](/docs/DevTech/Python/IDE/PyCharm_Snippet_Template)
+### 進階
+* [Python Generator - Python Generator - lazy loop](/docs/DevTech/Python/進階/Python_2_Generator)
+* [Python Lambda 匿名函式 - Python Anonymous Function](/docs/DevTech/Python/進階/Python_2_Labmda)
+* [Python 迭代相關三兩事 - Loop、Iteration、Comprehension](/docs/DevTech/Python/進階/Python_2_Iterations_Misc)
 ## Tomcat
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
