@@ -312,6 +312,6 @@ if "A" in m.values():
 ## PyCharm 客製化 Code Template <span id="code-template"></span>
 > 我通常會依據自己需求異動預設的 code assistant，畢竟每一種程式語言的迴圈或條件判斷在語法上都有些差異。   
 * [PyCharm Official Tutorial](https://docs.python.org/3.12/reference/datamodel.html#objects-values-and-types)
-* [PyCharm Snippet Template](./PyCharm_Snippet_Template) 
+* [PyCharm Snippet Template](./IDE/PyCharm_Snippet_Template) 
 
 

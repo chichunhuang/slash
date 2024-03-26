@@ -119,6 +119,7 @@ for i in range(1, 7):
 ```python
 
 # 給兩個數，幫我算加減乘除
+# => 這次有給 lambda 一個變數名稱了 
 arithmetic = lambda a, follow: [
     (lambda a, follow: a + follow)(a, follow),
     (lambda a, follow: a - follow)(a, follow),
