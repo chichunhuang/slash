@@ -22,18 +22,10 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 |         |   工具簡述    |  metaphor |  注意 |
 |---------|-------------|-----|-----|
-| builtins.py [map()](#map_function) | 迭代執行特定動作 |  Java stream 的 foreach | generator(資料只能讀一次,next()取值) |
-| builtins.py [filter()](#filter_function) | 與 map() 使用方法一樣，只差在 function 須回傳 boolean |  Java stream 的 filter | generator(資料只能讀一次,next()取值) |
-| builtins.py [zip()](#zip_function) | 把多個 iterable objects 依序組合成 tuples | Java stream 的 map | generator(資料只能讀一次,next()取值) |
+| builtins.py <br/>[map()](#map_function) | 迭代執行特定動作 |  Java stream 的 foreach | generator(資料只能讀一次,next()取值) |
+| builtins.py <br/>[filter()](#filter_function) | 與 map() 使用方法一樣，只差在 function 須回傳 boolean |  Java stream 的 filter | generator(資料只能讀一次,next()取值) |
+| builtins.py  <br/>[zip()](#zip_function) | 把多個 iterable objects 依序組合成 tuples | Java stream 的 map | generator(資料只能讀一次,next()取值) |
 | [enumerate()](#enumerate_function) | 把 iterable object 轉成 index, element tuples | placeholder_metaphor | generator(資料只能讀一次,next()取值) |
-
-
-
-
-| [zip()](#placeholder) | placeholder_desc | placeholder_metaphor | placeholder_note |
-| [zip()](#placeholder) | placeholder_desc | placeholder_metaphor | placeholder_note |
-
-
 
 
 ## <span id="map_function">map() : 迭代執行特定動作</span>
@@ -241,25 +233,3 @@ for e in enum_chars:
 # <class 'tuple'> - (4, 'E')
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
- 
-<CodeBlock text={`
-# 這區塊不可有任何空白行
-    `}
-      language='python'
-      showLineNumbers='true'
-      /> 
- - 這裡     
- - 跟這裡需留空白行 
- 

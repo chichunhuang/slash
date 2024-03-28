@@ -3,18 +3,29 @@ title: sidebar menu link/ docs-map link
 description: doc map link desc
 keywords: [Python ,Tutorial]
 ---
+import { CodeBlock, dracula  } from "react-code-blocks";
+
+
+import 
+https://medium.com/@alan81920/python-import-%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8-c98e8e2553d3
 
 
 https://github.com/apachecn/programiz-zh/tree/master/docs/py
 
-import { CodeBlock, dracula  } from "react-code-blocks";
-* ref: [CodeBlock Doc](https://www.npmjs.com/package/react-code-blocks#codeblock)
+[CodeBlock Doc](https://www.npmjs.com/package/react-code-blocks#codeblock)
+<br/>
 
-* [MD Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+
+[MD Basic Syntax](https://www.markdownguide.org/basic-syntax/)
     * Type thinsp to add a single space(1/6 em). &nbsp:
     * Type nbsp to add a single space(1/4 em). &nbsp:
     * Type ensp to add 2 spaces (1/2 em).
     * Type emsp to add 4 spaces (1em).
+
+
+expression:  一個表達=> 想表達的是....回傳的內容 
+
+statement: 陳述=> 單純的敘述與紀錄
 
 
 * [MD 公式符號](https://blog.csdn.net/konglongdanfo1/article/details/85204312)

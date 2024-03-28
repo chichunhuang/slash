@@ -40,11 +40,11 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 |---------|----------------|
 | Reformat a code fragment | Ctrl+Alt+L |
 | Code completion | Alt+/,  Ctrl+Shift+Enter |
+| next highlight | Ctrl+ l |
+| code formatting(indentation) | Ctrl + Alt + L |
+| run | Ctrl+ F5 |
+| Shift +  F6 | variable rename |
+| Ctrl+ Shift | to Upper /  Lower case |
 
-# Ctrl+ l : next highlight
-# Ctrl + Alt + L : code formatting(indentation)
-# Ctrl+ F5 : run
-# Shift +  F6 : variable rename
-# Ctrl+ Shift : to Upper /  Lower case
 
 ﻿
