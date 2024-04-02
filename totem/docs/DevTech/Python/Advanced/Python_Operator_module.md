@@ -10,7 +10,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 介紹 Python 內建 operators，與 operator module。  
 
 * 參考 : 
-    * [operator — Standard operators as functions](https://docs.python.org/3/library/operator.html)
+   * [operator — Standard operators as functions](https://docs.python.org/3/library/operator.html)
    * [Python operators](https://www.runoob.com/python/python-operators.html)  
 
 
@@ -22,7 +22,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 >> 連續兩個 slash //, 除法且向下取整數。  
 >
 > 部分算術運算元有 overloaded，可用於非數值類資料結構。    
-> overloaded 部分使用須小心。  
+> overloaded 部分使用需小心。  
 > 
 
 * 算術運算元 (+-/*)
@@ -48,17 +48,3 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 細節可參考 [operator — Standard operators as functions](https://docs.python.org/3/library/operator.html)  
 > 類似功能也可見於 numpy module  
 
-<CodeBlock text={`
-from operator import eq
-import operator
-import pickle
-# CodeBlock區塊不可有任何空白行
-    `}
-      language='python'
-      showLineNumbers='true'
-      /> 
-
-```python
-from operator import eq
-import operator
-```

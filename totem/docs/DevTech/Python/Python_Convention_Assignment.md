@@ -13,6 +13,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 >> Augment Assignment  
 
 ## Positional Unpacking: 依位置解包  
+
 * 原則上就是一組變數依序對應同等數量的一組參數值。 
 
 <CodeBlock text={`
@@ -23,12 +24,14 @@ print(firstName)
 # Michael
 print(lastName)
 # Jackson
-    `} 
-      language='python'
-      showLineNumbers='true'
-      /> 
- 
-## Sequence unpacking: 依順序解包  
+`} 
+language='python'
+showLineNumbers='true'
+/>
+
+## Sequence unpacking: 依順序解包依位置解包  
+
+
 _Generalized Sequence Unpacking_ 
 
 <CodeBlock text={`
@@ -69,6 +72,6 @@ print(b)
     * 為不可變型別(immutable)，例如 String, 則 unpack 後會回傳一個新的物件。  
     * 若為可變型別，例如 List，則會發生 __原處修改__ ，也就是 reference 共享。操作時會改動到原始物件。  
     * ex: list 的 += 運算等同於 extend()  
-* 參考: [Python 運算子]Python_operator_module  
+* 參考: [Python 運算子](./Python_operator_module  )
     
     

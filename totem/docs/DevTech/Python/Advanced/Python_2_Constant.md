@@ -90,3 +90,18 @@ const.PI = "another"
  ```
  
  
+## 其他
+* 關於上面 \_\_setattr\_\_ function 有看到部份的人以不同的方式撰寫。
+* 函式的 parameters 寫法不同。 *\_ 
+* 因為單純要禁止資料設定，所以直接以解包語法簡化程式碼。
+* 可參考 [Python Unpacking/解包或開箱](./Python_2_unpack_lisit_map)
+
+另一種方法 *\_
+
+```python
+def __setattr__(self, *_):
+    pass
+```
+
+ 
+ 
