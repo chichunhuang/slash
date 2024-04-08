@@ -72,6 +72,6 @@ print(b)
     * 為不可變型別(immutable)，例如 String, 則 unpack 後會回傳一個新的物件。  
     * 若為可變型別，例如 List，則會發生 __原處修改__ ，也就是 reference 共享。操作時會改動到原始物件。  
     * ex: list 的 += 運算等同於 extend()  
-* 參考: [Python 運算子](./Python_operator_module  )
+* 參考: [Python 運算子](./Advanced/Python_operator_module  )
     
     
