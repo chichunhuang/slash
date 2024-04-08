@@ -61,15 +61,19 @@ sidebar_position: 1
 * [Python-Sorting by pandas - Python - Sorting and Parsing CSV](/docs/DevTech/Python/Sorting_by_pandas_Python)
 * [Send Mail by Python smtplib - Send Mail by Python smtplib](/docs/DevTech/Python/Send_Eail_By_Python)
 * [Set 資料結構 - Python Set 資料結構](/docs/DevTech/Python/Python_Typing_Set)
+### Advanced
+* [Python Generator - Python Generator - lazy loop](/docs/DevTech/Python/Advanced/Python_2_Generator)
+* [Python Lambda 匿名函式 - Python Anonymous Function](/docs/DevTech/Python/Advanced/Python_2_Labmda)
+* [Python 常數 - Python 常數設計方法](/docs/DevTech/Python/Advanced/Python_2_Constant)
+* [Python 打包與解包 - Python Packing and Unpacking](/docs/DevTech/Python/Advanced/Python_2_unpack_lisit_map)
+* [Python 變數與變數存取範圍 - Python 變數與變數存取範圍](/docs/DevTech/Python/Advanced/Python_2_Variable_and_Scope)
+* [Python 迭代相關三兩事 - Loop、Iteration、Comprehension](/docs/DevTech/Python/Advanced/Python_2_Iterations_Misc)
+* [Python 運算子進階-operator - 關於 operator](/docs/DevTech/Python/Advanced/Python_Operator_module)
 ### IDE
 * [Anaconda 基本管理指令 - Anaconda 基本管理指令](/docs/DevTech/Python/IDE/Anaconda_Statements)
 * [PyCharm 中使用 Anaconda 管理 Envs - PyCharm 中以 Anaconda 管理 Python Envs](/docs/DevTech/Python/IDE/PyCharm_Anaconda_Envs_Mgmt)
 * [PyCharm 中的快速鍵 - PyCharm 中的快速鍵](/docs/DevTech/Python/IDE/PyCharm_HotKeys)
 * [PyCharm 中自訂 Snippet Templates - PyCharm 中自訂 Live Templates](/docs/DevTech/Python/IDE/PyCharm_Snippet_Template)
-### 進階
-* [Python Generator - Python Generator - lazy loop](/docs/DevTech/Python/進階/Python_2_Generator)
-* [Python Lambda 匿名函式 - Python Anonymous Function](/docs/DevTech/Python/進階/Python_2_Labmda)
-* [Python 迭代相關三兩事 - Loop、Iteration、Comprehension](/docs/DevTech/Python/進階/Python_2_Iterations_Misc)
 ## Tomcat
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
