@@ -24,6 +24,7 @@ keywords: [Python,Convention]
 |_varName|module /package, 無法 from x import x|
 |__varName|local variable 類別內|
 |__varName__|系統變數 system variables|
+| _ | 變數佔位符(placeholder)<br/>interpreter 暫存最後 expression 內容用<br/>懶得取變數時使用 |
 
 ### _Variable Naming Rules_ 說明
 > 

@@ -7,6 +7,16 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 打包與解包 
 
+## Packing / Unpacking 時 Asterisk 相關摘要整理
+* 單一個 Asterisk: 用在 iterable object 身上
+* 雙 Asterisks: 用在 dict object 身上
+* 用在變數指定上: [不完全解包](#partial_unpacking)
+* 用在引數上: [依情境解包成 tuple: iterable](#unpacking)
+* 用在引數上: [依情境解包成 dict: named-params](#dict_unpacking)
+* 用函數參數上: [定義 VarArgs 時使用](#varArg_packing)
+    * 註: [Bare Asterisk](#bare_asterisk) 用在函數 signature 時: 限制後方的 args 必須使用 keyword arguments. 
+
+
 ## Python 打包與解包解說
  
 * [Arguments unpacking hints](#unpacking): 
@@ -192,7 +202,8 @@ for k, v in couples:
 # <span id="packing">打包裝箱 Packing</span>
 > Packing   
 > 用在定義函數處: 目的在 <span style={{color: '#ff6600'}}>自動將不定數的引數打包到一個 __list 或 dict__ 中後傳入方法中</span> 。  
-> 用在變數賦值時(常伴隨解包一起發生):  解包時將非主要元素收集在一個集合中。此時會以 [asterisk 標示打包的變數](#partial_unpacking)。    
+> 用在變數賦值時(常伴隨解包一起發生):  解包時將非主要元素收集在一個集合中。  
+> 此時會以 [asterisk 標示打包的變數](#partial_unpacking)。    
 > 所以 Packing 通常用在函數定義上。 
 > 
 > 如果你得打包這個名稱不易理解，我換一個名詞來解釋。  
@@ -271,7 +282,74 @@ print_profile(gender='Female', height='160',
 
 ```
 
+## <span id="bare_asterisk">Bare Asterisk</span>
+>
+> Bare Asterisk 用在函數 signature 代表 __限制__ 後方的 args 必須使用 keyword arguments  
+> 就單純是一種限制，未遵循會拋出錯誤  
+> 
 
+___Bare Asterisk___
+
+```python
+def funcAsterisk(name, exam, *, score):
+    print( f'{name} only got {score} in {exam} exam.')
+
+funcAsterisk("Totem", "math", score='60')
+# Totem only got 60 in math exam.
+
+funcAsterisk("Totem", "math", '60')
+# TypeError: funcAsterisk() takes 2 positional arguments but 3 were given
+```
+
+## <span id="star_underscore">Asterisk Underscore</span>
+> 
+> Asterisk Underscore (star underscore): 又是一個怪咖。   
+> 會出現在變數指定上，也會出現在函數 signature 上。  
+> 因為同時相連出現兩個 operators。    
+> 
+> Asterisk:就是解包或打包意思。    
+>
+> underscore 起始的變數都是有意義的。  
+> __underscore __  \_ 對 python VM/Interpreter 來說，    
+> 是用來 <span style={{backgroundColor: '#ffd1b3'}}>暫存最後一個 expression 的回傳值使用</span>。  
+> 這邊只是暫借來放不重要的資訊，反正等一下就會被丟棄。  
+
+___ Asterisk Underscore: variable___
+> 
+> 先說明 underscore :  
+> 在此處也可想成是佔位符(placeholder)，  
+> 也就是這個變數不重要，也不會去用它，所以懶得為他取名稱。  
+> 與 Asterisk 搭配使用意味著，將不完全解包的資料暫放在 underscore 變數上。  
+> 註: underscore 是一個變數，所以還是可以取值的。  
+>
+
+
+```python
+a, _, b = (1, 2, 3)
+print(a, b)
+# 1 3
+
+a, *_, b = (1,2,3,4,5,6,7,8)
+print(a, b)
+print(_)
+# 1 8
+# [2, 3, 4, 5, 6, 7]
+```
+
+___ Asterisk Underscore: signature___
+
+> 用來當作一撰寫 overloaded funcs 的簡化語法。  
+
+[Python 常數實作範例](./Python_2_Constant)
+
+```python
+# Python 常數範例中:
+# 下方寫法意味著 VarArgs signature，無論傳幾個 args 都會導向此函數。
+
+# 禁用所有 setter
+def __setattr__(self, *_):
+    pass
+```
 
 ## <span id='partial_unpacking'>搭配 Asterisk 的打包與解包: 不完全解包</span>
 
@@ -298,20 +376,3 @@ Python 還支援不完全解包，除部分元素個別單一分離外，同時�
  # (3,4,5)
 
 ```
-
-
-
-
-## Packing / Unpacking 時 Asterisk 相關使用整理
-
-用在變數身 上
-
-引數傳第十
-
-函數定義時
-
-
-_單一個 Asterisk 使用註記:_
-* 不完全解包: 不完全解包情境
-* 有序集合引數解包: 傳遞引數時順便解包成為  var arguments
-<span id="#singleAsterisk">77</span>
