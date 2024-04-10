@@ -55,3 +55,27 @@ def loop(max:int):
 print(isgeneratorfunction(loop))
 ```
 
+_Generator Comprehension 範例_
+* 這邊指的是以 Comprehension 語法來建立 generstor
+* 參考 [Generator Comprehension](../Python_Comprehension#generator_comprehension)
+
+```python
+# 小括號 comprehension 會建立 generator
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+evens_generator = (num for num in nums if num % 2 == 0)
+
+print(next(evens_generator)) # 2
+print(next(evens_generator)) # 4
+
+# 上方程式等價於
+def filterEven(numbers: list):
+    for num in numbers:
+        if num % 2 == 0:
+            yield num
+
+evens = filterEven(nums)
+
+print(next(evens)) # 2
+print(next(evens)) # 4
+
+```
