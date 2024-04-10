@@ -50,6 +50,9 @@ three_X_seven = (lambda multiplicand, multiplier : multiplier*multiplicand) (3,7
     * part2(expression): 運算式與回傳內容
 * 引數區塊(optional: 不一定要寫在一起)
 * 另外[引數區塊要以小括號包覆](#argument_block)
+
+## Lambda 匿名函數的變數作用域
+* [Lambda 匿名函數的變數作用域](./Python_2_Variable_and_Scope#lambda_var_scope)
     
 
 ## 範例與使用方法
@@ -146,6 +149,5 @@ print(ans)
 # 200
 ``` 
 
- 
- 
+  
  

@@ -88,7 +88,7 @@ __前後雙底線:Python 系統所使用與定義的變數__
 > Local&nbsp;&nbsp;=>&nbsp;&nbsp;Enclosing&nbsp;&nbsp;=>&nbsp;&nbsp;Global&nbsp;&nbsp;=>&nbsp;&nbsp;Built-in  
 
 
-### 嵌套作用域 Enclosing Scope
+### <span id="lambda_var_scope">嵌套作用域 Enclosing Scope</span>
 * enclosing scope(嵌套作用域) 又稱 statically nested scope(靜態嵌套作用域)
 
 > 這邊指的是槽串內部的 function 可以取得外部 host 的資訊。  

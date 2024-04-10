@@ -1,6 +1,6 @@
 ---
-title: Python Utils
-description: 雜七雜八的工具
+title: Python 雜七雜八的工具
+description: Python Utils
 keywords: [Python]
 ---
 import { CodeBlock, dracula  } from "react-code-blocks";
@@ -25,6 +25,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 | builtins.py <br/>[map()](#map_function) | 迭代執行特定動作 |  Java stream 的 foreach | generator(資料只能讀一次,next()取值) |
 | builtins.py <br/>[filter()](#filter_function) | 與 map() 使用方法一樣，只差在 function 須回傳 boolean |  Java stream 的 filter | generator(資料只能讀一次,next()取值) |
 | builtins.py  <br/>[zip()](#zip_function) | 把多個 iterable objects 依序組合成 tuples | Java stream 的 map | generator(資料只能讀一次,next()取值) |
+| functools module <br/>[reduce()](#reduce_function) | 迴圈的變型，更泛用的迴圈搭配目的邏輯 | Java 的 stream | 可以用來取代 map(), filter(), zip()等工具 |
 | [enumerate()](#enumerate_function) | 把 iterable object 轉成 index, element tuples | placeholder_metaphor | generator(資料只能讀一次,next()取值) |
 
 
@@ -147,6 +148,7 @@ def is_pass(exam: Exam):
     return exam.get_points() > 60
 
 result = filter(is_pass, exams)
+# result = filter(lambda exam: exam.get_points() > 60, exams)
 
 for r in result:
     print(type(r), r.display())
@@ -190,6 +192,87 @@ print(result_of_zip)
 # <zip object>
 print(type(result_of_zip))
 # <class 'zip'>
+```
+
+
+## <span id="reduce_function">reduce() : </span>
+>
+> 大家都介紹 reduce()， 不免俗也一起來。  
+> 先說使用 reduce 需先 import functools 這個模組。  
+> reduce 會接受一個 function expression <span style={{color: '#f0f0f5'}}>(func_lambda)</span>，  
+> 而該 function expression 必須要且只能有兩個 parameters<span style={{color: '#f0f0f5'}}>(x,y)</span>，   
+> 另外需將將一個可 iterable 的集合<span style={{color: '#f0f0f5'}}>(iterCol)</span>傳給 reduce()，  
+> 
+> reduce() 會依序走訪 iterable object，  
+> 並將每一次的結果傳給 function expression 的 1st argument  
+> 將當前走訪的 element 傳給 function expression 的 2nd argument  
+> 若有提供初始值<span style={{color: '#f0f0f5'}}>(init_value)</span>的話，則首次走訪時 1st argument 為所提供的初始值，  
+> 
+> 不然，首次走訪時會傳入 iterable object 的前兩個 elements。  
+
+   
+
+___reduce() syntax___
+
+```python
+
+def func_lambda(previous_result, current_element):
+    # return expression result
+    return previous_result + current_element 
+
+result = reduce(func_lambda, iterCol, init_value)
+
+```
+
+___reduce() example: find min___
+
+```python
+import functools
+
+def min(pre, current):
+    if pre > current:
+        return current
+    else:
+        return pre
+        
+smallest = functools.reduce(min, [9, 1, 3, 5, 7, 1, 5, 8, 2], 999999)
+print(smallest)
+# 1
+```
+
+___reduce() example: more than 2 parameters in fun expression___
+> wrap arguments into tuple
+
+```python
+def concate(previous, current):
+    return previous + f' ({current[0]}, {current[1]}) '
+
+cps = functools.reduce(concate, [('Tom', 'May'),('Jack', 'Anna'),('Bob', 'Susan')], 'Couples:')
+print(cps)
+# Couples: (Tom, May)  (Jack, Anna)  (Bob, Susan) 
+
+```
+
+
+___reduce() example: gathering___
+
+> reduce 使用情境變化:  
+> 下方範例用來收集資料，同樣概念也可應用來遞迴檢查資料夾....  
+
+```python
+def is_blank(string):
+    return not bool(string and not string.isspace())
+
+def collect(collected:list, current):
+    if is_blank(current):
+        return collected
+    else:
+        collected.append(current)
+        return collected
+
+result = functools.reduce(collect, ['A',' ','','\t', None,'B'], [])
+print(result)
+# ['A', 'B']
 ```
 
 

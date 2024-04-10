@@ -105,5 +105,6 @@ def __setattr__(self, *_):
     pass
 ```
 
- 
+## Static Functions: 工具函數寫法
+* [以函數為一級成員的工具函數寫法](./Python_2_Function)
  

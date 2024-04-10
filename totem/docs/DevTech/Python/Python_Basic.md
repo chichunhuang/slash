@@ -89,6 +89,24 @@ single quote x 3 or double quote x 3
     str(bytes_or_buffer[, encoding[, errors]]) -> str 
 ```
 
+## 取得函數說明
+* __annotations__
+
+```python
+
+def area(w: 'width' = 10, l: 'length' = 10) -> int:
+    return w * l
+print(area.__annotations__)
+# {'w': 'width', 'l': 'length', 'return': <class 'int'>}
+
+# syntax
+# 變數名:註解=預設值
+def funcName(varName:'desc'+defaultValue) -> ret type:
+    pass
+    
+```
+
+
 ## 返回物件的內建屬性
 * __dict__ 可列出 instance 的所有 field/values
 
