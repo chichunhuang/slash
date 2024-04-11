@@ -7,6 +7,41 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 函數
 
+##　函數陷阱
+> 
+> 預設值是 function 創建後產生的一個物件，  
+> 會存在於 function 所在的 scope，形成類似全域的一個變數。  
+> 須小心 multable default value，會間接造成預設值不斷改變。  
+> 
+
+
+___function: multable default value ___
+
+```python
+# function multable default value: list
+def string_builder(element: str, arr=[]):
+    arr.append(element)
+    print(arr) # 印出當前資料內容
+    return arr
+
+
+x = string_builder('A')
+# ['A']
+y = string_builder('B')
+# ['A', 'B'], 資料出現異常累加
+z = string_builder('C')
+# ['A', 'B', 'C'], 資料再次出現異常累加
+
+
+# ==> 發生 multable 內容累加情形
+print(x)
+# ['A', 'B', 'C']
+print(y)
+# ['A', 'B', 'C']
+print(z)
+# ['A', 'B', 'C']
+```
+
 ## 函數註釋(Annotation)寫法
 > 
 > Python 雖被定義為直譯式語言且可動態型別綁定，但為了將來好維護，  

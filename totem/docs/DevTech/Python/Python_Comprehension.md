@@ -110,9 +110,41 @@ print(next(evens_generator)) # 6
 ## Nested Comprehension
 > 
 > Nested Comprehension 指的是，槽狀 Comprehension，  
-> 也就是多重迴圈的意思。  
+> 
+> 結構A: 多重迴圈  
 > 寫在越後方的 comprehension 就是越內層的迴圈。  
 > 
+> 
+> 結構B: Comprehension 串接  
+> 也可以把他想成是 Java 的 Streaming，  
+> 把集合的資料連續做多次處理，  
+> 把資料串接在另一個 Comprehension 的 in clause 中。    
+> 
+
+
+___Nested Comprehension: 多重迴圈範例__
+
+* 多維矩陣走訪範例，寫在越後方的 comprehension 就是越內層的迴圈。
+
+```python
+table = [
+    [10, 20, 30],
+    [11, 21, 31],
+    [12, 22, 32],
+]
+
+unpack = [
+    cell 
+    for row in table
+    for cell in row
+]
+
+print(unpack)
+# [10, 20, 30, 11, 21, 31, 12, 22, 32]
+
+```
+
+* 多重迴圈範例
 
 ```python
 # 45乘法表
@@ -121,10 +153,41 @@ for i in range(4):
         print(f'{i} x {j} = '+ str(i * j))
 
 table = [f'{i} x {j} = ' + str(i * j)
-         for i in range(4)
-         for j in range(5)
+         for i in range(4) # 先走訪4
+         for j in range(5) # 先走訪5 (共 4*5 個結果)
          ]
 
 for t in table:
     print(t)
+```
+
+___Nested Comprehension: Java Streaming 範例__
+
+* Comprehension 串接成 Java Streaming 
+    * 將前一輪的結果放到次一階段的 in clause 中 
+    * condition 可用來做 filtering 
+    * expression 可用來做 java stream 的 map 動作 
+
+```python
+class Person:
+    def __init__(self, name: str, gender: str, waistline: int):
+        if not isinstance(name, str):
+            raise TypeError('name should be str')
+        self.name = name
+        self.gender = gender
+        self.waistline = waistline
+
+
+ps = [
+    Person('Tom', 'Male', 91),
+    Person('Michael', 'Male', 89),
+    Person('Bob', 'Male', 100),
+    Person('Mary', 'Female', 81),
+    Person('Winnie', 'Female', 79),
+]
+
+# 查出腰圍大於 90 的男性
+found = [target.name for target in [man for man in ps if man.gender == 'Male'] if target.waistline > 90]
+# Tom, Bob
+
 ```
