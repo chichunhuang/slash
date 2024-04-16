@@ -9,7 +9,9 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 [ ___Package___ ](#using_package)
 > 
-> 指的是放 Python 相關檔案的資料夾。資料夾中預期會有 <span style={{color: '#0044FF'}}> __\_\_init\_\_.py__ </span> 檔案。  
+> 指的是放 Python 相關檔案的資料夾。  
+> 可簡單想成是一個存放 modules 與 packages 的資料夾。  
+> 資料夾中預期會有 <span style={{color: '#0044FF'}}> __\_\_init\_\_.py__ </span> 檔案。  
 >> __\_\_init\_\_.py__ 內容可為空，python3+ 中可省略(若考慮向下相容，建議可以保留此慣例)。  
 > 
 > Package 資料夾可以槽串，同樣預期每個資料夾中都該有 __\_\_init\_\_.py__ 檔案。  
@@ -22,13 +24,6 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 ## <span id="using_module">Module 的使用</span>
 
-## Import 路徑
-__絕對路徑(Absolute Path)__
-> 由整個 Python Environment 來看的路徑。每個路徑都是唯一的。  
-
-__相對路徑(Relative Path)__
-> 指的是 <span style={{backgroundColor: '#ffd1b3'}}>由 main process 角度來看</span> 的路徑。並非當前使用中的 module 的角度來看。  
-
 
 ## Module Importing 的概述
 > 
@@ -39,17 +34,59 @@ __相對路徑(Relative Path)__
 > 以避免載入錯誤或是無法成功在入所需 api 的情形發生。  
 > 
 
+* [Module Namespace 與路徑](#module_path)
 * [Import 相關語法](#importing_syntax)
 * [From Import 相關語法](#from_import_syntax)
 * [Module Reload 相關語法](#reload_syntax)
 * [系統預設載入的 Modules](#default_modules)
 * [模組查詢順序](#loading_shadow)
-* [Module 使用陷阱](#module_pitfall)
 * [Module 與封裝](#module_envelop)
 * [Package 的使用](#using_package)
+* [Module 使用陷阱與注意事項](#module_pitfall)
+
+
+## <span id="module_path">Module Namespace 與路徑</span>
+* namespace 指的是模組所在的資料夾階層結構。  
+* 路徑則是 Python Env 查找模組時的 namespace 描述方式。  
+
+__絕對路徑(Absolute Path)__
+> 個人建議採用的方法，可以規避許多隱藏的風險。  
+> 由整個 Python Environment 來看的路徑。每個路徑都是唯一的。  
+
+__相對路徑(Relative Path)__
+> 指的是 <span style={{backgroundColor: '#ffd1b3'}}>由 main process 角度來看</span> 的路徑。並非當前使用中的 module 的角度來看。  
+> 個人不建議使用。  
+
+## Import 語法使用建議
+* 在考量 interpreter 工作方式下，建議<span style={{backgroundColor: '#ffd1b3'}}>優先採用 import [module] as [alias] </span>
+
+
+__Priority of Importing Syntax__
+
+```python
+# 優先建議，by reference import (copy reference)
+# import [module] as [alias]
+import datetime as dt
+
+# 下面可以當作沒看到
+
+# 次要, 當載入成員是 物件類則 by reference, 是 primitive 則 by value (copy value)
+# from [module] import [member] as [alias]
+from datetime import date as dt
+
+# 少用, 易發生變數名遮蔽. 搭配 __all__ 使用
+# from [module] import *
+from datetime import *
+
+# 避用, 相對路徑會增加維護成本
+# from [relative_path] import [module] as [alias]
+from .. import datetime as dt
+
+```
 
 ## <span id="importing_syntax">Import 相關語法</span>
-> import statement, by reference 來導入整個 module，須以完整路徑(full path with namespace) 指到模組 (\*.py)。  
+> import statement, by reference 來導入整個 module，   
+> 須以完整路徑(full path with namespace) 指到模組 (\*.py)。  
 > 同 package 可用 shortcut path。 
 
 ___import 語法___
@@ -244,42 +281,185 @@ ___Python 載入 Modules 時的查詢路徑___
 
 * 有可能會依平台與 Python 版本而有所差異
 * Python 的 home directory: 程式碼所在位置
-* PYTHONPATH: class path 位置
+* PYTHONPATH: class path 位置，也就是 OS 中的環境變數的設定。
 * Standard Library Directories: Python 安裝位置
 * \*.py 檔案位置，特別指名資料夾中的 Python 檔。
 
-
-## <span id='module_pitfall'>Module(\*.py) 使用陷阱</span>
-22
-___Shadow Effect___
-
-___by reference___
-
-___by value___
-
-
+* 前三項設定預載入的 modules 資訊可以經由 sys.path 查詢。
 
 
 ## <span id="module_envelop">Module 與封裝</span>
-24
+> Python 沒有強制資料隱藏機制，但可利用語法慣例，不自動匯入特定模組。  
+> 這邊介紹 <span style={{color: '#0044FF'}}> [__from\.\.\. import \* 語法__](#from_import_syntax) </span> (Implicit importing) 時 module 的匯入規則。  
+
+* \_\_init\_\_.py 中 [\_\_all\_\_](#using_package) 列表中的模組一律選取
+* 若未定義 \_\_all\_\_，則反向選取。只限制 [single underscore](../Python_Convention#variable_naming_rules) 成員不導入。
+* [\_\_all\_\_](#using_package) : 正向列舉
+* [single underscore](../Python_Convention#variable_naming_rules) : 反向排除
 
 ## <span id="using_package">Package 的使用</span>
+> 
+> Package 指的是放 Python 相關檔案的資料夾。  
+> 可簡單想成是存放 modules 與 packages 的資料夾。 
+> 且資料夾中預期(建議)會有 <span style={{color: '#0044FF'}}> __\_\_init\_\_.py__ </span> 檔案。  
+> __\_\_init\_\_.py__ 內容可為空，python3+ 中可省略(若考慮向下相容，建議可以保留此慣例)。  
+
+> Package 資料夾可以槽串，同樣預期每個資料夾中都該有 __\_\_init\_\_.py__ 檔案。  
+> 在 import 句子中使用時，須由 root package 依序寫清路徑全名(full path)。 
+
+__\_\_init\_\_.py__
+> \_\_init\_\_.py 內容空的，或是撰寫下列相關資訊。  
+
+> \_\_all\_\_: 是一個 array，所列的清單是 from m import * (implicitly)時允許被匯入的子模組清單，
+> 換言之，__implicitly import__ 時被列出的才能經由 import 匯入。是一種程式碼封裝技巧。  
+> 但仍需注意命名衝突與遮蔽問題，  
+> 遇到與 Local 變量(local defined var)重名時則不會匯入，改採用 local 變量。  
+
+> 此套件初始化時所需的準備工作(例如資料庫連線)，以利後續使用。
+ 
+> 註: \_\init\_\_.py 在首次匯入時會執行一次相關內容。  
+
+```python
+# __init__.py example
+
+__all__ = ["echo", "surround", "reverse"]
+```
 
 
-## import v\.s\. from import
-* 數值變數: by value / by reference 使用
-* 物件一律 by reference 
-* import 一律 by reference 
-* <span style={{color: '#0044FF'}}> __different of value__ </span>: 
-    * import => by reference
-    * from  => by value
+## ___ \_\_name\_\_ 與 \_\_main\_\_  ___
 
+> \_\_name\_\_ == '\_\_main\_\_'  
+> \_\_name\_\_ == 'module_name'
 
-## ___ \_\_main\_\_ ___
+> 當 module (\*.py) 被直接執行時(如經過命令列執行)，該 module 會變成主要執行緒，  
+> 此時，模組內建的 \_\_name\_\_ 變數會由預設的模組名稱改為 \_\_main\_\_ 字串。   
+> 
+> 而如果 module 是被引用(import)，那麼\_\_name\_\_ 會是模組名稱。  
+>
+> 因此部分的人在寫 __臨時測試碼__ 時會利用此一特性，  
+> 也就是說當 module 直接執行時才會呼叫測試碼。  
+> 不過，我本身倒是認為，測試碼應該另闢資料夾管理才是。  
 
+___ \_\_name\_\_ 範例___
+
+* 當執行的是 Exam.py (包含 __name__, __main__)
+
+```python
+print('Hello: This is Exam class')
+
+class Exam:
+    # Python 的型別(冒號後面)僅只是 [提示]。所以應該自行檢查。
+    def __init__(self, name: str, score: int, penalty: int):
+        if not isinstance(name, str):
+            raise TypeError('name should be str')
+        self.score = score
+        self.penalty = penalty
+        self.name = name
+
+    def win(self):
+        self.score += 1
+
+    def lose(self):
+        self.penalty += 1
+
+    def get_points(self):
+        return self.score - self.penalty
+
+    def display(self):
+        return self.name + "-" + str(self.get_points())
+
+if __name__ =='__main__':
+    print('Testers of Exam class')
+    exe1 = Exam("Tom", 80, 10)
+    exe2 = Exam("Jack", 95, 30)
+    exe3 = Exam("May", 60, 20)
+    exe1.win()
+    exe2.lose()
+
+    exams = [exe1.display(), exe2.display(), exe3.display()]
+    print(exams)
     
-## 雜七雜八注意事項
+# Hello: This is Exam class
+# Testers of Exam class
+# ['Tom-71', 'Jack-64', 'May-40']    
+```
+
+
+* run.py
+
+```python
+import Exam as ex
+
+print(type(ex))
+# <class 'module'>
+
+# console:
+# Hello: This is Exam class (這邊是載入時所執行)
+# <class 'module'>
+
+```
+
+
+* 當執行的是 Exam2.py (不包含 __name__, __main__)
+
+```python
+print('Hello: This is Exam class')
+
+class Exam:
+    # Python 的型別(冒號後面)僅只是 [提示]。所以應該自行檢查。
+    def __init__(self, name: str, score: int, penalty: int):
+        if not isinstance(name, str):
+            raise TypeError('name should be str')
+        self.score = score
+        self.penalty = penalty
+        self.name = name
+
+    def win(self):
+        self.score += 1
+
+    def lose(self):
+        self.penalty += 1
+
+    def get_points(self):
+        return self.score - self.penalty
+
+    def display(self):
+        return self.name + "-" + str(self.get_points())
+
+print('Testers of Exam class')
+exe1 = Exam("Tom", 80, 10)
+exe2 = Exam("Jack", 95, 30)
+exe3 = Exam("May", 60, 20)
+exe1.win()
+exe2.lose()
+
+exams = [exe1.display(), exe2.display(), exe3.display()]
+print(exams)
+```
+
+* run.py
+
+```python
+import Exam as ex2
+
+print(type(ex2))
+# <class 'module'>
+
+# console:
+# Hello: This is Exam class 
+# Testers of Exam class 
+# ['Tom-71', 'Jack-64', 'May-40'] (# 所有測試碼都會被執行)
+# <class 'module'>
+
+```
+    
+## <span id='module_pitfall'>Module(\*.py) 使用陷阱與注意事項</span>
+
+__雜七雜八注意事項__
 * module name 也是一種變量，所以須注意命名衝突
 * Python Env 在載入 libs 時會先執行一次
 * 以 import 指令載入的程式碼是 by reference 使用
 * 以 from import 指令載入的程式碼物件類的是 by reference 使用，純值類的則時 by value。
+* implicitly import 需注意是否發生成員遮蔽情形
+* <span style={{backgroundColor: '#ffd1b3'}}>forward reference</span>: 向前引用，Python interpreter 是依句子順序匯入與編譯。因此，無法使用後方定義變數，也無法理解後方匯入的模組。
+* 遞迴導入: 相互 import 的 modules 應避免使用，可能會造成死循環。

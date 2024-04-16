@@ -27,7 +27,7 @@ keywords: [Python,Convention]
 |__varName__|系統變數 system variables|
 | \_ | 變數佔位符(placeholder)<br/>interpreter 暫存最後 expression 內容用<br/>懶得取變數時使用 |
 
-### _Variable Naming Rules_ 說明
+### <span id='variable_naming_rules'>_Variable Naming Rules_ 說明</span>
 > 
 > class name 以大寫字母開頭(same as Java)  
 > module name (package name) 以小寫字母開頭(J)  
@@ -37,7 +37,7 @@ keywords: [Python,Convention]
 > 
 > \_x (單一底線變數: weak internal use indicator,隱含的 import 語法):  
 >> 告知這個變數或方法應該限制在 class 之內使用，  
->> 不應該備任意 import。  
+>> 不應該被任意 import。  
 >> 但需注意的是 <span style={{backgroundColor: '#ffd1b3'}}>single underscore 並非一種限制，只是告知</span>。    
 >
 > \_\_x (雙底線變數:類似私有變數)  
