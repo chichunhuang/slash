@@ -13,7 +13,7 @@ keywords: [Python,Convention]
 ## Python 變數命名慣例
 >
 > 與 Java 相同，變數需以底線、字母、數字命名。  
-> 同樣必可以數字起始。  
+> 同樣可以數字起始。  
 >
 
 ### _Variable Scope_
@@ -29,8 +29,9 @@ keywords: [Python,Convention]
 
 ### <span id='variable_naming_rules'>_Variable Naming Rules_ 說明</span>
 > 
-> class name 以大寫字母開頭(same as Java)  
+> class name 以大寫字母開頭(Camel Case, same as Java)  
 > module name (package name) 以小寫字母開頭(J)  
+> function name (lowercase with underscores)
 > 
 > 與 Java 不同處:  
 >> underscore _ (物件封裝) : 當不希望 caller 直接使用時的規則  

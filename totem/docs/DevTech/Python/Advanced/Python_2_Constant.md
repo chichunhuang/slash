@@ -89,6 +89,16 @@ const.PI = "another"
 
  ```
  
+_static method 來設計常數_
+
+```python
+
+class Math:
+    @staticmethod
+    def getPI():
+        return 3.14159
+```
+ 
  
 ## 其他
 * 關於上面 \_\_setattr\_\_ function 有看到部份的人以不同的方式撰寫 (Python3+)。
