@@ -68,35 +68,149 @@ print(c2.PI)  # 3.14
 
 
 ## <span id="Funs">Functions</span>
-> Class 結構下的 functionss 可分為:  
+> Class 結構下的 Methods 可分為:  
 > &nbsp;&nbsp;&nbsp;&nbsp; simple method : instance bound method/實體方法  
 > &nbsp;&nbsp;&nbsp;&nbsp; static method:  
 > &nbsp;&nbsp;&nbsp;&nbsp; class method: 繼承結構下使用  
 
 
 ## Simple Method 實體方法
-* 又稱為 instance bound method，實體方法  
+
+<span style={{backgroundColor: '#b3c4ff'}}>使用情境: 每個 Instance 處理各自行為時使用</span>
+
+* 使用時需先建立 instance，又稱為 instance bound method，實體方法  
 * 定義在 class 中，且第一個 argument 為 self 的方法
-* 使用時需先建立 instance。
 * 指經由 self (即 instance) 取資料的方法
 
+__Simple Method 範例__
+* 參考上方 calc.Circle.py 中的 methods
+
+
 ## Static Method 靜態方法
+
+<span style={{backgroundColor: '#b3c4ff'}}>使用情境: 創建工具套件時使用</span>
+
 * 需以 @staticmethod 為方法標註 
 * 類似 Java 中的靜態函數
-* 需經由 class name 來呼叫使用，且<span style={{backgroundColor: '#ffd1b3'}}>static method 也只能使用類別的 static variable</span>或傳入的 variables(無法使用 instance variables)。
+* 不需創建 instance 便可經由 class name 來呼叫使用，
+* 且<span style={{backgroundColor: '#ffd1b3'}}>static method 也只能使用類別的 static variable</span>或傳入的 variables(無法使用 instance variables)。
 * Python 允許同名變數遮蔽的情境，因此 __子類別可以覆寫父類別的 static method__ 
 
+__static method/variable example__
+
+cala.Math.py<br/>
+
+```python
+class Math:
+    PI = 3.14 # static variable
+
+    def __init__(self):
+        pass
+   
+    @staticmethod  #static method
+    def circle_area(radius):
+        return Math.PI * radius ** 2
+```
+
+run.py
+
+```python
+from calc.Math import Math
+
+print(Math.circle_area(10)) # static method
+
+print(Math.PI) # static variable
+```
+
 ## Class Method 類別方法
+
+<span style={{backgroundColor: '#b3c4ff'}}>使用情境: 繼承結構下，創建分支
+工具套件時使用</span>
+
 * 需以 @classmethod 為方法標註 
 * class method 與 static method 幾乎相同，但 <span style={{backgroundColor: '#ffd1b3'}}> class method 通常用在繼承結構</span>下。
 * class method 因為帶有 class type 資訊，所以可以取得 type 專屬的 static variable，或是不同繼承層級下的同名 static 變數。
+* class method 的第一個 argument cls，代表的是當前 <span style={{backgroundColor: '#ffd1b3'}}>動態</span> 的 type。
 * 注意重點: 
     * <span style={{backgroundColor: '#ffd1b3'}}>class method 通常用在繼承結構</span>
     * <span style={{backgroundColor: '#ffd1b3'}}>Python 允許繼承結構各自擁有同名變數</span>
     * 因此可以說 <span style={{backgroundColor: '#ffd1b3'}}> class method 實現了繼承結構下，辨別同名 __靜態__ 變數</span> 的可能性
 
+__class method example:gravitational constant__<br/>
 
-ex : gravitational constant
+galaxy.planet.py <span style={{backgroundColor: '#ecd9c6'}}>Java Style: 子類別覆寫父類別方法內容</span>
 
-earth 9.81
-moon 1.62
+```python
+
+class Planet:
+    GRAVITY_CONSTANT = None
+
+    def __init__(self, name='Not Define'):
+        self.name = name
+
+    @classmethod
+    def gravity(cls, mass=0.0) -> float:
+        return None
+
+class Earth(Planet):
+    GRAVITY_CONSTANT = 9.81
+
+    @classmethod
+    def gravity(cls, mass: float):
+        return mass * cls.GRAVITY_CONSTANT
+
+class Moon(Planet):
+    GRAVITY_CONSTANT = 1.62
+
+    @classmethod
+    def gravity(cls, mass: float):
+        return mass * cls.GRAVITY_CONSTANT
+
+    # def unresolved_reference (self):
+    #     return GRAVITY_CONSTANT # unresolved_reference, 必須指名類別 Moon.GRAVITY_CONSTANT
+
+
+print(Planet.gravity())  # None
+print(Earth.gravity(100))  # 981.0, 以自己 Type (cls) 的引力常數計算重力
+print(Moon.gravity(100))  # 162.0, 以自己 Type (cls) 的引力常數計算重力
+
+print(Planet.GRAVITY_CONSTANT)  # None
+print(Earth.GRAVITY_CONSTANT)  # 9.81
+print(Moon.GRAVITY_CONSTANT)  # 1.62
+```
+
+__class method example 2:gravitational constant__<br/>
+* planet2.py 範例等同於上方 planet1.py，注意 <span style={{backgroundColor: '#ffd1b3'}}>這邊允許父類別存與子類別的靜態變數</span>。
+* class method 定義在父類別身上，而父類別所需的子類別 __靜態成員則必須事先定義__。
+
+galaxy.planet2.py <span style={{backgroundColor: '#ecd9c6'}}>Pythonic Style: 父類別可存取子類別成員內容</span>
+
+```python
+class Planet:
+    GRAVITY_CONSTANT = None
+
+    def __init__(self, name='Not Define'):
+        self.name = name
+
+    @classmethod
+    def gravity(cls, mass=None) -> float:
+        if mass is None:
+            return None
+        return mass * cls.GRAVITY_CONSTANT
+        # 所有子類別必須有 GRAVITY_CONSTANT 這個靜態變數
+
+class Earth(Planet):
+    GRAVITY_CONSTANT = 9.81
+
+class Moon(Planet):
+    GRAVITY_CONSTANT = 1.62
+```
+
+
+## Summary
+
+| Method Types  |  Syntax  | Argument  |
+|----------|------------------------|-----------------------|
+| Instance Method | &nbsp;&nbsp; | self |
+| Static Method | @staticmethod | &nbsp;&nbsp; |
+| Class Method | @classmethod | cls |
