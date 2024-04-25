@@ -13,7 +13,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 在 Python Environment 中似乎也沒有 Java heap 的結構。
 
 
-## Python Class 結構
+## <span id="cls_structure">Python Class 結構</span>
 
 <pre>
 *.py<br/>
@@ -23,7 +23,38 @@ Python Script --> Class Object --> Instance Object <br/>
 </pre>
 
 
-## 命名慣例:  
+## <span id="cls_constructor">建構子</span>
+> 
+> Python 中 Class 建構子為 \_\_init\_\_ 函數  
+> 另外，因為 Python 的函數(包含建構子)都支援 varArgs, kwArgs，
+> Python 建構子本身即具有多載特性。    
+> 因此，Python 沒有如 Java 般以 this 呼叫 overloaded 建構子的語法。 
+
+* 參考 [繼承結構下的建構子: super](./Python_4_Inheritance_Basic#inheritance_constructor)
+* 參考 [Factory Method: 使用 Class Method 語法](./Python_4_Class_Members#cls_method_Factory)
+
+```python
+class Profile:
+    def __init__(self, name, gender, *args, **kwargs):
+        self.name = name
+        self.gender = gender
+        self.infoList = args
+        self.infoMap = kwargs
+
+# Fundamental constructor
+p2 = Profile('Totem', 'Male')       
+
+# Chimera Style
+p = Profile('Winnie', 'Female', 
+            'Shopping', 'Reading', # varArgs
+            height='160', addr='TW', tel='0955-555-555') #kwargs
+
+print(p.name) # Winnie
+print(p.infoList) # ('Shopping', 'Reading')
+print(p.infoMap) # {'height': '160', 'addr': 'TW', 'tel': '0955-555-555'}
+```
+
+## <span id="cls_nameing_rules">命名慣例:</span>
 
 >
 > __package name__: lowercase  
@@ -74,7 +105,7 @@ print(dog.getGender())
 ```
 
 
-## 方法與屬性
+## <span id="cls_members">方法與屬性</span>
 
 > Python 
 > 允許 __instance object__ <span style={{backgroundColor: '#ffd1b3'}}>在 class 定義區塊外</span> 自行添加新的屬性與函數。  
@@ -107,7 +138,7 @@ print(dog.getGender())
 * 反之當 Instance Object 事後追加成員時，Class Object 因無法得知 Instance reference，所以無從得知。
 * 但當 Class / Instance Object 都追加同名成員時，因為 Shadow effect 造成的影響。Instance 換改用私有成員。
 
-## ___Variable 追加___
+## <span id="cls_anonymous">___Variable 追加___</span>
 
 ```python
 from biology.animal import Animal

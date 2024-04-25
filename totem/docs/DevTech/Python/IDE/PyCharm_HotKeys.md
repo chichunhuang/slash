@@ -23,5 +23,5 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > Ctrl + Alt + o : Optimize imports
 > Ctrl + Alt + 左右方向鍵 : 前(次)一個游標所在地
 > Ctrl + Shift + Backspace : 前一個編輯點
-
+> Ctrl+ W : incremental selection
 

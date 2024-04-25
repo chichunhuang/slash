@@ -74,7 +74,7 @@ print(c2.PI)  # 3.14
 > &nbsp;&nbsp;&nbsp;&nbsp; class method: 繼承結構下使用  
 
 
-## Simple Method 實體方法
+## <span id="Funs_Instance">Simple Method 實體方法</span>
 
 <span style={{backgroundColor: '#b3c4ff'}}>使用情境: 每個 Instance 處理各自行為時使用</span>
 
@@ -86,7 +86,7 @@ __Simple Method 範例__
 * 參考上方 calc.Circle.py 中的 methods
 
 
-## Static Method 靜態方法
+## <span id="Funs_Static">Static Method 靜態方法</span>
 
 <span style={{backgroundColor: '#b3c4ff'}}>使用情境: 創建工具套件時使用</span>
 
@@ -122,7 +122,7 @@ print(Math.circle_area(10)) # static method
 print(Math.PI) # static variable
 ```
 
-## Class Method 類別方法
+## <span id="Funs_Class">Class Method 類別方法</span>
 
 <span style={{backgroundColor: '#b3c4ff'}}>使用情境: 繼承結構下，創建分支
 工具套件時使用</span>
@@ -130,11 +130,14 @@ print(Math.PI) # static variable
 * 需以 @classmethod 為方法標註 
 * class method 與 static method 幾乎相同，但 <span style={{backgroundColor: '#ffd1b3'}}> class method 通常用在繼承結構</span>下。
 * class method 因為帶有 class type 資訊，所以可以取得 type 專屬的 static variable，或是不同繼承層級下的同名 static 變數。
-* class method 的第一個 argument cls，代表的是當前 <span style={{backgroundColor: '#ffd1b3'}}>動態</span> 的 type。
+* class method 的 __第一個 argument cls__ ，代表的是當前 <span style={{backgroundColor: '#ffd1b3'}}>動態</span> 的 type(子類別的 Type)。
 * 注意重點: 
     * <span style={{backgroundColor: '#ffd1b3'}}>class method 通常用在繼承結構</span>
     * <span style={{backgroundColor: '#ffd1b3'}}>Python 允許繼承結構各自擁有同名變數</span>
     * 因此可以說 <span style={{backgroundColor: '#ffd1b3'}}> class method 實現了繼承結構下，辨別同名 __靜態__ 變數</span> 的可能性
+* 另外，[class method 也可以用來設計 Factory Method](#cls_method_Factory)    
+    * class method 除了可以藉由 cls 來取得實例的方法與屬性外，也可以使用 cls 來呼叫建構子。
+    * 此時 cls 等同於當下的 ClassName，也可想成作用類似 Java 中的 this()。
 
 __class method example:gravitational constant__<br/>
 
@@ -205,7 +208,55 @@ class Earth(Planet):
 class Moon(Planet):
     GRAVITY_CONSTANT = 1.62
 ```
+__class method example 3: Factory Method__ <span id="cls_method_Factory">&nbsp;</span> <br/>
 
+> 在 Python 中並沒有 Multiple Constructors 的語法，  
+> 但 Python 的[建構子本身提供 VarArgs 與 KwArgs](./Python_4_Class#cls_constructor) 的擴充功能，可以來補足這個問題。  
+> 然而 Multiple Constructors 雖可達到以不同方式建構物件的目的，  
+> 但卻無法表達每個建構子所代表的商業意義，因此 Design Pattern 中有了 Factory Method Pattern。  
+> Python 中 Factory Method Pattern 可以經由 @classmethod 的特性來實作。  
+> 請看下面範例:  
+
+* 注意: 這邊使用 @classmethod 中的 type 來呼叫建構子
+    * 範例中的 User 是以 ClassName 來建構 instance
+    * PM 是以 cls argument 來建構 instance
+
+role.role.py
+
+```python
+
+class Role:
+    def __init__(self, is_pm=False, is_pg=False, is_user=False):
+        self.isPM = is_pm
+        self.isPG = is_pg
+        self.isUser = is_user
+
+    # 以 cls 建構 instance
+    @classmethod
+    def PM(cls):
+        return cls(True, False, False)
+
+    @classmethod
+    def PG(cls):
+        return cls(False, True, False)
+
+    # 也可以用 ClassName 建構 instance
+    @classmethod
+    def User(cls):
+        return Role(False, False, True)
+
+# 使用工廠方法
+manager = Role.PM()
+programer = Role.PG()
+user = Role.User()
+
+print(manager.isPM)  # true
+print(manager.isPG)  # false
+
+print(user.isPM)  # false
+print(user.isPG)  # false
+print(user.isUser)  # false
+```
 
 ## Summary
 
