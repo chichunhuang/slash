@@ -281,7 +281,7 @@ tool = SwissKnife()
 ## <span id="inheritance_super">繼承下的 super() 功能</span>
 * 用在單一繼承的情境下。  
 * 可用來呼叫 
-    * [父類別建構子](#inheritance_constructor_single) 在上方範例種已介紹。 
+    * [父類別建構子](#inheritance_constructor_single) 在上方範例中已介紹。 
     * 父類別方法函數: ParentName.methodName(self)
 * 單用 Super() 語法時，若為 Multiple Inheritance，會因不知道確切指向哪個父類別而拋出錯誤。
 
@@ -331,4 +331,56 @@ tool.do()
 # Screwdriver  Drilling
 
 ```
-    
+
+## 查詢繼承與型別相關屬性
+* 以上方 SwissKnife 為例:
+
+__由 instance/class 來反查繼承相關屬性__
+* 基本上 instance 可經由內建變數 \_\_class\_\_ 反查得到 instance 的 class type。繼承相關屬性便可由 Type 來取得。
+
+|    Instance Attributes      |      Description        |
+|----------|------------------------|
+|instance.\_\_class\_\_|回傳 class|
+|instance.\_\_class\_\_.\_\_name\_\_|回傳 class name |
+|instance.\_\_class\_\_.\_\_bases\_\_|回傳 class 的上游繼承結構|
+|instance.\_\_class\_\_.\_\_base\_\_|回傳 class 的上一層父類別 |
+|instance.\_\_class\_\_.\_\_mro\_\_|回傳 class 的繼承查找/函數查找路徑|
+|instance.\_\_class\_\_.mro()|等同於 instance.\_\_class\_\_.\_\_mro\_\_|
+|instance.\_\_dict\_\_|列出 instance 的所有 field/values|
+|instance.\_\_module\_\_| 顯示 module 資訊 |
+
+```python
+tool = SwissKnife()
+tool.do()
+
+print(tool.__class__) # <class '__main__.SwissKnife'>
+print(tool.__class__.__name__) # SwissKnife
+print(tool.__class__.__bases__) # (<class '__main__.Screwdriver'>, <class '__main__.Scissor'>, <class '__main__.Knife'>)
+print(tool.__class__.__base__) # <class '__main__.Screwdriver'>
+print(tool.__class__.__mro__) # (<class '__main__.SwissKnife'>, <class '__main__.Screwdriver'>, <class '__main__.Scissor'>, <class '__main__.Knife'>, <class 'object'>)
+
+print(SwissKnife.mro()) # [<class '__main__.SwissKnife'>, <class '__main__.Screwdriver'>, <class '__main__.Scissor'>, <class '__main__.Knife'>, <class 'object'>]
+print(Scissor.mro()) # [<class '__main__.Scissor'>, <class 'object'>]
+print(SwissKnife.__dict__) # {'__module__': '__main__', '__init__': <function SwissKnife.__init__ at 0x0000014FCF402160>, 'do': <function SwissKnife.do at 0x0000014FCF4021F0>, '__doc__': None}
+
+```
+
+__繼承結構與實例類別檢驗函數__
+
+* isinstance(instance, type_or_tuple): 檢驗 instance 的  class
+* issubclass(Child, Parent_or_tuple): 檢驗繼承關係
+    * 當給定的 Types 是 tuple 時，檢查的結果是任一符合變回傳 True。(if any match)
+
+```python
+
+swissKnife = SwissKnife()
+
+print( isinstance(swissKnife, SwissKnife)) # True
+print( isinstance(swissKnife, Scissor)) # True
+print( isinstance(swissKnife, (Scissor, Person))) # True, if any match
+
+print(issubclass(SwissKnife, Role)) # False
+print(issubclass(SwissKnife, (Role,Scissor))) # True, if any match
+
+```
+
