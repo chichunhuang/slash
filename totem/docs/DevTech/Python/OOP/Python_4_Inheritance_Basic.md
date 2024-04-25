@@ -185,16 +185,16 @@ print(cat.voice())  # Mew~
 > 需注意的是，Python 允許繼承關係間同名變數存在，而 Method Name 也是一種變數名，    
 > 依據 MRO 順序，最接近實例(子類別)的同名方法為顯性。  
 
-* 參考 [Python 打包與解包](./Advanced/Python_2_unpack_lisit_map)
+* 參考 [Python 打包與解包](../Advanced/Python_2_unpack_lisit_map)
 
 
 ## <span id="inheritance_constructor">繼承結構下 Python 建構子 </span>
 * 參考其他 instance 建構方式: 
-    * [Python 基本建構子: varArgs 與 kwArgs 的擴充功能來達到 overloading ](../Python_4_Class#cls_constructor)
+    * [Python 基本建構子: varArgs 與 kwArgs 的擴充功能來達到 overloading ](./Python_4_Class#cls_constructor)
     * [Factory Method: 使用 Class Method 語法來建構物件](./Python_4_Class_Members#cls_method_Factory)
     * 呼叫父類別建構子
 
-> [Variable Argument 與 key-word Argument](../Python_4_Class#cls_constructor) 的特性不多說，本身即是一種 Overloading 變形。  
+> [Variable Argument 與 key-word Argument](./Python_4_Class#cls_constructor) 的特性不多說，本身即是一種 Overloading 變形。  
 >
 > Python 語法中可以使用 @classmethod 特性，在類別方法中經由 cls argument 來呼叫 \_\_init\_\_() 建構子，  
 > 這個方法類似 Java 語言中的 this() 來呼叫多載的建構子。  
