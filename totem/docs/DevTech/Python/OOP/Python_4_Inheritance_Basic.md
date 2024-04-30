@@ -167,7 +167,7 @@ class Cat(Animal):
     def voice(self):
         return 'Mew~'
 
-animal = Animal()5
+animal = Animal()
 dog = Dog()
 cat = Cat()
 
@@ -384,3 +384,42 @@ print(issubclass(SwissKnife, (Role,Scissor))) # True, if any match
 
 ```
 
+## Composite Pattern 複合模式 <span id='Composite_Pattern'>&nbsp;</span>
+> 若單純的看功能面的話，繼承主要是讓子類別具有父類的能力，而子類卻不需增加額外的程式開發。  
+> 繼承之外 Composite Pattern(複合模式) 也具有相同能力，所以在這邊也介紹一下。  
+> 原則上便是類別槽串，外層類別具有內層類別功能。就像是細胞與包器間的關係。    
+
+```python
+
+class Screwdriver:
+    def __init__(self):
+        pass
+
+    def drill(self, message):
+        print('Screwdriver drilling: ', message)
+
+class Knife:
+    def __init__(self):
+        pass
+
+    def cut(self, message):
+        print('Knife cutting: ', message)
+
+class SwissKnife():
+    def __init__(self):
+        self.knife = Knife()  # Composite
+        self.screwdriver = Screwdriver()
+
+    def cut(self, message): # Delegation 
+        self.knife.cut(message)
+        print('SwissKnife cutting: ', message)
+
+    def drill(self, message):
+        self.screwdriver.drill(message)
+        print('SwissKnife drilling: ', message)
+
+    def cut_then_drill(self, message): 
+        self.knife.cut(message)
+        self.screwdriver.drill(message)
+        print('SwissKnife drilling: ', message)
+```

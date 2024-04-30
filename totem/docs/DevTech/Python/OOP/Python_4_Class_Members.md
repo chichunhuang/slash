@@ -258,6 +258,9 @@ print(user.isPG)  # false
 print(user.isUser)  # false
 ```
 
+## Factory Method 工廠方法
+* 參考 [Factory Method: 使用 Class Method 語法](./Python_4_Class_Members#cls_method_Factory)
+
 ## Summary
 
 | Method Types  |  Syntax  | Argument  |

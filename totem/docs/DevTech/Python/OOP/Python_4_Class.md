@@ -165,7 +165,7 @@ print(dog._action)  # shadow effect, 變數遮蔽, 自作孽該死, 注意命名
 ```
 
 
-## ___Instance Object 追加 Method___
+## ___Instance Object 追加 Method___ <span id='instance-object-append-method'>&nbsp;</span>
 > 以 Java 作比喻，我的理解是:  
 > Instance Object 類似 Class 的子類別，當想生出一個 anonymous 子類並擴充功能時使用。  
 
