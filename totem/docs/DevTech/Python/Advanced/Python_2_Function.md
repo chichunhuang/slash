@@ -9,7 +9,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * 參考
     * [Python Abstract Method 設計方法](../OOP/Python_4_AbstractMethod)
     * [Instance Object 追加 Method 設計方法  ](../OOP/Python_4_Class#instance-object-append-method)
-    * [Factory Method: 使用 Class Method 語法](./Python_4_Class_Members#cls_method_Factory)
+    * [Factory Method: 使用 Class Method 語法](../OOP/Python_4_Class_Members#cls_method_Factory)
 
 
 ## 函數陷阱  
