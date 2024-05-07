@@ -23,3 +23,10 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * [Override Methods](./Python_4_Inheritance_Basic#Override_Methods)
 * [Overload Methods](./Python_4_Inheritance_Basic#Overload_Methods)
 * [Factory Methods](./Python_4_Class_Members#cls_method_Factory)
+
+* [Abstract Methods](./Python_4_AbstractMethod)
+
+* [Decorator](../Advanced/Python_2_Decorator)
+
+
+
