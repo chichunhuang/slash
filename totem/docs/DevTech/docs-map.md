@@ -63,6 +63,7 @@ sidebar_position: 1
 * [Send Mail by Python smtplib - Send Mail by Python smtplib](/docs/DevTech/Python/Send_Eail_By_Python)
 * [Set 資料結構 - Python Set 資料結構](/docs/DevTech/Python/Python_Typing_Set)
 ### Advanced
+* [Python Decorator - Python Decorator](/docs/DevTech/Python/Advanced/Python_2_Decorator)
 * [Python Generator - Python Generator - lazy loop](/docs/DevTech/Python/Advanced/Python_2_Generator)
 * [Python Lambda 匿名函式 - Python Anonymous Function](/docs/DevTech/Python/Advanced/Python_2_Labmda)
 * [Python Package and Module - Python Package and Module](/docs/DevTech/Python/Advanced/Python_2_Package_Module)
@@ -80,9 +81,14 @@ sidebar_position: 1
 * [PyCharm 中自訂 Snippet Templates - PyCharm 中自訂 Live Templates](/docs/DevTech/Python/IDE/PyCharm_Snippet_Template)
 ### OOP
 * [Python OOP Site Map - Python OOP Site Map](/docs/DevTech/Python/OOP/Python_4_Site)
+* [Python 抽象方法 - Python Abstract Method](/docs/DevTech/Python/OOP/Python_4_AbstractMethod)
 * [Python 物件介紹 - Python Class 介紹](/docs/DevTech/Python/OOP/Python_4_Class)
 * [Python 繼承介紹 - Python Inheritance](/docs/DevTech/Python/OOP/Python_4_Inheritance_Basic)
+* [Python 與 OOP - Python 與物件導向](/docs/DevTech/Python/OOP/Python_4_OOP)
 * [Python 類別成員 - Python 類別成員 Vars and Funs](/docs/DevTech/Python/OOP/Python_4_Class_Members)
+### 1Start
+* [Rust Hello World! - Rust Hello World!](/docs/DevTech/Rust/1Start/Rust_1_HelloWorld)
+* [Rust 安裝 - Rust 安裝](/docs/DevTech/Rust/1Start/Rust_1_Installation)
 ## Tomcat
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
