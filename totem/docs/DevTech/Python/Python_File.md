@@ -39,7 +39,7 @@ with open(r'D:\template_utf8.txt', 'r', encoding='UTF-8') as file:
 
 
 
-## 檔案關閉
+## 檔案關閉 <span id="Closable_FileStream">&nbsp;</span>
 
 * 手動
     * 手動關閉時自行呼叫 f.close()
@@ -142,12 +142,32 @@ finally:
 
 ```
 
-## with as: 定義一個__臨時的 codeblock__
+## with as: 定義一個__臨時的 codeblock__ <span id="with_as_codeblock">&nbsp;</span>
 
 * with as 用在檔案開啟的__暫時__資料流區塊範例
 * 注意: 這邊需要一個冒號 : 做 Multi-line Block 範圍限定 
+* 臨時區塊使用情境(臨時與收尾動作)
+    * 本章節出現多次的 [Closable File Stream](#Closable_FileStream)
+    * [例外處理: with as context management](./Advanced/Python_2_Exception_Error#with_as_codeblock)
+    * [臨時的精確度限制區塊](#accurracy)
+    * Web 的 socket connection 處理
+    * DAO 的 DataSource 的 connection/disconnection 處理
+
+
+__with as syntax__ <br/>
+* expression 得到的物件又被稱為: 環境管理器(context manager)、或環境管理協議(context management protocol)
+* open function 所得到的 file 物件，為可自動關閉 IO 的 file Object 稱為 context manager。此時的物件非一般的 file。
 
 ```python
+with <expression> as <variable_alias>:
+    doAction()
+```
+
+
+__Closable File Stream Example__ <br/>
+
+```python
+    
 with open(file_path) as file_alias:
     # do....
 
@@ -166,7 +186,7 @@ f.close()
 ```
 
 
-* with as 用在定義一個__臨時__的精確度限制區塊範例
+__with as 用在定義一個__臨時__的精確度限制區塊範例__ <span id="accurracy">&nbsp;</span><br/>
 
 ```python
 import decimal
