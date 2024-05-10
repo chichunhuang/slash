@@ -11,7 +11,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
     * 不知為何要額為定義 immutable list?
     
 * List: 中括號, iterable  
-   * <span style={{color: '#0044FF'}}> __注意: Python list 操作中有些是 in-plce(直接套用到既有物件)__ </span>，沒回傳值直接生效，可想成類似 Java 中的 by reference 操作。   
+   * __ <span style={{color: '#0044FF'}}>注意: Python list 操作中有些是 in-plce(直接套用到既有物件)</span>__ ，沒回傳值直接生效，可想成類似 Java 中的 by reference 操作。   
    * l.slice[0:-1] # 與 String slicing 操作相同  
    * l.append(e)  
    * l.pop(index) : 取出並移除  
@@ -113,7 +113,7 @@ print( f"I\'m {name}, I\'m {age}-yaar-old.")
 ```    
     
     
-* Numeric: [Python 數值型別] [Link](./Python_Typing_Numeric)
+* Numeric: [Python 數值型別](./Python_Typing_Numeric)
     * Integer
     * float ponit
     * complex

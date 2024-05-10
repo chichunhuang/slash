@@ -40,6 +40,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateTime: false,// not works, show wrong date
+          
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //editUrl:
@@ -47,6 +49,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //editUrl:
@@ -72,7 +75,7 @@ const config = {
       navbar: {
         title: 'Totem\'s',
         logo: {
-          alt: 'Site Logo of TOtem\'s',
+          alt: 'Site Logo of Totem\'s',
           src: 'img/70_70.jpg',
         },
 		
@@ -81,8 +84,8 @@ const config = {
 		
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'docSidebar', // 在 docs folder下的文章 
+            sidebarId: 'totem_sidebar', //ref sidebar.js
             position: 'left',
             label: '程式技術文章',
           },
