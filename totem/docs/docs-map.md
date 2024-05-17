@@ -34,13 +34,6 @@ sidebar_position: 1
 * [PostgreSQL Format JSONB Object - PostgreSQL Format JSONB Object](/docs/DevTech/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
 * [PostgreSQL Update JSONB Column - 更改 PostgreSQL JSONB 欄位資料值](/docs/DevTech/PostgreSQL/JSONB/PostgreSQL_Update_JSONB_Column)
 * [PostgreSQL find value by Attr from JSONB - PostgreSQL find value from JSONB column](/docs/DevTech/PostgreSQL/JSONB/Postgresql_find_value_by_Attr_of_JSONB_column)
-##### tmp
-* [PosrgreSQL #> #>> 運算子使用方式 - PosrgreSQL JSON Sharp-Single-Arrow Sharp-Double-Arrow Operators](/docs/DevTech/PostgreSQL/JSONB/tmp/PosrgreSQL_JSON_SharpArrow_Operator)
-* [PosrgreSQL ->> #>> 運算子差異 - PosrgreSQL JSON Single-Arrow and Sharp-Double-Arrow Operators](/docs/DevTech/PostgreSQL/JSONB/tmp/PosrgreSQL_JSON_DoubleArrow_SharpDoubleArrow)
-#### SQL
-* [Insert Into v.s. Select Into - Insert-Into 與 Select-Into 使用上差異](/docs/DevTech/PostgreSQL/SQL/Insert_Into_vs_Select_Into)
-* [Insert from Select - Insert from select result](/docs/DevTech/PostgreSQL/SQL/Insert_From_Selection_Values)
-* [Using subqueries outside of WHERE - 在 sql from 中使用子查詢](/docs/DevTech/PostgreSQL/SQL/Using_subqueries_outside_of_WHERE)
 ### Python
 * [Pickle 序列化與反序列化 - Python 物件序列化與反序列化](/docs/DevTech/Python/Python_module_pickle)
 * [Python Comprehension - 迴圈與lambda的結合](/docs/DevTech/Python/Python_Comprehension)
@@ -53,13 +46,13 @@ sidebar_position: 1
 * [Python 布林值 - Python Boolen](/docs/DevTech/Python/Python_Typing_Boolean)
 * [Python 快速回憶 - Python 學習所需基本操作](/docs/DevTech/Python/Python_Basic)
 * [Python 慣例 - Python 變數命名慣例](/docs/DevTech/Python/Python_Convention)
+* [Python 排序三兩事 - Python Sorting](/docs/DevTech/Python/Python_Sorting)
 * [Python 數值型別 - Python 數值型別](/docs/DevTech/Python/Python_Typing_Numeric)
 * [Python 格式化字串 - Python String Formatting](/docs/DevTech/Python/Python_Typing_StringFormatting)
 * [Python 檔案操作 - Python 中操作 File 相關](/docs/DevTech/Python/Python_File)
 * [Python 變數指派 - Python Variable Assignment](/docs/DevTech/Python/Python_Convention_Assignment)
 * [Python 迴圈與條件 - Python Loop and Condition](/docs/DevTech/Python/Python_Loop_Condition)
 * [Python 雜七雜八的工具 - Python Utils](/docs/DevTech/Python/Python_Utils)
-* [Python-Sorting by pandas - Python - Sorting and Parsing CSV](/docs/DevTech/Python/Sorting_by_pandas_Python)
 * [Send Mail by Python smtplib - Send Mail by Python smtplib](/docs/DevTech/Python/Send_Eail_By_Python)
 * [Set 資料結構 - Python Set 資料結構](/docs/DevTech/Python/Python_Typing_Set)
 #### Advanced
@@ -67,6 +60,7 @@ sidebar_position: 1
 * [Python Generator - Python Generator - lazy loop](/docs/DevTech/Python/Advanced/Python_2_Generator)
 * [Python Lambda 匿名函式 - Python Anonymous Function](/docs/DevTech/Python/Advanced/Python_2_Labmda)
 * [Python Package and Module - Python Package and Module](/docs/DevTech/Python/Advanced/Python_2_Package_Module)
+* [Python 例外與錯誤 - Python Exception and Error](/docs/DevTech/Python/Advanced/Python_2_Exception_Error)
 * [Python 函數 - Python 函數介紹](/docs/DevTech/Python/Advanced/Python_2_Function)
 * [Python 常數 - Python 常數設計方法](/docs/DevTech/Python/Advanced/Python_2_Constant)
 * [Python 打包與解包 - Python Packing and Unpacking](/docs/DevTech/Python/Advanced/Python_2_unpack_lisit_map)
@@ -79,6 +73,9 @@ sidebar_position: 1
 * [PyCharm 中的 Optimize Imports - PyCharm 中的模組匯入整理](/docs/DevTech/Python/IDE/PyCharm_Optimize_Import)
 * [PyCharm 中的快速鍵 - PyCharm 中的快速鍵](/docs/DevTech/Python/IDE/PyCharm_HotKeys)
 * [PyCharm 中自訂 Snippet Templates - PyCharm 中自訂 Live Templates](/docs/DevTech/Python/IDE/PyCharm_Snippet_Template)
+#### Misc
+* [Python 日期與時間 - Python Date and Time](/docs/DevTech/Python/Misc/Python_3_Time)
+* [Python-Sorting by pandas - Python - Sorting and Parsing CSV](/docs/DevTech/Python/Misc/Sorting_by_pandas_Python)
 #### OOP
 * [Python OOP Site Map - Python OOP Site Map](/docs/DevTech/Python/OOP/Python_4_Site)
 * [Python 抽象方法 - Python Abstract Method](/docs/DevTech/Python/OOP/Python_4_AbstractMethod)
@@ -89,6 +86,10 @@ sidebar_position: 1
 #### 1Start
 * [Rust Hello World! - Rust Hello World!](/docs/DevTech/Rust/1Start/Rust_1_HelloWorld)
 * [Rust 安裝 - Rust 安裝](/docs/DevTech/Rust/1Start/Rust_1_Installation)
+### SQL
+* [Insert Into v.s. Select Into - Insert-Into 與 Select-Into 使用上差異](/docs/DevTech/SQL/Insert_Into_vs_Select_Into)
+* [Insert from Select - Insert from select result](/docs/DevTech/SQL/Insert_From_Selection_Values)
+* [Using subqueries outside of WHERE - 在 sql from 中使用子查詢](/docs/DevTech/SQL/Using_subqueries_outside_of_WHERE)
 ### Tomcat
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)

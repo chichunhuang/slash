@@ -59,7 +59,7 @@ print(basic_dict2)
       />
 <br/>      
 
-      
+### Dict 建構: dict\(\)
 * 懷疑人生的 dict function 建構法: 多個 __overloaded dict()__
 
 _equal style，比較容易混亂_ ，我傾向忘了他
@@ -77,6 +77,7 @@ dict_equale = dict(k=1, k2=2)
 
 <br/>
 
+### Dict 建構: dict\(\) with tuple
 _tuple2 list style1，直接傳入 tuple2 的 sequence_ 
 
 > dict function 接受 tuple2 sequence，所以衍生出後續其他變形
@@ -92,6 +93,7 @@ dict_tuples = dict([('key1', 'v1'), ('key2', 'v2')]) # 同於上方範例
 
 <br/>
 
+### Dict 建構: dict\(\) with dict_items
 _tuple2 list style2，變形A: <class 'dict_items'> _
 
 > tuple list style，直接傳入 tuple2 的 sequence。  
@@ -109,6 +111,7 @@ dict_unpack = dict(basic_dict2.items())
       />
 <br/>
 
+### Dict 建構: zip\(\)
 _tuple2 list style3，變形B: zip fucntion _
 
 > zip style，zip 方式也是 tuple2 sequence 的變形。  
@@ -132,6 +135,7 @@ print(dict_zip)
 
 <br/>
 
+### Dict 建構: 以 dict.fromkeys\(\) 給予預設值
 _dict_fromKeys style 建立有預設值的 dict_
 
 > 這邊是使用 class dict 的 fromkeys 類別方法  
@@ -146,7 +150,70 @@ dict_fromKeys = dict.fromkeys(('k1','k2','k3','k4'), deafult_value)
       showLineNumbers='true'
       />
 
+### Dict 建構: 以 defaultdict 給予預設值
+> 通常建立 dict 時需要先提供 key/value pairs，如上方所有建立 dict 的範例中顯示。  
+> 部分時候，若單只是想建立一個 dict 的空集合，等到需要時再給予資料。  
+> 此時就可以使用 defaultdict，先定義 dict 空殼，  
+> 並限制 value 的型別，帶需要時再逐一餵值。 
 
+> 使用情境:   
+>> 產生一個有預設值的 value container  
+>> 資料分群(類似 Google collection 下的 Multimap)  
+
+_Syntax of defaultdict_
+* value_type 可以是內建資料型別如 int/float/list/set/lambda... 等，也可以是自訂型別。
+
+```python
+from collections import defaultdict
+
+instance_var = defaultdict(value_type)
+```
+
+_defaultdict examples_
+
+<CodeBlock text={`  
+from collections import defaultdict
+scores = defaultdict(int)
+print(scores) # defaultdict(<class 'int'>, {})
+print(scores.items()) # dict_items([])
+scores['Totem'] # 此處已據 type 設定給予預設值: 0
+scores['Winnie'] = 90
+print(scores.items()) # dict_items([('Totem', 0), ('Winnie', 90)])
+    `}
+      language='python'
+      showLineNumbers='true'
+      />
+
+      
+_自訂預設型別_
+
+```python
+class ExamScore:
+    def __init__(self, test='midterm exam', score='60'):
+        self.test = test
+        self.score = score
+
+    def __repr__(self):
+        return '%s=%s' % (self.test, self.score)
+
+exams = defaultdict(ExamScore)
+exams['Totem'] = ExamScore('final exam', '80')
+exams['Insect'] # 給予預設的 ExamScore
+print(exams)
+# defaultdict(<class '__main__.ExamScore'>, {'Totem': final exam=80, 'Insect': midterm exam=60})        
+```
+
+_資料分群_
+
+```python
+books = [('Totem', 'Java'), ('Maggot', 'Entomology'), ('Totem', 'Python')]
+auth_book = defaultdict(list) # 以 list 來收相同 Author 的 books。
+for author, book in books:
+    auth_book[author].append(book)
+
+print(auth_book.items())
+# dict_items([('Totem', ['Java', 'Python']), ('Maggot', ['Entomology'])])
+```
 
 ## Python Dict 操作
 * dict 取 value
@@ -154,8 +221,6 @@ dict_fromKeys = dict.fromkeys(('k1','k2','k3','k4'), deafult_value)
 * dict 取全部 keys
 * dict 取 items, <class 'dict_items'> : python 的特殊功能，取出 dict 中的 pairs。  
  
-
-
 <CodeBlock text={`                                                
 #                                                                               
 map1 = dict(zip(('a','b','c'), ('A','B','C')))                                   

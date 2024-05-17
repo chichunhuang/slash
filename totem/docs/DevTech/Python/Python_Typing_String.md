@@ -307,13 +307,14 @@ print(chr(97)) # a
 ```
 
 
-## eval(str) 程式片段字串轉成 Python script
+## eval(str) 程式片段字串轉成 Python script <span id="eval_fun">&nbsp;</span>
 > 這裡指的是例如 parse 一個 *.py。  
 > 所得到的字串內容是可以直接轉成可執行的 python script 內容。  
 > 結果類似 import 一段程式碼。  
 
 * 參考: [序列化與反序列化物件]./Python_module_pickle
     * 比較 pickle module vs eval()
+    * [repr()，將 string 轉回 instance](./OOP/Python_4_Class#repr_fun)
 
 ```python
 # Python eval() : from string to python script

@@ -1,5 +1,5 @@
 ---
-title: Python 物件介紹
+title: Python Class 介紹
 description: Python Class 介紹
 keywords: [Python,Class Structure]
 ---
@@ -234,4 +234,57 @@ def full_name(self, separator: str): # 註意此處第一個參數是 self
 Person.full_name = full_name
 totem = Person("Totem", "Insect")
 print(totem.full_name('_')) # Totem_Insect
+```
+
+
+## \_\_str\_\_() 方法
+
+> \_\_str\_\_() 可以用來為 class 實作可讀的內容訊息。  
+> 通常這個訊息會與商業邏輯相關，這邊指的是有別於 \_\_repr\_\_() 會產生供程式\(interpreter\)使用的訊息內容。  
+> \_\_str\_\_() 可以在回應使用者時使用。  
+> 
+>> 預設的 \_\_str\_\_() 會直接呼叫 \_\_repr\_\_()  
+>> 使用時可以:   
+>> 由 instance: x.\_\_str\_\_() 或  
+>> 由 built-in: str(x)  
+
+```python
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+# default: equals to __repr__()
+    # 商業邏輯用
+    def __str__(self):
+        return self.name
+
+s = Student('Totoem')     
+print(s) # Totoem
+print(s.__str__()) # Totoem
+print(str(s)) # Totoem
+```
+
+
+## \_\_repr\_\_() 方法 <span id="repr_fun">&nbsp;</span>
+> \_\_repr\_\_() 可以將 instance 轉成 Python interpreter 可以辨認的文字內容。  
+> 因為，\_\_repr\_\_() 是供 interpreter 使用，所以通長不該像 \_\_str\_\_() 被覆寫改變，以確保 interpreter 作用正常。    
+> 部分情形下 \_\_repr\_\_() 與 eval() 可互相轉換。   
+>> 這邊指的通常是 Python 內建的類別間可互相轉換   
+> \_\_repr\_\_(): 將 instance 轉成 string  
+> [eval() 則可以將 string 轉回 instance](../Python_Typing_String#eval_fun)  
+>  
+>> 同樣可以由 instance/built-in fun 來呼叫:   
+>> 由 instance: x.\_\_repr\_\_() 或  
+>> 由 built-in: str(x)  
+>  
+> reference: [Python Built-in Functions: repr()](https://docs.python.org/3/library/functions.html#repr)  
+
+```
+strA = '[1,2,3]'
+
+listA = eval(strA)
+print(type(listA))
+print(listA)
+# <class 'list'>
+# [1, 2, 3]
 ```
