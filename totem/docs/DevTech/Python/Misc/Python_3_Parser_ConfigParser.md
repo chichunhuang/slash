@@ -1,5 +1,5 @@
 ---
-title: Python ConfigParser
+title: Python ini ConfigParser
 description: Python ConfigParser 解析 ini 檔
 keywords: [Python,Parsers]
 ---
@@ -35,7 +35,10 @@ ini 基本重點摘要如下:
 > &nbsp;&nbsp;當程式欲取出某一 section 下不存在的 key 的屬性值時，  
 > &nbsp;&nbsp;而 DEFAULT section 有設定的話，則可依 DEFAULT 值代用。 
 > 
-> 2.sections 可以縮排，以方便人的閱讀，對 ConfigParser 而言等同於未做縮排。   
+> 2.sections/attributions 可以縮排方便閱讀。文件是這樣說，實際上似乎應該避免。   
+>> Indentation 是有條件的，不小心就會出錯，不建議使用。  
+>> Section Indentation 似乎只能在曹串的 sections 中使用，意即頂層 section 不可以 indent。  
+>> 與 nested section 同階層的其他 attributions 也必須 indent。  
 > 
 > 3.multiline values 直接斷行條列即可。   
 > 
@@ -95,12 +98,32 @@ empty string value here =
         # Did I mention we can indent comments, too?
 ```
 
+## 常用函數
+|               |                          |
+|----------|-----------------|
+| config.read_file(ini_file) | 讀取單一個 ini 檔 |
+| [config.read(\[file_list\])](#config_read) | 一次讀取多個 ini 檔 |
+| [config.read_string(content_of_ini_file)](#config_readstr) | 讀取 plain text 內容，不同次讀取的資料會整合在一起。 |
+| [config.read_dict(dict_json)](#config_readdict) | 讀取 dict 結構內容，一樣是可以分段讀資料，然後整合在一起。 |
+| config.get(path, sub_path)| 依階層路徑取值，預設為 str |
+| [config.getboolean()](#casting)| 取值並 cast 為布林 |
+| config.getint()| 取值並 cast 為數值 |
+| config.sections() | 列出階層內的 sections |
+| config\['sec'\]\['attr'\] | 依階層路徑取值，預設為 str |
+
+
 
 ## ini 檔案讀取方式
 
 _ini exercise_
 
 ```properties
+[DEFAULT]
+PI = 3.1415926535
+Euler = 2.7182818284
+Speed_of_light= 299792458
+Avogadro = 6.022140 *10^23
+
 [Mail]
 mail.disable=true
 mailTempalte.from=dummy+from@google.com
@@ -114,6 +137,7 @@ jdbc.url.schema=totem
 jdbc.url=jdbc:postgresql://192.168.10.10:5432/totem
 jdbc.username=totem
 jdbc.password=password
+jdbc.db.authority=  
 
 [Forbidden.account]
 backlist=Ade
@@ -152,7 +176,7 @@ with open (r'D:\tmp\totem.ini', 'r') as ini_file:
 ```
 
 
-## ini 檔案屬性讀取方式與轉型
+## ini 檔案屬性讀取方式與轉型 <span id="casting">&nbsp;</span>
 * 使用 python built-in functions 轉型
 * 使用 ConfigParser 的 getXX() 轉型
 
@@ -173,10 +197,15 @@ with open (r'D:\tmp\totem.ini', 'r') as ini_file:
     mail = config['Mail']
     print(mail.getboolean('mail.disable')) # True
     print(type(mail.getboolean('mail.disable'))) # <class 'bool'>
+    
+    print(config.get('Mail', 'mail.disable')) # 使用 get() 可以寫路徑
 ```
 
 ## ini 檔案屬性預設值
-* 分為兩類: DEFAULT 與 Fallback
+* 分為兩類: DEFAULT 與 Fallback，都是用在查無屬性設定時。
+* DEFAULT: 類似系統 Global 參數概念，若 section 中查無屬性時接下來查詢的大池塘。
+* Fallback: 當向上查詢屬性至 DEFAULT section 仍查無時，此時可以給定一個當查無屬性時回傳的 fallback value。
+* 註: 空值仍視為有該屬性，所以不適用於此處的預設值。
 
 __DEFAULT Section__
 > 1.DEFAULT 區塊中的屬性可作為屬性的預設值。但前提是:  
@@ -184,138 +213,192 @@ __DEFAULT Section__
 > &nbsp;&nbsp;而 DEFAULT section 有設定的話，則可依 DEFAULT 值代用。 
 
 ```python
+with open (r'D:\tmp\totem.ini', 'r') as ini_file:
+    config = configparser.ConfigParser()
+    config.read_file(ini_file)
+    
+    print(config['DEFAULT']['PI']) # 3.1415926535
+
+    print('PI' in config['DataSource']) # DEFAULT always in
+    print(config['Mail']['PI']) # 3.1415926535
 ```
 
 __Fallback value__
+> 
+> 同樣是用在查無屬性時，若連 DEFAULT section 也查無的話，可以在取值時先給予預設。  
+> fallback value 必須以 get() 方式取出時才可設定。  
+> 
 
 ```python
-topsecret.get('Port')
+with open (r'D:\tmp\totem.ini', 'r') as ini_file:
+    config = configparser.ConfigParser()
+    config.read_file(ini_file)
+    
+    dataSource = config['DataSource']
+    print( 'jdbc.db.authority' in dataSource)
+    print(config.get('DataSource', 'jdbc.db.authority' )) # 注意是有值, 空字串
+    print(dataSource.get('jdbc.db.authority', fallback='read only')) # 注意是有值, 空字串,所以沒 fallback
 
-topsecret.get('CompressionLevel')
-
-topsecret.get('Cipher')
-topsecret.get('Cipher', '3des-cbc')
-
-config.get('forge.example', 'monster',
-           fallback='No such things as monsters')
-           
-'BatchMode' in topsecret
-
-topsecret.getboolean('BatchMode', fallback=True)
-
-config['DEFAULT']['BatchMode'] = 'no'
-topsecret.getboolean('BatchMode', fallback=True)           
+    print(dataSource.get('attribute_not_exists')) # None
+    print(dataSource.get('attribute_not_exists', fallback='fallback value')) # fallback value   
+    print(config.get('DataSource', 'attribute_not_exists', fallback='fallback value')) # fallback value               
 ```
 
 
-## ini 檔案屬性的內插\(Interpolation\) : BasicInterpolation
+## 屬性內插\(Interpolation\) : BasicInterpolation
+> 
+> 內插指的是 ini 檔中允許屬性值串接。   
+> 被內差的屬性須以 __%\(__ attr_name __\)s__ 修飾。
+>> 小括號 __<span style={{color: '#0044FF'}}> 前加一個 %, 後補一個 s </span>__，別懷疑，除了%外， <span style={{color: '#FF1100'}}> 後面還要帶一個 __s__ </span>。    
+> 脫逸字元為 % 百分比符號。  
+> 預設採用的 Interpolation 為 BasicInterpolation，不須額外指定或設定即可使用。  
 
 * ConfigParser 的 interpolation 預設為 BasicInterpolation()
 
+__ini__
+
 ```python
 
-[Paths]
-home_dir: /Users
-my_dir: %(home_dir)s/lumberjack
-my_pictures: %(my_dir)s/Pictures
+[Address]
+country: Nerverland
+city: Indian Camp
+road: central
+number: 1
+address=No.%(number)s %(road)s rd., %(city)s, %(country)s
 
-[Escape]
-# use a %% to escape the % sign (% is the only character that needs to be escaped):
-gain: 80%%
+[Escape.Char]
+# escape string: % 
+score: 80%%
 
+[Gender.Distribution]
+male: 50.1%%
+female: 49.9%%
 ```
-## ini 檔案屬性的內插\(Interpolation\) : ExtendedInterpolation
+
+__BasicInterpolation Example__
+
+```python
+with open (r'D:\tmp\totem.ini', 'r') as ini_file:
+    config = configparser.ConfigParser()
+    config.read_file(ini_file)
+    
+    print(config.get('Address', 'address'))
+    print(config['Address'][ 'address']) # No.1 central rd., Indian Camp, Nerverland
+
+    print(config.get('Gender.Distribution', 'male')) # 50.1%   
+```
+
+## 屬性內插\(Interpolation\) : ExtendedInterpolation
+> 沒特別研究 ExtendedInterpolation，不過猛一看似乎只是內插屬性的插入上不同。比較直覺，類似一般程式語言的用法。推薦!  
+> 被內差的屬性須以 __${__ attr_name __\}__ 修飾。
+>> 以錢符號與大括號 __<span style={{color: '#0044FF'}}> ${ attr_name } </span> 修飾內插屬性。    
+> 脫逸字元為 $ 錢符號。  
 
 ```python 
-config = configparser.ConfigParser(interpolation=configparser.ExtendedInterpolation())
+
+[Address2]
+country: Nerverland
+city: Indian Camp
+road: central
+number: 1
+address=No.${number}, ${road} rd., ${city}, ${country}
+
+
+with open (r'D:\tmp\totem2.ini', 'r') as ini_file:
+    config = configparser.ConfigParser(interpolation=configparser.ExtendedInterpolation())
+    config.read_file(ini_file)
+
+    ## ExtendedInterpolation
+    print(config.get('Address2', 'address'))
+    
 ```
 
 ## ini 格式內容其他讀取方式
-```python
-another_config = configparser.ConfigParser()
-another_config.read('example.ini')
-
-another_config['topsecret.server.example']['Port']
-
-another_config.read_string("[topsecret.server.example]\nPort=48484")
-another_config['topsecret.server.example']['Port']
-
-another_config.read_dict({"topsecret.server.example": {"Port": 21212}})
-another_config['topsecret.server.example']['Port']
-
-another_config['topsecret.server.example']['ForwardX11']
-```
-
-## ini 格式內容其他讀取方式與操作
+__config.read([list of filenames])__ <span id="config_read">&nbsp;</span>
+> config.read([list of filenames]): 允許一次讀多個 ini 檔。  
+>> 不同檔案若出現相同 attribution 則以後讀到的為準。  
 
 ```python
 config = configparser.ConfigParser()
-config.sections()
+config.read([r'D:\tmp\totem.ini', r'D:\tmp\totem2.ini'])
+```
 
-config.read('example.ini')
+__config.read_string(content_of_ini_file)__ <span id="config_readstr">&nbsp;</span>
+> config.read_string(content_of_ini_file):  
+>> 讀取 plain text 內容，不同次讀取的資料會整合在一起。  
 
-config.sections()
+```python
+config = configparser.ConfigParser()
 
-'forge.example' in config
+config.read_string('[Profile]\n name=totem')
+print(config['Profile']['name'])
 
-'python.org' in config
+config.read_string('[Profile]\n gender:male')
+for att in config['Profile']:
+    print(att) # name, gender
+```
 
-config['forge.example']['User']
+__config.read_dict(dict_json)__ <span id="config_readdict">&nbsp;</span>
 
-config['DEFAULT']['Compression']
+> config.read_dict(dict_json):  
+>> 讀取 dict 結構內容，一樣是可以分段讀資料，然後整合在一起。  
 
-topsecret = config['topsecret.server.example']
-topsecret['ForwardX11']
+```python
+import configparser, os
+config = configparser.ConfigParser()
 
-topsecret['Port']
+config.read_dict({'Profile': {"name": 'totem',
+                              "gender": 'male'}
+                  })
 
-for key in config['forge.example']:  
-    print(key)
+config.read_dict({'Education': {"Master": 'NTU',
+                              "Bachelor": 'NCHU'}
+                  })
 
-
-
-
-
-config['forge.example']['ForwardX11']
+for section in config:
+    print(section)
+    for attr in config[section]:
+        print(attr)
+        print("    %s=%s" % (attr, config.get(section, attr)))
+        
+# DEFAULT
+# Profile
+# name
+#     name=totem
+# gender
+#     gender=male
+# Education
+# master
+#     master=NTU
+# bachelor
+#     bachelor=NCHU
+# 
+# Process finished with exit code 0
+        
 ```
 
 ## 建立 ini 格式檔
+> 概念上很簡單，就像是編輯一個 dict 然後呼叫 write 寫成檔案。
 
 ```python
+
 import configparser
+
 config = configparser.ConfigParser()
-config['DEFAULT'] = {'ServerAliveInterval': '45',
-                     'Compression': 'yes',
-                     'CompressionLevel': '9'}
-config['forge.example'] = {}
-config['forge.example']['User'] = 'hg'
-config['topsecret.server.example'] = {}
-topsecret = config['topsecret.server.example']
-topsecret['Port'] = '50022'     # mutates the parser
-topsecret['ForwardX11'] = 'no'  # same here
-config['DEFAULT']['ForwardX11'] = 'yes'
-with open('example.ini', 'w') as configfile:
-  config.write(configfile)
+config['DEFAULT'] = {'server': 'google.cloud',
+                     'port': '1234'}
+
+# 建立 Mail section, 這 statement 不能省略。
+config['Mail'] = {}  
+
+# 這邊要注意，因為 python 語法的關係，沒有建立並回傳變數的語法，所以要拆兩行。
+mail = config['Mail'] 
+
+config['Mail']['mail.disable'] = 'True'
+mail['mailTempalte.from'] = 'dummy@org'
+mail['mailTempalte.fromname'] = 'dummy'
+
+with open(r'D:/tmp/export.ini', 'w') as configfile:
+    config.write(configfile)
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import { CodeBlock, dracula  } from "react-code-blocks";
-<CodeBlock text={`  
-'Hello World'
-    `}
-      language='python'
-      showLineNumbers='true'
-      />
