@@ -105,12 +105,16 @@ empty string value here =
 | [config.read(\[file_list\])](#config_read) | 一次讀取多個 ini 檔 |
 | [config.read_string(content_of_ini_file)](#config_readstr) | 讀取 plain text 內容，不同次讀取的資料會整合在一起。 |
 | [config.read_dict(dict_json)](#config_readdict) | 讀取 dict 結構內容，一樣是可以分段讀資料，然後整合在一起。 |
-| config.get(path, sub_path)| 依階層路徑取值，預設為 str |
+| config.get(path, sub_path)| 依階層路徑取屬性值，預設為 str。無法單獨抓出 Section。Legacy API. |
 | [config.getboolean()](#casting)| 取值並 cast 為布林 |
 | config.getint()| 取值並 cast 為數值 |
-| config.sections() | 列出階層內的 sections |
-| config\['sec'\]\['attr'\] | 依階層路徑取值，預設為 str |
-
+| [config.sections()](#config_sections) | 列出階層內的 sections, string |
+| [config.items()](#config_items) | 取 config 下的所有元素, 可解包成 key, value pairs  |
+| [config.items(sec_attr_name)](#config_items) | 取指定階層下的所有元素, 可解包成 key, value pair  |
+| config\['sec'\]\['attr'\] | 依階層路徑取值或設值，預設為 str。可以只提取 Section。 |
+| [config.add_section(section_name)](#add_section_set) | 增加一個 Section。Legacy API. |
+| [config.set(section_name, attribute_name, value)](#add_section_set) | Section 下增加一個 attribute。Legacy API. |
+* 怎麼會這樣，我反倒是比較喜歡 OO 一些的 Legacy API，還好有保留向下相容。
 
 
 ## ini 檔案讀取方式
@@ -377,6 +381,74 @@ for section in config:
         
 ```
 
+
+## 以迴圈讀取 ini 內容: config.items() <span id="config_items">&nbsp;</span>
+* 用來列出 sections 或 attributions
+* config.items() : 當 config 為 root 時，可回傳所有 sections， <class 'collections.abc.ItemsView'>。 可解包成 section_name, section_values。 
+* config.items() : 當 config 為 section 時，可回傳 section 下所有 attributions， <class 'collections.abc.ItemsView'>。 可解包成 attr_name, attr_value。 
+
+__config.items()__
+
+```python
+with open (r'D:\tmp\totem.ini', 'r') as ini_file:
+    config = configparser.ConfigParser()
+    config.read_file(ini_file)
+    
+    sections = config.items() # 未指明所以列全部 sections
+    print(type(sections)) # <class 'collections.abc.ItemsView'>
+    for sec_name, sec_values in sections:
+        print(sec_name, sec_values) # <class 'str'>, <class 'configparser.SectionProxy'>
+        attrs = sec_values.items() # <class 'collections.abc.ItemsView'>
+        for attr_name, attr_value in attrs:
+            print(attr_name, attr_value)
+```
+
+## 以迴圈讀取 ini 內容: config.sections() <span id="config_sections">&nbsp;</span>
+* 可回傳所有 sections， <class 'collections.abc.ItemsView'>。 可解包成 section_name, section_values。
+
+__config.sections()__
+
+```python
+with open (r'D:\tmp\totem.ini', 'r') as ini_file:
+    config = configparser.ConfigParser()
+    config.read_file(ini_file)
+    
+    for s in config.sections():
+        print("SECTION: " , s)
+        attrs = config.items(s) # <class 'collections.abc.ItemsView'>,列出指定 section 下的  attrs 包含 DEFAULT 下內容
+        # attrs = config[s].items(), 此處與上一行等義
+
+        for sec_name, sec_values in attrs:
+            print(sec_name, sec_values)    
+```
+
+## 資料建立與修改 <span id="add_section_set">&nbsp;</span>
+* config.add_section(name)
+* config.set(section, attr, value)
+* legacy API
+
+```python
+import configparser
+config = configparser.ConfigParser()
+
+# current API
+config['Mail'] = {}
+mail = config['Mail']
+config['Mail']['mail.disable'] = 'True'
+mail['mailTempalte.from'] = 'dummy@org'
+mail['mailTempalte.fromname'] = 'dummy'
+
+# Legacy API
+config.add_section("Mail.Server")
+config.set("Mail.Server", "IP", '192.168.10.10')
+config.set("Mail.Server", "Port", '1234')
+
+with open(r'D:/tmp/export.ini', 'w') as configfile:
+    config.write(configfile)
+
+
+```
+
 ## 建立 ini 格式檔
 > 概念上很簡單，就像是編輯一個 dict 然後呼叫 write 寫成檔案。
 
@@ -401,4 +473,5 @@ mail['mailTempalte.fromname'] = 'dummy'
 with open(r'D:/tmp/export.ini', 'w') as configfile:
     config.write(configfile)
 ```
+
 
