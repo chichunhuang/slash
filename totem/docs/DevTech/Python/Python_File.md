@@ -179,10 +179,22 @@ with open ('note.txt', 'r') as f:
 f.close()   
 
 
-# 一次讀全補行 lines
+# 一次讀全部行 lines
 with open ('note.txt', 'r') as f:
     content=f.readlines() # list of strings
-f.close()       
+f.close()
+
+
+# 一次讀多個檔案
+with open('info.log', 'r') as info, open('error.log', 'r') as error:
+    do_something()       
+
+# python 3.10+ 
+with (
+    open('info.log', 'r') as info, 
+    open('error.log', 'r') as error
+):
+    do_something()     
 ```
 
 
