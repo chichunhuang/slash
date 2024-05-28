@@ -1,6 +1,6 @@
 ---
-title: Python Command Line
-description: Python command line 基本處理
+title: Python command line 基本處理
+description: Python Command Line
 keywords: [Python,CLI]
 ---
 

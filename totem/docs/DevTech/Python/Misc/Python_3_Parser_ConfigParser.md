@@ -1,6 +1,6 @@
 ---
-title: Python ini ConfigParser
-description: Python ConfigParser 解析 ini 檔
+title: Python ConfigParser 解析 ini 檔
+description: Python ini ConfigParser
 keywords: [Python,Parsers]
 ---
 
