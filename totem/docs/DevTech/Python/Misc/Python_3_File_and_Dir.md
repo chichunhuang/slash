@@ -63,7 +63,7 @@ for root, dirs, files in os.walk(r'D:\tmp'):
 
 ## glob
 * Python 內建的 module，可以使用 wildcard(通配符)，以類似 regex 的方式查找檔案。
-* glob 遞迴 : 3.5+, 以 ** 表示資料夾遞迴 
+* glob 遞迴 : Python 3.5+, 以 ** 表示資料夾遞迴 
 * 注意: pattern 與 regex 部員全相同
     * \* : 0+
     * ? : 1+
