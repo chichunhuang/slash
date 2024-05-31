@@ -41,10 +41,94 @@ __目的__
 __Variable Mangling__ 
 　
 > Python Class 區塊內 en dash 起始(雙下劃線 di-underscore)的變數名，  
-> 會被編譯為以 _className 為前綴的新名稱。
+> 會被編譯為以 \_className 為前綴的新名稱。
 > 因為編譯後變數名冠類別名，因此可以避免被子類別覆寫。    
-> 例如: __var 會變成 _className__var。  
+> 例如: \_\_var 會變成 \_className\_\_var。  
 >
 > Mangling 用在工具類或 super class，用來避免超類被子類覆蓋的慣例。
 
+## 封裝已釋出API的成員變數
 
+> @property, @xxx.setter  
+
+> Effective Python 中有提到: Use plain attributes instead of get and set method  
+> 也就是說 Pythonic Convension 建議以點的方式存取成員變數。  
+> 在此前提下，若想針對已釋出 API 的既有成員進行封裝時，該如何補救。 
+>> 不要跟我說加個 getter / setter 就解決了，何必如此麻煩。  
+>> 原因除了會更改 API，也就是耦合的相關程式無法使用之外(你應該總是要考慮新舊版本程式的相容情形)。  
+>> 另外就是 Python 社群的慣例，紅燈停綠燈行，這是大家的默契與慣例。當然你家的規則可以反過來，但合作對象可能就要發狂了。  
+>> 所以，才會衍伸出 @property, @xxx.setter 相關實踐方式。
+
+__原始版本__
+
+```python
+class Exam:
+    score = 100
+
+e = Exam()
+print(e.score) # 100    
+```
+
+__封裝版本: 影響API，功能失效__
+* AttributeError : has no attribute
+
+```python
+class Exam:
+    _score = 100
+
+e = Exam()
+print(e.score) 
+# AttributeError: 'Exam' object has no attribute 'score'
+```
+
+__建議處理方式__
+* 使用 @property, @xxx.setter
+    * xxx mapping 到 @property 所修飾的 method
+* 對 legacy code 不造成影響
+
+```python
+class Exam:
+    _score = 100
+
+    @property
+    def score(self):
+        return self._score
+
+    @score.setter # 這邊類似 Java 為 _score，增加一個 assignScore() fn
+    def score(self, value):
+        self._score = value
+
+e = Exam()
+print(e.score) # 可使用舊 API  
+
+e.score = 80 # 與舊 API 相容
+print(e.score)
+```
+
+__@property, @xxx.setter__
+* #1 讓 scoreX(self) 能以 attribute 的方式取值，即後面 **不用加上小括號**。ex: print(e.scoreX)
+* #2 轉換後的取值的屬性名，也就是 點 符號後存取的名稱
+* #3 聲明為 #1 的 setter，有這個設定。才能以 attribute 的方式賦值，即後面 **不用加上小括號**。 ex: e.scoreX = 80
+* #4 轉換後的賦值屬性名，也就是 點 符號後存取的名稱
+* 上面的範例， #1~4 皆同名，且設成與舊變數相同。
+
+```python
+class Exam:
+    _score = 100
+
+    @property # 1
+    def scoreX(self): # 2
+        print("get", self._score)
+        return self._score
+
+    @scoreX.setter # 3
+    def scoreY(self, value): #4
+        self._score = value
+        print("set", self._score)
+
+e = Exam()
+print(e.scoreX) # 2
+
+e.scoreY = 80 # 4
+print(e.scoreX)
+```
