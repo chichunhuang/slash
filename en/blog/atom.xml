@@ -2,11 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://insect-totem.net/en/blog</id>
     <title>Insect Totem Blog</title>
-    <updated>2024-02-07T11:03:09.000Z</updated>
+    <updated>2024-06-02T08:19:49.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://insect-totem.net/en/blog"/>
     <subtitle>Insect Totem Blog</subtitle>
     <icon>https://insect-totem.net/en/img/70_70.jpg</icon>
+    <entry>
+        <title type="html"><![CDATA[Docusaurus Escape Char]]></title>
+        <id>https://insect-totem.net/en/blog/20240602_Docusaurus_escape</id>
+        <link href="https://insect-totem.net/en/blog/20240602_Docusaurus_escape"/>
+        <updated>2024-06-02T08:19:49.000Z</updated>
+        <summary type="html"><![CDATA[* 寫個註解，Docusaurus更到最新版後檢查似乎變嚴格了]]></summary>
+        <content type="html"><![CDATA[<ul><li>寫個註解，Docusaurus更到最新版後檢查似乎變嚴格了</li><li>\ </li><li>遇到 大括號, 中括號, 角括號時須使用。 ex: <!-- -->\<!-- -->{ 'k1': 'v1'<!-- -->\<!-- -->}, <!-- -->\<!-- -->&lt;class 'str'<!-- -->\<!-- -->&gt;</li></ul>]]></content>
+        <author>
+            <name>Insect Totem</name>
+            <uri>https://github.com/chichunhuang</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[台糖肉片檢出西布特羅事件的想法]]></title>
         <id>https://insect-totem.net/en/blog/20240207_台糖西布特羅</id>
