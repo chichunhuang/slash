@@ -89,6 +89,17 @@ const config = {
             position: 'left',
             label: '程式技術文章',
           },
+          {
+            href: 'https://python.insect-totem.net/',
+            label: 'Python 學習紀錄',
+            position: 'left',
+          },
+          {
+            href: 'https://rust.insect-totem.net/',
+            label: 'Rust 學習紀錄',
+            position: 'left',
+          },
+          
           {to: '/docs/Graphics/docs-map', label: 'Graphics', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           //{
