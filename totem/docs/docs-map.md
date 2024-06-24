@@ -67,6 +67,7 @@ sidebar_position: 1
 * [Python 變數與變數存取範圍 - Python 變數與變數存取範圍](/docs/DevTech/Python/Advanced/Python_2_Variable_and_Scope)
 * [Python 迭代相關三兩事 - Loop、Iteration、Comprehension](/docs/DevTech/Python/Advanced/Python_2_Iterations_Misc)
 * [Python 運算子進階-operator - 關於 operator](/docs/DevTech/Python/Advanced/Python_Operator_module)
+* [關於 Python 檔案編碼 - Python Encoding](/docs/DevTech/Python/Advanced/Python_2_Encoding)
 #### IDE
 * [Anaconda 基本管理指令 - Anaconda 基本管理指令](/docs/DevTech/Python/IDE/Anaconda_Statements)
 * [PyCharm 中使用 Anaconda 管理 Envs - PyCharm 中以 Anaconda 管理 Python Envs](/docs/DevTech/Python/IDE/PyCharm_Anaconda_Envs_Mgmt)
@@ -74,12 +75,16 @@ sidebar_position: 1
 * [PyCharm 中的快速鍵 - PyCharm 中的快速鍵](/docs/DevTech/Python/IDE/PyCharm_HotKeys)
 * [PyCharm 中自訂 Snippet Templates - PyCharm 中自訂 Live Templates](/docs/DevTech/Python/IDE/PyCharm_Snippet_Template)
 #### Misc
+* [Python ConfigParser 解析 ini 檔 - Python ini ConfigParser](/docs/DevTech/Python/Misc/Python_3_Parser_ConfigParser)
+* [Python command line 基本處理 - Python Command Line](/docs/DevTech/Python/Misc/Python_3_CLI)
 * [Python 日期與時間 - Python Date and Time](/docs/DevTech/Python/Misc/Python_3_Time)
-* [Python-Sorting by pandas - Python - Sorting and Parsing CSV](/docs/DevTech/Python/Misc/Sorting_by_pandas_Python)
+* [Python 檔案與資料夾走訪 - Python File and Folder](/docs/DevTech/Python/Misc/Python_3_File_and_Dir)
+* [Python-Sorting by pandas - Python - Sorting and Parsing CSV](/docs/DevTech/Python/Misc/Python_Sorting_by_Pandas)
+* [打包 Python 程式成可執行檔 - Executable Python-script to exe](/docs/DevTech/Python/Misc/Python_3_Executable)
 #### OOP
+* [Python Class 介紹 - Python Class 介紹](/docs/DevTech/Python/OOP/Python_4_Class)
 * [Python OOP Site Map - Python OOP Site Map](/docs/DevTech/Python/OOP/Python_4_Site)
 * [Python 抽象方法 - Python Abstract Method](/docs/DevTech/Python/OOP/Python_4_AbstractMethod)
-* [Python 物件介紹 - Python Class 介紹](/docs/DevTech/Python/OOP/Python_4_Class)
 * [Python 繼承介紹 - Python Inheritance](/docs/DevTech/Python/OOP/Python_4_Inheritance_Basic)
 * [Python 與 OOP - Python 與物件導向](/docs/DevTech/Python/OOP/Python_4_OOP)
 * [Python 類別成員 - Python 類別成員 Vars and Funs](/docs/DevTech/Python/OOP/Python_4_Class_Members)
@@ -94,6 +99,8 @@ sidebar_position: 1
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
 * [隱藏 Tomcat 版本資訊 - ](/docs/DevTech/Tomcat/Hide_Tomcat_Version)
+### javascript
+* [JS HTML input 自動全選 - Javascript Template input selects all on focus](/docs/DevTech/javascript/Textfield_Select)
 ## Graphics
 * [Butterfly - Insect-Totem Butterfly](/docs/Graphics/Butterfly_01)
 * [Butterfly Papilio - Insect-Totem Butterfly PapilioXuthus](/docs/Graphics/Butterfly_Papilio_xuthus_01)
