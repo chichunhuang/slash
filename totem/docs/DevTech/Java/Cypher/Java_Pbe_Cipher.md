@@ -15,7 +15,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 也就是說相較於一般將 salt 加入資料加密演算外，
 > PBEWITHMD5andDES A:還會檢查解密金鑰是否正確。
 > 另外，B:也會依據 iteration count 設定值來重複加密所得出的結果。
-> 利用增加 A/B 兩項措施增加北破解的難度。
+> 利用增加 A/B 兩項措施增加被破解的難度。
 
 
 ## 對稱性加密算法：

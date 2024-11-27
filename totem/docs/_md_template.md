@@ -34,16 +34,16 @@ keywords: [Rust,Cargo, describing, the main topics]
 <!-- C 這是 HTML 註解 : 注意註解前  __必須___ 有空行 -->
 
 import { CodeBlock, dracula  } from "react-code-blocks";
-     <CodeBlock
-      text={`     
-    let x ='先一個 tab 再加內容';
-      `}
+	 <CodeBlock
+      text={`	  
+	let x ='先一個 tab 再加內容';
+	  `}
       language='JavaScript'
       showLineNumbers='true'
       //theme={dracula} //use default else 
     />
-    
-    
+	
+	
 /* B 這是 JS 註解(mdx js block 所用方式): 注意註解前後  __不可___ 有空行或 BR */
 &lt;! 這邊演示如何在 JSX 呈現角括號(上範例不可有空行) --&gt;
 
