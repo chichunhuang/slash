@@ -70,12 +70,12 @@ keywords: [Notion]
 
          
 * Pages 種類:注意不同種類的 Page 由不同的 icons 呈現    
-> Private Page: 這邊指的是未 Publish 的 Pages。    
-> Public Page: 這邊泛指已 Publish 的 Pages。     
-> DB Page: Notion 中指的 DB 類似 Graph DB。以表格呈現可直接編輯並建立相關關聯。   
->> Page icon 有 __↗__ 符號的是，__Mentioned Page__。是單純的 Page Link。  
->> <span style={{color: 'blue'}}>Page icon 僅單純頁面符號的是，Page 的分支。Link 與 Page 同存亡</span>。  
->> icon 有橫線的是已填內容的 Page。  
+    * Private Page: 這邊指的是未 Publish 的 Pages。    
+    * Public Page: 這邊泛指已 Publish 的 Pages。     
+    * DB Page: Notion 中指的 DB 類似 Graph DB。以表格呈現可直接編輯並建立相關關聯。   
+        * Page icon 有 __↗__ 符號的是，__Mentioned Page__。是單純的 Page Link。  
+        * <span style={{color: 'blue'}}>Page icon 僅單純頁面符號的是，Page 的分支。Link 與 Page 同存亡</span>。  
+        * icon 有橫線的是已填內容的 Page。  
 
 
 ## __發佈 publish__  
@@ -113,15 +113,19 @@ _注意事項:_
 * Web Bookmark:  
     * icon 是鍊子、直接出現 Page 縮圖或是以文字呈現。
 * Anchor:  
-    *     
+    * 在 Block 的六點 🢂 Copy Link to Block 可取得 block 的 URL。  
+    * 在 Notion 中則可貼上後選擇  
+        * Mention (inline link)，會自動以 Block 所在相對應階層呈現 Link Text。 ParentPage(BlockText)  
+        * URL，以 URL link 的方式呈現無 icon。可再自行修改文字敘述。
+        * __Synced Block__，mouse over 時會出現紅框，編輯時會與來源 Block 同步。
+* Backlink: 
+    * 滑鼠指向 Page Title 時會出現 backlinks 列表，指向所有 mention 此頁的 links。  
 
-> move block : turn into
-> Embeded SubPage: 
-> Page in 
-
-/ Page (Embeded a SubPage)  == docker (+), page = Block turn into page
-
-/ mention a page = block (+) mention a page =  
+* Links 相關操作
+    * 快速建立 Page Links，@ 或 [[ 後接 Pagename  
+    * URL : MD 語法中的 \[直接網址\]，圖示為 鍊條    
+    * / + Mention a Page : (說明\)\[網址\]，導向已存在的 Notion Page。這邊的是 _inline link_ 。  
+    * / + Link to Page : (說明\)\[網址\]，導向已存在的 Notion Page，後方無法加其他文字敘述。圖示為 icon 加上箭頭
 
 ## Notion 使用技巧
 ### 圖片相關 
@@ -145,13 +149,6 @@ _注意事項:_
     * Sub-Page 會成為 Links 出現在 Parent-Page 最下方。
     * 須注意的是 <span style={{color: '#FF1100'}}>自動生成的 Links 若刪除，Sub-Page 會一併被刪除。</span>  
 
-### Links 
-* URL : MD 語法中的 \[直接網址\]，圖示為 鍊條    
-* / + Mention a Page : (說明\)\[網址\]，導向已存在的 Notion Page。這邊的是 _inline link_ 。  
-* / + Link to Page : (說明\)\[網址\]，導向已存在的 Notion Page，後方無法加其他文字敘述。。圖示為 icon 加上箭頭
-* auto-gen subpage links : 
-
-
 
 ## Notion 資料搬移 <span id="notion_change_mail"> </span>   
 ### email 更改 
@@ -170,3 +167,37 @@ _注意事項:_
 > 1. 擁有者 Pages 發佈 : 指定頁面 🢂 右上 share 🢂 publish 🢂 勾選 "複製為範本"  
 > 2. 共編方 : 到指定 URL 🢂 右上 "複製符號" 🢂 建立複本 🢂 加入專案 
 > 3. 擁有者重新回到發佈設定，取消或禁止建立複本。   
+
+
+## Notion DB
+> Notion DB: Notion 中的 DB 並非關聯式資料庫。  
+> 而是一個包含特殊資料格式的 SubPage \(DB Page)。SubPage 中的資料可以以不同 View/Layout 的方式在多處同時呈現。    
+> 與資料庫相似的是 Notion DB 同樣具有欄位屬性、瀏覽模式、篩選和排序等功能。    
+> DB Page 可以設定為:  
+> Full Page Database: 主頁以 Link 方式連接。  
+> Inline Database: 主頁可直接同步顯示 DB Page 內容。
+> <code>主頁中 DB Page icon 無 Arrow，故所有 DB 操作皆同步，包含刪除</code>。<br/>  
+> 建立指令:  <br/>
+> <code>/ + 以 Database </code> &nbsp;&nbsp; (非/ + table)。  
+
+### Notion DB View 種類
+* Table、Border、Chart、List、Calendar、Gallery、Timeline 甘特圖等。  
+* DB Page 建立時預設會採用 Table View \(Layout)，類似 Excel 表格。  
+* 建立新 Sheet \(+) 時可自行指定 View。  
+* Table 右側 ... 可切換 Layout 或其他 Sheet 相關屬性。  
+* 同一份資料可以經由 'name > copy link to view' 貼到多處。並為分身客製化成不同長相。 
+
+
+## Table Database
+### Column(Property)
+=> 因為不同的入口，可修改的屬性不完全一致。列出可做異動的相關入口。
+* 直接點 Table Name > Edit view 可修改 Table/column 相關屬性與設定。
+* 或是點 Table 右上的 ... 可更改屬性。
+* 直接點 Column Name 可更改 Property 相關屬性。
+
+### 表格關聯
+
+
+### Database 轉換
+* table sheet to DB Page
+* 點 Table Sheet 名稱可複製 view url。同一個 DB page 可以
