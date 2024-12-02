@@ -23,7 +23,7 @@ keywords: [Notion]
 
 ## Notion
 * 官方網站: [Notion Reference Docs](https://www.notion.com/help)  
-* 官方網站: [Notion Reference Docs](https://www.notion.com/zh-tw/help)  
+* 官方網站: [Notion Reference Docs zh-tw](https://www.notion.com/zh-tw/help)  
 * Notion Widgets:  
     * [indify](https://indify.co/)  
     * [widgetbox](https://widgetbox.app/)  
@@ -159,7 +159,7 @@ _注意事項:_
 > Sidebar 🢂 Project(Dropdown) 🢂 Setting 🢂 Account 🢂 My Account 🢂 變更電子郵件  
 
 ### 共編、分享與複本
-* 複本也是一種將資料移轉的方式，依workspace或頁面架構分享。  
+* 複本也是一種將資料移轉的方式，依 workspace 或 Page Tree 分享。  
 * 雙方皆須有 notion 帳號。  
 * 版本依據建立時授權狀態，非帳號當下授權。   
 
@@ -180,24 +180,75 @@ _注意事項:_
 > 建立指令:  <br/>
 > <code>/ + 以 Database </code> &nbsp;&nbsp; (非/ + table)。  
 
+
+## Table Database
+* [Reference](https://www.notion.com/zh-tw/help/category/databases) 
+
+### 建立方式
+* 基本: / + database  
+* Main Page 建立 inline DB，導向既有DB。 / + Table view  
+* Table vs Database 轉換: 六點工具 turn into database vs turn into simple table  
+
 ### Notion DB View 種類
 * Table、Border、Chart、List、Calendar、Gallery、Timeline 甘特圖等。  
 * DB Page 建立時預設會採用 Table View \(Layout)，類似 Excel 表格。  
-* 建立新 Sheet \(+) 時可自行指定 View。  
+* 建立新 Sheet \(+) 時可自行指定 View\(瀏覽模式)。  
 * Table 右側 ... 可切換 Layout 或其他 Sheet 相關屬性。  
 * 同一份資料可以經由 'name > copy link to view' 貼到多處。並為分身客製化成不同長相。 
 
-
-## Table Database
-### Column(Property)
+### 屬性設定
 => 因為不同的入口，可修改的屬性不完全一致。列出可做異動的相關入口。
-* 直接點 Table Name > Edit view 可修改 Table/column 相關屬性與設定。
-* 或是點 Table 右上的 ... 可更改屬性。
-* 直接點 Column Name 可更改 Property 相關屬性。
+* Database: 直接點 Table Name > Edit view 可修改 Table/column 相關屬性與設定。
+* Database and Property: 點 Table 右上的 ... 可更改屬性。
+* Property: 點 Column Name 可跳出 Property 屬性泊塢視窗。
 
-### 表格關聯
+### 表格關聯欄位 Relation
+* <span style={{color: '#0044FF'}}> <b>Database Relation, Rollup</b> </span>   
+* Relation
+    * 新增 Main Table Property 時選擇 __Relation Type__ 可建立表格間的關聯。  
+    * PK 是 Main Table 的 Name 欄位，雙向時 FK 則可以是 Sub 任意欄位。  
+    * 允許一對多。  
+    * 發布後，點 Main 上 FK link 可以檢視相關 row 的內容。  
+* Rollup\(彙總) : 當 Database 具一對多 Relation 關係時，可以建立 Rollup Type Property。  
+    * 功能類似 Java 的 Stream。可以整合多的資料以指定的方式呈現，例如:sum, max, joining。   
+    * 不同 Type 的 Relation 可以有不同的處理工具。  
+    * edit 🢂 Property 🢂 選擇 Sub's column 🢂 Calculate 🢂 決定處理動作 🢂 show as 🢂 決定呈現方式\(%、圓餅)  
+
+### Column Filter 
+* 同一份 DB 資料，可以用在不同地方。Filter 則可以為此客製不同呈現方式。  
+* 建立 filters: 
+    * column name 🢂 Filter 可建立基本 Filters。  
+    * 已建立的 Filters 會在表格左上方呈現，點下拉選單的 ... 可進入 'Add to Advanced Filters'。    
+* 移除 filters: 
+    * Filter Docker 右上 ... 可叫出移除選項。  
+* 操做: 
+    * 建立 Filter 時， Docker 會依 column type 不同而顯示不同屬性。  
+    * Filter Docker: 在 name 旁邊有 <span style={{color: '#0044FF'}}> **Operator 下拉選單** </span> 可供客製過濾條件。  
+    * <b>Advanced Filter: 類似 SQL/DSL 操作語法</b>。   
+
+### Calendar
+* 當 Table/Database 至少有一個 Date Column 時便可轉成 Calendar Layout。
+* 操作: 使用六點工具   
+    * 多個 date 欄位時可以: 更改 layout 時指定 'show calendar by' 指定使用的日期。  
+    * 日曆上的記事:  Properties，可設定日曆上要顯示的資訊欄位。 
+    * 週曆日曆: Layout > Show Calendar as > Week/month。  
+
+https://www.notion.com/help/customize-your-database
+
+
+
+
+
+
 
 
 ### Database 轉換
 * table sheet to DB Page
 * 點 Table Sheet 名稱可複製 view url。同一個 DB page 可以
+
+## Notion DB 建立範例 
+
+
+## Property Column Type
+### 選項清單(單複選情境)
+* Property Column 可限定可選內容， 
