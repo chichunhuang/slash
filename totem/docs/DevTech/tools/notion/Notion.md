@@ -162,11 +162,15 @@ _注意事項:_
 * 複本也是一種將資料移轉的方式，依 workspace 或 Page Tree 分享。  
 * 雙方皆須有 notion 帳號。  
 * 版本依據建立時授權狀態，非帳號當下授權。   
+* [DB 共編](#notion_database_coedit)。在頁面已共編前提下，Database 可再額外設定資料 Rows 的存取與編輯權限。  
 
-> Steps 
+> 範本 Steps:  
 > 1. 擁有者 Pages 發佈 : 指定頁面 🢂 右上 share 🢂 publish 🢂 勾選 "複製為範本"  
 > 2. 共編方 : 到指定 URL 🢂 右上 "複製符號" 🢂 建立複本 🢂 加入專案 
 > 3. 擁有者重新回到發佈設定，取消或禁止建立複本。   
+> 
+> 頁面共編\(分享) Steps: 
+> 擁有者 Pages 分享 : 指定頁面 🢂 右上 share 🢂 invite 邀請其他 Notion Account 共編指定 Page tree。  
 
 
 ## Notion DB
@@ -186,8 +190,10 @@ _注意事項:_
 
 ### 建立方式
 * 基本: / + database  
-* Main Page 建立 inline DB，導向既有DB。 / + Table view  
-* Table vs Database 轉換: 六點工具 turn into database vs turn into simple table  
+* Main Page 建立 inline DB，導向既有DB。 / + Table view。   
+* 點 Table Sheet 名稱可複製 view url。後可貼在其他頁面中。    
+* Table vs Database 轉換: 六點工具 turn into database vs turn into simple table。  
+
 
 ### Notion DB View 種類
 * Table、Border、Chart、List、Calendar、Gallery、Timeline 甘特圖等。  
@@ -233,22 +239,19 @@ _注意事項:_
     * 日曆上的記事:  Properties，可設定日曆上要顯示的資訊欄位。 
     * 週曆日曆: Layout > Show Calendar as > Week/month。  
 
+
+## DB 共編 Person <span id="notion_database_coedit"> </span>
+* Person Type 的 Column 是用來設定夥伴的授權。  
+* 可搭配 filter 限制夥伴可看見的 rows。  
+* 操作: 
+    * Owner 先為 Databse 增加 Person Property，並決定 Row 與夥伴的對應關係\(cell 填寫夥伴帳號)。  
+    * 為 Person Column 增加 Filter。利用 Filter operator 與 Advanced Filter 進行限制。
+    * 設定 Filter 時<span style={{color: '#0044FF'}}> 須以<b>夥伴視角</b>來進行設定 </span>。 例如: Person contains ME \(ME 指的是夥伴視角)。   
+
 https://www.notion.com/help/customize-your-database
 
-
-
-
-
-
-
-
-### Database 轉換
-* table sheet to DB Page
-* 點 Table Sheet 名稱可複製 view url。同一個 DB page 可以
-
-## Notion DB 建立範例 
-
-
-## Property Column Type
-### 選項清單(單複選情境)
-* Property Column 可限定可選內容， 
+## Trigger
+* 當指定事件發生時，自動 trigger 其他事件動作。  
+    * 例如: 當電話號碼欄位輸入後，自動驅動地址的縣市欄位。  
+### Page added trigger 
+### Property edited trigger: 由 Property 驅動 
