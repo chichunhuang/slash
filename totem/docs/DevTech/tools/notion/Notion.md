@@ -201,14 +201,16 @@ _注意事項:_
 * 建立新 Sheet \(+) 時可自行指定 View\(瀏覽模式)。  
 * Table 右側 ... 可切換 Layout 或其他 Sheet 相關屬性。  
 * 同一份資料可以經由 'name > copy link to view' 貼到多處。並為分身客製化成不同長相。 
+    * 等同於 / + linked view of database  
 
 ### 屬性設定
-=> 因為不同的入口，可修改的屬性不完全一致。列出可做異動的相關入口。
+=> 因為不同的入口，可修改的屬性不完全一致。列出可做 CRUD 異動的相關入口。
 * Database: 直接點 Table Name > Edit view 可修改 Table/column 相關屬性與設定。
 * Database and Property: 點 Table 右上的 ... 可更改屬性。
 * Property: 點 Column Name 可跳出 Property 屬性泊塢視窗。
+* 點 Property 圖示可更換。
 
-### 表格關聯欄位 Relation
+### 表格關聯欄位 Relation Property
 * <span style={{color: '#0044FF'}}> <b>Database Relation, Rollup</b> </span>   
 * Relation
     * 新增 Main Table Property 時選擇 __Relation Type__ 可建立表格間的關聯。  
@@ -232,7 +234,7 @@ _注意事項:_
     * Filter Docker: 在 name 旁邊有 <span style={{color: '#0044FF'}}> **Operator 下拉選單** </span> 可供客製過濾條件。  
     * <b>Advanced Filter: 類似 SQL/DSL 操作語法</b>。   
 
-### Calendar
+### Calendar Property
 * 當 Table/Database 至少有一個 Date Column 時便可轉成 Calendar Layout。
 * 操作: 使用六點工具   
     * 多個 date 欄位時可以: 更改 layout 時指定 'show calendar by' 指定使用的日期。  
@@ -240,7 +242,7 @@ _注意事項:_
     * 週曆日曆: Layout > Show Calendar as > Week/month。  
 
 
-## DB 共編 Person <span id="notion_database_coedit"> </span>
+## DB 共編 Person Property <span id="notion_database_coedit"> </span>
 * Person Type 的 Column 是用來設定夥伴的授權。  
 * 可搭配 filter 限制夥伴可看見的 rows。  
 * 操作: 
@@ -248,10 +250,62 @@ _注意事項:_
     * 為 Person Column 增加 Filter。利用 Filter operator 與 Advanced Filter 進行限制。
     * 設定 Filter 時<span style={{color: '#0044FF'}}> 須以<b>夥伴視角</b>來進行設定 </span>。 例如: Person contains ME \(ME 指的是夥伴視角)。   
 
-https://www.notion.com/help/customize-your-database
+## Formula Property
+* [Notion Formula Basic](https://www.notion.com/help/formulas)
+* [Formula 2.0 Reference](https://www.notion.com/help/guides/new-formulas-whats-changed?_gl=1*90t2qe*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczMzE4NzQ1MC4xMi4xLjE3MzMxODg0OTMuNTcuMC4w&cookie_sync_completed=true)
+* 操作:  
+    * Edit Property > Edit Formula > Property 當 Argument > 決定 Formula  
+    * Docker Panel 上會出現基本使用說明。  
+    * Notion 有為 Formula 提供 [built-in functions](https://www.notion.com/help/formula-syntax)，ex: if, round, hour, repeat 等   
+
+## Sub-Items and Dependencies
+* 功能入口: table 左上 ... > Customize > add  
+* Sub-Items
+    * Database Table 下的 Row 可再拆分成 Sub-items \(closable, 子單元, tasks)。 
+    * Table 最下方的 rollup 計算數量或加總時會以 main row 為準。
+    * ... > Customize > Sub-items 可以移除階層顯示獲設定 sub-items 顯示方式。 
+* Dependency
+    * Dependency 用在<b>連續事件的時間規劃</b>，Column Property 須為日期區間類別。
+    * 前提條件: 用在 Timeline layout 且 Database 必須有日期欄位\(開啟 end date)。
+    * 作用: 當在 UI 拖拉時間區段時，可自動維持 shift 其他時間區段。或是融合成為子時間區段\(轉成 sub-item)。
+    
+    
+## Sprints and Tasks
+* Scrum 基本該有的都有了，如果能加上 issue tracking 那就更完美了。  
+* <span style={{color: '#0044FF'}}><b>XP team Sprint board</b></span>
+* Sprint Dashboard 與其他添加功能呈現上有些差異。
+    * database 轉換成 Sprint Dashboard 後，Sidebar 會多出 Sprint board / Sprints / Timeline submenus。  
+    * database 會多出 Current / Spring planning / Backlog 三張 Sheets。  
+* 建立 Task Database: 
+    * create database > ... > Customize > 查詢 Tasks > 轉換成 Task Database   
+    * create database > ... > Customize > 查詢 Sprints > 添加 Sprint Board 功能    
+    * Task Database: 必須具有至少下列三種類型的 Properties status\(Status), assignee\(Person), and due date\(Date)，轉換時可一併建立。
+* Sprint board : Sprint Task 規劃區 
+    * Current : 顯示當前 working 中的 Sprint。  
+    * Spring planning : 列出所有已建立的 Sprints，包含已完成的部分。  
+    * Backlog : 未排入 Sprint 的 Backlogs
+    * Spring name > ... > Hide Group 可將指定 Sprint 移至 hidden group 區塊\(已完成)。
+* Sprint Sidebar: Sprints 時程規劃區
+    * Sprints All: 列出 Sprint 狀態完成度等摘要資訊    
+    * Sprints Timeline: 用拖拉的方式行時程規劃，可以與 Google Calendar 搭配整合。      
+    
+### 編輯技巧
+* 批次修改: 滑鼠點 Row 前方，或勾選前方 checkboxes。被選取部分會出現底色。可出現 Docker 用來批次編輯指定 column。  
+
+
+
+
+
+
+
+
+
+
+
 
 ## Trigger
+* 付費版才能用，教育版無法使用。
 * 當指定事件發生時，自動 trigger 其他事件動作。  
     * 例如: 當電話號碼欄位輸入後，自動驅動地址的縣市欄位。  
-### Page added trigger 
-### Property edited trigger: 由 Property 驅動 
+    * Page added trigger 
+    * Property edited trigger: 由 Property 驅動 
