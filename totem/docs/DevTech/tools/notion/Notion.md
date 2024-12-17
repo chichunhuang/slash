@@ -203,7 +203,10 @@ _注意事項:_
 * 同一份資料可以經由 'name > copy link to view' 貼到多處。並為分身客製化成不同長相。 
     * 等同於 / + linked view of database  
 
-### 屬性設定
+### Database Row 
+* Notion Database 中的 Row 都隱含代表著一個 SubPage。可展開並做相關 Page 設定。但是並不向一般 SubPage 會在 MainPage 或 Sidebar 上顯示 Links，僅能由 database row 橋接過去。
+
+### Database Column 屬性設定
 => 因為不同的入口，可修改的屬性不完全一致。列出可做 CRUD 異動的相關入口。
 * Database: 直接點 Table Name > Edit view 可修改 Table/column 相關屬性與設定。
 * Database and Property: 點 Table 右上的 ... 可更改屬性。
@@ -218,9 +221,14 @@ _注意事項:_
     * 允許一對多。  
     * 發布後，點 Main 上 FK link 可以檢視相關 row 的內容。  
 * Rollup\(彙總) : 當 Database 具一對多 Relation 關係時，可以建立 Rollup Type Property。  
-    * 功能類似 Java 的 Stream。可以整合多的資料以指定的方式呈現，例如:sum, max, joining。   
+    * 功能類似 Java 的 Stream。可以整合多個資料以指定的方式呈現，例如:sum, max, joining。   
     * 不同 Type 的 Relation 可以有不同的處理工具。  
     * edit 🢂 Property 🢂 選擇 Sub's column 🢂 Calculate 🢂 決定處理動作 🢂 show as 🢂 決定呈現方式\(%、圓餅)  
+    * 如: 在 backlog 顯示相關 tasks 的完成度。
+* Calculations
+    * Rollup 與 column 最下方的 [Calculations](https://www.notion.com/help/tables) 比較。
+    * Calculations(縱向計算): 依 column 屬性特性為該欄位進行計算處理。
+    * Rollup(關聯資料計算): rollup 則是整合有 relation 的資料。
 
 ### Column Filter 
 * 同一份 DB 資料，可以用在不同地方。Filter 則可以為此客製不同呈現方式。  
@@ -290,7 +298,47 @@ _注意事項:_
     * Sprints Timeline: 用拖拉的方式行時程規劃，可以與 Google Calendar 搭配整合。      
     
 ### 編輯技巧
-* 批次修改: 滑鼠點 Row 前方，或勾選前方 checkboxes。被選取部分會出現底色。可出現 Docker 用來批次編輯指定 column。  
+* 批次修改: 滑鼠點 Row 前方，或勾選前方 checkboxes。被選取部分會出現底色。可出現 Docker 用來批次編輯指定 column。
+* Rollup and Calculations
+ 
+
+### Views
+> 新建立 Inline Database 時會在主頁下自動建立 sub-page。page 預設會以 View of database 命名。建議即刻依 view + db 改名。  
+> 整體而言: 
+>> database layout 與 columns 的顯示隱藏，相關設定在 <b>右上的 ...</b>   
+>> 與 view 相關的 specific 設定會放在 view <b>右上的相關快捷</b>   
+>> Card 的相關設定或 peak 會在 card <b>右上方</b>   
+
+* Tables View
+    * 基本的 table 呈現。 
+* Boards View\(三維呈現): Cards 
+    * database ... > Group/Sub-group > 可以自行設定分組與次群組方式，達到三維呈現。
+    * 設定 board layout 時可挑整 card 大小。Large/Medium/Small。
+    * snapshot: 每張 Card 代表著一個 Row，故 Board 在顯示內容縮圖時，Card 可以選擇顯示 cover/content/或 row 中多媒體 column。
+        * Layout > Card Preview > cover/content...   
+        * img: 縮圖裁切: Layout > Fi Image or 滑鼠移至縮圖 > Reposition
+        * content: ... > Properties 決定要顯示的欄位
+    * calculations: 與 Table view 相同，一個 Column 下的 Cards 可以進行 Calculate。 
+        * board column header 邊的數值即是 calculation。操作方法同 Table View。
+    * Visibility: 
+        * ... > Properties > Show/Hide
+        * ... > Group > Show/Hide
+        
+* Timeline View 
+    * 時間軸: ... > Layout > Show Timeline by 指定時間軸。           
+    * 顯示區段調整: Timeline 右側的時間單位夏拉快捷與 today，用來管理 Timeline view 的<b>橫向呈現</b> by week/month/quater/year。而 Calendar view 則是經由 ... 。
+    * 資料數: 
+        * row:  ... > Load limit: 可限制 view 的<b>縱向呈現</b>，限制起始時一次可顯示的 rows 筆數。
+        * column: Timeline 左上的 >> \(show table)，可調出 Table 的其他 toggled 欄位。 Database 的 ... > Layout > Properties 則控制那些 columns 可顯示。
+   
+* Calendar View
+    * 時間軸: ... > Layout > Show Timeline <b>by column</b> 指定時間軸。           
+    * 顯示時間區間: 與 Timeline 的右上快捷下拉不同，Calendar 須經由 ... > Layout > Show calendar <b>as month/week</b> 調整。    
+    * 資料數: 
+         * card(row): 每一 database row 會對應一張 card。同一時間相關 cards 會塞在同一個 cell，目前沒找到 toggle 功能。
+         * column:  ... > layout > properties，可設定 card 中的資訊欄位。 
+    * 註: 語系決定每周第一天是周一或周日，無法客製。
+    
 
 
 
