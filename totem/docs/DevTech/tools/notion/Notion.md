@@ -194,6 +194,13 @@ _注意事項:_
 * 點 Table Sheet 名稱可複製 view url。後可貼在其他頁面中。    
 * Table vs Database 轉換: 六點工具 turn into database vs turn into simple table。  
 
+### 額外功能特性擴充
+* 部分額外功能預設為關閉，需自行開啟。 ... > Customize My Database > Suggested > 選取特性。  
+     * [Sub-Items](#notion_subitems)
+     * [Dependencies](#notion_dependencies)  
+     * [Tasks](#notion_tasks)  
+     * AI Summary  
+     * AI translation 
 
 ### Notion DB View 種類
 * Table、Border、Chart、List、Calendar、Gallery、Timeline 甘特圖等。  
@@ -220,11 +227,15 @@ _注意事項:_
     * PK 是 Main Table 的 Name 欄位，雙向時 FK 則可以是 Sub 任意欄位。  
     * 允許一對多。  
     * 發布後，點 Main 上 FK link 可以檢視相關 row 的內容。  
-* Rollup\(彙總) : 當 Database 具一對多 Relation 關係時，可以建立 Rollup Type Property。  
+* Rollup\(彙總) : 當 Database 具一對多 Relation 關係時，可以建立 [Rollup Type Property](#notion_Chart_View)。  
     * 功能類似 Java 的 Stream。可以整合多個資料以指定的方式呈現，例如:sum, max, joining。   
     * 不同 Type 的 Relation 可以有不同的處理工具。  
-    * edit 🢂 Property 🢂 選擇 Sub's column 🢂 Calculate 🢂 決定處理動作 🢂 show as 🢂 決定呈現方式\(%、圓餅)  
+    * ... 🢂 Properties 🢂 選擇 Sub's column 🢂 Calculate 🢂 決定處理動作 🢂 show as 🢂 決定呈現方式\(%、圓餅)  
     * 如: 在 backlog 顯示相關 tasks 的完成度。
+    * 與 [Chart View](#notion_Chart_View) 比較
+        * rollup: 為單一 row 下的子單元做計算。統計 subitems 數量/完成度。
+        * chart: 為整份 database 做數量/完成度統計。  
+        
 * Calculations
     * Rollup 與 column 最下方的 [Calculations](https://www.notion.com/help/tables) 比較。
     * Calculations(縱向計算): 依 column 屬性特性為該欄位進行計算處理。
@@ -267,18 +278,19 @@ _注意事項:_
     * Notion 有為 Formula 提供 [built-in functions](https://www.notion.com/help/formula-syntax)，ex: if, round, hour, repeat 等   
 
 ## Sub-Items and Dependencies
-* 功能入口: table 左上 ... > Customize > add  
-* Sub-Items
-    * Database Table 下的 Row 可再拆分成 Sub-items \(closable, 子單元, tasks)。 
-    * Table 最下方的 rollup 計算數量或加總時會以 main row 為準。
+* 功能入口: table 右上 ... > Customize My Database > Suggested > add  
+* Sub-Items <span id="notion_subitems"> </span>
+    * 添加 Subitems 特性後，在 Row Name 會出現 🠟 符號可用來設定 subitems。 
+    * Database Table 下的 <span style={{color: '#0044FF'}}> **Row 可再拆分成 Sub-items \(closable, 子單元, tasks)** </span>。 
+    * Table 最下方的 <span style={{color: '#0044FF'}}> **rollup 計算數量或加總時會以 main row 為準** </span>。\(忽略 subitems)
     * ... > Customize > Sub-items 可以移除階層顯示獲設定 sub-items 顯示方式。 
-* Dependency
-    * Dependency 用在<b>連續事件的時間規劃</b>，Column Property 須為日期區間類別。
+* Dependency<span id="notion_dependencies"> </span>
+    * <b>Dependency</b> 用在<span style={{color: '#0044FF'}}> **連續事件的時間規劃** </span>，Column Property 須為日期區間類別。
     * 前提條件: 用在 Timeline layout 且 Database 必須有日期欄位\(開啟 end date)。
     * 作用: 當在 UI 拖拉時間區段時，可自動維持 shift 其他時間區段。或是融合成為子時間區段\(轉成 sub-item)。
     
     
-## Sprints and Tasks
+## Sprints and Tasks<span id="notion_tasks"> </span>
 * Scrum 基本該有的都有了，如果能加上 issue tracking 那就更完美了。  
 * <span style={{color: '#0044FF'}}><b>XP team Sprint board</b></span>
 * Sprint Dashboard 與其他添加功能呈現上有些差異。
@@ -311,8 +323,8 @@ _注意事項:_
 
 * Tables View
     * 基本的 table 呈現。 
-* Boards View\(三維呈現): Cards 
-    * database ... > Group/Sub-group > 可以自行設定分組與次群組方式，達到三維呈現。
+* Boards View\(三維呈現): Cards 三維呈現 與 [Gallery](#Gallery_View) 比較 <span id="Border_View"> </span>
+    * database ... > Group/Sub-group > 可以<span style={{color: '#0044FF'}}> **自行設定分組與次群組** </span>方式，達到三維呈現。
     * 設定 board layout 時可挑整 card 大小。Large/Medium/Small。
     * snapshot: 每張 Card 代表著一個 Row，故 Board 在顯示內容縮圖時，Card 可以選擇顯示 cover/content/或 row 中多媒體 column。
         * Layout > Card Preview > cover/content...   
@@ -339,9 +351,22 @@ _注意事項:_
          * column:  ... > layout > properties，可設定 card 中的資訊欄位。 
     * 註: 語系決定每周第一天是周一或周日，無法客製。
     
+* Gallery : 摘要與縮圖 cards 與 [Boards View](#Border_View) 比較 <span id="Gallery_View"> </span>
+    * Gallery View 以 Cards 來摘要顯示 row 的 media column/page cover/page content。簡單說就是以 <span style={{color: '#0044FF'}}> **card 加 snapshot** </span> 呈現 subpage 的 snapshot。    
+    * snapshot 選取: ... > Layout > Card preview > column。    
+    * 其他: card/database 右上角的 ... 可更改縮圖顯示/Card size/顯示properties等常規操作。
 
-
-
+* Chart View <span id="notion_Chart_View"> </span>
+    * Chart View 會依指定 Column 計算 All Rows 的完成度。
+    * Rollup column 則會計算 Row 的子單位 \(Subitems/subtasks) 完成度，但 [Subitems 預設是關閉需自行添加相關功能。](#notion_subitems)
+    * 注意: 免費版 chart 整理的資料上限是 200 groups，50 subgroups/subtasks/subitems。
+    * 功能入口: 
+        * table 右上 ... > Customize My Database > Suggested > add  Sub-Items。  
+        * Row Name 🠟 符號可用來設定 subitems。  
+        * 添加 subitems 後 ... > 會出現 What to show/include sub-items 選項。  
+        * What to show: 要進行 chart 統計用的欄位。   
+        * include sub-items: 是否忽略 sub-items 計算。<b>included</b> 時 subitem 視為完整的 row 進行計算，不與 parent 相依，各自獨立計算。  
+    * 與 [Rollup column 比較](#notion_rollup)     
 
 
 
