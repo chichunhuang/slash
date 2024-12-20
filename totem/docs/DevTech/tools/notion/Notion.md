@@ -320,6 +320,13 @@ _注意事項:_
 >> database layout 與 columns 的顯示隱藏，相關設定在 <b>右上的 ...</b>   
 >> 與 view 相關的 specific 設定會放在 view <b>右上的相關快捷</b>   
 >> Card 的相關設定或 peak 會在 card <b>右上方</b>   
+>
+> Layout/Peak: Row 的 Detail Page  
+>> 資料庫頁面可以自行設定 Detail 呈現資訊\(一般頁面似乎無此功能)，因部分的 View 在呈顯時僅顯示指定摘要資訊，故提供 row detail 功能。    
+>> Layout 指的是，滑鼠移至 name column 時所開啟的 Detail Page。這個 Page 是 Row 的一部分，不是 SubPage。  
+>> 設定入口:  
+>>  *🖱hover > 移至標題上方 > Customize Layout  
+>>  * 或是開啟 peak page > 右上 ... > Customize Layout  
 
 * Tables View
     * 基本的 table 呈現。 
@@ -357,17 +364,38 @@ _注意事項:_
     * 其他: card/database 右上角的 ... 可更改縮圖顯示/Card size/顯示properties等常規操作。
 
 * Chart View <span id="notion_Chart_View"> </span>
-    * Chart View 會依指定 Column 計算 All Rows 的完成度。
-    * Rollup column 則會計算 Row 的子單位 \(Subitems/subtasks) 完成度，但 [Subitems 預設是關閉需自行添加相關功能。](#notion_subitems)
+    * Chart View 會依指定 Column 計算 All Rows 的完成度。非付費版僅能建立一個 chart 使用。  
+    * [Rollup column](#notion_rollup) 則會計算 Row 的子單位 \(Subitems/subtasks) 完成度，但 [Subitems 預設是關閉需自行添加相關功能。](#notion_subitems)
     * 注意: 免費版 chart 整理的資料上限是 200 groups，50 subgroups/subtasks/subitems。
     * 功能入口: 
-        * table 右上 ... > Customize My Database > Suggested > add  Sub-Items。  
+        * chart: ... > What to show 選取要進行 chart 統計用的欄位。   
+        * subitems: table 右上 ... > Customize My Database > Suggested > add  Sub-Items。  
         * Row Name 🠟 符號可用來設定 subitems。  
         * 添加 subitems 後 ... > 會出現 What to show/include sub-items 選項。  
-        * What to show: 要進行 chart 統計用的欄位。   
         * include sub-items: 是否忽略 sub-items 計算。<b>included</b> 時 subitem 視為完整的 row 進行計算，不與 parent 相依，各自獨立計算。  
-    * 與 [Rollup column 比較](#notion_rollup)     
+    * X/Y 軸調整: 當選擇 line/bar chart 時畫 docker 才會出現 X/Y 軸相關調校設定
+        * X 軸: 橫軸可以選擇區大分類\(X axis : what to show )。常見是以時間或狀態為橫軸。
+        * Y 軸: 大分區下可再選定 bar 上的呈現方式\(bar 可再以顏色細分group)。通常 <span style={{color: '#0044FF'}}> **縱軸會呈現數量** </span> \(count)，若需要可再細分各子類的數量。
+        * Y 軸: 目前測試顯示的都是數量，只是可以指定類別去重複，並分別顯示類別總數。其他非預設標示則需 Style > More Options 自行開啟。  
+        * Y <u>What to show</u>: 要計算總數的項目。除了 count 外都是 distinct。
+        * Y <u>Group by</u>: bar 上再細分區段的條件。
+        * line chart 下會多出 Cumulative 設定，可依次累加數量。
+    * slice 調整: 圓餅圖特有的設定
+        * chart: what to show,資料大分組的種類,例如 Person。
+        * slice: 類似 line chart 的 Y 軸設定，指定要計算加總的條件。
+    * UI 客製化: 依 View 種類有不同設定
+        * ... > Style > More Options 建議開啟
+        * Data Label: 資料上的說明,數值標示
+        * Axis name: 顯示 XY 軸名稱與資訊,
+        * Legend: 顯示圖例  
 
+
+### Dashboard
+ * https://www.notion.com/help/guides/charts-visualize-data-track-progress-in-notion?_gl=1*6sao8l*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczNDY1OTYwNS4xLjEuMTczNDY1OTYxMS41NC4wLjA.&cookie_sync_completed=true
+ 
+         
+  
+    
 
 
 
