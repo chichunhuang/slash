@@ -388,16 +388,25 @@ _注意事項:_
         * Data Label: 資料上的說明,數值標示
         * Axis name: 顯示 XY 軸名稱與資訊,
         * Legend: 顯示圖例  
+    * Dashboard: 將多個圖表與資料統合成 Dashboard。以更高的角度觀看全局，以方便監控專案進度、發現趨勢並做出決策。
+        * [OKR Dashboard Notion 範例](https://www.notion.com/templates/category/free-okr-tracker-templates) 將多張圖表整合模板。
+        * OKR objectives and key results-目標與關鍵結果    
+        * Database 轉 Chart 摘要: Database 右方的 + > 建立新的 View > 最右側 ... > Layout > View 類型選擇 Chart > 回上一層依據 Chart Type 設定相關參數。
+        * 可搭配 [Block 並排](#notion_Notion_Column_Side_By_Side)自行設計 Dashboard 畫面。
 
 
-### Dashboard
- * https://www.notion.com/help/guides/charts-visualize-data-track-progress-in-notion?_gl=1*6sao8l*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczNDY1OTYwNS4xLjEuMTczNDY1OTYxMS41NC4wLjA.&cookie_sync_completed=true
- 
+### <span style={{backgroundColor: '#ffffb3'}} id="notion_Notion_Column_Side_By_Side">Notion Block 並排</span>
+ * 拖曳六點工具 > 將 Block 拖至指定 Block 最右端 > 等待出現插入指示符號  
+ * 註: 
+     * 滑鼠移至六點工具左側，可出現調整欄寬工具。操作方式如 excel。  
+     * 部分情境可能出現並排錯誤
          
   
     
 
 
+## Forms 表單
+* https://www.notion.com/help/forms
 
 
 
