@@ -57,6 +57,7 @@ keywords: [Notion]
 
 ## Notion Page 種類<span id="notion_page_type"> </span>  
 * Page 基本操作: 
+    * 每個工作的最小單元是 Block。Block 是一個容器用來乘載文字或圖表等。
     * (main page)建立: Docker Panel 🢂 __private__ 🢂 __+__ 按鈕 🢂 Create Page
     * 註: private 區域放的是<b>未發佈</b>的 Pages
     * (sub page)建立: Docker Panel 🢂 特定 Page 🢂 __+__ 按鈕 🢂 Create SubPage
@@ -66,16 +67,17 @@ keywords: [Notion]
     * 封面 \(Banner\): 可以自行插入一張圖片，或由相關聯圖庫網站直接定取用圖片。   
     * 圖示 \(Page Icon\): 這張圖也可 reference 到網路上的其他 icons。用在 a.Browser 的 Tab icon。b.Notion Docker 上的辨識圖樣。  
 * Page 轉換: 
-    * Notion 可以將 Block 轉成 Page，或是其他程式區塊。   
+    * Notion 可以將 Block 轉成 Page，或是其他程式區塊。
+* Block: 
+    * 操作技巧: 有時會使用複雜的 Block，例如 [Database](#notion_Database) 或是 [Form](#notion_Form) 等結構，此類結構下方似乎有 padding 區塊。若欲在下方附加 Block 時，常會發現無法直接 enter 新增，此時可將鼠標移置 Block 下方一段距離\(約4-5個rows)並注意鼠標變化，若由箭頭變成 I 型時便是WYSIWYG下可插入下一 Block 位置。
 
-         
 * Pages 種類:注意不同種類的 Page 由不同的 icons 呈現    
     * Private Page: 這邊指的是未 Publish 的 Pages。    
     * Public Page: 這邊泛指已 Publish 的 Pages。     
     * DB Page: Notion 中指的 DB 類似 Graph DB。以表格呈現可直接編輯並建立相關關聯。   
         * Page icon 有 __↗__ 符號的是，__Mentioned Page__。是單純的 Page Link。  
         * <span style={{color: 'blue'}}>Page icon 僅單純頁面符號的是，Page 的分支。Link 與 Page 同存亡</span>。  
-        * icon 有橫線的是已填內容的 Page。  
+        * icon 有橫線的是已填內容的 Page。 
 
 
 ## __發佈 publish__  
@@ -169,7 +171,7 @@ _注意事項:_
 > 2. 共編方 : 到指定 URL 🢂 右上 "複製符號" 🢂 建立複本 🢂 加入專案 
 > 3. 擁有者重新回到發佈設定，取消或禁止建立複本。   
 > 
-> 頁面共編\(分享) Steps: 
+> 頁面共編\(分享) Steps: <span id="notion_database_coedit_setting"> </span>
 > 擁有者 Pages 分享 : 指定頁面 🢂 右上 share 🢂 invite 邀請其他 Notion Account 共編指定 Page tree。  
 
 
@@ -185,7 +187,7 @@ _注意事項:_
 > <code>/ + 以 Database </code> &nbsp;&nbsp; (非/ + table)。  
 
 
-## Table Database
+## Table Database <span id="notion_Database"> </span>
 * [Reference](https://www.notion.com/zh-tw/help/category/databases) 
 
 ### 建立方式
@@ -239,7 +241,8 @@ _注意事項:_
 * Calculations
     * Rollup 與 column 最下方的 [Calculations](https://www.notion.com/help/tables) 比較。
     * Calculations(縱向計算): 依 column 屬性特性為該欄位進行計算處理。
-    * Rollup(關聯資料計算): rollup 則是整合有 relation 的資料。
+    * Rollup\(關聯資料計算): rollup 則是整合有 relation 的資料。
+    * [Formula](#notion_Formula) \(row 本身資料處理): 比較 Formula column，允許 row 將自身欄位進行運算進而提供整理資料。
 
 ### Column Filter 
 * 同一份 DB 資料，可以用在不同地方。Filter 則可以為此客製不同呈現方式。  
@@ -269,7 +272,16 @@ _注意事項:_
     * 為 Person Column 增加 Filter。利用 Filter operator 與 Advanced Filter 進行限制。
     * 設定 Filter 時<span style={{color: '#0044FF'}}> 須以<b>夥伴視角</b>來進行設定 </span>。 例如: Person contains ME \(ME 指的是夥伴視角)。   
 
-## Formula Property
+## Unique ID Property
+* 這邊指的是 batabase 中可以為 row 設定一個 __唯一識別碼 Unique ID__ 欄位，來代表該資料列。
+* 可自行為 Unique ID Property 設定 prefix。  
+* database 中每個 row 都有一個 detail page\(滑鼠移置 Name column 會出現 open 提示)，用以展示 Row 所有相關資訊。當 Unique ID 串接 BaseURL 可組合出 detail page 所需快速路徑。
+    * https://www.notion.so/UniqueID-9999
+
+## Formula Property <span id="notion_Formula"> </span>
+* Formula: 依據其他欄位進行運算處理後的整合欄位。
+    * 如:計算 start date 與 end date 間的差異，而呈現 data span。    
+    * 分數高於 60 顯示及格，反之顯示不及格。
 * [Notion Formula Basic](https://www.notion.com/help/formulas)
 * [Formula 2.0 Reference](https://www.notion.com/help/guides/new-formulas-whats-changed?_gl=1*90t2qe*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczMzE4NzQ1MC4xMi4xLjE3MzMxODg0OTMuNTcuMC4w&cookie_sync_completed=true)
 * 操作:  
@@ -312,7 +324,6 @@ _注意事項:_
 ### 編輯技巧
 * 批次修改: 滑鼠點 Row 前方，或勾選前方 checkboxes。被選取部分會出現底色。可出現 Docker 用來批次編輯指定 column。
 * Rollup and Calculations
- 
 
 ### Views
 > 新建立 Inline Database 時會在主頁下自動建立 sub-page。page 預設會以 View of database 命名。建議即刻依 view + db 改名。  
@@ -325,7 +336,7 @@ _注意事項:_
 >> 資料庫頁面可以自行設定 Detail 呈現資訊\(一般頁面似乎無此功能)，因部分的 View 在呈顯時僅顯示指定摘要資訊，故提供 row detail 功能。    
 >> Layout 指的是，滑鼠移至 name column 時所開啟的 Detail Page。這個 Page 是 Row 的一部分，不是 SubPage。  
 >> 設定入口:  
->>  *🖱hover > 移至標題上方 > Customize Layout  
+>>  * 🖱hover > 移至標題上方 > Customize Layout  
 >>  * 或是開啟 peak page > 右上 ... > Customize Layout  
 
 * Tables View
@@ -400,17 +411,63 @@ _注意事項:_
  * 註: 
      * 滑鼠移至六點工具左側，可出現調整欄寬工具。操作方式如 excel。  
      * 部分情境可能出現並排錯誤
-         
-  
-    
 
 
-## Forms 表單
+## Notion Forms 表單<span id="notion_Form"> </span>
 * https://www.notion.com/help/forms
+* Form 表單設計功能僅限 PC 端可使用。  
+* Notion Form 目前 *__無法更新既有送交資料__*，每次送交都是獨立事件。殘念......  
+* 資料收集對象不限於 [Notion 的使用者](#notion_database_coedit_setting)。
+    * Form builder > 右側 share form > who can fill out? > 可選取 public
+    * 若 database 有 __Last edited by__ 欄位則，可自動指向 Notion co-editor \(採用 Anyone at Notion DB) 或自動填入 Anonymous\(採用 Anyone on the web link)   
+* Form 建立方式: 
+    * 由 database 建立 > + > view 選 form > 會出現 Create Questions 確認項。  
+    * /form 指令: 建立 Form 並一併建立 database。  
+    
+* 關於 input fields: 
+    * 隱藏資訊欄位: Last edited time, Last edited by(隱含欄位)
+    * 欄位於 database 或 form builder 建立的都可在相對應 view 擴充\(須手動擴充)。  
+    * is required: form builder > block 右側隱藏的 ... > required 用來設定必填與否。
+    * text 轉 area: form builder > block 右側隱藏的 ... > long answer 可將輸入欄位改成 TextArea。\(註: Notion 限制文字類最長 2000 char)
+    * 送交時提示訊息: form builder > block 右側隱藏的 ... > Customize form > CUstomiz，可調整表單送交時的訊息與 button 呈現。
 
+* 開放表單: 
+    * form builder > 右側的 Share form > who can fill out? > 
+    * 不收集填表人資訊: __Anyone at Notion DB__ 選項預設收集填表人帳號資訊，可藉由 Share form > Anonymous responses 關閉。  
 
+* 匯出已收集資料: 
+    * Notion Form 與 database 相依故直接使用 database 匯出功能即可。    
+    * Page > 做外層右上的 ... > Export 
 
+## Advanced Notion Forms  
+* https://www.notion.com/help/guides/use-forms-to-collect-organize-and-act-on-responses-in-notion?_gl=1*qs5hi7*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczNTg4OTk5MC45LjAuMTczNTg5MDAwNC40Ni4wLjA.
 
+> Form 與 Database 結合後的應用技巧:  
+> 以 form 來收集資料，  
+> 利用 database 的各種 view 來分析已收集資料。  
+> 如: 
+>> 蒐集日期時，可轉成 calendar view，來呈現完成日期/啟動日期等資訊
+>> 蒐集時間區段時，可轉成 timeline view，來看專案時程等。 
+>> Chart 來看完成率等。
+
+* [搭配 email 欄位進行工作通知](13546798): \(似乎教育 plus 以上授權才可執行所有功能)
+    * form builder 右側 __閃電__ 符號  
+    * when: 建立指定事項發生時的 trigger 
+    * do: 指定 Slack 或電子郵件更新
+
+* 整合多張表單至單一 database: <span id="notion_MultiForm_2_SingleDatabase"> </span>
+    * Notion Form 目前 *__無法更新既有送交資料__*，每次送交都是獨立事件。  
+    * 此處指的是，一個 Database 可以設計出多個表單，資料可收集至相同 database，但同參與者送交資料無法自動合併。
+    * 建立多張 forms: database 左側 + > form > 自行決定要採用的欄位\(properties)。
+
+* Notion form 與 Google form 整合 \(要外掛)
+    * https://www.youtube.com/watch?v=XEwOtlsF_oY
+    * https://www.youtube.com/watch?v=oAxg4MZ4Jv8
+    
+* Notion database 與 Google Sheets 同步 \(要外掛)
+    * https://workspace.google.com/marketplace/app/sync2sheets_notion_in_sync_with_google_s/887187948180
+    * https://nuit0815.medium.com/notion-%E4%BD%BF%E7%94%A8%E8%A8%A3%E7%AB%85-%E9%80%A3%E7%B5%90-google-%E8%A1%A8%E5%96%AE%E8%88%87-notion-database-27a44a6c0ee1
+    
 
 
 ## Trigger
