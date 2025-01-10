@@ -123,11 +123,15 @@ _注意事項:_
 * Backlink: 
     * 滑鼠指向 Page Title 時會出現 backlinks 列表，指向所有 mention 此頁的 links。  
 
-* Links 相關操作
+* Links 相關操作:
     * 快速建立 Page Links，@ 或 [[ 後接 Pagename  
     * URL : MD 語法中的 \[直接網址\]，圖示為 鍊條    
     * / + Mention a Page : (說明\)\[網址\]，導向已存在的 Notion Page。這邊的是 _inline link_ 。  
     * / + Link to Page : (說明\)\[網址\]，導向已存在的 Notion Page，後方無法加其他文字敘述。圖示為 icon 加上箭頭
+
+* Notion Embed:
+    * / + embed 語法可將指定來源利用 ifreame 插入, 參考 [Notion_Integration](#Notion_Integration)
+
 
 ## Notion 使用技巧
 ### 圖片相關 

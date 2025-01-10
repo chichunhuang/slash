@@ -4,5 +4,8 @@ description: Notion 共編
 keywords: [Notion,Sharing]
 ---
 
-## Sharing
-https://www.notion.com/help/category/sharing-and-collaboration
+## Collaboration
+* [Workspace 共編方式](https://www.notion.com/help/collaborate-within-a-workspace)
+
+
+from here
