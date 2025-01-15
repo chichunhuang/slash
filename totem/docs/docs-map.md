@@ -5,7 +5,7 @@ sidebar_position: 1
 # Document List (docs)
 
 
-最後更版時間:Wed Jan 15 09:28:29 CST 2025
+最後更版時間:Wed Jan 15 09:44:10 CST 2025
 
 #### 2023年度稽核
 * [SSDLC.md](/docs/DevTech/ISO27001/2023年度稽核/SSDLC)
@@ -98,6 +98,8 @@ sidebar_position: 1
 * [Python 繼承介紹 - Python Inheritance](/docs/DevTech/Python/OOP/Python_4_Inheritance_Basic)
 * [Python 與 OOP - Python 與物件導向](/docs/DevTech/Python/OOP/Python_4_OOP)
 * [Python 類別成員 - Python 類別成員 Vars and Funs](/docs/DevTech/Python/OOP/Python_4_Class_Members)
+### Rust
+* [InsectTotem Rust - 搬移中](/docs/DevTech/Rust/Rust)
 #### 1Start
 * [Rust Hello World! - Rust Hello World!](/docs/DevTech/Rust/1Start/Rust_1_HelloWorld)
 * [Rust 安裝 - Rust 安裝](/docs/DevTech/Rust/1Start/Rust_1_Installation)

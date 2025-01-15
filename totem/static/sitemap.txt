@@ -78,6 +78,7 @@ https://insect-totem.net/docs/DevTech/Python/Python_module_pickle
 https://insect-totem.net/docs/DevTech/Python/Send_Eail_By_Python
 https://insect-totem.net/docs/DevTech/Rust/1Start/Rust_1_HelloWorld
 https://insect-totem.net/docs/DevTech/Rust/1Start/Rust_1_Installation
+https://insect-totem.net/docs/DevTech/Rust/Rust
 https://insect-totem.net/docs/DevTech/SQL/Insert_From_Selection_Values
 https://insect-totem.net/docs/DevTech/SQL/Insert_Into_vs_Select_Into
 https://insect-totem.net/docs/DevTech/SQL/Using_subqueries_outside_of_WHERE

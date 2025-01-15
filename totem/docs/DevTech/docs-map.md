@@ -5,14 +5,14 @@ sidebar_position: 1
 # Document List (DevTech)
 
 
-最後更版時間:Wed Jan 15 09:28:29 CST 2025
+最後更版時間:Wed Jan 15 09:44:10 CST 2025
 
 ### 2023年度稽核
 * [SSDLC.md](/docs/DevTech/ISO27001/2023年度稽核/SSDLC)
 ### 2024年度稽核_IB
 * [2024 ISMS 會議紀錄 - 2024 ISMS 會議紀錄](/docs/DevTech/ISO27001/2024年度稽核_IB/會議記錄)
 * [20240726-SBOM.md](/docs/DevTech/ISO27001/2024年度稽核_IB/20240726-SBOM)
-* [總統府資通安全姿和經驗分享 - 總統府資通安全稽核經驗分享](/docs/DevTech/ISO27001/2024年度稽核_IB/總統府資通安全姿和經驗分享)
+* [總統府資通安全姿和經驗分享 - 總統府資通安全姿和經驗分享](/docs/DevTech/ISO27001/2024年度稽核_IB/總統府資通安全稽核經驗分享)
 ## Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/DevTech/Java/ExceptionMailFromLog4j)
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/DevTech/Java/Session_Fixation)
@@ -45,6 +45,7 @@ sidebar_position: 1
 * [PostgreSQL Update JSONB Column - 更改 PostgreSQL JSONB 欄位資料值](/docs/DevTech/PostgreSQL/JSONB/PostgreSQL_Update_JSONB_Column)
 * [PostgreSQL find value by Attr from JSONB - PostgreSQL find value from JSONB column](/docs/DevTech/PostgreSQL/JSONB/Postgresql_find_value_by_Attr_of_JSONB_column)
 ## Python
+* [Python 搬移至 https://python.insect-totem.net/](https://python.insect-totem.net/)
 * [Pickle 序列化與反序列化 - Python 物件序列化與反序列化](/docs/DevTech/Python/Python_module_pickle)
 * [Python Comprehension - 迴圈與lambda的結合](/docs/DevTech/Python/Python_Comprehension)
 * [Python Dict - Python Dict 資料結構與操作](/docs/DevTech/Python/Python_Typing_dict)
@@ -98,7 +99,9 @@ sidebar_position: 1
 * [Python 繼承介紹 - Python Inheritance](/docs/DevTech/Python/OOP/Python_4_Inheritance_Basic)
 * [Python 與 OOP - Python 與物件導向](/docs/DevTech/Python/OOP/Python_4_OOP)
 * [Python 類別成員 - Python 類別成員 Vars and Funs](/docs/DevTech/Python/OOP/Python_4_Class_Members)
-### 1Start
+## Rust
+* [InsectTotem Rust - https://rust.insect-totem.net/](https://rust.insect-totem.net/)
+### Rust Start
 * [Rust Hello World! - Rust Hello World!](/docs/DevTech/Rust/1Start/Rust_1_HelloWorld)
 * [Rust 安裝 - Rust 安裝](/docs/DevTech/Rust/1Start/Rust_1_Installation)
 ## SQL
