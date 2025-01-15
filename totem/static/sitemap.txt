@@ -1,7 +1,7 @@
 https://insect-totem.net/docs/DevTech/ISO27001/2023年度稽核/SSDLC
 https://insect-totem.net/docs/DevTech/ISO27001/2024年度稽核_IB/20240726-SBOM
 https://insect-totem.net/docs/DevTech/ISO27001/2024年度稽核_IB/會議記錄
-https://insect-totem.net/docs/DevTech/ISO27001/2024年度稽核_IB/總統府資通安全姿和經驗分享
+https://insect-totem.net/docs/DevTech/ISO27001/2024年度稽核_IB/總統府資通安全稽核經驗分享
 https://insect-totem.net/docs/DevTech/Java/Cypher/Java_Aes_Cipher
 https://insect-totem.net/docs/DevTech/Java/Cypher/Java_Encryption
 https://insect-totem.net/docs/DevTech/Java/Cypher/Java_Pbe_Cipher
