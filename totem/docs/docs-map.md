@@ -3,6 +3,16 @@ sidebar_position: 1
 ---
 
 # Document List (docs)
+
+
+最後更版時間:Wed Jan 15 09:28:29 CST 2025
+
+#### 2023年度稽核
+* [SSDLC.md](/docs/DevTech/ISO27001/2023年度稽核/SSDLC)
+#### 2024年度稽核_IB
+* [2024 ISMS 會議紀錄 - 2024 ISMS 會議紀錄](/docs/DevTech/ISO27001/2024年度稽核_IB/會議記錄)
+* [20240726-SBOM.md](/docs/DevTech/ISO27001/2024年度稽核_IB/20240726-SBOM)
+* [總統府資通安全姿和經驗分享 - 總統府資通安全姿和經驗分享](/docs/DevTech/ISO27001/2024年度稽核_IB/總統府資通安全稽核經驗分享)
 ### Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/DevTech/Java/ExceptionMailFromLog4j)
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/DevTech/Java/Session_Fixation)
@@ -101,6 +111,15 @@ sidebar_position: 1
 * [隱藏 Tomcat 版本資訊 - ](/docs/DevTech/Tomcat/Hide_Tomcat_Version)
 ### javascript
 * [JS HTML input 自動全選 - Javascript Template input selects all on focus](/docs/DevTech/javascript/Textfield_Select)
+### tools
+* [Tools - 工具簡介](/docs/DevTech/tools/Tools)
+#### canva
+* [Canva 學習紀錄 - Canva Notes](/docs/DevTech/tools/canva/Canva)
+#### notion
+* [Notion Apps - Notion Apps](/docs/DevTech/tools/notion/Notion_Apps)
+* [Notion 學習紀錄 - Notion Notes](/docs/DevTech/tools/notion/Notion)
+* [Notion 學習紀錄 整合其他軟體 - Notion 整合其他軟體](/docs/DevTech/tools/notion/Notion_Integration)
+* [Notion2 學習紀錄 - Notion 共編](/docs/DevTech/tools/notion/Notion2)
 ## Graphics
 * [Butterfly - Insect-Totem Butterfly](/docs/Graphics/Butterfly_01)
 * [Butterfly Papilio - Insect-Totem Butterfly PapilioXuthus](/docs/Graphics/Butterfly_Papilio_xuthus_01)

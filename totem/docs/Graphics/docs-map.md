@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Document List (Graphics)
 
+
+最後更版時間:Wed Jan 15 09:28:29 CST 2025
+
+
 * [Butterfly - Insect-Totem Butterfly](/docs/Graphics/Butterfly_01)
 * [Butterfly Papilio - Insect-Totem Butterfly PapilioXuthus](/docs/Graphics/Butterfly_Papilio_xuthus_01)
 * [Dynastes Hercules - Insect-Totem - Dynastes Hercules](/docs/Graphics/Dynastes_Hercules_01)
