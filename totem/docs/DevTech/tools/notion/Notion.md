@@ -29,18 +29,27 @@ keywords: [Notion]
     * [widgetbox](https://widgetbox.app/)  
 
 ## 關於帳號
-> 摘要: 先使用教育版，授權被收回時資料移轉至一般帳號。
+> 摘要:  
+>> 先使用教育版，授權被收回時資料移轉至一般帳號。   
+>> 若需要共編情形請直接使用 free 或付費版，以開啟 add member 功能。   
+> <span style={{backgroundColor: '#b3ffb3'}}>注意教育版的種類</span>:<br/>   
+> 1. Plus Plan for <strong>individual</strong> students and teachers (由 email 認證)<br/>
+> 2. Plus Plan for student <strong>organizations</strong> (未列於 Notion 指定清單中的教育機構需額外申請)，此版本才開啟 add members 功能。   
 
-* 目前教育加強版的認證方式是依 email，<b>教育單位的 email 可申請教育加強版</b>。\(這邊單指的是版本，有教育 email 是否授權是另一回事\)  
+* free version 一經 add member，便無法升級為 edu plus,反之 edu plus 會封鎖 add member 功能  
+
+* [教育版 individual edu plus 限制](https://www.notion.com/help/notion-for-education)  
+    * 目前教育加強版的認證方式是依 email，<b>教育單位的 email 可申請教育加強版</b>。\(這邊單指的是版本，有教育 email 是否授權是另一回事\)  
 * 以 email 註冊帳號 vs 以 email 登入
     * email 註冊帳號 : 也就是 email 當帳號，即使你畢業了，email 被回收了。只要不忘記賬密仍能使用。  
     * email/FB 登入 : 就是以第三方服務當 AD server。  
 * 基本上 Notion 中的資料跟著帳號跑，因此必須了解 [更改 email 方式] (#notion_change_mail) 。反過來說 Notion 中搬移全部資料的方式便是更改 email。        
 
 ### 教育加強版開通
- 
-> 1. <span style={{color: '#0044FF'}}> 教育版 </span>: Sidebar 🢂 Settings 🢂 升級方案 🢂 學生vs教育版 升級方案
-> 2. 升級: Sidebar 🢂 Settings 🢂 帳單 🢂 方案 🢂 變更方案 (更改為付費版) 
+> 這邊指的是 Plus Plan for individual students and teachers  
+> 1. <span style={{color: '#0044FF'}}> 教育版 </span>: Sidebar 🢂 Settings 🢂 升級方案 🢂 學生vs教育版 升級方案  
+> 2. 升級: Sidebar 🢂 Settings 🢂 帳單 🢂 方案 🢂 變更方案 (更改為付費版)  
+>> 註: edu plus 雖無法 add member 但可 add guests   
  
 
 ## Notion 版面介紹
@@ -175,9 +184,12 @@ _注意事項:_
 > 2. 共編方 : 到指定 URL 🢂 右上 "複製符號" 🢂 建立複本 🢂 加入專案 
 > 3. 擁有者重新回到發佈設定，取消或禁止建立複本。   
 > 
-> 頁面共編\(分享) Steps: <span id="notion_database_coedit_setting"> </span>
-> 擁有者 Pages 分享 : 指定頁面 🢂 右上 share 🢂 invite 邀請其他 Notion Account 共編指定 Page tree。  
-
+> 單一頁面共編\(Guest 分享) Steps: <span id="notion_database_coedit_setting"> </span> <br/>
+> 擁有者 Pages 分享 : 指定頁面 🢂 右上 share 🢂 invite 邀請其他 Notion Account 共編指定 Page tree。<br/>   
+> 
+> workspace 共編 \(Member 分享)<br/> 
+> Settings > workspace > People > Add Members<br/>
+> 左上 account > invite members
 
 ## Notion DB
 > Notion DB: Notion 中的 DB 並非關聯式資料庫。  
@@ -269,10 +281,11 @@ _注意事項:_
 
 
 ## DB 共編 Person Property <span id="notion_database_coedit"> </span>
+* Person Property 自動帶入的限 Notion Member 與 Notion Guest。參考 Notion 共編章節
 * Person Type 的 Column 是用來設定夥伴的授權。  
 * 可搭配 filter 限制夥伴可看見的 rows。  
 * 操作: 
-    * Owner 先為 Databse 增加 Person Property，並決定 Row 與夥伴的對應關係\(cell 填寫夥伴帳號)。  
+    * Owner 先為 Database 增加 Person Property，並決定 Row 與夥伴的對應關係\(cell 填寫夥伴帳號)。  
     * 為 Person Column 增加 Filter。利用 Filter operator 與 Advanced Filter 進行限制。
     * 設定 Filter 時<span style={{color: '#0044FF'}}> 須以<b>夥伴視角</b>來進行設定 </span>。 例如: Person contains ME \(ME 指的是夥伴視角)。   
 
@@ -474,9 +487,8 @@ _注意事項:_
     
 
 
-## Trigger
-* 付費版才能用，教育版無法使用。
-* 當指定事件發生時，自動 trigger 其他事件動作。  
-    * 例如: 當電話號碼欄位輸入後，自動驅動地址的縣市欄位。  
-    * Page added trigger 
-    * Property edited trigger: 由 Property 驅動 
+
+
+    
+    
+    
