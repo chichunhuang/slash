@@ -187,9 +187,12 @@ _注意事項:_
 > 單一頁面共編\(Guest 分享) Steps: <span id="notion_database_coedit_setting"> </span> <br/>
 > 擁有者 Pages 分享 : 指定頁面 🢂 右上 share 🢂 invite 邀請其他 Notion Account 共編指定 Page tree。<br/>   
 > 
-> workspace 共編 \(Member 分享)<br/> 
+> workspace 共編 \(Member 分享)<br/>   
 > Settings > workspace > People > Add Members<br/>
 > 左上 account > invite members
+> 
+> Guest/Member 移除更改授權角色等功能同樣位於 Settings > workspace > People 
+
 
 ## Notion DB
 > Notion DB: Notion 中的 DB 並非關聯式資料庫。  

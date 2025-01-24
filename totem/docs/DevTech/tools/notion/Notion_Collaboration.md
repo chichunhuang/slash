@@ -15,7 +15,7 @@ keywords: [Notion,Sharing]
 > Guest 僅能編輯單一 Page。
 
 ### Member
-> Sidebar > Settings > People > Add members<br/>
+> owner > Sidebar > Settings > People > Add members<br/>
 > Member 依授權不同最高可得到整個 workspace 所有權。
 
 
