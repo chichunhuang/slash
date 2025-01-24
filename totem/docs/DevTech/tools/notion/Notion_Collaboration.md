@@ -1,5 +1,5 @@
 ---
-title: Notion2 學習紀錄
+title: Notion 共編
 description: Notion 共編
 keywords: [Notion,Sharing]
 ---
