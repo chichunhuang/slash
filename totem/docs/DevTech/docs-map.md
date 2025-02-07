@@ -7,12 +7,6 @@ sidebar_position: 1
 
 最後更版時間:Wed Jan 15 09:44:10 CST 2025
 
-### 2023年度稽核
-* [SSDLC.md](/docs/DevTech/ISO27001/2023年度稽核/SSDLC)
-### 2024年度稽核_IB
-* [2024 ISMS 會議紀錄 - 2024 ISMS 會議紀錄](/docs/DevTech/ISO27001/2024年度稽核_IB/會議記錄)
-* [20240726-SBOM.md](/docs/DevTech/ISO27001/2024年度稽核_IB/20240726-SBOM)
-* [總統府資通安全姿和經驗分享 - 總統府資通安全姿和經驗分享](/docs/DevTech/ISO27001/2024年度稽核_IB/總統府資通安全稽核經驗分享)
 ## Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/DevTech/Java/ExceptionMailFromLog4j)
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/DevTech/Java/Session_Fixation)

@@ -10,11 +10,11 @@ keywords: [Notion,Sharing]
 >> Guests 權限小，僅能共編被指定頁面。Notion edu plus 版本下單一 teamspace 可設 100 guests。  
 >> Member 與 Guest 都屬於 Notion Database 中的 Person Property。  
 
-### Guest
+### Guest <span id="Notion_Team_Guest"></span>
 > Page Owner 經由 Top-Right > Share > email，受邀者不須有 Notion Account。需要 email 驗證以取得登入密碼。<br/>  
 > Guest 僅能編輯單一 Page。
 
-### Member
+### Member<span id="Notion_Team_Member"></span>
 > owner > Sidebar > Settings > People > Add members<br/>
 > Member 依授權不同最高可得到整個 workspace 所有權。
 
@@ -62,19 +62,40 @@ E: Analytics:
 - Page owner 可以在 page top-right ... > updates & analytics 檢視 Page 瀏覽狀態。 
 - Analytics 預設開啟。關閉分析方式 Settings > My Settings > Privacy > Show my view history > Record/Don't Record
  
+
+
 F: Teamspace
+> 這邊須留意 <strong>版權</strong>與<strong>Member與Guest差異</strong>問題:<br/>  
+> edu plus 版是提供給個人 individual，所以無提供 Teamspace 相關功能。<br/>  
+> 反倒是 free 版提供 Teamspace 功能。但有限制 Members 人數最多 100。<br/>  
+> [Member 依權限](#Notion_Team_Member)最高可編輯整份 Teamspace。<br/>
+> [Guest 則只能見到與編輯](#Notion_Team_Guest) Owner 分享出來的特定頁面。 
+
+- Teamspace 建立: 左側 Sidebar > Settings > workspace > teamspaces > Teamspace setting > Manage Teamspaces 下可建立。
+    - Teamspace Page 建立: Teamspace > ... > + > Page
+    - Workspace Page 轉 Teamspace Page > Page upright ... > move to 
+
+- 新增 Teamspace 成員:
+> Workspace member/ w-guest/ Teamspace member / Teamspace owner 可各自獨立邀請，但 workspace member 在 free version 下會自動升級為 teamspace member。
+
+    - 只能由 Workspace 中已存在 People 中選取，故須先 invite workspace members(w-member) 或 share page(w-guest):
+        - W-member: 左上 Workspace > Invite Members 
+            - Sidebar > Settings > People> Invite \(workspace) Members 
+            - free version workspace member 會自動成為 teamspace member，且無法移除 teamspace 的 role。
+        - W-guest: 右上 share by email account
+    - hover teamspace > Add (Team) Members 
+        - 可填入 email 邀請非 notion account 夥伴
+        - 也可直接將 workspace member 增加 teamspace role。 
+
+TeamSpace 相關 Roles
+TeamSpace Owner
+TeamSpace Member
+Workspace Member
+Workspace Guest (無 Notion account)
  
   
 
 from here
-
-
-F: teamspace
-- 說是會預設有 teamspace，不過似乎部分情境下左側 Sidebar 並未出現 Teamspaces 區塊。
-- L-Sidebar Settings > workspace > teamspaces > Teamspace setting > Manage Teamspaces 下可建立。(部分情境似乎,無此區塊)
-- 是否有 teamspace 似乎與建立 workspace 時所選的工作方式相關  
-
-
 
 
 
