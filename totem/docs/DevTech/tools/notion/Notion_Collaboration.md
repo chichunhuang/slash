@@ -65,6 +65,10 @@ E: Analytics:
 
 
 F: Teamspace
+> Teamspace 可以簡單想成是，分享與共用 Workspace 的編輯權，也可想成是將 Workspace 割一塊出去共用。簡單的說就是子工作空間。    
+> 有別於 Workspace Page 的分享，限縮於單一頁面或頁面部分區塊。
+- [TeamSpace 相關 Roles](#Notion_Teamspace_Roles)定義。
+
 > 這邊須留意 <strong>版權</strong>與<strong>Member與Guest差異</strong>問題:<br/>  
 > edu plus 版是提供給個人 individual，所以無提供 Teamspace 相關功能。<br/>  
 > 反倒是 free 版提供 Teamspace 功能。但有限制 Members 人數最多 100。<br/>  
@@ -87,11 +91,12 @@ F: Teamspace
         - 可填入 email 邀請非 notion account 夥伴
         - 也可直接將 workspace member 增加 teamspace role。 
 
-TeamSpace 相關 Roles
-TeamSpace Owner
-TeamSpace Member
-Workspace Member
-Workspace Guest (無 Notion account)
+## TeamSpace 相關 Roles <span id="Notion_Teamspace_Roles">&nbsp;</span>
+Workspace Owner: 對整個工作空間具有完全控制權的角色。  
+Workspace Member: W-owner 可允許頁面與其他 Notion 成員共編。這類被分享的成員為 Workspace Member。
+Workspace Guest (無 Notion account): W-owner 可經由 __email__ 允許頁面與其他  __非Notion 成員__ 共編。這類被分享的成員為 Workspace Guest。
+TeamSpace Owner: 子工作空間的擁有人。Workspace 可以拆出一塊多人共管。這塊拆出空間的管理人稱為 T-Owner。
+TeamSpace Member: T-owner 可允許頁面與其他成員共編。這類被分享的成員為 Teamspace Member。(W-member 預設賦予 T-member 權限)
  
   
 
