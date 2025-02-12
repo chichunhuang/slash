@@ -4,6 +4,8 @@ description: Notion 整合其他軟體
 keywords: [Notion, Integration]
 ---
 
+[Data & integrations](https://www.notion.com/help/category/import-export-and-integrate)
+
 
 ## Notion Doc Import <span id="notion_Doc_Imported">&nbsp;</span>
 * 這邊用的字眼是 import / insert，指的是有副本或是截圖。因此不是及時完整內容。
