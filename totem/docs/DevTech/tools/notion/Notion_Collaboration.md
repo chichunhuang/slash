@@ -5,10 +5,13 @@ keywords: [Notion,Sharing]
 ---
 
 ## 關於共編必需知道的事
-> 寫在最前面，共編前須先搞清楚 [Notion Members](https://www.notion.so/help/add-members-admins-guests-and-groups?_gl=1*1o0koff*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczNzYyMDA5My4yMi4xLjE3Mzc2MjAwOTguNTUuMC4w#members) 與 [Notion Guests](https://www.notion.so/help/add-members-admins-guests-and-groups?_gl=1*1o0koff*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczNzYyMDA5My4yMi4xLjE3Mzc2MjAwOTguNTUuMC4w#guests) 差別。 
+> 寫在最前面，共編前須先搞清楚 <br/>
+> 共編種類: 工作區共編\(Teamspace)，單頁共編\(Page Sharing) <br/>
+> [共編角色: Member/Guest](https://www.notion.com/help/whos-who-in-a-workspace) <br/>
+> [Notion Members](https://www.notion.so/help/add-members-admins-guests-and-groups?_gl=1*1o0koff*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczNzYyMDA5My4yMi4xLjE3Mzc2MjAwOTguNTUuMC4w#members) 與 [Notion Guests](https://www.notion.so/help/add-members-admins-guests-and-groups?_gl=1*1o0koff*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczNzYyMDA5My4yMi4xLjE3Mzc2MjAwOTguNTUuMC4w#guests) 差別。 
 >> Member 權限較大，可檢視整個 workspace。Notion edu plus 下一個 teamspace 僅能有一個 member 就是 creator。    
 >> Guests 權限小，僅能共編被指定頁面。Notion edu plus 版本下單一 teamspace 可設 100 guests。  
->> Member 與 Guest 都屬於 Notion Database 中的 Person Property。  
+>> Member 與 Guest 都屬於 Notion Database 中的 Person Property，可自動成為選擇清單項目。    
 
 ### Guest <span id="Notion_Team_Guest"></span>
 > Page Owner 經由 Top-Right > Share > email，受邀者不須有 Notion Account。需要 email 驗證以取得登入密碼。<br/>  
@@ -16,14 +19,12 @@ keywords: [Notion,Sharing]
 
 ### Member<span id="Notion_Team_Member"></span>
 > owner > Sidebar > Settings > People > Add members<br/>
-> Member 依授權不同最高可得到整個 workspace 所有權。
-
-
+> Member 依授權不同最高可得到整個 workspace/teamspace 所有權。
 
 ## Collaboration
-> L-Sidebar Settings > workspace > People 可管理共編成員與設共編程成員權限  
-> Page upper-right > share 可以設定頁面共編與否   
-> 
+> L-Sidebar Settings > workspace > People 可管理共編成員與設定共編成員權限  
+> Page Sharing: Page upper-right > share 可以設定頁面共編與否   
+> Teamspace 建立: 左側 Sidebar > Settings > workspace > teamspaces > Teamspace setting > Manage Teamspaces 下可建立。
 
 * A[Workspace 共編方式](https://www.notion.com/help/collaborate-within-a-workspace)
 * B[Inbox and Page Notification](https://www.notion.com/help/updates-and-notifications)
@@ -35,7 +36,7 @@ keywords: [Notion,Sharing]
 
 A: 
 - 共編類似 Jira confluence/Google sheet 編輯，可即時看到線上成員所做的異動。
-- 點右上成員圖像可快速跳到其編輯處。
+- 點右上成員圖像可快速跳到成員現在編輯處。
 - 查可共編成員: L-Sidebar Settings > workspace > People 可看到可共編成員
 - 鎖定頁面\(全頁鎖定): __Page upper-right__ > ... > Lock Page。 __所有人__ 包含 owner 都無法編輯。但full access成員可重新開啟。
 - Database 鎖定\(部分鎖定): database  upper-right / 六點 > lock database, 限定指定 database 所有成員皆無法編輯。但相關連 form\(responses) 仍可進行回應。 
@@ -63,11 +64,11 @@ E: Analytics:
 - Analytics 預設開啟。關閉分析方式 Settings > My Settings > Privacy > Show my view history > Record/Don't Record
  
 
-
+##  Teamspace  
 F: Teamspace
 > Teamspace 可以簡單想成是，分享與共用 Workspace 的編輯權，也可想成是將 Workspace 割一塊出去共用。簡單的說就是子工作空間。    
 > 有別於 Workspace Page 的分享，限縮於單一頁面或頁面部分區塊。
-- [TeamSpace 相關 Roles](#Notion_Teamspace_Roles)定義。
+- [Teamspace 相關 Roles](#Notion_Teamspace_Roles)定義。
 
 > 這邊須留意 <strong>版權</strong>與<strong>Member與Guest差異</strong>問題:<br/>  
 > edu plus 版是提供給個人 individual，所以無提供 Teamspace 相關功能。<br/>  
@@ -91,16 +92,30 @@ F: Teamspace
         - 可填入 email 邀請非 notion account 夥伴
         - 也可直接將 workspace member 增加 teamspace role。 
 
-## TeamSpace 相關 Roles <span id="Notion_Teamspace_Roles">&nbsp;</span>
-Workspace Owner: 對整個工作空間具有完全控制權的角色。  
-Workspace Member: W-owner 可允許頁面與其他 Notion 成員共編。這類被分享的成員為 Workspace Member。
-Workspace Guest (無 Notion account): W-owner 可經由 __email__ 允許頁面與其他  __非Notion 成員__ 共編。這類被分享的成員為 Workspace Guest。
-TeamSpace Owner: 子工作空間的擁有人。Workspace 可以拆出一塊多人共管。這塊拆出空間的管理人稱為 T-Owner。
-TeamSpace Member: T-owner 可允許頁面與其他成員共編。這類被分享的成員為 Teamspace Member。(W-member 預設賦予 T-member 權限)
+### TeamSpace 相關 Roles / Groups <span id="Notion_Teamspace_Roles">&nbsp;</span>
+__Roles__
+* [官方 Roles 概念摘要](https://www.notion.com/help/whos-who-in-a-workspace)
+- Workspace Owner: 對整個工作空間具有完全控制權的角色。  
+- Workspace Member: W-owner 可允許頁面與其他 Notion 成員共編。這類被分享的成員為 Workspace Member。
+- Workspace Guest (無 Notion account): W-owner 可經由 __email__ 允許頁面與其他  __非Notion 成員__ 共編。這類被分享的成員為 Workspace Guest。
+- TeamSpace Owner: 子工作空間的擁有人。Workspace 可以拆出一塊多人共管。這塊拆出空間的管理人稱為 T-Owner。
+- TeamSpace Member: T-owner 可允許頁面與其他成員共編。這類被分享的成員為 Teamspace Member。(W-member 預設賦予 T-member 權限)
  
+__Groups__
+* 在管理 Members / Guests 的右側是 Groups 管理頁簽。
+    * Sidebar > settings > people > Groups
+* 可自行建立 Group 並新增移除成員。
+* Group 可簡化共編流程: 
+    * 群組分享: Page sharing 時可以直接與 Group 分享
+    * 由 Group 建立群組空間: Manage Group 頁簽的 ... > create teamspace from group
+    * Group 成員僅能由 members / guests 中挑選。
+### Teamspace 打包與退出群組
+- 功能入口: Sidebar > Teamspace > ... > Leave/Archive Teamspace。
+- 這邊功能應該有受限於版本種類，部份情形下無法使用。
   
 
-from here
+
+
 
 
 
