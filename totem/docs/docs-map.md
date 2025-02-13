@@ -103,7 +103,7 @@ sidebar_position: 1
 * [Insert from Select - Insert from select result](/docs/DevTech/SQL/Insert_From_Selection_Values)
 * [Using subqueries outside of WHERE - 在 sql from 中使用子查詢](/docs/DevTech/SQL/Using_subqueries_outside_of_WHERE)
 ### Server
-* [Jenkins Debian 安裝設定紀錄 - Jenkins Debian 安裝設定紀錄](/docs/DevTech/Server/02_JenkinsCIServerOnDebian)
+* [Jenkins Debian 安裝設定紀錄 - Jenkins Debian 安裝設定紀錄](/docs/DevTech/Server/JenkinsCIServerOnDebian)
 ### Tomcat
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)

@@ -5,3 +5,7 @@
 
 # https://github.com/chichunhuang/slash.git
 # https://chichunhuang.github.io/slash/
+
+# npm run start
+# npm run build
+# yarn deploy
