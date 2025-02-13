@@ -426,7 +426,8 @@ _注意事項:_
         * 可搭配 [Block 並排](#notion_Notion_Column_Side_By_Side)自行設計 Dashboard 畫面。
 
 
-### <span style={{backgroundColor: '#ffffb3'}} id="notion_Notion_Column_Side_By_Side">Notion Block 並排</span>
+### <span>Notion Block 並排</span><span id="notion_Notion_Column_Side_By_Side"> </span>
+<br/><span style={{backgroundColor: '#ffffb3'}}>__Notion Block 並排__</span> 可以讓畫面更加 condense  
  * 拖曳六點工具 > 將 Block 拖至指定 Block 最右端 > 等待出現插入指示符號  
  * 註: 
      * 滑鼠移至六點工具左側，可出現調整欄寬工具。操作方式如 excel。  

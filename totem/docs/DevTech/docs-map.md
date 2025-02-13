@@ -5,7 +5,7 @@ sidebar_position: 1
 # Document List (DevTech)
 
 
-最後更版時間:Wed Jan 15 09:44:10 CST 2025
+最後更版時間:Thu Feb 13 09:36:01 CST 2025
 
 ## Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/DevTech/Java/ExceptionMailFromLog4j)
@@ -94,14 +94,16 @@ sidebar_position: 1
 * [Python 與 OOP - Python 與物件導向](/docs/DevTech/Python/OOP/Python_4_OOP)
 * [Python 類別成員 - Python 類別成員 Vars and Funs](/docs/DevTech/Python/OOP/Python_4_Class_Members)
 ## Rust
-* [InsectTotem Rust - https://rust.insect-totem.net/](https://rust.insect-totem.net/)
-### Rust Start
+* [InsectTotem Rust 搬移中 - https://rust.insect-totem.net/](https://rust.insect-totem.net/)
+### 1Start
 * [Rust Hello World! - Rust Hello World!](/docs/DevTech/Rust/1Start/Rust_1_HelloWorld)
 * [Rust 安裝 - Rust 安裝](/docs/DevTech/Rust/1Start/Rust_1_Installation)
 ## SQL
 * [Insert Into v.s. Select Into - Insert-Into 與 Select-Into 使用上差異](/docs/DevTech/SQL/Insert_Into_vs_Select_Into)
 * [Insert from Select - Insert from select result](/docs/DevTech/SQL/Insert_From_Selection_Values)
 * [Using subqueries outside of WHERE - 在 sql from 中使用子查詢](/docs/DevTech/SQL/Using_subqueries_outside_of_WHERE)
+## Server
+* [Jenkins Debian 安裝設定紀錄 - Jenkins Debian 安裝設定紀錄](/docs/DevTech/Server/02_JenkinsCIServerOnDebian)
 ## Tomcat
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
@@ -109,12 +111,13 @@ sidebar_position: 1
 ## javascript
 * [JS HTML input 自動全選 - Javascript Template input selects all on focus](/docs/DevTech/javascript/Textfield_Select)
 ## tools
-* [Tools - 工具簡介](/docs/DevTech/tools/Tools)
+* [Tools - 工具簡介](/docs/DevTech/tools/ToolsNote)
 ### canva
-* [Canva 學習紀錄 - Canva Notes](/docs/DevTech/tools/canva/Canva)
+* [Canva 學習紀錄 - Canva Notes](/docs/DevTech/tools/canva/CanvaNote)
 ### notion
 * [Notion Apps - Notion Apps](/docs/DevTech/tools/notion/Notion_Apps)
-* [Notion 學習紀錄 - Notion Notes](/docs/DevTech/tools/notion/Notion)
+* [Notion 共編 - Notion 共編](/docs/DevTech/tools/notion/Notion_Collaboration)
+* [Notion 學習紀錄 - Notion Notes](/docs/DevTech/tools/notion/NotionBasic)
 * [Notion 學習紀錄 整合其他軟體 - Notion 整合其他軟體](/docs/DevTech/tools/notion/Notion_Integration)
-* [Notion2 學習紀錄 - Notion 共編](/docs/DevTech/tools/notion/Notion2)
+* [Notion 自動化 - Notion 自動化](/docs/DevTech/tools/notion/Notion_Automation)
 
