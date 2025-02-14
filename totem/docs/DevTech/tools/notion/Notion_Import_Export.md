@@ -1,11 +1,8 @@
 ---
-title: Notion 學習紀錄 整合其他軟體
-description: Notion 整合其他軟體
-keywords: [Notion, Integration]
+title: Notion 資料匯入匯出
+description: Notion 資料匯入匯出
+keywords: [Notion,Import,Export]
 ---
-
-[Data & integrations](https://www.notion.com/help/category/import-export-and-integrate)
-
 
 ## Notion Doc Import <span id="notion_Doc_Imported">&nbsp;</span>
 * 這邊用的字眼是 import / insert，指的是有副本或是截圖。因此不是及時完整內容。
@@ -15,9 +12,11 @@ keywords: [Notion, Integration]
     * /google map     
 * 其他類型文件: 經由 Setting > import > 種類選取。
     * word 
-    * excel, csv
+    * excel, 
     * html
-    * markdown
+    * markdown: 僅限不含 databasse 的 Notion Page 可以 md format 匯出 
+    * csv: 單頁的 Notion Database 可以以 CSV 匯出。
+    * PDF: 匯入文字說明與圖片。轉換成為已上傳檔為名的 Notion Page。
  * 其他軟體資料匯入或是同步:\(未全試過)
     * confluence / Jira / Dropbox / evernote ....
     
@@ -48,14 +47,35 @@ keywords: [Notion, Integration]
     * 拖拉可 resize / ... 可 view original 或 replace embedded content
 
 
+## Notion 資料匯出與備份
+> 
+> 資料匯出會因為 Browser/ Mobile App / Desktop / 匯出格式 不同而略有差異  
+> 這邊主要紀錄的是 Browser 下的使用方式
+> 在共編與團隊合作下，商業版 owner 可以關閉資料匯出功能。  
 
 
+__匯出方式__ 
+* upper right > ... > Export 可叫出匯出功能，並自訂匯出格式。
+    * 可選擇格式、內容、紙張大小。
+    * 以及 __是否打包並匯出子頁面__
+    
+__特殊內容匯__    
+* HTML 格式可額外匯出 comments 與 mentions 
+* Notion Database 僅能以 CSV format 格式匯出 
+
+__workspace 備份__
+* Sidebar > settings > setting > Export content > Export all workspace content  
+    * Notion 會保留下載檔 7 天，並將 download link 寄到指定信箱。  
+
+__關閉備份功能__
+* Workspace Sidebar > settings > Security and data > General > Disable export
+* Teamspace > ... > Teamspace settings > Security > Disable export 
 
 
-## Notion 資料匯出
-https://www.notion.com/zh-tw/help/export-your-content
-
-## Notion 資料備份
-https://www.notion.com/zh-tw/help/back-up-your-data
-
-## 與 Slack 整合
+## Notion 資料遷移至其他帳號 <span id="Notion_migrate_workspace">&nbsp;</span>
+1. 以 Owner 登入工作區。
+1. 將您的所有頁面整合到一個頂級頁面下。
+1. 將 workspace 完全存取權分享給指定 email。
+1. 以接收者帳號登入，並至共享頂層頁面。
+1. 選擇所有子頁面，點擊 ⋮⋮ 圖示 > Move To 新的工作區。
+* [reference](https://www.notion.com/help/back-up-your-data)

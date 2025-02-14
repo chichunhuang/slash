@@ -1,7 +1,7 @@
 ---
-title: Notion Apps
-description: Notion Apps
-keywords: [Notion, Calendar, Wikis, AI, Projects]
+title: Notion Calendar
+description: Notion Calendar
+keywords: [Notion, Calendar]
 ---
 
 # Notion 筆記之外
@@ -58,6 +58,6 @@ __移除 Notion Calendar 帳號__
 * Notion Calendar 帳號 移除: 直接刪帳號，則 workspace 下既有已連結 Notion Calendar 會失效，但 workspace 中 connection 設定仍在，需手動移除
    * 先進入 Notion Calendar > Sidebar > mouse-over Account 旁的 ... > 管理日曆帳號 > Settings > Account > Profile > 刪除 Notion 日曆帳號
    
-### Database 中多個 Data Properties
+### Database 中多個 Date Properties
 * <b>預設一個 Database 僅有一個 Date Property 會在 Notion Calendar 上呈現</b>。當有多個欄位時需自行指定要顯示的欄位。
     * database > 右側 ... > Layout > Show calendar by > 選擇 Property 

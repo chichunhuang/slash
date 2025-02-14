@@ -43,7 +43,8 @@ keywords: [Notion]
 * 以 email 註冊帳號 vs 以 email 登入
     * email 註冊帳號 : 也就是 email 當帳號，即使你畢業了，email 被回收了。只要不忘記賬密仍能使用。  
     * email/FB 登入 : 就是以第三方服務當 AD server。  
-* 基本上 Notion 中的資料跟著帳號跑，因此必須了解 [更改 email 方式] (#notion_change_mail) 。反過來說 Notion 中搬移全部資料的方式便是更改 email。        
+* 基本上 Notion 中的資料跟著帳號跑，因此必須了解 [更改 email 方式] (#notion_change_mail) 。反過來說 Notion 中搬移全部資料的方式便是更改 email。
+    * [官方建議方式則是將頁面收集到單一結構樹下，分享整個 Tree](Notion_Import_Export#Notion_migrate_workspace)。        
 
 ### 教育加強版開通
 > 這邊指的是 Plus Plan for individual students and teachers  
