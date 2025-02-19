@@ -78,7 +78,6 @@ __移除 Workspace 與 Notion Calendar 同步關聯__
     * from workspace: Settings > Connections > All Connections > target > ... > Disconnect account
     * from calendar: 左側 Sidebar > Notion workspace > ... > 設定 > 整合 > 工作空間 > 此處可移除工空間
 
-
 ## Calendar 時區
 進入 Calendar 後，日曆畫面的左側為時間軸，最上方可以進行時區設定與增刪與設定別名。畫面上允許同時呈現多個時區時間，方便跨國工作者使用。
    
@@ -92,26 +91,47 @@ __移除 Notion Calendar 帳號__
     1. Security → Access and data control → API controls → Manage Google services
     1. Configured apps → View list → Add app → OAuth app Name or Client ID
     1. Notion Calendar → Trusted
-
+* Notion Calendar 設定 
+    * 所有設定入口: Notion Calendar Sidebar > Calendar Account > ... > Manage Calendar Account > 
+    * 語系設定: Notion Workspace 與 Notion Calendar 各自管理自己 App 的語系設定, Manage Calendar Account > General > Language
+    * 通知與提醒: Manage Calendar Account > Notifications 
 
 ## Database 中多個 Date Properties
 * <b>預設一個 Database 僅有一個 Date Property 會在 Notion Calendar 上呈現</b>。當有多個欄位時需自行指定要顯示的欄位。
     * database > 右側 ... > Layout > Show calendar by > 選擇 Property 
     
 ## Notion Calendar 應用技巧
+__Block Calendar:__
+* 這邊指的是，Notion Calendar 間可以相互通知是否忙碌。例如個人行程日曆上的事件，可自動在工作群組日曆上被標記為 Busy 且不顯示所有事件細節。
+* Notion 上的共用工作群組的其他人只會看見自己該時段為 Busy。
+    * 註: 工作群 Calendar 以原 App \(ex: 回 Google calendar) 查看時會多出以個人行程名義的建立複製事件。
+* 步驟: 個人行程日曆的事件上 > 右鍵 > Block on Calendar 自日曆上封鎖 > 選定要出現 Busy 標記的標的 Calendars。
+    * 可選定標記單一次間或將所有事件都在標的 Calendar 上標示 Busy。    
+* Relay: 目前測試大約5秒鐘才會在原 App 中看到變化。
+* 若 Auto Block Calendar 設定後，無論何時新增的 events 都會被自動 block， __下次新增事件時__ 需自行手動移除。
+    * event > 右鍵 > Block on Calendar > 選取 calendar > __勾選取消自動__ block target calendar 
+
+__更改 event 上的使用者名__
+* 因為預設會步入出編輯者帳號資訊，若想以別名呈現可自行調整
+* Notion Calendar Sidebar > Calendar Account > ... > Manage Calendar Account > Profile > Username
+
+
+* [Notion 日曆會議整合和 API](https://notion.so/help/notion-calendar-integrations)
+ 
+
+
+
+
+
+
+
+
+
+
 * [官方 Notion Calendar 應用技巧](https://www.notion.com/help/guides/getting-started-with-notion-calendar?_gl=1*ia50g3*_gcl_au*MTkyODI4NjE5Ny4xNzM5NDM3Njkx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczOTc4MDE2OC40MS4xLjE3Mzk3ODQxMTQuNTguMC4w&cookie_sync_completed=true) 
 
 
+* [團隊用 Notion 日曆] (https://notion.so/help/notion-calendar-for-teams?_gl=1*46x4yv*_gcl_au*MTkyODI4NjE5Ny4xNzM5NDM3Njkx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczOTg0MTQ1NC40Mi4xLjE3Mzk4NDIyMTcuNTAuMC4w)
 
 
-
-
-[可用性、封鎖和時區] (https://notion.so/help/availability-blocking-and-time-zones?_gl=1*uiqcq0*_gcl_au*MTkyODI4NjE5Ny4xNzM5NDM3Njkx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczOTg0MTQ1NC40Mi4xLjE3Mzk4NDIyMTcuNTAuMC4w)
-
-
-[團隊用 Notion 日曆] (https://notion.so/help/notion-calendar-for-teams?_gl=1*46x4yv*_gcl_au*MTkyODI4NjE5Ny4xNzM5NDM3Njkx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczOTg0MTQ1NC40Mi4xLjE3Mzk4NDIyMTcuNTAuMC4w)
-
-
- [Notion 日曆會議整合和 API](https://notion.so/help/notion-calendar-integrations?_gl=1*huynat*_gcl_au*MTkyODI4NjE5Ny4xNzM5NDM3Njkx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczOTg0OTU2OC40NC4xLjE3Mzk4NTA3NjYuNjAuMC4w)
- 
- [將 Notion 日曆與 Notion 結合使用](https://notion.so/help/use-notion-calendar-with-notion?_gl=1*huynat*_gcl_au*MTkyODI4NjE5Ny4xNzM5NDM3Njkx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczOTg0OTU2OC40NC4xLjE3Mzk4NTA3NjYuNjAuMC4w)
+* [將 Notion 日曆與 Notion 結合使用](https://notion.so/help/use-notion-calendar-with-notion?_gl=1*huynat*_gcl_au*MTkyODI4NjE5Ny4xNzM5NDM3Njkx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczOTg0OTU2OC40NC4xLjE3Mzk4NTA3NjYuNjAuMC4w)
