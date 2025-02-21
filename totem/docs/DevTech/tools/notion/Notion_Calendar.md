@@ -86,8 +86,6 @@ __Calendar 與 Notion Page 建立關聯:__
 * 如果想為日曆上的事件增加一些附加文件，例如會議的投影片資料。此時，Notion 提供 Event 與 Notion Page 建立連結的功能。可將參考資訊紀錄在 Notion Page，Calendar 上的事件再與 Page 建立關聯。
 * Calendar Event 選取 > 右側 Docker Panel > Docs and Links > 選取或建立要建立關聯的頁面 > 點 x 可直接移除關聯
 
-
-
 ## 設定 Default Calendar
 * 這邊指的是新增事件預設放入的位置設定
 * 左側 Sidebar > Calendar 或 Database 名 > ... Settings > Calendars > Make Calendar Default > 選取
@@ -145,23 +143,18 @@ __更改 event 上的使用者名__
 __Notion Calendar 與 線上會議整合__
 * 我少用這功能，所以僅留下: [Notion Calendar / Zoom / Google Meet 等整合方式參考位置](https://www.notion.com/zh-tw/help/notion-calendar-integrations)
 
- 
+__與 Teamates 共享 Calendar__
+* 共享成員必須被 Google Workspace 管理。
+* 沒使用 Google Workspace，所以僅留參考文獻。 
+    * [Calendar for Teams] (https://www.notion.com/zh-tw/help/notion-calendar-for-teams)
+    * [Work with Teammates](https://www.templates4notion.com/blog/notion-calendar-app-tutorial#bonus-tip-revert-to-cron-logo)
 
 
+## Notion Calendar 的資安管理
+* 資料 AES-256 加密
+* 網路 TLS 1.2
+* 使用 Google OAuth API 驗證
+* Server 由 AWS 託管
+* 搭配 Google Workspace 管理企業團隊 Calendar 帳號
+* 遵循 SOC2, GDPR 資安規範
 
-* [團隊用 Notion 日曆] (https://www.notion.com/zh-tw/help/notion-calendar-for-teams)
-
-FROM HERE-----------------------------------
-
-
-
-
-
-
-
-* [官方 Notion Calendar 應用技巧](https://www.notion.com/help/guides/getting-started-with-notion-calendar?_gl=1*ia50g3*_gcl_au*MTkyODI4NjE5Ny4xNzM5NDM3Njkx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczOTc4MDE2OC40MS4xLjE3Mzk3ODQxMTQuNTguMC4w&cookie_sync_completed=true) 
-
-
-
-
-* [將 Notion 日曆與 Notion 結合使用](https://notion.so/help/use-notion-calendar-with-notion?_gl=1*huynat*_gcl_au*MTkyODI4NjE5Ny4xNzM5NDM3Njkx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczOTg0OTU2OC40NC4xLjE3Mzk4NTA3NjYuNjAuMC4w)
