@@ -10,16 +10,22 @@ function GoogleImage(fileId, fileName, options = {}  ){
   let hidden = options.hidden?true:false;
   let degree = options.degree?options.degree:0;
     
-  let googleFileId = "https://drive.google.com/file/d/" + fileId + "/preview";
-  let staticFileName = "/gd/waiting/"+fileName+"";
+  let file_Id = isBlank(fileId)?"1-BpQLo_Lc4OMolKwOifCwMAK32qyCMgL":fileId;
+  let file_Name = isBlank(fileName)?"insect_totem_logo_70x70.jpg":fileName;
+  let googleFileId = "https://drive.google.com/file/d/" + file_Id + "/preview";
+  let staticFileName = "/gd/waiting/"+file_Name+"";
     
  return <span>
-    <iframe src={googleFileId} width={frameWidth} height={frameHeight} allow="autoplay" scrolling="false" style={{ transform: 'rotate('+degree +'deg)' }} ></iframe><br/>
+    <iframe src={googleFileId} width={frameWidth} height={frameHeight} allow="autoplay" scrolling="false" style={{ transform: 'rotate('+degree +'deg)' }} ></iframe>
     <img  src={staticFileName} hidden={hidden}
     style={{ transform: 'rotate('+degree +'deg)' }} 
     />
   </span>
     }
+
+function isBlank(str) {
+    return (!str || /^\s*$/.test(str));
+}
 
 export {GoogleImage};
 
@@ -27,7 +33,7 @@ export {GoogleImage};
 //import {GoogleImage} from "@site/src/components/google/GoogleImage";
 //
 //<span>
-// {GoogleImage('1dwZEh-UW0Eh_JhT3vlKrl9oxPdWT3tzB', '100-100.jpg', {hidden:true, hidden:false})}
+// {GoogleImage('1dwZEh-UW0Eh_JhT3vlKrl9oxPdWT3tzB', '100-100.jpg', {hidden:false})}
 //</span>
 
 
