@@ -62,7 +62,7 @@ log_filename = 'postgresql-%Y-%m-%d_%H%M%S.log'
 
 log_duration = on 
                  # Logs the duration of each completed SQL statement
-                 # 記錄每個完成的 SQL 語句的持續時間
+                 # 記錄每個完成的 SQL 語句的持續時間，毫秒
                  
 log_min_duration_statement = 0
                  # 超過指定時間閾值的 Statement 會被記錄
@@ -88,4 +88,30 @@ log_file_mode = 0600
                     
 ```
 
-                    
+
+## 更改設定後須重啟資料庫
+
+```property
+
+sudo systemctl restart postgresql
+
+or 
+
+sudo service postgresql restart
+
+```
+
+
+## 日誌查看範例指令
+* 使用 grep command
+
+```
+# 逐行查詢
+less pg_log/postgresql-2025-02-27_120000.log
+
+# 關鍵字查詢
+grep "SELECT" pg_log/postgresql-2025-02-27_120000.log
+
+grep "duration" pg_log/postgresql-2025-02-27_120000.log
+
+```        
