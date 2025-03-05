@@ -27,7 +27,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 * 設定相關區域(鵝黃色)
     * __左側 Sidebar__: Workspace 與 Pages 相關設定，位於整個 <span style={{color: '#0044FF'}}> **畫面的左側** </span> 。
     * __三點符號__: 特定 Functional  Block 相關參數設定，功能區塊的<span style={{color: '#0044FF'}}> **右上角** </span>。
-    * __六點符號__: 單一 Content Block 相關參數設定，內容的<span style={{color: '#0044FF'}}> **最前方** </span>。
+    * __六點符號 ⁝⁝ __: 單一 Content Block 相關參數設定，內容的<span style={{color: '#0044FF'}}> **最前方** </span>。
 
     
 * 工作區: 剩餘區塊便是工作區塊，主要由功能區塊與內容區塊組成。

@@ -47,7 +47,7 @@ __Calendar 中新增其他次要 Google 帳號__
 * 一個 Notion Calendar 可以連結多個 Google 帳號，並連接帳號下多個 Google Calendars。 
 * 新增次要 Google ccounts 方式: 
     1. 進入 Notion Calendar App
-    1. 左側 Dock Panel 的 email 帳號 > ... > 管理日曆帳號 > 整合 > 日曆 > 新增日曆帳號
+    1. 左側 Dock Panel 的 email 帳號 > __ … __ > 管理日曆帳號 > 整合 > 日曆 > 新增日曆帳號
     2. 移除或更改 primary account 皆位於管理日曆帳號功能下
 
 __Calendar 與 workspace 連接異動:__ 
@@ -64,8 +64,8 @@ __Calendar 與 workspace 連接異動:__
 1. grant authorities 
 
 __Calendar 與 workspace database 連接異動:__ 
-* 左側 Sidebar > Notion Account > ... > Add Notion Database: 指與 Notion database 連接。 
-* 移除: 須以移除 workspace 方式移除 Date Property 內容: 左側 Sidebar 會出現 Notion Account > ... > 管理工作空間 > 此處可移除工空間
+* 左側 Sidebar > Notion Account > __ … __ > Add Notion Database: 指與 Notion database 連接。 
+* 移除: 須以移除 workspace 方式移除 Date Property 內容: 左側 Sidebar 會出現 Notion Account > __ … __ > 管理工作空間 > 此處可移除工空間
 
 *Databases 資料同步到 Calendar*
 * Database 下的 Date Property / Timeline 等時間資訊可自動加入 Calendar 活動。  
@@ -76,7 +76,7 @@ __Calendar 與 workspace database 連接異動:__
 
 *Calendar 編輯同步到 Database*
 * __一個 Notion Calendar 上的 Event 僅能同步到一個指定的關聯 DB 或 Calendar__ ，故須自行皆換指定。
-* Event 事件選取後，新增事件預設會放至 Default Calendar 之內。(選取左側 Sidebar 的 Calendar > ... > Make calendar default 可更改預設 )
+* Event 事件選取後，新增事件預設會放至 Default Calendar 之內。(選取左側 Sidebar 的 Calendar > __ … __ > Make calendar default 可更改預設 )
 * __右側 Docker 最下方/Reminders 上方得下拉選單可切換 Event 所屬的 Calendar 或 Database。__
     * 新增的 event 若切換關聯至 database 時，Database 會自動新增一筆 database record。
     * 同樣若切換關聯至 calendar/sprint/Google Calendar 時，相關聯 app 也會自動新增資料。
@@ -88,22 +88,22 @@ __Calendar 與 Notion Page 建立關聯:__
 
 ## 設定 Default Calendar
 * 這邊指的是新增事件預設放入的位置設定
-* 左側 Sidebar > Calendar 或 Database 名 > ... Settings > Calendars > Make Calendar Default > 選取
+* 左側 Sidebar > Calendar 或 Database 名 > __ … __ Settings > Calendars > Make Calendar Default > 選取
 * Calendar 旁的眼睛福好可用來暫時隱藏不想顯示的 Calendar  
 
 ## Calendar 移除設定
 * 包含 a.移除 workspace 同步關聯, b.移除 Google calendar 同步關聯, c.Notion Calendar 帳號移除.
 __移除 Workspace 與 Notion Calendar 同步關聯__
 * 移除與 workspace 連結: Calendar linked by workspace，所以在 notion workspace settings 中處理。 
-    * from workspace: Settings > Connections > All Connections > target > ... > Disconnect account
-    * from calendar: 左側 Sidebar > Notion workspace > ... > 設定 > 整合 > 工作空間 > 此處可移除工空間
+    * from workspace: Settings > Connections > All Connections > target > __ … __ > Disconnect account
+    * from calendar: 左側 Sidebar > Notion workspace > __ … __ > 設定 > 整合 > 工作空間 > 此處可移除工空間
 
 ## Calendar 時區
 進入 Calendar 後，日曆畫面的左側為時間軸，最上方可以進行時區設定與增刪與設定別名。畫面上允許同時呈現多個時區時間，方便跨國工作者使用。
    
 __移除 Notion Calendar 帳號__
 * Notion Calendar 帳號 移除: 直接刪帳號，則 workspace 下既有已連結 Notion Calendar 會失效，但 workspace 中 connection 設定仍在，需手動移除
-   * 先進入 Notion Calendar > Sidebar > mouse-over Account 旁的 ... > 管理日曆帳號 > Settings > Account > Profile > 刪除 Notion 日曆帳號
+   * 先進入 Notion Calendar > Sidebar > mouse-over Account 旁的 __ … __ > 管理日曆帳號 > Settings > Account > Profile > 刪除 Notion 日曆帳號
    
 ## 疑難雜症
 * 工作用 email 可能會受到管理員限制而無法使用 Notion Calendar，解決方式:
@@ -112,19 +112,19 @@ __移除 Notion Calendar 帳號__
     1. Configured apps → View list → Add app → OAuth app Name or Client ID
     1. Notion Calendar → Trusted
 * Notion Calendar 設定 
-    * 所有設定入口: Notion Calendar Sidebar > Calendar Account > ... > Manage Calendar Account > 
+    * 所有設定入口: Notion Calendar Sidebar > Calendar Account > __ … __ > Manage Calendar Account > 
     * 語系設定: Notion Workspace 與 Notion Calendar 各自管理自己 App 的語系設定, Manage Calendar Account > General > Language
     * 通知與提醒: Manage Calendar Account > Notifications 
 
 ## Database 中多個 Date Properties
 * <b>預設一個 Database 僅有一個 Date Property 會在 Notion Calendar 上呈現</b>。當有多個欄位時需自行指定要顯示的欄位。
-    * database > 右側 ... > Layout > Show calendar by > 選擇 Property 
+    * database > 右側 __ … __ > Layout > Show calendar by > 選擇 Property 
     
 ## Notion Calendar 應用技巧
 __Dashboard:__
 * __整合後的日曆資料可以在 __ Notion Workspace 的 Home 以 Dashboard 自動整理呈現。 
      * 左側 sidebar > Home > Upcoming events
-     * Dashboard 可客製化。區塊右上 > ... > 設定
+     * Dashboard 可客製化。區塊右上 > __ … __ > 設定
 
 __Block Calendar:__
 * 這邊指的是，Notion Calendar 間可以相互通知是否忙碌。例如個人行程日曆上的事件，可自動在工作群組日曆上被標記為 Busy 且不顯示所有事件細節。
@@ -138,7 +138,7 @@ __Block Calendar:__
 
 __更改 event 上的使用者名__
 * 因為預設會步入出編輯者帳號資訊，若想以別名呈現可自行調整
-* Notion Calendar Sidebar > Calendar Account > ... > Manage Calendar Account > Profile > Username
+* Notion Calendar Sidebar > Calendar Account > __ … __ > Manage Calendar Account > Profile > Username
 
 __Notion Calendar 與 線上會議整合__
 * 我少用這功能，所以僅留下: [Notion Calendar / Zoom / Google Meet 等整合方式參考位置](https://www.notion.com/zh-tw/help/notion-calendar-integrations)

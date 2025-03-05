@@ -36,7 +36,7 @@ keywords: [Notion,Import,Export]
     * Mention: 與 URL link 類似，但 mouse over 時，會出現原文件的縮圖。與 Notion 的 Mentioned Page 應該不同.
     * embedded: 將只份文件嵌入，但僅可瀏覽不可編輯，同樣點縮圖下方可進入 google doc.
     * import from Google Drive: 會在 Notion 建立 __文件內容副本__ \(Notion Page).
-    * block 右側的 ... 有提供呈現方式轉換。turn into given_type
+    * block 右側的 __ … __ 有提供呈現方式轉換。turn into given_type
     
 
 ## Notion Doc embed <span id="notion_Doc_embedded">&nbsp;</span>
@@ -44,7 +44,7 @@ keywords: [Notion,Import,Export]
 * [Notion Doc Import](#notion_Doc_Imported)，則是另存資料副本。
 * HTML files / PDF files / Audio / Video / Images / [相關可接受的來源方清單](https://www.notion.com/help/embed-and-connect-other-apps)
 * 咒語 : /embed > 貼入指定來源
-    * 拖拉可 resize / ... 可 view original 或 replace embedded content
+    * 拖拉可 resize / __ … __ 可 view original 或 replace embedded content
 
 
 ## Notion 資料匯出與備份
@@ -55,7 +55,7 @@ keywords: [Notion,Import,Export]
 
 
 __匯出方式__ 
-* upper right > ... > Export 可叫出匯出功能，並自訂匯出格式。
+* upper right > __ … __ > Export 可叫出匯出功能，並自訂匯出格式。
     * 可選擇格式、內容、紙張大小。
     * 以及 __是否打包並匯出子頁面__
     
@@ -69,7 +69,7 @@ __workspace 備份__
 
 __關閉備份功能__
 * Workspace Sidebar > settings > Security and data > General > Disable export
-* Teamspace > ... > Teamspace settings > Security > Disable export 
+* Teamspace > __ … __ > Teamspace settings > Security > Disable export 
 
 
 ## Notion 資料遷移至其他帳號 <span id="Notion_migrate_workspace">&nbsp;</span>

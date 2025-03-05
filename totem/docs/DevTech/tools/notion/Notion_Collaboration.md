@@ -38,8 +38,8 @@ A:
 - 共編類似 Jira confluence/Google sheet 編輯，可即時看到線上成員所做的異動。
 - 點右上成員圖像可快速跳到成員現在編輯處。
 - 查可共編成員: L-Sidebar Settings > workspace > People 可看到可共編成員
-- 鎖定頁面\(全頁鎖定): __Page upper-right__ > ... > Lock Page。 __所有人__ 包含 owner 都無法編輯。但full access成員可重新開啟。
-- Database 鎖定\(部分鎖定): database  upper-right / 六點 > lock database, 限定指定 database 所有成員皆無法編輯。但相關連 form\(responses) 仍可進行回應。 
+- 鎖定頁面\(全頁鎖定): __Page upper-right__ > __ … __ > Lock Page。 __所有人__ 包含 owner 都無法編輯。但full access成員可重新開啟。
+- Database 鎖定\(部分鎖定): database  upper-right / 六點 __ ⁝⁝ __ > lock database, 限定指定 database 所有成員皆無法編輯。但相關連 form\(responses) 仍可進行回應。 
 
 
 C: Notion 提供 Comments and reminders 功能，來輔助異地辦公的合作成員於系統上進行溝通。
@@ -56,11 +56,11 @@ reminders: 則是可以提醒成員與時間相關 TODO 事項。
 D: Suggested edits
 - 這邊類似批閱作業概念，合作成員可以進入 __Suggesting 模式，先行批改調整內容__ 但內容並未正式生效。後再由其他成員決定是否直接採納。
 - 建議的調整內容會被藍色標註。被採納後顏色消失，若拒絕則內容直接 reset 回建議前狀態。 
-- page top-right ... > Suggest edits 進入或離開 Suggesting mode。 
+- page top-right __ … __ > Suggest edits 進入或離開 Suggesting mode。 
 
 E: Analytics: 
 - 跟 Google 類似 Notion 也提供瀏覽次數簡易分析。
-- Page owner 可以在 page top-right ... > updates & analytics 檢視 Page 瀏覽狀態。 
+- Page owner 可以在 page top-right __ … __ > updates & analytics 檢視 Page 瀏覽狀態。 
 - Analytics 預設開啟。關閉分析方式 Settings > My Settings > Privacy > Show my view history > Record/Don't Record
  
 
@@ -77,8 +77,8 @@ F: Teamspace
 > [Guest 則只能見到與編輯](#Notion_Team_Guest) Owner 分享出來的特定頁面。 
 
 - Teamspace 建立: 左側 Sidebar > Settings > workspace > teamspaces > Teamspace setting > Manage Teamspaces 下可建立。
-    - Teamspace Page 建立: Teamspace > ... > + > Page
-    - Workspace Page 轉 Teamspace Page > Page upright ... > move to 
+    - Teamspace Page 建立: Teamspace > __ … __ > + > Page
+    - Workspace Page 轉 Teamspace Page > Page upright __ … __ > move to 
 
 - 新增 Teamspace 成員:
 > Workspace member/ w-guest/ Teamspace member / Teamspace owner 可各自獨立邀請，但 workspace member 在 free version 下會自動升級為 teamspace member。
@@ -107,10 +107,10 @@ __Groups__
 * 可自行建立 Group 並新增移除成員。
 * Group 可簡化共編流程: 
     * 群組分享: Page sharing 時可以直接與 Group 分享
-    * 由 Group 建立群組空間: Manage Group 頁簽的 ... > create teamspace from group
+    * 由 Group 建立群組空間: Manage Group 頁簽的 __ … __ > create teamspace from group
     * Group 成員僅能由 members / guests 中挑選。
 ### Teamspace 打包與退出群組
-- 功能入口: Sidebar > Teamspace > ... > Leave/Archive Teamspace。
+- 功能入口: Sidebar > Teamspace > __ … __ > Leave/Archive Teamspace。
 - 這邊功能應該有受限於版本種類，部份情形下無法使用。
   
 

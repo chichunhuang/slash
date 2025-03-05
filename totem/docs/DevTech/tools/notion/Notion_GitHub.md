@@ -15,7 +15,7 @@ keywords: [Notion,GitHub]
 * Sidebar > Settings > My Connections > show all > GitHub (Workspace) > 選取全部或單一 repo > connect > 帳密驗證
 
 ## 在 Notion 中預覽程式碼
-* 先到 GitHub > 進入程式碼(或是其他頁面切換至 code tab) > 在程式碼行號處 > 又滑鼠右鍵 > ... > Copy [Permalink](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet#linking-to-code) 
+* 先到 GitHub > 進入程式碼(或是其他頁面切換至 code tab) > 在程式碼行號處 > 又滑鼠右鍵 > __ … __ > Copy [Permalink](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet#linking-to-code) 
 * Notion Page > 貼上 link > Paste as preview > 若未連接 GitHub 會出現驗證要求 > 畫面自動與 指定程式碼同步 
 
 ## Pull Request \(PR) 管理:
