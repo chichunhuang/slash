@@ -4,6 +4,12 @@ description: A short description of this page
 image: a thumbnail image to be shown in social media cards
 keywords: [keywords, describing, the main topics]
 ---
+import {GoogleImage} from "@site/src/components/google/GoogleImage"
+
+<span>
+ {GoogleImage('14QdC9UlwC0BV7RKbCmkCg1J1qOjSxULD', '02_Notion_Layout_001.jpg', {hidden:true, width:'846px', height:'510'})}
+</span>
+
 
 <!-- C 這是 HTML 註解 : 注意註解前  __必須___ 有空行 -->
 
