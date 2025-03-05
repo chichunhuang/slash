@@ -70,5 +70,5 @@ https://huggingface.co/ Hugging Face – The AI community building the future.
 https://huggingface.co/spaces/the-walking-fish/Whisper-JSON-to-SRT-Converter  Whisper JSON To SRT Converter - a Hugging Face Space by the-walking-fish 
 https://frankknow.com/ai-logo-generator/   AI Logo
           
-https://learn.microsoft.com/zh-tw/sysinternals/downloads/zoomit  ZoomIt  
+[ZoomIt](ZoomIt)
    
