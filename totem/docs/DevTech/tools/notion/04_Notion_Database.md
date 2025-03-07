@@ -1,27 +1,33 @@
-04_Notion_Database.md
+---
+title: Notion 資料庫
+description: Notion 資料庫
+keywords: [Notion,Database]
+---
+import {GoogleImage} from "@site/src/components/google/GoogleImage"
 
-
-
-## Notion DB
-> Notion DB: Notion 中的 DB 並非關聯式資料庫。  
-> 而是一個包含特殊資料格式的 SubPage \(DB Page)。SubPage 中的資料可以以不同 View/Layout 的方式在多處同時呈現。    
+# Notion DB
+> Notion DB:  
+> Notion 中的 DB 並非關聯式資料庫。  
+> 而是一個包含特殊資料格式的 SubPage \(DB Page)。  
+> SubPage 中的資料可以以不同 View/Layout 的方式在多處同時呈現。    
 > 與資料庫相似的是 Notion DB 同樣具有欄位屬性、瀏覽模式、篩選和排序等功能。    
 > DB Page 可以設定為:  
 > Full Page Database: 主頁以 Link 方式連接。  
 > Inline Database: 主頁可直接同步顯示 DB Page 內容。
-> <code>主頁中 DB Page icon 無 Arrow，故所有 DB 操作皆同步，包含刪除</code>。<br/>  
-> 建立指令:  <br/>
-> <code>/ + 以 Database </code> &nbsp;&nbsp; (非/ + table)。  
+> 
+> __<span style={{color: '#FF1100'}}>主頁中 DB Page icon 無 Arrow，故所有 DB 操作皆同步，包含刪除</span>__。  
+>
+> 建立指令: &nbsp; <code> &nbsp;/ + Database </code> &nbsp;&nbsp; (非/ + table)。  
 
 
 ## Table Database <span id="notion_Database"> </span>
-* [Reference](https://www.notion.com/zh-tw/help/category/databases) 
+* [Notion 官方參考文件](https://www.notion.com/zh-tw/help/category/databases) 
 
 ### 建立方式
-* 基本: / + database  
-* Main Page 建立 inline DB，導向既有DB。 / + Table view。   
+* 基本: <code>&nbsp; / + database &nbsp;</code>
+* Main Page 建立 inline DB，導向既有DB。 <code>&nbsp; / + Table view &nbsp;</code>。   
 * 點 Table Sheet 名稱可複製 view url。後可貼在其他頁面中。    
-* Table vs Database 轉換: 六點工具 __ ⁝⁝ __ turn into database vs turn into simple table。  
+* Table vs Database 轉換: 六點工具 <code> __ ⁝⁝__</code> turn into database vs turn into simple table。  
 
 ### 額外功能特性擴充
 * 部分額外功能預設為關閉，需自行開啟。 __ … __ > Customize My Database > Suggested > 選取特性。  
