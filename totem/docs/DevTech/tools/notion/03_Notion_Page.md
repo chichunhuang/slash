@@ -23,8 +23,8 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 </span>
 
 ### Page 結構:
-* 封面 \(Page Cover\): 可以自行插入一張圖片，或由相關聯圖庫網站直接定取用圖片。   
-* 圖示 \(Page Icon\): 這張圖也可 Reference 到網路上的其他 icons。用在 <br/>
+* __封面 \(Page Cover\)__: 可以自行插入一張圖片，或由相關聯圖庫網站直接定取用圖片。   
+* __圖示 \(Page Icon\)__: 這張圖也可 Reference 到網路上的其他 icons。用在 <br/>
     a.Browser 的 Tab Icon。<br/>
     b.Notion Docker 上的辨識圖樣。  
 * 內容部分則是以 Block 組成。    
