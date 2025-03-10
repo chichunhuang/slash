@@ -91,8 +91,8 @@ _Column Property Settings_
  {GoogleImage( '1NH4wvTMVH_uniE7iFMJOqM6eVJcbZ0Qu',  'insect_totem_logo_70x70.jpg', {width:'301px', height:'442px', hidden:true, degree:0})}
 </span><br/>
 
-## 表格關聯欄位 Relation Property
-> Notion DB 的特殊特性: <span style={{color: '#0044FF'}}> <b>Database Relation, Rollup, Calculation</b></span> 
+## 表格關聯欄位\(跨欄位屬性) 
+> Notion DB 的特殊特性: <span style={{color: '#0044FF'}}> <b>Database Relation, Rollup, Calculation, Formula</b></span> 
 
 ### ___Relation___:
 * 新增 Main DB Property \(+) 時選擇<span style={{color: '#0044FF'}}> <b>Relation Type</b></span> 可建立<span style={{color: '#0044FF'}}> <b>表格間的關聯</b></span>。  
@@ -116,30 +116,42 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
 </span><br/>
 
 ### ___Rollup\(彙總)___ : 
+> 可以將關聯 Notion DB 資料進行彙總後成為主 DB 的欄位內容。
+
 * 當 Database 具一對多 Relation 關係時，可以建立 [Rollup Type Property](./Notion_View/#notion_Chart_View)。  
 * 功能類似 Java 的 Stream。可以整合多個資料以指定的方式呈現，例如:sum, max, joining。   
 * 不同 Type 的 Relation 可以有不同的處理工具。  
-* __ … __ 🢂 Properties 🢂 選擇 Sub's column 🢂 Calculate 🢂 決定處理動作 🢂 show as 🢂 決定呈現方式\(%、圓餅)  
+* __ … __ 🢂 Property \(選擇 Sub's column) 🢂 Calculate \(決定處理動作) 🢂 show as 🢂 決定呈現方式\(%、圓餅)  
 * 如: 在 backlog 顯示相關 tasks 的完成度。
 * 與 [Chart View](./Notion_View/#notion_Chart_View) 比較
     * rollup: 為單一 row 下的子單元做計算。統計 subitems 數量/完成度。
     * chart: 為整份 database 做數量/完成度統計。  
-        
+    
+<span>
+ {GoogleImage( '1GdY5QlV1rdkoVIQi2deCH0TGPNj5H7P9',  'insect_totem_logo_70x70.jpg', {width:'904px', height:'568px', hidden:true, degree:0})}
+</span><br/>
+
+
 ### ___Calculations___:  
 * Rollup 與 column 最下方的 [Calculations](https://www.notion.com/help/tables) 比較。
-* Calculations(縱向計算): 依 column 屬性特性為該欄位進行計算處理。
+* Calculations(縱向計算): 依 column 屬性特性，為該欄位進行計算處理。如 Rows 總數/已填未填數量等。
 * Rollup\(關聯資料計算): rollup 則是整合有 relation 的資料。
 * [Formula](#notion_Formula) \(row 本身資料處理): 比較 Formula column，允許 row 將自身欄位進行運算進而提供整理資料。
 
-### Column Filter 
-* 同一份 DB 資料，可以用在不同地方。Filter 則可以為此客製不同呈現方式。  
+<span>
+ {GoogleImage( '178BgzFvB_TnhGlJC6vayNINtf52VFuap',  'insect_totem_logo_70x70.jpg', {width:'797px', height:'394px', hidden:true, degree:0})}
+</span><br/>
+
+## Column Filter 
+* 同一份 DB 資料，可以使用在不同地方。Filter 則可以為此客製不同呈現方式。  
+    * 經由 __⋮⋮__ 🖱L 🢂 Copy Link 🢂 指定位置 🢂 Paste as Linked Database View 🢂 完成 Referenced View 建立。
 * 建立 filters: 
-    * column name 🢂 Filter 可建立基本 Filters。  
-    * 已建立的 Filters 會在表格左上方呈現，點下拉選單的 __ … __ 可進入 'Add to Advanced Filters'。    
+    * column 🢂 Filter 可建立基本 Filters。  
+    * 已建立的 Filters 會在表格左上方呈現，點下拉選單的 __ … __ 可進入 <span style={{color: '#0044FF'}}> **'Add to Advanced Filters'，可用類 SQL 語法組建過濾條件** </span>。    
 * 移除 filters: 
     * Filter Docker 右上 __ … __ 可叫出移除選項。  
 * 操做: 
-    * 建立 Filter 時， Docker 會依 column type 不同而顯示不同屬性。  
+    * 建立 Filter 時， Docker 會依 Property Type 不同而顯示不同屬性。  
     * Filter Docker: 在 name 旁邊有 <span style={{color: '#0044FF'}}> **Operator 下拉選單** </span> 可供客製過濾條件。  
     * <b>Advanced Filter: 類似 SQL/DSL 操作語法</b>。   
 
