@@ -32,6 +32,19 @@ const config = {
     defaultLocale: 'zh-tw',
     locales: ['en','zh-tw'],
   },
+  
+  scripts: [
+    { 
+      // for Euopean DGPR: General Data Protection Regulation
+      src: 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js',
+      async: true,
+    },
+    {
+      // for Euopean DGPR: General Data Protection Regulation
+      src: '/js/cookie-consent.js',
+      defer: true,
+    },
+  ],
 
   presets: [
     [
