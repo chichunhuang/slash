@@ -39,7 +39,7 @@ _Notion Database Converts from Table_
 </span>
 
 ### 額外功能特性擴充
-* 部分額外功能預設為關閉，需自行開啟。 __ … __ > Customize My Database > Suggested > 選取特性。  
+* 部分額外功能預設為關閉，需自行開啟。 <code> &nbsp; __ … __ </code> \> <code> Customize My Database </code>  \> <code> Suggested </code> \> 選取特性。  
     * [Sub-Items](#notion_subitems)
     * [Dependencies](#notion_dependencies)  
     * [Tasks](#notion_tasks)  
@@ -54,10 +54,10 @@ _Notion Database Converts from Table_
 * [Notion DB View 介紹](Notion_View) 
 * Table、Border、Chart、List、Calendar、Gallery、Timeline 甘特圖等。  
 * DB Page 建立時預設會採用 Table View \(Layout)，類似 Excel 表格。  
-* 建立新 Sheet \(+) 時可自行指定 View\(瀏覽模式)。  
-* Table 右側 __ … __ 可切換 Layout 或其他 Sheet 相關屬性。  
+* 建立新 Sheet <code> + </code>  時可自行指定 View\(瀏覽模式)。  
+* Table 右側<code>  __ … __ </code> 可切換 Layout 或其他 Sheet 相關屬性。  
 * 同一份資料可以經由 'name > copy link to view' 貼到多處。並為分身客製化成不同長相。 
-    * 等同於 / + linked view of database  
+    * 等同於 <code>  / + linked view of database  </code> 
 
 ## Notion DB Row 
 * Notion Database 中的 Row 都隱含代表著一個 SubPage。可展開並做相關 Page 設定。但是並不像一般 SubPage 會在 MainPage 或 Sidebar 上顯示 Links，僅能由 database row 橋接過去。
@@ -95,7 +95,7 @@ _Column Property Settings_
 > Notion DB 的特殊特性: <span style={{color: '#0044FF'}}> <b>Database Relation, Rollup, Calculation, Formula</b></span> 
 
 ### ___Relation___:
-* 新增 Main DB Property \(+) 時選擇<span style={{color: '#0044FF'}}> <b>Relation Type</b></span> 可建立<span style={{color: '#0044FF'}}> <b>表格間的關聯</b></span>。  
+* 新增 Main DB Property <code> &nbsp;+ </code>  時選擇<span style={{color: '#0044FF'}}> <b>Relation Type</b></span> 可建立<span style={{color: '#0044FF'}}> <b>表格間的關聯</b></span>。  
 * PK 是 Main DB 的 Relation 欄位，雙向時 FK 則可以是 Sub 任意欄位。  
 * 允許一對多。__填寫 Relation 欄位時，會自動帶出 Sub DB Rows 的內容__  
 * 發布後，點 Main 上 FK link 可以檢視相關 row 的內容。  
@@ -121,7 +121,7 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
 * 當 Database 具一對多 Relation 關係時，可以建立 [Rollup Type Property](./Notion_View/#notion_Chart_View)。  
 * 功能類似 Java 的 Stream。可以整合多個資料以指定的方式呈現，例如:sum, max, joining。   
 * 不同 Type 的 Relation 可以有不同的處理工具。  
-* __ … __ 🢂 Property \(選擇 Sub's column) 🢂 Calculate \(決定處理動作) 🢂 show as 🢂 決定呈現方式\(%、圓餅)  
+* <code>  &nbsp;__ … __ </code> 🢂 <code> Property </code> (選擇 Sub's column) 🢂 <code> Calculate</code>  (決定處理動作) 🢂 <code> show as </code>  🢂 決定呈現方式\(%、圓餅)  
 * 如: 在 backlog 顯示相關 tasks 的完成度。
 * 與 [Chart View](./Notion_View/#notion_Chart_View) 比較
     * rollup: 為單一 row 下的子單元做計算。統計 subitems 數量/完成度。
@@ -144,12 +144,12 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
 
 ## Column Filter 
 * 同一份 DB 資料，可以使用在不同地方。Filter 則可以為此客製不同呈現方式。  
-    * 經由 __⋮⋮__ 🖱L 🢂 Copy Link 🢂 指定位置 🢂 Paste as Linked Database View 🢂 完成 Referenced View 建立。
+    * 經由 <code> &nbsp; __⋮⋮__ 🖱L </code> 🢂 <code> Copy Link </code>  🢂 指定位置 🢂 <code> Paste as Linked Database View </code>  🢂 完成 Referenced View 建立。
 * 建立 filters: 
     * column 🢂 Filter 可建立基本 Filters。  
-    * 已建立的 Filters 會在表格左上方呈現，點下拉選單的 __ … __ 可進入 <span style={{color: '#0044FF'}}> **'Add to Advanced Filters'，可用類 SQL 語法組建過濾條件** </span>。    
+    * 已建立的 Filters 會在表格左上方呈現，點下拉選單的 <code>&nbsp;__… __</code> 可進入 <span style={{color: '#0044FF'}}> **'Add to Advanced Filters'，可用類 SQL 語法組建過濾條件** </span>。    
 * 移除 filters: 
-    * Filter Docker 右上 __ … __ 可叫出移除選項。  
+    * Filter Docker 右上 <code>&nbsp; __ … __</code>  可叫出移除選項。  
 * 操做: 
     * 建立 Filter 時， Docker 會依 Property Type 不同而顯示不同屬性。  
     * Filter Docker: 在 name 旁邊有 <span style={{color: '#0044FF'}}> **Operator 下拉選單** </span> 可供客製過濾條件。  
@@ -157,7 +157,7 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
 
 ### Calendar Property
 * 當 Table/Database 至少有一個 Date Column 時便可轉成 Calendar Layout。
-* 操作: 使用六點工具 __ ⁝⁝ __  
+* 操作: 使用六點工具 <code> &nbsp;__ ⁝⁝ __ </code>  
     * 多個 date 欄位時可以: 更改 layout 時指定 'show calendar by' 指定使用的日期。  
     * 日曆上的記事:  Properties，可設定日曆上要顯示的資訊欄位。 
     * 週曆日曆: Layout > Show Calendar as > Week/month。  
