@@ -23,7 +23,7 @@ App 管理員，也無法直接聯絡/通知指定 User 先行離線。
 | lsof | 不需要 | Y |
 | Tomcat Manager | 需要開啟 manager-gui | Y  |
 | JMX (JConsole/jmxterm) | 要開啟 JMX | Y |
-| Access Log  | 開啟 access_log | 適用於查詢___歷史紀錄___ |
+| Access Log  | 開啟 access_log | 適用於___歷史紀錄___查詢 |
 
 ## netstat
 > 透過 netstat 命令查看 Tomcat 當前的 TCP 連線狀態  
@@ -88,13 +88,19 @@ jconsole localhost:8080
 ## JMX (jmxterm)
 > jmxterm 同 JConsole 為 JMX Extensions
 
-1. 安裝 jmxterm，然後連接 Tomcat
+1. 啟動 Tomcat 時加入 JMX 選項
+
+```shell
+JAVA_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8080 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
+```
+
+2. 安裝 jmxterm，然後連接 Tomcat
 
 ```shell
 java -jar jmxterm-1.0.2-uber.jar -l localhost:8080
 ```
 
-2. 查詢目前的 HTTP 連線數
+3. 查詢目前的 HTTP 連線數
 
 ```shell
 get Catalina:type=ThreadPool,name="http-nio-8080" currentThreadCount
