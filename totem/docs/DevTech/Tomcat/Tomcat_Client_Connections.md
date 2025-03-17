@@ -33,11 +33,20 @@ App 管理員，也無法直接聯絡/通知指定 User 先行離線。
 netstat -atn | grep :8080 | grep ESTABLISHED | wc -l
 ```
 * :8080  🢂  Tomcat listening port，改成 App 所使用的 Port Number。
-* ESTABLISHED  🢂  當前的活躍連線，直接查詢狀態
+* ESTABLISHED  🢂  直接查詢當前活躍連線狀態
 * wc -l  🢂  計算目前的連線數量
 * -a  🢂  all
 * -t  🢂  僅查詢 TCP 連線。 -u 查詢 UDP 連線
 * -n  🢂  自動解析 DNS
+
+* 註關於狀態:
+    * ESTABLISHED 已建立連線
+    * CLOSE_WAIT 等待關閉連線
+    * FIN_WAIT_1 遠端電腦已關閉連接，但其連接的本機應用程式仍未確認。
+    * FIN_WAIT_2 本機已關閉連接，但遠端電腦尚未確認。或是兩個系統之間的連線中斷。
+    * TIME_WAIT 表示 socket 已關閉，處於停留狀態，等待作業系統清理它。
+    
+    
 
 ## lsof
 > lsof 的 -i 參數可以用來查詢所有的網路連線  
