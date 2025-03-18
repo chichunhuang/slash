@@ -65,4 +65,3 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 |  LiveZoom 即時 __放大__ | Ctrl + 4 + (🡱/🡳)  | 無法動態改變縮放  |
 |  LiveZoom 放大下 |  Ctrl + Num 6  | LiveZoom 下標記 |
 |  LiveZoom 放大下 |  Ctrl +  R/O/B/G/Y/P  |  LiveZoom 放下更換筆刷 |
-

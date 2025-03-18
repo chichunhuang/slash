@@ -157,4 +157,3 @@ __與 Teamates 共享 Calendar__
 * Server 由 AWS 託管
 * 搭配 Google Workspace 管理企業團隊 Calendar 帳號
 * 遵循 SOC2, GDPR 資安規範
-
