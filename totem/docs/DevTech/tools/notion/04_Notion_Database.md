@@ -195,7 +195,7 @@ _Advance Filter 設定_
     * 設定 Filter 時<span style={{color: '#0044FF'}}> 須以<b>夥伴視角</b>來進行設定 </span>。 例如: Person contains ME \(ME 指的是夥伴視角，也就是 Cell 中填寫的帳號)。   
 
 <span>
- {GoogleImage( 'x',  '04_Notion_DB_16_Person.png' )}
+ {GoogleImage( '1obn32krTbA1nuCSiUMjkDHqxU1xiaXVf',  '04_Notion_DB_16_Person.png' , {width:'652px', height:'337px', hidden:true, degree:0})}
 </span>
 
 ## Unique ID Property
@@ -210,7 +210,7 @@ _Advance Filter 設定_
 __https://www.notion.so/IS-1__    
 
 <span>
- {GoogleImage( 'x',  '04_Notion_DB_17_ID.png' )}
+ {GoogleImage( '1Pb51WWVnqMWRBWnpoLui8nBo40TM_h6z',  '04_Notion_DB_17_ID.png' , {width:'652px', height:'248px', hidden:true, degree:0})}
 </span>
 
 ## Formula Property <span id="notion_Formula"> </span>
@@ -225,7 +225,7 @@ __https://www.notion.so/IS-1__
     * Notion 有為 Formula 提供 [built-in functions](https://www.notion.com/help/formula-syntax)，ex: if, round, hour, repeat 等   
 
 <span>
- {GoogleImage( 'x',  '04_Notion_DB_19_Formula.png' )}
+ {GoogleImage( '1_tp4zpkAw6t3QvMSR7B3-1XNN9BujpgB',  '04_Notion_DB_19_Formula.png' , {width:'652px', height:'306px', hidden:true, degree:0})}
 </span>
 
 
@@ -246,19 +246,18 @@ __https://www.notion.so/IS-1__
 
 __Add Subitems(Tree Table) / Dependencies 功能__<br/>
 <span>
- {GoogleImage( 'x',  '04_Notion_DB_20_Subitems.png' )}
+ {GoogleImage( '1p-ozaJzDGQMxSyLlVRVEeDYQb1jvgbWg',  '04_Notion_DB_20_Subitems.png' , {width:'652px', height:'349px', hidden:true, degree:0})}
 </span>
 
 __Tree Table__<br/>
 <span>
- {GoogleImage( 'x',  '04_Notion_DB_21_Subitems.png' )}
+ {GoogleImage( '1RXf3yNWdO4Z-3QdcYKNzNoRJt4oPYXzk',  '04_Notion_DB_21_Subitems.png' , {width:'476px', height:'575px', hidden:true, degree:0})}
 </span>
 
 __Dependency__<br/>
 <span>
- {GoogleImage( 'x',  '04_Notion_DB_22_Dependency.png' )}
+ {GoogleImage( '1yJyadm8GYEN4qN6jiziL6H_5IIIXfKDM',  '04_Notion_DB_22_Dependency.png' , {width:'652px', height:'339px', hidden:true, degree:0})}
 </span>
-
     
 ## Sprints and Tasks<span id="notion_tasks"> </span>
 > Scrum 基本該有的都有了，如果能加上 issue tracking 那就更完美了。   
