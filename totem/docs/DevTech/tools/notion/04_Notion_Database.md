@@ -93,6 +93,9 @@ _Column Property Settings_
 
 ## 表格關聯欄位\(跨欄位屬性) 
 > Notion DB 的特殊特性: <span style={{color: '#0044FF'}}> <b>Database Relation, Rollup, Calculation, Formula</b></span> 
+> 這邊指的是類似關聯式資料庫PK vs FK 間關係、將多個欄位合併計算、將多個行合併計算、或是指定函數來對特定資料做計算。  
+> 可以想像成 excel 的 cell 中使用 formula。或是清單的功能。
+
 
 ### ___Relation___:
 * 新增 Main DB Property <code> &nbsp;+ </code>  時選擇<span style={{color: '#0044FF'}}> <b>Relation Type</b></span> 可建立<span style={{color: '#0044FF'}}> <b>表格間的關聯</b></span>。  
@@ -142,7 +145,7 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
  {GoogleImage( '178BgzFvB_TnhGlJC6vayNINtf52VFuap',  'insect_totem_logo_70x70.jpg', {width:'797px', height:'394px', hidden:true, degree:0})}
 </span><br/>
 
-## Column Filter 
+### __Column Filter__: 
 * 同一份 DB 資料，可以使用在不同地方。Filter 則可以為此客製不同呈現方式。  
     * 經由 <code> &nbsp; __⋮⋮__ 🖱L </code> 🢂 <code> Copy Link </code>  🢂 指定位置 🢂 <code> Paste as Linked Database View </code>  🢂 完成 Referenced View 建立。
 * 建立 filters: 
@@ -155,28 +158,60 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
     * Filter Docker: 在 name 旁邊有 <span style={{color: '#0044FF'}}> **Operator 下拉選單** </span> 可供客製過濾條件。  
     * <b>Advanced Filter: 類似 SQL/DSL 操作語法</b>。   
 
-### Calendar Property
-* 當 Table/Database 至少有一個 Date Column 時便可轉成 Calendar Layout。
-* 操作: 使用六點工具 <code> &nbsp;__ ⁝⁝ __ </code>  
+_Filter 建立_
+<span>
+ {GoogleImage( '1CTRtXRns1xJ8FlB2zDnsd2FJh3sEmybK',  'insect_totem_logo_70x70.jpg', {width:'461px', height:'455px', hidden:true, degree:0})}
+</span><br/>
+
+_Advance Filter 設定_
+<span>
+ {GoogleImage( '1y3yPVcxPrev63mZ47JcpQgPZhDICGvq4',  'insect_totem_logo_70x70.jpg', {width:'672px', height:'371px', hidden:true, degree:0})}
+</span><br/>
+
+
+
+## Calendar Property
+* 當 Table/Database 至少有一個 Date Column 時便可轉成 Calendar Layout/ Timeline Layout。
+    * Table 上的資料會自動呈現在 Calendar 上。 
+* 操作: 使用六點工具 <code> &nbsp;__ ⁝⁝ __&nbsp; </code>  
     * 多個 date 欄位時可以: 更改 layout 時指定 'show calendar by' 指定使用的日期。  
     * 日曆上的記事:  Properties，可設定日曆上要顯示的資訊欄位。 
-    * 週曆日曆: Layout > Show Calendar as > Week/month。  
+    * 週曆日曆: Layout > Show Calendar as > Week/Month。  
+
+<span>
+ {GoogleImage( '1999Jgw4vzE248_1rpYTC0EGXZvGtLPLP',  '04_Notion_DB_15_Calendar.png' , {width:'602px', height:'412px', hidden:true, degree:0})}
+</span>
 
 
-## DB 共編 Person Property <span id="notion_database_coedit"> </span>
-* Person Property 自動帶入的限 Notion Member 與 Notion Guest。參考 Notion 共編章節
-* Person Type 的 Column 是用來設定夥伴的授權。  
-* 可搭配 filter 限制夥伴可看見的 rows。  
+## Person Property <span id="notion_database_coedit"> </span>(DB 共編授權)
+> 同一張表格，可以利用 Person Property 來微調每位參與者可見或可編輯項目。
+
+* Person Property 自動帶入的限 Notion Member 與 Notion Guest。參考 [Notion 共編章節](./Notion_Collaboration)
+* Property 為 <span style={{color: '#0044FF'}}> __Person Type 的 Column 是用來設定夥伴的授權。__ </span>  
+* 可 <span style={{color: '#0044FF'}}> __搭配 filter 限制夥伴可看見的 rows__ </span> 。  
 * 操作: 
-    * Owner 先為 Database 增加 Person Property，並決定 Row 與夥伴的對應關係\(cell 填寫夥伴帳號)。  
+    * Owner 先為 Database 增加 Person Property，並決定 Row 與夥伴的對應關係\( <span style={{color: '#0044FF'}}> __cell 填寫夥伴帳號__ </span>)。  
     * 為 Person Column 增加 Filter。利用 Filter operator 與 Advanced Filter 進行限制。
-    * 設定 Filter 時<span style={{color: '#0044FF'}}> 須以<b>夥伴視角</b>來進行設定 </span>。 例如: Person contains ME \(ME 指的是夥伴視角)。   
+    * 設定 Filter 時<span style={{color: '#0044FF'}}> 須以<b>夥伴視角</b>來進行設定 </span>。 例如: Person contains ME \(ME 指的是夥伴視角，也就是 Cell 中填寫的帳號)。   
+
+<span>
+ {GoogleImage( 'x',  '04_Notion_DB_16_Person.png' )}
+</span>
 
 ## Unique ID Property
-* 這邊指的是 batabase 中可以為 row 設定一個 __唯一識別碼 Unique ID__ 欄位，來代表該資料列。
+* 這邊指的是 Workspace 中可以為 Database row 設定一個 __唯一識別碼 Unique ID__ 欄位，來代表該資料列。
+    * 目前測試中，只知道可用來辨識 Row 與產生 Detail Page 快捷連結使用。
 * 可自行為 Unique ID Property 設定 prefix。  
-* database 中每個 row 都有一個 detail page\(滑鼠移置 Name column 會出現 open 提示)，用以展示 Row 所有相關資訊。當 Unique ID 串接 BaseURL 可組合出 detail page 所需快速路徑。
-    * https://www.notion.so/UniqueID-9999
+* database 中每個 row 都有一個 detail page\(滑鼠移置 Name column 會出現 open 提示)，用以展示 Row 所有相關資訊。當 Unique ID 串接 BaseURL 可組合出 detail page 所需快速路徑。 
+    * 例如: https://www.notion.so/UniqueID-9999
+    * 設定時，workspace 內不可以有重複 ID prefix。
+    * 帳號可見 Workspace/Teamspace 範圍下若出現相同 ID，也會造成快捷連結失效。
+
+__https://www.notion.so/IS-1__    
+
+<span>
+ {GoogleImage( 'x',  '04_Notion_DB_17_ID.png' )}
+</span>
 
 ## Formula Property <span id="notion_Formula"> </span>
 * Formula: 依據其他欄位進行運算處理後的整合欄位。
@@ -186,25 +221,49 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
 * [Formula 2.0 Reference](https://www.notion.com/help/guides/new-formulas-whats-changed?_gl=1*90t2qe*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczMzE4NzQ1MC4xMi4xLjE3MzMxODg0OTMuNTcuMC4w&cookie_sync_completed=true)
 * 操作:  
     * Edit Property > Edit Formula > Property 當 Argument > 決定 Formula  
-    * Docker Panel 上會出現基本使用說明。  
+    * Docker Panel 上會出現各欄位的基本使用範例。  
     * Notion 有為 Formula 提供 [built-in functions](https://www.notion.com/help/formula-syntax)，ex: if, round, hour, repeat 等   
 
-## Sub-Items and Dependencies
-* 功能入口: table 右上 __ … __ > Customize My Database > Suggested > add  
+<span>
+ {GoogleImage( 'x',  '04_Notion_DB_19_Formula.png' )}
+</span>
+
+
+## Subitems and Dependencies
+> Notion 提供 ___Tree Table___ 功能，讓 Table 資料可以樹狀結構呈現。  
+> 
+
+* 功能入口: table 右上 <code>&nbsp;__…__ </code> > <code> Customize My Database </code> > <code> Suggested </code> > <code> add </code>
 * Sub-Items <span id="notion_subitems"> </span>
-    * 添加 Subitems 特性後，在 Row Name 會出現 🠟 符號可用來設定 subitems。 
+    * 添加 Subitems 特性後，在 Row Name 會出現 🠟 符號可用來設定 subitems \(直接將 Subitems 拖入即可)。 
     * Database Table 下的 <span style={{color: '#0044FF'}}> **Row 可再拆分成 Sub-items \(closable, 子單元, tasks)** </span>。 
-    * Table 最下方的 <span style={{color: '#0044FF'}}> **rollup 計算數量或加總時會以 main row 為準** </span>。\(忽略 subitems)
-    * __ … __ > Customize > Sub-items 可以移除階層顯示獲設定 sub-items 顯示方式。 
+    * Table 最下方的 <span style={{color: '#0044FF'}}> **rollup 計算數量或加總時會以 main row 為準** </span>。\(忽略 subitems 數量)
+    * <code>&nbsp;… </code> > <code> Customize </code> > <code> Sub-items </code> 可以移除階層顯示獲設定 sub-items 顯示方式。 
 * Dependency<span id="notion_dependencies"> </span>
-    * <b>Dependency</b> 用在<span style={{color: '#0044FF'}}> **連續事件的時間規劃** </span>，Column Property 須為日期區間類別。
+    * <b>Dependency</b> 用在 <span style={{color: '#0044FF'}}> 連續事件的時間規劃 </span>，Column Property 須為日期區間類別。
     * 前提條件: 用在 Timeline layout 且 Database 必須有日期欄位\(開啟 end date)。
     * 作用: 當在 UI 拖拉時間區段時，可自動維持 shift 其他時間區段。或是融合成為子時間區段\(轉成 sub-item)。
-    
+
+__Add Subitems(Tree Table) / Dependencies 功能__<br/>
+<span>
+ {GoogleImage( 'x',  '04_Notion_DB_20_Subitems.png' )}
+</span>
+
+__Tree Table__<br/>
+<span>
+ {GoogleImage( 'x',  '04_Notion_DB_21_Subitems.png' )}
+</span>
+
+__Dependency__<br/>
+<span>
+ {GoogleImage( 'x',  '04_Notion_DB_22_Dependency.png' )}
+</span>
+
     
 ## Sprints and Tasks<span id="notion_tasks"> </span>
-* Scrum 基本該有的都有了，如果能加上 issue tracking 那就更完美了。  
-* <span style={{color: '#0044FF'}}><b>XP team Sprint board</b></span>
+> Scrum 基本該有的都有了，如果能加上 issue tracking 那就更完美了。   
+> <span style={{color: '#0044FF'}}><b>XP team Sprint board</b></span>  
+
 * Sprint Dashboard 與其他添加功能呈現上有些差異。
     * database 轉換成 Sprint Dashboard 後，Sidebar 會多出 Sprint board / Sprints / Timeline submenus。  
     * database 會多出 Current / Spring planning / Backlog 三張 Sheets。  
@@ -224,4 +283,4 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
 ### 編輯技巧
 * 批次修改: 滑鼠點 Row 前方，或勾選前方 checkboxes。被選取部分會出現底色。可出現 Docker 用來批次編輯指定 column。
 * Rollup and Calculations
-
+* 利用 Person Property 與 Column Filter 限制共編夥伴可看到的資料範圍
