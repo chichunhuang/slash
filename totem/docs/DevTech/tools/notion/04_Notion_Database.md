@@ -42,7 +42,7 @@ _Notion Database Converts from Table_
 * 部分額外功能預設為關閉，需自行開啟。 <code> &nbsp; __ … __ </code> \> <code> Customize My Database </code>  \> <code> Suggested </code> \> 選取特性。  
     * [Sub-Items](#notion_subitems)
     * [Dependencies](#notion_dependencies)  
-    * [Tasks](#notion_tasks)  
+    * [Tasks](Notion_Sprint_Task#notion_tasks)  
     * AI Summary  
     * AI translation 
      
@@ -124,7 +124,7 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
 * 當 Database 具一對多 Relation 關係時，可以建立 [Rollup Type Property](./Notion_View/#notion_Chart_View)。  
 * 功能類似 Java 的 Stream。可以整合多個資料以指定的方式呈現，例如:sum, max, joining。   
 * 不同 Type 的 Relation 可以有不同的處理工具。  
-* <code>  &nbsp;__ … __ </code> 🢂 <code> Property </code> (選擇 Sub's column) 🢂 <code> Calculate</code>  (決定處理動作) 🢂 <code> show as </code>  🢂 決定呈現方式\(%、圓餅)  
+* <code>  &nbsp;… </code> 🢂 <code> Property </code> (選擇 Sub's column) 🢂 <code> Calculate</code>  (決定處理動作) 🢂 <code> show as </code>  🢂 決定呈現方式\(%、圓餅)  
 * 如: 在 backlog 顯示相關 tasks 的完成度。
 * 與 [Chart View](./Notion_View/#notion_Chart_View) 比較
     * rollup: 為單一 row 下的子單元做計算。統計 subitems 數量/完成度。
@@ -257,29 +257,11 @@ __Tree Table__<br/>
 __Dependency__<br/>
 <span>
  {GoogleImage( '1yJyadm8GYEN4qN6jiziL6H_5IIIXfKDM',  '04_Notion_DB_22_Dependency.png' , {width:'652px', height:'339px', hidden:true, degree:0})}
-</span>
-    
-## Sprints and Tasks<span id="notion_tasks"> </span>
-> Scrum 基本該有的都有了，如果能加上 issue tracking 那就更完美了。   
-> <span style={{color: '#0044FF'}}><b>XP team Sprint board</b></span>  
+</span><br/>
 
-* Sprint Dashboard 與其他添加功能呈現上有些差異。
-    * database 轉換成 Sprint Dashboard 後，Sidebar 會多出 Sprint board / Sprints / Timeline submenus。  
-    * database 會多出 Current / Spring planning / Backlog 三張 Sheets。  
-* 建立 Task Database: 
-    * create database > __ … __ > Customize > 查詢 Tasks > 轉換成 Task Database   
-    * create database > __ … __ > Customize > 查詢 Sprints > 添加 Sprint Board 功能    
-    * Task Database: 必須具有至少下列三種類型的 Properties status\(Status), assignee\(Person), and due date\(Date)，轉換時可一併建立。
-* Sprint board : Sprint Task 規劃區 
-    * Current : 顯示當前 working 中的 Sprint。  
-    * Spring planning : 列出所有已建立的 Sprints，包含已完成的部分。  
-    * Backlog : 未排入 Sprint 的 Backlogs
-    * Spring name > __ … __ > Hide Group 可將指定 Sprint 移至 hidden group 區塊\(已完成)。
-* Sprint Sidebar: Sprints 時程規劃區
-    * Sprints All: 列出 Sprint 狀態完成度等摘要資訊    
-    * Sprints Timeline: 用拖拉的方式行時程規劃，可以與 Google Calendar 搭配整合。      
     
-### 編輯技巧
+    
+## 編輯技巧
 * 批次修改: 滑鼠點 Row 前方，或勾選前方 checkboxes。被選取部分會出現底色。可出現 Docker 用來批次編輯指定 column。
-* Rollup and Calculations
+* Rollup and Calculations 進行資料統整
 * 利用 Person Property 與 Column Filter 限制共編夥伴可看到的資料範圍
