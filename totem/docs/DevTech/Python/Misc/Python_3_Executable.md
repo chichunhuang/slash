@@ -10,6 +10,3 @@ keywords: [Python,exe]
     * cx_freeze
     * PyInstaller
 * 注意: Python 本身的套件相依問題，同樣會延伸到打包工具。須注意版本相容性。
-
-
-    

@@ -49,5 +49,3 @@ ALTER SCHEMA public OWNER TO totem;
 psql -U postgres -f rebuild.sql
 
 ```
-
-

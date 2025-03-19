@@ -473,5 +473,3 @@ mail['mailTempalte.fromname'] = 'dummy'
 with open(r'D:/tmp/export.ini', 'w') as configfile:
     config.write(configfile)
 ```
-
-

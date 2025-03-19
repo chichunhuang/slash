@@ -27,6 +27,3 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * [Abstract Methods](./Python_4_AbstractMethod)
 
 * [Decorator](../Advanced/Python_2_Decorator)
-
-
-

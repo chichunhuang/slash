@@ -51,4 +51,3 @@ keywords: [Insect-totem,InsectTotem]
 
 
 ![Insect Totem](/img/insect-totem-main.gif "insect-totem-main.gif")
- 

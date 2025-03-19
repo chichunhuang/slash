@@ -73,5 +73,3 @@ print(b)
     * 若為可變型別，例如 List，則會發生 __原處修改__ ，也就是 reference 共享。操作時會改動到原始物件。  
     * ex: list 的 += 運算等同於 extend()  
 * 參考: [Python 運算子](./Advanced/Python_operator_module  )
-    
-    

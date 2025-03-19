@@ -133,4 +133,3 @@ pprint.pprint(ret)
 ```python
 python external.py >> output.log
 ```
-

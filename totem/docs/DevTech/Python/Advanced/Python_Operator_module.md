@@ -47,4 +47,3 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 可想成類似 Java 的 Math 工具類，提供額外的功能。 
 > 細節可參考 [operator — Standard operators as functions](https://docs.python.org/3/library/operator.html)  
 > 類似功能也可見於 numpy module  
-

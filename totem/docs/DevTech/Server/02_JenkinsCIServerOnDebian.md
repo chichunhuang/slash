@@ -33,4 +33,3 @@ keywords: [Jenkins,CI,Debian]
 * 建立 tomcat 工作目錄 > 安裝 tomcat
 * 建立帳號
 * 建立user群族 sudo groupadd tomcat... 新的 user group / user 
-

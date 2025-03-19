@@ -77,5 +77,3 @@ print(lint_int)
 |  <span style={{color: '#0044FF'}}>__sorted__</span>  | __Y__ | N | s2 = sorted(s)<br/># ['a', 'c', 'k', 'n', 'p', 'u'] | 複製出一個排過序的副本 | Utility<br/>with return |
 |  <span style={{color: '#0044FF'}}>__reversed__</span>  | __Y__<br/>list_reverseiterator | N | r2 = reversed(s2)<br/>for x in r2:<br/>&nbsp;&nbsp;print(x) | 複製出一個 iterable 類別 | Utility<br/>with return |
 |  <span style={{color: '#0044FF'}}>__in__</span>  | __Y__ | N | print( 11 in list_int)<br/># True | 檢驗是否有指定元素 | Operator Overload |
-
-

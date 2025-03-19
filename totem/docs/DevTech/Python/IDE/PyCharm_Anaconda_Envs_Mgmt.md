@@ -34,7 +34,3 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 $ conda env list
 ```
 ![PyCharm_Anaconda_Envs_Mgmt_01.jpg](/img/docs/python/InsectTotem_PyCharm_Anaconda_Envs_Mgmt_01.jpg "Anaconda env list")
-
-   
-  
-

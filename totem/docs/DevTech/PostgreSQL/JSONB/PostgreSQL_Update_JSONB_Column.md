@@ -104,4 +104,3 @@ update Entrance_Examination
 # Reference
 * [批次更改 Jsonb 的內容: 使用 "||"](https://stackoverflow.com/questions/40583639/update-multiple-values-in-a-jsonb-data-in-postgresql)
 * [https://www.postgresql.org/docs/9.5/functions-json.html](https://www.postgresql.org/docs/9.5/functions-json.html)
-

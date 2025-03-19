@@ -148,6 +148,3 @@ ans = product(square, 2)(10)
 print(ans)
 # 200
 ``` 
-
-  
- 

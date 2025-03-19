@@ -120,4 +120,3 @@ print( f"I\'m {name}, I\'m {age}-yaar-old.")
     * Decimal
     * Fraction
     * math module
-    

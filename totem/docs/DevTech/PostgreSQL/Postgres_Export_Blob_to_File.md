@@ -28,4 +28,3 @@ SELECT lo_export(file_content, '/tmp/Export_File_To.csv') FROM Submission_Case w
 
 # PostgreSQL 匯入 Lob 檔案至資料表
 * [參考 Postgres 自 console 匯入指定資檔案至資料表](./Postgres_Import_Blob_from_File)
-

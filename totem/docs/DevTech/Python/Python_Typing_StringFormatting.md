@@ -229,4 +229,3 @@ prize = 30.5
 print(f'I buy a brand new {phone}, It cost me ${prize:->8.3f} dollars. ')
 #I buy a brand new iPhone, It cost me $--30.500 dollars.  
 ```  
-

@@ -271,5 +271,3 @@ print(f)
 
 ## 在 Python2 Compile Python3 程式碼會讓你出 Bug 的部分
 * python3 vs python2 取商 (//)與模(%) operators 定義不同
-
-
