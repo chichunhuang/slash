@@ -1,9 +1,14 @@
-06_Notion_View.md
+---
+title: Notion View 資料呈現方式
+description: Notion View
+keywords: [Notion,Scrum,XP]
+---
+import {GoogleImage} from "@site/src/components/google/GoogleImage"
+
+## Notion View
 
 
-
-
-### Views
+## Views
 > 新建立 Inline Database 時會在主頁下自動建立 sub-page。page 預設會以 View of database 命名。建議即刻依 view + db 改名。  
 > 整體而言: 
 >> database layout 與 columns 的顯示隱藏，相關設定在 <b>右上的 __ … __</b>   

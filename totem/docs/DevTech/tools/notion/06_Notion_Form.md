@@ -19,16 +19,16 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 __由 Database 轉換__
 * 需手動建立或勾選顯示建立時間或最後編輯時間預設欄位
 <div>
- {GoogleImage( 'google_file_id',  '06_Notion_Form_01.png')}
+ {GoogleImage( '1LT--_mkSc9yr_hwI7OqoSK6zZOI0E5Uc',  '06_Notion_Form_01.png' , {width:'344px', height:'424px', hidden:true, degree:0})}
 </div>
 
 __由 form 指令建立__
 * 預設自動建立建立時間或最後編輯時間預設欄位
 <div>
- {GoogleImage( 'google_file_id',  '06_Notion_Form_02.png')}
+ {GoogleImage( '1qt5JIeO2MFRgtQHrDnsUQWqJrixSCZCp',  '06_Notion_Form_02.png' , {width:'322px', height:'305px', hidden:true, degree:0})}
 </div>
 <div>
- {GoogleImage( 'google_file_id',  '06_Notion_Form_03.png')}
+ {GoogleImage( '1-phA--CaSx28jxQK0fC8_6vuRxM7tv-2',  '06_Notion_Form_03.png' , {width:'652px', height:'222px', hidden:true, degree:0})}
 </div>
 
   
@@ -47,25 +47,25 @@ __由 form 指令建立__
 __引出特殊欄位__
 * Notion Form 預設收集操作 log 資訊
 <div>
- {GoogleImage( 'google_file_id',  '06_Notion_Form_04.png')}
+ {GoogleImage( '1EPUotXQioo239Tl0c9WtlSRbGUm0hnp7',  '06_Notion_Form_04.png' , {width:'652px', height:'223px', hidden:true, degree:0})}
 </div>
 
 __Form 製作__
 * 增加填寫欄位
 <div>
- {GoogleImage( 'google_file_id',  '06_Notion_Form_05.png')}
+ {GoogleImage( '1NUviBMqetjZDxfuxn0y0vIg21TR7v6QK',  '06_Notion_Form_05.png' , {width:'588px', height:'341px', hidden:true, degree:0})}
 </div>
 <div>
- {GoogleImage( 'google_file_id',  '06_Notion_Form_06.png')}
+ {GoogleImage( '1MIMovkH7YjVrx5r60hKMg0lfjrPTqmZh',  '06_Notion_Form_06.png' , {width:'652px', height:'310px', hidden:true, degree:0})}
 </div>
 * 必填與附加明
 <div>
- {GoogleImage( 'google_file_id',  '06_Notion_Form_07.png')}
+ {GoogleImage( '1G_V0IZYHKsrm6G3wMhDx9KgLcGMozJLB',  '06_Notion_Form_07.png' , {width:'652px', height:'232px', hidden:true, degree:0})}
 </div>
 
 __送交確認訊息__
 <div>
- {GoogleImage( 'google_file_id',  '06_Notion_Form_08.png')}
+ {GoogleImage( '1USM5Vp6v3KzHWRY25h8ZEQmGlRTD0J49',  '06_Notion_Form_08.png' , {width:'652px', height:'228px', hidden:true, degree:0})}
 </div>
 
 ## 開放表單: 
@@ -119,5 +119,3 @@ __送交確認訊息__
 
 1. <code>/database</code> 建立 database
 1. <code> + </code>🢂 <code>view 選 form</code> 🢂 會出現 <code>Create Questions</code> 確認項。
-
-* 

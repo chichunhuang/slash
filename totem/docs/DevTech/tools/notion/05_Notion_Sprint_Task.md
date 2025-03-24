@@ -31,22 +31,22 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 
 __Sprint Dashboard: 1. Customize Database__
 <span>
- {GoogleImage( 'google_file_id',  '05_Notion_Sprint_01.png')}
+ {GoogleImage( '1L8hgvlfnRKW45L-uK9RyppLZPDxa6aa9',  '05_Notion_Sprint_01.png' , {width:'652px', height:'372px', hidden:true, degree:0})}
 </span>
 
 __Sprint Dashboard: 2. Add Task Functions__
 <span>
- {GoogleImage( 'google_file_id',  '05_Notion_Sprint_03.png')}
+ {GoogleImage( '1Y885oAq_uBjR3eJU7Raxf550y3mGJt4B',  '05_Notion_Sprint_03.png' , {width:'652px', height:'296px', hidden:true, degree:0})}
 </span>
 
 __Sprint Dashboard: 3. Add Sprint Functions__
 <span>
- {GoogleImage( 'google_file_id',  '05_Notion_Sprint_04.png')}
+ {GoogleImage( '1AcNBgKWNEYFQxwxgx_QvEJG0zdQSKpVJ',  '05_Notion_Sprint_04.png' , {width:'652px', height:'354px', hidden:true, degree:0})}
 </span>   
 
 __Sprint Dashboard: 4. Complete__
 <span>
- {GoogleImage( 'google_file_id',  '05_Notion_Sprint_05.png')}
+ {GoogleImage( '1NqCk-aebjYBJroe1zZa0dFGFaIfFjYgP',  '05_Notion_Sprint_05.png' , {width:'264px', height:'379px', hidden:true, degree:0})}
 </span>    
 
 
@@ -61,12 +61,12 @@ __Sprint Dashboard: 4. Complete__
   
 __Dashboard: Current__
 <span>
- {GoogleImage( 'google_file_id',  '05_Notion_SprintBoard_07.png')}
+ {GoogleImage( '1BPJpqO2JeYumetrWla9iDg87amNTJ-2q',  '05_Notion_SprintBoard_07.png' , {width:'652px', height:'263px', hidden:true, degree:0})}
 </span>
 
 __Dashboard: Planning__
 <span>
- {GoogleImage( 'google_file_id',  '05_Notion_SprintBoard_06.png')}
+ {GoogleImage( '1IvWDKKLnNnyMASM9PytzrFs59SyGvPHA',  '05_Notion_SprintBoard_06.png' , {width:'652px', height:'519px', hidden:true, degree:0})}
 </span>
 
 
@@ -76,10 +76,10 @@ __Dashboard: Planning__
 
 __Sprints: All__
 <span>
- {GoogleImage( 'google_file_id',  '05_Notion_SprintBoard_07.png')}
+ {GoogleImage( '1BPJpqO2JeYumetrWla9iDg87amNTJ-2q',  '05_Notion_SprintBoard_07.png' , {width:'652px', height:'263px', hidden:true, degree:0})}
 </span>
 
 __Sprints: Timeline__
 <span>
- {GoogleImage( 'google_file_id',  '05_Notion_SprintTimeline_08.png')}
+ {GoogleImage( '1zUZvjzuV3emvvUWGZlFbWs23960hMAom',  '05_Notion_SprintTimeline_08.png' , {width:'652px', height:'234px', hidden:true, degree:0})}
 </span>
