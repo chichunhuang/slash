@@ -17,7 +17,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 
 __Database Page Menu 相關結構__
 <div>
- {GoogleImage( 'google_file_id',  '07_Notion_Views.png')}
+ {GoogleImage( '157IWXKoY7-8I4NoB6HTO1ttwChSv_OnD',  '07_Notion_Views.png' , {width:'652px', height:'142px', hidden:true, degree:0})}
 </div>
 
 ### 基本設定:   
@@ -28,15 +28,15 @@ Card 的相關設定或 peak 會在 card <b>右上方</b>
 __Database Views 相關設定入口__
 * Layout 設定
 <span>
- {GoogleImage( 'google_file_id',  '07_Notion_Views_02.png')}
+ {GoogleImage( '1l6rcGUYQK9g6jAkT-a4VrU6GAErCMg4U',  '07_Notion_Views_02.png' , {width:'652px', height:'206px', hidden:true, degree:0})}
 </span>
 <span>
- {GoogleImage( 'google_file_id',  '07_Notion_Views_03.png')}
+ {GoogleImage( '1IxBxbpxxWnR-Y1HDnDx1Wzq4l_Dm9sRJ',  '07_Notion_Views_03.png' , {width:'267px', height:'350px', hidden:true, degree:0})}
 </span>
 
 * 單一 View 專屬設定
 <div>
- {GoogleImage( 'google_file_id',  '07_Notion_Views_04.png')}
+ {GoogleImage( '1h_SHXBZ31C5-IdAc8XpdMzTAtaMGHAd-',  '07_Notion_Views_04.png' , {width:'372px', height:'272px', hidden:true, degree:0})}
 </div>
 
 ### Peak 頁面:  
@@ -48,7 +48,7 @@ Peak 指的是 Row 的 Detail Page
 
 __Peak \(Detail Page)__
 <div>
- {GoogleImage( 'google_file_id',  '07_Notion_Views_05.png')}
+ {GoogleImage( '1vfxXgoDy8_nrZcqfoYmWJmTnpb071Ew9',  '07_Notion_Views_05.png' , {width:'652px', height:'257px', hidden:true, degree:0})}
 </div>
 
 ### Detail Page UI 設定入口:  
@@ -59,7 +59,7 @@ __Peak \(Detail Page)__
 
 __Peak \(Detail Page) 畫面調整__
 <div>
- {GoogleImage( 'google_file_id',  '07_Notion_Views_06.png')}
+ {GoogleImage( '1Ujj2BCVnDiX1X0hMtB2yHVuBTETF9snR',  '07_Notion_Views_06.png' , {width:'652px', height:'350px', hidden:true, degree:0})}
 </div>
 
 ## Notion Views 類別

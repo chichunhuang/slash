@@ -29,7 +29,7 @@ _Board View 主要功能_
 __建立 Board View__
 * 在 database 右側的 <code>&nbsp; + &nbsp;</code> 🢂 <code>&nbsp; New View &nbsp;</code> 🢂 <code>&nbsp; Board &nbsp;</code>
 <div>
- {GoogleImage( 'google_file_id',  '08_Notion_Views_Boards_01.png')}
+ {GoogleImage( '1cnBL_BFhOe2ySQQjP6uhbNZDammqoWWW',  '08_Notion_Views_Boards_01.png' , {width:'623px', height:'271px', hidden:true, degree:0})}
 </div>
 
 __指定分類方式__
@@ -40,14 +40,14 @@ __指定分類方式__
     * Color Columns: 為分組上色 
     
 <div>
- {GoogleImage( 'google_file_id',  '08_Notion_Views_Boards_02.png')}
+ {GoogleImage( '1tpTNN_Tzj0obCA2vfDQD3s4zB5dNVEQG',  '08_Notion_Views_Boards_02.png' , {width:'278px', height:'467px', hidden:true, degree:0})}
 </div>
 
     
 __拖曳 Card 進行資料異動__
 * 拖曳
 <div>
- {GoogleImage( 'google_file_id',  '08_Notion_Views_Boards_03.png')}
+ {GoogleImage( '1QlvdQgpneo4wTVa84PDkD1jr0AtLiclK',  '08_Notion_Views_Boards_03.png' , {width:'652px', height:'319px', hidden:true, degree:0})}
 </div>
 
 
@@ -56,7 +56,7 @@ __拖曳 Card 進行資料異動__
 * database <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Group/Sub-group &nbsp;</code> 🢂 可以<span style={{color: '#0044FF'}}> **自行設定分組與次群組** </span>方式，達到二維呈現。橫排與直排各一種分組方式
 
 <div>
- {GoogleImage( 'google_file_id',  '08_Notion_Views_Boards_04.png')}
+ {GoogleImage( '1PrUsEvsM33c_quUh3DB9T30-u7Pq0v-X',  '08_Notion_Views_Boards_04.png' , {width:'652px', height:'315px', hidden:true, degree:0})}
 </div>
 
 ## Card 大小設定
