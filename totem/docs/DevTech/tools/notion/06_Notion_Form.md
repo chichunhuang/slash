@@ -114,8 +114,16 @@ __送交確認訊息__
 * [參閱](https://workspace.google.com/marketplace/app/sync2sheets_notion_in_sync_with_google_s/887187948180)
 * [參閱](https://nuit0815.medium.com/notion-%E4%BD%BF%E7%94%A8%E8%A8%A3%E7%AB%85-%E9%80%A3%E7%B5%90-google-%E8%A1%A8%E5%96%AE%E8%88%87-notion-database-27a44a6c0ee1)
 
-## 小資使用範例
-> 單純資料收集與提供資料清單頁面
+## 小資使用 hints
+> 單純資料收集與提供資料清單頁面 hints
 
 1. <code>/database</code> 建立 database
 1. <code> + </code>🢂 <code>view 選 form</code> 🢂 會出現 <code>Create Questions</code> 確認項。
+1. form builder: 增加所需收集項目
+1. database: Last edited time / Last edited by / Created time / Created by / status / Persion 等欄位建立或 set visible
+1. 為 Database 建立 Linked 副本 \(Copy link ti view)，供 members 檢視資料使用。 (依實際情境增加 Filters 或是 Views)
+1. 為 Database 建立 Linked 副本，供 admin members 管理資料使用。 (依實際情境增加 Filters / Timeline / 或與 Calendar 整合)
+1. *form builder share form: 允許 members 編輯*
+1. 為 form 建立短網址
+1. *發布 Database mention page，供 anonymous member 檢視用。*
+1. 依需要 export database
