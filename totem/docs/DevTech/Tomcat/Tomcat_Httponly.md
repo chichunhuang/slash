@@ -8,7 +8,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 # Tomcat Cookie 安全性設定
 
 ## 測試環境
-* 受稽核的舊統 
+* 受稽核的舊系統 
 * Tomcat8.5
 * JDK8
 
@@ -91,7 +91,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
       
       
 # 檢查設定是否生效
-    * Chrome developer tool (F12) > Application > Storage Cookies 
+    Chrome developer tool (F12) > Application > Storage Cookies 
 
 # 其他
 
