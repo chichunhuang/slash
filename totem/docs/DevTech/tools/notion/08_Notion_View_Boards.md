@@ -6,13 +6,13 @@ keywords: [Notion,Board View,Card View]
 import {GoogleImage} from "@site/src/components/google/GoogleImage"
 
 ## Notion Boards/Cards View 簡介
-> 類似 Kanban 的檢視功能。  
+> 類似 <span style={{color: '#0044FF'}}> __Kanban__ </span> 的檢視功能。  
 > 適用於專案管理、任務追蹤和工作流程視覺化。  
 
 _Board View 主要功能_
 * 卡片式視覺化呈現工作流程：
     * Board View 是一種以看板形式呈現資料的方式，類似於 Kanban 板。
-    * 它將資料組織成欄位（例如「待辦事項」、「進行中」、「已完成」），讓您能夠清楚地看到每個項目的狀態。
+    * 它將資料組織成欄位(例如 待辦事項/進行中/已完成)，讓您能夠清楚地看到每個項目的狀態。
     * 資料內容會以卡片摘要呈現，需要時再展開。
 * 拖曳操作：
     * 可以直接在欄位之間拖放項目，以更新其狀態。
@@ -23,6 +23,18 @@ _Board View 主要功能_
 * 過濾和排序：
     * Notion Board View 提供強大的過濾和排序功能，讓您可以輕鬆地找到所需的資訊。
     * 您可以根據屬性、日期、負責人或指定條件等方式來篩選和排序項目。
+
+## Board View 適用場景摘要
+* 專案管理（Project Management）：
+    * 追蹤專案進度、分配任務、管理截止日期。
+* 任務管理（To-Do List）：
+    * 組織個人或團隊的待辦事項、追蹤任務狀態。
+* 工作流程管理：
+    * 視覺化工作流程、識別瓶頸、優化流程。
+* 內容規劃（Content Planning）：
+    * 管理內容日曆、追蹤文章進度、協作編輯。
+* 產品開發：
+    * 追蹤產品功能、管理 Bug、規劃迭代。
 
 ## Board View 建立
 
@@ -63,32 +75,35 @@ __拖曳 Card 進行資料異動__
 * database 右側 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Layout &nbsp;</code> 🢂 <code>&nbsp; Card Size &nbsp;</code> 
 * 設定 board layout 時可調整 card 大小。Large/Medium/Small。
 
-## Card 快照    
-* database 右側 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Layout &nbsp;</code> 🢂 <code>&nbsp; Card Preview &nbsp;</code> 🢂 <code>&nbsp; cover/content... &nbsp;</code> 
-* snapshot: 每張 Card 代表著一個 Row，故 Board 在顯示內容縮圖時，Card 可以選擇顯示 cover/content/或 row 中多媒體 column。
+## Card 預覽快照    
+* Database 右側 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Layout &nbsp;</code> 🢂 <code>&nbsp; Card Preview &nbsp;</code> 🢂 <code>&nbsp; cover/content... &nbsp;</code> 
+* Preview: 每張 Card 代表著一個 Row，故 Card 在顯示內容縮圖時，可以選擇顯示 Row 的 cover/content/或當中多媒體 column 來當作預覽。
     * Preview: 
-    * img: 縮圖裁切: Layout 🢂 Fit Image or 滑鼠移至縮圖 🢂 Reposition
-    * content: __ … __ 🢂 Properties 決定要顯示的欄位
+        * Cover 圖片: 為統一畫面風格還可自行裁切縮圖: <code>&nbsp; Layout &nbsp;</code> 🢂 <code>&nbsp; Fit Image &nbsp;</code> or 滑鼠移至<code>&nbsp; 縮圖 &nbsp;</code> 🢂 <code>&nbsp; Reposition &nbsp;</code> 顯示區域
+        * Content: <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Properties &nbsp;</code> 決定 Card 上要顯示的欄位。
     
+<div>
+ {GoogleImage( 'x',  '08_Notion_Views_Boards_05.png' )}
+</div>
+    
+<div>
+ {GoogleImage( 'X',  '08_Notion_Views_Boards_06.png' )}
+</div>
+
+
 ## 加總與計數    
-* calculations: 與 Table view 相同，一個 Column 下的 Cards 可以進行 Calculate。 
-    * board column header 邊的數值即是 calculation。操作方法同 Table View。
-    
-## 隱藏 Cards    
-* Visibility: 
-    * __ … __ 🢂 Properties 🢂 Show/Hide
-    * __ … __ 🢂 Group 🢂 Show/Hide
+* Calculations: 與 Table view 相同，一個 Column 下的 Cards 可以對資料進行 Calculate。 
+    * Board Column Header 邊的數值即是 calculation 結果。操作方法同 [Table View](./Notion_Database#notion_database_rollup)。
+
+<div>
+ {GoogleImage( 'X',  '08_Notion_Views_Boards_07.png' )}
+</div>
+
+
+## 隱藏 Cards 資訊
+* 設定要顯示的 Row Property: <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Properties &nbsp;</code> 🢂 <code>&nbsp; Show/Hide &nbsp;</code>
+* 設定隱藏 Board 中的指定類別: <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Group &nbsp;</code> 🢂 <code>&nbsp; Show/Hide &nbsp;</code>
         
-        
-## Board View 適用場景摘要
-* 專案管理（Project Management）：
-    * 追蹤專案進度、分配任務、管理截止日期。
-* 任務管理（To-Do List）：
-    * 組織個人或團隊的待辦事項、追蹤任務狀態。
-* 工作流程管理：
-    * 視覺化工作流程、識別瓶頸、優化流程。
-* 內容規劃（Content Planning）：
-    * 管理內容日曆、追蹤文章進度、協作編輯。
-* 產品開發：
-    * 追蹤產品功能、管理 Bug、規劃迭代。
-  
+<div>
+ {GoogleImage( 'X',  '08_Notion_Views_Boards_08.png' )}
+</div>

@@ -118,7 +118,7 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
  {GoogleImage( '1erCbwAjJLyFoM43AmRMcGdlt_5NC11tG',  'insect_totem_logo_70x70.jpg', {width:'650px', height:'499px', hidden:true, degree:0})}
 </span><br/>
 
-### ___Rollup\(彙總)___ : 
+### ___Rollup\(彙總)___ : <span id="notion_database_rollup">&nbsp;</span>
 > 可以將關聯 Notion DB 資料進行彙總後成為主 DB 的欄位內容。
 
 * 當 Database 具一對多 Relation 關係時，可以建立 [Rollup Type Property](./Notion_View/#notion_Chart_View)。  
