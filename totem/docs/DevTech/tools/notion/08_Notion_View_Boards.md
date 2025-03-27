@@ -1,6 +1,6 @@
 ---
 title: Notion Board View 
-description: Notion Board View
+description: Notion DB 卡片檢視模式
 keywords: [Notion,Board View,Card View]
 ---
 import {GoogleImage} from "@site/src/components/google/GoogleImage"
