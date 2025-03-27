@@ -115,9 +115,7 @@ sidebar_position: 1
 ### canva
 * [Canva 學習紀錄 - Canva Notes](/docs/DevTech/tools/canva/CanvaNote)
 ### notion
-* [Notion Apps - Notion Apps](/docs/DevTech/tools/notion/Notion_Apps)
 * [Notion 共編 - Notion 共編](/docs/DevTech/tools/notion/Notion_Collaboration)
 * [Notion 學習紀錄 - Notion Notes](/docs/DevTech/tools/notion/NotionBasic)
-* [Notion 學習紀錄 整合其他軟體 - Notion 整合其他軟體](/docs/DevTech/tools/notion/Notion_Integration)
 * [Notion 自動化 - Notion 自動化](/docs/DevTech/tools/notion/Notion_Automation)
 
