@@ -1,33 +1,45 @@
 ---
 title: Notion Timeline View
-description: Timeline View
+description: Notion DB 時間線檢視模式
 keywords: [Notion,Timeline View]
 ---
 import {GoogleImage} from "@site/src/components/google/GoogleImage"
 
-## Notion View
-    Notion Database 功能的延伸，
-    允許 Notion Database 依不同的目的改變視覺呈現。
-    Database 預設以 Table View 呈現。
-
-## Views
-> 新建立 Inline Database 時會在主頁下自動建立 sub-page。page 預設會以 View of database 命名。建議即刻依 view + db 改名。  
-> 整體而言: 
->> database layout 與 columns 的顯示隱藏，相關設定在 <b>右上的 __ … __</b>   
->> 與 view 相關的 specific 設定會放在 view <b>右上的相關快捷</b>   
->> Card 的相關設定或 peak 會在 card <b>右上方</b>   
->
-> Layout/Peak: Row 的 Detail Page  
->> 資料庫頁面可以自行設定 Detail 呈現資訊\(一般頁面似乎無此功能)，因部分的 View 在呈顯時僅顯示指定摘要資訊，故提供 row detail 功能。    
->> Layout 指的是，滑鼠移至 name column 時所開啟的 Detail Page。這個 Page 是 Row 的一部分，不是 SubPage。  
->> 設定入口:  
->>  * 🖱hover > 移至標題上方 > Customize Layout  
->>  * 或是開啟 peak page > 右上 __ … __ > Customize Layout  
+## Notion Timeline View
+> Timeline View 上可自行選擇要呈現的 Properties。<br/>
+> 時間軸上的 <span style={{color: '#0044FF'}}>點標記</span> 可對應到指定 Data Property。<br/>
+> 時間軸上也可使用 <span style={{color: '#0044FF'}}>區間標記</span>，需自行選取起時始間與結束時間。   
         
 * Timeline View 
-    * 時間軸: ... > Layout > Show Timeline by 指定時間軸。           
-    * 顯示區段調整: Timeline 右側的時間單位夏拉快捷與 today，用來管理 Timeline view 的<b>橫向呈現</b> by week/month/quater/year。而 Calendar view 則是經由 __ … __ 。
-    * 資料數: 
-        * row:  __ … __ > Load limit: 可限制 view 的<b>縱向呈現</b>，限制起始時一次可顯示的 rows 筆數。
-        * column: Timeline 左上的 >> \(show table)，可調出 Table 的其他 toggled 欄位。 Database 的 __ … __ > Layout > Properties 則控制那些 columns 可顯示。
-  
+    * 時間軸: <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Layout &nbsp;</code> 🢂 <code>&nbsp; Show Timeline by &nbsp;</code> 指定時間軸上顯示的資訊主題。           
+    * 顯示區段調整: Timeline 右側的時間單位下拉快捷與 today 按鈕，用來管理 Timeline View 的<b>橫向呈現</b> by week/month/quater/year。
+    * 註: [Calendar View](./Notion_View_Calendar) 則是經由 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Layout &nbsp;</code> 🢂 <code>&nbsp; Show Calendar as Month/Week &nbsp;</code> 。
+    * 資料數: <span style={{color: '#0044FF'}}> __Timeline__ </span>可以自行設定版面上的資料豐度，隱藏 Row 數量或隱藏部分 Column 訊息。
+        * Row:  <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Load limit &nbsp;</code> 可暫時限制 view 的<b>縱向呈現</b>，限制起始時一次可顯示的 rows 筆數。若需要可經由 <code>&nbsp; Load More &nbsp;</code> 展開。
+        * Toggle: Timeline 左上的 <code>&nbsp; >> &nbsp;</code> \(show table)，可調出 toggled 資訊。 
+        * Column: 與 Database 其他 Views 相同，可選擇隱藏或顯示 Row 部分欄位: <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Layout &nbsp;</code> 🢂 <code>&nbsp; Properties &nbsp;</code> 控制 column visibility。
+
+__設定時間軸主題:單一事件時間__
+<div>
+ {GoogleImage( 'google_file_id',  '10_Notion_Views_Timeline_01.png')}
+</div>  
+
+__設定時間軸主題:時間區間__
+<div>
+ {GoogleImage( 'google_file_id',  '10_Notion_Views_Timeline_02.png')}
+</div>  
+
+__顯示區段調整__
+<div>
+ {GoogleImage( 'google_file_id',  '10_Notion_Views_Timeline_03.png')}
+</div>  
+
+__顯示資料筆數__
+<div>
+ {GoogleImage( 'google_file_id',  '10_Notion_Views_Timeline_04.png')}
+</div>  
+
+__Toggle__
+<div>
+ {GoogleImage( 'google_file_id',  '10_Notion_Views_Timeline_05.png')}
+</div>
