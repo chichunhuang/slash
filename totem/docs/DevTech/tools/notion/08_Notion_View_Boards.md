@@ -8,6 +8,11 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 ## Notion Boards/Cards View 簡介
 > 類似 <span style={{color: '#0044FF'}}> __Kanban__ </span> 的檢視功能。  
 > 適用於專案管理、任務追蹤和工作流程視覺化。  
+>   
+> Notion 還有另一個也是以 Cards 來做資料呈現的 Layout，[Gallery View](./Notion_View_Gallery#Compare)。  
+> 由名稱 [Gallery 畫廊](./Notion_View_Gallery#Compare) 可得知主要是用來放作品集的版面。  
+> 由於目的不同所以能呈現的資訊也些差異。  
+> 🢂 [Board v.s. Gallery 比較](./Notion_View_Gallery#Compare)
 
 _Board View 主要功能_
 * 卡片式視覺化呈現工作流程：
