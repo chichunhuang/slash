@@ -9,7 +9,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 > 基本上與 Board View 幾乎相同，只不過是 Gallery View 強調應用在作品的呈現上。  
 > 以 Grid 網格來排列作品。類似 You Tube 的排列方式。
     
-* Gallery : Gallery View Cards 與 [Board View Crard](#Border_View) 比較 <span id="Gallery_View"> </span>
+* Gallery : Gallery View Cards 與 [Board View Crard](./Notion_View_Boards) 比較 <span id="Gallery_View"> </span>
     * Gallery View 以 Cards 來摘要顯示 row 的 **<span style={{color: '#0044FF'}}> 多媒體欄位 </span>** /page cover/page content。簡單說就是以 <span style={{color: '#0044FF'}}> **Card 加 Snapshot** </span> 呈現 subpage 的預覽。    
     * 另外 Gallery 以 Grid 來排列內容，所以沒有依類別多維度分組功能。
     * 預覽設定: <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Layout &nbsp;</code> 🢂 <code>&nbsp; Card preview&nbsp;</code> 🢂 <code>&nbsp; column &nbsp;</code>。    

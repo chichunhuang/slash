@@ -96,6 +96,8 @@ _Column Property Settings_
 > 這邊指的是類似關聯式資料庫PK vs FK 間關係、將多個欄位合併計算、將多個行合併計算、或是指定函數來對特定資料做計算。  
 > 可以想像成 excel 的 cell 中使用 formula。或是清單的功能。
 
+* [Notion 資料表的突現性質](./Notion_Emergent_Property): 參考與比較位址-[Notion 資料表的突現性質]](./Notion_Emergent_Property) > 介紹資料表的集合特性。
+
 
 ### ___Relation___:
 * 新增 Main DB Property <code> &nbsp;+ </code>  時選擇<span style={{color: '#0044FF'}}> <b>Relation Type</b></span> 可建立<span style={{color: '#0044FF'}}> <b>表格間的關聯</b></span>。  
@@ -121,12 +123,12 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
 ### ___Rollup\(彙總)___ : <span id="notion_database_rollup">&nbsp;</span>
 > 可以將關聯 Notion DB 資料進行彙總後成為主 DB 的欄位內容。
 
-* 當 Database 具一對多 Relation 關係時，可以建立 [Rollup Type Property](./Notion_View/#notion_Chart_View)。  
+* 當 Database 具一對多 Relation 關係時，可以建立 Rollup Type Property。  
 * 功能類似 Java 的 Stream。可以整合多個資料以指定的方式呈現，例如:sum, max, joining。   
 * 不同 Type 的 Relation 可以有不同的處理工具。  
 * <code>  &nbsp;… </code> 🢂 <code> Property </code> (選擇 Sub's column) 🢂 <code> Calculate</code>  (決定處理動作) 🢂 <code> show as </code>  🢂 決定呈現方式\(%、圓餅)  
 * 如: 在 backlog 顯示相關 tasks 的完成度。
-* 與 [Chart View](./Notion_View/#notion_Chart_View) 比較
+* 與 [Chart View](./Notion_View_Chart#Notion_Rollup_Chart) 比較
     * rollup: 為單一 row 下的子單元做計算。統計 subitems 數量/完成度。
     * chart: 為整份 database 做數量/完成度統計。  
     
@@ -135,11 +137,11 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
 </span><br/>
 
 
-### ___Calculations___:  
+### ___Calculations___: <span id="notion_database_Calculation">&nbsp;</span>  
 * Rollup 與 column 最下方的 [Calculations](https://www.notion.com/help/tables) 比較。
-* Calculations(縱向計算): 依 column 屬性特性，為該欄位進行計算處理。如 Rows 總數/已填未填數量等。
+* Calculations(縱向計算): 依 column 屬性特性，為該欄位進行計算處理。如 Rows 總數/已填未填數量等。 [Calculations 範例](./Notion_Emergent_Property#Notion_Example)
 * Rollup\(關聯資料計算): rollup 則是整合有 relation 的資料。
-* [Formula](#notion_Formula) \(row 本身資料處理): 比較 Formula column，允許 row 將自身欄位進行運算進而提供整理資料。
+* [Formula](#notion_Formula) \(row 本身資料處理): 比較 Formula column，允許 row 將自身欄位進行運算進而提供整理資料。[Formula 加總 Main Row 與 SubItem 範例](./Notion_Emergent_Property#Notion_Example)
 
 <span>
  {GoogleImage( '178BgzFvB_TnhGlJC6vayNINtf52VFuap',  'insect_totem_logo_70x70.jpg', {width:'797px', height:'394px', hidden:true, degree:0})}
@@ -229,14 +231,14 @@ __https://www.notion.so/IS-1__
 </span>
 
 
-## Subitems and Dependencies
+## Subitems and Dependencies<span id="notion_database_Subitem">&nbsp;</span>
 > Notion 提供 ___Tree Table___ 功能，讓 Table 資料可以樹狀結構呈現。  
 > 
 
 * 功能入口: table 右上 <code>&nbsp;__…__ </code> > <code> Customize My Database </code> > <code> Suggested </code> > <code> add </code>
 * Sub-Items <span id="notion_subitems"> </span>
     * 添加 Subitems 特性後，在 Row Name 會出現 🠟 符號可用來設定 subitems \(直接將 Subitems 拖入即可)。 
-    * Database Table 下的 <span style={{color: '#0044FF'}}> **Row 可再拆分成 Sub-items \(closable, 子單元, tasks)** </span>。 
+    * Database Table 下的 <span style={{color: '#0044FF'}}> **Row 可再拆分成 Sub-items \(closable, 子單元, tasks)** </span>。如: 主任務可再細分成多個關聯子任務。
     * Table 最下方的 <span style={{color: '#0044FF'}}> **rollup 計算數量或加總時會以 main row 為準** </span>。\(忽略 subitems 數量)
     * <code>&nbsp;… </code> > <code> Customize </code> > <code> Sub-items </code> 可以移除階層顯示獲設定 sub-items 顯示方式。 
 * Dependency<span id="notion_dependencies"> </span>
@@ -265,3 +267,24 @@ __Dependency__<br/>
 * 批次修改: 滑鼠點 Row 前方，或勾選前方 checkboxes。被選取部分會出現底色。可出現 Docker 用來批次編輯指定 column。
 * Rollup and Calculations 進行資料統整
 * 利用 Person Property 與 Column Filter 限制共編夥伴可看到的資料範圍
+
+
+## Relation 與 SubItems 比較
+* 使用場景
+ 使用 Relation ➝ 需要關聯不同類型的資料，例如「專案」對應「負責人」、「訂單」對應「客戶」。
+ 使用 Subitems ➝ 需要階層式管理，如「年度目標」包含「月度目標」，「任務」包含「子任務」。
+
+
+| 功能  Notion Relation Notion Subitems
+| 主要用途    連結不同資料庫或相同資料庫內的項目   在同一資料庫內建立層級結構（父項目與子項目）
+| 數據結構    透過 Relation 建立「多對多」或「一對多」的關係    透過層級架構建立「父子關係」
+| 顯示方式    以關聯屬性顯示在表格中，可手動選擇關聯項目   以展開/折疊方式顯示在項目下方
+| 範圍  可跨資料庫連結不同項目 只能在相同資料庫內使用
+| 與 Rollup 搭配 可搭配 Rollup 彙總關聯數據   不支援 Rollup（但子項目可手動統計）
+| 適用場景    1. 將「專案」與「任務」關聯起來
+| 2. 連結「客戶」與「訂單」等不同資料庫    1. 需要明確的父子層級，如「公司目標」與「子目標」
+| 2. 任務分解，如「開發功能」→「子任務」
+| 靈活性 非層級式結構，適合關聯不同類型的數據  層級式結構，適合組織內部層次
+| 限制  1. 需手動建立關聯，無法自動同步子項目
+| 2. 不適合單純的父子層級架構 1. 只能在單一資料庫內使用，不能關聯不同資料庫
+| 2. 目前不支援 Rollup 進行數據彙總

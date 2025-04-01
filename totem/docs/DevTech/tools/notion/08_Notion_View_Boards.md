@@ -98,7 +98,7 @@ __拖曳 Card 進行資料異動__
 
 ## 加總與計數    
 * Calculations: 與 Table view 相同，一個 Column 下的 Cards 可以對資料進行 Calculate。 
-    * Board Column Header 邊的數值即是 calculation 結果。操作方法同 [Table View](./Notion_Database#notion_database_rollup)。
+    * Board Column Header 邊的數值即是 calculation 結果。操作方法同 [Table View](./Notion_Database#notion_database_Calculation)。
 
 <div>
  {GoogleImage( 'X',  '08_Notion_Views_Boards_07.png' )}
