@@ -16,7 +16,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
     * 其他: card/database 右上角的 <code>&nbsp; ... &nbsp;</code> 可更改縮圖顯示/Card size/顯示 Properties 等常規操作。
 
 <div>
- {GoogleImage( 'google_file_id',  '11_Notion_Views_Gallery_01.png')}
+ {GoogleImage( '1Tuem5B5RW8byxqKRwO5s3mlzcGn0q-ae',  '11_Notion_Views_Gallery_01.png' , {width:'652px', height:'378px', hidden:true, degree:0})}
 </div>
 
 ## Gallery 與 [Board](./Notion_View_Boards) 比較 <span id="Compare">&nbsp;</span>

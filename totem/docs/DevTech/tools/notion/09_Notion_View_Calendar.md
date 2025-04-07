@@ -13,7 +13,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 > 若想了解 [Notion 與其他日曆軟體整合，如與 Google Calendar 整合](./Notion_Calendar) 請參考 [Notion Calendar](./Notion_Calendar) 章節。  
 
 <div>
- {GoogleImage( 'google_file_id',  '09_Notion_Views_Calendar_01.png')}
+ {GoogleImage( '1wkzj3powUgGHnU-qVqbAImSb-SibTCyn',  '09_Notion_Views_Calendar_01.png' , {width:'525px', height:'645px', hidden:true, degree:0})}
 </div>
 
 
@@ -33,20 +33,20 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 __指定事件放置到特定日期__
 
 <div>
- {GoogleImage( 'google_file_id',  '09_Notion_Views_Calendar_02.png')}
+ {GoogleImage( '1GqjkqPdptLopEoYVW-UILYdzBYbS6elQ',  '09_Notion_Views_Calendar_02.png' , {width:'652px', height:'369px', hidden:true, degree:0})}
 </div>
 <br/>
 
 __定顯示資訊__
 
 <div>
- {GoogleImage( 'google_file_id',  '09_Notion_Views_Calendar_03.png')}
+ {GoogleImage( '1q7PTFLI5-HiIwKNA_H7EIcmsa4U3FmN8',  '09_Notion_Views_Calendar_03.png' , {width:'652px', height:'421px', hidden:true, degree:0})}
 </div>
 <br/>
 
 __視景切換__
 
 <div>
- {GoogleImage( 'google_file_id',  '09_Notion_Views_Calendar_04.png')}
+ {GoogleImage( '1uqp1zZsGa4imDSwLeuJl79AW4TLn9LiR',  '09_Notion_Views_Calendar_04.png' , {width:'652px', height:'338px', hidden:true, degree:0})}
 </div>
 <br/>

@@ -46,7 +46,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
         1. 添加 subitems 後 <code>&nbsp; ... &nbsp;</code> 🢂 會出現 <code>&nbsp; Include sub-items &nbsp;</code> 選項  🢂 SubItem 是否獨立出現於 X 軸，進行計算時也視為完整的 row ，不與 parent 相依，各自獨立計算。  
 
 <div>
- {GoogleImage( 'google_file_id',  '12_Notion_Views_Chart_01.png')}
+ {GoogleImage( '1wkHKebSASMTwNhz1WyRJKGzpDQubIebl',  '12_Notion_Views_Chart_01.png' , {width:'652px', height:'390px', hidden:true, degree:0})}
 </div>
 
 ## Bar Chart X/Y 軸調整: <span id="Notion_Chart_XY">&nbsp;</span>
@@ -73,7 +73,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
     *  <code>&nbsp; Chart View &nbsp;</code> 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Style &nbsp;</code> 🢂 <code>&nbsp; More Options &nbsp;</code> 🢂 <code>&nbsp; Data Labels &nbsp;</code>
 
 <div>
- {GoogleImage( 'google_file_id',  '12_Notion_Views_Chart_02.png')}
+ {GoogleImage( '1vXOXAw4vmnOIpuqyEXslhVqOPbgM8UEy',  '12_Notion_Views_Chart_02.png' , {width:'238px', height:'745px', hidden:true, degree:0})}
 </div>
 
 ## 圓餅圖 Slice 調整: 
@@ -83,7 +83,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
     * slice: 類似 bar chart 的 Y 軸設定，指定每個片段代表的意義與數值。
 
 <div>
- {GoogleImage( 'google_file_id',  '12_Notion_Views_Chart_03.png')}
+ {GoogleImage( '10IEOHrWW5hpnm6si12jIVWErYgAi5T78',  '12_Notion_Views_Chart_03.png' , {width:'635px', height:'462px', hidden:true, degree:0})}
 </div>
 
 ## UI 客製化: 

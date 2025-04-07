@@ -21,25 +21,25 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 
 __設定時間軸主題:單一事件時間__
 <div>
- {GoogleImage( 'google_file_id',  '10_Notion_Views_Timeline_01.png')}
+ {GoogleImage( '1GlN659-jKO9MrEXUwMa6ONICf6UAo08N',  '10_Notion_Views_Timeline_01.png' , {width:'652px', height:'320px', hidden:true, degree:0})}
 </div>  
 
 __設定時間軸主題:時間區間__
 <div>
- {GoogleImage( 'google_file_id',  '10_Notion_Views_Timeline_02.png')}
+ {GoogleImage( '1K8rhQnjCZdlJveVnf6sMddsMt3i6DVIJ',  '10_Notion_Views_Timeline_02.png' , {width:'652px', height:'347px', hidden:true, degree:0})}
 </div>  
 
 __顯示區段調整__
 <div>
- {GoogleImage( 'google_file_id',  '10_Notion_Views_Timeline_03.png')}
+ {GoogleImage( '1T_H-63zpd51P7L5k32zqLWY2ZY1lkeAW',  '10_Notion_Views_Timeline_03.png' , {width:'366px', height:'277px', hidden:true, degree:0})}
 </div>  
 
 __顯示資料筆數__
 <div>
- {GoogleImage( 'google_file_id',  '10_Notion_Views_Timeline_04.png')}
+ {GoogleImage( '1_yhVPRgpLgsBaVgIy0di1rT_wzpaWEXm',  '10_Notion_Views_Timeline_04.png' , {width:'652px', height:'373px', hidden:true, degree:0})}
 </div>  
 
 __Toggle__
 <div>
- {GoogleImage( 'google_file_id',  '10_Notion_Views_Timeline_05.png')}
+ {GoogleImage( '1nJfWRVsOjIEJwPljfTDJVWsemu84xTMq',  '10_Notion_Views_Timeline_05.png' , {width:'652px', height:'308px', hidden:true, degree:0})}
 </div>

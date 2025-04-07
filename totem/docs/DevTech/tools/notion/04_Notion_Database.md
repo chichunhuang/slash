@@ -99,7 +99,7 @@ _Column Property Settings_
 * [Notion 資料表的突現性質](./Notion_Emergent_Property): 參考與比較位址-[Notion 資料表的突現性質]](./Notion_Emergent_Property) > 介紹資料表的集合特性。
 
 
-### ___Relation___:
+### ___Relation___:<span id="notion_database_Relation">&nbsp;</span>
 * 新增 Main DB Property <code> &nbsp;+ </code>  時選擇<span style={{color: '#0044FF'}}> <b>Relation Type</b></span> 可建立<span style={{color: '#0044FF'}}> <b>表格間的關聯</b></span>。  
 * PK 是 Main DB 的 Relation 欄位，雙向時 FK 則可以是 Sub 任意欄位。  
 * 允許一對多。__填寫 Relation 欄位時，會自動帶出 Sub DB Rows 的內容__  
@@ -147,7 +147,7 @@ _填寫 Relation 時自動帶入 Sub DB Rows_
  {GoogleImage( '178BgzFvB_TnhGlJC6vayNINtf52VFuap',  'insect_totem_logo_70x70.jpg', {width:'797px', height:'394px', hidden:true, degree:0})}
 </span><br/>
 
-### __Column Filter__: 
+### __Column Filter__:  <span id="notion_database_Filter">&nbsp;</span>  
 * 同一份 DB 資料，可以使用在不同地方。Filter 則可以為此客製不同呈現方式。  
     * 經由 <code> &nbsp; __⋮⋮__ 🖱L </code> 🢂 <code> Copy Link </code>  🢂 指定位置 🢂 <code> Paste as Linked Database View </code>  🢂 完成 Referenced View 建立。
 * 建立 filters: 
@@ -221,6 +221,7 @@ __https://www.notion.so/IS-1__
     * 分數高於 60 顯示及格，反之顯示不及格。
 * [Notion Formula Basic](https://www.notion.com/help/formulas)
 * [Formula 2.0 Reference](https://www.notion.com/help/guides/new-formulas-whats-changed?_gl=1*90t2qe*_gcl_au*MTY5Njc4Mzk3NS4xNzMxNTY1MTIx*_ga*MjAwNDk0ODY3Ny4xNzMxNTY1MTIx*_ga_9ZJ8CB186L*MTczMzE4NzQ1MC4xMi4xLjE3MzMxODg0OTMuNTcuMC4w&cookie_sync_completed=true)
+* [Notion 資料表的突現性質:Formula](./Notion_Emergent_Property)
 * 操作:  
     * Edit Property > Edit Formula > Property 當 Argument > 決定 Formula  
     * Docker Panel 上會出現各欄位的基本使用範例。  

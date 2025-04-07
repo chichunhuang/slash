@@ -88,11 +88,11 @@ __拖曳 Card 進行資料異動__
         * Content: <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Properties &nbsp;</code> 決定 Card 上要顯示的欄位。
     
 <div>
- {GoogleImage( 'x',  '08_Notion_Views_Boards_05.png' )}
+ {GoogleImage( '1X0x9HoEWMjvMtix82ILamvEHVNtixcnz',  '08_Notion_Views_Boards_05.png' , {width:'652px', height:'482px', hidden:true, degree:0})}
 </div>
     
 <div>
- {GoogleImage( 'X',  '08_Notion_Views_Boards_06.png' )}
+ {GoogleImage( '1iIn8lFCdkVNomrKIW1fPzT9l7bXdkld2',  '08_Notion_Views_Boards_06.png' , {width:'652px', height:'425px', hidden:true, degree:0})}
 </div>
 
 
@@ -101,7 +101,7 @@ __拖曳 Card 進行資料異動__
     * Board Column Header 邊的數值即是 calculation 結果。操作方法同 [Table View](./Notion_Database#notion_database_Calculation)。
 
 <div>
- {GoogleImage( 'X',  '08_Notion_Views_Boards_07.png' )}
+ {GoogleImage( '1Y0BEGVXDi8iRdudS_HhiikJDrNPd4HLE',  '08_Notion_Views_Boards_07.png' , {width:'579px', height:'268px', hidden:true, degree:0})}
 </div>
 
 
@@ -110,5 +110,5 @@ __拖曳 Card 進行資料異動__
 * 設定隱藏 Board 中的指定類別: <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Group &nbsp;</code> 🢂 <code>&nbsp; Show/Hide &nbsp;</code>
         
 <div>
- {GoogleImage( 'X',  '08_Notion_Views_Boards_08.png' )}
+ {GoogleImage( '1tqcLPEcXlmGHgc-ZvBgYZCJGaHKWNJr7',  '08_Notion_Views_Boards_08.png' , {width:'652px', height:'406px', hidden:true, degree:0})}
 </div>
