@@ -30,6 +30,18 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage";
     * Mobile 版部分功能有受限，此處以 Browser 為主。
     * __整合後的日曆資料可以在 __ Notion Workspace 的 Home 以 Dashboard 自動整理呈現。 
         * (左側 sidebar 🢂 Home) 
+
+## Notion Calendar UI
+
+### Calendar 左側欄
+* 小月曆
+* 帳號與workspace 管理
+
+### Calendar 右側 Sidebar
+* 搜尋列
+* 事件/會議提醒
+* 功能提示
+
     
 
 ## Notion Calendar 帳號設定
@@ -96,9 +108,10 @@ __Calendar 中新增其他次要 Google 帳號__
 <div>
  {GoogleImage( 'google_file_id',  '15_Notion_Calendar_08.png')}
 </div>
+<span style={{color: '#CECECE'}}> 於 Notion 自行上傳的 Workspace Logo 在此處會出現顯示錯誤。</span> 
 
 ### __Calendar 與 Database 連接:__ 
-* Calendar 左側 Sidebar 🢂 <code>&nbsp; Notion Account &nbsp;</code>🢂 <code>&nbsp;  … &nbsp;</code> 🢂 <code>&nbsp; Add Notion Database &nbsp;</code>: 指與 Notion database 連接。 
+* Calendar 左側 Sidebar 🢂 <code>&nbsp; Notion Account &nbsp;</code> 🢂 <code>&nbsp;  … &nbsp;</code> 🢂 <code>&nbsp; Add Notion Database &nbsp;</code>: 指與 Notion database 連接。 
 * 移除: 須以移除 workspace 方式移除 Date Property 內容: 左側 Sidebar 會出現 <code>&nbsp; Notion Account &nbsp;</code> 🢂 <code>&nbsp;  …  &nbsp;</code> 🢂 <code>&nbsp; 管理工作空間 &nbsp;</code> 🢂 此處可 <code>&nbsp; 解除連結 &nbsp;</code>
 
 <div>
@@ -134,10 +147,36 @@ __Calendar 中新增其他次要 Google 帳號__
  {GoogleImage( 'google_file_id',  '15_Notion_Calendar_11.png')}
 </div>    
 
-### Calendar Event 與 Notion Page 建立關聯
-__Calendar 與 Notion Page 建立關聯:__
-* 如果想為日曆上的事件增加一些附加文件，例如會議的投影片資料。此時，Notion 提供 Event 與 Notion Page 建立連結的功能。可將參考資訊紀錄在 Notion Page，Calendar 上的事件再與 Page 建立關聯。
-* Calendar Event 選取 🢂 右側 Docker Panel 🢂 Docs and Links 🢂 選取或建立要建立關聯的頁面 🢂 點 x 可直接移除關聯
+### 為 Calendar 活動 建立 Detail Page
+> 可為 Notion 日曆上的事件增加一些附加說明或文件，
+> 例如活動細節與會議的投影片資料等等，將相關文件統一管理。  
+> Detail Page 細分為 Notion 相關活動與 3rd Party Calendar 活動兩類，建立畫面有些許差異。
+
+___Notion Activity 建立 Detail Page:___
+* Notion 中的 Database/Sprint Records 都自帶一個 Detail Page。可自動帶入原資料細節並允許同步編輯附加內容。
+* 點取 Calendar 關聯的 <code>&nbsp; 活動 &nbsp;</code> 🢂 <code>&nbsp; 右方側邊欄 &nbsp;</code> 🢂 <code>&nbsp; 在 Notion 打開 &nbsp;</code> 可直接開啟 Notion 預設 Detail Page。
+
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_14.png')}
+</div>    
+
+___Google Calendar Activity 建立 Detail Page:___
+* 非 Notion Record 未自帶 Detail Page。此時，Calendar 提供活動與 URL/Notion Page/Database 建立連結的功能。可將細節紀錄在 Notion Page，活動再與之關聯。
+* 點取 Calendar 關聯的 <code>&nbsp; 活動 &nbsp;</code> 🢂 <code>&nbsp; 右方側邊欄 &nbsp;</code> 🢂 <code>&nbsp; 新增文件或連結 &nbsp;</code> 🢂 <code>&nbsp; 選取或建立要建立關聯的標的 &nbsp;</code> 
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_15.png')}
+</div>    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
