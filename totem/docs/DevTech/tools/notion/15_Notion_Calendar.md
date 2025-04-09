@@ -50,6 +50,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage";
 * 設定可粗分為兩類動作:
     * Notion Calendar 與 Google Calendar 設定
     * Notion Calendar 與 Notion Workspace/Notion Database with date property 設定
+* [帳號移除設定](#Calendar_Acc_Remove)    
 
 ## Calendar 帳號連結設定
 __Notion Calendar 帳號與 Google Calendar 建立與連結:__ 
@@ -147,7 +148,7 @@ __Calendar 中新增其他次要 Google 帳號__
  {GoogleImage( 'google_file_id',  '15_Notion_Calendar_11.png')}
 </div>    
 
-### 為 Calendar 活動 建立 Detail Page
+### 為 Calendar 活動建立 Detail Page
 > 可為 Notion 日曆上的事件增加一些附加說明或文件，
 > 例如活動細節與會議的投影片資料等等，將相關文件統一管理。  
 > Detail Page 細分為 Notion 相關活動與 3rd Party Calendar 活動兩類，建立畫面有些許差異。
@@ -161,93 +162,143 @@ ___Notion Activity 建立 Detail Page:___
 </div>    
 
 ___Google Calendar Activity 建立 Detail Page:___
-* 非 Notion Record 未自帶 Detail Page。此時，Calendar 提供活動與 URL/Notion Page/Database 建立連結的功能。可將細節紀錄在 Notion Page，活動再與之關聯。
+* 非 Notion Record 未自帶 Detail Page。此時，Calendar 提供活動與 <code>&nbsp;URL&nbsp;</code>/<code>&nbsp;Notion Page&nbsp;</code>/<code>&nbsp;Database&nbsp;</code>建立連結的功能。可將細節紀錄在 Notion Page，活動再與之關聯。
 * 點取 Calendar 關聯的 <code>&nbsp; 活動 &nbsp;</code> 🢂 <code>&nbsp; 右方側邊欄 &nbsp;</code> 🢂 <code>&nbsp; 新增文件或連結 &nbsp;</code> 🢂 <code>&nbsp; 選取或建立要建立關聯的標的 &nbsp;</code> 
 <div>
  {GoogleImage( 'google_file_id',  '15_Notion_Calendar_15.png')}
 </div>    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 設定 Default Calendar
-* 這邊指的是新增事件預設放入的位置設定
-* 左側 Sidebar 🢂 Calendar 或 Database 名 🢂 __ … __ Settings 🢂 Calendars 🢂 Make Calendar Default 🢂 選取
-* Calendar 旁的眼睛福好可用來暫時隱藏不想顯示的 Calendar  
+* 這邊指的是新增活動實預設放置位置設定\(新增時亦可手動指定位置)
+* 左側 <code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Calendar &nbsp;</code>帳號 🢂 <code>&nbsp; __ … __ Settings &nbsp;</code> 🢂 <code>&nbsp;管理日曆帳號 &nbsp;</code> 🢂 <code>&nbsp; Calendars &nbsp;</code> 🢂 <code>&nbsp; Make Calendar Default &nbsp;</code> 🢂 <code>&nbsp; 選取 &nbsp;</code>
+* Workspace/Database 旁的眼睛符號可用來暫時隱藏不想顯示的活動  
 
-## Calendar 移除設定
-* 包含 a.移除 workspace 同步關聯, b.移除 Google calendar 同步關聯, c.Notion Calendar 帳號移除.
-__移除 Workspace 與 Notion Calendar 同步關聯__
-* 移除與 workspace 連結: Calendar linked by workspace，所以在 notion workspace settings 中處理。 
-    * from workspace: Settings 🢂 Connections 🢂 All Connections 🢂 target 🢂 __ … __ 🢂 Disconnect account
-    * from calendar: 左側 Sidebar 🢂 Notion workspace 🢂 __ … __ 🢂 設定 🢂 整合 🢂 工作空間 🢂 此處可移除工空間
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_16.png')}
+</div>  
+
+   
+## 時間區間/資料庫中多個日期的日曆呈現
+* 這邊指 Database 上有多個時間/時間區間欄位時 Calendar 會選何者在日曆上呈現?
+    * 預設一個 Database <code>僅有一個 Date Property</code> 會在 Notion Calendar 上呈現。當有多個欄位時需自行指定要顯示的欄位。
+    * **<span style={{color: '#0044FF'}}> Notion Calendar 與 Database Calendar View </span>** 呈現同步。所以須回到 Calendar View 進行設定。
+    * 註: 設定時必須先建立 Calendar View，但 Calendar View 移除後 Notion Calendar 上的設定仍維持有效。
+* __日期__選取:    
+    * <code>&nbsp; Calendar View &nbsp;</code> 🢂 右側 <code>&nbsp;  … &nbsp;</code> 🢂 <code>&nbsp; Layout &nbsp;</code> 🢂 <code>&nbsp; Show calendar b &nbsp;</code>y 🢂 選擇 <code>&nbsp; Date Property &nbsp;</code>
+    
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_17.png')}
+</div>  
+
+* __時間區間__設定:
+    * Notion Database 中 時間區間也是 Date Type。但是有做 Start/End Date 開啟。Calendar 上欲顯示時間區間需先開啟 End Date，後選取該欄位即可。
+    * 須注意的是，<span style={{color: '#FF1100'}}>時間區間是依據資料設定</span>，也就是說需單筆設定。
+
+___Date Span 設定___
+* <code>&nbsp; Database &nbsp;</code> 🢂 <code>&nbsp; <span style={{color: '#FF1100'}}>資料上左鍵</span> L🖱️  &nbsp;</code> 🢂 開啟 <code>&nbsp; End Date &nbsp;</code> 
+* 重複上方日期選取動作以指定 Calendar 上 UI 標的。
+
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_18.png')}
+</div>
+
+___Calendar 呈現___    
+
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_19.png')}
+</div>
 
 ## Calendar 時區
+* 僅有 Day Scene 會出現時間點，所以時區僅在 Day View 出現與設定。
 進入 Calendar 後，日曆畫面的左側為時間軸，最上方可以進行時區設定與增刪與設定別名。畫面上允許同時呈現多個時區時間，方便跨國工作者使用。
-   
-__移除 Notion Calendar 帳號__
-* Notion Calendar 帳號 移除: 直接刪帳號，則 workspace 下既有已連結 Notion Calendar 會失效，但 workspace 中 connection 設定仍在，需手動移除
-   * 先進入 Notion Calendar 🢂 Sidebar 🢂 mouse-over Account 旁的 __ … __ 🢂 管理日曆帳號 🢂 Settings 🢂 Account 🢂 Profile 🢂 刪除 Notion 日曆帳號
-   
-## 疑難雜症
-* 工作用 email 可能會受到管理員限制而無法使用 Notion Calendar，解決方式:
-    1. 管理員憑證登入admin.google.com
-    1. Security → Access and data control → API controls → Manage Google services
-    1. Configured apps → View list → Add app → OAuth app Name or Client ID
-    1. Notion Calendar → Trusted
-* Notion Calendar 設定 
-    * 所有設定入口: Notion Calendar Sidebar 🢂 Calendar Account 🢂 __ … __ 🢂 Manage Calendar Account 🢂 
-    * 語系設定: Notion Workspace 與 Notion Calendar 各自管理自己 App 的語系設定, Manage Calendar Account 🢂 General 🢂 Language
-    * 通知與提醒: Manage Calendar Account 🢂 Notifications 
 
-## Database 中多個 Date Properties
-* <b>預設一個 Database 僅有一個 Date Property 會在 Notion Calendar 上呈現</b>。當有多個欄位時需自行指定要顯示的欄位。
-    * database 🢂 右側 __ … __ 🢂 Layout 🢂 Show calendar by 🢂 選擇 Property 
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_20.png')}
+</div>
+
+## Calendar 移除設定 <span id="Calendar_Acc_Remove">&nbsp;</span>
+* 包含 
+    * 移除 Workspace 同步關聯  
+    * 移除 Google Calendar 同步關聯
+
+__移除 Workspace 與 Notion Calendar 同步關聯__
+* [Calendar](#rv_cal) 與 [Workspace](#rv_wkspace)，在雙方都可進行關聯移除。
+
+___&emsp; 由 Workspace 操作:___ <span id="rv_wkspace">&nbsp;</span>
+
+* <code>&nbsp; 回到 Notion &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Connections &nbsp;</code> 🢂 <code>&nbsp; All Connections &nbsp;</code> 🢂 <code>&nbsp; target &nbsp;</code> 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Disconnect account &nbsp;</code>
+
+<span>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_21.png')}
+</span>
+<span>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_22.png')}
+</span>
+
+___&emsp; 由 Calendar 操作:___ <span id="rv_cal">&nbsp;</span>
+* <code>&nbsp; 左側 Sidebar &nbsp;</code> 🢂 <code>&nbsp; Workspace &nbsp;</code> 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; 管理工作空間 &nbsp;</code> 🢂 <code>&nbsp; 整合 &nbsp;</code> 🢂 <code>&nbsp; 工作空間 &nbsp;</code> 🢂 此處可<code>&nbsp; 移除 &nbsp;</code>空間
+
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_09.png')}
+</div>
+
+__移除 Google Calendar 關聯帳號__
+* <code>&nbsp; 左側 Sidebar &nbsp;</code> 🢂 <code>&nbsp; Email &nbsp;</code> 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; 管理日曆帳號 &nbsp;</code> 🢂 <code>&nbsp; 帳號 &nbsp;</code> 🢂 <code>&nbsp; 個人檔案 &nbsp;</code> 🢂 此處可<code>&nbsp; 移除 &nbsp;</code>Notion 日曆帳號
+
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_23.png')}
+</div>
+
     
 ## Notion Calendar 應用技巧
-__Dashboard:__
-* __整合後的日曆資料可以在 __ Notion Workspace 的 Home 以 Dashboard 自動整理呈現。 
-     * 左側 sidebar 🢂 Home 🢂 Upcoming events
-     * Dashboard 可客製化。區塊右上 🢂 __ … __ 🢂 設定
+### Dashboard
+* __整合後的日曆資料可以在 __ Notion Workspace 的 Home 以 Dashboard 自動整理並提示將來臨的活動。 
+     * 左側<code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Home &nbsp;</code> 🢂 <code>&nbsp; Upcoming events &nbsp;</code>
+     * Dashboard 可客製化。區塊右上 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; 設定 &nbsp;</code>
 
-__Block Calendar:__
-* 這邊指的是，Notion Calendar 間可以相互通知是否忙碌。例如個人行程日曆上的事件，可自動在工作群組日曆上被標記為 Busy 且不顯示所有事件細節。
-* Notion 上的共用工作群組的其他人只會看見自己該時段為 Busy。
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_24.png')}
+</div>
+
+### 更改活動上的使用者別名
+* 因為預設會暴露出編輯者帳號資訊，若想以別名呈現可自行調整
+* Notion Calendar <code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Email &nbsp;</code> 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Manage Calendar Account &nbsp;</code> 🢂 <code>&nbsp; Profile &nbsp;</code> 🢂 <code>&nbsp; Username &nbsp;</code>
+
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_25.png')}
+</div>
+
+### Notion Calendar 與 線上會議整合
+* 我少用這功能，所以僅留下參考連結: [Notion Calendar / Zoom / Google Meet 等整合方式參考位置](https://www.notion.com/zh-tw/help/notion-calendar-integrations)
+
+
+
+
+
+
+
+
+
+### Calendar 自動 Busy 標記
+> 這邊指的是，多人的共用 Notion Calendar 上可以為私人 Google Calendar 上有活動日期主動標記 Busy。  
+>  
+> 例如: Insect 與 Totem 共用 Notion Calendar (設別名為: Team-Calendar)，  
+> 則 Totem 的 Google Calendar 上註記日本旅行期間的時間區段，  
+> Insect 在 Team-Calendar 上會看到 __Totem Busy__ 的標記。  
+> Totem 在 Team-Calendar 上則會看到 __日本旅行__ 的註記。  
+
+* Notion 上的共用工作群組的 <span style={{color: '#0044FF'}}> __其他人只會看見自己該時段為 Busy__ </span>。
     * 註: 工作群 Calendar 以原 App \(ex: 回 Google calendar) 查看時會多出以個人行程名義的建立複製事件。
-* 步驟: 個人行程日曆的事件上 🢂 右鍵 🢂 Block on Calendar 自日曆上封鎖 🢂 選定要出現 Busy 標記的標的 Calendars。
-    * 可選定標記單一次間或將所有事件都在標的 Calendar 上標示 Busy。    
-* Relay: 目前測試大約5秒鐘才會在原 App 中看到變化。
+* 步驟: 個人行程<code>&nbsp; 日曆的活動上 &nbsp;</code> 🢂 <code>&nbsp; 右鍵 &nbsp;</code> 🢂 <code>&nbsp; Block on Calendar &nbsp;</code> 自日曆上封鎖 🢂 選定要出現 Busy <code>&nbsp; 標記目標 &nbsp;</code> Calendars。
+    * 可選定標記單一活定或將所有活定都在標的 Calendar 上標示 Busy。    
+* 註: 目前測試大約5秒鐘才會在原 App 中看到變化。
 * 若 Auto Block Calendar 設定後，無論何時新增的 events 都會被自動 block， __下次新增事件時__ 需自行手動移除。
-    * event 🢂 右鍵 🢂 Block on Calendar 🢂 選取 calendar 🢂 __勾選取消自動__ block target calendar 
+    * 活動 🢂 右鍵 🢂 Block on Calendar 🢂 選取 calendar 🢂 __勾選取消自動__ block target calendar 
 
-__更改 event 上的使用者名__
-* 因為預設會步入出編輯者帳號資訊，若想以別名呈現可自行調整
-* Notion Calendar Sidebar 🢂 Calendar Account 🢂 __ … __ 🢂 Manage Calendar Account 🢂 Profile 🢂 Username
-
-__Notion Calendar 與 線上會議整合__
-* 我少用這功能，所以僅留下: [Notion Calendar / Zoom / Google Meet 等整合方式參考位置](https://www.notion.com/zh-tw/help/notion-calendar-integrations)
-
-__與 Teamates 共享 Calendar__
+### 與 Teamates 共享 Calendar
 * 共享成員必須被 Google Workspace 管理。
-* 沒使用 Google Workspace，所以僅留參考文獻。 
-    * [Calendar for Teams] (https://www.notion.com/zh-tw/help/notion-calendar-for-teams)
+* 參考文獻:
+    * [Calendar for Teams](https://www.notion.com/help/notion-calendar-for-teams)
     * [Work with Teammates](https://www.templates4notion.com/blog/notion-calendar-app-tutorial#bonus-tip-revert-to-cron-logo)
 
 
@@ -258,3 +309,15 @@ __與 Teamates 共享 Calendar__
 * Server 由 AWS 託管
 * 搭配 Google Workspace 管理企業團隊 Calendar 帳號
 * 遵循 SOC2, GDPR 資安規範
+
+
+## 疑難雜症
+* 工作用 email 可能會受到管理員限制而無法使用 Notion Calendar，解決方式:
+    1. 管理員憑證登入admin.google.com
+    1. Security → Access and data control → API controls → Manage Google services
+    1. Configured apps → View list → Add app → OAuth app Name or Client ID
+    1. Notion Calendar → Trusted
+* Notion Calendar 設定 
+    * 所有設定入口: Notion Calendar Sidebar 🢂 Calendar Account 🢂 __ … __ 🢂 Manage Calendar Account 🢂 
+    * 語系設定: Notion Workspace 與 Notion Calendar 各自管理自己 App 的語系設定, Manage Calendar Account 🢂 General 🢂 Language
+    * 通知與提醒: Manage Calendar Account 🢂 Notifications 
