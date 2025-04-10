@@ -28,21 +28,32 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage";
     * <code>One workspace multi-notion calendars. One notion calendar multi-linked calendars</code>.
     * Notion Calendar 可同步 Workspace 中日期資訊。  
     * Mobile 版部分功能有受限，此處以 Browser 為主。
-    * __整合後的日曆資料可以在 __ Notion Workspace 的 Home 以 Dashboard 自動整理呈現。 
+    * __整合後的日曆資料可以在__ Notion Workspace 的 Home 以 Dashboard 自動整理呈現。 
         * (左側 sidebar 🢂 Home) 
 
 ## Notion Calendar UI
 
-### Calendar 左側欄
-* 小月曆
-* 帳號與workspace 管理
+__Calendar 左側欄__
+* 分為四區塊
+    * 小月曆供快速切換時間
+    * 帳號區塊:列出所有相關的第三方日曆連結帳號
+    * Workspace 管理區: 列出會進行資料同步的 Notion 工作區
+    * Notion 官方的其他 App 快速連結
 
-### Calendar 右側 Sidebar
-* 搜尋列
-* 事件/會議提醒
-* 功能提示
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_12_left_sidebar.png')}
+</div>
 
-    
+__Calendar 右側欄__
+* 分為三區塊
+    * 搜尋列: 可直接以關鍵字搜尋活動
+    * 活動/會議提醒: 即將起始的活動提醒
+    * 功能提示與設定區 
+    * 動態變換區塊:會隨著滑鼠選擇項目而跟著跳出相關訊息區
+
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_13_right_sidebar.png')}
+</div>    
 
 ## Notion Calendar 帳號設定
 * 因為支援的日曆中，我較常使用的是 Google Calendar。所以這邊只做 Google Calendar 關聯筆記。
@@ -268,56 +279,78 @@ __移除 Google Calendar 關聯帳號__
  {GoogleImage( 'google_file_id',  '15_Notion_Calendar_25.png')}
 </div>
 
+### Calendar 自動 Busy 標記 - Blocking
+> 目前試用 <span style={{color: '#0044FF'}}> __Buay 標記僅能用在建立於第三方日曆軟體上(如 Google Calendar)的活動上__ </span>。  
+> Notion Database 所建立的活動無法在 Notion Calendar 上標記為 Busy。
+> 
+> 情境概說:
+> Totem 在 Notion Calendar 上彙整了，  
+> 1. Notion Database 上的活動，  
+> 2. Google Calendar 上私人行程日曆 (Personal Scheduler)，以及  
+> 3. Google Calendar 上公司同事間分享的共用行事曆 (Team Scheduler)  
+>  
+> 當 Totem 在 Notion Calendar 上為 Personal Scheduler 註記 11 月要進行環島旅行。  
+> 因 Notion Calendar 的同步編輯特性，  
+> 此時 Notion Calendar 與 Personal Scheduler 都會出現環島旅行活動。  
+> 然而此時 Team Scheduler 上 11 月不會出現任何活動訊息，所以同事間並不知道 Totem 是否有事。  
+> 
+> Notion 提供 Calendar Blocking 功能，  
+> 指的便是在上述情形下，  
+> 同步編輯時可順便在 Team Scheduler 上標記 Totem Busy。
+> 
+
+__使用限制__ 
+* <span style={{color: '#FF1100'}}>Buay 標記僅能用在第三方日曆軟體所建立的活動上</span>
+* 目前測試大約5秒鐘才會在第三方 App 中看到變化。
+* 可選定標記單一活動或將所有活定都在標的 Calendar 上標示 Busy。    
+
+__設定步驟__
+* 私人行程日曆在 Notion Calendar 介面的<code>&nbsp; 活動 &nbsp;</code>上 🢂 <code>&nbsp; 右鍵 &nbsp;</code> 🢂 <code>&nbsp; Block on Calendar &nbsp;</code> 在日曆上封鎖 🢂 選定要出現 Busy <code>&nbsp; 標記目標 &nbsp;</code> Calendars或日曆帳號。
+
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_26.png')}
+</div>
+
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_27.png')}
+</div>
+
+__移除 Busy 標記__
+* 若設定自動 Block Calendar 後，無論何時新增的 events 都會被自動標記 Busy，__下次新增事件時__ 可自行手動移除。
+* 單筆活動標記移除: 只能直接刪掉活動，在重新建立。
+* 移除自動標記: <code>&nbsp; 活動 &nbsp;</code> 🢂 <code>&nbsp; 右鍵 &nbsp;</code> 🢂 <code>&nbsp; Block on Calendar &nbsp;</code> 🢂 選取 <code>&nbsp; Calendar &nbsp;</code> 🢂 <code>&nbsp; 勾選取消封鎖活動 &nbsp;</code>
+
+<div>
+ {GoogleImage( 'google_file_id',  '15_Notion_Calendar_28.png')}
+</div>
+
+
 ### Notion Calendar 與 線上會議整合
+* 可在活動上加上會議 URL 與附加文件。
 * 我少用這功能，所以僅留下參考連結: [Notion Calendar / Zoom / Google Meet 等整合方式參考位置](https://www.notion.com/zh-tw/help/notion-calendar-integrations)
 
-
-
-
-
-
-
-
-
-### Calendar 自動 Busy 標記
-> 這邊指的是，多人的共用 Notion Calendar 上可以為私人 Google Calendar 上有活動日期主動標記 Busy。  
->  
-> 例如: Insect 與 Totem 共用 Notion Calendar (設別名為: Team-Calendar)，  
-> 則 Totem 的 Google Calendar 上註記日本旅行期間的時間區段，  
-> Insect 在 Team-Calendar 上會看到 __Totem Busy__ 的標記。  
-> Totem 在 Team-Calendar 上則會看到 __日本旅行__ 的註記。  
-
-* Notion 上的共用工作群組的 <span style={{color: '#0044FF'}}> __其他人只會看見自己該時段為 Busy__ </span>。
-    * 註: 工作群 Calendar 以原 App \(ex: 回 Google calendar) 查看時會多出以個人行程名義的建立複製事件。
-* 步驟: 個人行程<code>&nbsp; 日曆的活動上 &nbsp;</code> 🢂 <code>&nbsp; 右鍵 &nbsp;</code> 🢂 <code>&nbsp; Block on Calendar &nbsp;</code> 自日曆上封鎖 🢂 選定要出現 Busy <code>&nbsp; 標記目標 &nbsp;</code> Calendars。
-    * 可選定標記單一活定或將所有活定都在標的 Calendar 上標示 Busy。    
-* 註: 目前測試大約5秒鐘才會在原 App 中看到變化。
-* 若 Auto Block Calendar 設定後，無論何時新增的 events 都會被自動 block， __下次新增事件時__ 需自行手動移除。
-    * 活動 🢂 右鍵 🢂 Block on Calendar 🢂 選取 calendar 🢂 __勾選取消自動__ block target calendar 
-
 ### 與 Teamates 共享 Calendar
+* 要收費的部分，暫時只留參考連結。
 * 共享成員必須被 Google Workspace 管理。
 * 參考文獻:
     * [Calendar for Teams](https://www.notion.com/help/notion-calendar-for-teams)
     * [Work with Teammates](https://www.templates4notion.com/blog/notion-calendar-app-tutorial#bonus-tip-revert-to-cron-logo)
 
 
-## Notion Calendar 的資安管理
-* 資料 AES-256 加密
-* 網路 TLS 1.2
-* 使用 Google OAuth API 驗證
-* Server 由 AWS 託管
-* 搭配 Google Workspace 管理企業團隊 Calendar 帳號
-* 遵循 SOC2, GDPR 資安規範
-
-
 ## 疑難雜症
 * 工作用 email 可能會受到管理員限制而無法使用 Notion Calendar，解決方式:
     1. 管理員憑證登入admin.google.com
-    1. Security → Access and data control → API controls → Manage Google services
-    1. Configured apps → View list → Add app → OAuth app Name or Client ID
-    1. Notion Calendar → Trusted
+    1. <code>&nbsp; Security &nbsp;</code> 🢂 <code>&nbsp; Access and data control &nbsp;</code> 🢂 <code>&nbsp; API controls &nbsp;</code> 🢂 <code>&nbsp; Manage Google services &nbsp;</code>
+    1. <code>&nbsp; Configured apps &nbsp;</code> 🢂 <code>&nbsp; View list &nbsp;</code> 🢂 <code>&nbsp; Add app &nbsp;</code> 🢂 <code>&nbsp; OAuth app Name or Client ID &nbsp;</code>
+    1. <code>&nbsp; Notion Calendar &nbsp;</code> 🢂 <code>&nbsp; Trusted &nbsp;</code>
 * Notion Calendar 設定 
     * 所有設定入口: Notion Calendar Sidebar 🢂 Calendar Account 🢂 __ … __ 🢂 Manage Calendar Account 🢂 
     * 語系設定: Notion Workspace 與 Notion Calendar 各自管理自己 App 的語系設定, Manage Calendar Account 🢂 General 🢂 Language
     * 通知與提醒: Manage Calendar Account 🢂 Notifications 
+* Notion Calendar 的資安管理
+    * 資料 AES-256 加密
+    * 網路 TLS 1.2
+    * 使用 Google OAuth API 驗證
+    * Server 由 AWS 託管
+    * 搭配 Google Workspace 管理企業團隊 Calendar 帳號
+    * 遵循 SOC2, GDPR 資安規範
