@@ -41,7 +41,7 @@ __Calendar 左側欄__
     * Notion 官方的其他 App 快速連結
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_12_left_sidebar.png')}
+ {GoogleImage( '1dadg17fhEOZKh_Skh_BujTqvxz8gFouj',  '15_Notion_Calendar_12_left_sidebar.png' , {width:'211px', height:'638px', hidden:true, degree:0})}
 </div>
 
 __Calendar 右側欄__
@@ -52,7 +52,7 @@ __Calendar 右側欄__
     * 動態變換區塊:會隨著滑鼠選擇項目而跟著跳出相關訊息區
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_13_right_sidebar.png')}
+ {GoogleImage( '16KkAURZ1ULPVKa4MyopAeK4MxF0NR1t5',  '15_Notion_Calendar_13_right_sidebar.png' , {width:'256px', height:'690px', hidden:true, degree:0})}
 </div>    
 
 ## Notion Calendar 帳號設定
@@ -69,15 +69,15 @@ __Notion Calendar 帳號與 Google Calendar 建立與連結:__
 * Workspace 左側 <code>Sidebar 下方動態 Logo</code> 🢂 <code>Explore/Open Notion Calendar</code> 🢂 依據指示建立與並與 Google Account 建立連結即可。
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_01.png')}
+ {GoogleImage( '12nNk2w3cmn4NbK0dh5vhMIDJ9toN2DL4',  '15_Notion_Calendar_01.png' , {width:'405px', height:'135px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_02.png')}
+ {GoogleImage( '1MrxklrSeXcddt4aAAvpCZRJnRWsZdDPg',  '15_Notion_Calendar_02.png' , {width:'438px', height:'175px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_03.png')}
+ {GoogleImage( '1JHiAFBC2d0CuWvopX2sqM-0BkH3OdYUE',  '15_Notion_Calendar_03.png' , {width:'395px', height:'217px', hidden:true, degree:0})}
 </div>
 
 
@@ -90,15 +90,15 @@ __Calendar 中新增其他次要 Google 帳號__
     2. 移除或更改 Primary account 皆位於管理日曆帳號功能下
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_04.png')}
+ {GoogleImage( '1PbUJbDw6TEwJsj1HFNwigB95MNBcRA2G',  '15_Notion_Calendar_04.png' , {width:'326px', height:'104px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_05.png')}
+ {GoogleImage( '1UfX7KTTolLjk5xN1a9g6elPnhy9BUQFD',  '15_Notion_Calendar_05.png' , {width:'459px', height:'119px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_06.png')}
+ {GoogleImage( '1gLwUXHkUOcnvo0FKZ3l5Sl0kYggAREWh',  '15_Notion_Calendar_06.png' , {width:'652px', height:'426px', hidden:true, degree:0})}
 </div>
 
 ## Calendar 與 Workspace 連接
@@ -114,11 +114,11 @@ __Calendar 中新增其他次要 Google 帳號__
 1. 管理工作空間 🢂 新增或異動
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_07.png')}
+ {GoogleImage( '1n_wDOq4kHVXOwO6ZfVMQ0WVFmQH_oxxo',  '15_Notion_Calendar_07.png' , {width:'507px', height:'148px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_08.png')}
+ {GoogleImage( '1IFFwaHuE-IyXZC6znHdsexJde2J5Hxe7',  '15_Notion_Calendar_08.png' , {width:'652px', height:'459px', hidden:true, degree:0})}
 </div>
 <span style={{color: '#CECECE'}}> 於 Notion 自行上傳的 Workspace Logo 在此處會出現顯示錯誤。</span> 
 
@@ -127,15 +127,15 @@ __Calendar 中新增其他次要 Google 帳號__
 * 移除: 須以移除 workspace 方式移除 Date Property 內容: 左側 Sidebar 會出現 <code>&nbsp; Notion Account &nbsp;</code> 🢂 <code>&nbsp;  …  &nbsp;</code> 🢂 <code>&nbsp; 管理工作空間 &nbsp;</code> 🢂 此處可 <code>&nbsp; 解除連結 &nbsp;</code>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_07.png')}
+ {GoogleImage( '1n_wDOq4kHVXOwO6ZfVMQ0WVFmQH_oxxo',  '15_Notion_Calendar_07.png' , {width:'507px', height:'148px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_10.png')}
+ {GoogleImage( '12twAFVAF7rvies85BRcbmupbf4JaFn8O',  '15_Notion_Calendar_10.png' , {width:'543px', height:'267px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_09.png')}
+ {GoogleImage( '1b0rrap-CIC2di3tBUc5eWtKnm0kgE8dR',  '15_Notion_Calendar_09.png' , {width:'652px', height:'544px', hidden:true, degree:0})}
 </div>
 
 ## 連接後資料同步
@@ -156,7 +156,7 @@ __Calendar 中新增其他次要 Google 帳號__
 * Calendar 建立新 Event: <code>&nbsp; 日曆時間點上 &nbsp;</code> 🢂 🖱R 🢂 <code>&nbsp; 建立活動 &nbsp;</code> 🢂 <code>&nbsp; 選取標的資料庫 &nbsp;</code>或第三方日曆 
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_11.png')}
+ {GoogleImage( '1tH4kj1EROjR-dQ95MtajS9MyUBNXJksb',  '15_Notion_Calendar_11.png' , {width:'525px', height:'299px', hidden:true, degree:0})}
 </div>    
 
 ### 為 Calendar 活動建立 Detail Page
@@ -169,14 +169,14 @@ ___Notion Activity 建立 Detail Page:___
 * 點取 Calendar 關聯的 <code>&nbsp; 活動 &nbsp;</code> 🢂 <code>&nbsp; 右方側邊欄 &nbsp;</code> 🢂 <code>&nbsp; 在 Notion 打開 &nbsp;</code> 可直接開啟 Notion 預設 Detail Page。
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_14.png')}
+ {GoogleImage( '10S1jaRzMu1UtnHbiFy2SX0YKuHC5XOC9',  '15_Notion_Calendar_14.png' , {width:'595px', height:'344px', hidden:true, degree:0})}
 </div>    
 
 ___Google Calendar Activity 建立 Detail Page:___
 * 非 Notion Record 未自帶 Detail Page。此時，Calendar 提供活動與 <code>&nbsp;URL&nbsp;</code>/<code>&nbsp;Notion Page&nbsp;</code>/<code>&nbsp;Database&nbsp;</code>建立連結的功能。可將細節紀錄在 Notion Page，活動再與之關聯。
 * 點取 Calendar 關聯的 <code>&nbsp; 活動 &nbsp;</code> 🢂 <code>&nbsp; 右方側邊欄 &nbsp;</code> 🢂 <code>&nbsp; 新增文件或連結 &nbsp;</code> 🢂 <code>&nbsp; 選取或建立要建立關聯的標的 &nbsp;</code> 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_15.png')}
+ {GoogleImage( '1XTqiqfyWm72MKVfpKfO1vGSnZDY_kDbb',  '15_Notion_Calendar_15.png' , {width:'594px', height:'696px', hidden:true, degree:0})}
 </div>    
 
 ## 設定 Default Calendar
@@ -185,7 +185,7 @@ ___Google Calendar Activity 建立 Detail Page:___
 * Workspace/Database 旁的眼睛符號可用來暫時隱藏不想顯示的活動  
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_16.png')}
+ {GoogleImage( '1Xw-6mQx6oiREHHh73VbBQdsts8RVH1vm',  '15_Notion_Calendar_16.png' , {width:'644px', height:'328px', hidden:true, degree:0})}
 </div>  
 
    
@@ -198,7 +198,7 @@ ___Google Calendar Activity 建立 Detail Page:___
     * <code>&nbsp; Calendar View &nbsp;</code> 🢂 右側 <code>&nbsp;  … &nbsp;</code> 🢂 <code>&nbsp; Layout &nbsp;</code> 🢂 <code>&nbsp; Show calendar b &nbsp;</code>y 🢂 選擇 <code>&nbsp; Date Property &nbsp;</code>
     
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_17.png')}
+ {GoogleImage( '1OS0ZxSbHDkemec_t6u43XPEg1iyEf9NP',  '15_Notion_Calendar_17.png' , {width:'652px', height:'571px', hidden:true, degree:0})}
 </div>  
 
 * __時間區間__設定:
@@ -210,13 +210,13 @@ ___Date Span 設定___
 * 重複上方日期選取動作以指定 Calendar 上 UI 標的。
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_18.png')}
+ {GoogleImage( '1K_AUME8w8-GK4iJ_dmcsiEu8y4EqxXjz',  '15_Notion_Calendar_18.png' , {width:'381px', height:'547px', hidden:true, degree:0})}
 </div>
 
 ___Calendar 呈現___    
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_19.png')}
+ {GoogleImage( '1UvB2OZRJ05hja0t5eP8oPyg0Yd5BcD7u',  '15_Notion_Calendar_19.png' , {width:'599px', height:'500px', hidden:true, degree:0})}
 </div>
 
 ## Calendar 時區
@@ -224,7 +224,7 @@ ___Calendar 呈現___
 進入 Calendar 後，日曆畫面的左側為時間軸，最上方可以進行時區設定與增刪與設定別名。畫面上允許同時呈現多個時區時間，方便跨國工作者使用。
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_20.png')}
+ {GoogleImage( '1lKNu-IRIZSlZYMJYZWjIw0mU_zMyjbqX',  '15_Notion_Calendar_20.png' , {width:'652px', height:'247px', hidden:true, degree:0})}
 </div>
 
 ## Calendar 移除設定 <span id="Calendar_Acc_Remove">&nbsp;</span>
@@ -240,24 +240,24 @@ ___&emsp; 由 Workspace 操作:___ <span id="rv_wkspace">&nbsp;</span>
 * <code>&nbsp; 回到 Notion &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Connections &nbsp;</code> 🢂 <code>&nbsp; All Connections &nbsp;</code> 🢂 <code>&nbsp; target &nbsp;</code> 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Disconnect account &nbsp;</code>
 
 <span>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_21.png')}
+ {GoogleImage( '1LByn5B0N8v9APq7p4nNqdicZhfvPTlp6',  '15_Notion_Calendar_21.png' , {width:'273px', height:'246px', hidden:true, degree:0})}
 </span>
 <span>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_22.png')}
+ {GoogleImage( '1wgJtRG7pNW-WDI3B7zABYdbC3CHXKfx6',  '15_Notion_Calendar_22.png' , {width:'652px', height:'347px', hidden:true, degree:0})}
 </span>
 
 ___&emsp; 由 Calendar 操作:___ <span id="rv_cal">&nbsp;</span>
 * <code>&nbsp; 左側 Sidebar &nbsp;</code> 🢂 <code>&nbsp; Workspace &nbsp;</code> 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; 管理工作空間 &nbsp;</code> 🢂 <code>&nbsp; 整合 &nbsp;</code> 🢂 <code>&nbsp; 工作空間 &nbsp;</code> 🢂 此處可<code>&nbsp; 移除 &nbsp;</code>空間
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_09.png')}
+ {GoogleImage( '1b0rrap-CIC2di3tBUc5eWtKnm0kgE8dR',  '15_Notion_Calendar_09.png' , {width:'652px', height:'544px', hidden:true, degree:0})}
 </div>
 
 __移除 Google Calendar 關聯帳號__
 * <code>&nbsp; 左側 Sidebar &nbsp;</code> 🢂 <code>&nbsp; Email &nbsp;</code> 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; 管理日曆帳號 &nbsp;</code> 🢂 <code>&nbsp; 帳號 &nbsp;</code> 🢂 <code>&nbsp; 個人檔案 &nbsp;</code> 🢂 此處可<code>&nbsp; 移除 &nbsp;</code>Notion 日曆帳號
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_23.png')}
+ {GoogleImage( '10wa5k6ebqY5aG1tM2sag4gzh0tU1gP7S',  '15_Notion_Calendar_23.png' , {width:'652px', height:'447px', hidden:true, degree:0})}
 </div>
 
     
@@ -268,7 +268,7 @@ __移除 Google Calendar 關聯帳號__
      * Dashboard 可客製化。區塊右上 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; 設定 &nbsp;</code>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_24.png')}
+ {GoogleImage( '1M25-faZWu3pNg5xw11QhOBNj6TYsNRj0',  '15_Notion_Calendar_24.png' , {width:'652px', height:'408px', hidden:true, degree:0})}
 </div>
 
 ### 更改活動上的使用者別名
@@ -276,7 +276,7 @@ __移除 Google Calendar 關聯帳號__
 * Notion Calendar <code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Email &nbsp;</code> 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Manage Calendar Account &nbsp;</code> 🢂 <code>&nbsp; Profile &nbsp;</code> 🢂 <code>&nbsp; Username &nbsp;</code>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_25.png')}
+ {GoogleImage( '1IQwXstRKC8xOcG-Tw1PNa_uJMufgPso4',  '15_Notion_Calendar_25.png' , {width:'652px', height:'433px', hidden:true, degree:0})}
 </div>
 
 ### Calendar 自動 Busy 標記 - Blocking
@@ -308,11 +308,11 @@ __設定步驟__
 * 私人行程日曆在 Notion Calendar 介面的<code>&nbsp; 活動 &nbsp;</code>上 🢂 <code>&nbsp; 右鍵 &nbsp;</code> 🢂 <code>&nbsp; Block on Calendar &nbsp;</code> 在日曆上封鎖 🢂 選定要出現 Busy <code>&nbsp; 標記目標 &nbsp;</code> Calendars或日曆帳號。
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_26.png')}
+ {GoogleImage( '1-8q43berzF8ZMIqXoBannlOzAUYS9JfN',  '15_Notion_Calendar_26.png' , {width:'554px', height:'664px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_27.png')}
+ {GoogleImage( '1u9bGSJlR0CnqXuh27CDUAqGZkqzW4yWG',  '15_Notion_Calendar_27.png' , {width:'652px', height:'210px', hidden:true, degree:0})}
 </div>
 
 __移除 Busy 標記__
@@ -321,7 +321,7 @@ __移除 Busy 標記__
 * 移除自動標記: <code>&nbsp; 活動 &nbsp;</code> 🢂 <code>&nbsp; 右鍵 &nbsp;</code> 🢂 <code>&nbsp; Block on Calendar &nbsp;</code> 🢂 選取 <code>&nbsp; Calendar &nbsp;</code> 🢂 <code>&nbsp; 勾選取消封鎖活動 &nbsp;</code>
 
 <div>
- {GoogleImage( 'google_file_id',  '15_Notion_Calendar_28.png')}
+ {GoogleImage( '1NHVr6yeX51Cb0qG0G5giGSqiIJYLvIih',  '15_Notion_Calendar_28.png' , {width:'394px', height:'205px', hidden:true, degree:0})}
 </div>
 
 
