@@ -131,7 +131,7 @@ sidebar_position: 1
 * [Notion Timeline View - Notion DB 時間線檢視模式](/docs/DevTech/tools/notion/Notion_View_Timeline)
 * [Notion View 資料呈現方式 - Notion Views](/docs/DevTech/tools/notion/Notion_View)
 * [Notion Web Clipper - Notion-Web Clipper](/docs/DevTech/tools/notion/Notion_Web_Clipper)
-* [Notion 共編 - Notion 共編](/docs/DevTech/tools/notion/16_Notion_Collaboration)
+* [Notion 共編 - Notion 共編](/docs/DevTech/tools/notion/Notion_Collaboration)
 * [Notion 學習範例 - Notion 學習範例](/docs/DevTech/tools/notion/Notion_Examples)
 * [Notion 學習紀錄 - Notion Notes](/docs/DevTech/tools/notion/NotionBasic)
 * [Notion 工作區版面 - Notion Layout](/docs/DevTech/tools/notion/Notion_Layout)
