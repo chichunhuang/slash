@@ -5,8 +5,10 @@ sidebar_position: 1
 # Document List (docs)
 
 
-最後更版時間:Thu Feb 13 09:36:01 CST 2025
+最後更版時間:Fri Apr 11 16:43:02 CST 2025
 
+### Google
+* [Google App Script 取 File ID - Google App Script 取 File ID](/docs/DevTech/Google/Google_App_Script_FileIDs)
 ### Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/DevTech/Java/ExceptionMailFromLog4j)
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/DevTech/Java/Session_Fixation)
@@ -29,7 +31,9 @@ sidebar_position: 1
 * [PosgreSQL copy CSV to table - PosgreSQL 資料匯出成 CSV](/docs/DevTech/PostgreSQL/PosgreSQL_copy_CSV_to_table)
 * [PosgreSQL copy from CSV - 自 CSV 檔匯入資料](/docs/DevTech/PostgreSQL/PosgreSQL_copy_from_CSV)
 * [PostgreSQL Blob 備份與回存 - Backup and Restore BLOB in PostgreSQL](/docs/DevTech/PostgreSQL/Backup_Restore_BLOB_in_Postgres)
+* [PostgreSQL DB 重建指令 - PostgreSQL DB 重建指令](/docs/DevTech/PostgreSQL/PostgreSQL_termination)
 * [PostgreSQL FDW Setting - PostgreSQL DB link 設定](/docs/DevTech/PostgreSQL/PostgreSQL_FDW_Setting)
+* [PostgreSQL SQL 日誌紀錄 - PostgreSQL Query Log](/docs/DevTech/PostgreSQL/PostgreSQL_Query_Log)
 * [PostgreSQL string_agg Function - PostgreSQL批次合併group by後](/docs/DevTech/PostgreSQL/PostgreSQL_string_agg_function)
 * [PostgreSQL 上傳 Blob 檔案 - Postgres Import Blob from File](/docs/DevTech/PostgreSQL/Postgres_Import_Blob_from_File)
 * [PostgreSQL 匯出 Blob 欄位 - Postgres Export Blob to File](/docs/DevTech/PostgreSQL/Postgres_Export_Blob_to_File)
@@ -107,17 +111,40 @@ sidebar_position: 1
 ### Tomcat
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
+* [Tomcat 當前 Clients 連線數 - Tomcat App online connections](/docs/DevTech/Tomcat/Tomcat_Client_Connections)
 * [隱藏 Tomcat 版本資訊 - ](/docs/DevTech/Tomcat/Hide_Tomcat_Version)
 ### javascript
 * [JS HTML input 自動全選 - Javascript Template input selects all on focus](/docs/DevTech/javascript/Textfield_Select)
 ### tools
 * [Tools - 工具簡介](/docs/DevTech/tools/ToolsNote)
+* [ZoomIt 使用技巧 - ZoomIt 使用技巧](/docs/DevTech/tools/ZoomIt)
 #### canva
 * [Canva 學習紀錄 - Canva Notes](/docs/DevTech/tools/canva/CanvaNote)
 #### notion
-* [Notion 共編 - Notion 共編](/docs/DevTech/tools/notion/Notion_Collaboration)
+* [Notion Board View - Notion DB 卡片檢視模式](/docs/DevTech/tools/notion/Notion_View_Boards)
+* [Notion Calendar - Notion Calendar](/docs/DevTech/tools/notion/Notion_Calendar)
+* [Notion Calendar View - Notion DB 日曆檢視模式](/docs/DevTech/tools/notion/Notion_View_Calendar)
+* [Notion Chart View - Notion DB 圖表檢視模式](/docs/DevTech/tools/notion/Notion_View_Chart)
+* [Notion Gallery View - Notion DB 畫廊檢視模式](/docs/DevTech/tools/notion/Notion_View_Gallery)
+* [Notion GitHub 整合 - Notion-Integrate GitHub](/docs/DevTech/tools/notion/Notion_GitHub)
+* [Notion Sprint - Notion Sprint and Task 工作管理](/docs/DevTech/tools/notion/Notion_Sprint_Task)
+* [Notion Timeline View - Notion DB 時間線檢視模式](/docs/DevTech/tools/notion/Notion_View_Timeline)
+* [Notion View 資料呈現方式 - Notion Views](/docs/DevTech/tools/notion/Notion_View)
+* [Notion Web Clipper - Notion-Web Clipper](/docs/DevTech/tools/notion/Notion_Web_Clipper)
+* [Notion 共編 - Notion 共編](/docs/DevTech/tools/notion/16_Notion_Collaboration)
+* [Notion 學習範例 - Notion 學習範例](/docs/DevTech/tools/notion/Notion_Examples)
 * [Notion 學習紀錄 - Notion Notes](/docs/DevTech/tools/notion/NotionBasic)
+* [Notion 工作區版面 - Notion Layout](/docs/DevTech/tools/notion/Notion_Layout)
+* [Notion 工作頁面 - Notion Page](/docs/DevTech/tools/notion/Notion_Page)
+* [Notion 網站發布 - Notion 網站發布](/docs/DevTech/tools/notion/Notion_Sites)
 * [Notion 自動化 - Notion 自動化](/docs/DevTech/tools/notion/Notion_Automation)
+* [Notion 與 Google Drive 整合 - Notion 與 Google Drive 整合](/docs/DevTech/tools/notion/Notion_Google_Doc)
+* [Notion 表單 - Notion 標單製作與規劃](/docs/DevTech/tools/notion/Notion_Form)
+* [Notion 資料匯入匯出 - Notion 資料匯入匯出](/docs/DevTech/tools/notion/Notion_Import_Export)
+* [Notion 資料庫 - Notion 資料庫](/docs/DevTech/tools/notion/Notion_Database)
+* [Notion 資料集的集合性質 - Notion Emergent Property](/docs/DevTech/tools/notion/Notion_Emergent_Property)
+* [Notion 關於設定 - Notion 關於設定](/docs/DevTech/tools/notion/Notion_Setting)
+* [Notion_GitHub_Domain.md](/docs/DevTech/tools/notion/Notion_GitHub_Domain)
 ## Graphics
 * [Butterfly - Insect-Totem Butterfly](/docs/Graphics/Butterfly_01)
 * [Butterfly Papilio - Insect-Totem Butterfly PapilioXuthus](/docs/Graphics/Butterfly_Papilio_xuthus_01)
