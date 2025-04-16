@@ -1,0 +1,86 @@
+body {
+      margin: 0;
+      font-family: "Microsoft JhengHei", sans-serif;
+    }
+
+.h1InsecTotem {
+	 /* display: block;*/ 
+    font-size: 2rem;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    color: var(--ifm-heading-color);
+    font-family: var(--ifm-heading-font-family);
+    font-weight: var(--ifm-heading-font-weight);
+    line-height: var(--ifm-heading-line-height);
+    margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
+	
+}
+    .totemContainer {
+      display: flex;
+     /* height: 100vh;*/
+    }
+    
+     .leftPanel2, .rightPanel2 {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* ❗靠上 */
+      justify-content: center; /* ❗向中間靠 */
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    .leftPanel2 {
+      background-color: #f0f0f0;
+    }  
+      
+    .leftPanel {
+      width: 60%;
+     /* background-color: #f0f0f0;*/
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .leftPanel img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .imageCaption {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #555;
+      text-align: center;
+    }
+
+    .rightPanel {
+      width: 40%;
+      padding: 20px;
+      overflow-y: auto;
+  /*    background-color: #fffff1; */
+    }
+
+    .objectList {
+      list-style: circle;
+      padding: 0;
+    }
+
+    .objectItem {
+      padding: 1px;
+      margin-bottom: 3px;
+      background-color: #f0f0f0;
+/* border-left: 5px solid #4285f4;*/
+      border-left: 5px solid #767676;
+      /* border-left: 5px solid #fffff1;*/
+      border-radius: 4px;
+    }
