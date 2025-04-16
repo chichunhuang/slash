@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) insect-totem.net
+ *
+ * This source code is licensed 
+ */
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';

@@ -1,5 +1,5 @@
 
-註: 
+## 慣例 註A/2: 
     這邊是練習,自製一個 React Component JS 檔 (可以 render 出一段 html), 並用於 md 中
     ==> ref src/components/SayHelloComponent.js
     ==> ref src/components/Add.js
@@ -20,6 +20,24 @@
     src/pages/index.js
     src/pages/totem.module.css
 
+## 慣例 註B/2: 
+這邊個編輯慣例
+A: 比較適用於 Component 類的，例如上方 Breaknews 範例
+必要結構
+- 一個資料夾: foldername 為 使用端 import 時所用的名稱
+    - ex: import Breaknews from '@site/src/components/Breaknews';
+    - ex: import tConfig from '@site/src/components/totem.config';
+- index.js: 裡面就是 js 的完整內容
+    - ex: src/components/components/Breaknews/index.js
+    - ex: src/components/totem.config.js
+- css file: 搭配 component 使用
+
+B: 單純的 Util JS，可沿用上方結構
+- 無須資料夾, A 中資料夾名直接給 JS 使用
+    - ex: src/components/totem.config.js
+- js filename 為 使用端 import 時所用的名稱      
+    - ex: import tConfig from '@site/src/components/totem.config';
+    - 對使用端來說是相同的
 
 ## 相關範例
 
@@ -116,22 +134,6 @@ function Breaknews2({h2, items}){
 export default Breaknews2;
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -6,6 +6,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  customFields:{
+  home:'fff'  
+},
+    
   title: 'Insect Totem',
   tagline: '筆記與生活紀錄',
   favicon: 'img/70_70.jpg',

@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) insect-totem.net
+ *
+ * This source code is licensed 
+ */
+ 
 import React from 'react';
 
 //ref https://stackoverflow.com/questions/52749153/react-pass-parameters-by-names-when-calling-a-function
