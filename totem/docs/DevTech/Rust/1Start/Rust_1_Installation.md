@@ -5,6 +5,14 @@ keywords: [Rust,Install]
 ---
 import { CodeBlock, dracula  } from "react-code-blocks";
 
+<hr/>
+
+# Rust 相關學習紀錄皆已移至 [https://rust.insect-totem.net](https://rust.insect-totem.net)
+
+<hr/>
+<hr/>
+<hr/>
+
 # Rust 於 Windows 安裝
 
 * 安裝過程摘要記錄  
