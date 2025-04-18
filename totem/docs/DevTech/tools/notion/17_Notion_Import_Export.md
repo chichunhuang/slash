@@ -43,7 +43,7 @@ __匯入種類摘要__
     * PDF: 匯入文字說明與圖片。轉換成為已上傳檔為名的 Notion Page。
 
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_01.png')}
+ {GoogleImage( '106FWb9qjRIszMMsbBmyd0w6okEuKWeck',  '17_Notion_ImportExport_01.png' , {width:'652px', height:'550px', hidden:true, degree:0})}
 </div>
 
 
@@ -61,27 +61,27 @@ __匯入種類摘要__
 
 __線上電子檔同步__
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_02.png')}
+ {GoogleImage( '1IjFtmzBZpSoDwt-XMpj2ZVnZ2TfdYDTO',  '17_Notion_ImportExport_02.png' , {width:'627px', height:'211px', hidden:true, degree:0})}
 </div>
 
 
 __Notion Prompt__
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_03.png')}
+ {GoogleImage( '1Wbe7rD0pLtwR5NxPnkr-cieHAwoiG3fw',  '17_Notion_ImportExport_03.png' , {width:'478px', height:'418px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_04.png')}
+ {GoogleImage( '1igsXmkUuC1QJ9Z7n3mMSBSVofUnV0iol',  '17_Notion_ImportExport_04.png' , {width:'378px', height:'204px', hidden:true, degree:0})}
 </div>
 
 __調整可視範圍__
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_05.png')}
+ {GoogleImage( '1IVCs0EZBmGsW1pBsN5476mgts3QztPXE',  '17_Notion_ImportExport_05.png' , {width:'562px', height:'394px', hidden:true, degree:0})}
 </div>
 
 __更換/下載檔案__
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_06.png')}
+ {GoogleImage( '1nCPctFWQrxB-skAFDY3_MwD7d66ostyL',  '17_Notion_ImportExport_06.png' , {width:'652px', height:'327px', hidden:true, degree:0})}
 </div>
 
 
@@ -97,13 +97,13 @@ __更換/下載檔案__
 
 __Google Account 連結設定__
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_08-1.png')}
+ {GoogleImage( '1Ptt6QwZcd6tCgDD5L2fYfRT_l_KkQ66T',  '17_Notion_ImportExport_08-1.png' , {width:'652px', height:'249px', hidden:true, degree:0})}
 </div>
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_08-2.png')}
+ {GoogleImage( '1H3XVTyq2jfRBW3lnqAwjvybuB_d8xC7G',  '17_Notion_ImportExport_08-2.png' , {width:'652px', height:'270px', hidden:true, degree:0})}
 </div>
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_08-3.png')}
+ {GoogleImage( '1yGn3V490t9AJ9KUXVs5dl1gS7axzJlIU',  '17_Notion_ImportExport_08-3.png' , {width:'652px', height:'317px', hidden:true, degree:0})}
 </div>
 
 * 插入 Google Drive 方式 (會要求連結 google 帳號)
@@ -112,15 +112,15 @@ __Google Account 連結設定__
     
 __Googel 線上文件網址__
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_09.png')}
+ {GoogleImage( '1BRusRhHZWdkmeIgsZd9FOdZDJcNya5rk',  '17_Notion_ImportExport_09.png' , {width:'652px', height:'236px', hidden:true, degree:0})}
 </div>
 
 __Googel Drive 咒語__
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_10.png')}
+ {GoogleImage( '1eZ1f7fyRRfAkAx73CAYo_jBd6t2SFFYB',  '17_Notion_ImportExport_10.png' , {width:'473px', height:'171px', hidden:true, degree:0})}
 </div>
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_11.png')}
+ {GoogleImage( '1aKm7V17HOt-y1QdmW9PR3LoWGCQMUXFo',  '17_Notion_ImportExport_11.png' , {width:'652px', height:'285px', hidden:true, degree:0})}
 </div>
 
 <br/>
@@ -132,6 +132,10 @@ __Googel Drive 咒語__
     * Block 右側的 __ … __ 有提供呈現方式轉換。
     * Embedded: 將只份文件嵌入，但不可編輯，僅可瀏覽以及切換在文件頁面，同樣點預覽下方可進入轉導到原始檔案.
 
+__其他 3rd-Party 軟體__
+* 其他軟體資料匯入或是同步:\(未全試過)
+    * confluence / Jira / Dropbox / evernote ....
+    
 ## Notion 資料匯出
 > 資料匯出會因為 Browser/ Mobile App / Desktop / 匯出格式不同而略有差異  
 > 這邊主要紀錄的是 Browser 下的使用方式  
@@ -151,7 +155,7 @@ __特殊內容匯__
 ### Database 資料備份
 * 直接由 Database Page 右上 <code>&nbsp; … &nbsp;</code> 🢂 <code>&nbsp; Export &nbsp;</code> 將資料匯出成 <code>&nbsp; CSV File &nbsp;</code>
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_13.png')}
+ {GoogleImage( '1_EggZSs6zrR2jQ7EeZLw9IAjVtxofb6W',  '17_Notion_ImportExport_13.png' , {width:'431px', height:'546px', hidden:true, degree:0})}
 </div>
 
 ### Workspace 備份 
@@ -159,7 +163,7 @@ __特殊內容匯__
 * <code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Workspace &nbsp;</code> 🢂 <code>&nbsp; General &nbsp;</code> 🢂 <code>&nbsp; Export content &nbsp;</code> 🢂 <code>&nbsp; Export all workspace content &nbsp;</code>
     * Notion 會保留下載檔 7 天，並將 download link 寄到指定信箱。  
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_12.png')}
+ {GoogleImage( '1eWvf3Ix-s40BRM1Tnzqnj-uOck7K9qgO',  '17_Notion_ImportExport_12.png' , {width:'652px', height:'548px', hidden:true, degree:0})}
 </div>
 
 ### 關閉備份功能
@@ -169,18 +173,18 @@ __Workspace __
 * <code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Security and Data &nbsp;</code> 🢂 <code>&nbsp; General &nbsp;</code> 🢂 <code>&nbsp; Disable Export &nbsp;</code>
 
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_14.png')}
+ {GoogleImage( '1dCasKWPSijwWCwXWzluY6PAu1LZvkN0r',  '17_Notion_ImportExport_14.png' , {width:'652px', height:'295px', hidden:true, degree:0})}
 </div>
 
 __Teamspace__
 * Teamspace 名稱旁 <code>&nbsp; …  &nbsp;</code> 🢂 <code>&nbsp; Teamspace Settings &nbsp;</code> 🢂 <code>&nbsp; Security &nbsp;</code> 🢂 <code>&nbsp; Disable Export &nbsp;</code>
 
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_15.png')}
+ {GoogleImage( '172Vpjh53I_kB5PTKSQKs2LK3UwQJZlHh',  '17_Notion_ImportExport_15.png' , {width:'539px', height:'249px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_16.png')}
+ {GoogleImage( '1hTFYXElhnlv6CPeLqxj8sOErAokr-mJn',  '17_Notion_ImportExport_16.png' , {width:'611px', height:'508px', hidden:true, degree:0})}
 </div>
 
 ## Notion 資料遷移 <span id="Notion_migrate_workspace">&nbsp;</span>
@@ -194,32 +198,10 @@ __Teamspace__
 
 __Owner 分享__
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_17.png')}
+ {GoogleImage( '1GQ5nWVqtGJzlY6YDevAWauguY5WgEujB',  '17_Notion_ImportExport_17.png' , {width:'467px', height:'418px', hidden:true, degree:0})}
 </div>
 
 __Receiver 接收__
 <div>
- {GoogleImage( 'x',  '17_Notion_ImportExport_18.png')}
+ {GoogleImage( '1tFsdbetfi9ZyFSsNbs4wG868qRSUVEdn',  '17_Notion_ImportExport_18.png' , {width:'445px', height:'305px', hidden:true, degree:0})}
 </div>
-
-
-
-
-
-
-
-
-
-## Notion 資料匯入種類 <span id="notion_Doc_Imported">&nbsp;</span>
-* 這邊用的字眼是 import / insert，指的是建立副本或是截圖。因此不是及時完整內容。
-* Google Workspace 相關線上文件
-    * /google docs 
-    * /google drive 指令可以 link / embed google drive 上其他類型文件。image / pdf 等。
-    * /google map     
-
- * 其他軟體資料匯入或是同步:\(未全試過)
-    * confluence / Jira / Dropbox / evernote ....
-    
-* 其他可以 [embedded](#notion_Doc_embedded) 的檔案類型 
-    * 這邊指的是以 Iframe 插入，故受 Iframe 相關限制，若來源方禁止則出現 'Failed to Load'
-    * HTML files / PDF files / Audio / Video / Images    
