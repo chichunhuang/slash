@@ -132,6 +132,10 @@ __Googel Drive 咒語__
     * Block 右側的 __ … __ 有提供呈現方式轉換。
     * Embedded: 將只份文件嵌入，但不可編輯，僅可瀏覽以及切換在文件頁面，同樣點預覽下方可進入轉導到原始檔案.
 
+__其他 3rd-Party 軟體__
+* 其他軟體資料匯入或是同步:\(未全試過)
+    * confluence / Jira / Dropbox / evernote ....
+    
 ## Notion 資料匯出
 > 資料匯出會因為 Browser/ Mobile App / Desktop / 匯出格式不同而略有差異  
 > 這邊主要紀錄的是 Browser 下的使用方式  
@@ -201,25 +205,3 @@ __Receiver 接收__
 <div>
  {GoogleImage( 'x',  '17_Notion_ImportExport_18.png')}
 </div>
-
-
-
-
-
-
-
-
-
-## Notion 資料匯入種類 <span id="notion_Doc_Imported">&nbsp;</span>
-* 這邊用的字眼是 import / insert，指的是建立副本或是截圖。因此不是及時完整內容。
-* Google Workspace 相關線上文件
-    * /google docs 
-    * /google drive 指令可以 link / embed google drive 上其他類型文件。image / pdf 等。
-    * /google map     
-
- * 其他軟體資料匯入或是同步:\(未全試過)
-    * confluence / Jira / Dropbox / evernote ....
-    
-* 其他可以 [embedded](#notion_Doc_embedded) 的檔案類型 
-    * 這邊指的是以 Iframe 插入，故受 Iframe 相關限制，若來源方禁止則出現 'Failed to Load'
-    * HTML files / PDF files / Audio / Video / Images    
