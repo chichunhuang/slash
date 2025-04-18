@@ -3,59 +3,142 @@ title: Notion 資料匯入匯出
 description: Notion 資料匯入匯出
 keywords: [Notion,Import,Export]
 ---
+import {GoogleImage} from "@site/src/components/google/GoogleImage";
 
-## Notion Doc Import <span id="notion_Doc_Imported">&nbsp;</span>
-* 這邊用的字眼是 import / insert，指的是有副本或是截圖。因此不是及時完整內容。
-* google
-    * /google docs 
-    * /google drive 指令可以 link / embed google drive 上其他類型文件。image / pdf 等。
-    * /google map     
-* 其他類型文件: 經由 Setting > import > 種類選取。
+> 這主題說介紹 Notion 資料匯入的兩種概念，  
+> 一個是 Import 另一個是 embed。   
+> Imoprt: 將資料建立副本或是截圖，所以內容是 detached。通常是將電子文件讀入 Notion 軟體中。  
+> Embed: 將資料或第三方軟體畫面嵌入 Notion，與來源資料同步。可想成是
+> 
+> 除了單純檔案匯入外，Notion 也與多種 Web 介面軟體整合。  
+> 個人比較常用的是 GWS 相關所以僅記錄與 Google 相關第三方軟體整合。  
+> 
+> 所以實際使用上可先決定要如何呈現、資料來源以及使用目的，再選用資料匯入的放式。
+
+* [Notion 資料匯入官方參考](https://www.notion.com/help/embed-and-connect-other-apps) 
+
+## Notion 資料匯入種類 <span id="notion_Doc_Imported">&nbsp;</span>
+
+__匯入種類摘要__
+
+|    種類   |     說明     | 
+|----------|-----------------| 
+| [Import\(匯入)](#notion_Doc_Importing)<br/>File-Based| Notion 支援從多種來源匯入<code> 常見格式 </code>資料，包括 Markdown / HTML / CSV / Word / Excvel / CSV / PDF / Google Doc 檔案，以及 Evernote、Trello、Asana 等其他工具的內容 | 
+| [Embed<br/>3rd-party](#notion_Doc_embedded)| 不支援 iframe 標籤，但允許 <code> Embed </code> 以區塊嵌入第三方軟體內容，例如 YouTube、Figma、Google Maps、Jira、Github 等等 |   
+| Zip File| 批次將 File-Based 檔案壓縮後上傳 | 
+| 3rd-party軟體同步<br/>Google Drive 同步| 透過 <code> Embed </code>，將 Google Docs、Sheets、Slides 等檔案嵌入 Notion 頁面中。並提供 <code>即時預覽 </code> | 
+
+
+
+### 常見檔案匯入\(Imports) <span id="notion_Doc_Importing">&nbsp;</span>
+- 單一檔案: 左側<code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Import &nbsp;</code> 🢂 <code>&nbsp; 種類選取 &nbsp;</code> 
+- 批次匯入\(zip): 左側<code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Import &nbsp;</code> 🢂 最下方 <code>&nbsp; Convert Zip to Pages &nbsp;</code> 🢂 <code>&nbsp; 拖拉 zip 檔並上傳 &nbsp;</code>
+- 註: 單一檔限制 25M 以內。
+* 常見類型文件: 
     * word 
-    * excel, 
+    * excel 
     * html
-    * markdown: 僅限不含 databasse 的 Notion Page 可以 md format 匯出 
+    * markdown: <span style={{color: '#0044FF'}}> __僅限不含 databasse 的 Notion Page__ </span> 可以 md format 匯出 
     * csv: 單頁的 Notion Database 可以以 CSV 匯出。
     * PDF: 匯入文字說明與圖片。轉換成為已上傳檔為名的 Notion Page。
- * 其他軟體資料匯入或是同步:\(未全試過)
-    * confluence / Jira / Dropbox / evernote ....
-    
-* 其他可以 [embedded](#notion_Doc_embedded) 的檔案類型 
-    * 這邊指的是以 Iframe 插入，故受 Iframe 相關限制，若來源方禁止則出現 'Failed to Load'
-    * HTML files / PDF files / Audio / Video / Images    
 
-### Google Docs 匯入的特殊功能
-* 插入 Gooogle Doc 方式 (會要求登入 google 帳號)
-    * 複製 google doc url link，直接貼在 Notion Block > 可再細選呈現種類
-    * Block 填入 /Google Docs 指令，會開啟 google drives 中的 word 或 gdoc 檔清單。
-    * Settings > Import > Google Docs，同樣會開啟文件清單。
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_01.png')}
+</div>
+
+
+
+### 檔案嵌入\(Embeds) <span id="notion_Doc_embedded">&nbsp;</span>
+* Notion 嵌入\(Embeds) 指的類似以 Iframe 嵌入，為即時資訊且受來源方相關限制。若授權被取消則出現 'Failed to Load'
+* 與[檔案匯入](#notion_Doc_Importing)另存資料副本不同。
+* 接受多種格式: HTML files / PDF files / Audio / Video / Images / [相關可接受的來源方清單](https://www.notion.com/help/embed-and-connect-other-apps)
+* 建立方式
+    * 線上電子檔 : 直接貼上 <code>&nbsp; URL &nbsp;</code> 🢂 <code>&nbsp; 選取 Embed &nbsp;</code>
+    * 咒語\(Prompt) : <code>&nbsp; /embed &nbsp;</code> 🢂 <code>&nbsp; 貼入指定來源 &nbsp;</code> 🢂 填入<code>&nbsp; Embed Link &nbsp;</code> \(若選擇 Upload 則變成匯入)
+* 其他操作
+    * <code>&nbsp; 拖拉 &nbsp;</code>下方直角符號可調整可視範圍 
+    * 嵌入區塊右上 <code>&nbsp; … &nbsp;</code> 可 __View Ooriginal__ 或 __Replace Embedded Content__
+
+__線上電子檔同步__
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_02.png')}
+</div>
+
+
+__Notion Prompt__
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_03.png')}
+</div>
+
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_04.png')}
+</div>
+
+__調整可視範圍__
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_05.png')}
+</div>
+
+__更換/下載檔案__
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_06.png')}
+</div>
+
+
+### Google Drive 相關匯入/同步功能
+> 目前試用下，  
+> 功能會隨檔案種類以及呈現方式而在介面上有些許差異，  
+> 不知是否因為免費版，  
+> 所以部分功能發生無法 import 僅能同步預覽。   
+> 部分指令功能受限制: 出現 系統已封鎖這個應用程式，不然就回應 403。    
+> 另外，左側欄的 Settings 下 menu 中也出現兩個 Connections 。
+
+* 帳號連結: <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Import &nbsp;</code> 🢂 <code>&nbsp; Google Docs &nbsp;</code> 🢂 <code>&nbsp; Connect Google Account &nbsp;</code> 🢂 <code>&nbsp; 選擇帳號 </code>
+
+__Google Account 連結設定__
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_08-1.png')}
+</div>
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_08-2.png')}
+</div>
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_08-3.png')}
+</div>
+
+* 插入 Google Drive 方式 (會要求連結 google 帳號)
+    * 複製 Google doc link，直接貼在 Notion 🢂 可再細選[呈現種類](#GDrive_Display)
+    * Block 填入 <code>&nbsp; /Google Drive &nbsp;</code> 指令，會開啟已連結帳號檔清單。
     
-* 插入 Gooogle Doc 呈現種類
+__Googel 線上文件網址__
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_09.png')}
+</div>
+
+__Googel Drive 咒語__
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_10.png')}
+</div>
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_11.png')}
+</div>
+
+<br/>
+
+* 插入 Google 文件呈現種類 <span id="GDrive_Display">&nbsp;</span>
     * URL: 單純的 URL link 指向 google doc.
-    * Preview: 文件__首頁縮圖__，點縮圖下方可進入 google doc.
-    * Mention: 與 URL link 類似，但 mouse over 時，會出現原文件的縮圖。與 Notion 的 Mentioned Page 應該不同.
-    * embedded: 將只份文件嵌入，但僅可瀏覽不可編輯，同樣點縮圖下方可進入 google doc.
-    * import from Google Drive: 會在 Notion 建立 __文件內容副本__ \(Notion Page).
-    * block 右側的 __ … __ 有提供呈現方式轉換。turn into given_type
-    
+    * Preview: 文件__首頁縮圖__，點縮圖下方可進入 google 文件.
+    * Mention: 與 URL link 類似，但 mouse over 時，會出現原文件的縮圖。與 Notion 的 Mentioned Page 不同.
+    * Block 右側的 __ … __ 有提供呈現方式轉換。
+    * Embedded: 將只份文件嵌入，但不可編輯，僅可瀏覽以及切換在文件頁面，同樣點預覽下方可進入轉導到原始檔案.
 
-## Notion Doc embed <span id="notion_Doc_embedded">&nbsp;</span>
-* Notion embeds 指的是以 Iframe 插入，故為即時資訊且受 Iframe 相關限制，若來源方禁止則出現 'Failed to Load'
-* [Notion Doc Import](#notion_Doc_Imported)，則是另存資料副本。
-* HTML files / PDF files / Audio / Video / Images / [相關可接受的來源方清單](https://www.notion.com/help/embed-and-connect-other-apps)
-* 咒語 : /embed > 貼入指定來源
-    * 拖拉可 resize / __ … __ 可 view original 或 replace embedded content
-
-
-## Notion 資料匯出與備份
-> 
-> 資料匯出會因為 Browser/ Mobile App / Desktop / 匯出格式 不同而略有差異  
-> 這邊主要紀錄的是 Browser 下的使用方式
+## Notion 資料匯出
+> 資料匯出會因為 Browser/ Mobile App / Desktop / 匯出格式不同而略有差異  
+> 這邊主要紀錄的是 Browser 下的使用方式  
 > 在共編與團隊合作下，商業版 owner 可以關閉資料匯出功能。  
 
-
 __匯出方式__ 
-* upper right > __ … __ > Export 可叫出匯出功能，並自訂匯出格式。
+* 頁面右上 <code>&nbsp; … &nbsp;</code> 🢂 <code>&nbsp; Export &nbsp;</code> 可叫出匯出功能，並自訂匯出格式。
     * 可選擇格式、內容、紙張大小。
     * 以及 __是否打包並匯出子頁面__
     
@@ -63,19 +146,80 @@ __特殊內容匯__
 * HTML 格式可額外匯出 comments 與 mentions 
 * Notion Database 僅能以 CSV format 格式匯出 
 
-__workspace 備份__
-* Sidebar > settings > setting > Export content > Export all workspace content  
+## Notion 資料備份
+
+### Database 資料備份
+* 直接由 Database Page 右上 <code>&nbsp; … &nbsp;</code> 🢂 <code>&nbsp; Export &nbsp;</code> 將資料匯出成 <code>&nbsp; CSV File &nbsp;</code>
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_13.png')}
+</div>
+
+### Workspace 備份 
+
+* <code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Workspace &nbsp;</code> 🢂 <code>&nbsp; General &nbsp;</code> 🢂 <code>&nbsp; Export content &nbsp;</code> 🢂 <code>&nbsp; Export all workspace content &nbsp;</code>
     * Notion 會保留下載檔 7 天，並將 download link 寄到指定信箱。  
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_12.png')}
+</div>
 
-__關閉備份功能__
-* Workspace Sidebar > settings > Security and data > General > Disable export
-* Teamspace > __ … __ > Teamspace settings > Security > Disable export 
+### 關閉備份功能
+> 付費版功能
 
+__Workspace __
+* <code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Security and Data &nbsp;</code> 🢂 <code>&nbsp; General &nbsp;</code> 🢂 <code>&nbsp; Disable Export &nbsp;</code>
 
-## Notion 資料遷移至其他帳號 <span id="Notion_migrate_workspace">&nbsp;</span>
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_14.png')}
+</div>
+
+__Teamspace__
+* Teamspace 名稱旁 <code>&nbsp; …  &nbsp;</code> 🢂 <code>&nbsp; Teamspace Settings &nbsp;</code> 🢂 <code>&nbsp; Security &nbsp;</code> 🢂 <code>&nbsp; Disable Export &nbsp;</code>
+
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_15.png')}
+</div>
+
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_16.png')}
+</div>
+
+## Notion 資料遷移 <span id="Notion_migrate_workspace">&nbsp;</span>
+-  Notion 資料遷移至其他帳號 <span id="Notion_migrate_workspace">&nbsp;</span>
 1. 以 Owner 登入工作區。
 1. 將您的所有頁面整合到一個頂級頁面下。
-1. 將 workspace 完全存取權分享給指定 email。
-1. 以接收者帳號登入，並至共享頂層頁面。
-1. 選擇所有子頁面，點擊 ⋮⋮ 圖示 > Move To 新的工作區。
+1. 將 Workspace 完全存取權分享給指定 email/account。
+1. 以接收者帳號登入，並至<code>&nbsp; 共享 \(share) &nbsp;</code> 頂層頁面。
+1. 由根頁面\(或逐次選擇所有子頁面)，點擊 <code>&nbsp; …  &nbsp;</code> 圖示 🢂 <code>&nbsp; Move To  &nbsp;</code> 🢂 <code>&nbsp; Private Pages  &nbsp;</code>。
 * [reference](https://www.notion.com/help/back-up-your-data)
+
+__Owner 分享__
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_17.png')}
+</div>
+
+__Receiver 接收__
+<div>
+ {GoogleImage( 'x',  '17_Notion_ImportExport_18.png')}
+</div>
+
+
+
+
+
+
+
+
+
+## Notion 資料匯入種類 <span id="notion_Doc_Imported">&nbsp;</span>
+* 這邊用的字眼是 import / insert，指的是建立副本或是截圖。因此不是及時完整內容。
+* Google Workspace 相關線上文件
+    * /google docs 
+    * /google drive 指令可以 link / embed google drive 上其他類型文件。image / pdf 等。
+    * /google map     
+
+ * 其他軟體資料匯入或是同步:\(未全試過)
+    * confluence / Jira / Dropbox / evernote ....
+    
+* 其他可以 [embedded](#notion_Doc_embedded) 的檔案類型 
+    * 這邊指的是以 Iframe 插入，故受 Iframe 相關限制，若來源方禁止則出現 'Failed to Load'
+    * HTML files / PDF files / Audio / Video / Images    
