@@ -45,13 +45,17 @@ keywords: [Notion]
 
 ## 教育版
 * [教育版 individual edu plus 限制](https://www.notion.com/help/notion-for-education)  
+    * 建立新 workspace 時必須選擇 <span style={{backgroundColor: '#b3ffb3'}}> __ For Personal Life __ </span> 才能升級為教育版。
     * 目前教育加強版的認證方式是依 email，<span style={{backgroundColor: '#b3ffb3'}}>教育單位的 email 可申請教育加強版</span>。\(這邊單指的是版本，有教育 email 是否授權是另一回事\)  
 ### 教育加強版開通
 > Edu plus 開通指的是 Plus Plan for individual students and teachers 開通 
 
 1. <span style={{color: '#0044FF'}}> 教育版 </span>: Sidebar 🢂 Settings 🢂 升級方案 🢂 學生vs教育版 升級方案  
 2. 升級: Sidebar 🢂 Settings 🢂 帳單 🢂 方案 🢂 變更方案 (更改為付費版)  
-註: edu plus 雖無法 add member 但可 add guests   
+註:   
+a. edu plus 雖無法 add member 但可 add guests   
+b. 建立 workspace 時必須選擇 Personal Use 才能升級為教育版。
+
 
 
 ## email 註冊 vs email 登入

@@ -13,9 +13,11 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 * Workspace: 工作區基本操作  
     * 切換: 帳號 __V__  🢂 可切換不同 workspace(不同筆記本)  
     * 建立: 帳號 __V__ 🢂 右側 __...__ 🢂 可加入或建立新的 workspace  
-    * 移除: 進入 Workspace 🢂 Settings 🢂 reneme/remove 🢂 workspace 移除或更名  
+    * 更名: 進入 Workspace 🢂 Settings 🢂 General 🢂 Name 進行編輯
+    * 移除: 進入 Workspace 🢂 Settings 🢂 General 🢂 Danger Zone 🢂 Delete Entire workspace
     * 鎖定: 由右上方的隱藏功能 __...__ 按鈕進入後 🢂 Lock Page (頁面鎖定，防止誤操作)  
     * wrokspace 下可再細分: [Page](./Notion_Page) / Block 
+    * 註: 若想升級為教育加強版，建立新 Workspace 時必須選擇 <span style={{color: '#0044FF'}}> __ For Personal Life __ </span>才能升級為教育版。
 
 
 ## Notion 工作區版面分區
