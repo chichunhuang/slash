@@ -99,12 +99,6 @@ __Google Account 連結設定__
 <div>
  {GoogleImage( '1Ptt6QwZcd6tCgDD5L2fYfRT_l_KkQ66T',  '17_Notion_ImportExport_08-1.png' , {width:'652px', height:'249px', hidden:true, degree:0})}
 </div>
-<div>
- {GoogleImage( '1H3XVTyq2jfRBW3lnqAwjvybuB_d8xC7G',  '17_Notion_ImportExport_08-2.png' , {width:'652px', height:'270px', hidden:true, degree:0})}
-</div>
-<div>
- {GoogleImage( '1yGn3V490t9AJ9KUXVs5dl1gS7axzJlIU',  '17_Notion_ImportExport_08-3.png' , {width:'652px', height:'317px', hidden:true, degree:0})}
-</div>
 
 * 插入 Google Drive 方式 (會要求連結 google 帳號)
     * 複製 Google doc link，直接貼在 Notion 🢂 可再細選[呈現種類](#GDrive_Display)
