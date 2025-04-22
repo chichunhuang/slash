@@ -85,24 +85,25 @@ __GitHub App 綁定移除__
 </div>
 
 
-## Pull Request \(PR) 管理:
+## Pull Request \(PR) 與 Repo 同步管理: <span id="notion_Git_PR">&nbsp;</span>
 > Developer 請求將 Client 端程式先上傳 Repo 但此時尚未與 Branch 合併，  
 > 等管理者同意後才由管理者正式合併。  
 > Notion 可以將 GitHub 上的 PR 進行同步，並做 UI 管理呈現。  
 
-* [官方參考](https://www.notion.com/help/github)
+* [官方參考資料](https://www.notion.com/help/github)
+* [GitHub 儲存庫官方參考資料](https://www.notion.com/help/github#create-a-synced-database)
+* 以 Notion Database 同步管理步驟: 
+    * 建立連結
+        * Notion Page 🢂 <code>&nbsp; /GitHub &nbsp;</code> 🢂 <code>&nbsp; Synced Databases &nbsp;</code> 🢂 <code>&nbsp; Link to GitHub &nbsp;</code> 🢂 <code>&nbsp; 選取標的 PR/Issues &nbsp;</code>
+        * GitHub 🢂 複製 PR or issue 的 Link 🢂 Notion Page 🢂 Paste as database 
+    * Notion database 🢂 + 🢂 新增 property 下會出現 'GitHub Pull Requests' property
+    * 建立 'GitHub Pull Requests' property 時 Notion 會自動建立 Unique ID property。
+    * 往後在 Notion 中便可以以 Unique ID 來串接 Notion Task 與 GitHub PR。
+    * Task 的狀態也可以同步到 PR。
 
-* GitHub > 複製 PR or issue 的 Link > Notion Page > Paste as database 
-* 此時 Notion database > + > 新增 property 下會出現 'GitHub Pull Requests' property
-* 建立 'GitHub Pull Requests' property 時 Notion 會自動建立 Unique ID property。
-* 往後在 Notion 中便可以以 Unique ID 來串接 Notion Task 與 GitHub PR。
-* Task 的狀態也可以同步到 PR。
-
-要將您的 GitHub 拉取請求連結到 Notion 資料庫中的項目+，
-只需使用 右上角的按鈕 向資料庫新增一個新屬性 並選擇GitHub Pull Requests。整合將根據 GitHub 拉取請求狀態自動更新 Notion 中的任務狀態
-
-
-## GitHub 儲存庫
-[GitHub 儲存庫](https://www.notion.com/help/github#create-a-synced-database)
-要將資料從 GitHub 儲存庫同步到 Notion 資料庫，
-請複製 GitHub 鏈接，將其貼上到 Notion 中並選擇 Paste as database。將出現一個新的 Notion 資料庫，其中所有 GitHub 屬性均自動新增
+<div>
+ {GoogleImage( 'google_file_id',  '21_Notion_GitHub_14_1.png')}
+</div>
+<div>
+ {GoogleImage( 'google_file_id',  '21_Notion_GitHub_13.png')}
+</div>

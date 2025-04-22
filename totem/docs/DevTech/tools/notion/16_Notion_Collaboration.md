@@ -313,3 +313,4 @@ __Groups__
 * 需共編 Workspace 下的 Private Page 時，可將 Page 搬移至 Teamspace 或是將 Page 逐頁分享。
 * 個人版 edu plus 無 Teamspace 則需以 Share 進行單一頁面分享。
 * 團隊成員可以採用 [Email Domain](Notion_Setting#notion_Email_Domain) 相關設定自動加入。
+* [Git Pull Request 經由 Notion 管理](./Notion_GitHub#notion_Git_PR)
