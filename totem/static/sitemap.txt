@@ -99,11 +99,11 @@ https://insect-totem.net/docs/DevTech/tools/notion/Notion_Emergent_Property
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_Examples
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_Form
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_GitHub
-https://insect-totem.net/docs/DevTech/tools/notion/Notion_GitHub_Domain
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_Google_Doc
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_Import_Export
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_Layout
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_Page
+https://insect-totem.net/docs/DevTech/tools/notion/Notion_Products
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_Setting
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_Sites
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_Sprint_Task
@@ -113,7 +113,6 @@ https://insect-totem.net/docs/DevTech/tools/notion/Notion_View_Calendar
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_View_Chart
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_View_Gallery
 https://insect-totem.net/docs/DevTech/tools/notion/Notion_View_Timeline
-https://insect-totem.net/docs/DevTech/tools/notion/Notion_Web_Clipper
 https://insect-totem.net/docs/Graphics/Butterfly_01
 https://insect-totem.net/docs/Graphics/Butterfly_Papilio_xuthus_01
 https://insect-totem.net/docs/Graphics/Dynastes_Hercules_01

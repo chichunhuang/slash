@@ -5,7 +5,7 @@ sidebar_position: 1
 # Document List (docs)
 
 
-最後更版時間:Mon Apr 14 11:52:23 CST 2025
+最後更版時間:Tue Apr 22 11:05:15 CST 2025
 
 ### Google
 * [Google App Script 取 File ID - Google App Script 取 File ID](/docs/DevTech/Google/Google_App_Script_FileIDs)
@@ -136,14 +136,13 @@ sidebar_position: 1
 * [Notion 自動化 - Notion 自動化](/docs/DevTech/tools/notion/Notion_Automation)
 * [Notion Calendar - Notion Calendar](/docs/DevTech/tools/notion/Notion_Calendar)
 * [Notion 共編 - Notion 共編](/docs/DevTech/tools/notion/Notion_Collaboration)
+* [Notion 資料匯入匯出 - Notion 資料匯入匯出](/docs/DevTech/tools/notion/Notion_Import_Export)
+* [Notion 其他設定 - Notion 關於設定](/docs/DevTech/tools/notion/Notion_Setting)
+* [Notion 與 Google Drive 整合 - Notion 與 Google Drive 整合](/docs/DevTech/tools/notion/Notion_Google_Doc)
 * [Notion 學習範例 - Notion 學習範例](/docs/DevTech/tools/notion/Notion_Examples)
 * [Notion GitHub 整合 - Notion-Integrate GitHub](/docs/DevTech/tools/notion/Notion_GitHub)
-* [Notion_GitHub_Domain.md](/docs/DevTech/tools/notion/Notion_GitHub_Domain)
-* [Notion 與 Google Drive 整合 - Notion 與 Google Drive 整合](/docs/DevTech/tools/notion/Notion_Google_Doc)
-* [Notion 資料匯入匯出 - Notion 資料匯入匯出](/docs/DevTech/tools/notion/Notion_Import_Export)
-* [Notion 關於設定 - Notion 關於設定](/docs/DevTech/tools/notion/Notion_Setting)
 * [Notion 網站發布 - Notion 網站發布](/docs/DevTech/tools/notion/Notion_Sites)
-* [Notion Web Clipper - Notion-Web Clipper](/docs/DevTech/tools/notion/Notion_Web_Clipper)
+* [Notion 其他工具 - Notion Apps](/docs/DevTech/tools/notion/Notion_Products)
 ## Graphics
 * [Origin of Insect-Totem - Insect-Totem 的起源](/docs/Graphics/origin_of_Insecttotem)
 * [Butterfly - Insect-Totem Butterfly](/docs/Graphics/Butterfly_01)
