@@ -18,12 +18,12 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage";
 
 __Notion 端設定__
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_01.png')}
+ {GoogleImage( '1w8-zi7u7-RmFOIlNrYisuMfUXBwbvIwD',  '21_Notion_GitHub_01.png' , {width:'652px', height:'294px', hidden:true, degree:0})}
 </div>
 
 __GitHub 端設定__
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_02.png')}
+ {GoogleImage( '1K7J3F0YSPLBzLasczzG2Al3eBD-EqSMz',  '21_Notion_GitHub_02.png' , {width:'652px', height:'432px', hidden:true, degree:0})}
 </div>
 
 ### 在 Notion 中預覽程式碼
@@ -36,12 +36,12 @@ __GitHub 端設定__
 
 __Permalink__
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_04.png')}
+ {GoogleImage( '1Y8mYy0J3Yxv_CVY6cpdZdYpgy06Io_2w',  '21_Notion_GitHub_04.png' , {width:'578px', height:'354px', hidden:true, degree:0})}
 </div>
 
 __Paste as preview__
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_05.png')}
+ {GoogleImage( '1ov6s2_1IRV1Z0FOFDTP0YjbPFWnc0e9u',  '21_Notion_GitHub_05.png' , {width:'652px', height:'345px', hidden:true, degree:0})}
 </div>
 
 ## 中斷 Notion 與 GitHub 連線設定
@@ -54,11 +54,11 @@ __Paste as preview__
     * <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Connections (下) &nbsp;</code> 🢂 <code>&nbsp; All Connections &nbsp;</code> 🢂 <code>&nbsp; GitHub &nbsp;</code> 🢂 <code>&nbsp; ... &nbsp;</code> 🢂 <code>&nbsp; Disconnect All Users &nbsp;</code>
 
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_06.png')}
+ {GoogleImage( '1xgtbVZS3FCZ4DbX36BTkRR1ylGPoUvrT',  '21_Notion_GitHub_06.png' , {width:'652px', height:'190px', hidden:true, degree:0})}
 </div>
 
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_07.png')}
+ {GoogleImage( '12lXDLeUrq4329UgtqHbVcXv8DMWklDxo',  '21_Notion_GitHub_07.png' , {width:'652px', height:'330px', hidden:true, degree:0})}
 </div>
 
 
@@ -67,10 +67,10 @@ __Paste as preview__
 * 移除設定: <code>&nbsp; GitHub Home &nbsp;</code> 🢂 <code>&nbsp; 右上 portrait &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; 左側欄 Applications &nbsp;</code> 🢂 <code>&nbsp; Authorized OAuth Apps &nbsp;</code> 🢂 <code>&nbsp; Revoke &nbsp;</code> 
 
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_G_08.png')}
+ {GoogleImage( '15CH1bPmIuBnB9digq4t-PLXsEXMcYoaz',  '21_Notion_GitHub_G_08.png' , {width:'285px', height:'465px', hidden:true, degree:0})}
 </div>
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_G_09.png')}
+ {GoogleImage( '1WNTTYhEttkMMCRXB-fIqeNbv-Xidk4G5',  '21_Notion_GitHub_G_09.png' , {width:'652px', height:'267px', hidden:true, degree:0})}
 </div>
 
 ### GitHub 端移除 Notion 的 GitHub App 綁定
@@ -78,10 +78,10 @@ __Paste as preview__
 
 __GitHub App 綁定移除__
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_12.png')}
+ {GoogleImage( '1IeXG8hpbBVDHu1zFTcjW_k-8cNo5rYLe',  '21_Notion_GitHub_12.png' , {width:'626px', height:'237px', hidden:true, degree:0})}
 </div>
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_11.png')}
+ {GoogleImage( '17c_cfK26psp7ZSBph7ihaTj6iKjKKjfv',  '21_Notion_GitHub_11.png' , {width:'652px', height:'675px', hidden:true, degree:0})}
 </div>
 
 
@@ -102,8 +102,8 @@ __GitHub App 綁定移除__
     * Task 的狀態也可以同步到 PR。
 
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_14_1.png')}
+ {GoogleImage( '1IRlq_3zR84zkyxFsjS4ogHNq1-T6mLkz',  '21_Notion_GitHub_14_1.png' , {width:'591px', height:'205px', hidden:true, degree:0})}
 </div>
 <div>
- {GoogleImage( 'google_file_id',  '21_Notion_GitHub_13.png')}
+ {GoogleImage( '1iKaQPiI-N2QrIuLlDv7E8p7Nxjf6hEiT',  '21_Notion_GitHub_13.png' , {width:'652px', height:'117px', hidden:true, degree:0})}
 </div>
