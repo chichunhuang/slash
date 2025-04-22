@@ -60,7 +60,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage";
 
 ## 錦上添花
     
-### Notion Portrait 頭像製作
+### Notion Portrait 頭像製作 <span id="notion_Portrait">&nbsp;</span>
 * [Notion Portrait/Notion Faces 頭像製作](https://faces.notion.com/)也是 Notion App 免費提供功能之一。
 * 更換頭像方式 <code>&nbsp; 側邊欄 &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Account &nbsp;</code> 🢂 <code>&nbsp; Add Photo/Create Your Portrait &nbsp;</code>
 

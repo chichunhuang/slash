@@ -145,7 +145,7 @@ _注意事項:_
 
 ### <span>Notion Block 並排</span><span id="notion_Notion_Column_Side_By_Side"> </span>
 
-<span style={{backgroundColor: '#ffffb3'}}>__Notion Block 並排__</span> 可以讓畫面更加 condense  
+**<span style={{backgroundColor: '#ffffb3'}}>__Notion Block 並排__</span>** 可以讓畫面更加 condense  
 
  * 拖曳六點工具 __ ⁝⁝ __ > 將 Block 拖至指定 Block 最右端 > 等待出現插入指示符號  
  * 註: 
