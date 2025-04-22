@@ -1,3 +1,12 @@
+---
+title: Notion vs GitHub
+description: Notion meets GitHub
+keywords: [Notion,GitHub]
+---
+import {GoogleImage} from "@site/src/components/google/GoogleImage";
+
+
+
 __這個章節想要探討的是__
 1. GitHub 上放 code repo
 2. Notion 寫筆記
