@@ -97,9 +97,8 @@ __更換/下載檔案__
 
 __Google Account 連結設定__
 <div>
- {GoogleImage( '1Ptt6QwZcd6tCgDD5L2fYfRT_l_KkQ66T',  '17_Notion_ImportExport_08-1.png' , {width:'652px', height:'249px', hidden:true, degree:0})}
+ {GoogleImage( '1IxUg11BmvURUcCd-Yl0ogy8WY2oyA0QJ',  '17_Notion_ImportExport_08-1.png' , {width:'652px', height:'249px', hidden:true, degree:0})}
 </div>
-
 * 插入 Google Drive 方式 (會要求連結 google 帳號)
     * 複製 Google doc link，直接貼在 Notion 🢂 可再細選[呈現種類](#GDrive_Display)
     * Block 填入 <code>&nbsp; /Google Drive &nbsp;</code> 指令，會開啟已連結帳號檔清單。
@@ -152,10 +151,11 @@ __特殊內容匯__
  {GoogleImage( '1_EggZSs6zrR2jQ7EeZLw9IAjVtxofb6W',  '17_Notion_ImportExport_13.png' , {width:'431px', height:'546px', hidden:true, degree:0})}
 </div>
 
-### Workspace 備份 
+### Workspace 備份 <span id="notion_export_workspace">&nbsp;</span>
 
 * <code>&nbsp; Sidebar &nbsp;</code> 🢂 <code>&nbsp; Settings &nbsp;</code> 🢂 <code>&nbsp; Workspace &nbsp;</code> 🢂 <code>&nbsp; General &nbsp;</code> 🢂 <code>&nbsp; Export content &nbsp;</code> 🢂 <code>&nbsp; Export all workspace content &nbsp;</code>
     * Notion 會保留下載檔 7 天，並將 download link 寄到指定信箱。  
+    
 <div>
  {GoogleImage( '1eWvf3Ix-s40BRM1Tnzqnj-uOck7K9qgO',  '17_Notion_ImportExport_12.png' , {width:'652px', height:'548px', hidden:true, degree:0})}
 </div>
