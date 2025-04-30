@@ -43,6 +43,7 @@ sidebar_position: 1
 * [PostgreSQL Update JSONB Column - 更改 PostgreSQL JSONB 欄位資料值](/docs/DevTech/PostgreSQL/JSONB/PostgreSQL_Update_JSONB_Column)
 * [PostgreSQL find value by Attr from JSONB - PostgreSQL find value from JSONB column](/docs/DevTech/PostgreSQL/JSONB/Postgresql_find_value_by_Attr_of_JSONB_column)
 ## Python
+* [Python 已搬移至 https://python.insect-totem.net](https://python.insect-totem.net)
 * [Python 快速回憶 - Python 學習所需基本操作](/docs/DevTech/Python/Python_Basic)
 * [Python Print - Python Print 方法](/docs/DevTech/Python/Python_Basic_Print)
 * [Python Comprehension - 迴圈與lambda的結合](/docs/DevTech/Python/Python_Comprehension)
@@ -97,6 +98,7 @@ sidebar_position: 1
 * [Python 與 OOP - Python 與物件導向](/docs/DevTech/Python/OOP/Python_4_OOP)
 * [Python OOP Site Map - Python OOP Site Map](/docs/DevTech/Python/OOP/Python_4_Site)
 ## Rust
+* [Rust 已搬移至 https://rust.insect-totem.net](https://rust.insect-totem.net)
 * [InsectTotem Rust - 搬移中](/docs/DevTech/Rust/RustNote)
 ### 1Start
 * [Rust Hello World! - Rust Hello World!](/docs/DevTech/Rust/1Start/Rust_1_HelloWorld)
@@ -120,6 +122,7 @@ sidebar_position: 1
 ### canva
 * [Canva 學習紀錄 - Canva Notes](/docs/DevTech/tools/canva/CanvaNote)
 ### notion
+* [Notion 已搬移至 https://notion.insect-totem.net](https://notion.insect-totem.net)
 * [Notion 學習紀錄 - Notion Notes](/docs/DevTech/tools/notion/NotionBasic)
 * [Notion 工作區版面 - Notion Layout](/docs/DevTech/tools/notion/Notion_Layout)
 * [Notion 工作頁面 - Notion Page](/docs/DevTech/tools/notion/Notion_Page)
