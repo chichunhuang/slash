@@ -36,6 +36,20 @@ const config = {
     defaultLocale: 'zh-tw',
     locales: ['zh-tw'],
   },
+  
+  stylesheets: [
+    'https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css',
+  ],
+  scripts: [
+    {
+      src: 'https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js',
+      async: true,
+    },
+    {
+      src: '/js/init-cookieconsent.js',
+      async: true,
+    },
+  ],  
 
   presets: [
     [
