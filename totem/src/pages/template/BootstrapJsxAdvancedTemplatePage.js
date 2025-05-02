@@ -3,6 +3,8 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 //import 'bootstrap/dist/js/bootstrap.bundle.min';
 
+import styles from './bootstrapCustomizedCssTemplate.module.css'; // 匯入模組樣式
+
 
 export default function BootstrapAdvanced() {
   const [showModal, setShowModal] = useState(false);
@@ -10,7 +12,15 @@ export default function BootstrapAdvanced() {
   return (
     <Layout title="Bootstrap 進階元件">
     
-    
+<h1 className={styles.customTitle}>這段文字使用客製樣式: JSX 相關設定與頁面</h1>
+<span className={styles.customTitle}>bootstrapCustomizedCssTemplate.module.css(注意命名規則 *.module.css)</span>
+<span className={styles.customTitle}>BootstrapJsxAdvancedTemplatePage.js</span>
+
+<h1 className='customTitle'>MDX 相關設定與頁面</h1>
+<span className='customTitle'>搭配 import  </span>
+<span className='customTitle'>bootstrapCustomizedCssTemplate.css</span>
+<span className='customTitle'>BootstrapMdxAdvancedTemplatePage.md</span>
+     
     <ul>
         <li>npm install bootstrap..</li>
         <li>src/css/custom.css</li>

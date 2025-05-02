@@ -1,0 +1,15 @@
+/* 客製樣式，只會作用在被匯入的指定位置 */
+/* ref BootstrapJsxAdvancedTemplatePage.js 的 import */
+
+.customTitle {
+  font-size: 2.5rem;
+  color: #d63384; /* 粉紅色 */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.customContainer {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+}
