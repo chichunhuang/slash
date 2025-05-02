@@ -39,6 +39,7 @@ const config = {
   
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css',
+    
   ],
   scripts: [
     {
