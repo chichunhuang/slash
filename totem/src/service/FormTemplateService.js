@@ -1,5 +1,5 @@
 function processInput(number, text) {
-  const doubled = number * 5;
+  const doubled = number * 4;
   return `${doubled}${text}`;
 }
 

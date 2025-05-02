@@ -3,7 +3,7 @@ import Link from '@docusaurus/Link';
 
 import { useState } from 'react';
 
-import {default as processInput} from "@site/src/service/FormTemplateService";
+import {default as processInputAlias} from "@site/src/service/FormTemplateService";
 
 import ClipboardCopy from "@site/src/components/copy/ClipboardCopy";
 
@@ -40,7 +40,7 @@ export default function Home() {
     }
 
     setError('');
-    const processed = processInput(numValue, text);
+    const processed = processInputAlias(numValue, text);
     setResult(processed);
   };
   
@@ -68,7 +68,7 @@ export default function Home() {
     <hr/>
     <hr/>
     
-    <h2>輸入表單</h2>
+    <h2>表單輸入.</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>數值 (小於 50)：</label><br />
