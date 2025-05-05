@@ -33,6 +33,13 @@ export default function BootstrapAdvanced() {
         <li>參考 https://docs.google.com/document/d/1S0UO6JYrNbFKqTsqLdQJgdZnvlvbB-PtKqvZzREr2pk/edit?usp=drive_link</li>        
      </ul> 
      
+     <ul>
+        <li>客製化自己的 CSS style:針對某些特定頁面套用客製化的 CSS(而不是共用的 default CSS)</li>
+        <li>src 下的 jsx 類頁面: 相對路徑位置放置 *.module.css, JS page 再 import *.module.css,  這邊有 css 命名格式規範須遵守</li>
+        <li>docs 下的 mdx 類頁面: 相對路徑位置放置 *.css, md page 再 import *.css => 這邊有 css 命名格式規範須遵守</li>
+        <li>直接將 css style 寫在 src/css/custom.css 之內, 並複寫 預設的 Layout 元件</li>
+     </ul>
+     
      
       <div className="container mt-5">
         <h2 className="mb-4">Bootstrap 進階元件展示</h2>

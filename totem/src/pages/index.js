@@ -39,6 +39,10 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+      {/*
+         客製化 src/pages 側邊欄  
+        <CustomSidebar/> 
+      */}
       </main>
     </Layout>
   );
