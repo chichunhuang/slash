@@ -22,8 +22,8 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'XYZ', // Label of Menu Root 
-      items: ['DevTech/Python/Python_Basic_Print', 'DevTech/Python/Python_File'], // 有序 list
+      label: 'tutorialSidebar', // Label of Menu Root 
+      items: ['Python/Python_Basic_Print', 'Python/Python_File'], // 有序 list
       
     },
   ],

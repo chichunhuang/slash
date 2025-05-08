@@ -25,10 +25,10 @@ export default function BootstrapAdvanced() {
         <li>npm install bootstrap..</li>
         <li>src/css/custom.css</li>
         <li>docusaurus.config.js import custom.css</li>
-        <li>Example JSX Page <Link to="/template/BootstrapJsxTemplatePage"> BootstrapJsxTemplatePage.js </Link>  </li>
-        <li>Example JSX Page <Link to="/template/BootstrapJsxAdvancedTemplatePage"> BootstrapJsxAdvancedTemplatePage.js </Link>  </li>
-        <li>Example mdx Page <Link to="/docs/BootstrapMdxTemplatePage"> BootstrapMdxTemplatePage.md </Link>  </li>
-        <li>Example mdx Page <Link to="/docs/BootstrapMdxAdvancedTemplatePage"> BootstrapMdxAdvancedTemplatePage.md </Link>  </li>
+        <li>Example JSX Page BootstrapJsxTemplatePage.js   </li>
+        <li>Example JSX Page BootstrapJsxAdvancedTemplatePage.js   </li>
+        <li>Example mdx Page BootstrapMdxTemplatePage.md  </li>
+        <li>Example mdx Page BootstrapMdxAdvancedTemplatePage.md   </li>
         <li>為確保 Bootstrap JavaScript function 能正常運作 JSX, mdx 需複寫 src/theme/Layout/index.js  </li>
         <li>參考 https://docs.google.com/document/d/1S0UO6JYrNbFKqTsqLdQJgdZnvlvbB-PtKqvZzREr2pk/edit?usp=drive_link</li>        
      </ul> 
@@ -36,7 +36,7 @@ export default function BootstrapAdvanced() {
      <ul>
         <li>客製化自己的 CSS style:針對某些特定頁面套用客製化的 CSS(而不是共用的 default CSS)</li>
         <li>src 下的 jsx 類頁面: 相對路徑位置放置 *.module.css, JS page 再 import *.module.css,  這邊有 css 命名格式規範須遵守</li>
-        <li>docs 下的 mdx 類頁面: 相對路徑位置放置 *.css, md page 再 import *.css => 這邊有 css 命名格式規範須遵守</li>
+        <li>docs 下的 mdx 類頁面: 相對路徑位置放置 *.css, md page 再 import *.css = 這邊有 css 命名格式規範須遵守</li>
         <li>直接將 css style 寫在 src/css/custom.css 之內, 並複寫 預設的 Layout 元件</li>
      </ul>
      

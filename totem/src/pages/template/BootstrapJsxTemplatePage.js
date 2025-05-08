@@ -14,10 +14,10 @@ export default function BootstrapExample() {
         <li>npm install bootstrap..</li>
         <li>src/css/custom.css</li>
         <li>docusaurus.config.js import custom.css</li>
-        <li>Example JSX Page <Link to="/template/BootstrapJsxTemplatePage"> BootstrapJsxTemplatePage.js </Link>  </li>
-        <li>Example JSX Page <Link to="/template/BootstrapJsxAdvancedTemplatePage"> BootstrapJsxAdvancedTemplatePage.js </Link>  </li>
-        <li>Example mdx Page <Link to="/docs/BootstrapMdxTemplatePage"> BootstrapMdxTemplatePage.md </Link>  </li>
-        <li>Example mdx Page <Link to="/docs/BootstrapMdxAdvancedTemplatePage"> BootstrapMdxAdvancedTemplatePage.md </Link>  </li>
+        <li>Example JSX Page <a to="/template/BootstrapJsxTemplatePage"> BootstrapJsxTemplatePage.js </a>  </li>
+        <li>Example JSX Page <a to="/template/BootstrapJsxAdvancedTemplatePage"> BootstrapJsxAdvancedTemplatePage.js </a>  </li>
+        <li>Example mdx Page <a to="/docs/BootstrapMdxTemplatePage"> BootstrapMdxTemplatePage.md </a>  </li>
+        <li>Example mdx Page <a to="/docs/BootstrapMdxAdvancedTemplatePage"> BootstrapMdxAdvancedTemplatePage.md </a>  </li>
         <li>為確保 Bootstrap JavaScript function 能正常運作 JSX, mdx 需複寫 src/theme/Layout/index.js  </li>
         <li>參考 https://docs.google.com/document/d/1S0UO6JYrNbFKqTsqLdQJgdZnvlvbB-PtKqvZzREr2pk/edit?usp=drive_link</li>        
      </ul>       
