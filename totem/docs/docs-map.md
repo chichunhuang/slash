@@ -5,120 +5,52 @@ sidebar_position: 1
 # Document List (docs)
 
 
-最後更版時間:Tue Apr 22 11:05:15 CST 2025
+最後更版時間:Thu May 08 14:49:17 CST 2025
 
-### Google
+## Tools
+* [Tools - 工具簡介](/docs/Tools/ToolsNote)
+* [ZoomIt 使用技巧 - ZoomIt 使用技巧](/docs/Tools/ZoomIt)
+## 99_GDPR
+* [Privacy Policy - Privacy Policy](/docs/GDPR/PrivacyPolicy_Eng)
+* [隱私權政策 - 中文版隱私權政策](/docs/GDPR/PrivacyPolicy_zh_tw)
+## Canva
+* [Canva 學習紀錄 - Canva Notes](/docs/Canva/CanvaNote)
+### Tomcat
+* [隱藏 Tomcat 版本資訊 - ](/docs/DevTech/Tomcat/Hide_Tomcat_Version)
+* [Tomcat 當前 Clients 連線數 - Tomcat App online connections](/docs/DevTech/Tomcat/Tomcat_Client_Connections)
+* [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
+* [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
+## Google
 * [Google App Script 取 File ID - Google App Script 取 File ID](/docs/Google/Google_App_Script_FileIDs)
-### Java
+## Graphics
+* [Origin of Insect-Totem - Insect-Totem 的起源](/docs/Graphics/origin_of_Insecttotem)
+* [Butterfly - Insect-Totem Butterfly](/docs/Graphics/Butterfly_01)
+* [Butterfly Papilio - Insect-Totem Butterfly PapilioXuthus](/docs/Graphics/Butterfly_Papilio_xuthus_01)
+* [Dynastes Hercules - Insect-Totem - Dynastes Hercules](/docs/Graphics/Dynastes_Hercules_01)
+* [Grass Hooper - Insect-Totem Grass Hooper 01](/docs/Graphics/Hopper_01)
+* [Lepidoptera - Insect-Totem Lepidoptera](/docs/Graphics/Lepidoptera_01)
+* [Rhinoceros Beetles - Insect-Totem Rhinoceros Beetles](/docs/Graphics/Rhino_01)
+* [Stag Beetle - Insect-Totem Stag Beetle](/docs/Graphics/Stag_Beetle_01)
+* [Stag Beetle-rainbow - Insect-Totem Stag Beetle-rainbow](/docs/Graphics/Stag_Beetle_Rainbow)
+## Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/Java/ExceptionMailFromLog4j)
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/Java/Session_Fixation)
 * [非正規Session Fixation處理 - 降低風險，並未完全即時](/docs/Java/Session_Fixation_Wicket)
-#### Cypher
+### Cypher
 * [Java AES 加解密 - 以 Java AES 進行資料加解密](/docs/Java/Cypher/Java_Aes_Cipher)
 * [Java Cipher Intro - Java 加密方式簡介](/docs/Java/Cypher/Java_Encryption)
 * [Java PBE 加解密 - "以 Java PBE PBEWITHMD5andDES 進行資料加解密"](/docs/Java/Cypher/Java_Pbe_Cipher)
 * [Java RSA 加解密 - 以 Java RSA 進行資料加解密](/docs/Java/Cypher/Java_Rsa_Cipher)
 * [Java SHA 雜湊 - 以 Java SHA 進行資料雜湊](/docs/Java/Cypher/Java_Sha_Digest)
-#### JSON
+### JSON
 * [Gson fromJson 拋出 ClassCastException - Gson.fromJson throws java.lang.ClassCastException](/docs/Java/JSON/GSON_ClassCastException)
-#### Spring
+### Spring
 * [Spring 下 Properties 檔注入與使用範例 - Spring 下 Properties 檔注入與使用範例](/docs/Java/Spring/Spring_List_Proerties)
 * [Spring Properties to PropertyFactoryBean by @Autowired - Spring Properties to PropertyFactoryBean by @Autowired](/docs/Java/Spring/Spring_Property_inject_AtAutowired_to_PropertyFactoryBean)
 * [Spring Properties to Map by @Resource - Spring Properties to Map by @Resource](/docs/Java/Spring/Spring_Property_inject_AtResource_to_Map)
-### PostgreSQL
-* [PostgreSQL Blob 備份與回存 - Backup and Restore BLOB in PostgreSQL](/docs/PostgreSQL/Backup_Restore_BLOB_in_Postgres)
-* [Parallel Query in PostgreSQL - Parallel_Query_in_PostgreSQL](/docs/PostgreSQL/Parallel_Query_in_PostgreSQL)
-* [PosgreSQL Backup and Restore - PosgreSQL 備份與還原範例](/docs/PostgreSQL/PosgreSQL_Backup_and_Restore)
-* [PosgreSQL copy CSV to table - PosgreSQL 資料匯出成 CSV](/docs/PostgreSQL/PosgreSQL_copy_CSV_to_table)
-* [PosgreSQL copy from CSV - 自 CSV 檔匯入資料](/docs/PostgreSQL/PosgreSQL_copy_from_CSV)
-* [PostgreSQL FDW Setting - PostgreSQL DB link 設定](/docs/PostgreSQL/PostgreSQL_FDW_Setting)
-* [PostgreSQL SQL 日誌紀錄 - PostgreSQL Query Log](/docs/PostgreSQL/PostgreSQL_Query_Log)
-* [PostgreSQL string_agg Function - PostgreSQL批次合併group by後](/docs/PostgreSQL/PostgreSQL_string_agg_function)
-* [PostgreSQL DB 重建指令 - PostgreSQL DB 重建指令](/docs/PostgreSQL/PostgreSQL_termination)
-* [PostgreSQL 匯出 Blob 欄位 - Postgres Export Blob to File](/docs/PostgreSQL/Postgres_Export_Blob_to_File)
-* [PostgreSQL 上傳 Blob 檔案 - Postgres Import Blob from File](/docs/PostgreSQL/Postgres_Import_Blob_from_File)
-* [SQL Shell psql Basic - SQL Shell psql 基本使用](/docs/PostgreSQL/SqlShell_psql_Basic)
-#### JSONB
-* [PostgreSQL Format JSONB Object - PostgreSQL Format JSONB Object](/docs/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
-* [PostgreSQL Update JSONB Column - 更改 PostgreSQL JSONB 欄位資料值](/docs/PostgreSQL/JSONB/PostgreSQL_Update_JSONB_Column)
-* [PostgreSQL find value by Attr from JSONB - PostgreSQL find value from JSONB column](/docs/PostgreSQL/JSONB/Postgresql_find_value_by_Attr_of_JSONB_column)
-### [Python 已搬移至 https://python.insect-totem.net](https://python.insect-totem.net)
-* [Python 快速回憶 - Python 學習所需基本操作](/docs/Python/Python_Basic)
-* [Python Print - Python Print 方法](/docs/Python/Python_Basic_Print)
-* [Python Comprehension - 迴圈與lambda的結合](/docs/Python/Python_Comprehension)
-* [Python 慣例 - Python 變數命名慣例](/docs/Python/Python_Convention)
-* [Python 變數指派 - Python Variable Assignment](/docs/Python/Python_Convention_Assignment)
-* [Python 檔案操作 - Python 中操作 File 相關](/docs/Python/Python_File)
-* [Python 迴圈與條件 - Python Loop and Condition](/docs/Python/Python_Loop_Condition)
-* [Python 排序三兩事 - Python Sorting](/docs/Python/Python_Sorting)
-* [Python Typing(比較) - Python 型別](/docs/Python/Python_Typing)
-* [Python 布林值 - Python Boolen](/docs/Python/Python_Typing_Boolean)
-* [Python 數值型別 - Python 數值型別](/docs/Python/Python_Typing_Numeric)
-* [Set 資料結構 - Python Set 資料結構](/docs/Python/Python_Typing_Set)
-* [Python String - Python String](/docs/Python/Python_Typing_String)
-* [Python 格式化字串 - Python String Formatting](/docs/Python/Python_Typing_StringFormatting)
-* [Python 基礎型別摘要 - ](/docs/Python/Python_Typing_Types)
-* [Python Dict - Python Dict 資料結構與操作](/docs/Python/Python_Typing_dict)
-* [Python List - Python List 資料結構與操作](/docs/Python/Python_Typing_list)
-* [Python 雜七雜八的工具 - Python Utils](/docs/Python/Python_Utils)
-* [Pickle 序列化與反序列化 - Python 物件序列化與反序列化](/docs/Python/Python_module_pickle)
-* [Send Mail by Python smtplib - Send Mail by Python smtplib](/docs/Python/Send_Eail_By_Python)
-#### 01_IDE
-* [Anaconda 基本管理指令 - Anaconda 基本管理指令](/docs/Python/IDE/Anaconda_Statements)
-* [PyCharm 中使用 Anaconda 管理 Envs - PyCharm 中以 Anaconda 管理 Python Envs](/docs/Python/IDE/PyCharm_Anaconda_Envs_Mgmt)
-* [PyCharm 中的快速鍵 - PyCharm 中的快速鍵](/docs/Python/IDE/PyCharm_HotKeys)
-* [PyCharm 中的 Optimize Imports - PyCharm 中的模組匯入整理](/docs/Python/IDE/PyCharm_Optimize_Import)
-* [PyCharm 中自訂 Snippet Templates - PyCharm 中自訂 Live Templates](/docs/Python/IDE/PyCharm_Snippet_Template)
-#### 03_Advanced
-* [Python 常數 - Python 常數設計方法](/docs/Python/Advanced/Python_2_Constant)
-* [Python Decorator - Python Decorator](/docs/Python/Advanced/Python_2_Decorator)
-* [關於 Python 檔案編碼 - Python Encoding](/docs/Python/Advanced/Python_2_Encoding)
-* [Python 例外與錯誤 - Python Exception and Error](/docs/Python/Advanced/Python_2_Exception_Error)
-* [Python 函數 - Python 函數介紹](/docs/Python/Advanced/Python_2_Function)
-* [Python Generator - Python Generator - lazy loop](/docs/Python/Advanced/Python_2_Generator)
-* [Python 迭代相關三兩事 - Loop、Iteration、Comprehension](/docs/Python/Advanced/Python_2_Iterations_Misc)
-* [Python Lambda 匿名函式 - Python Anonymous Function](/docs/Python/Advanced/Python_2_Labmda)
-* [Python Package and Module - Python Package and Module](/docs/Python/Advanced/Python_2_Package_Module)
-* [Python 變數與變數存取範圍 - Python 變數與變數存取範圍](/docs/Python/Advanced/Python_2_Variable_and_Scope)
-* [Python 打包與解包 - Python Packing and Unpacking](/docs/Python/Advanced/Python_2_unpack_lisit_map)
-* [Python 運算子進階-operator - 關於 operator](/docs/Python/Advanced/Python_Operator_module)
-#### 05_Misc
-* [Python command line 基本處理 - Python Command Line](/docs/Python/Misc/Python_3_CLI)
-* [打包 Python 程式成可執行檔 - Executable Python-script to exe](/docs/Python/Misc/Python_3_Executable)
-* [Python 檔案與資料夾走訪 - Python File and Folder](/docs/Python/Misc/Python_3_File_and_Dir)
-* [Python ConfigParser 解析 ini 檔 - Python ini ConfigParser](/docs/Python/Misc/Python_3_Parser_ConfigParser)
-* [Python 日期與時間 - Python Date and Time](/docs/Python/Misc/Python_3_Time)
-* [Python-Sorting by pandas - Python - Sorting and Parsing CSV](/docs/Python/Misc/Python_Sorting_by_Pandas)
-#### 06_OOP
-* [Python 抽象方法 - Python Abstract Method](/docs/Python/OOP/Python_4_AbstractMethod)
-* [Python Class 介紹 - Python Class 介紹](/docs/Python/OOP/Python_4_Class)
-* [Python 類別成員 - Python 類別成員 Vars and Funs](/docs/Python/OOP/Python_4_Class_Members)
-* [Python 繼承介紹 - Python Inheritance](/docs/Python/OOP/Python_4_Inheritance_Basic)
-* [Python 與 OOP - Python 與物件導向](/docs/Python/OOP/Python_4_OOP)
-* [Python OOP Site Map - Python OOP Site Map](/docs/Python/OOP/Python_4_Site)
-### [Rust 已搬移至 https://rust.insect-totem.net](https://rust.insect-totem.net)
-* [InsectTotem Rust - 搬移中](/docs/Rust/RustNote)
-#### 1Start
-* [Rust Hello World! - Rust Hello World!](/docs/Rust/1Start/Rust_1_HelloWorld)
-* [Rust 安裝 - Rust 安裝](/docs/Rust/1Start/Rust_1_Installation)
-### SQL
-* [Insert from Select - Insert from select result](/docs/SQL/Insert_From_Selection_Values)
-* [Insert Into v.s. Select Into - Insert-Into 與 Select-Into 使用上差異](/docs/SQL/Insert_Into_vs_Select_Into)
-* [Using subqueries outside of WHERE - 在 sql from 中使用子查詢](/docs/SQL/Using_subqueries_outside_of_WHERE)
-### Server
-* [Jenkins Debian 安裝設定紀錄 - Jenkins Debian 安裝設定紀錄](/docs/Server/JenkinsCIServerOnDebian)
-### Tomcat
-* [隱藏 Tomcat 版本資訊 - ](/docs/Tomcat/Hide_Tomcat_Version)
-* [Tomcat 當前 Clients 連線數 - Tomcat App online connections](/docs/Tomcat/Tomcat_Client_Connections)
-* [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/Tomcat/Tomcat_Error_Page)
-* [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/Tomcat/Tomcat_Httponly)
-### javascript
+## Javascript
 * [JS HTML input 自動全選 - Javascript Template input selects all on focus](/docs/Javascript/Textfield_Select)
-### tools
-* [Tools - 工具簡介](/docs/Tools/ToolsNote)
-* [ZoomIt 使用技巧 - ZoomIt 使用技巧](/docs/tools/ZoomIt)
-* [Canva 學習紀錄 - Canva Notes](/docs/Canva/CanvaNote)
-#### [Notion 已搬移至 https://notion.insect-totem.net](https://notion.insect-totem.net)
+## Notion
 * [Notion 學習紀錄 - Notion Notes](/docs/Notion/NotionBasic)
 * [Notion 工作區版面 - Notion Layout](/docs/Notion/Notion_Layout)
 * [Notion 工作頁面 - Notion Page](/docs/Notion/Notion_Page)
@@ -142,14 +74,91 @@ sidebar_position: 1
 * [Notion GitHub 整合 - Notion-Integrate GitHub](/docs/Notion/Notion_GitHub)
 * [Notion 網站發布 - Notion 網站發布](/docs/Notion/Notion_Sites)
 * [Notion 其他工具 - Notion Apps](/docs/Notion/Notion_Products)
-## Graphics
-* [Origin of Insect-Totem - Insect-Totem 的起源](/docs/Graphics/origin_of_Insecttotem)
-* [Butterfly - Insect-Totem Butterfly](/docs/Graphics/Butterfly_01)
-* [Butterfly Papilio - Insect-Totem Butterfly PapilioXuthus](/docs/Graphics/Butterfly_Papilio_xuthus_01)
-* [Dynastes Hercules - Insect-Totem - Dynastes Hercules](/docs/Graphics/Dynastes_Hercules_01)
-* [Grass Hooper - Insect-Totem Grass Hooper 01](/docs/Graphics/Hopper_01)
-* [Lepidoptera - Insect-Totem Lepidoptera](/docs/Graphics/Lepidoptera_01)
-* [Rhinoceros Beetles - Insect-Totem Rhinoceros Beetles](/docs/Graphics/Rhino_01)
-* [Stag Beetle - Insect-Totem Stag Beetle](/docs/Graphics/Stag_Beetle_01)
-* [Stag Beetle-rainbow - Insect-Totem Stag Beetle-rainbow](/docs/Graphics/Stag_Beetle_Rainbow)
+## PostgreSQL
+* [PostgreSQL Blob 備份與回存 - Backup and Restore BLOB in PostgreSQL](/docs/PostgreSQL/Backup_Restore_BLOB_in_Postgres)
+* [Parallel Query in PostgreSQL - Parallel_Query_in_PostgreSQL](/docs/PostgreSQL/Parallel_Query_in_PostgreSQL)
+* [PosgreSQL Backup and Restore - PosgreSQL 備份與還原範例](/docs/PostgreSQL/PosgreSQL_Backup_and_Restore)
+* [PosgreSQL copy CSV to table - PosgreSQL 資料匯出成 CSV](/docs/PostgreSQL/PosgreSQL_copy_CSV_to_table)
+* [PosgreSQL copy from CSV - 自 CSV 檔匯入資料](/docs/PostgreSQL/PosgreSQL_copy_from_CSV)
+* [PostgreSQL FDW Setting - PostgreSQL DB link 設定](/docs/PostgreSQL/PostgreSQL_FDW_Setting)
+* [PostgreSQL SQL 日誌紀錄 - PostgreSQL Query Log](/docs/PostgreSQL/PostgreSQL_Query_Log)
+* [PostgreSQL string_agg Function - PostgreSQL批次合併group by後](/docs/PostgreSQL/PostgreSQL_string_agg_function)
+* [PostgreSQL DB 重建指令 - PostgreSQL DB 重建指令](/docs/PostgreSQL/PostgreSQL_termination)
+* [PostgreSQL 匯出 Blob 欄位 - Postgres Export Blob to File](/docs/PostgreSQL/Postgres_Export_Blob_to_File)
+* [PostgreSQL 上傳 Blob 檔案 - Postgres Import Blob from File](/docs/PostgreSQL/Postgres_Import_Blob_from_File)
+* [SQL Shell psql Basic - SQL Shell psql 基本使用](/docs/PostgreSQL/SqlShell_psql_Basic)
+### JSONB
+* [PostgreSQL Format JSONB Object - PostgreSQL Format JSONB Object](/docs/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
+* [PostgreSQL Update JSONB Column - 更改 PostgreSQL JSONB 欄位資料值](/docs/PostgreSQL/JSONB/PostgreSQL_Update_JSONB_Column)
+* [PostgreSQL find value by Attr from JSONB - PostgreSQL find value from JSONB column](/docs/PostgreSQL/JSONB/Postgresql_find_value_by_Attr_of_JSONB_column)
+## Python
+* [Python 快速回憶 - Python 學習所需基本操作](/docs/Python/Python_Basic)
+* [Python Print - Python Print 方法](/docs/Python/Python_Basic_Print)
+* [Python Comprehension - 迴圈與lambda的結合](/docs/Python/Python_Comprehension)
+* [Python 慣例 - Python 變數命名慣例](/docs/Python/Python_Convention)
+* [Python 變數指派 - Python Variable Assignment](/docs/Python/Python_Convention_Assignment)
+* [Python 檔案操作 - Python 中操作 File 相關](/docs/Python/Python_File)
+* [Python 迴圈與條件 - Python Loop and Condition](/docs/Python/Python_Loop_Condition)
+* [Python 排序三兩事 - Python Sorting](/docs/Python/Python_Sorting)
+* [Python Typing(比較) - Python 型別](/docs/Python/Python_Typing)
+* [Python 布林值 - Python Boolen](/docs/Python/Python_Typing_Boolean)
+* [Python 數值型別 - Python 數值型別](/docs/Python/Python_Typing_Numeric)
+* [Set 資料結構 - Python Set 資料結構](/docs/Python/Python_Typing_Set)
+* [Python String - Python String](/docs/Python/Python_Typing_String)
+* [Python 格式化字串 - Python String Formatting](/docs/Python/Python_Typing_StringFormatting)
+* [Python 基礎型別摘要 - ](/docs/Python/Python_Typing_Types)
+* [Python Dict - Python Dict 資料結構與操作](/docs/Python/Python_Typing_dict)
+* [Python List - Python List 資料結構與操作](/docs/Python/Python_Typing_list)
+* [Python 雜七雜八的工具 - Python Utils](/docs/Python/Python_Utils)
+* [Pickle 序列化與反序列化 - Python 物件序列化與反序列化](/docs/Python/Python_module_pickle)
+* [Send Mail by Python smtplib - Send Mail by Python smtplib](/docs/Python/Send_Eail_By_Python)
+### 01_IDE
+* [Anaconda 基本管理指令 - Anaconda 基本管理指令](/docs/Python/IDE/Anaconda_Statements)
+* [PyCharm 中使用 Anaconda 管理 Envs - PyCharm 中以 Anaconda 管理 Python Envs](/docs/Python/IDE/PyCharm_Anaconda_Envs_Mgmt)
+* [PyCharm 中的快速鍵 - PyCharm 中的快速鍵](/docs/Python/IDE/PyCharm_HotKeys)
+* [PyCharm 中的 Optimize Imports - PyCharm 中的模組匯入整理](/docs/Python/IDE/PyCharm_Optimize_Import)
+* [PyCharm 中自訂 Snippet Templates - PyCharm 中自訂 Live Templates](/docs/Python/IDE/PyCharm_Snippet_Template)
+### 03_Advanced
+* [Python 常數 - Python 常數設計方法](/docs/Python/Advanced/Python_2_Constant)
+* [Python Decorator - Python Decorator](/docs/Python/Advanced/Python_2_Decorator)
+* [關於 Python 檔案編碼 - Python Encoding](/docs/Python/Advanced/Python_2_Encoding)
+* [Python 例外與錯誤 - Python Exception and Error](/docs/Python/Advanced/Python_2_Exception_Error)
+* [Python 函數 - Python 函數介紹](/docs/Python/Advanced/Python_2_Function)
+* [Python Generator - Python Generator - lazy loop](/docs/Python/Advanced/Python_2_Generator)
+* [Python 迭代相關三兩事 - Loop、Iteration、Comprehension](/docs/Python/Advanced/Python_2_Iterations_Misc)
+* [Python Lambda 匿名函式 - Python Anonymous Function](/docs/Python/Advanced/Python_2_Labmda)
+* [Python Package and Module - Python Package and Module](/docs/Python/Advanced/Python_2_Package_Module)
+* [Python 變數與變數存取範圍 - Python 變數與變數存取範圍](/docs/Python/Advanced/Python_2_Variable_and_Scope)
+* [Python 打包與解包 - Python Packing and Unpacking](/docs/Python/Advanced/Python_2_unpack_lisit_map)
+* [Python 運算子進階-operator - 關於 operator](/docs/Python/Advanced/Python_Operator_module)
+### 05_Misc
+* [Python command line 基本處理 - Python Command Line](/docs/Python/Misc/Python_3_CLI)
+* [打包 Python 程式成可執行檔 - Executable Python-script to exe](/docs/Python/Misc/Python_3_Executable)
+* [Python 檔案與資料夾走訪 - Python File and Folder](/docs/Python/Misc/Python_3_File_and_Dir)
+* [Python ConfigParser 解析 ini 檔 - Python ini ConfigParser](/docs/Python/Misc/Python_3_Parser_ConfigParser)
+* [Python 日期與時間 - Python Date and Time](/docs/Python/Misc/Python_3_Time)
+* [Python-Sorting by pandas - Python - Sorting and Parsing CSV](/docs/Python/Misc/Python_Sorting_by_Pandas)
+### 06_OOP
+* [Python 抽象方法 - Python Abstract Method](/docs/Python/OOP/Python_4_AbstractMethod)
+* [Python Class 介紹 - Python Class 介紹](/docs/Python/OOP/Python_4_Class)
+* [Python 類別成員 - Python 類別成員 Vars and Funs](/docs/Python/OOP/Python_4_Class_Members)
+* [Python 繼承介紹 - Python Inheritance](/docs/Python/OOP/Python_4_Inheritance_Basic)
+* [Python 與 OOP - Python 與物件導向](/docs/Python/OOP/Python_4_OOP)
+* [Python OOP Site Map - Python OOP Site Map](/docs/Python/OOP/Python_4_Site)
+## Rust
+* [InsectTotem Rust - 搬移中](/docs/Rust/RustNote)
+### 1Start
+* [Rust Hello World! - Rust Hello World!](/docs/Rust/1Start/Rust_1_HelloWorld)
+* [Rust 安裝 - Rust 安裝](/docs/Rust/1Start/Rust_1_Installation)
+## SQL
+* [Insert from Select - Insert from select result](/docs/SQL/Insert_From_Selection_Values)
+* [Insert Into v.s. Select Into - Insert-Into 與 Select-Into 使用上差異](/docs/SQL/Insert_Into_vs_Select_Into)
+* [Using subqueries outside of WHERE - 在 sql from 中使用子查詢](/docs/SQL/Using_subqueries_outside_of_WHERE)
+## Server
+* [Jenkins Debian 安裝設定紀錄 - Jenkins Debian 安裝設定紀錄](/docs/Server/JenkinsCIServerOnDebian)
+## Tomcat
+* [隱藏 Tomcat 版本資訊 - ](/docs/Tomcat/Hide_Tomcat_Version)
+* [Tomcat 當前 Clients 連線數 - Tomcat App online connections](/docs/Tomcat/Tomcat_Client_Connections)
+* [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/Tomcat/Tomcat_Error_Page)
+* [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/Tomcat/Tomcat_Httponly)
 
