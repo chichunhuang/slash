@@ -115,7 +115,7 @@ sidebar_position: 1
 ### javascript
 * [JS HTML input 自動全選 - Javascript Template input selects all on focus](/docs/Javascript/Textfield_Select)
 ### tools
-* [Tools - 工具簡介](/docs/tools/ToolsNote)
+* [Tools - 工具簡介](/docs/Tools/ToolsNote)
 * [ZoomIt 使用技巧 - ZoomIt 使用技巧](/docs/tools/ZoomIt)
 * [Canva 學習紀錄 - Canva Notes](/docs/Canva/CanvaNote)
 #### [Notion 已搬移至 https://notion.insect-totem.net](https://notion.insect-totem.net)
