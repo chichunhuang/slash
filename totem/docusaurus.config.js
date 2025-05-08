@@ -132,12 +132,23 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            items: [
+              {
+                label: '關於我',
+                to: '/docs/GDPR/AboutMe',
+              },
+            ],
+          },
+          {
             items: [
               {
                 label: '程式技術文章',
                 to: '/docs/docs-map',
               },
+            ],
+          },
+          {
+            items: [
               {
                 label: '我的插圖',
                 to: '/docs/Graphics/docs-map',
@@ -145,32 +156,21 @@ const config = {
             ],
           },
           {
-            title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Privacy Policy(English)',
+                to: '/docs/GDPR/PrivacyPolicy_Eng',
               },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+              
             ],
           },
           {
-            title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/chichunhuang',
+                   //*****TotemTemplate*****
+                label: '隱私權政策',
+                   //*****TotemTemplate*****
+                to: '/docs/GDPR/PrivacyPolicy_zh_tw',
               },
             ],
           },

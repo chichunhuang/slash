@@ -10,7 +10,7 @@ sidebar_position: 1
 ## Tools
 * [Tools - 工具簡介](/docs/Tools/ToolsNote)
 * [ZoomIt 使用技巧 - ZoomIt 使用技巧](/docs/Tools/ZoomIt)
-## 99_GDPR
+## GDPR
 * [Privacy Policy - Privacy Policy](/docs/GDPR/PrivacyPolicy_Eng)
 * [隱私權政策 - 中文版隱私權政策](/docs/GDPR/PrivacyPolicy_zh_tw)
 ## Canva
