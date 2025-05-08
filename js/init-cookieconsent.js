@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
     position: "bottom",
     type: "opt-in", // 需要用戶同意才啟用 cookies
     content: {
-      message: "We use cookies to enhance user experience and collect anonymous usage statistics. These cookies will only be set if you provide your explicit consent.",
+      message: "We use cookies to enhance user experience and collect anonymous usage statistics. These cookies will only be set if you provide your explicit consent.<br/>我們使用Cookies以提供您更優質的網站使用者體驗，如果您繼續使用本網站，我們將認定您理解並同意我們的隱私權政策和服務條款 ，詳細說明請閱讀隱私權政策。<br/>",
       dismiss: "Accept",
       deny: "Reject",
       link: "More Information",
