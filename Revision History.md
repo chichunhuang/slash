@@ -32,4 +32,41 @@
 # Prepare for deploy: 20250213
 
 
+# 版本升級
+* 移除 react-code-blocks 一大堆版本衝突
+* 新版 docusaurus, 似乎預設採較嚴格的 md 格式檢查, 先前疑惑為何部份情形可以不做 escape, 現在變強制檢查.
+ 
 
+_from_
+
+  "dependencies": {
+    "@docusaurus/core": "2.4.1",
+    "@docusaurus/preset-classic": "2.4.1",
+    "@mdx-js/react": "1.6.22",
+    "clsx": "1.2.1",
+    "prism-react-renderer": "1.3.5",
+    "react": "17.0.2",
+    "react-code-blocks": "0.1.4",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "2.4.1"
+  },
+
+_to_
+<pre>
+  "dependencies": {
+    "@docusaurus/core": "^3.7.0",
+    "@docusaurus/preset-classic": "^3.7.0",
+    "@mdx-js/react": "^3.0.0",
+    "bootstrap": "^5.3.6",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "^3.7.0",
+    "@docusaurus/types": "3.7.0"
+  },
+</pre>
