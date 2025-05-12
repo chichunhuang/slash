@@ -1,6 +1,16 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+
+
+// KaTex 數學函式繪製 1/4
+//import remarkMath from 'remark-math';
+//import rehypeKatex from 'rehype-katex';
+// KaTex 數學函式繪製 2/4
+const remarkMath = require('remark-math');
+const rehypeKatex = require('rehype-katex');
+
+
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -41,6 +51,15 @@ const config = {
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css',
     
+    
+    // KaTex 數學函式繪製 3/4
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css', // 或是您本地 KaTeX CSS 的路徑
+      type: 'text/css',
+      integrity: 'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+    
   ],
   scripts: [
     {
@@ -66,6 +85,12 @@ const config = {
           // Remove this to remove the "edit this page" links.
           //editUrl:
           //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        
+          // KaTex 數學函式繪製 4-1/4
+          remarkPlugins: [remarkMath],
+          // KaTex 數學函式繪製 4-2/4
+          rehypePlugins: [rehypeKatex],
+          
         },
         blog: {
           showReadingTime: true,

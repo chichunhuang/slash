@@ -5,6 +5,7 @@ keywords: [Docusaurus,troubleshooting]
 ---
 
 
+
 ## Lazy line
 在 Markdown 中，一個 "lazy line" 指的是在一個需要特定前綴的容器環境下(例如 \> 用於區塊引用，或空白用於列表)，卻沒有正確前綴的行。
 
@@ -19,7 +20,7 @@ __通常在以下情況下發生：__
 
 ## Docusaurus found broken anchors!
 run build 後出現 Docusaurus found broken anchors!，但 run start 下相關 links\(通常是單一 Page 內的 anchor 跳轉造成)卻又功能正常。  
-這通常是因為 anchor id 未符合  Markdown/MDX Anchors 規範造成，注意下列建議:
+這通常是因為 anchor id 未符合 Markdown/MDX Anchors 規範造成，注意下列建議:
 
 
 * __大小寫敏感__ ： 錨點 ID 是大小寫敏感。確保連結中的 #錨點ID 與實際生成的或自訂的 id 屬性的大小寫完全一致。

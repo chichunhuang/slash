@@ -1,7 +1,7 @@
 ---
 title: Docusaurus 流程圖繪製
 description: Mermaid UML Chart
-keywords: [Docusaurus,theme-mermaid] 
+keywords: [Docusaurus,theme-mermaid,UML,Chart] 
 ---
 
  @docusaurus/theme-mermaid 是 Docusaurus 將 [Mermain](https://mermaid.js.org/) 整併的流程圖套件，此套件可以生成 svg 圖檔。  
