@@ -123,6 +123,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+		
+		
+    //讓 url/docs/xx 下的主題左側的 menu 預設為 hidden, 可自行決定何時彈出 
+	docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
+	
       //當 Docusaurus 發現失效的錨點連結時，它會在建置過程中輸出警告訊息，但不會終止建置。
       onBrokenAnchors :'warn',
       
