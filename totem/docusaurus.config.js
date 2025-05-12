@@ -87,11 +87,25 @@ const config = {
     ],
   ],
 
+  //簡易流程圖 meramaid 1/3
+  themes: ['@docusaurus/theme-mermaid'],
+  
+  //簡易流程圖 meramaid 2/3
+  markdown: {
+    mermaid: true,
+  },
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       //當 Docusaurus 發現失效的錨點連結時，它會在建置過程中輸出警告訊息，但不會終止建置。
       onBrokenAnchors :'warn',
+      
+      //簡易流程圖 meramaid 3/3
+      mermaid: {
+        // 你可以在這裡設定 Mermaid 的選項 (optional)
+         theme: {light: 'neutral', dark: 'forest'},
+      },
         
       // Replace with your project's social card
       image: 'img/800_374.jpg',

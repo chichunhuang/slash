@@ -33,7 +33,7 @@ run build 後出現 Docusaurus found broken anchors!，但 run start 下相關 l
 檢查連結語法： 仔細檢查你的 Markdown/MDX 文件中所有以 # 開頭的連結，確保它們指向的錨點 ID 是存在的且拼寫正確。
 
 
-## 
+## Docusaurus found broken anchors!  
 run build 時出現 [WARNING] Docusaurus found broken anchors!  
 
 > onBrokenAnchors 是 Docusaurus 專門用來處理在建置網站時發現的失效錨點連結 (broken anchors) 的配置。當 Docusaurus 在你的 Markdown/MDX 文件中找到一個指向不存在的錨點 (#some-nonexistent-id) 的連結時，它會根據 onBrokenAnchors 的設定來處理這個問題。  
@@ -69,3 +69,28 @@ __onBrokenAnchors 可以設定的值及其行為：__
     * 當 Docusaurus 發現失效的錨點連結時，它會忽略這些錯誤，並且不會輸出任何警告，直接繼續建置。
 這個設定應該謹慎使用。它可能會導致你的網站存在無法正常工作的內部連結，影響使用者體驗。
 在某些特殊情況下，例如你明確知道某些連結在特定環境下是有效的，或者你正在進行一些實驗性的工作，可以考慮使用這個設定。但一般不建議在生產環境中使用。
+
+
+
+## truncation markers
+> run start / run build 時出現:  
+> We recommend using truncation markers (`<!-- truncate -->` or `{/* truncate */}`) in blog posts to create shorter previews on blog paginated lists.
+
+### 部落格文章預覽功能: 
+部落格文章中使用截斷標記 (`` 或 {/* truncate */})，以便在部落格的分頁列表頁面上顯示更短的文章預覽。  
+截斷標記的作用就是告訴 Docusaurus 在哪個位置結束文章的預覽內容。  
+
+### Docusaurus 提供了兩種截斷標記
+
+你可以插入到你的部落格文章的 Markdown (.md 或 .mdx) 檔案中：
+
+__HTML 註解：__
+
+<code> ``</code>
+
+這是一個標準的 HTML 註解標記。當 Docusaurus 解析你的 Markdown 檔案時，遇到這個標記會將其視為預覽內容的結束點。
+
+__JSX 註解__ npm：
+<code>{/* truncate */}</code>
+
+這是一個 JavaScript/JSX 的註解標記。如果你在 .mdx 檔案中撰寫部落格文章（.mdx 允許你在 Markdown 中嵌入 JSX），你可以使用這個標記來指定截斷位置。
