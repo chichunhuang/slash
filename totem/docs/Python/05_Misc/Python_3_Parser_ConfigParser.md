@@ -295,7 +295,7 @@ with open (r'D:\tmp\totem.ini', 'r') as ini_file:
 ## 屬性內插\(Interpolation\) : ExtendedInterpolation
 > 沒特別研究 ExtendedInterpolation，不過猛一看似乎只是內插屬性的插入上不同。比較直覺，類似一般程式語言的用法。推薦!  
 > 被內差的屬性須以 __$\{__ attr_name __\}__ 修飾。
->> 以錢符號與大括號 __<span style={{color: '#0044FF'}}> ${ attr_name } </span> 修飾內插屬性。    
+>> 以錢符號與大括號 __<span style={{color: '#0044FF'}}> $\{ attr_name \} </span>__ 修飾內插屬性。    
 > 脫逸字元為 $ 錢符號。  
 
 ```python 

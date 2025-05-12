@@ -13,14 +13,14 @@ keywords: [Python,Anaconda,Tutorial]
 | 指令 | 說明 | 同義 | 
 | :-- | :-- | :-- |
 | $conda env list  | 列出系統中已安裝 Virtual Environments |  |
-| $conda create --name {NAME} | 建立名稱為 NAME 的 VM | $conda create -n {NAME} |
-| $conda create --name {NAME} python={version} | 建立名稱為 NAME 的 VM，指定使用 version 版的 Python |  |
-| $conda activate {NAME} | 啟用 NAME 這個 VM |  |
+| $conda create --name \{NAME\} | 建立名稱為 NAME 的 VM | $conda create -n \{NAME\} |
+| $conda create --name \{NAME\} python=\{version\} | 建立名稱為 NAME 的 VM，指定使用 version 版的 Python |  |
+| $conda activate \{NAME\} | 啟用 NAME 這個 VM |  |
 | $conda desctivate | 停用當前使用中 VM |  |
 | $conda list  | 列出當前 VM 中所安裝的相關套件 |  |
-| $conda install {LIB} | 為當前啟用中的 VM 安裝 LIB 這個套件 |  |
-| $conda remove --name {NAME} {LIB} | 移除 NAME VM 下的 LIB 套件 |  |
-| $conda env remove --name {NAME} | 移除 NAME 這個 VM |  |
+| $conda install \{LIB\} | 為當前啟用中的 VM 安裝 LIB 這個套件 |  |
+| $conda remove --name \{NAME\} \{LIB\} | 移除 NAME VM 下的 LIB 套件 |  |
+| $conda env remove --name \{NAME\} | 移除 NAME 這個 VM |  |
 | $conda info | 顯示 conda 詳細資訊 |  |
 | $conda update conda  | 更新 Conda 版本(管理者執行) |  |
 | $conda -V  | 檢查 Conda 版本 | $conda --version |

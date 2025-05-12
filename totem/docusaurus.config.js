@@ -27,6 +27,7 @@ const config = {
   projectName: 'slash', // Usually your repo name.
 
   onBrokenLinks: 'throw',
+  
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -89,6 +90,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      //當 Docusaurus 發現失效的錨點連結時，它會在建置過程中輸出警告訊息，但不會終止建置。
+      onBrokenAnchors :'warn',
+        
       // Replace with your project's social card
       image: 'img/800_374.jpg',
       navbar: {

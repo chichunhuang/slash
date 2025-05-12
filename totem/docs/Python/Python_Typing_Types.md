@@ -70,7 +70,7 @@ for key in sorted(dict1):
     * s = set((e1,e2,e3)) : built-in method, 傳入 tuple  
     * s = set([e1,e2,e3]) : built-in method, 傳入 list  
     * s = set('string') : string 也是 iterable  
-    * s = {e1, e2, e3} : 原生非物件的建立方式
+    * s = \{e1, e2, e3\} : 原生非物件的建立方式
     * frozenset : immutable, 基本上與 set 的操作一致，僅差異在於建立後不可修改這件事。
     * [Set 資料結構](./Python_Typing_Set)
 

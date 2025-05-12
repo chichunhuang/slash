@@ -6,10 +6,10 @@ keywords: [Tomcat,404,error page]
 
 
 # Container 錯誤頁的設定分類
-* [於 Tomcat 進行全域設定，Container下所有 WeApps 接生效](#global-setting)
-* [針對單一 Application 設定](#ap-only-id)
+* [於 Tomcat 進行全域設定，Container下所有 WeApps 接生效](./Tomcat_Error_Page#global-setting)
+* [針對單一 Application 設定](./Tomcat_Error_Page#ap-only-id)
 * [若單純只想隱藏 Tomcat 錯誤資訊，不想客製的話...](./Hide_Tomcat_Version)
-* [Web Container 其他常見客製化錯誤頁設定範例](#full-examples)
+* [Web Container 其他常見客製化錯誤頁設定範例](./Tomcat_Error_Page#full-examples)
 
 # Tomcat 錯誤頁全域設定 <span id="global-setting"></span>
 

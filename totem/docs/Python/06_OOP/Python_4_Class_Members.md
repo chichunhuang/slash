@@ -6,7 +6,7 @@ keywords: [Python,Class Members]
 
 # Python Class 類別成員
 > 這個主題是要介紹 Python Class 下的相關成員，  
-> 包含 [Variables](./#Vars) 與 [Functions](./#Funs)。  
+> 包含 [Variables](#Vars) 與 [Functions](#Funs)。  
 
 > Class 結構下的 variables 可分為:  
 > &nbsp;&nbsp;&nbsp;&nbsp; class variable: 類別加變數名來取值  

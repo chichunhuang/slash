@@ -61,7 +61,7 @@ __Calendar 右側欄__
 * 設定可粗分為兩類動作:
     * Notion Calendar 與 Google Calendar 設定
     * Notion Calendar 與 Notion Workspace/Notion Database with date property 設定
-* [帳號移除設定](#Calendar_Acc_Remove)    
+* [帳號移除設定](#calendar_acc_remove)    
 
 ## Calendar 帳號連結設定
 __Notion Calendar 帳號與 Google Calendar 建立與連結:__ 
@@ -227,7 +227,7 @@ ___Calendar 呈現___
  {GoogleImage( '1lKNu-IRIZSlZYMJYZWjIw0mU_zMyjbqX',  '15_Notion_Calendar_20.png' , {width:'652px', height:'247px', hidden:true, degree:0})}
 </div>
 
-## Calendar 移除設定 <span id="Calendar_Acc_Remove">&nbsp;</span>
+## Calendar 移除設定 <span id="calendar_acc_remove">&nbsp;</span>
 * 包含 
     * 移除 Workspace 同步關聯  
     * 移除 Google Calendar 同步關聯

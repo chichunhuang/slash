@@ -14,7 +14,7 @@ keywords: [Python,Set]
     * s = set((e1,e2,e3)) : built-in method, 傳入 tuple  
     * s = set([e1,e2,e3]) : built-in method, 傳入 list  
     * s = set('string') : string 也是 iterable  
-    * s = {e1, e2, e3} : 原生非物件的建立方式
+    * s = \{e1, e2, e3\} : 原生非物件的建立方式
     
 * set 中的 element 必須是 immutable  
     * tuple: 小括號 (), 所建立的物件才是 immutable  

@@ -16,14 +16,10 @@ keywords: [Tomcat,Version,Hide,隱藏]
 * 將 showReport 設為 false
 * 將 showServerInfo 設為 false
 
-
-<CodeBlock text={`
+```
 <Host>
 <Valve className="org.apache.catalina.valves.ErrorReportValve"
         showReport="false"
         showServerInfo="false"/>
 </Host>
-    `}
-      language='xml'
-      showLineNumbers='true'
-      />    
+```
