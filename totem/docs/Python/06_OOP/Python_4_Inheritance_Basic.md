@@ -3,7 +3,6 @@ title: Python 繼承介紹
 description: Python Inheritance
 keywords: [Python ,Inheritance]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # <span id="inheritance">Python 繼承介紹</span>
 ## Python 繼承
@@ -74,7 +73,7 @@ __Multiple Inheritance__
 > 最終: MyClass > A1 > B1 > B2 > A2 > B3 > B4 > object
 
 * hint: 重組成 [線性單一繼承結構](#Linear_Inheritabce)以便於理解 
-> [<class '__main__.MyClass'>, <class '__main__.A1'>, <class '__main__.B1'>, <class '__main__.B2'>, <class '__main__.A2'>, <class '__main__.B3'>, <class '__main__.B4'>, <class 'object'>]
+> [\<class '__main__.MyClass'\>, \<class '__main__.A1'\>, \<class '__main__.B1'\>, \<class '__main__.B2'\>, \<class '__main__.A2'\>, \<class '__main__.B3'\>, \<class '__main__.B4'\>, \<class 'object'\>]
 
 ## <span id="DiamondPatternInheritance">Diamond Pattern Inheritance: 鑽石繼承</span>
 * TODO insert Diamond_Pattern_Inheritance.svg

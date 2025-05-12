@@ -3,7 +3,6 @@ title: Python 檔案操作
 description: Python 中操作 File 相關
 keywords: [Python,File]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python File 操作
 
@@ -289,7 +288,7 @@ print(listA)
 
 
 
-<CodeBlock text={`
+```
 # print() 的預設
 print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
 #
@@ -307,7 +306,4 @@ with open('test.log', 'a') as f:
 ##
 import sys
 print('hello world!', file=sys.stderr)
-    `}
-      language='python'
-      showLineNumbers='true'
-      /> 
+```

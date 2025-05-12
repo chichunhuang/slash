@@ -3,7 +3,6 @@ title: Python 迴圈與條件
 description: Python Loop and Condition
 keywords: [Python ,loop,condition]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 迴圈與條件判斷
 > 真討厭，學過的程式語言中大家都有迴圈。  

@@ -1,9 +1,8 @@
 ---
 title: Tomcat Cookie 安全性設定
-description: Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite
+description: Tomcat Cookie 安全性設定- HttpOnly Secure SameSite
 keywords: [Tomcat,Cookie,HttpOnly,Secure,SameSite]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Tomcat Cookie 安全性設定
 
@@ -17,7 +16,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * Customized Cookie : 這邊泛指開發時自行建立與維護的部分。
 * 3rd Cookie : 其他 Libs 所建立與使用。
 
-# Tomcat 中與 JSESSIONID/Cookie 相關全性設定
+# Tomcat 中與 JSESSIONID Cookie 相關全性設定
 * 主要會討論到下列三項
     * [HttpOnly](#HttpOnly-id) : 限制 Cookie 僅能經由 Http(s) Protocol 存取。所以其他  JavaScript 無法存取。
     * [Secure](#Secure-id) : Cookie 僅能在加密的連下情境下使用。也就是又再依縮限制只能在 Https 中使用。 
@@ -56,7 +55,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
     * context.xml : CookieProcessor > sameSiteCookies = strict
 
 * web.xml
-<CodeBlock text={`
+```
     <session-config>
          <tracking-mode>COOKIE</tracking-mode>
          <cookie-config>
@@ -64,34 +63,25 @@ import { CodeBlock, dracula  } from "react-code-blocks";
             <secure>true</secure>
          </cookie-config>
     </session-config>
-    `}
-      language='xml'
-      showLineNumbers='true'
-      /> 
+```
 
 * server.xml
-<CodeBlock text={`
+```
         <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" URIEncoding="UTF-8" secure="true"/>
-    `}
-      language='xml'
-      showLineNumbers='true'
-      /> 
+```
       
 * context.xml
-<CodeBlock text={`
+```
 <Context>
     <CookieProcessor className="org.apache.tomcat.util.http.LegacyCookieProcessor" sameSiteCookies="strict" />      
 </Context>  
-    `}
-      language='xml'
-      showLineNumbers='true'
-      /> 
+```
       
       
 # 檢查設定是否生效
-    Chrome developer tool (F12) > Application > Storage Cookies 
+    Chrome developer tool (F12) &gt; Application &gt; Storage Cookies 
 
 # 其他
 
@@ -102,7 +92,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * HttpOnly [RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265)
 
 ## JQuery Cookie 建立與設定方式
-* <https://www.runoob.com/jquery/jquery-cookie-plugin.html> 
+* [https://www.runoob.com/jquery/jquery-cookie-plugin.html](https://www.runoob.com/jquery/jquery-cookie-plugin.html)
 * jquery is js: 所以無法管理與設定超出自己權限範圍的 httponly 屬性
 * 有人把 sameSite: 'strict' 藏在 path 屬性之中。實際測試可行。
 
@@ -123,4 +113,4 @@ $.cookie("testCookieName", "TestValue Name",{ expires : 30, path: "/;SameSite=st
         cookie.setHttpOnly(true);
         cookie.setSecure(true);
         webResponse.addCookie(cookie);
-```        
+```

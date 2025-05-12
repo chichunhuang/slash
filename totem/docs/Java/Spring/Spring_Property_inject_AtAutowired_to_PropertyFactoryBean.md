@@ -3,7 +3,6 @@ title: Spring Properties to PropertyFactoryBean by @Autowired
 description: Spring Properties to PropertyFactoryBean by @Autowired
 keywords: [Spring,Properties,PropertyFactoryBean,Autowired]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Spring : 使用 @Autowired 將屬性檔 map to PropertyFactoryBean
 
@@ -28,7 +27,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * java code 端取出 properties 的使用範例
 * @Qualifier 是用來指名要 contex.xml 哪一個 bean。在有多個 *.properties 設定且 map to 不同名稱時使用。
 
-<CodeBlock text={`
+```
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
     private PropertiesFactoryBean configProperties;
@@ -52,10 +51,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 	            throw new RuntimeException("unexpected", e);
 	        }
     }
-    `}
-      language='java'
-      showLineNumbers='true'
-      />     
+```     
 
 ## 其他 Properties Location xml 設定的其他方式
 參考: 

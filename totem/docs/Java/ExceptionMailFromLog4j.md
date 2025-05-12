@@ -3,7 +3,6 @@ title: Log4j EmailAppender Configuration
 description: 當log4j looger紀錄指定等級的訊息時，發信通知特定人員
 keywords: [log4j,mail,SMTPAppender]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 ## Log4j SMTPAppender 使用時機
 * 通常針對 Scheduler 相關的程式，我會額外撰寫許多 log 輸出。例如程式走到哪個步驟了，我走訪的資料走到那一筆了，整個動作花費了多少時間等等。相關資訊可以供後續異常或效能分析以及 cron job 調整。相關步驟都是為了營運持續管理(BCM)與風險管理(RM)，Log4j 在這當中的角色除了軌跡紀錄外其實也可為主動報警機制的一環。
@@ -16,7 +15,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * 完成下方設定時當 logger 紀錄 error 至 fatal 間的訊息時便會一併寄信通知指定人員。
 
 
-<CodeBlock text={`
+```
 
 <appender name="EmailAppender">
          <param name="BufferSize" value="512" />
@@ -38,10 +37,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
        <appender-ref ref="EmailAppender" />
     </logger>
   
-	`}
-	  language='xml'
-	  showLineNumbers='true'
-	  />
+```
 	  
 
 ## Java 程式借用 Log4j 寄信機制 (選配)
@@ -51,8 +47,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * 範例如下: EmailAppenderLogger.java
 
 
-<CodeBlock
-      text={`
+```
 	  
 	package totem.log4j.logger.mail;
 	
@@ -74,29 +69,19 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 			this.disableMail = disableMail;
 		}	 
 	}
-	  `
-	}
-      language='Java'
-      showLineNumbers='true'
-      
-    />
+```
 
 ## Spring Context 與 Log4j 整合寄信功能 (選配)
 * 既然上方都建立了一個寄信工具\(EmailAppenderLogger.java\) 那不如直接將他交給 Spring 管理，需要時直接 Injection。
 * Spring Application Context 設定範例如下:
 * applicationContext-log4j.xml
 	
-<CodeBlock
-      text={`	  
+```	  
 	<bean id="emailAppenderLogger"
         class="totem.log4j.logger.mail.EmailAppenderLogger">
         <property name="disableMail" value="$\{mail.disable\}" />
     </bean>
-	  `}
-      language='xml'
-      showLineNumbers='true'
-      //theme={dracula} //use default else 
-    />	
+```
 
 
 ## 一個 log4j.xml 的其他 Appenders 設定範例
@@ -106,8 +91,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
   * SMTPAppender
 
 
-
-<CodeBlock text={`
+```
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
@@ -184,10 +168,6 @@ import { CodeBlock, dracula  } from "react-code-blocks";
         <appender-ref ref="CATALINA" />
     </root>
 <//log4j:configuration>	
-	`}
-      language='xml'
-      showLineNumbers='true'
-      //theme={dracula} //use default else 
-    />	  
+```	  
 	 
 <br/>	 

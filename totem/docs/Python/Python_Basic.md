@@ -3,7 +3,6 @@ title: Python 快速回憶
 description: Python 學習所需基本操作
 keywords: [Python,Tutorial]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 基本
 
@@ -20,13 +19,9 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 於首行加上如下宣告  
 
 
-<CodeBlock
-      text={`
+```
    # -*- coding: UTF-8 -*-  
-    `}
-      language='python'
-      showLineNumbers='true'
-      /> 
+```
     
 
 

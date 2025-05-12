@@ -3,7 +3,6 @@ title: Spring Properties to Map by @Resource
 description: Spring Properties to Map by @Resource
 keywords: [Spring,Properties,Resource]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Spring : 使用 @Resource 將屬性檔映射成一個 Map
 
@@ -29,7 +28,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * java code 端取出 properties Map 的使用範例
 * @Resource 是用來指名要 contex.xml 中哪一個 bean。在有多個 *.properties 設定且 map to 不同名稱時使用。
 
-<CodeBlock text={`
+```
     @Resource(name="configProperties")
     private Map<String, String> configProperties;
     public Map<String, String> getConfigProperties() {
@@ -44,10 +43,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
             System.out.println(string + " : " + getConfigProperties().get(string));
         }
     }
-`}
-  language='java'
-  showLineNumbers='true'
-  />       
+```      
 
 ## 其他 Properties Location xml 設定的其他方式
 參考: 

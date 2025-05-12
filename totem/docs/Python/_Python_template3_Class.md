@@ -3,11 +3,8 @@ title: sidebar menu link/ docs-map link
 description: doc map link desc
 keywords: [Python ,Tutorial]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 https://github.com/apachecn/programiz-zh/tree/master/docs/py
-
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 
 ```python

@@ -6,8 +6,6 @@ slug: Java-SHA-digester
 authors: [insect]
 tags: [sha, cipher]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
-
 
 # Java SHA 演算法實作範例
 > SHA 並不算是異種加解密技術，僅能稱為是一種雜湊計算。

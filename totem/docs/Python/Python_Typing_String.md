@@ -3,7 +3,6 @@ title: Python String
 description: Python String
 keywords: [Python,String]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python String 介紹
 
@@ -121,13 +120,13 @@ print(uString)
 > 以 bytes 集合，如 tuple 呈現為 (72,101,108,108,111)  
 > 以 B String 呈現則為 b'Hello'  
 > 兩者概念相同。B String 則屏除數值轉字母時腦子思考的動作。    
-> bytes 集合/B String 兩者皆可轉成 Python 中內建的 <class 'bytes'> 來統一操作使用。  
-> 而 <class 'bytes'> 與 <class 'str'> 兩類別間則有轉換介面。  
+> bytes 集合/B String 兩者皆可轉成 Python 中內建的 \<class 'bytes'\> 來統一操作使用。  
+> 而 \<class 'bytes'\> 與 \<class 'str'\> 兩類別間則有轉換介面。  
 > 
-> 簡單來說，可想成 Python 中文字內碼為 <class 'bytes'>，而呈現上可以有多種方式(tuple/B String)。  
+> 簡單來說，可想成 Python 中文字內碼為 \<class 'bytes'\>，而呈現上可以有多種方式(tuple/B String)。  
 
 ### String vs bytes 轉換
-   * bytes() 方法轉換 String/Tuple 為 <class 'bytes'>
+   * bytes() 方法轉換 String/Tuple 為 \<class 'bytes'\>
        * bytes(str, encoding) 將字串轉 bytes
        * bytes( tuple ) 將數字序列轉 bytes
    * b'content'. __decode(encoding)__ 方法將 bytes 字串轉回 String
@@ -168,7 +167,7 @@ print(back2)
 ### String vs bytearray 轉換
 > Python 中 bytearray 為 bytes 的變體
 
-   * bytearray() 方法轉換 String/Tuple 為 <class 'bytearray'>
+   * bytearray() 方法轉換 String/Tuple 為 \<class 'bytearray'\>
        * bytearray(str, encoding) 將字串轉 bytearray
        * bytearray( tuple ) 將數字序列轉 bytearray
    * b'content'. __decode(encoding)__ 方法將 bytearray 字串轉回 String

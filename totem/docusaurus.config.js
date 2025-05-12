@@ -11,7 +11,7 @@ const config = {
 },
     
   title: 'Insect Totem',
-  tagline: '筆記與生活紀錄',
+  tagline: '程式技巧與除錯',
   favicon: 'img/70_70.jpg',
 
   // Set the production url of your site here

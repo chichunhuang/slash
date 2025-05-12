@@ -3,7 +3,6 @@ title: Python 類別成員
 description: Python 類別成員 Vars and Funs
 keywords: [Python,Class Members]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python Class 類別成員
 > 這個主題是要介紹 Python Class 下的相關成員，  

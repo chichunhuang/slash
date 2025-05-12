@@ -3,8 +3,6 @@ title: Python Comprehension
 description: 迴圈與lambda的結合
 keywords: [Python ,Comprehension]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
-
 
 # Python Comprehension: 迴圈與 lambda 的結合
 
@@ -54,7 +52,7 @@ for couple in ret:
 ## Dict Comprehension
 
 * Dict  Comprehension 基本上是將 dict 先轉換成其他 list 再來做 Comprehension 操作。  
-* 例如轉成 <class 'dict_items'> 後再來處理。  
+* 例如轉成 \<class 'dict_items'\> 後再來處理。  
 
 ```python
 dicts = {'A': 'a', 'B': 'b', 'C': 'c', 'D': 'd'}

@@ -9,9 +9,9 @@ keywords: [JSONB,PostgreSQL]
 
 |  id(bigint)  |  Admission_Ticket(character)  |             raw_data(jsonb)        |
 |----------------|-------------------------------|-----------------------------|
-|      1       |           AAA001              |  {"City":"TPE", "School":"NTU" , "Score":"60"  }  |
-|      2       |           BBB001              |  {"City":"TYN", "School":"NCHU", "Score":"70" }   |
-|      3       |           CCC001              |  {"City":"HSZ", "School":"NCCU", "Score":"80" }   |
+|      1       |           AAA001              |  \{"City":"TPE", "School":"NTU" , "Score":"60" \}  |
+|      2       |           BBB001              |  \{"City":"TYN", "School":"NCHU", "Score":"70" \}   |
+|      3       |           CCC001              |  \{"City":"HSZ", "School":"NCCU", "Score":"80" \}   |
 
 
 

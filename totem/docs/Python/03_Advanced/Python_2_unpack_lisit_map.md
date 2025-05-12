@@ -3,7 +3,6 @@ title: Python 打包與解包
 description: Python Packing and Unpacking
 keywords: [Python,Packing]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 打包與解包 
 

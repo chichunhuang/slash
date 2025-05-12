@@ -4,8 +4,6 @@ description: Send Mail by Python smtplib
 keywords: [smtplib,Python,mail]
 ---
 
-import { CodeBlock, dracula  } from "react-code-blocks";
-
 * Python example: Send Mail
 ```python
 import smtplib

@@ -3,7 +3,6 @@ title: Python 日期與時間
 description: Python Date and Time
 keywords: [Python,Date,Time]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 日期與時間
 
@@ -14,7 +13,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 主要使用的套件是 __<span style={{color: '#0044FF'}}>time</span>__ ,   __<span style={{color: '#0044FF'}}>datetime</span>__ , __<span style={{color: '#0044FF'}}>calendar</span>__ 
 > 
 > 當使用 time module 時需注意 struct_time 這個 meta class，是不同可表現時間的不同 types 的轉換媒介  
-> 當使用 datetime module 時需注意 <class 'datetime.datetime'> 這個 class，是不同可表現時間的不同 types 的轉換媒介  
+> 當使用 datetime module 時需注意 \<class 'datetime.datetime'\> 這個 class，是不同可表現時間的不同 types 的轉換媒介  
 
 
 

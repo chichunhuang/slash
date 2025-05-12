@@ -3,11 +3,9 @@ title: sidebar menu link/ docs-map link
 description: doc map link desc
 keywords: [Python ,Tutorial]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 https://github.com/apachecn/programiz-zh/tree/master/docs/py
 
-import { CodeBlock, dracula  } from "react-code-blocks";
 * ref: [CodeBlock Doc](https://www.npmjs.com/package/react-code-blocks#codeblock)
 
 * [MD Basic Syntax](https://www.markdownguide.org/basic-syntax/)
@@ -31,19 +29,6 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 # PyCharm 客製化 Code Template
 * [Official Tutorial (]https://docs.python.org/3.12/reference/datamodel.html#objects-values-and-types)
 * [PyCharm_Snippet_Template](./PyCharm_Snippet_Template)
- 
- 
-<CodeBlock text={`
-# 這區塊不可有任何空白行
-    `}
-      language='python'
-      showLineNumbers='true'
-      /> 
- - 這裡     
- - 跟這裡需留空白行 
- 
- 
- 
  
 # MISC
 * sockets, , FIFO (網路相關)

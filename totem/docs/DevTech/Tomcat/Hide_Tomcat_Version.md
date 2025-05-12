@@ -3,7 +3,6 @@ title: 隱藏 Tomcat 版本資訊
 description: Hide Tomcat Version Info:隱藏Tomcat版本資訊，避免暴露過多資訊
 keywords: [Tomcat,Version,Hide,隱藏]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 ## 隱藏 Tomcat 版本資訊
 
@@ -18,13 +17,10 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * 將 showServerInfo 設為 false
 
 
-<CodeBlock text={`
+```
 <Host>
 <Valve className="org.apache.catalina.valves.ErrorReportValve"
         showReport="false"
         showServerInfo="false"/>
 </Host>
-    `}
-      language='xml'
-      showLineNumbers='true'
-      />    
+```

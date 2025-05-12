@@ -3,7 +3,6 @@ title: Python 基礎型別摘要
 description: Python 型別:List Dict Set String
 keywords: [Python ,Tutorial]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 型別摘要
 * Tuple: 小括號, iterable, immutable
@@ -32,9 +31,9 @@ print(l_double)
 ```
    
 * Dict: 大括號(Set, Dict 皆是用大括號), iterable 
-    * dict1 = {'k1':'v1','k2':'v2'}
+    * dict1 = \{'k1':'v1','k2':'v2'\}
     * dict2 = dict( zip( [k1, k2], [v1, v2]) )
-    * dict3 = {}, dict3['k1']='v1'
+    * dict3 = \{\}, dict3['k1']='v1'
     * nested ok
     * 可混用不同型別的 values
     * 可混用不同型別的 keys

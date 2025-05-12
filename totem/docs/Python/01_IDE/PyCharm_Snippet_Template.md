@@ -3,7 +3,6 @@ title: PyCharm 中自訂 Snippet Templates
 description: PyCharm 中自訂 Live Templates
 keywords: [Python,PyCharm,Snippet]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # PyCharm 中自訂 Snippet Templates
 > Code assistant/Code Template/Snippet Template 在 PyCharm 中稱為 Live Templates    

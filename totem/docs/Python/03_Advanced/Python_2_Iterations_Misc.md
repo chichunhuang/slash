@@ -3,7 +3,6 @@ title: Python 迭代相關三兩事
 description: Loop、Iteration、Comprehension
 keywords: [Python,Iterations]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 迭代相關三兩事
 

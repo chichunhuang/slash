@@ -22,7 +22,7 @@ function HomepageHeader() {
               <div class="imageCaption">
                   <img src={logo} /><br />
                   <span className={clsx(totemStyles.h1InsecTotem)}>{siteConfig.title}</span> &nbsp;<br/>
-                  <span >{siteConfig.tagline} / &nbsp;<Link to="/docs/docs-map"> 請由此參觀 &gt;&gt;&gt;  </Link></span>
+                  <span >{siteConfig.tagline} / &nbsp;<Link to="/docs/docs-map"> 主題清單 &gt;&gt;&gt;  </Link></span>
               </div>
           </div>
         <Breaknews h2={totem.latestTitle} items={totem.latestItems}/>

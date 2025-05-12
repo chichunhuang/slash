@@ -3,8 +3,6 @@ title: Python OOP Site Map
 description: Python OOP Site Map
 keywords: [Python]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
-
 
 ## Python OOP Road Map
 

@@ -3,7 +3,6 @@ title: Python Dict
 description: Python Dict 資料結構與操作
 keywords: [Python,Dict]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python Dict 介紹
 > 
@@ -19,19 +18,16 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 >> list 的 slice 操作，ex:  list[1:2]  
 >> dict 的 get 操作，ex: dict['key']    
 
-<CodeBlock text={`
+```
 dict1 = {}
 print(type(dict1))                                                             
 # <class 'dict'>
-    `}
-      language='python'
-      showLineNumbers='true'
-      /> 
+```
 
     
 ## Dict 重點摘要
 
-* 空大括號預設為創建 dict，ex: dict1 = {&emsp;&nbsp;}     
+* 空大括號預設為創建 dict，ex: dict1 = \{&emsp;&nbsp;\}     
 * put 以中括號賦值，ex: dict1['new_key']='new_value'    
 * get 以中括號取值，ex: fetch = dict1['k']    
 * values() 取全部值。
@@ -45,7 +41,7 @@ print(type(dict1))
 
 * Dict 基本建立方式
 
-<CodeBlock text={`
+```
 basic_dict1 = {}
 print(type(basic_dict1))
 # <class 'dict'>
@@ -53,10 +49,8 @@ basic_dict2 = {'k': 'v', 1: 30}
 print(basic_dict2)
 # {'k': 'v', 1: 30}
 # then use square quotes to add/get item                                        
-    `}
-      language='python'
-      showLineNumbers='true'
-      />
+```
+
 <br/>      
 
 ### Dict 建構: dict\(\)
@@ -66,14 +60,11 @@ _equal style，比較容易混亂_ ，我傾向忘了他
 > 左側為 key，自動轉 String，不可加 single quote。  
 > 右測為 value，採通用規矩。  
 
-<CodeBlock text={`  
+```
 dict_equale = dict(k=1, k2=2)
 # {'k': 1, 'k2': 2}
 # 注意 k -> 'k'                                                                              
-    `}
-      language='python'
-      showLineNumbers='true'
-      /> 
+```
 
 <br/>
 
@@ -82,33 +73,27 @@ _tuple2 list style1，直接傳入 tuple2 的 sequence_
 
 > dict function 接受 tuple2 sequence，所以衍生出後續其他變形
 
-<CodeBlock text={`  
+```
 dict_tuples = dict([['key1', 'v1'], ['key2', 'v2']])
 dict_tuples = dict([('key1', 'v1'), ('key2', 'v2')]) # 同於上方範例
 # {'key1': 'v1', 'key2': 'v2'}                                                                              
-    `}
-      language='python'
-      showLineNumbers='true'
-      /> 
+```
 
 <br/>
 
 ### Dict 建構: dict\(\) with dict_items
-_tuple2 list style2，變形A: <class 'dict_items'> _
+_tuple2 list style2，變形A: \<class 'dict_items'\> _
 
 > tuple list style，直接傳入 tuple2 的 sequence。  
-> 所以這邊可以利用 dict.values 得到二元素的 list ie: <class 'dict_items'>。  
+> 所以這邊可以利用 dict.values 得到二元素的 list ie: \<class 'dict_items'\>。  
 > 再利用此特性複製或建構一個新的 dict。  
 
-<CodeBlock text={`  
+``` 
 print(type(basic_dict2.items()))                                                
 #  <class 'dict_items'>
 dict_unpack = dict(basic_dict2.items())
 # {'k': 'v', 1: 30}
-    `}
-      language='python'
-      showLineNumbers='true'
-      />
+```
 <br/>
 
 ### Dict 建構: zip\(\)
@@ -118,7 +103,7 @@ _tuple2 list style3，變形B: zip fucntion _
 > zip function 可以將兩個 lists 依順序依次組合成 tuple2。  
 > 所以 zip function 就是一個建構 tuple2 sequence 的工具。  
 
-<CodeBlock text={`  
+```  
 keys = ('a1', 'a2', 'a3')                                                         
 values = ('v1', 'v2') # 故意給不同長度測試                                            
 zip_seq = zip(keys, values)
@@ -128,10 +113,7 @@ dict_zip = dict(zip_seq)
 print(dict_zip)
 # {'a1': 'v1', 'a2': 'v2'}
 # zip 無法組合部分會被捨棄
-    `}
-      language='python'
-      showLineNumbers='true'
-      />
+```
 
 <br/>
 
@@ -141,14 +123,11 @@ _dict_fromKeys style 建立有預設值的 dict_
 > 這邊是使用 class dict 的 fromkeys 類別方法  
 > 依指定的 keys 來生出有預設的 dict  
 
-<CodeBlock text={`  
+```  
 deafult_value = 0                                                               
 dict_fromKeys = dict.fromkeys(('k1','k2','k3','k4'), deafult_value)
 # {'k1': 0, 'k2': 0, 'k3': 0, 'k4': 0}
-    `}
-      language='python'
-      showLineNumbers='true'
-      />
+```
 
 ### Dict 建構: 以 defaultdict 給予預設值
 > 通常建立 dict 時需要先提供 key/value pairs，如上方所有建立 dict 的範例中顯示。  
@@ -171,7 +150,7 @@ instance_var = defaultdict(value_type)
 
 _defaultdict examples_
 
-<CodeBlock text={`  
+```
 from collections import defaultdict
 scores = defaultdict(int)
 print(scores) # defaultdict(<class 'int'>, {})
@@ -179,10 +158,7 @@ print(scores.items()) # dict_items([])
 scores['Totem'] # 此處已據 type 設定給予預設值: 0
 scores['Winnie'] = 90
 print(scores.items()) # dict_items([('Totem', 0), ('Winnie', 90)])
-    `}
-      language='python'
-      showLineNumbers='true'
-      />
+```
 
       
 _自訂預設型別_
@@ -219,9 +195,9 @@ print(auth_book.items())
 * dict 取 value
 * dict 取全部 values
 * dict 取全部 keys
-* dict 取 items, <class 'dict_items'> : python 的特殊功能，取出 dict 中的 pairs。  
+* dict 取 items, \<class 'dict_items'\> : python 的特殊功能，取出 dict 中的 pairs。  
  
-<CodeBlock text={`                                                
+```                                                
 #                                                                               
 map1 = dict(zip(('a','b','c'), ('A','B','C')))                                   
 getValue = map1['a']
@@ -257,7 +233,4 @@ for k, v in getItems:
 # a:A
 # b:B
 # c:C
-`}
-      language='python'
-      showLineNumbers='true'
-      />
+```

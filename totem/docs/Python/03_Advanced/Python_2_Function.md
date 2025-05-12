@@ -3,7 +3,6 @@ title: Python 函數
 description: Python 函數介紹
 keywords: [Python,function]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 函數  
 * 參考

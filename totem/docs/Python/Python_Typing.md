@@ -3,7 +3,6 @@ title: Python Typing(比較)
 description: Python 型別
 keywords: [Python ,Tutorial]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 型別觀念摘要
 * 與 Java 比較，列出不同處方便記憶。

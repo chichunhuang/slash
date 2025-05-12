@@ -3,7 +3,6 @@ title: Python 格式化字串
 description: Python String Formatting
 keywords: [Python,String Format]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 字串格式化介紹
 > 這邊僅紀錄 Python3 中格式化字串時可用的方式，  
@@ -22,19 +21,18 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 print('I\'m %s, and I\'m %d-year-old.' % ('Totem', 10))
 ```
 * <span style={{color: '#0044FF'}}>使用 String 的 format function</span>    
-* {<span style={{color: '#009900'}}>index</span>:<span style={{color: '#0044FF'}}>formatSpec</span>}
+* \{<span style={{color: '#009900'}}>index</span>:<span style={{color: '#0044FF'}}>formatSpec</span>\}
 
 ```python
 print('I\'m {1}, and I\'m {0}-year-old.'.format(10, 'Totem'))
 ```
 
 * <span style={{color: '#0044FF'}}>f-String 格式化字串: 直接讀取先前定義的變數</span>  
-* {<span style={{color: '#009900'}}>index</span>:<span style={{color: '#0044FF'}}>formatSpec</span>}
+* \{<span style={{color: '#009900'}}>index</span>:<span style={{color: '#0044FF'}}>formatSpec</span>\}
 
 ```python
 name = 'Totem'
 age = 30
-
 print(f'I\'m {name}, and I\'m {age}-year-old.')
 ```
 
@@ -125,7 +123,7 @@ print(formatting)
 * formatSpec: 進階格式調整，冒號後面的部分     
     * 統一 長度/對齊方式/長度補齊/精確度 (參考 Formatting expression)  
     * syntax of formatSpec  
-    * alignment: 左對齊(<), 右對齊(>), 居中對齊(^), 小數點居中(=)  
+    * alignment: 左對齊(\<), 右對齊(\>), 居中對齊(^), 小數點居中(=)  
     * flag: 補齊符號(沒限制)  
 
 ```python

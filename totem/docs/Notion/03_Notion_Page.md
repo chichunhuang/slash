@@ -15,12 +15,12 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
 * Pages 間可以直接拖拉更改階層結構。 
 * 注意: 發佈時以 Pages Tree 為單位，頁面中 linked Pages 不會自動發佈。  
 
-<span>
+<div>
  {GoogleImage( '1q4PH9noJYGhcrSfWIbWTRmj0aBzF5-yN',  '03_Notion_Page_01_addAPage.png', {width:'268px', height:'128px', hidden:true, degree:0})}
-</span>&nbsp; &nbsp;&nbsp;
-<span>
+</div>
+<div>
  {GoogleImage( '1jJ6eTXotT8Txu7vH-re5Aihgqv9umTLB',  '03_Notion_Page_02_addAPageInside.png', {width:'283px', height:'115px', hidden:true, degree:0})}
-</span>
+</div>
 
 ### Page 結構:
 * __封面 \(Page Cover\)__: 可以自行插入一張圖片，或由相關聯圖庫網站直接定取用圖片。   
@@ -29,12 +29,12 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
     b.Notion Docker 上的辨識圖樣。  
 * 內容部分則是以 Block 組成。    
 
-<span>
+<div>
  {GoogleImage( '1UGq-RhV-UVYy0qX43c6tkDCzNyr4e2ee',  '03_Notion_Page_03_structure.png', {width:'1020px', height:'600px', hidden:true, degree:0})}
-</span>&nbsp; &nbsp;&nbsp;<br/>
-<span>
+</div>
+<div>
  {GoogleImage( '1vcUrcD_GoQZO-hCAGmOR9yvf613fkKnD',  '03_Notion_Page_04_structure.png', {width:'1020px', height:'400px', hidden:true, degree:0})}
-</span><br/>
+</div>
 
     
 ### Notion Block: 

@@ -3,8 +3,6 @@ title: Python 抽象方法
 description: Python Abstract Method
 keywords: [Python,abstractmethod]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
-
 
 # Python 抽象方法 (Abstract Method)
 

@@ -3,7 +3,6 @@ title: Python 例外與錯誤
 description: Python Exception and Error
 keywords: [Python,Exception Handling]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 例外與錯誤
 > Python 的[內建例外](https://docs.python.org/zh-tw/3/library/exceptions.html#bltin-exceptions)中可以看到，Exception 的子類別多數是以 Error 結尾。  

@@ -3,7 +3,6 @@ title: init_project
 description: init_project
 keywords: [Docusaurus]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 * From Template
 

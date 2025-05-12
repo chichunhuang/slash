@@ -3,7 +3,6 @@ title: Anaconda 基本管理指令
 description: Anaconda 基本管理指令
 keywords: [Python,Anaconda,Tutorial]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Anaconda 管理 Python Env 相關指令
 * 使用工具 

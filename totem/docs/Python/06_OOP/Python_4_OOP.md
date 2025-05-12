@@ -3,7 +3,6 @@ title: Python 與 OOP
 description: Python 與物件導向
 keywords: [Python,OOP]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 與 OOP
 * OOP 的三大概念與特性 (繼承/多型/封裝) 與 Python 間的關係，<span style={{color: '#996633'}}>__純個人理解的學習摘要__</span>。隨便看看就好，不負責任的。 

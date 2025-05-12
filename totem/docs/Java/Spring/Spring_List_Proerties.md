@@ -4,8 +4,6 @@ description: Spring 下 Properties 檔注入與使用範例
 keywords: [Spring,Properties,PropertyFactoryBean]
 ---
 
-import { CodeBlock, dracula  } from "react-code-blocks";
-
 # Spring 下 Properties 檔注入與使用範例
 
 * 相關閱讀 
@@ -35,7 +33,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 1. 這邊假設屬性檔名為 config.properties。
 
 * PropertiesFactoryBeanServiceImpl.java 範例
-<CodeBlock text={`
+```
     @Service
     public class PropertiesFactoryBeanServiceImpl
             implements PropertiesFactoryBeanService {
@@ -67,10 +65,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
             }
         }
     }
-    `}
-      language='java'
-      showLineNumbers='true'
-      /> 
+```
  
 ## PropertiesFactoryBean Location 設定的其他方式
 1. PathMatchingResourcePatternResolver
@@ -96,21 +91,19 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * 部分舊專案可能混雜使用 xml 設定此時則可直接取出 property bean 即可。
 
 * applicationContext.xml : 這邊註冊了 id 為 configProperties 的 bean
-<CodeBlock text={`
+```
     <bean id="configProperties" lazy-init="false"
         class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="location">
             <value>classpath:config.properties</value>
         </property>
     </bean>
-    `}
-      language='xml'
-      showLineNumbers='true'
-      /> 
+```
 
 * PropertiesFactoryBeanServiceImpl.java 範例
     * 註: 前面說過這邊習慣有多個 *.properties 檔，所以 inject 時使用 @Qualifier 注入。未再 by Type 自動 inject。
-<CodeBlock text={`
+
+```
 @Service
 public class PropertiesFactoryBeanServiceImpl
         implements PropertiesFactoryBeanService {
@@ -138,10 +131,7 @@ public class PropertiesFactoryBeanServiceImpl
         }
     }
 }
-    `}
-      language='java'
-      showLineNumbers='true'
-      /> 
+```
      
 # 相關 3rd party libraries
     * import java.util.Enumeration;

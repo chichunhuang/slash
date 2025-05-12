@@ -3,7 +3,6 @@ title: Python 雜七雜八的工具
 description: Python Utils
 keywords: [Python]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python Utils
 > 
@@ -13,8 +12,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 > 想找特定工具時真的很麻煩，所以放在這列表囉。  
 > 以後再做歸類...  
 
-<div hidden> https://www.geeksforgeeks.org/python-map-function/ 
-</div>
+<div hidden> https://www.geeksforgeeks.org/python-map-function/  </div>
 
 
 > 這一區: 類似 Java 的 stream. Java 的 lambda api. DSL style.

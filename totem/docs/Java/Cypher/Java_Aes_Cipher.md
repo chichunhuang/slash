@@ -3,7 +3,7 @@ title: Java AES 加解密
 description: 以 Java AES 進行資料加解密
 keywords: [aes,java,cipher,encrypt,decrypt]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
+
 
 * 有時會需要將資料進行可回復的加密。
 * 例如: ISO 27001 DLP(data leakage prevention)，一般在驗證時最低要求為密碼原則、硬碟資料與 DB 資料加密。
@@ -40,7 +40,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 * Aes128EncrypterUtil.java
 
-<CodeBlock text={`
+```
     public class Aes128EncrypterUtil {
         public static String encryptHex(String str) {
             Aes128Cipher encrypter = new Aes128Cipher();
@@ -59,15 +59,12 @@ import { CodeBlock, dracula  } from "react-code-blocks";
             return encrypter.decrypt(str, "BASED64");
         }
     }
-    `}
-      language='java'
-      showLineNumbers='true'
-      /> 
+```
 
 
 * Aes128Cipher.java
 
-<CodeBlock text={`
+```
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
@@ -238,10 +235,7 @@ public class Aes128Cipher {
         }
     }
 }
-    `}
-      language='java'
-      showLineNumbers='true'
-      /> 
+```
 
 
 
@@ -251,13 +245,10 @@ public class Aes128Cipher {
 > 這是 JDK 對加密金鑰長度的限制所致。
 
 * 下列 Code 可能拋出 InvalidKeyException 
-<CodeBlock text={`
+```
     cipher = Cipher.getInstance("AES");
     cipher.init(Cipher.ENCRYPT_MODE, skeySpec);
-    `}
-      language='java'
-      showLineNumbers='true'
-      /> 
+```
       
 > 解決 InvalidKeyException 異常方式
 >> 到 __JAVA_HOME/jre/lib/security/java.scurity__

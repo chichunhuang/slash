@@ -3,8 +3,6 @@ title: PyCharm 中的快速鍵
 description: PyCharm 中的快速鍵
 keywords: [Python,PyCharm,Hotkey]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
-
 
 ## Hotkeys
 

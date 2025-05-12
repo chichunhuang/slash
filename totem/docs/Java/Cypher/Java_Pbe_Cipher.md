@@ -3,7 +3,6 @@ title: Java PBE 加解密
 description: "以 Java PBE PBEWITHMD5andDES 進行資料加解密"
 keywords: [pbe,java,cipher,encrypt,decrypt]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # PBEWITHMD5andDES
 > 類似對[稱式加密](./Java_Aes_Cipher)，只是收送雙方保存的不是金鑰而是一組密碼。

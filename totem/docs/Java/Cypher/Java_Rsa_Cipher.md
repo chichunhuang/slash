@@ -3,7 +3,7 @@ title: Java RSA 加解密
 description: 以 Java RSA 進行資料加解密
 keywords: [rsa,java,cipher,encrypt,decrypt]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
+
 
 # RSA 加密演算
 > RSA 是非對稱式加密演算的一種，使用公鑰供傳送方加密資訊使用，接收方以私鑰解鎖以讀取明文內容。

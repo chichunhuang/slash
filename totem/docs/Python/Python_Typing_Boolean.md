@@ -3,7 +3,6 @@ title: Python 布林值
 description: Python Boolen
 keywords: [Python,Boolean]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python Boolean 
 > 寫在前面:  

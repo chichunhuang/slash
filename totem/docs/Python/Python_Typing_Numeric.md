@@ -3,7 +3,6 @@ title: Python 數值型別
 description: Python 數值型別
 keywords: [Python,Numeric]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python Numeric Literals(數值型別與常量)
 

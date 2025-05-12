@@ -294,7 +294,7 @@ with open (r'D:\tmp\totem.ini', 'r') as ini_file:
 
 ## 屬性內插\(Interpolation\) : ExtendedInterpolation
 > 沒特別研究 ExtendedInterpolation，不過猛一看似乎只是內插屬性的插入上不同。比較直覺，類似一般程式語言的用法。推薦!  
-> 被內差的屬性須以 __${__ attr_name __\}__ 修飾。
+> 被內差的屬性須以 __$\{__ attr_name __\}__ 修飾。
 >> 以錢符號與大括號 __<span style={{color: '#0044FF'}}> ${ attr_name } </span> 修飾內插屬性。    
 > 脫逸字元為 $ 錢符號。  
 
@@ -384,8 +384,8 @@ for section in config:
 
 ## 以迴圈讀取 ini 內容: config.items() <span id="config_items">&nbsp;</span>
 * 用來列出 sections 或 attributions
-* config.items() : 當 config 為 root 時，可回傳所有 sections， <class 'collections.abc.ItemsView'>。 可解包成 section_name, section_values。 
-* config.items() : 當 config 為 section 時，可回傳 section 下所有 attributions， <class 'collections.abc.ItemsView'>。 可解包成 attr_name, attr_value。 
+* config.items() : 當 config 為 root 時，可回傳所有 sections， \<class 'collections.abc.ItemsView'\>。 可解包成 section_name, section_values。 
+* config.items() : 當 config 為 section 時，可回傳 section 下所有 attributions， \<class 'collections.abc.ItemsView'\>。 可解包成 attr_name, attr_value。 
 
 __config.items()__
 
@@ -404,7 +404,7 @@ with open (r'D:\tmp\totem.ini', 'r') as ini_file:
 ```
 
 ## 以迴圈讀取 ini 內容: config.sections() <span id="config_sections">&nbsp;</span>
-* 可回傳所有 sections， <class 'collections.abc.ItemsView'>。 可解包成 section_name, section_values。
+* 可回傳所有 sections， \<class 'collections.abc.ItemsView'\>。 可解包成 section_name, section_values。
 
 __config.sections()__
 

@@ -3,8 +3,6 @@ title: Python 運算子進階-operator
 description: 關於 operator
 keywords: [Python,operator]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
-
 
 # Python operators
 > 介紹 Python 內建 operators，與 operator module。  

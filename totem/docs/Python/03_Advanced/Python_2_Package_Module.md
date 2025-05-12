@@ -3,7 +3,6 @@ title: Python Package and Module
 description: Python Package and Module
 keywords: [Python ,Package, Module]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python Package and Module
 

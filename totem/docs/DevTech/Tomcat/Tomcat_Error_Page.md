@@ -3,7 +3,7 @@ title: Tomcat 客製錯誤頁
 description: 自訂 Tomcat 錯誤頁顯示方式
 keywords: [Tomcat,404,error page]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
+
 
 # Container 錯誤頁的設定分類
 * [於 Tomcat 進行全域設定，Container下所有 WeApps 接生效](#global-setting)
@@ -21,15 +21,12 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 * config/web.xml 下增加下列設定:
 
-<CodeBlock text={`
+```
 <error-page> 
         <error-code>404</error-code> 
         <location>/customized404.html</location> 
 </error-page>
-    `}
-      language='xml'
-      showLineNumbers='true'
-      /> 
+```
 <br/>
 <br/>
 
@@ -40,15 +37,12 @@ import { CodeBlock, dracula  } from "react-code-blocks";
     * 專案根目錄下相對應資料夾建立 /pages/customized404.html
 1. 單一 App 則在在專案的 web.xml 中加入下列設定即可。
 
-<CodeBlock text={`
+```
 <error-page> 
         <error-code>404</error-code> 
         <location>/pages/customized404.html</location> 
 </error-page>
-    `}
-      language='xml'
-      showLineNumbers='true'
-      /> 
+```
 
 ---
 
@@ -58,7 +52,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * 在 Host 區塊增加 <span style={{color: '#0044FF'}}>ErrorReportValve</span>資訊，以隱藏 report 與 serverinfo。
 
 
-<CodeBlock text={`
+```
 
 <Host name="localhost"  appBase="webapps"
         unpackWARs="true" autoDeploy="true">
@@ -66,16 +60,13 @@ import { CodeBlock, dracula  } from "react-code-blocks";
         showReport="false"
         showServerInfo="false"/>
 </Host>
-    `}
-      language='xml'
-      showLineNumbers='true'
-      />    
+```  
 
 ---
       
 # Web Container 其他常見客製化錯誤頁設定範例<span id="full-examples"></span>
 
-<CodeBlock text={`
+```
 
 <!-- 400 錯誤 -->
 <error-page>
@@ -118,7 +109,4 @@ import { CodeBlock, dracula  } from "react-code-blocks";
     <exception-type>javax.servlet.ServletException</exception-type>
     <location>/error.jsp</location>
 </error-page>
-    `}
-      language='xml'
-      showLineNumbers='true'
-      />       
+```     

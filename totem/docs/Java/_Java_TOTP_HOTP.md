@@ -3,8 +3,6 @@ title: sidebar menu link/ docs-map link
 description: doc map link desc
 keywords: [Python ,Tutorial]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
-
 
 import 
 https://medium.com/@alan81920/python-import-%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8-c98e8e2553d3
@@ -42,18 +40,6 @@ statement: 陳述=> 單純的敘述與紀錄
 # PyCharm 客製化 Code Template
 * [Official Tutorial (]https://docs.python.org/3.12/reference/datamodel.html#objects-values-and-types)
 * [PyCharm_Snippet_Template](./PyCharm_Snippet_Template)
- 
- 
-<CodeBlock text={`
-# 這區塊不可有任何空白行
-    `}
-      language='python'
-      showLineNumbers='true'
-      /> 
- - 這裡     
- - 跟這裡需留空白行 
- 
- 
  
  
 # MISC

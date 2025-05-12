@@ -3,7 +3,6 @@ title: Python List
 description: Python List 資料結構與操作
 keywords: [Python,List]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python List 介紹
 > 

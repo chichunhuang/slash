@@ -3,7 +3,6 @@ title: Python 變數指派
 description: Python Variable Assignment
 keywords: [Python,Assignment]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 中變數指派的特殊方式
 > 除了基本的一個變數對應一個值之外，Python 還提供了其他特殊的變數指派方式。  
@@ -16,7 +15,7 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 
 * 原則上就是一組變數依序對應同等數量的一組參數值。 
 
-<CodeBlock text={`
+```
 [firstName, lastName] = ['Michael', 'Jackson']
 [firstName, lastName] = ('Michael', 'Jackson')
 firstName, lastName = 'Michael', 'Jackson'
@@ -24,17 +23,14 @@ print(firstName)
 # Michael
 print(lastName)
 # Jackson
-`} 
-language='python'
-showLineNumbers='true'
-/>
+```
 
 ## Sequence unpacking: 依順序解包依位置解包  
 
 
 _Generalized Sequence Unpacking_ 
 
-<CodeBlock text={`
+```
 x, y, z = 'CAT'
 print(x)
 # C
@@ -42,23 +38,17 @@ print(y)
 # A
 print(z)
 # T
-    `} 
-      language='python'
-      showLineNumbers='true'
-      />
+```
 
 _Extended Sequence Unpacking_
 
-<CodeBlock text={`
+```
 a,*b = 'pluck'
 print(a)
 # p
 print(b)
 # ['l', 'u', 'c', 'k'] # <class 'list'>
-    `} 
-      language='python'
-      showLineNumbers='true'
-      />
+```
 
 
 

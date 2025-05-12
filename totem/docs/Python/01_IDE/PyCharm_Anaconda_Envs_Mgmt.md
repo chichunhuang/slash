@@ -3,7 +3,6 @@ title: PyCharm 中使用 Anaconda 管理 Envs
 description: PyCharm 中以 Anaconda 管理 Python Envs
 keywords: [Python,PyCharm,Anaconda]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # PyCharm 中以 Anaconda 使用/切換 Python Virtual Environment
 

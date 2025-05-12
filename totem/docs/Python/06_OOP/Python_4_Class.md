@@ -3,7 +3,6 @@ title: Python Class 介紹
 description: Python Class 介紹
 keywords: [Python,Class Structure]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python Class 介紹
 > Pythonic way 針對物件與類別上的 terminology，與 Java 有些差異。  

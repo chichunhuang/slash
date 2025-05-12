@@ -3,7 +3,6 @@ title: PostgreSQL 匯出 Blob 欄位
 description: Postgres Export Blob to File
 keywords: [postgresql,Lob,Export]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 * 其他參考資料
 * [PostgreSQL 上傳 Blob 檔案](./Postgres_Import_Blob_from_File)
@@ -19,12 +18,8 @@ import { CodeBlock, dracula  } from "react-code-blocks";
 * file_content : column name
 * Submission_Case : table with file_content column
 
-<CodeBlock text={`
+```
 SELECT lo_export(file_content, '/tmp/Export_File_To.csv') FROM Submission_Case where id = 719;
-`}
-  language='sql'
-  showLineNumbers='true'
-  /> 
-
+```
 # PostgreSQL 匯入 Lob 檔案至資料表
 * [參考 Postgres 自 console 匯入指定資檔案至資料表](./Postgres_Import_Blob_from_File)

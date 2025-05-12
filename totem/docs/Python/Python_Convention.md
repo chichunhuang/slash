@@ -8,8 +8,6 @@ keywords: [Python,Convention]
 > 久違了，Python!  
 > 幾年沒用 Python 時，快速上手筆記。  
 
-
-
 ## Python 變數命名慣例
 >
 > 與 Java 相同，變數需以底線、字母、數字命名。  
@@ -52,9 +50,6 @@ keywords: [Python,Convention]
 >> 特殊長相，一方面可用作提醒，另一方面也可避免與使用者自訂變數相衝突。  
 >
 
-
- 
-
 ## Python vs Java Opertors (運算子符號比較)    
 * Python vs Java 同符號但用於不同概念
 * Python operator:
@@ -78,8 +73,8 @@ keywords: [Python,Convention]
 |----------------|-------------------------|-----------------------------|
 |     tuple       | (), t.[index]  |        immutable           |
 |     list       | [], l.[index], l.slice[0:n],  l.append(e)  |        mutable  |
-|     dict Map   | dict1 = {'k1':'v1','k2':'v2'},  dict3 = {}, dict3['k1']='v1',  dict2 = dict( zip( [k1, k2], [v1, v2]) )   |   for key,values in  dict1.items():    |
-|     set/frozenset | \{\}, s = set( [iterable] ), s = set([e1,e2,e3]) , s = {e1, e2, e3}    | mutable/immutable |
+|     dict Map   | dict1 = \{'k1':'v1','k2':'v2'\},  dict3 = \{\}, dict3['k1']='v1',  dict2 = dict( zip( [k1, k2], [v1, v2]) )   |   for key,values in  dict1.items():    |
+|     set/frozenset | \{\}, s = set( [iterable] ), s = set([e1,e2,e3]) , s = \{e1, e2, e3\}    | mutable/immutable |
 
 
 ## Loop

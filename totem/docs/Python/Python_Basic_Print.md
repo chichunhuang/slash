@@ -3,7 +3,6 @@ title: Python Print
 description: Python Print 方法
 keywords: [Python,Tutorial]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python Print()
 > 

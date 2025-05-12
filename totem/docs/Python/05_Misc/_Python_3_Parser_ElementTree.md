@@ -17,28 +17,3 @@ keywords: [Python,Parsers]
 
 
 ref: confluence Python+Scripts+Command+Line+Tips.pdf
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import { CodeBlock, dracula  } from "react-code-blocks";
-<CodeBlock text={`  
-'Hello World'
-    `}
-      language='python'
-      showLineNumbers='true'
-      />

@@ -3,7 +3,6 @@ title: Set 資料結構
 description: Python Set 資料結構
 keywords: [Python,Set]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 # Python 無序資料結構 
 * 分為 set (#custom-id-set) 

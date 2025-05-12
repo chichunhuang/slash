@@ -3,7 +3,6 @@ title: Rust 安裝
 description: Rust 安裝
 keywords: [Rust,Install]
 ---
-import { CodeBlock, dracula  } from "react-code-blocks";
 
 <hr/>
 
