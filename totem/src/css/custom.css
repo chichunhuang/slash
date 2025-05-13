@@ -33,3 +33,29 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+/* 預設顯示右側 TOC menu */
+.table-of-contents {
+	display: block;
+}
+
+/* 用於顯示/隱藏按鈕的樣式 */
+.toc-toggle-button {
+  position: fixed;/* 固定在視窗上 */
+  top: 70px;      /* 距離頁面頂部 70px */
+  right: 10px;    /* 距離頁面右側 10px */
+  z-index: 1000;  /* 確保在其他元素之上 */
+  padding: 3px 16px; /* 內距 */
+  
+  
+  background-color: rgba(255,255,255,0.4); /* 半透明白 */
+  transition: background-color 0.3s;
+  
+  color: grey;    /* 文字顏色 */
+  border: none;   /* 移除邊框 */
+  border-radius: 4px; /* 圓角 */
+  cursor: pointer; /* 滑鼠樣式 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: x-small;
+}
