@@ -9,7 +9,7 @@ keywords: [Python,Decorator]
 > 
 > 先簡單說甚麼是 Decorator Pattern:   
 > 在 Design Pattern 中是這樣說明的，  
->  __ <span style={{color: '#0044FF'}}>一種 Structural Pattern，允許在不改變原始程式碼結構下，為既有程式增加新功能。</span>__     
+>  __<span style={{color: '#0044FF'}}>一種 Structural Pattern，允許在不改變原始程式碼結構下，為既有程式增加新功能。</span>__     
 > 看到這說明直覺想到的應用是:  
 > logging、DB Connection 準備、IO 準備等重複且固定的執行動作。  
 > 所以接下來的例子都會以為 Business Function 進行 log 為主軸。  
