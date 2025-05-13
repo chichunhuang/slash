@@ -40,7 +40,7 @@ keywords: [aes,java,cipher,encrypt,decrypt]
 
 * Aes128EncrypterUtil.java
 
-```
+```Javascript
     public class Aes128EncrypterUtil {
         public static String encryptHex(String str) {
             Aes128Cipher encrypter = new Aes128Cipher();
@@ -64,7 +64,7 @@ keywords: [aes,java,cipher,encrypt,decrypt]
 
 * Aes128Cipher.java
 
-```
+```Javascript
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
@@ -245,7 +245,7 @@ public class Aes128Cipher {
 > 這是 JDK 對加密金鑰長度的限制所致。
 
 * 下列 Code 可能拋出 InvalidKeyException 
-```
+```Javascript
     cipher = Cipher.getInstance("AES");
     cipher.init(Cipher.ENCRYPT_MODE, skeySpec);
 ```

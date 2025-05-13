@@ -27,7 +27,7 @@ keywords: [Spring,Properties,PropertyFactoryBean,Autowired]
 * java code 端取出 properties 的使用範例
 * @Qualifier 是用來指名要 contex.xml 哪一個 bean。在有多個 *.properties 設定且 map to 不同名稱時使用。
 
-```
+```Javascript
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
     private PropertiesFactoryBean configProperties;

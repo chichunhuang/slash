@@ -21,7 +21,7 @@ keywords: [Tomcat,404,error page]
 
 * config/web.xml 下增加下列設定:
 
-```
+```xml
 <error-page> 
         <error-code>404</error-code> 
         <location>/customized404.html</location> 
@@ -37,7 +37,7 @@ keywords: [Tomcat,404,error page]
     * 專案根目錄下相對應資料夾建立 /pages/customized404.html
 1. 單一 App 則在在專案的 web.xml 中加入下列設定即可。
 
-```
+```xml
 <error-page> 
         <error-code>404</error-code> 
         <location>/pages/customized404.html</location> 
@@ -52,7 +52,7 @@ keywords: [Tomcat,404,error page]
 * 在 Host 區塊增加 <span style={{color: '#0044FF'}}>ErrorReportValve</span>資訊，以隱藏 report 與 serverinfo。
 
 
-```
+```xml
 
 <Host name="localhost"  appBase="webapps"
         unpackWARs="true" autoDeploy="true">
@@ -66,7 +66,7 @@ keywords: [Tomcat,404,error page]
       
 # Web Container 其他常見客製化錯誤頁設定範例<span id="full-examples"></span>
 
-```
+```xml
 
 <!-- 400 錯誤 -->
 <error-page>

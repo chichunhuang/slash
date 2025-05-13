@@ -6,7 +6,7 @@ keywords: [java,cipher,KeyPairGenerator]
 
 ## KeyPairGenerator API 簡介
 
-```java
+```Javascript
 import java.security.KeyPairGenerator;
 
 ...
@@ -51,7 +51,7 @@ System.out.println(new String(newPlainText,"UTF8"));
 
 ## KeyPairGenerator 範例
 
-```
+```Javascript
 import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.KeyPair;
@@ -162,6 +162,6 @@ public class TestCipher {
 ### BadPaddingException 
 * 可能發生原因: Public key和secret key不是一起產生出來(不屬於同一個key pair), 當用於加解密時會出現 BadPaddingException
 
-```
+```Javascript
 javax.crypto.BadPaddingException: Data must start with zero
 ```

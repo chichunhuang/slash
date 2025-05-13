@@ -27,7 +27,7 @@ If the object that your are serializing/deserializing is a ParameterizedType (i.
 
 * 因此在使用 gson.fromJson() 時第二個參數要帶入 TypeToken，也就是要告知 Gson 如何將 String 轉型。以下是範例 :
 
-```
+```Javascript
 	import com.google.gson.Gson;
 	import com.google.gson.GsonBuilder;
 	import com.google.gson.reflect.TypeToken;
@@ -44,7 +44,7 @@ If the object that your are serializing/deserializing is a ParameterizedType (i.
 					
 * 下面是 Pastgresql Jsonb 取出後直接將欄位值轉 String 的範例：
 
-```
+```Javascript
 	import com.google.gson.Gson;
     import com.google.gson.GsonBuilder;		 
 			 

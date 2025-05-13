@@ -6,7 +6,7 @@ keywords: [Relay denied, email]
 
 最近有些客戶回報發現安裝在自家的 Web App 發出
 
-```
+```Javascript
 javax.mail.SendFailedException: Invalid Addresses;
   nested exception is:
         class com.sun.mail.smtp.SMTPAddressFailedException: 550 5.7.1 <user1@dummy.com>... Relaying denied. IP name lookup failed [***.***.***.***]

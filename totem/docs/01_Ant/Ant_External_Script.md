@@ -12,7 +12,7 @@ keywords: [Ant,exec]
 * arg: 是執行外部程式時所給的參數
 
 
-```ant
+```xml
 
 <target name="build">
     <exec executable="python3" failonerror="true">

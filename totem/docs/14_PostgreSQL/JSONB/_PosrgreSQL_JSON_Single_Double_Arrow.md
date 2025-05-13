@@ -43,7 +43,7 @@ keywords: [JSONB,PostgreSQL]
 * __<span style={{backgroundColor: '#b3c4ff'}}>->></span>__ 用來查出 JSON/JSONB 物件 field 內容，並以 __<span style={{backgroundColor: '#b3c4ff'}}>String 格式</span>__ 回傳結果。
 * 注意 PostgreSQL ->> 的查詢結果 __沒有__ 用 Double Quotes 包住。
 
-```
+```sql
   select address->>'country' as COUNTRY FROM profile;
   
 COUNTRY
@@ -61,7 +61,7 @@ CHINA
 * 注意 PostgreSQL -> 的查詢結果 __有__ 用 Double Quotes (為 JSON 物件)包住。
 
 
-```
+```sql
 "student": {
 	"first_name": "insect",
 	"last_name": "totem",
@@ -79,7 +79,7 @@ CHINA
 
 * ->> return __String__
 
-```
+```sql
 select Student_column->'student'->'class'->'grade'->'school'->> 'school_name' as SCHOOL from Profile;
 
 SCHOOL
@@ -91,7 +91,7 @@ Entomology
 
 * -> return __jsonb__
 
-```
+```sql
 select Student_column->'student'->'class'->'grade'->'school'-> 'school_name' as SCHOOL from Profile;
 
 
@@ -103,7 +103,7 @@ jsonb
 
 * -> return __jsonb__
 
-```
+```sql
 select Student_column->'student'->'class'->'grade'->'school'  as SCHOOL from Profile;
 
 
@@ -119,7 +119,7 @@ jsonb
 
 * 範例情境
 
-```
+```sql
 {
     "profile": {
                 "first_name": "insect",
@@ -129,7 +129,7 @@ jsonb
 }        
 ```
 
-```
+```sql
 SELECT last_name, raw_data #> 'profile'->'phones'->0  as phone_1 FROM Student
   
 LAST_NAMR               PHONE_1  

@@ -22,7 +22,7 @@ keywords: [rsa,java,cipher,encrypt,decrypt]
 
 # Java RSA 範例
 
-```java
+```Javascript
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
 import java.security.KeyPair;

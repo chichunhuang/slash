@@ -55,7 +55,7 @@ keywords: [Tomcat,Cookie,HttpOnly,Secure,SameSite]
     * context.xml : CookieProcessor > sameSiteCookies = strict
 
 * web.xml
-```
+```xml
     <session-config>
          <tracking-mode>COOKIE</tracking-mode>
          <cookie-config>
@@ -66,14 +66,14 @@ keywords: [Tomcat,Cookie,HttpOnly,Secure,SameSite]
 ```
 
 * server.xml
-```
+```xml
         <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" URIEncoding="UTF-8" secure="true"/>
 ```
       
 * context.xml
-```
+```xml
 <Context>
     <CookieProcessor className="org.apache.tomcat.util.http.LegacyCookieProcessor" sameSiteCookies="strict" />      
 </Context>  
@@ -96,7 +96,7 @@ keywords: [Tomcat,Cookie,HttpOnly,Secure,SameSite]
 * jquery is js: 所以無法管理與設定超出自己權限範圍的 httponly 屬性
 * 有人把 sameSite: 'strict' 藏在 path 屬性之中。實際測試可行。
 
-```
+```javascript
 tricky 1: 放在 path
 tricky 2: 字首大寫
 
@@ -105,7 +105,7 @@ $.cookie("testCookieName", "TestValue Name",{ expires : 30, path: "/;SameSite=st
 
 ## wicket Framework 中設定方式
 
-```
+```javascript
         WebResponse webResponse = (WebResponse) RequestCycle.get()
                 .getResponse();
         Cookie cookie = new Cookie("showLeftColumn", "");

@@ -12,7 +12,7 @@ keywords: [postgresql,lob,restore,backup]
 # POSTGRESQL BLOB 備份與回存基本範例
 ## __匯出__ 單一 LOB 檔案至指定位置範例<span id="single-clause-export"></span>
 
-```
+```sql
 by select clause
 SELECT lo_export(index_file, '/tmp/download_file.csv') FROM table_with_lob_column
 
@@ -23,7 +23,7 @@ psql -U doraemon -d doraemon -c '\lo_export given_oid /tmp/download_file.csv '
 
 ## __匯入__ 單一檔案並取得 loid 範例<span id="single-clause-import"></span>
 * 後續須再將 OID 指到對應 table column
-```
+```sql
 psql -U doraemon -d doraemon -c '\lo_import /tmp/import_file.txt'
 
 ----

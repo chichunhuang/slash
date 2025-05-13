@@ -25,7 +25,7 @@ keywords: [pbe,java,cipher,encrypt,decrypt]
 
 # PBEWITHMD5andDES 範例
 
-```java
+```Javascript
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.Key;

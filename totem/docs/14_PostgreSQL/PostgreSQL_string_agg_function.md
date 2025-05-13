@@ -66,7 +66,7 @@ select b.Author_ID, a.author,
 # string_agg expression 參數範例
 
 * 包含取 JSONB values
-```
+```sql
   string_agg(jsonb_column->>'key_name', ',') as alias_name  
     
   select patient  
@@ -77,6 +77,6 @@ select b.Author_ID, a.author,
 
 * 欄位先合併再串接
 
-```
+```sql
     string_agg(a.first_name || ' ' || a.last_name, ',' ) as full_names, 
 ```

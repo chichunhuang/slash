@@ -51,7 +51,7 @@ $ yum install postgresql10-contrib
 
 pg_hba.conf 設定範例:
 
-```
+```bash
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
  
 # IPv4 local connections:
@@ -116,7 +116,7 @@ CREATE USER MAPPING FOR totem
     * local table name insect_category_substitute:  
     * remote table name : insect_classicfication_category
 
-```
+```sql
     --create insect_category_substitute
     --constraints are not supported
     CREATE FOREIGN TABLE insect_category_substitute (

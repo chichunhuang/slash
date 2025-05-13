@@ -19,7 +19,7 @@ pg_dump -U totem -F t -b -v -f totem1.tar totem
 
 # pg_restore 指令回存
 
-```
+```bash
 pg_restore -U totem -F t -d totem -i -v totem.tar
 ```
 

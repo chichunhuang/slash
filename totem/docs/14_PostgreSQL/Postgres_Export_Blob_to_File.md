@@ -18,7 +18,7 @@ keywords: [postgresql,Lob,Export]
 * file_content : column name
 * Submission_Case : table with file_content column
 
-```
+```sql
 SELECT lo_export(file_content, '/tmp/Export_File_To.csv') FROM Submission_Case where id = 719;
 ```
 # PostgreSQL 匯入 Lob 檔案至資料表

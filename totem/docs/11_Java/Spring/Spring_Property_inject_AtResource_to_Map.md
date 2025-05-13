@@ -28,7 +28,7 @@ keywords: [Spring,Properties,Resource]
 * java code 端取出 properties Map 的使用範例
 * @Resource 是用來指名要 contex.xml 中哪一個 bean。在有多個 *.properties 設定且 map to 不同名稱時使用。
 
-```
+```Javascript
     @Resource(name="configProperties")
     private Map<String, String> configProperties;
     public Map<String, String> getConfigProperties() {

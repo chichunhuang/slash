@@ -15,7 +15,7 @@ keywords: [psql,SQL Shell,PostgreSQL]
 # psql cmd 下 login 方式
 * wondows 下記得先加入 postgreSQL/bin 到環境變數。
 
-```
+```bash
     psql -U postgres -d cable -p 5432 -h 192.168.x.xxx
     
     psql# select * from totem_user;
@@ -24,7 +24,7 @@ keywords: [psql,SQL Shell,PostgreSQL]
 
 #  SQL Shell (psql) 下 login 方式
 
-```
+```bash
     Database [postgres]: totem
     Port [5432]: 5432
     Username [postgres]: totem
@@ -83,7 +83,7 @@ totem=# \i 'D:/tmp/export_all_user.sql'
 * home directory 下新增 __.pgpass__ 檔案，內容為各 DB 連線的密碼
   * 格式為:
   
-```  
+```bash  
 host:port:database:user:password
 ```
 

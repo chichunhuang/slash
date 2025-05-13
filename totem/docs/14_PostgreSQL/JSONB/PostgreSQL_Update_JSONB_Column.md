@@ -36,7 +36,7 @@ keywords: [JSONB,PostgreSQL]
 
   語法:  
   
-```
+```sql
 	jsonb_set(
 	  target JSONB, path TEXT[], new_value JSONB[, create_if_missing BOOLEAN]
 	) -> JSONB
@@ -93,7 +93,7 @@ update Entrance_Examination set raw_data = jsonb_insert( raw_data, '{Country}', 
 # 補齊 JSONB 屬性值長度
 * 分數補0到四位
 
-```
+```sql
 --補零，轉換為 jsonb 做 update
 update Entrance_Examination 
      set raw_data = jsonb_set( raw_data, '{Score}', quote_ident(lpad(raw_data ->> 'Score', 4, '0'))::jsonb )

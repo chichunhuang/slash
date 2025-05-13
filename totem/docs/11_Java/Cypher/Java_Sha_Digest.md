@@ -20,7 +20,7 @@ keywords: [sha,java,cipher,encrypt,decrypt]
 
 * ShaDigester.java
 
-```java
+```Javascript
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 

@@ -40,7 +40,7 @@ lo_import 123456
 
 * 檔案下載方式
 
-```
+```sql
 \lo_export 123456 /var/tmp/output_file_to.txt
 
 

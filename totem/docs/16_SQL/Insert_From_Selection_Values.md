@@ -17,7 +17,7 @@ keywords: [SQL,copy,insert from select]
 
 
 # SQL 將查詢結果餵給另一個 Table
-```
+```sql
 INSERT INTO table2 (column1, column2, column3, ...)
     SELECT column1, column2, column3, ...
     FROM table1
@@ -27,7 +27,7 @@ WHERE condition;
 # 將整個 Table 內容複製
 * 注意需比較 insert into v.s. select into 差異 
 
-```
+```sql
 INSERT INTO table2
     SELECT * FROM table1
 WHERE condition;

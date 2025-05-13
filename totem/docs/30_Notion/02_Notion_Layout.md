@@ -17,7 +17,7 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage"
     * 移除: 進入 Workspace 🢂 Settings 🢂 General 🢂 Danger Zone 🢂 Delete Entire workspace
     * 鎖定: 由右上方的隱藏功能 __...__ 按鈕進入後 🢂 Lock Page (頁面鎖定，防止誤操作)  
     * wrokspace 下可再細分: [Page](./Notion_Page) / Block 
-    * 註: 若想升級為教育加強版，建立新 Workspace 時必須選擇 <span style={{color: '#0044FF'}}> __ For Personal Life __ </span>才能升級為教育版。
+    * 註: 若想升級為教育加強版，建立新 Workspace 時必須選擇 <span style={{color: '#0044FF'}}> __For Personal Life__ </span>才能升級為教育版。
 
 
 ## Notion 工作區版面分區

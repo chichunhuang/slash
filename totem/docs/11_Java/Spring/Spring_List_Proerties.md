@@ -33,7 +33,7 @@ keywords: [Spring,Properties,PropertyFactoryBean]
 1. 這邊假設屬性檔名為 config.properties。
 
 * PropertiesFactoryBeanServiceImpl.java 範例
-```
+```Javascript
     @Service
     public class PropertiesFactoryBeanServiceImpl
             implements PropertiesFactoryBeanService {
@@ -74,13 +74,13 @@ keywords: [Spring,Properties,PropertyFactoryBean]
 
 
 * ClassPathResource 範例
-```
+```Javascript
   PropertiesFactoryBean bean = new PropertiesFactoryBean();
   bean.setLocation(new ClassPathResource("bar/foo/app.properties"));
 ```
 
 * FileSystemResource 範例
-```
+```Javascript
   PropertiesFactoryBean bean = new PropertiesFactoryBean();
   bean.setFileEncoding("UTF-8");
   bean.setLocation(new FileSystemResource("file:ENV_VAR/appConfig/3rdConfig.properties"));
@@ -91,7 +91,7 @@ keywords: [Spring,Properties,PropertyFactoryBean]
 * 部分舊專案可能混雜使用 xml 設定此時則可直接取出 property bean 即可。
 
 * applicationContext.xml : 這邊註冊了 id 為 configProperties 的 bean
-```
+```Javascript
     <bean id="configProperties" lazy-init="false"
         class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="location">
@@ -103,7 +103,7 @@ keywords: [Spring,Properties,PropertyFactoryBean]
 * PropertiesFactoryBeanServiceImpl.java 範例
     * 註: 前面說過這邊習慣有多個 *.properties 檔，所以 inject 時使用 @Qualifier 注入。未再 by Type 自動 inject。
 
-```
+```Javascript
 @Service
 public class PropertiesFactoryBeanServiceImpl
         implements PropertiesFactoryBeanService {

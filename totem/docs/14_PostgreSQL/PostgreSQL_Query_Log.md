@@ -105,7 +105,7 @@ sudo service postgresql restart
 ## 日誌查看範例指令
 * 使用 grep command
 
-```
+```bash
 # 逐行查詢
 less pg_log/postgresql-2025-02-27_120000.log
 

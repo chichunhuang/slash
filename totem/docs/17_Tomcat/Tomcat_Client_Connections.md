@@ -4,15 +4,13 @@ description: Tomcat App online connections
 keywords: [Tomcat,Client Connections]
 ---
 
-<code>
+> 系統更版時必須確認線上無使用者並關閉 Ap 與外部連線。
+> 習慣上會開發一個 WebApp UI 供管理人員登入後查詢線上人數、帳號、連線 IP、連線時間等等資料。
+> 今天遇到客戶買走 WebApp 自行管理 server。MIS 功能被閹割時的替代方案。   
+> 好處是，方便。
+> 缺點是閹割後的 UI 無停機維護動態即時公告，MIS 也無簡易畫面查詢當前線上人數。 
+> App 管理員，也無法直接聯絡/通知指定 User 先行離線。
 
-系統更版時必須確認線上無使用者並關閉 Ap 與外部連線。
-習慣上會開發一個 WebApp UI 供管理人員登入後查詢線上人數、帳號、連線 IP、連線時間等等資料。
-今天遇到客戶買走 WebApp 自行管理 server。MIS 功能被閹割時的替代方案。   
-好處是，方便。
-缺點是閹割後的 UI 無停機維護動態即時公告，MIS 也無簡易畫面查詢當前線上人數。 
-App 管理員，也無法直接聯絡/通知指定 User 先行離線。
-</code>
 
 ## Tomcat Container 當前 Clients 連線數
 有下列幾種方式可用:
@@ -29,7 +27,7 @@ App 管理員，也無法直接聯絡/通知指定 User 先行離線。
 > 透過 netstat 命令查看 Tomcat 當前的 TCP 連線狀態  
 > netstat 僅適用於 Linux
 
-```shell
+```bash
 netstat -atn | grep :8080 | grep ESTABLISHED | wc -l
 ```
 * :8080  🢂  Tomcat listening port，改成 App 所使用的 Port Number。

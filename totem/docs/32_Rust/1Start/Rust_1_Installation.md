@@ -33,7 +33,7 @@ keywords: [Rust,Install]
     * 下載 [Visual Studio](https://visualstudio.microsoft.com/downloads)
     * 下載 [Visual Studio Code](https://code.visualstudio.com/download)
     
-__ 安裝工具出現 C++ build tools are required __
+__安裝工具出現 C++ build tools are required__
 
 ```
 
