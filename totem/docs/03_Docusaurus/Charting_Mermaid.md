@@ -93,7 +93,9 @@ graph TD;
 * [Mermain 官方網站](https://mermaid.js.org/)
 * [Mermain Syntax Documentation](https://mermaid.js.org/intro/syntax-reference.html)
 * [Theme Theme Configuration](https://mermaid.js.org/config/theming.html)
-* [Mermain Configuration Documentation](https://mermaid.js.org/config/configuration.html)
+* [Mermaid Configuration Documentation](https://mermaid.js.org/config/configuration.html)
+* [Mermaid 圖表線上範例](https://mermaid.live/)
+* [Mermaid 學習紀錄](../Tools/Mermaid)
 
 
 ## 範例

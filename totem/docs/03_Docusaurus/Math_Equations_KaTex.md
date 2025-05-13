@@ -10,6 +10,7 @@ keywords: [Docusaurus,Equation,KaTex]
 ## KatTexd 數學方程繪製套件
 * [Docusaurus 參考說明](https://docusaurus.io/docs/next/markdown-features/math-equations)
 * [KaTex 參考說明文件](https://katex.org/docs/api)
+* [KaTex 學習紀錄](../Tools/KaTex)
 * 註: 使用版本
     * "@docusaurus/core": "^3.7.0",
     * "rehype-katex": "^7.0.1",
@@ -32,6 +33,10 @@ _註: 下方範例需搭配  Docusaurus v3_
 ```
 
 ## 套件設定/ES 模組設定檔建議設定方式
+
+* 重點說明：
+    * remarkPlugins: Remark 外掛程式，用於解析 Markdown 中的數學語法並將其轉換為 AST 節點。
+    * rehypePlugins: rehype-katex 是一個 Rehype 外掛程式，它會取得 remark-math 產生的數學 AST 節點，並使用 KaTeX 將其渲染為 HTML 和 CSS。
 
 __docusaurus.config.js 設定套件__
 
@@ -61,6 +66,8 @@ export default {
 ## KaTeX CSS stylesheets 設定
 
 __docusaurus.config.js: CDN 來源載入 CSS__
+
+* integrity: 屬性是用於子資源完整性 (Subresource Integrity - SRI) 的相關安全功能。當瀏覽器從 CDN 或其他外部來源載入資源 (例如 CSS 樣式表、JavaScript 檔案) 時，SRI 可以幫助確保這些檔案在傳輸過程中沒有被第三方竄改。
 
 ```
 export default {
@@ -96,7 +103,6 @@ export default {
 
 * 數學方程市區塊須以 \$\$ 包覆
 * [KaTex 官方參考說明文件](https://katex.org/docs/api)
-
 
 <pre>
 
