@@ -23,6 +23,12 @@ keywords: [Docusaurus,theme-mermaid,UML,Chart]
 ## 套件設定
 
 __docusaurus.config.js__
+* Theme 可選擇:
+    * default: 
+    * neutral: 列印黑白文件用
+    * dark:  
+    * forest: 綠色色調 
+    * base: 欲客製化修改時選用 
 
 config 下加上下列三項設定
 
@@ -56,6 +62,7 @@ config 下加上下列三項設定
 
 <pre>
     \`\`\`mermaid
+    \%\%\{init: \{'theme':'dark'\}\}\%\%
     graph TD;
         A--\>B;
         A--\>C;
@@ -65,6 +72,7 @@ config 下加上下列三項設定
 </pre>
 
 ```mermaid
+%%{init: {'theme':'dark'}}%%
 graph TD;
     A-->B;
     A-->C;
