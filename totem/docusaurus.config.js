@@ -124,7 +124,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
 		
-		
+	//匯入自定義(修改過, 可直接匯入指定元件 ex IconifyIcon) 的繼承 MDXComponents 元件
+	//這是預設路徑,若未更改,其實是可以省略	
+    MDXComponents: './src/theme/MDXComponents',
+    		
     //讓 url/docs/xx 下的主題左側的 menu 預設為 hidden, 可自行決定何時彈出 
 	docs: {
       sidebar: {
@@ -154,6 +157,7 @@ const config = {
         hideOnScroll: true,
 		
         items: [
+            
           {
             type: 'docSidebar', // 在 docs folder下的文章 
             sidebarId: 'totem_sidebar', //ref sidebar.js
