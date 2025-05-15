@@ -24,10 +24,10 @@ export default function Layout(props) {
         }
     }, [isTocVisible, tocSelector]);
 
-    return (<div>
-                <OriginalLayout {...props} />
-                <button className="toc-toggle-button" onClick={toggleToc}>
-                    {isTocVisible ? 'TOC Toggle' : 'TOC Toggle'}
-                </button>
-            </div>);
+    return (<>
+        <OriginalLayout {...props} />
+        <button className="toc-toggle-button" onClick={toggleToc}>
+            {isTocVisible ? 'TOC Toggle' : 'TOC Toggle'}
+        </button>
+    </>);
 }
