@@ -17,6 +17,7 @@
 <li>寫個註解，Docusaurus更到最新版後檢查似乎變嚴格了</li>
 <li>\</li>
 <li>遇到 大括號, 中括號, 角括號時須使用。 ex: { 'k1': 'v1'}, &lt;class 'str'&gt;</li>
+<li>因為 <a href="https://insect-totem.net/docs/Docusaurus/Math_Equations_KaTex">KaTex $ 也須做 escape</a></li>
 </ul>]]></content>
         <author>
             <name>Insect Totem</name>

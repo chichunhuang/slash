@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkinsect_totem=self.webpackChunkinsect_totem||[]).push([[2024],{82024:(e,t,c)=>{c.d(t,{createArchitectureServices:()=>s.S});var s=c(98815);c(73579)}}]);
