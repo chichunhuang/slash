@@ -172,7 +172,7 @@ import { Gi3dGlasses } from "react-icons/gi";
 ```
 
 <div>
- {GoogleImage( 'google_file_id',  'react_icons_01.png', {width:'392px', height:'493px', hidden:true, degree:0})}
+ {GoogleImage( '1_f4ySWYtagf3aNJk6JSOzgKqCJzwLYTA',  'react_icons_01.png', {width:'392px', height:'493px', hidden:true, degree:0})}
 </div>
 
 
