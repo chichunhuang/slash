@@ -9,7 +9,7 @@ import notFoundImage from '@site/static/img/70_70.jpg';
 import React, { useEffect, useState } from "react";
 
 export default function NotFoundWrapper(props) {
-const [countdown, setCountdown] = useState(15);
+const [countdown, setCountdown] = useState(10);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -33,21 +33,21 @@ const [countdown, setCountdown] = useState(15);
         <img src={notFoundImage} alt="Page Not Found Illustration" style={{ maxWidth: '300px', marginBottom: '1rem' }} />
         <h1>
           <Translate
-            id="myCustom.notFound.title"
+            id="totem.notFound.title"
             description="Custom 404 page title">
             Oops! 找不到這個頁面了
           </Translate>
         </h1>
         <p>
           <Translate
-            id="myCustom.notFound.description"
+            id="totem.notFound.description"
             description="Custom 404 page description">
             Insect-Totem 最近調整網頁結構，部分連結有所異動，而您可能選到過時的連結，造成不便敬請見諒!
           </Translate>
         </p>
         <p>
           <Translate
-            id="myCustom.notFound.suggestions"
+            id="totem.notFound.suggestions"
             description="Custom 404 page suggestions">
             你可以嘗試： 
           </Translate>
@@ -55,7 +55,7 @@ const [countdown, setCountdown] = useState(15);
         <p>
            <FaHome style={{ marginRight: '0.5rem' }} />
             <Translate
-              id="myCustom.notFound.suggestionHome"
+              id="totem.notFound.suggestionHome"
               description="Link to homepage">
               回到首頁
             </Translate>
@@ -64,7 +64,7 @@ const [countdown, setCountdown] = useState(15);
         <p>
           <CgMenuGridO style={{ marginRight: '0.5rem' }} />
             <Translate
-              id="myCustom.notFound.suggestionMenu"
+              id="totem.notFound.suggestionMenu"
               description="Link to menu page">
               或至目錄
             </Translate>
@@ -72,7 +72,16 @@ const [countdown, setCountdown] = useState(15);
         </p>
         <p>
           <SlActionUndo style={{ marginRight: '0.5rem' }} />
-            若未選擇系統將在 {countdown} 秒後自動返回目錄頁...
+            <Translate
+              id="totem.notFound.backToArticles1"
+              description="Link to menu page">
+              若未選擇系統將在
+            </Translate>{countdown}
+            <Translate
+              id="totem.notFound.backToArticles2"
+              description="Link to menu page">
+              秒後自動返回目錄頁...
+            </Translate>
         </p>
         {/* more customized... */}
       </div>
