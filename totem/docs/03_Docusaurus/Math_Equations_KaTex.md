@@ -10,7 +10,6 @@ keywords: [Docusaurus,Equation,KaTex]
 ## KatTexd 數學方程繪製套件
 * [Docusaurus 參考說明](https://docusaurus.io/docs/next/markdown-features/math-equations)
 * [KaTex 參考說明文件](https://katex.org/docs/api)
-* [KaTex 學習紀錄](../Tools/KaTex)
 * 註: 使用版本
     * "@docusaurus/core": "^3.7.0",
     * "rehype-katex": "^7.0.1",

@@ -153,11 +153,11 @@ __測試版本__
 * mermaid: ^11.6.0
 * @iconify-json/logos: ^1.2.4
 
-此功能指的是 Cahrt 上的文字可以嵌入 iconify icons，但  
+此功能指的是 Chart 上的文字可以嵌入 iconify icons，但  
 設定 themeConfig.mermaid.icon 出現 ValidationError, mermaid.icon is not allowed    
 改用 plugin 編寫也無效(未出現 error, iconify path 如實呈現未轉換)    
 改用 plugin 搭配 icon loader 編寫也無效  
-總之換了多種寫法，應試出現衝突或是無法轉換  
+總之換了多種寫法，因該是出現衝突或是無法轉換  
 放棄......
 
 * 需安裝圖示包與相關工具套件
