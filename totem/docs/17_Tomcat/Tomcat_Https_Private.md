@@ -19,18 +19,18 @@ keywords: [Tomcat,Https]
     $ keytool -genkey -alias tomcatssl -keyalg RSA -validity 36500
     輸入 keystore 密碼：  
     您的名字與姓氏為何？
-      [Unknown]：  bioit
+      [Unknown]：  insecttotem
     您的編制單位名稱為何？
-      [Unknown]：  bioit
+      [Unknown]：  insecttotem
     您的組織名稱為何？
-      [Unknown]：  bioit
+      [Unknown]：  insecttotem
     您所在的城市或地區名稱為何？
       [Unknown]：  tw   
     您所在的州及省份名稱為何？
       [Unknown]：  tw
     該單位的二字國碼為何
       [Unknown]：  tw
-    CN=bioit, OU=bioit, O=bioit, L=tw, ST=tw, C=tw 正確嗎？
+    CN=insecttotem, OU=insecttotem, O=insecttotem, L=tw, ST=tw, C=tw 正確嗎？
       [否]：  Y
     
     輸入 <tomcatssl> 的主密碼
