@@ -53,6 +53,19 @@ keywords: [Tomcat，Performernce]
         compressableMimeType="text/html，text/xml，text/plain，application/octet-stream" />
 ```
 
+### Apache 開啟網頁壓縮
+    /etc/httpd/conf 
+    
+```xml
+    <VirtualHost *:80>
+        ServerName ...
+        ...
+         
+        AddOutputFilter DEFLATE css js txt
+        AddOutputFilterByType DEFLATE text/html text/plain text/xml
+    </VirtualHost>
+```
+
 ## 使用 Tomcat 原生函式庫
     Tomcat 是以 Java 寫成的 Web server， 所以是運行在 JVM 之上，  
     雖然具有可移植性，效能卻比原生執行檔來得差。  

@@ -13,6 +13,9 @@ keywords: [Tomcat,Https]
 * Windows 下 key 存放位置
     * C:\\Users\\\[UserName\]
 * 若須重新建立時，刪除舊 key 重建即可
+* 註: 
+    * 下面範例中以 tomcatssl 作為 key 的別名
+    * validity 36500 指 keysore 有效期限 100 年t
 
 ```bash
 
@@ -42,7 +45,9 @@ keywords: [Tomcat,Https]
 * 設定 443 或 8443 port 的 connector，依實際需要調整   
 * keystore 密碼必須和 keystorePass相同  
 
+
 __Linux 下__
+* ~/tomcat/conf/server.xml
 
 ```xml
     <Connector port="8443" 
@@ -94,9 +99,11 @@ __Windows 下__
 
 ## Tomcat security constraint 設定
 
-在 tomcat/conf/web.xml 加上安全限定 (security constraint)，  
-如果要求試圖透過 HTTP(不安全連線) 存取 transport guarantee 為 CONFIDENTIAL 的 URL，  
-將被自動重新導向使用 HTTPS 的相同 URL。
+    在 tomcat/conf/web.xml 加上安全限定 (security constraint)，  
+    如果要求試圖透過 HTTP(不安全連線) 存取 transport guarantee 為 CONFIDENTIAL 的 URL，  
+    將被自動重新導向使用 HTTPS 的相同 URL。
+    
+    註: 這可以設定在 Tomcat 全域下，或個別專案自行設定 
 
 ```xml
     <security-constraint>
@@ -108,4 +115,65 @@ __Windows 下__
                  <transport-guarantee>CONFIDENTIAL</transport-guarantee>
          </user-data-constraint>
     </security-constraint>
+```
+
+
+## 摘要 keystore 相關指令
+
+__產生金錀對(RSA為非對稱加密的演算法)__
+
+```bash
+    # generate keystore
+    keytool -genkey -alias xxxx -keyalg RSA -validity 36500
+```
+
+__匯出__
+
+```bash
+    # export cert
+    keytool -export -alias xxxx -file ody_tomcatssl.crt
+```
+
+__刪除__
+
+```bash
+    # delete  cert
+    keytool -delete -alias xxxx -keystore .keystore
+```
+
+__匯入__
+
+```bash
+    # import new insecttotem cert
+    keytool -import -alias insecttotem -file insecttotem_from.crt
+```
+
+__查詢__
+
+```bash
+    keytool -list -v -keystore .keystore
+```
+
+__產生憑證申請檔__
+
+```bash
+    keytool -certreq -alias xxx -file certreq.txt -keystore .keystore
+```
+
+__查詢 PKCS12 類型 keystore 的內容__
+
+```bash
+    keytool -list -v -keystore .keystore -storetype pkcs12
+```
+
+__建立一個含有私鑰的 keystore__
+
+```bash
+    keytool -genkey -alias keyAlias -keyalg RSA -keystore keystore.jks
+```
+
+__修改 keystore 的密碼__
+
+```bash
+    keytool -storepasswd -new newPassword -keystore keystore.jks
 ```
