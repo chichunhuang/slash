@@ -61,3 +61,7 @@ __log4j.xml __
 
 </log4j:configuration>
 ```
+
+
+## Log4j 以 Email 進行 log
+*[Log4j Email Appender: 將錯誤訊息寄到指定位置](../Log4j/Log4j_Mail_Appender)
