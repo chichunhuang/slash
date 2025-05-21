@@ -224,3 +224,6 @@ keywords: [Java,zip,pasword]
         }
     }
 ```
+
+## 其他
+* [Java 壓縮檔內的中文檔案名亂碼](./Java_Zip_Chinese)
