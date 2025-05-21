@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "gen:sidebar": "node src/service/sidebar/GenerateSidebarFromPagesService.js",
     "docusaurus": "docusaurus",
-    "start": "npm run docusaurus start",
-    "build": "npm run docusaurus build",
+    "start": "npm run gen:sidebar && docusaurus start",
+    "build": "npm run gen:sidebar && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

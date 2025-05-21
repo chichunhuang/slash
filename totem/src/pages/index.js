@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import CustomSidebar from '@site/src/components/CustomSidebar';
 import Breaknews from '@site/src/components/Breaknews';
 
 import totemStyles from './totem.module.css';

@@ -19,7 +19,7 @@ log4j.xml 進行下列調整後可使 cataline.out.log 能依照每天的日期�
 
 
 
-__log4j.xml __
+__log4j.xml__
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -64,4 +64,4 @@ __log4j.xml __
 
 
 ## Log4j 以 Email 進行 log
-*[Log4j Email Appender: 將錯誤訊息寄到指定位置](../Log4j/Log4j_Mail_Appender)
+* [Log4j Email Appender: 將錯誤訊息寄到指定位置](../Log4j/Log4j_Mail_Appender)

@@ -2,8 +2,8 @@
 
 export const pageLinks = [
   {
-    "label": "FormTemplatePage",
-    "route": "/FormTemplatePage"
+    "label": "IconifyJsxDemo",
+    "route": "/iconify/IconifyJsxDemo"
   },
   {
     "label": "Home",
@@ -19,6 +19,6 @@ export const pageLinks = [
   },
   {
     "label": "FormTemplatePage",
-    "route": "/template/form/FormTemplatePage"
+    "route": "/template/FormTemplatePage"
   }
 ];
