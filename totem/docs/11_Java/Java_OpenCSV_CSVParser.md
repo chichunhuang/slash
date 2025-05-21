@@ -1,7 +1,7 @@
 ---
 title: OpenCSV 與 CSVParser 比較
 description: OpenCSV and CSVParser Comparison
-keywords: [Java，OpenCSV，CSVParser]
+keywords: [Java,OpenCSV，CSVParser]
 ---
     
     Parse CSV 檔，說難不難，說不難有時卻又繁雜  
