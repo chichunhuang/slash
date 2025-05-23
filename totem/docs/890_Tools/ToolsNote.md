@@ -46,29 +46,29 @@ description: 工具簡介
 * ZoomIt
     
     
-https://gamma.app/docs/AI-20240918-iptlwecaqp3e2tf?mode=doc Gamma
-https://claude.ai/login?returnTo=%2F%3F Claude
-https://www.canva.com/ Canva 
-https://gemini.google.com/app Gemini 
-https://www.perplexity.ai/ Perplexity 
-https://chatgpt.com/" ChatGPT /TC zh-tw 
-https://chatgpt.com/g/g-6D71cmk6K-image-to-prompt-generator-gpt ChatGPT - GPTS-Image Prompt Generator 
-https://www.perplexity.ai/ Perplexity 
-https://groq.com/ Groq is Fast AI Inference 
-https://prompts.chat/ Awesome ChatGPT Prompts | This repo includes ChatGPT prompt curation to use ChatGPT better. 
-https://www.tricuss.ai/zh-TW/blog/5-useful-chatgpt-prompts-for-precise-work-goals ChatGPT 指令 (prompt) 
-https://suno.com/ Suno 
-https://www.hedra.com/ Hedra 
-https://clovanote.line.me/  CLOVA Note官網 
-https://elevenlabs.io/  ElevenLabs: 文字轉語音 and 語音換人聲工具 
-https://pro.ttsmaker.com/studio/zh-hk/tts  TTSMaker AI語音工作室
-https://notebooklm.google.com/ NotebookLM-更改Google帳戶的網頁語言為繁體 
-https://www.microsoft.com/en-us/download/details.aspx?id=53003 Windows Journal Application 
-https://www.pexels.com/zh-tw/  pexels 
-https://clipdrop.co/  Clipdrop 圖像生成/Uncrop/去背/打光/外擴生成 
-https://huggingface.co/ Hugging Face – The AI community building the future. 
-https://huggingface.co/spaces/the-walking-fish/Whisper-JSON-to-SRT-Converter  Whisper JSON To SRT Converter - a Hugging Face Space by the-walking-fish 
-https://frankknow.com/ai-logo-generator/   AI Logo
+* https://gamma.app/docs/AI-20240918-iptlwecaqp3e2tf?mode=doc Gamma
+* https://claude.ai/login?returnTo=%2F%3F Claude
+* https://www.canva.com/ Canva 
+* https://gemini.google.com/app Gemini 
+* https://www.perplexity.ai/ Perplexity 
+* https://chatgpt.com/" ChatGPT /TC zh-tw 
+* https://chatgpt.com/g/g-6D71cmk6K-image-to-prompt-generator-gpt ChatGPT - GPTS-Image Prompt Generator 
+* https://www.perplexity.ai/ Perplexity 
+* https://groq.com/ Groq is Fast AI Inference 
+* https://prompts.chat/ Awesome ChatGPT Prompts | This repo includes ChatGPT prompt curation to use ChatGPT better. 
+* https://www.tricuss.ai/zh-TW/blog/5-useful-chatgpt-prompts-for-precise-work-goals ChatGPT 指令 (prompt) 
+* https://suno.com/ Suno 
+* https://www.hedra.com/ Hedra 
+* https://clovanote.line.me/  CLOVA Note官網 
+* https://elevenlabs.io/  ElevenLabs: 文字轉語音 and 語音換人聲工具 
+* https://pro.ttsmaker.com/studio/zh-hk/tts  TTSMaker AI語音工作室
+* https://notebooklm.google.com/ NotebookLM-更改Google帳戶的網頁語言為繁體 
+* https://www.microsoft.com/en-us/download/details.aspx?id=53003 Windows Journal Application 
+* https://www.pexels.com/zh-tw/  pexels 
+* https://clipdrop.co/  Clipdrop 圖像生成/Uncrop/去背/打光/外擴生成 
+* https://huggingface.co/ Hugging Face – The AI community building the future. 
+* https://huggingface.co/spaces/the-walking-fish/Whisper-JSON-to-SRT-Converter  Whisper JSON To SRT Converter - a Hugging Face Space by the-walking-fish 
+* https://frankknow.com/ai-logo-generator/   AI Logo
           
 [ZoomIt](ZoomIt)
    
