@@ -5,20 +5,32 @@ sidebar_position: 1
 # Document List (docs)
 
 
-最後更版時間:Wed May 21 10:36:08 CST 2025
+最後更版時間:Wed May 28 08:53:56 CST 2025
 
 
-* [00_docs-map.md](/docs/docs-map)
-## 01_Ant
+* [docs-map.md](/docs/docs-map)
+## Ant
 * [Ant執行外部程式 - Ant執行外部程式](/docs/Ant/Ant_External_Script)
-## 02_Canva
+## Canva
 * [Canva 學習紀錄 - Canva Notes](/docs/Canva/CanvaNote)
-## 05_Google
+## CICD
+* [Jenkins Code Coverage - Jenkins Code Coverage 設定](/docs/CICD/Jenkins_Code_Coverage)
+* [Jenkins 安裝及設定 - Jenkins 安裝及設定](/docs/CICD/Jenkins_install)
+## Git
+* [Git Log 指令 - ISMS 比較版本差異](/docs/Git/Git_log)
+## Google
 * [Google App Script 取 File ID - Google App Script 取 File ID](/docs/Google/Google_App_Script_FileIDs)
-## 06_HTML
+## HTML
 * [HTML 關閉自動完成 - HTML autocomplete 相關技巧](/docs/HTML/HTML_Autocomplete)
-## 11_Java
+## Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/Java/ExceptionMailFromLog4j)
+* [Excel 開啟 CSV 發生中文亂碼 - CSV 增加 UTF-8 BOM](/docs/Java/Java_CSV_UTF8_BOM)
+* [Java 取 IP - 伺服器 客端 IP 取得方式](/docs/Java/Java_IP)
+* [OpenCSV 與 CSVParser 比較 - OpenCSV and CSVParser Comparison](/docs/Java/Java_OpenCSV_CSVParser)
+* [Java POI 讀取 Excel - Java POI 讀取 2007 後的 Excel](/docs/Java/Java_POI_Excel)
+* [Java 壓縮檔內的中文檔案名亂碼 - Java is Han String](/docs/Java/Java_Zip_Chinese)
+* [Java 解壓縮並加密 - Reading pwd protected zip file](/docs/Java/Java_Zip_with_Pwd)
+* [Java 漢字辨別 - Java is Han String](/docs/Java/Java_is_Han_String)
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/Java/Session_Fixation)
 * [非正規Session Fixation處理 - 降低風險，並未完全即時](/docs/Java/Session_Fixation_Wicket)
 ### Cypher
@@ -34,12 +46,12 @@ sidebar_position: 1
 * [Spring 下 Properties 檔注入與使用範例 - Spring 下 Properties 檔注入與使用範例](/docs/Java/Spring/Spring_List_Proerties)
 * [Spring Properties to PropertyFactoryBean by @Autowired - Spring Properties to PropertyFactoryBean by @Autowired](/docs/Java/Spring/Spring_Property_inject_AtAutowired_to_PropertyFactoryBean)
 * [Spring Properties to Map by @Resource - Spring Properties to Map by @Resource](/docs/Java/Spring/Spring_Property_inject_AtResource_to_Map)
-## 12_Javascript
+## Javascript
 * [JavaScript 命名慣例 - JavaScript Naming Conventions](/docs/Javascript/JS_Naming_Conventions)
 * [JS HTML input 自動全選 - Javascript Template input selects all on focus](/docs/Javascript/Textfield_Select)
-## 13_Mail
+## Mail
 * [信件附件中文檔名亂碼 - MimeUtility Attatch Garbled](/docs/Mail/Mail_MimeUtility_Attatch_Garbled)
-## 14_PostgreSQL
+## PostgreSQL
 * [PostgreSQL Blob 備份與回存 - Backup and Restore BLOB in PostgreSQL](/docs/PostgreSQL/Backup_Restore_BLOB_in_Postgres)
 * [Parallel Query in PostgreSQL - Parallel_Query_in_PostgreSQL](/docs/PostgreSQL/Parallel_Query_in_PostgreSQL)
 * [PosgreSQL Backup and Restore - PosgreSQL 備份與還原範例](/docs/PostgreSQL/PosgreSQL_Backup_and_Restore)
@@ -56,13 +68,13 @@ sidebar_position: 1
 * [PostgreSQL Format JSONB Object - PostgreSQL Format JSONB Object](/docs/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
 * [PostgreSQL Update JSONB Column - 更改 PostgreSQL JSONB 欄位資料值](/docs/PostgreSQL/JSONB/PostgreSQL_Update_JSONB_Column)
 * [PostgreSQL find value by Attr from JSONB - PostgreSQL find value from JSONB column](/docs/PostgreSQL/JSONB/Postgresql_find_value_by_Attr_of_JSONB_column)
-## 15_Server
+## Server
 * [Jenkins Debian 安裝設定紀錄 - Jenkins Debian 安裝設定紀錄](/docs/Server/JenkinsCIServerOnDebian)
-## 16_SQL
+## SQL
 * [Insert from Select - Insert from select result](/docs/SQL/Insert_From_Selection_Values)
 * [Insert Into v.s. Select Into - Insert-Into 與 Select-Into 使用上差異](/docs/SQL/Insert_Into_vs_Select_Into)
 * [Using subqueries outside of WHERE - 在 sql from 中使用子查詢](/docs/SQL/Using_subqueries_outside_of_WHERE)
-## 17_Tomcat
+## Tomcat
 * [隱藏 Tomcat 版本資訊 - ](/docs/Tomcat/Hide_Tomcat_Version)
 * [Tomcat 當前 Clients 連線數 - Tomcat App online connections](/docs/Tomcat/Tomcat_Client_Connections)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/Tomcat/Tomcat_Error_Page)
@@ -71,11 +83,11 @@ sidebar_position: 1
 * [Tomcat 自動切割 Log 檔 - Tomcat Log Rotate](/docs/Tomcat/Tomcat_Log_Rotate)
 * [Tomcat 效能調教 - Tomcat Performernce Tuning](/docs/Tomcat/Tomcat_Performernce_Tuning)
 * [Tomcat 編碼 - Tomcat encoding](/docs/Tomcat/Tomcat_encoding)
-## 18_Log4j
+## Log4j
 * [Log4j 學習紀錄 - Log4j](/docs/Log4j/Log4j_Basic)
 * [Log4j2 學習紀錄 - Log4j2](/docs/Log4j/Log4j2)
 * [Log4j 以 Email 進行 log - Log4j Email Appender](/docs/Log4j/Log4j_Mail_Appender)
-## 30_Notion
+## Notion
 * [Notion 學習紀錄 - Notion Notes](/docs/Notion/NotionBasic)
 * [Notion 工作區版面 - Notion Layout](/docs/Notion/Notion_Layout)
 * [Notion 工作頁面 - Notion Page](/docs/Notion/Notion_Page)
@@ -99,7 +111,7 @@ sidebar_position: 1
 * [Notion GitHub 整合 - Notion-Integrate GitHub](/docs/Notion/Notion_GitHub)
 * [Notion 網站發布 - Notion 網站發布](/docs/Notion/Notion_Sites)
 * [Notion 其他工具 - Notion Apps](/docs/Notion/Notion_Products)
-## 31_Python
+## Python
 * [Python 快速回憶 - Python 學習所需基本操作](/docs/Python/Python_Basic)
 * [Python Print - Python Print 方法](/docs/Python/Python_Basic_Print)
 * [Python Comprehension - 迴圈與lambda的結合](/docs/Python/Python_Comprehension)
@@ -120,13 +132,13 @@ sidebar_position: 1
 * [Python 雜七雜八的工具 - Python Utils](/docs/Python/Python_Utils)
 * [Pickle 序列化與反序列化 - Python 物件序列化與反序列化](/docs/Python/Python_module_pickle)
 * [Send Mail by Python smtplib - Send Mail by Python smtplib](/docs/Python/Send_Eail_By_Python)
-### 01_IDE
+### IDE
 * [Anaconda 基本管理指令 - Anaconda 基本管理指令](/docs/Python/IDE/Anaconda_Statements)
 * [PyCharm 中使用 Anaconda 管理 Envs - PyCharm 中以 Anaconda 管理 Python Envs](/docs/Python/IDE/PyCharm_Anaconda_Envs_Mgmt)
 * [PyCharm 中的快速鍵 - PyCharm 中的快速鍵](/docs/Python/IDE/PyCharm_HotKeys)
 * [PyCharm 中的 Optimize Imports - PyCharm 中的模組匯入整理](/docs/Python/IDE/PyCharm_Optimize_Import)
 * [PyCharm 中自訂 Snippet Templates - PyCharm 中自訂 Live Templates](/docs/Python/IDE/PyCharm_Snippet_Template)
-### 03_Advanced
+### Advanced
 * [Python 常數 - Python 常數設計方法](/docs/Python/Advanced/Python_2_Constant)
 * [Python Decorator - Python Decorator](/docs/Python/Advanced/Python_2_Decorator)
 * [關於 Python 檔案編碼 - Python Encoding](/docs/Python/Advanced/Python_2_Encoding)
@@ -139,21 +151,21 @@ sidebar_position: 1
 * [Python 變數與變數存取範圍 - Python 變數與變數存取範圍](/docs/Python/Advanced/Python_2_Variable_and_Scope)
 * [Python 打包與解包 - Python Packing and Unpacking](/docs/Python/Advanced/Python_2_unpack_lisit_map)
 * [Python 運算子進階-operator - 關於 operator](/docs/Python/Advanced/Python_Operator_module)
-### 05_Misc
+### Misc
 * [Python command line 基本處理 - Python Command Line](/docs/Python/Misc/Python_3_CLI)
 * [打包 Python 程式成可執行檔 - Executable Python-script to exe](/docs/Python/Misc/Python_3_Executable)
 * [Python 檔案與資料夾走訪 - Python File and Folder](/docs/Python/Misc/Python_3_File_and_Dir)
 * [Python ConfigParser 解析 ini 檔 - Python ini ConfigParser](/docs/Python/Misc/Python_3_Parser_ConfigParser)
 * [Python 日期與時間 - Python Date and Time](/docs/Python/Misc/Python_3_Time)
 * [Python-Sorting by pandas - Python - Sorting and Parsing CSV](/docs/Python/Misc/Python_Sorting_by_Pandas)
-### 06_OOP
+### OOP
 * [Python 抽象方法 - Python Abstract Method](/docs/Python/OOP/Python_4_AbstractMethod)
 * [Python Class 介紹 - Python Class 介紹](/docs/Python/OOP/Python_4_Class)
 * [Python 類別成員 - Python 類別成員 Vars and Funs](/docs/Python/OOP/Python_4_Class_Members)
 * [Python 繼承介紹 - Python Inheritance](/docs/Python/OOP/Python_4_Inheritance_Basic)
 * [Python 與 OOP - Python 與物件導向](/docs/Python/OOP/Python_4_OOP)
 * [Python OOP Site Map - Python OOP Site Map](/docs/Python/OOP/Python_4_Site)
-## 32_Rust
+## Rust
 * [InsectTotem Rust - 搬移中](/docs/Rust/RustNote)
 ### 1Start
 * [Rust Hello World! - Rust Hello World!](/docs/Rust/1Start/Rust_1_HelloWorld)
@@ -163,11 +175,13 @@ sidebar_position: 1
 * [Tomcat 當前 Clients 連線數 - Tomcat App online connections](/docs/DevTech/Tomcat/Tomcat_Client_Connections)
 * [Tomcat 客製錯誤頁 - 自訂 Tomcat 錯誤頁顯示方式](/docs/DevTech/Tomcat/Tomcat_Error_Page)
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly Secure SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
-## 89_Tools
+## MISC
+* [SSH 無密碼登入 - SSH 無密碼登入相關設定](/docs/MISC/SSH_WO_Pwd)
+## Tools
 * [Mermaid 學習紀錄 - Mermaid UML Chart](/docs/Tools/Mermaid)
 * [Tools - 工具簡介](/docs/Tools/ToolsNote)
 * [ZoomIt 使用技巧 - ZoomIt 使用技巧](/docs/Tools/ZoomIt)
-## 90_Graphics
+## Graphics
 * [Origin of Insect-Totem - Insect-Totem 的起源](/docs/Graphics/origin_of_Insecttotem)
 * [Butterfly - Insect-Totem Butterfly](/docs/Graphics/Butterfly_01)
 * [Butterfly Papilio - Insect-Totem Butterfly PapilioXuthus](/docs/Graphics/Butterfly_Papilio_xuthus_01)
@@ -177,7 +191,7 @@ sidebar_position: 1
 * [Rhinoceros Beetles - Insect-Totem Rhinoceros Beetles](/docs/Graphics/Rhino_01)
 * [Stag Beetle - Insect-Totem Stag Beetle](/docs/Graphics/Stag_Beetle_01)
 * [Stag Beetle-rainbow - Insect-Totem Stag Beetle-rainbow](/docs/Graphics/Stag_Beetle_Rainbow)
-## 99_GDPR
+## GDPR
 * [Privacy Policy - Privacy Policy](/docs/GDPR/PrivacyPolicy_Eng)
 * [隱私權政策 - 中文版隱私權政策](/docs/GDPR/PrivacyPolicy_zh_tw)
 * [關於 Insect-Totem - About Me](/docs/GDPR/AboutMe)
