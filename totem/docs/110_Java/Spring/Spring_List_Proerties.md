@@ -33,6 +33,7 @@ keywords: [Spring,Properties,PropertyFactoryBean]
 1. 這邊假設屬性檔名為 config.properties。
 
 * PropertiesFactoryBeanServiceImpl.java 範例
+
 ```Javascript
     @Service
     public class PropertiesFactoryBeanServiceImpl
