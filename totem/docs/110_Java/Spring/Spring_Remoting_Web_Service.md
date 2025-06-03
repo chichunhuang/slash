@@ -9,7 +9,9 @@ keywords: [Spring,Restful API]
         * [http://gturnquist-quoters.cfapps.io/api/random](http://gturnquist-quoters.cfapps.io/api/random)
     * 版本 Spring 4.x
     
-    
+* [Spring Wicket Restful API 整併練習](./Spring_Wicket_Restful)
+* [Spring Restful API 練習](./Spring_Restful)
+
 ## Dependencies 
 
 __pom.xml__
@@ -94,25 +96,16 @@ __Quote.java__
         private Value value; // composite
         public Quote() {
         }
-        public String getType() {
-            return type;
-        }
-        public void setType(String type) {
-            this.type = type;
-        }
-        public Value getValue() {
-            return value;
-        }
-        public void setValue(Value value) {
-            this.value = value;
-        }
+
         @Override
         public String toString() {
             return "Quote{" +
-                     "type='" + type + '\'' +
+                    "type='" + type + '\'' +
                     ", value=" + value +
                     '}';
         }
+        
+        getters/setters...
     }
 ```
 
@@ -188,36 +181,17 @@ __目標結果格式: cwbopendata.java__
     public class cwbopendata {
         @JacksonXmlProperty(localName = "identifier")
         private String identifier__;
+
         @JacksonXmlProperty(localName = "sender")
         private String sender;
+
         @JacksonXmlProperty(localName = "sent")
         private String sent;
+
         @JacksonXmlProperty(localName = "status")
         private String status;
-        public String getIdentifier__() {
-            return identifier__;
-        }
-        public void setIdentifier__(String identifier) {
-            this.identifier__ = identifier;
-        }
-        public String getSender() {
-            return sender;
-        }
-        public void setSender(String sender) {
-            this.sender = sender;
-        }
-        public String getSent() {
-            return sent;
-        }
-        public void setSent(String sent) {
-            this.sent = sent;
-        }
-        public String getStatus() {
-            return status;
-        }
-        public void setStatus(String status) {
-            this.status = status;
-        }
+       
+       getters/setters...
     }
 
 ```

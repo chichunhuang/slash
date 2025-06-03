@@ -8,6 +8,8 @@ keywords: [Spring,Restful,Wicket]
 > Spring4.x  
 
 * 參考 [Wicket 7.x 提供 RESTful Service 整合方式](https://github.com/wicketstuff/core/tree/master/wicketstuff-restannotations-parent)
+* [Spring Restful API 取值練習](./Spring_Remoting_Web_Service)
+* [Spring Restful API 練習](./Spring_Restful)
 
 ## Dependencies
 * wicketstuff-restannotations
