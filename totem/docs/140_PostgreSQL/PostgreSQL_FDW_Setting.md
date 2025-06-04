@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL FDW Setting
-description: PostgreSQL DB link 設定
+description: PostgreSQL Foreign Data Wrappers 設定
 keywords: [dblink,FDW,PostgreSQL]
 ---
 

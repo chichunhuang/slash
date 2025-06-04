@@ -15,10 +15,11 @@ keywords: [Spring,Restful]
 
 ## Container 設定
 
-___web.xml___
-
+* servlet 設定資源的 Base URI
 * resource: /restful/*
 * rest-servlet.xml
+
+___web.xml___
 
 ```xml
     <servlet-mapping>
@@ -43,8 +44,9 @@ ___web.xml___
 
 
 ## Controller 設定
-* scan restful 相關 annotations
-* 設定 json 格式的轉換
+
+* Spring framework : scan restful 相關 annotations
+* 決定採用 json 格式的相關轉換設定
 
 ___rest-servlet.xml___
 
@@ -59,7 +61,8 @@ ___rest-servlet.xml___
      http://www.springframework.org/schema/context/spring-context-3.0.xsd
      http://www.springframework.org/schema/mvc
      http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
-     <context:component-scan base-package="ngc.restful.controller" />
+     
+         <context:component-scan base-package="insect.totem.restful" />
       
          <!-- To enable @RequestMapping process on type level and method level -->
          <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
@@ -83,15 +86,16 @@ ___rest-servlet.xml___
 
 
 ## Controller 類別範例
+* 資源路徑的服務實際實作位置
 
 ```javascript
 
-    package ngc.restful.controller;
+    package insect.totem.restful.controller;
+    import insect.totem.restful.Employee;
     import org.springframework.stereotype.Controller;
     import org.springframework.web.bind.annotation.RequestMapping;
     import org.springframework.web.bind.annotation.RequestMethod;
     import org.springframework.web.bind.annotation.ResponseBody;
-    import ngc.restful.Employee;
 
     @Controller
     @RequestMapping("/members")
@@ -167,7 +171,7 @@ ___rest-servlet.xml___
 ## Entity
 
 ```javascript
-    package ngc.restful;
+    package insect.totem.restful;
     public class Employee {
         private long id;
         private String name;

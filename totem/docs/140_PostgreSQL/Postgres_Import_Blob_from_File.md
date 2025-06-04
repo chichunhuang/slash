@@ -27,6 +27,10 @@ ret:
 lo_import 123456
 ```
 
+```sql
+psql -U totem -d totem -c '\lo_import /home/server/uploading_file.txt';
+```
+
 # PostgreSQL Client side psql 執行檔案上傳方式
 
 * __psql__ 下新檔上傳方式:

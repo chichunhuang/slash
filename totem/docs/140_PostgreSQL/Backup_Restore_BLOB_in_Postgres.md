@@ -23,6 +23,7 @@ psql -U doraemon -d doraemon -c '\lo_export given_oid /tmp/download_file.csv '
 
 ## __匯入__ 單一檔案並取得 loid 範例<span id="single-clause-import"></span>
 * 後續須再將 OID 指到對應 table column
+
 ```sql
 psql -U doraemon -d doraemon -c '\lo_import /tmp/import_file.txt'
 
