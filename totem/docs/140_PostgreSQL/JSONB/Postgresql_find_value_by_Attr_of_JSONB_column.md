@@ -1,6 +1,6 @@
 ---
-title: PostgreSQL 由屬性名查 JSONB 屬性值
-description: PostgreSQL find value by JSONB Attribute Name
+title: PostgreSQL 由 key 名查 JSONB 值
+description: PostgreSQL find value by JSONB Attribute Key
 keywords: [JSONB,PostgreSQL]
 ---
 
