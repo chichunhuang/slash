@@ -1,6 +1,6 @@
 ---
-title: SQL Shell psql Basic
-description: SQL Shell psql 基本使用
+title: SQL Shell psql 基本使用
+description: SQL Shell psql Basic
 keywords: [psql,SQL Shell,PostgreSQL]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: PostgreSQL Format JSONB Object
+title: PostgreSQL JSONB 內容縮排
 description: PostgreSQL Format JSONB Object
 keywords: [JSONB,jsonb_pretty,PostgreSQL]
 ---

@@ -1,5 +1,5 @@
 ---
-title: PostgreSQL string_agg Function
+title: PostgreSQL string_agg 函式
 description: PostgreSQL批次合併group by後,組內資料
 keywords: [postgresql,string_agg]
 ---

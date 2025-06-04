@@ -1,6 +1,6 @@
 ---
-title: PostgreSQL Update JSONB Column
-description: 更改 PostgreSQL JSONB 欄位資料值
+title: PostgreSQL JSONB 欄位資料值更改
+description: PostgreSQL Update JSONB Column
 keywords: [JSONB,PostgreSQL]
 ---
 

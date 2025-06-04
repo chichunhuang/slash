@@ -1,6 +1,6 @@
 ---
-title: Parallel Query in PostgreSQL
-description: Parallel_Query_in_PostgreSQL
+title: PostgreSQL 平行查詢
+description: Parallel Query in PostgreSQL
 keywords: [postgresql,Parallel Query]
 ---
 

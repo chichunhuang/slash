@@ -1,6 +1,6 @@
 ---
-title: PostgreSQL find value by Attr from JSONB
-description: PostgreSQL find value from JSONB column
+title: PostgreSQL 由屬性名查 JSONB 屬性值
+description: PostgreSQL find value by JSONB Attribute Name
 keywords: [JSONB,PostgreSQL]
 ---
 

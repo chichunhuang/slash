@@ -1,6 +1,6 @@
 ---
-title: PosgreSQL copy CSV to table
-description: PosgreSQL 資料匯出成 CSV
+title: PosgreSQL 資料匯出成 CSV
+description: PosgreSQL copy CSV to table
 keywords: [postgresql,copy,CSV]
 ---
 

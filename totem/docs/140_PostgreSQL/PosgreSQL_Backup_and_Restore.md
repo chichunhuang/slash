@@ -1,6 +1,6 @@
 ---
-title: PosgreSQL Backup and Restore
-description: PosgreSQL 備份與還原範例
+title: PosgreSQL 備份與還原範例
+description: PosgreSQL Backup and Restore
 keywords: [backup,restore,postgresql]
 ---
 
