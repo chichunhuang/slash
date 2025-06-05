@@ -1,6 +1,6 @@
 ---
 title: pgAdmin 使用 dblink
-description: PosgreSQL DB link
+description: PostgreSQL DB link
 keywords: [postgresql,dblink]
 ---
 

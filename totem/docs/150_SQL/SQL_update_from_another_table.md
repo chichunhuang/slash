@@ -77,7 +77,7 @@ keywords: [SQL,update]
 </pre>
 
 
-##  <span style={{color: '#FF1100'}}>__小心相似語法__</span>: : 無新值清空 <span id="update_to_null">&nbsp;</span>
+##  <span style={{color: '#FF1100'}}>__小心相似語法__</span>: 無新值清空 <span id="update_to_null">&nbsp;</span>
 * 下面的範例 <code>__set value__</code> 片段多加 <code>__select__</code> 關鍵字，與上方範例作用完全不同。
 * 此語法是，___Target 逐一查找 Source，若查無 Source 則當缺值更新 Target___。
     * 當 Source 中查無 Target 所要的 mapping record 後，仍會進行資料更新。也就是清除。

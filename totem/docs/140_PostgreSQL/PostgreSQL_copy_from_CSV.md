@@ -1,6 +1,6 @@
 ---
-title: PosgreSQL 自 CSV 檔匯入資料
-description: PosgreSQL copy from CSV
+title: PostgreSQL 自 CSV 檔匯入資料
+description: PostgreSQL copy from CSV
 keywords: [postgresql,copy,CSV]
 ---
 
@@ -36,5 +36,5 @@ psql -U postgres -d totem -p xxxx -h xxx.xxx.xxx.xxx -f import.sql
 ```
 
 # 參考
-* [PosgreSQL 資料匯出成 CSV](./PosgreSQL_copy_CSV_to_table)
-* [PosgreSQL:直接於 SQL Shell (psql) 執行 sql 檔](./SqlShell_psql_Basic)
+* [PostgreSQL 資料匯出成 CSV](./PostgreSQL_copy_CSV_to_table)
+* [PostgreSQL:直接於 SQL Shell (psql) 執行 sql 檔](./SqlShell_psql_Basic)
