@@ -1,16 +1,16 @@
 ---
-title: Insert Into v.s. Select Into
-description: Insert-Into 與 Select-Into 使用上差異
+title: INSERT-INTO 與 SELECT-INTO 使用上差異
+description: Insert Into v.s. Select Into
 keywords: [SQL,copy,insert into,select into]
 ---
 
-# INSERT-INTO 與 SELECT-INTO 使用上差異
+## INSERT-INTO 與 SELECT-INTO 使用上差異
 
 > INSERT-INTO 與 SELECT-INTO 猛一看似乎都可以用來將資料表對考 <br/>
 > 但實務上，卻有些差異。 <br/>
 >  若要 __完整__ 複製還是選擇 select into 為佳。 <br/>
 
-# INSERT INTO
+## INSERT INTO
 
 > insert into 是用來 __copy then insert__ 到另一個 table <br/>
 > => 背後是每筆 record 依次 insert <br/>
@@ -34,7 +34,7 @@ INSERT INTO APPLICATION_FORM (ID, APPLIER, ISSUE_DATE, TYPE)
 
 
 
-# SELECT INTO
+## SELECT INTO
 
 > Select into 可用來 copy table  <br/>
 > => 背後是整個 table __單次性轉移__  <br/>

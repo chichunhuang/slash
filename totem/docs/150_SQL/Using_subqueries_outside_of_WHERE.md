@@ -1,6 +1,6 @@
 ---
-title: Using subqueries outside of WHERE
-description: 在 sql from 中使用子查詢 
+title: 在 sql from 中使用子查詢
+description: Using subqueries outside of WHERE
 keywords: [Nested select,subquery]
 ---
 
