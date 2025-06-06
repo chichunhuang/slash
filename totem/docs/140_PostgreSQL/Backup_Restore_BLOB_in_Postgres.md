@@ -9,7 +9,7 @@ keywords: [postgresql,lob,restore,backup]
 * [PostgreSQL 上傳 Blob 檔案](./Postgres_Import_Blob_from_File)
 
 
-# POSTGRESQL BLOB 備份與回存基本範例
+# PostgreSQL Blob 備份與回存基本範例
 ## __匯出__ 單一 LOB 檔案至指定位置範例<span id="single-clause-export"></span>
 
 ```sql
@@ -47,7 +47,7 @@ lo_import 123456
 1. 導入事先備份的 blob 並更新 application_form 的 loid (stands for: lob object id)
 
 
-## 含 BLOB COLUMN 的 TABLE 備份
+## 含 Blob Column 的 Table 備份
 * 需使用 pg_dump 指令  
 
 ```sql
@@ -55,7 +55,7 @@ pg_dump -t application_form
 ```
 
 
-## 查詢 SCHEMA 專案下的 LOB 範例
+## 查詢 Schema 專案下的 Lob 範例
 * 查詢 DB 指定 Schema 下所有的 LOB objects  
 * 關鍵在於 __pg_largeobject__ 這個內建的 table  
 
@@ -64,9 +64,9 @@ psql -U postgres -d doraemon -c 'select loid from pg_largeobject'
 ```
 
 
-# DORAEMON 專案匯出範例
+# Doraemon 專案匯出範例
 
-## 查詢 DORAEMON 專案的 APPLICATION_FORM TABLE
+## 查詢 Doraemon 專案的 Application_Form TABLE
 
 ```sql
 psql -U postgres -d doraemon -c 'select id, file, file_name from application_form where file is not null order by id'
@@ -83,9 +83,9 @@ psql -U postgres -d doraemon -c 'select id, file, file_name from application_for
 
 ```
 
-# LOB TABLE 匯出並匯入到另一個 TABLE 練習
+# Lob Table 匯出並匯入到另一個 Table 練習
 
-## 匯出 TABLE APPLICATION_FORM 的 LOB OBJECT ID 範例
+## 匯出 Table Application_Form 的 Lob Object ID 範例
 
 * 註(bash shell): eval is a built-in shell command used to evaluate and execute strings as a shell command.  
 * 將 pk, oid, filenmae 串接後組成[單一 BLOB 檔匯出句子](#single-clause-export)  
@@ -103,7 +103,7 @@ done
 ```
 
 
-## 匯入 TABLE 的 LOB OBJECT ID 範例
+## 匯入 Table 的 Lob Object ID 範例
 
 * 依序將檔案匯入並依序取得檔案的 LOID (lo_import 函數)
 * 參考[單一 BLOB 檔匯入句子](#single-clause-import)
@@ -120,7 +120,7 @@ done
 ```
 
 
-## 清除 DORAEMON 未使用的 LOB
+## 清除 Doraemon 未使用的 Lob
 
 * 使用 vacuumlo 指令，用來清除 pg_largeobject 無人使用的孤兒資料。
 
