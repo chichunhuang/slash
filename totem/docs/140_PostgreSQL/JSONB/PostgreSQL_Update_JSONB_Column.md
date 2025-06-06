@@ -17,7 +17,9 @@ keywords: [JSONB,PostgreSQL]
 
 # 查詢 JSONB 屬性資料
 * 使用 ->> 符號進行 JSONB 欄位下屬性值查詢
-
+    * ->> 回傳 String
+    * ->  回傳 Json Object
+    
 ```sql
   select raw_data ->> 'School' as "School" from Entrance_Examination where Admission_Ticket = 'AAA001';
 ```
@@ -33,8 +35,7 @@ keywords: [JSONB,PostgreSQL]
 * 注意: jsonb column 至少要先有一個空物件(不能為 null)才能進行 set。  
 * create_if_missing 預設為 true，當無此 attribute 時，update 變 insert。  
 
-
-  語法:  
+__jsonb_set 語法:__  
   
 ```sql
 	jsonb_set(
@@ -58,7 +59,7 @@ keywords: [JSONB,PostgreSQL]
 ```
 
 
-  * 將學校改成 NCHU，並設定分校為 Taipei (School 改一個 JSON 結構)
+* 將學校改成 NCHU，並設定分校為 Taipei (School 改一個 JSON 結構)
   
 ```sql
    update Entrance_Examination set raw_data = jsonb_set( raw_data, '{School}', '{"Campus":"NCHU", "Branch_Campus":"Taipei"}' )

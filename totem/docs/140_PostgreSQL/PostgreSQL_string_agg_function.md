@@ -4,6 +4,9 @@ description: PostgreSQL批次合併group by後,組內資料
 keywords: [postgresql,string_agg]
 ---
 
+>  string_agg 函式的功用: 合併多個 records 的同一 column 值
+
+
 # PostgreSQL string_agg() 合併多筆 Records 的同欄位值
 * 批次合併 group by 後,每單一組內資料。
 * 呈現 group by 結果的集合資訊。  
@@ -66,6 +69,7 @@ select b.Author_ID, a.author,
 # string_agg expression 參數範例
 
 * 包含取 JSONB values
+
 ```sql
   string_agg(jsonb_column->>'key_name', ',') as alias_name  
     

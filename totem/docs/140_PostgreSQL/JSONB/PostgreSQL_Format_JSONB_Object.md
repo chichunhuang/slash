@@ -10,6 +10,7 @@ keywords: [JSONB,jsonb_pretty,PostgreSQL]
 
 
 語法:  
+* jsonb_pretty()
 
 ```sql
 	jsonb_pretty(json_value JSONB) -> TEXT
