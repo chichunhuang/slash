@@ -32,7 +32,7 @@ keywords: [postgresql,vacuum]
     * 空間不足: 指的是將被標記可重用的空間還給作業系統。這是硬碟空間不足時的緊急應變措施。與 DB 效能較無關。
     * 時間衝突: autovacuum 與使用者使用高峰期相衝突，而被暫緩觸發或終止。
     
-## Vacuum 語法
+## Vacuum 語法: Table <code>__vacuum__</code>
 * [參考來源](https://docs.postgresql.tw/reference/sql-commands/vacuum)    
 * option 包含下列:
     * __FULL__ : 重謄資料，完全鎖定造成 DB 無法使用 
@@ -48,6 +48,17 @@ keywords: [postgresql,vacuum]
 
 -- example    
     VACUUM (VERBOSE, ANALYZE) table_insect_totem;
+```
+
+## Vacuum 語法: Database <code>__vacuumdb__</code>
+* 下列指令是對 database 所有的 table 做 vacuum 與 analyze，不會造成 table lock
+* 參數
+    * -U: Role
+    * -d: database 名稱 
+
+```sql
+-- syntax
+    vacuumdb -h localhost -U roleUser -d databaseName -v -z
 ```
 
 ## 指令
@@ -122,16 +133,6 @@ __針對對單一 Table 調整參數__
     );    
 ```
 
-__查詢參數設定值__
-* pg_class : 確認特定資料表的客製化設定
-* relname : 填入 table name
-* reloptions : 陣列形式呈現這些設定
-* 若回傳 null 代表採用全域設定
-
-```sql
-    SELECT relname, reloptions FROM pg_class WHERE relname = 'event_logs';
-```
-
 __恢復預設值__
 
 ```sql
@@ -144,3 +145,41 @@ __恢復預設值__
         autovacuum_analyze_scale_factor = NULL
     );   
 ```
+
+
+## 查詢參數設定值
+* pg_class : 確認特定資料表的客製化設定
+* relname : 填入 table name
+* reloptions : 陣列形式呈現這些設定
+* 若回傳 null 代表採用全域設定
+
+```sql
+    SELECT relname, reloptions FROM pg_class WHERE relname = 'event_logs';
+```
+
+
+## 查詢 Vacuum 紀錄
+* 此範例將多資訊整成一張表
+
+```sql
+    SELECT psut.relname,
+         to_char(psut.last_vacuum, 'YYYY-MM-DD HH24:MI') as last_vacuum,
+         to_char(psut.last_autovacuum, 'YYYY-MM-DD HH24:MI') as last_autovacuum,
+         to_char(psut.last_analyze, 'YYYY-MM-DD HH24:MI') as last_analyze,
+         to_char(psut.last_autoanalyze, 'YYYY-MM-DD HH24:MI') as last_autoanalyze,
+         to_char(pg_class.reltuples, '9G999G999G999') AS n_tup, --row count
+         to_char(psut.n_dead_tup, '9G999G999G999') AS dead_tup, --delete count, can reuse
+         to_char(CAST(current_setting('autovacuum_vacuum_threshold') AS bigint)
+             + (CAST(current_setting('autovacuum_vacuum_scale_factor') AS numeric)
+                * pg_class.reltuples), '9G999G999G999') AS av_threshold,
+         CASE
+             WHEN CAST(current_setting('autovacuum_vacuum_threshold') AS bigint)
+                 + (CAST(current_setting('autovacuum_vacuum_scale_factor') AS numeric)
+                    * pg_class.reltuples) < psut.n_dead_tup
+             THEN '*'
+             ELSE ''
+         END AS expect_av
+     FROM pg_stat_user_tables psut
+         JOIN pg_class on psut.relid = pg_class.oid
+     ORDER BY pg_class.reltuples desc;
+``` 
