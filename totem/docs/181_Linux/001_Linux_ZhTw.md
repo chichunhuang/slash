@@ -39,7 +39,7 @@ keywords: [Linux,Font]
 ```
  
     
-## Linux 下為 Java 設定中文字型
+## Linux 下為 Java 設定中文字型 <span id="Java_Font_install">&nbsp;</span>
 > Java 使用自己的字型設定檔。所以讓 Java 直接識別系統字型，也可以修改 Java 字型對應設定。
 
 * 為了讓 Swing, AWT, PDF 輸出, JFreeChart 等能正確顯示中文
@@ -113,19 +113,7 @@ __依實際情形加入相關設定__
     alias.google_font=Noto Sans CJK TC
 ```
 
-## 中文參考字型
-* [Google Noto Sans CJK](https://fonts.google.com/noto#sans-hans)
-
-```bash
-    wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKtc-hinted.zip
-    
-    unzip NotoSansCJKtc-hinted.zip
-```
-
-* [思源黑體](https://github.com/adobe-fonts/source-han-sans/releases)
-
-
-## fontconfig.properties 介紹
+## fontconfig.properties 介紹 <span id="java_fontconfig">&nbsp;</span>
 * <code>__fontconfig.properties__</code>: Java 用來管理字型映射與選擇的設定檔
 * 預設設定檔位置:
     * <span style={{color: '#0044FF'}}>__$JAVA_HOME/lib/fontconfig.properties__</span>
@@ -244,3 +232,14 @@ __syntax__
 ```
     Font font = new Font("Serif", Font.PLAIN, 14);
 ```
+
+## 中文參考字型
+* [Google Noto Sans CJK](https://fonts.google.com/noto#sans-hans)
+
+```bash
+    wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKtc-hinted.zip
+    
+    unzip NotoSansCJKtc-hinted.zip
+```
+
+* [思源黑體](https://github.com/adobe-fonts/source-han-sans/releases)
