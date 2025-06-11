@@ -1,7 +1,7 @@
 ---
 title: Tomcat 效能調教
 description: Tomcat Performernce Tuning
-keywords: [Tomcat，Performernce]
+keywords: [Tomcat,Performernce]
 ---
 
 筆記來源: [http://www.techbrainwave.com/?p=836](http://www.techbrainwave.com/?p=836)  
