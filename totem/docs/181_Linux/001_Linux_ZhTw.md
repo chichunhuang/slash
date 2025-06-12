@@ -138,7 +138,7 @@ __設定檔範例__
 
 ```
 
-### 搜索順序 Search Sequences 
+### 搜索順序 <code>__sequence__</code>
 __syntax__
 
 ``` 
@@ -159,7 +159,7 @@ __syntax__
     * 設定檔中可以有多個 sequence 設定，依序查找。
         * 上述範例意思為: 先以 alphabetic 顯示，弱無法顯示改找 uming，再找 lihei。
 
-### 語言代號與字型檔關聯設定
+### 語言代號與字型檔關聯設定 <code>__filename__</code>
 * 非預設的字型檔，可以取一個別名。並附加至指定的 語言群組。
 
 __syntax__
@@ -177,7 +177,7 @@ __syntax__
 * 範例說明 : 以 google_font 做為路徑\(字型檔) NotoSansCJKtc-Regular.otf 的別名
 
 
-### alias.\<my_alias>=\<Font Family Name>
+### 字型作業系統歸類分組 <code>__alias__</code>
 * __alias__ : 關鍵字 - 將自定的語言代號 my_alias 歸到 <span style={{color: '#0044FF'}}> __真實的字型分類__ </span> \(字型本身在作業系統中的名字)
 * my_alias : 某個自行安裝的字型
 * font_family_name : my_alias 在作業系統中的顯示名稱。實際名稱內嵌於字型檔案內、系統已定義，此處只是將自行安裝的字體歸類用。
@@ -234,6 +234,7 @@ __syntax__
 ```
 
 ## 中文參考字型
+* [思源黑體](https://github.com/adobe-fonts/source-han-sans/releases)
 * [Google Noto Sans CJK](https://fonts.google.com/noto#sans-hans)
 
 ```bash
@@ -241,5 +242,3 @@ __syntax__
     
     unzip NotoSansCJKtc-hinted.zip
 ```
-
-* [思源黑體](https://github.com/adobe-fonts/source-han-sans/releases)
