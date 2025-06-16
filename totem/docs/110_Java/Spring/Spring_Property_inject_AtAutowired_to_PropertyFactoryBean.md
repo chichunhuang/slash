@@ -20,7 +20,7 @@ keywords: [Spring,Properties,PropertyFactoryBean,Autowired]
             <value>classpath:config.properties</value>
         </property>
     </bean>
-```    
+```
  
 
 ## Java 端取出屬性檔範例: 
@@ -51,7 +51,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 	            throw new RuntimeException("unexpected", e);
 	        }
     }
-```     
+```
 
 ## 其他 Properties Location xml 設定的其他方式
 參考: 
