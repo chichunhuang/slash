@@ -123,7 +123,8 @@ done
 ## 清除 Doraemon 未使用的 Lob
 
 * 使用 vacuumlo 指令，用來清除 pg_largeobject 無人使用的孤兒資料。
-
+    * -v 是 verbose，最後面接的是 database_name
+    
 ```sql
 
 vacuumlo -U doraemon -v doraemon

@@ -5,7 +5,7 @@ keywords: [postgresql,vacuum]
 ---
 
 > PostgreSQL 在更新或刪除資料時會產生 dead tuples。  
-> VACUUM 主要負責回收 dead tuples 所佔用的磁碟空間，並更新查詢策略 \(Query Planner) 所需的統計資訊。  
+> Vacuum 主要負責回收 dead tuples 所佔用的磁碟空間，並更新查詢策略 \(Query Planner) 所需的統計資訊。  
 > 以提升資料庫效能，並降低磁碟佔用空間。   
 
 * PostgreSQL 在 8.1 版後開始提供自動執行空間清理與回收機制 \(autovacuum)。 

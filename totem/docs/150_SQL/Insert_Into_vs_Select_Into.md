@@ -48,4 +48,4 @@ SELECT column1, column2, column3, ...
 ```
 
 
-* 須注意 select 出的是 column value, 不可使用 function (ex: nexval('seq_of_table_X'))，因為是單次執行，所以 function 只會執行一次。而造成所有 records 的值都相同。
+* 須注意 select 出的是 column value, 不可使用 function (ex: nextval('seq_of_table_X'))，因為是單次執行，所以 function 只會執行一次。而造成所有 records 的值都相同。
