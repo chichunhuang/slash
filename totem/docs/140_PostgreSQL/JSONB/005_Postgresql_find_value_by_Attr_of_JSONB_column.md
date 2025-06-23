@@ -1,10 +1,8 @@
 ---
-title: PostgreSQL 由 key 名查 JSONB 值
-description: PostgreSQL find value by JSONB Attribute Key
+title: JSONB 查詢 key 值
+description: PostgreSQL 由 key 查 JSONB 欄位值
 keywords: [JSONB,PostgreSQL]
 ---
-
-# PostgreSQL find value from JSONB column
 
 > JSONB :  
 > PostgreSQL 中的一種特殊欄位，儲存的是 JSON 型態但是 Compiled 過的 binary 資料。  
@@ -13,6 +11,8 @@ keywords: [JSONB,PostgreSQL]
 > 因此主要用在，少編輯但卻需要經常查詢的請境下。
 
 # 查詢 JSONB 資料內容方式範例
+* <code>__->>__</code>: 這語法回傳的是 value。已轉換為值，如 formatted String，回傳結果已經是 String，無法使用 jsonb 工具語法再往下探。  
+* <code>__->__</code>: 此語法回傳的是 jsonb object，可以再往下查詢。
   
   Syntax:  
   

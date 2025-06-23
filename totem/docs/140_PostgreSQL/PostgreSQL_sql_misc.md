@@ -5,7 +5,7 @@ keywords: [PostgreSQL]
 ---
 
 > 雜七雜八指令  
-
+* [Postgresql 版本查詢](#pg_version)
 * [Table 欄位長度](#character_maximum_length)
 * [Postgresql 連線數查詢](#online_connection)
 * [Postgresql function 是否存在語法](#functions)
@@ -17,6 +17,12 @@ keywords: [PostgreSQL]
 * [textregexeq 格式檢查](#textregexeq)
 * [以 vacuumlo function 移除不再使用的 lob 所占空間](#vacuumlo)
 * [以 coalesce function 返回第一個非空的欄位](#coalesce)
+
+### Postgresql 版本查詢 <span id="pg_version">&nbsp;</span>
+
+```sql
+    SELECT version();
+```
 
 ### Table 欄位長度 <span id="character_maximum_length">&nbsp;</span>
 

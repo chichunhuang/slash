@@ -4,19 +4,19 @@ description: PostgreSQL Format JSONB Object
 keywords: [JSONB,jsonb_pretty,PostgreSQL]
 ---
 
-# Format PostgreSQL JSONB Object
+## Format PostgreSQL JSONB Object
 基本上 PostgreSQL JSONB 的回傳結果是無序的，且未有換行或縮排。因此不意閱讀。  
 若要暫時將查詢結果進行換行與縮排則可使用: jsonb_pretty 來自動縮排查詢結果。  
 
 
-語法:  
+### 語法:  
 * jsonb_pretty()
 
 ```sql
 	jsonb_pretty(json_value JSONB) -> TEXT
 ```
 
-example: 
+### example: 
 
 * 情境: Table 入學考試資料表(Entrance_Examination)
 
@@ -41,5 +41,5 @@ example:
 ```
 
 
-# reference
+### reference
 * [https://www.sqliz.com/postgresql-ref/jsonb_pretty/](https://www.sqliz.com/postgresql-ref/jsonb_pretty/)
