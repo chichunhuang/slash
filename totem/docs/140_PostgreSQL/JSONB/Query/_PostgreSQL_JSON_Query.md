@@ -20,7 +20,7 @@ keywords: [JSONB,Query,PostgreSQL]
 
 # PostgreSQL 查詢 JSON 內容相關操作子
 * -> 
-* ->>  
+* ->>    
 * #>  
 * #>>  
 

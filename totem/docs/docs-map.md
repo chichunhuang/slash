@@ -5,7 +5,7 @@ sidebar_position: 1
 # Document List (docs)
 
 
-最後更版時間:Wed May 28 08:53:56 CST 2025
+最後更版時間:Mon Jun 23 16:24:35 CST 2025
 
 
 * [docs-map.md](/docs/docs-map)
@@ -17,6 +17,9 @@ sidebar_position: 1
 * [Jenkins Code Coverage - Jenkins Code Coverage 設定](/docs/CICD/Jenkins_Code_Coverage)
 * [Jenkins 安裝及設定 - Jenkins 安裝及設定](/docs/CICD/Jenkins_install)
 ## Git
+* [Git 建立新專案 eclipse - Git create new reop by Eclipse](/docs/Git/Git_New_Repo_eclipse)
+* [Git 建立新專案 vscode - Git create new reop by vscode](/docs/Git/Git_New_Repo_vscode)
+* [Git 使用情境 - Git 使用情境](/docs/Git/Git_Scenario)
 * [Git Log 指令 - ISMS 比較版本差異](/docs/Git/Git_log)
 ## Google
 * [Google App Script 取 File ID - Google App Script 取 File ID](/docs/Google/Google_App_Script_FileIDs)
@@ -24,15 +27,18 @@ sidebar_position: 1
 * [HTML 關閉自動完成 - HTML autocomplete 相關技巧](/docs/HTML/HTML_Autocomplete)
 ## Java
 * [Log4j EmailAppender Configuration - 當log4j looger紀錄指定等級的訊息時，發信通知特定人員](/docs/Java/ExceptionMailFromLog4j)
+* [Hibernate 一級二級快取 - Hibernate Session Factory Cache](/docs/Java/Hibernate_Cache)
 * [Excel 開啟 CSV 發生中文亂碼 - CSV 增加 UTF-8 BOM](/docs/Java/Java_CSV_UTF8_BOM)
 * [Java 取 IP - 伺服器 客端 IP 取得方式](/docs/Java/Java_IP)
 * [OpenCSV 與 CSVParser 比較 - OpenCSV and CSVParser Comparison](/docs/Java/Java_OpenCSV_CSVParser)
 * [Java POI 讀取 Excel - Java POI 讀取 2007 後的 Excel](/docs/Java/Java_POI_Excel)
+* [Java 中文字型設定 - Java 中文字型設定](/docs/Java/Java_ZhTw_Font)
 * [Java 壓縮檔內的中文檔案名亂碼 - Java is Han String](/docs/Java/Java_Zip_Chinese)
 * [Java 解壓縮並加密 - Reading pwd protected zip file](/docs/Java/Java_Zip_with_Pwd)
 * [Java 漢字辨別 - Java is Han String](/docs/Java/Java_is_Han_String)
-* [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/Java/Session_Fixation)
+* [Session Fixation - Session Fixation](/docs/Java/Session_Fixation)
 * [非正規Session Fixation處理 - 降低風險，並未完全即時](/docs/Java/Session_Fixation_Wicket)
+* [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/Java/Web_Auto_Logout)
 ### Cypher
 * [Java AES 加解密 - 以 Java AES 進行資料加解密](/docs/Java/Cypher/Java_Aes_Cipher)
 * [Java Cipher Intro - Java 加密方式簡介](/docs/Java/Cypher/Java_Encryption)
@@ -43,37 +49,54 @@ sidebar_position: 1
 ### JSON
 * [Gson fromJson 拋出 ClassCastException - Gson.fromJson throws java.lang.ClassCastException](/docs/Java/JSON/GSON_ClassCastException)
 ### Spring
+* [Spring 利用 AOP 於異常發生時寄通知信 - Spring 利用 AOP 於異常發生時寄通知信](/docs/Java/Spring/Spring_AOP_Exception_Mail)
+* [Spring 搭配使用 DB Dialect - Spring with PostgreSQL Dialect](/docs/Java/Spring/Spring_Hibernate_Postgresql_Dialect)
 * [Spring 下 Properties 檔注入與使用範例 - Spring 下 Properties 檔注入與使用範例](/docs/Java/Spring/Spring_List_Proerties)
 * [Spring Properties to PropertyFactoryBean by @Autowired - Spring Properties to PropertyFactoryBean by @Autowired](/docs/Java/Spring/Spring_Property_inject_AtAutowired_to_PropertyFactoryBean)
 * [Spring Properties to Map by @Resource - Spring Properties to Map by @Resource](/docs/Java/Spring/Spring_Property_inject_AtResource_to_Map)
+* [Spring Restful API 取值練習 - Spring Remoting and Web Service](/docs/Java/Spring/Spring_Remoting_Web_Service)
+* [Spring Restful API 練習 - Spring Restful API 練習](/docs/Java/Spring/Spring_Restful)
+* [Spring Wicket Restful - Spring Wicket Restful API 整併練習](/docs/Java/Spring/Spring_Wicket_Restful)
 ## Javascript
 * [JavaScript 命名慣例 - JavaScript Naming Conventions](/docs/Javascript/JS_Naming_Conventions)
 * [JS HTML input 自動全選 - Javascript Template input selects all on focus](/docs/Javascript/Textfield_Select)
 ## Mail
 * [信件附件中文檔名亂碼 - MimeUtility Attatch Garbled](/docs/Mail/Mail_MimeUtility_Attatch_Garbled)
 ## PostgreSQL
-* [PostgreSQL Blob 備份與回存 - Backup and Restore BLOB in PostgreSQL](/docs/PostgreSQL/Backup_Restore_BLOB_in_Postgres)
-* [Parallel Query in PostgreSQL - Parallel_Query_in_PostgreSQL](/docs/PostgreSQL/Parallel_Query_in_PostgreSQL)
-* [PosgreSQL Backup and Restore - PosgreSQL 備份與還原範例](/docs/PostgreSQL/PosgreSQL_Backup_and_Restore)
-* [PosgreSQL copy CSV to table - PosgreSQL 資料匯出成 CSV](/docs/PostgreSQL/PosgreSQL_copy_CSV_to_table)
-* [PosgreSQL copy from CSV - 自 CSV 檔匯入資料](/docs/PostgreSQL/PosgreSQL_copy_from_CSV)
-* [PostgreSQL FDW Setting - PostgreSQL DB link 設定](/docs/PostgreSQL/PostgreSQL_FDW_Setting)
+* [PostgreSQL 備份與還原 Blob - Backup and Restore BLOB in PostgreSQL](/docs/PostgreSQL/Backup_Restore_BLOB_in_Postgres)
+* [PostgreSQL 平行查詢 - Parallel Query in PostgreSQL](/docs/PostgreSQL/Parallel_Query_in_PostgreSQL)
+* [PostgreSQL 備份與還原範例 - PostgreSQL Backup and Restore](/docs/PostgreSQL/PosgreSQL_Backup_and_Restore)
+* [Postgres 允許 Client 連線設定 - Postgres 允許 Client 連線相關設定](/docs/PostgreSQL/PostgreSQL_Client_Access)
+* [pgAdmin 使用 dblink - PostgreSQL DB link](/docs/PostgreSQL/PostgreSQL_DB_link)
+* [PostgreSQL FDW DB link設定 - PostgreSQL Foreign Data Wrappers 設定](/docs/PostgreSQL/PostgreSQL_FDW_Setting)
 * [PostgreSQL SQL 日誌紀錄 - PostgreSQL Query Log](/docs/PostgreSQL/PostgreSQL_Query_Log)
-* [PostgreSQL string_agg Function - PostgreSQL批次合併group by後](/docs/PostgreSQL/PostgreSQL_string_agg_function)
+* [PostgreSQL Sequence 操作 - PostgreSQL Sequence](/docs/PostgreSQL/PostgreSQL_Sequence)
+* [PostgreSQL Vacuum 操作 - PostgreSQL Vacuum](/docs/PostgreSQL/PostgreSQL_Vacuum)
+* [PostgreSQL 資料匯出成 CSV - PostgreSQL copy CSV to table](/docs/PostgreSQL/PostgreSQL_copy_CSV_to_table)
+* [PostgreSQL 自 CSV 檔匯入資料 - PostgreSQL copy from CSV](/docs/PostgreSQL/PostgreSQL_copy_from_CSV)
+* [PostgresSQL psql 雜項指令 - PostgresSQL psql misc](/docs/PostgreSQL/PostgreSQL_psql_misc)
+* [PostgresSQL 雜項指令 - PostgresSQL misc](/docs/PostgreSQL/PostgreSQL_sql_misc)
+* [PostgreSQL string_agg 函式 - PostgreSQL批次合併group by後](/docs/PostgreSQL/PostgreSQL_string_agg_function)
 * [PostgreSQL DB 重建指令 - PostgreSQL DB 重建指令](/docs/PostgreSQL/PostgreSQL_termination)
+* [PostgreSQL 資料庫 index - PostgreSQL index](/docs/PostgreSQL/PostgreSql_index)
 * [PostgreSQL 匯出 Blob 欄位 - Postgres Export Blob to File](/docs/PostgreSQL/Postgres_Export_Blob_to_File)
 * [PostgreSQL 上傳 Blob 檔案 - Postgres Import Blob from File](/docs/PostgreSQL/Postgres_Import_Blob_from_File)
-* [SQL Shell psql Basic - SQL Shell psql 基本使用](/docs/PostgreSQL/SqlShell_psql_Basic)
+* [SQL Shell psql 基本使用 - SQL Shell psql Basic](/docs/PostgreSQL/SqlShell_psql_Basic)
 ### JSONB
-* [PostgreSQL Format JSONB Object - PostgreSQL Format JSONB Object](/docs/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
-* [PostgreSQL Update JSONB Column - 更改 PostgreSQL JSONB 欄位資料值](/docs/PostgreSQL/JSONB/PostgreSQL_Update_JSONB_Column)
-* [PostgreSQL find value by Attr from JSONB - PostgreSQL find value from JSONB column](/docs/PostgreSQL/JSONB/Postgresql_find_value_by_Attr_of_JSONB_column)
-## Server
-* [Jenkins Debian 安裝設定紀錄 - Jenkins Debian 安裝設定紀錄](/docs/Server/JenkinsCIServerOnDebian)
+* [PostgreSQL Jsonb 雜項紀錄 - Jsonb 相關雜七雜八都記這](/docs/PostgreSQL/JSONB/PostgreSQL_Jsonb_misc)
+* [JSONB 查詢 key 值 - PostgreSQL 由 key 查 JSONB 欄位值](/docs/PostgreSQL/JSONB/Postgresql_find_value_by_Attr_of_JSONB_column)
+* [JSONB 更改欄位資料值 - PostgreSQL JSONB 欄位資料值更改](/docs/PostgreSQL/JSONB/PostgreSQL_Update_JSONB_Column)
+* [刪除 JSONB 資料 - PostgreSQL JSONB 欄位鍵值刪除](/docs/PostgreSQL/JSONB/PostgreSQL_Delete_attr)
+* [-> 與 ->> 查詢差異 - PosrgreSQL -> 與 ->> 運算子差異](/docs/PostgreSQL/JSONB/PosrgreSQL_JSON_Single_Double_Arrow)
+* [PostgreSQL JSONB 內容縮排 - PostgreSQL Format JSONB Object](/docs/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
+* [PostgreSQL Jsonb 硬碟占用空間 - Jsonb 資料比數與記憶體占用計算](/docs/PostgreSQL/JSONB/PostgreSQL_Size_Memory)
 ## SQL
 * [Insert from Select - Insert from select result](/docs/SQL/Insert_From_Selection_Values)
-* [Insert Into v.s. Select Into - Insert-Into 與 Select-Into 使用上差異](/docs/SQL/Insert_Into_vs_Select_Into)
-* [Using subqueries outside of WHERE - 在 sql from 中使用子查詢](/docs/SQL/Using_subqueries_outside_of_WHERE)
+* [INSERT-INTO 與 SELECT-INTO 使用上差異 - Insert Into v.s. Select Into](/docs/SQL/Insert_Into_vs_Select_Into)
+* [TableA 的內容修改 TableB - SQL Update from One Table to Another](/docs/SQL/SQL_update_from_another_table)
+* [在 sql from 中使用子查詢 - Using subqueries outside of WHERE](/docs/SQL/Using_subqueries_outside_of_WHERE)
+## Server
+* [Jenkins Debian 安裝設定紀錄 - Jenkins Debian 安裝設定紀錄](/docs/Server/JenkinsCIServerOnDebian)
 ## Tomcat
 * [隱藏 Tomcat 版本資訊 - ](/docs/Tomcat/Hide_Tomcat_Version)
 * [Tomcat 當前 Clients 連線數 - Tomcat App online connections](/docs/Tomcat/Tomcat_Client_Connections)
@@ -83,6 +106,9 @@ sidebar_position: 1
 * [Tomcat 自動切割 Log 檔 - Tomcat Log Rotate](/docs/Tomcat/Tomcat_Log_Rotate)
 * [Tomcat 效能調教 - Tomcat Performernce Tuning](/docs/Tomcat/Tomcat_Performernce_Tuning)
 * [Tomcat 編碼 - Tomcat encoding](/docs/Tomcat/Tomcat_encoding)
+## Linux
+* [Linux Java 中文字型設定 - Linux Java 中文字型設定](/docs/Linux/Linux_ZhTw)
+* [Linux 主機唯一碼 - Linux Machine ID](/docs/Linux/Linux_Machine_ID)
 ## Log4j
 * [Log4j 學習紀錄 - Log4j](/docs/Log4j/Log4j_Basic)
 * [Log4j2 學習紀錄 - Log4j2](/docs/Log4j/Log4j2)
@@ -191,6 +217,10 @@ sidebar_position: 1
 * [Rhinoceros Beetles - Insect-Totem Rhinoceros Beetles](/docs/Graphics/Rhino_01)
 * [Stag Beetle - Insect-Totem Stag Beetle](/docs/Graphics/Stag_Beetle_01)
 * [Stag Beetle-rainbow - Insect-Totem Stag Beetle-rainbow](/docs/Graphics/Stag_Beetle_Rainbow)
+#### T專案
+* [專案需求訪談與法遵相關 - 專案需求訪談與法遵相關](/docs/ISO/27001/T專案/專案需求訪談與法遵相關)
+* [資訊安全組織 - 資訊安全組織](/docs/ISO/27001/T專案/資訊安全組織)
+* [文件清單.md](/docs/ISO/27001/T專案/文件清單)
 ## GDPR
 * [Privacy Policy - Privacy Policy](/docs/GDPR/PrivacyPolicy_Eng)
 * [隱私權政策 - 中文版隱私權政策](/docs/GDPR/PrivacyPolicy_zh_tw)
