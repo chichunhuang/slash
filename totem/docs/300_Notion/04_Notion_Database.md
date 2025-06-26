@@ -47,7 +47,7 @@ _Notion Database Converts from Table_
     * AI translation 
      
 <span>
- {GoogleImage( '1zPfwINiHtmc1rjTMoOwWJkT4xbVrqFKg',  'insect_totem_logo_70x70.jpg', {width:'664px', height:'285px', hidden:true, degree:0})}
+ {GoogleImage( '1F7crE22_aRaiVGibgK23C8MTk6Rn2MEl',  'insect_totem_logo_70x70.jpg', {width:'664px', height:'285px', hidden:true, degree:0})}
 </span>
 
 ## [Notion DB View 種類](Notion_View)
