@@ -1,5 +1,5 @@
 ---
-title: JSONB 查詢 key 值
+title: 查詢 JSONB 欄位值
 description: PostgreSQL 由 key 查 JSONB 欄位值
 keywords: [JSONB,PostgreSQL]
 ---
@@ -10,9 +10,9 @@ keywords: [JSONB,PostgreSQL]
 > 但反過來說，在 __儲存時較花時間__ ，因為要先轉 mata data 所以相對上會比較耗時。  
 > 因此主要用在，少編輯但卻需要經常查詢的請境下。
 
-# 查詢 JSONB 資料內容方式範例
-* <code>__->>__</code>: 這語法回傳的是 value。已轉換為值，如 formatted String，回傳結果已經是 String，無法使用 jsonb 工具語法再往下探。  
+## 查詢 JSONB 資料內容方式範例
 * <code>__->__</code>: 此語法回傳的是 jsonb object，可以再往下查詢。
+* <code>__->>__</code>: 這語法回傳的是 value。已轉換為值，如 formatted String，回傳結果已經是 String，無法使用 jsonb 工具語法再往下探。  
   
   Syntax:  
   
@@ -40,3 +40,5 @@ select student_id,
        from student  where grade_no = 1 and class_no in('A')
        group by student_id;
 ```
+
+## 改用 json_extract_path 進行查詢

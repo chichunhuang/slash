@@ -4,6 +4,12 @@ description: PostgreSQL JSONB 欄位鍵值刪除
 keywords: [JSONB,PostgreSQL]
 ---
 
+<div style={{backgroundColor: '#ffffb3'}}>
+__[jsonb_set()](./PostgreSQL_Jsonb_misc#Jsonb_fundamental) 可用在，新增、修改、刪除__   
+最簡單的資料移除方式為，直接將資料設為 null 或空字串。
+</div>
+
+<br/>
 > 同樣的 PostgreSQL Jsonb 操作都可有兩種以上選擇，  
 > &emsp; 1.使用操作子: <code>__#-__</code>   
 > &emsp; 2.使用函數處理: <code>__jsonb_set\()__</code>     
@@ -63,8 +69,12 @@ keywords: [JSONB,PostgreSQL]
 * 看得懂就好，再多來記個同功能語法變體腦子就要炸了...
 * <code>__#-__</code> 可以採用 path TEXT[], 但 <code>__-__</code> 只能指向單一層。
     * 官方文件說這兩個差別，一個 delete key/value pair, 另一個 delete field! 意思不是相同嗎? 
-    * 測試結果: 主要 <code>__-__</code> 只能移除當前 jsonb 物件的次一層資料。
+    * 測試結果: <code>__-__</code> 只能移除 <span style={{color: '#0044FF'}}> __頂層 jsonb 物件的次一層__ </span> 資料，所以此符號不像 <code>__->>__</code> 可串接前方路徑。
 
 ```sql
+    -- '-' 只能用於頂層 jsonb 結構
     update insect_specimen SET classification = classification - 'Order' where id = 2; 
+    
+    -- '->>' 前方串接 '->'
+    select  classification -> 'Genus' -> 'Subgenus' -> 'name' ->> 'value'  from insect_specimen where id = 3
 ```

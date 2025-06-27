@@ -6,7 +6,7 @@ keywords: [postgresql,Jsonb]
 
 ## Jsonb CRUD 會這幾個基本就夠了 <span id="Jsonb_fundamental">&nbsp;</span>
 * 寫在最前面: 基本上每個操作都有一個 ___operator___ 與一個相對應的 ___內建函數___ 可使用，但會下面這兩個已經可以大殺四方了。     
-* [<code>__->>__</code>  operator: 查詢內容](./Postgresql_find_value_by_Attr_of_JSONB_column)
+* [<code>__->__</code> + <code>__->>__</code> operator: 查詢內容](./Postgresql_find_value_by_Attr_of_JSONB_column)
 * <code>__jsonb_set()__</code> 函數: [新增](./PostgreSQL_Update_JSONB_Column)、[修改](./PostgreSQL_Update_JSONB_Column)、與 [刪除](./PostgreSQL_Delete_attr) 萬用，且多版本支援
 * 其他的就先當作是 PostgreSQL 提供的語法糖。
 
@@ -17,10 +17,21 @@ keywords: [postgresql,Jsonb]
 | **insert** | <code>__jsonb_set()__</code> | update table SET jasonb_col = <br/>jsonb_set( jasonb_col, Array['path_element'], '\{  "k1": "v1"'\}'::jsonb );  |
 | **update** | <code>__jsonb_set()__</code> | 同上範例 |
 | **delete** | <code>__jsonb_set()__</code> | 同上範例但 value 改為 null, <code>__'null'::jsonb__</code> <br/>update table SET jasonb_col = <br/>jsonb_set( jasonb_col, Array['path_element'], 'null'::jsonb ); |
-| **select** | <code>__->>__</code> | select jasonb_col ->> 'attribute' from table |
+| **select** | <code>__->__</code>, <code>__->>__</code> | select jasonb_col -> 'attribute' ->> 'attribute' from table |
 
 
-## PostgreSQL Jsonb 雜項紀錄
+## PostgreSQL Json/Jsonb 差異
+> PostgreSQL 內建 JSON/JSONB 型態的 Columns。  
+> ___JSON___ :  
+> 以文字儲存的 JSON 格式資料。
+>  
+> ___JSONB___ :  
+> PostgreSQL 中的一種特殊欄位，儲存的是 JSON 型態但是 Compiled 過的 binary 資料。  
+> 特性是，可以讓 PostgreSQL 經由 mata data __加速查詢__ 的速度。  
+> 但反過來說，在 __儲存時較花時間__ ，因為要先轉 mata data 所以相對上會比較耗時。  
+> 因此主要用在，少編輯但卻需要經常查詢的請境下。
+
+## PostgreSQL Jsonb 雜項紀錄 <span id="jsonb_scenario">&nbsp;</span>
 * 範例情境
 
 > 假設有一個紀錄標本資訊 table ，其中以 json_data 用來記錄分類樹資料 \(界門綱目科屬種)。
@@ -78,7 +89,7 @@ keywords: [postgresql,Jsonb]
     }"    
 ```
  
-## 取代既有資料 insert/update: <code>__jsonb_set__</code>
+## 取代既有資料 insert/update: <code>__jsonb_set__</code> <span id="jsonb_set">&nbsp;</span>
 * PostgreSQL 10+ 可使用 <code>__jsonb_insert__</code> : 插入新值，不覆蓋。
 * 置入並取代物件, Replacement\(取代既有資料)
     * arguments
@@ -175,4 +186,49 @@ __example__
          SET classification = jsonb_set( classification, 
          '{Genus, Subgenus, name}', -- 等同於 Array['Genus', 'Subgenus', 'name']
          '{ "value": "Stegomyia-2" }'::jsonb ) where id = 2;  
+```
+
+## 列出所有頂層鍵: <code>__jsonb_object_keys()__</code> 
+* 使用 <code>__jsonb_object_keys()__</code> 進行查詢
+* 加上 DISTINCT 去重複
+
+```sql
+    --列出所有頂層鍵，單一 row
+    select jsonb_object_keys(classification) as keys
+        from insect_specimen where id = 1;
+
+    --列出 Table 下 Jsonb 所有頂層鍵: 依 Row 查詢，不自動去重複
+    select DISTINCT jsonb_object_keys(classification) as keys
+        from insect_specimen;
+```
+
+
+## PostgreSQL Jsonb 相關 operators <span id="syntax_sugar">&nbsp;</span>
+| Operator | 功用 | Path Style |
+| :--: | :-- | :--|
+| <code>__->__</code>  | Jsonb 槽串 <span style={{color: '#0044FF'}}> __路徑連接符號__ </span> | 練續符號串接 Style Path |
+| <code>__->>__</code>  | Jsonb 解析成 String | 練續符號串接 Style Path |
+| <code>__#>__</code>  | Jsonb 槽串 <span style={{color: '#0044FF'}}> __路徑連接符號__ </span> | Json Object Style path  |
+| <code>__#>>__</code>  | Jsonb 解析成 String | Json Object Style path |
+
+| <code>__-__</code>  | 指定頂層結構進行刪除<br/>不可串接 | String |
+| <code>__#-__</code>  | 指定路徑進行刪除 | Json Object Style path<br/> Text[] |
+
+| <code>__?__</code>  |   |   |
+| <code>__?|__</code>  |   |   |
+| <code>__?&__</code>  |   |   |
+
+| <code>__||__</code>  |   |   |
+
+* 註: sharp operators 或 jsonb_set() function 在使用 <code>__Json Object Style path__</code> 時，下列兩種風格皆可採用
+
+```json
+    -- 標準寫法: 依據 key 的型別做相應字面量修飾
+    '{"Genus", "Subgenus", "name", "value"}'
+    '{"profile", "phones", 0}'
+ 
+    --簡化版: 省略 key 型別修飾 
+    '{Genus, Subgenus, name, value}'
+    '{profile, phones, 0}'
+    
 ```

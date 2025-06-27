@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL string_agg 函式
-description: PostgreSQL批次合併group by後,組內資料
+description: PostgreSQL 合併多筆 Records 的同欄位值
 keywords: [postgresql,string_agg]
 ---
 

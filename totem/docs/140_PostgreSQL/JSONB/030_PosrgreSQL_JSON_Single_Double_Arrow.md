@@ -10,8 +10,8 @@ keywords: [JSONB,PostgreSQL]
 
 
 ## 內容查詢語法: <code>__->>__</code> Operator
-* __<span style={{backgroundColor: '#b3c4ff'}}>->></span>__ 用來查出 JSON/JSONB 物件 field 內容，並以 __<span style={{backgroundColor: '#b3c4ff'}}>String 格式</span>__ 回傳結果。
-* 注意 PostgreSQL ->> 的查詢結果顯示時 __沒有__ 用 Double Quotes 包住。
+* <code>__->>__</code> 用來查出 JSON/JSONB 物件 field 內容，並以 __<span style={{backgroundColor: '#b3c4ff'}}>String 格式</span>__ 回傳結果。
+* 注意 PostgreSQL <code>__->>__</code> 的查詢結果顯示時 __沒有__ 用 Double Quotes 包住。
 
 ```sql
   select address->>'country' as COUNTRY FROM profile;
@@ -26,9 +26,9 @@ CHINA
 
 
 ## Jsonb 物件查詢語法: <code>__->__</code> Operator
-* __<span style={{backgroundColor: '#b3ffb3'}}>-></span>__ 用來查出 JSON/JSONB 物件內容，並以 __<span style={{backgroundColor: '#b3ffb3'}}>JSON/JSONB 物件格式</span>__ 回傳結果。
-* ->JSON 查詢，所得為 postgreSQL JSON 物件，所以可以 -> 繼續往內槽串查。最終再以 ->> 取值。
-* 注意 PostgreSQL -> 的查詢結果 __有__ 用 Double Quotes (為 JSON 物件)包住。
+* <code>__->__</code> 用來查出 JSON/JSONB 物件內容，並以 __<span style={{backgroundColor: '#b3ffb3'}}>JSON/JSONB 物件格式</span>__ 回傳結果。
+* <code>__->__</code> JSON 查詢，所得為 postgreSQL JSON 物件，所以可以 <code>__->__</code> 繼續往內槽串查。最終再以 <code>__->>__</code> 取值。
+* 注意 PostgreSQL <code>__->__</code> 的查詢結果 __有__ 用 Double Quotes (為 JSON 物件)包住。
 
 
 ```sql
@@ -59,7 +59,7 @@ Entomology
 
 ```
 
-* -> return __jsonb__
+* -> return __jsonb__ object
 
 ```sql
 select Student_column->'student'->'class'->'grade'->'school'-> 'school_name' as SCHOOL from Profile;
@@ -71,7 +71,7 @@ jsonb
 "Entomology"
 ```
 
-* -> return __jsonb__
+* -> return __jsonb__ object
 
 ```sql
 select Student_column->'student'->'class'->'grade'->'school'  as SCHOOL from Profile;
@@ -92,21 +92,75 @@ jsonb
 ___範例情境___
 
 ```sql
+---Profile
 {
     "profile": {
                 "first_name": "insect",
                 "last_name": "totem",
                 "phones": ["0922-222-222","0955-555-555"]
             }
-}        
+}
 ```
 
 ```sql
-    SELECT last_name, raw_data #> 'profile'->'phones'->0  as phone_1 FROM Student
+    SELECT last_name, raw_data -> 'profile'->'phones'->0  as phone_1 FROM Student
       
     LAST_NAMR               PHONE_1  
     character varying       jsonb    
     ----------------------------------------
     totem                   "0922-222-222"  
+```
 
+## Json 查詢 Operators 變體
+* 與 jsonb_set() 改資料指定路徑時類似，PostgreSQL Jsonb 內建其他路徑簡易寫法的[語法糖\(Syntactic sugar\)](./PostgreSQL_Jsonb_misc#syntax_sugar)。
+* 註 function 可以經由 parse arg 來得知 Path Style，Operators 用在 SQL command 中需以其他方式辨別。
+
+___查詢相關 operators 摘要___
+* 在查詢相關 operators 中，
+    * <code>__#__</code> 代表後方採用 <code>__Json Object Style path__</code>
+    * <code>__>__</code> 單個代表 Jsonb 物件向下再探一層。
+    * <code>__>>__</code> 兩個代表將 Jsonb 物件解析成 String。
+
+| operator |  path style(語法糖) |
+| :--: | :-- |
+| <code>__->__</code> | 連續符號串接 Style Path |
+| <code>__->>__</code> | 連續符號串接 Style Path |
+| <code>__#>__</code> | Json Object Style path  |
+| <code>__#>>__</code> | Json Object Style path |
+
+___以 Json Object 取代路徑___
+
+* 情境
+
+```sql
+---Specimen
+{
+        "Class": "Insecta",
+        "Genus": {
+            "name": "Aedes",
+            "Subgenus": {
+                "name": "Stegomyia"
+            }
+        },
+        "Order": "Diptera",
+        "Family": "Culicidae",
+        "Phylum": "Arthropoda",
+        "Kingdom": "Animalia",
+        "Species": "albopictus"
+}
+```
+
+* 範例
+
+```sql
+    
+    -- original 
+    select insect.classification -> 'Genus' -> 'Subgenus' -> 'name' sample_name  from insect_specimen insect;
+    --Jsonb Object style
+    select insect.classification #> '{"Genus","Subgenus","name" }' sample_name  from insect_specimen insect;
+
+    === with index    
+    select last_name, raw_data -> 'profile'->'phones'->0  as phone_1 FROM Student
+    ===Jsonb Object style. index 為數值故沒 double quotes
+    select last_name, raw_data #> '{"profile","phones",0}' as phone_1 FROM Student
 ```

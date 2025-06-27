@@ -1,5 +1,5 @@
 ---
-title: JSONB 更改欄位資料值
+title: 新增修改 JSONB 欄位值
 description: PostgreSQL JSONB 欄位資料值更改
 keywords: [JSONB,PostgreSQL]
 ---
@@ -15,8 +15,6 @@ keywords: [JSONB,PostgreSQL]
 |      2       |           BBB001              |  \{"City":"TYN", "School":"NCHU", "Score":"70" \}   |
 |      3       |           CCC001              |  \{"City":"HSZ", "School":"NCCU", "Score":"80" \}   |
 
-
-
 ## 查詢 JSONB 屬性資料
 * 使用 ->> 符號進行 JSONB 欄位下屬性值查詢
     * ->> 回傳 String
@@ -31,8 +29,7 @@ keywords: [JSONB,PostgreSQL]
 * __jsonb_set()__
 * __jsonb_insert()__ 
 
-
-## 更改 JSONB 屬性值藉由 jsonb_set()
+## 更改 JSONB 屬性值藉由 <code>__jsonb_set()__</code>
 * jsonb_set 置入物件，取代既有資料, Replacement  
 * 注意: jsonb column 至少要先有一個空物件(不能為 null)才能進行 set。  
 * create_if_missing 預設為 true，當無此 attribute 時，update 變 insert。  
@@ -79,8 +76,9 @@ __jsonb_set 語法:__
 ```
 
 
-## 新增  JSONB 屬性值藉由 jsonb_insert() 
+## 新增 JSONB 屬性值 <code>__jsonb_insert()__</code> 
 * 註: 此語法 <span style={{color: '#0044FF'}}> __PostgreSQL 10+ 才支援__ </span>
+
 ```sql
 	jsonb_insert(
 	  target JSONB, path TEXT[], new_value JSONB[, insert_after BOOLEAN]
@@ -92,8 +90,6 @@ update Entrance_Examination set raw_data = jsonb_insert( raw_data, array['Countr
            where Admission_Ticket = 'AAA001';
 ```
 
-
-
 ## 補齊 JSONB 屬性值長度
 * 分數補0到四位
 
@@ -103,7 +99,6 @@ update Entrance_Examination
      set raw_data = jsonb_set( raw_data, '{Score}', quote_ident(lpad(raw_data ->> 'Score', 4, '0'))::jsonb )
      where Admission_Ticket = 'AAA001';
 ```
-
 
 ## Reference
 * [批次更改 Jsonb 的內容: 使用 "||"](https://stackoverflow.com/questions/40583639/update-multiple-values-in-a-jsonb-data-in-postgresql)
