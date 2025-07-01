@@ -3,18 +3,17 @@ title: PostgreSQL 自 CSV 檔匯入資料
 description: PostgreSQL copy from CSV
 keywords: [postgresql,copy,CSV]
 ---
+> > PostgreSQL 12+ 可參考使用 pg_read_file 函數
 
-# 自 CSV 檔匯入資料
+## 自 CSV 檔匯入資料
 * 以 SQL Shell / psql 搭配 \i -f 指令執行下列 *.sql 範例
 * path_of_source_file.csv 中須具備與 totem_user 中同名欄位
-
 * example 複製 path_of_source_file.csv 內容到 totem_user 資料表
     * step1: import.sql 指令檔準備
     * step2: SQL Shell(psql) 執行 import.sql 內容方式
   
-  
-  
 ## import.sql 內容範例
+* path_of_source_file.csv 中須具備與 totem_user 中同名欄位
    
 ```sql
 \encoding UTF8

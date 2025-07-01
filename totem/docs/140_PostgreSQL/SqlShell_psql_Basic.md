@@ -22,6 +22,9 @@ keywords: [psql,SQL Shell,PostgreSQL]
 ```
 
 #  SQL Shell (psql) 下 login 方式
+* 註: 
+    * q 跳出查詢結果檢視
+    * Ctrl+C 結束
 
 ```bash
     Database [postgres]: totem
@@ -32,9 +35,6 @@ keywords: [psql,SQL Shell,PostgreSQL]
     
     totem=# select * from totem_user;
     ....
-    註: 
-    A: q 可以跳出查詢結果檢視
-    B: Ctrl+C 結束
 ```
 
 # 直接於 SQL Shell (psql) 執行 sql 檔
@@ -51,9 +51,8 @@ keywords: [psql,SQL Shell,PostgreSQL]
 * -h : hostname  
 
 ```sql
-psql -U postgres -d totem -f export_all_user.sql
+    psql -U postgres -d totem -f export_all_user.sql
 ```
-
 
 ## SQL Shell(psql) 進入後， \i 指令
 * SQL Shell(psql) \i 可用來指向 local 端準備好的 *.sql 檔  
