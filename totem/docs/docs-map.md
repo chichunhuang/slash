@@ -95,8 +95,6 @@ sidebar_position: 1
 * [INSERT-INTO 與 SELECT-INTO 使用上差異 - Insert Into v.s. Select Into](/docs/SQL/Insert_Into_vs_Select_Into)
 * [TableA 的內容修改 TableB - SQL Update from One Table to Another](/docs/SQL/SQL_update_from_another_table)
 * [在 sql from 中使用子查詢 - Using subqueries outside of WHERE](/docs/SQL/Using_subqueries_outside_of_WHERE)
-## Server
-* [Jenkins Debian 安裝設定紀錄 - Jenkins Debian 安裝設定紀錄](/docs/Server/JenkinsCIServerOnDebian)
 ## Tomcat
 * [隱藏 Tomcat 版本資訊 - ](/docs/Tomcat/Hide_Tomcat_Version)
 * [Tomcat 當前 Clients 連線數 - Tomcat App online connections](/docs/Tomcat/Tomcat_Client_Connections)
