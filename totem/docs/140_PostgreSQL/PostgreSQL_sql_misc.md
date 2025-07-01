@@ -17,6 +17,7 @@ keywords: [PostgreSQL]
 * [textregexeq 格式檢查](#textregexeq)
 * [以 vacuumlo function 移除不再使用的 lob 所占空間](#vacuumlo)
 * [以 coalesce function 返回第一個非空的欄位](#coalesce)
+* [計算時間差](#time_interval)
 
 ### Postgresql 版本查詢 <span id="pg_version">&nbsp;</span>
 
@@ -161,6 +162,32 @@ keywords: [PostgreSQL]
     
     select coalesce(to_char(phone_office,'9999999999'),to_char(phone_home,'9999999999')) from profile;
 ```
+
+### 計算時間差 <span id="time_interval ">&nbsp;</span>
+__語法:__
+* 採用關鍵字 <code>__INTERVAL__</code> 搭配指定單位參數
+
+```sql
+    --syntax
+    select timestamp_A - timestamp_B > INTERVAL 'Time_Span_Expression';
+    
+    --example
+    select timestamp '2013-11-11 10:00:00' - timestamp '2013-11-08 12:00:00' > INTERVAL '4 hour';
+```
+
+* interval 可接受單位參數種類
+    * microseconds
+    * milliseconds
+    * second
+    * minute
+    * hour
+    * day
+    * week
+    * month
+    * year
+    * decade
+    * century
+    * millennium
 
 ### 
 ```sql

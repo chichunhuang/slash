@@ -21,7 +21,6 @@ keywords: [psql,SQL Shell,PostgreSQL]
     psql# select * from totem_user;
 ```
 
-
 #  SQL Shell (psql) 下 login 方式
 
 ```bash

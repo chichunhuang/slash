@@ -204,21 +204,20 @@ __example__
 
 
 ## PostgreSQL Jsonb 相關 operators <span id="syntax_sugar">&nbsp;</span>
-| Operator | 功用 | Path Style |
+* [官方參考](https://www.postgresql.org/docs/9.5/functions-json.html)
+
+| Operator | 功用 | Path Style/R Operand Type |
 | :--: | :-- | :--|
 | <code>__->__</code>  | Jsonb 槽串 <span style={{color: '#0044FF'}}> __路徑連接符號__ </span> | 練續符號串接 Style Path |
 | <code>__->>__</code>  | Jsonb 解析成 String | 練續符號串接 Style Path |
 | <code>__#>__</code>  | Jsonb 槽串 <span style={{color: '#0044FF'}}> __路徑連接符號__ </span> | Json Object Style path  |
 | <code>__#>>__</code>  | Jsonb 解析成 String | Json Object Style path |
-
 | <code>__-__</code>  | 指定頂層結構進行刪除<br/>不可串接 | String |
-| <code>__#-__</code>  | 指定路徑進行刪除 | Json Object Style path<br/> Text[] |
-
-| <code>__?__</code>  |   |   |
-| <code>__?|__</code>  |   |   |
-| <code>__?&__</code>  |   |   |
-
-| <code>__||__</code>  |   |   |
+| <code>__#-__</code>  | 指定路徑進行刪除 | Json Object Style path<br/> Text\[\] |
+| <code>__?__</code>  | 指定字串是否存在於頂層鍵\(top-level key) | text   |
+| ?\| | Text Array 中清單是否至少一個存在於頂層鍵  | Json Object Style path<br/> Text\[\] |
+| <code>__?&__</code>  | Text Array 中所有清單是否都存在於頂層鍵 | Json Object Style path<br/> Text\[\] |
+| \|\| | 串接 jsonb 在一起  | 回傳 jsonb  |
 
 * 註: sharp operators 或 jsonb_set() function 在使用 <code>__Json Object Style path__</code> 時，下列兩種風格皆可採用
 
