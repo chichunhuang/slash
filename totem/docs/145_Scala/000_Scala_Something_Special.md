@@ -16,3 +16,44 @@ keywords: [Scala]
 
 
 ## Scala 相關語法學習紀錄
+* [Scala基本型態之 Symbol](./Scala Symbol)
+* [Scala 的 instance 相等性比較 eq, ne, equals, ==](./Scala_Instance_equals)
+* [Scala cons ::, :+, +:, ++, :::](./Scala_Cons)
+* [關於 Scala Function/Lambda](./Scala_Function_Lambda)
+* Scala Regex
+* Scala Regex Examples
+* Scala yield
+* Scala Tuple
+* Scala Curry
+* Scala Loop : ch6/ch7 xmind
+* Scala Break Loop: 與 Java 完全不同
+* Scala Pattern Matching \(Switch)
+* Scala try/catch Matching
+* Scala Case Classes \(例類, ch9)
+* Scala Traits and Self Type\(ch9)
+* Scala Option \(ch6,7)
+* Scala Read File Example
+* Scala Write File Example
+* Scala High Order Function Example
+* Scala Implicit Class
+* Scala 數值相關處理
+* Scala 的 ++, -- 操作
+* Scala 的特殊迴圈結構
+* Scala 三元運算子\(Ternary Operator)
+* Scala 的 Class 種類
+* Scala 的 Class 結構
+* Scala 的 Companion Object
+* Scala Default Constructor
+* Scala 子類的建構子
+* Scala private Constructor/Fields
+* Scala Object-Private Fields
+* Scala Class 中的 this 與 super
+* Scala Auxiliary Constructor \(輔助建構子)
+* 複寫預設的 Scala Getter/Setter 技巧
+* Scala Lazy Fields \(Performance)
+* Scala 沒初始值 fields 定義
+* Abstract class/下如何建立屬性\(Properties) / Abstract Fields
+* Scala Object Equality \(Equals and Hashcode)
+* Scala Inner Class
+* Scala 的 Methods
+* Scala Methods 呼叫的方式
