@@ -4,6 +4,8 @@ description: Scala 相關 MindMaps
 keywords: [Scala,mindmap]
 ---
 
+## 這主要是 Learning Scala 的讀書摘要
+
 ## Learning Scala
 * 下面檔案需以 Xmind 開啟
 
