@@ -215,3 +215,197 @@ keywords: [Scala,Class]
     * Mutator 需命名為 Accessor Name 加一個底線
     * Mutator 需要以 函數變數型態定義. ([參考上方 Scala function 章節])
 * 函數變數: 因為是變數, 所以等號移到變數之後, 而非實作區塊前
+
+```javascript
+      // 這邊以 private 封裝原始的名稱, 若未封裝則可以用 person._original 存取
+      class Person(private var _original: String) {
+          def name = _name                                //accessor
+          def name_= (input: String) { _original= input } // mutator
+      }  
+      
+      var person = new Person(_original= "totem")
+      person.name 
+      
+      person.name ="Totem"
+```
+
+## Scala Lazy Fields \(Performance)
+* 如果一個變數值需要大量運算, 可採用 lazy field 的技巧
+* 需使用 lazy 關鍵字
+* 將 Code Block or Function 指定給一個變數
+* 範例中的 text 是檔案的暫存區
+* 可以與 function 比較\(fun: 回傳值是每次呼叫重新計算一次)
+
+```javascript
+    // lazy field example
+    class Foo {
+    
+        import scala.xml.XML
+        // 這裡有有 lazy 關鍵字
+        lazy val text =
+            io.Source.fromFile("/etc/passwd").getLines.foreach(println)
+    }
+    
+    // 這邊沒加 lazy 關鍵字, 在 Foo 建構時, 便會讀取 file 中的資料
+    class Foo {
+        val text = {
+            var lines = ""
+            try {
+                lines = io.Source.fromFile("/etc/passwd").getLines.mkString
+            } catch {
+                case e: Exception => lines = "Error happened"
+            }
+            lines
+        }
+        println(text)
+    }
+```
+
+## Scala 沒初始值 fields 定義
+* 改用 \[Option\] 來處理 None / Some
+* 範例中的 Person.address 預設是 None
+
+```javascript
+   case class Person(var username: String, var password: String) {
+        var age = 0
+        var firstName = ""
+        var lastName = ""
+        var address = None: Option[Address]
+   }
+    
+   case class Address(city: String, state: String, zip: String)
+   
+   //給值
+    val p = Person("alvinalexander", "secret")
+    p.address = Some(Address("Talkeetna", "AK", "99676"))
+```
+
+## Abstract class/Abstract Fields/Trait 下如何建立屬性\(Properties)
+* 只有 abstract class 可以建立 abstract fields \(greeting/age)
+* abstract fields 在 <code>__concrete class 中實作時要再 需告 var/val__</code>
+    * abstract fields(限定子類要實作), Scala compiler 只會幫忙建立 get/set methods.
+    * Java 中沒有 Abstract Field 概念
+    
+```javascript
+    // 注意這是一個 abstract class
+    // Cons_params 預設是 var
+    abstract class Pet (name: String) {
+      val greeting: String // greeting and age 都是 abstract fields
+      var age: Int         
+      def sayHello { println(greeting) }
+      override def toString = s"I say $greeting, and I'm $age"
+    }
+    
+    // 實作的 concrete class 的 field 仍需定義 val/var
+    class Dog (name: String) extends Pet (name) {
+      val greeting = "Woof"
+      var age = 2
+    }
+    class Cat (name: String) extends Pet (name) {
+      val greeting = "Meow"
+      var age = 5
+    }
+```
+
+## Scala 物件全等判斷
+* Object Equality \(Equals and Hashcode)，JVM 語言基本上 <span style={{color: '#0044FF'}}>__概念同 Java__</span>。
+* <code>__==__</code>, <code>__equals__</code>, <code>__eq__</code>
+* Scala 中 equals / hashcode methods
+
+```javascript
+    class Person (name: String, age: Int) {
+      def canEqual(a: Any) = a.isInstanceOf[Person]
+      override def equals(that: Any): Boolean =
+        that match {
+          case that: Person => that.canEqual(this) && this.hashCode == that.hashCode
+          case _ => false
+        }
+      override def hashCode:Int = {
+        val prime = 31
+        var result = 1
+        result = prime * result + age;
+        result = prime * result + (if (name == null) 0 else name.hashCode)
+        return result
+      }
+    } 
+```
+
+## Scala Inner Class
+* Scala 中實現 Inner class 的方式
+    * 在 outer class scope 中定義一個 Case class
+* 先定義 Inner class 的目的
+    * 想建立一個被封裝在另一個 Class 之內的 Class
+    * 因為想封裝特定的程式碼
+    * 讓 Inner class 與 public API 去耦合
+    * 與外層綁定的 Class
+    
+```javascript
+    class PandorasBox {
+    
+      case class Thing(name: String)
+    
+      var things = new collection.mutable.ArrayBuffer[Thing]()
+      things += Thing("Evil Thing #1")
+      things += Thing("Evil Thing #2")
+    
+      def addThing(name: String) {
+        things += new Thing(name)
+      }
+    }   
+    
+    
+    //使用時看不出 things 的存在
+    val p = new PandorasBox
+    p.things.foreach(println)
+```
+
+## Scala 的 Methods
+* Scopes of Scala Methods
+
+| Type | Scope | Syntax | Desc | 
+| ---- | ---- | ---- | ---- | 
+| object-private scope<br/>[companion object] | the current instance of the current object<br/>
+只有當前這一個 instance 可以使用 | private[this] def isFoo = true | 可終止 Companion Class/Object 的 private fields 可以互通關係<br/>
+甚至限制 equals 比對 | 
+| private | 與 Java 同概念 | private def isFoo = true |  | 
+| protected | 允許子類呼叫<br/>注意 ***不同於 Java*** <br/>Java 的 protected 可允許同 package 下其他 class 存取\(Java較寬鬆) | protected def breath \{ \} |   | 
+| package-specific | 限定只能在特定 package 內使用\(包含 subpackages)<br/>指定 package 下的成員都可使用 | private packageName def isBar = true |   | 
+| public |   | 不須加 access modifier |   | 
+
+
+```javascript
+    //Object private
+    class Foo {
+      // object private method 
+      private[this] def isFoo = true
+    
+      def doFoo(other: Foo) {
+        //  // isFoo 限定 this 才能呼叫, 所以 this line won't compile
+        if (other.isFoo) {
+        }
+      }
+    }   
+
+
+    //package private
+    package com.acme.coolapp.model {
+      class Foo {
+        
+        //com.acme.coolapp.model._ 內都可以使用
+        private[model] def doX {}
+        //com.acme.coolapp._ 內都可以使用
+        private[coolapp] def doY {}
+        //com.acme._ 內都可以使用
+        private[acme] def doZ {}
+                
+        //只有 Foo class 下能使用
+        private def doY {}
+
+      }
+      class Bar {
+        val f = new Foo
+        f.doX // compiles
+        f.doY // won't compile
+      }
+    }
+```
