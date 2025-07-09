@@ -16,7 +16,7 @@ keywords: [Scala]
 
 
 ## Scala 相關語法學習紀錄
-* [Scala基本型態之 Symbol](./Scala Symbol)
+* [Scala基本型態之 Symbol](./Scala_Symbol)
 * [Scala 的 instance 相等性比較 eq, ne, equals, ==](./Scala_Instance_equals)
 * [Scala cons ::, :+, +:, ++, :::](./Scala_Cons)
 * [關於 Scala Function/Lambda](./Scala_Function_Lambda)

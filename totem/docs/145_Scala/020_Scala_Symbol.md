@@ -15,7 +15,7 @@ keywords: [Scala,Symbol]
 * 封閉的有限數量符號, 是字串的再次封裝, 方便比較用
 * 類似 static string, 或是 String type 的 enum
 
-```scala
+```javascript
     // # 1
     // Same content => JVM 自動處理校正成 Same instance
         val var1 = Symbol("Same Same")
