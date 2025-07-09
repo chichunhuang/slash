@@ -364,7 +364,7 @@ keywords: [Scala,Class]
 
 | Type | Scope | Syntax | Desc | 
 | ---- | ---- | ---- | ---- | 
-| object-private scope<br/>[companion object] | the current instance of the current object<br/>
+| object-private scope<br/> **companion object** | the current instance of the current object<br/>
 只有當前這一個 instance 可以使用 | private[this] def isFoo = true | 可終止 Companion Class/Object 的 private fields 可以互通關係<br/>
 甚至限制 equals 比對 | 
 | private | 與 Java 同概念 | private def isFoo = true |  | 
