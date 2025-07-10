@@ -4,6 +4,12 @@ description: Scrum Retrospective 筆記
 keywords: [Scrum,Retrospective]
 ---
 
+> 我不知道其他團隊怎樣做  
+> 回顧過程中的細節，在兼任 Scrum Master 時我選擇只在團隊中保密。  
+> 便利貼會送入碎紙機，僅留下結論與待辦事項。  
+> 回顧有時也會發牢騷，或是罵粗話宣洩。這是團隊中私密的事，應予保護。    
+> 我真的不認同 PM 要求成員在發洩情緒的便條紙上簽名......  
+> 你應該會希望成員說真話吧，而不僅是虛應故事。   
 
 ## Goals
 > 期待的目標: 
@@ -26,13 +32,14 @@ keywords: [Scrum,Retrospective]
 * [Plan_Of_Action](./Plan_Of_Action)
 * [Start_Stop_COntinue_MoreOf_LessOf_Wheel](./Start_Stop_COntinue_MoreOf_LessOf_Wheel)
 * [Each_One_Meets_All](./Each_One_Meets_All)
-* The_Complexity_Retrospective
-* Force_Field_Analysis
-* 番茄技術 Pomdoro_Technique
-* Retrospective_Surgery
-* Questions_Retrospective: 同件事得到不同觀點,整合大家的想法, Triple Nickels
-* Everyday_Retrospective : 每日的例行回顧計畫
+* [The_Complexity_Retrospective](./The_Complexity_Retrospective)
+* [Force_Field_Analysis](./Force_Field_Analysis)
+* [番茄技術 Pomdoro_Technique](./Pomdoro_Technique)
+* [Retrospective_Surgery](./Retrospective_Surgery)
+* [Questions_Retrospective: 同件事得到不同觀點,整合大家的想法, Triple Nickels](./Questions_Retrospective)
+* [Everyday_Retrospective : 每日的例行回顧計畫](./Everyday_Retrospective)
 * [Four_Ls_Retrospective : Liked – Learned – Lacked – Longed](./Four_Ls_Retrospective)
+* [Red Green Index Cards](./Retro_Index_Cards.md)
 * Sailboat
 * Weekly_Retrospective_Simple_and_delta
 * Jeopardy_Retrospective
