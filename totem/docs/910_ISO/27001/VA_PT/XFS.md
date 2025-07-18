@@ -1,6 +1,6 @@
 ---
 title: XFS Cross Frame Scripting
-description: XFS、XSS、跨站腳本攻擊
+description: XFS、跨框架腳本攻擊
 keywords: [ISMS]
 ---
 
