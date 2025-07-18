@@ -11,6 +11,9 @@ keywords: [Scrum,Retrospective]
 > 我真的不認同 PM 要求成員在發洩情緒的便條紙上簽名......  
 > 你應該會希望成員說真話吧，而不僅是虛應故事。   
 
+## 主要參考文獻: <code>__Agile Retrospective Resource Wiki__</code>
+* <span style={{color: '#ffff00F', backgroundColor: '#b3ffb3'}}> [Agile Retrospective Resource Wiki](https://retrospectivewiki.org/index.php?title=Agile_Retrospective_Resource_Wiki)</span>
+
 ## Goals
 > 期待的目標: 
 

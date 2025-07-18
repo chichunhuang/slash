@@ -88,7 +88,7 @@ keywords: [Tomcat,Cookie,HttpOnly,Secure,SameSite]
 
 ### 參考資料
 * [HttpOnly 簡介](https://blog.51cto.com/u_9597987/3485720)
-* 防禦 Cross-Site Scripting (XSS) [Content-Security-Pilicy](https://devco.re/blog/2014/04/08/security-issues-of-http-headers-2-content-security-policy/)
+* 防禦 Cross-Site Scripting (XSS) [Content-Security-Policy](https://devco.re/blog/2014/04/08/security-issues-of-http-headers-2-content-security-policy/)
 * [HTTP Session 攻擊與防護](https://devco.re/blog/2014/06/03/http-session-protection/)  
 * HttpOnly [RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265)
 
