@@ -75,6 +75,8 @@ keywords: [Tomcat,Cookie,HttpOnly,Secure,SameSite]
       
 * context.xml
 
+___<span style={{color: '#FF1100'}}>Tomcat 版本限制: apache-tomcat-8.5.42 以上才生效</span>___
+
 ```xml
 <Context>
     <CookieProcessor className="org.apache.tomcat.util.http.LegacyCookieProcessor" sameSiteCookies="strict" />      
