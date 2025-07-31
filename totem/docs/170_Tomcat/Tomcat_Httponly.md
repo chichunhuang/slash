@@ -72,17 +72,147 @@ keywords: [Tomcat,Cookie,HttpOnly,Secure,SameSite]
                connectionTimeout="20000"
                redirectPort="8443" URIEncoding="UTF-8" secure="true"/>
 ```
-      
+
+## Tomcat JSESSIONID Samesite 設定方式
+### apache-tomcat-8.5.42 以上 samesite 設定
 * context.xml
 
-___<span style={{color: '#FF1100'}}>Tomcat 版本限制: apache-tomcat-8.5.42 以上才生效</span>___
+___<span style={{color: '#FF1100'}}> sameSiteCookies Tomcat 版本限制: apache-tomcat-8.5.42 以上才生效</span>___
 
 ```xml
 <Context>
     <CookieProcessor className="org.apache.tomcat.util.http.LegacyCookieProcessor" sameSiteCookies="strict" />      
 </Context>  
 ```
-      
+
+### apache-tomcat-8.5.42 之前 samesite 設定
+
+* __SameSiteCookieFilter.java__
+    * apache-tomcat-8.5.42 之前版本只能用 Filter 來附加 Same Site Cookie 屬性
+    * 因為舊版 context.xml 根本沒 CookieProcessor 這個設定
+    * 注意: SameSite=None，必須搭配 Secure=true
+    * 下面範例僅針對 JSESSIONID 進行設定，其他 cookie 可以在創建實設定
+
+```javascript
+    import java.io.IOException;
+    import java.util.Collection;
+    import javax.servlet.Filter;
+    import javax.servlet.FilterChain;
+    import javax.servlet.FilterConfig;
+    import javax.servlet.ServletException;
+    import javax.servlet.ServletRequest;
+    import javax.servlet.ServletResponse;
+    import javax.servlet.http.HttpServletResponse;
+    import javax.servlet.http.HttpServletResponseWrapper;
+    
+    public class SameSiteCookieFilter implements Filter {
+    
+        private String sameSiteValue = "Lax"; // 預設值為 Lax，其他選項為 Strict 或 None
+    
+        @Override
+        public void init(FilterConfig filterConfig) throws ServletException {
+            // 可以從 web.xml 的 filter-init-param 中獲取 SameSite 值，方便 MIS 調整異動
+            String configValue = filterConfig.getInitParameter("sameSiteValue");
+            if (configValue != null && !configValue.trim().isEmpty()) {
+                this.sameSiteValue = configValue.trim();
+            }
+            System.out.println("SameSiteCookieFilter initialized with SameSite value: " + sameSiteValue);
+        }
+    
+        @Override
+        public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+                throws IOException, ServletException {
+    
+            HttpServletResponse httpResponse = (HttpServletResponse) response;
+            HttpServletResponseWrapper wrappedResponse = new HttpServletResponseWrapper(httpResponse) {
+                @Override
+                public void addHeader(String name, String value) {
+                    if (name.equalsIgnoreCase("Set-Cookie")) {
+                        if (value.startsWith("JSESSIONID=")) {
+                             if (!value.contains("SameSite=")) { // 避免重複添加
+                                if ("None".equalsIgnoreCase(sameSiteValue) && !value.contains("Secure")) {
+                                    // SameSite=None，必須搭配 Secure 屬性
+                                    super.addHeader(name, value + "; SameSite=" + sameSiteValue + "; Secure");
+                                } else {
+                                    super.addHeader(name, value + "; SameSite=" + sameSiteValue);
+                                }
+                            } else {
+                                super.addHeader(name, value);
+                            }
+                        } else {
+                            super.addHeader(name, value); 
+                        }
+                    } else {
+                        super.addHeader(name, value);
+                    }
+                }
+    
+                @Override
+                public void setHeader(String name, String value) {
+                    if (name.equalsIgnoreCase("Set-Cookie")) {
+                         if (value.startsWith("JSESSIONID=")) {
+                            if (!value.contains("SameSite=")) {
+                                if ("None".equalsIgnoreCase(sameSiteValue) && !value.contains("Secure")) {
+                                    super.setHeader(name, value + "; SameSite=" + sameSiteValue + "; Secure");
+                                } else {
+                                    super.setHeader(name, value + "; SameSite=" + sameSiteValue);
+                                }
+                            } else {
+                                super.setHeader(name, value);
+                            }
+                        } else {
+                            super.setHeader(name, value);
+                        }
+                    } else {
+                        super.setHeader(name, value);
+                    }
+                }
+    
+                // 也處理 getHeaders 情況，確保在獲取時能看到添加的屬性
+                @Override
+                public Collection<String> getHeaders(String name) {
+                    if (name.equalsIgnoreCase("Set-Cookie")) {
+                        Collection<String> originalHeaders = super.getHeaders(name);
+                        // if header.startsWith("JSESSIONID=") .....
+                        // 也可以在此處加工與 addHeader/setHeader 相同方式補上 samesite
+                        return originalHeaders;
+                    }
+                    return super.getHeaders(name);
+                }
+            };
+    
+            chain.doFilter(request, wrappedResponse);
+        }
+    
+        @Override
+        public void destroy() {
+            System.out.println("SameSiteCookieFilter destroyed.");
+        }
+    }
+
+```
+* 注意: addHeader vs setHeader 差異處在是否新值覆蓋舊值或是僅添加新參數
+
+* __web.xml 設定相關 Filter__
+
+```xmla
+    <filter>
+        <filter-name>sameSiteCookieFilter</filter-name>
+        <filter-class>insect.totem.SameSiteCookieFilter</filter-class> <init-param>
+            <param-name>sameSiteValue</param-name>
+            <param-value>Lax</param-value> </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>sameSiteCookieFilter</filter-name>
+        <url-pattern>/*</url-pattern> </filter-mapping>
+
+    <session-config>
+        <cookie-config>
+            <secure>true</secure> <http-only>true</http-only>
+        </cookie-config>
+    </session-config>
+```
+     
 ## 檢查設定是否生效
     Chrome developer tool (F12) > Application > Storage Cookies 
 
