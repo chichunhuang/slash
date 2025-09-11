@@ -188,7 +188,3 @@ __語法:__
     * decade
     * century
     * millennium
-
-### 
-```sql
-```
