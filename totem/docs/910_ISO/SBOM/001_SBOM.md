@@ -5,15 +5,27 @@ keywords: [ISMS,SBOM]
 ---
 
 ## 數位韌性教材專區
-* SBOM 開源工具使用說明 介紹[https://material.nics.nat.gov.tw/material/maintainable/Guide_to_SBOM_and_OSV_Tools/]
+* [SBOM 開源工具使用說明介紹](https://material.nics.nat.gov.tw/material/maintainable/Guide_to_SBOM_and_OSV_Tools/)
 
 ## SBOM 簡介
+* _名詞解釋_ : 
+    * __SBOM__ : Software Bill of Materials/軟體物料清單，指的是軟體中的函式庫與元件清單。
+    * __OSV__ : Open Source Vulnerability，是一個公開的軟體漏洞資料庫，由 SBOM 搭配 OSV 可以了解軟體目前可能存在的漏洞。OSV 另提供函式庫與元件漏洞的修補版本資訊。
 
 ### SBOM 清單建立基本流程 
-1. 先以輔助工具建立 SPDX 檔，通常以 Json 格式為主流。
+1. 先以[輔助工具](#SBOM_Tools)建立 SPDX 檔，通常以 Json 格式為主流。
     * 不同工具所產生的 SPDX 內容可能會有所差異，但物料名稱清單部分則幾乎都相同。
 2. OSV-Scanner 工具查詢 OSV 紀錄中，相關物料目前所面臨的風險與相關 CVS 等級。
     * OSV-Scanner 可輔助產生可閱讀的 CSV 或 excel 報表。
+
+
+## SBOM 相關產生工具<span id="SBOM_Tools">&nbsp;</span>
+* Microsoft sbom-tool
+* CycloneDX Generator
+* Trivy
+* Syft
+* parlay
+* OSV-Scanner
 
 
 ## Syft
