@@ -41,6 +41,7 @@ keywords: [ISMS,SBOM]
     * windows cmd
 
 _Syft SBOM 建立指令_
+* CycloneDX format
 
 ```
 -- SBOM 建立指令: cmd 下先進入 syft.exe 所在資料夾
@@ -50,6 +51,41 @@ set "SYFT_FORMAT_PRETTY=true" && syft "D:\path\to\my\project" -o cyclonedx-json@
 ```
 
 _SPDX 連結 OSV 資料庫_
+* [SPDX 連結 OSV 資料庫通用方式](#SPDX_OSV)
+
+## Trivy
+* Trivy 適用於 Windows、Linux 環境下
+* Windows 下似乎只能在 cmd 下成功執行指令，其他 Bash 模擬套件有時會無法產出報告檔。
+* WIndows cmd 下執行時，路徑相關資料內容可以用雙引號封住。
+
+### Trivy Windows 使用紀錄
+* [Trivy 下載位置](https://github.com/aquasecurity/trivy/releases)
+* [Trivy Linux 下安裝方式](https://aquasecurity.github.io/trivy/v0.53/getting-started/installation/): Windows 下已經封裝成為 exe 檔可直接在 cmd 下呼叫指令。
+* 準備資訊
+    * trivy.exe 工具下載 
+    * osv-scanner\osv-scanner_windows_arm64.exe 工具下載 
+    * 專案路徑
+    * 輸出檔路徑: 建議選用 CycloneDX format 輸出檔附檔名以 .cdx.json 結尾，範例: trivy.cdx.json。也可選則 SPDX format。
+    * windows cmd
+
+_Trivy SBOM 建立指令_
+-- SBOM 建立指令: cmd 下先進入 trivy.exe 所在資料夾
+
+* CycloneDX format
+
+```
+trivy repo --format cyclonedx --output "D:\path\to\output\report\trivy.cdx.json" "D:\path\to\my\project"
+
+trivy repo --format cyclonedx --output ./sbom/trivy.cdx.json ./path/to/repo
+```
+
+* SPDX format
+
+```
+trivy repo --format spdx-json --output ./sbom/trivy.spdx.json ./path/to/repo
+```
+
+## SPDX 連結 OSV 資料庫 <span id="SPDX_OSV">&nbsp;</span>
 
 * forrmat 有多種可選: table、markdown 等等
     * --format: 參數 table、markdown
@@ -59,6 +95,6 @@ _SPDX 連結 OSV 資料庫_
 ```
 -- osv-scanner 連結 OSV 資料庫: cmd 下先進入 osv-scanner_windows_arm64.exe 所在資料夾
 
-osv-scanner --sbom="D:\path\of\sbom\output\folder\syft.cdx.json" --format=markdown --output=D:\path\of\osv\output\folder\osv.md
+osv-scanner --sbom="D:\path\of\sbom\output\folder\trivy.cdx.json" --format=markdown --output=D:\path\of\osv\output\folder\osv.md
 
 ```
