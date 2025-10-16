@@ -4,11 +4,11 @@
 
 
 // KaTex 數學函式繪製 1/4
-//import remarkMath from 'remark-math';
-//import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 // KaTex 數學函式繪製 2/4
-const remarkMath = require('remark-math');
-const rehypeKatex = require('rehype-katex');
+//const remarkMath = require('remark-math');
+//const rehypeKatex = require('rehype-katex');
 
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -90,7 +90,7 @@ const config = {
           remarkPlugins: [remarkMath],
           // KaTex 數學函式繪製 4-2/4
           rehypePlugins: [rehypeKatex],
-          
+        
         },
         blog: {
           showReadingTime: true,
