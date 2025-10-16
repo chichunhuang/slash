@@ -1,5 +1,5 @@
 ---
-title: OSI 模型 7 層模型
+title: OSI 模型 7 層網路架構模型
 description: OSI-Open System Interconnection Reference Model 模型 7 層模型
 keywords: [OSI]
 ---
@@ -8,6 +8,11 @@ keywords: [OSI]
 > 例如: Https : 瀏覽器和伺服器溝通時用的協定，既要傳輸資料，又要確保安全。  
 > 可以說他是應用層，因為它是 HTTP + TLS/SSL 的協定，屬於應用程式直接使用的協定。  
 > 但 Https 包含 TLS/SSL 等加密機制又間接牽涉到會話層與傳輸層的概念。  
+
+
+* 參考[網路架構模型: TCP/IP 4 層模型](./TCPIP_4_Layers) 
+    * OSI: 由 ISO 提出
+    * TCP/IP: 由資訊圖靈獎得主提出
 
 ## OSI 定義
 * Open System Interconnection Reference Model / Open Systems Interconnection Model
