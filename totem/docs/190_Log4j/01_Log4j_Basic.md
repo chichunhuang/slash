@@ -47,7 +47,7 @@ keywords: [Log4j]
 ## Appender <span id="log4j_appender">&nbsp;</span>
 * 透過 Appender，Logger 能夠將 log message 輸出到指定的媒體上。  
 * 一個 Logger 能夠擁有多個 Appender，所以 Logger 能夠同時輸出到多個媒體上。
-* <span style={{color: '#0044FF'}}> Appender 的設定亦會反映在 __Logger 的階層中__ </span> 。
+* <span style={{color: '#0044FF'}}> Appender 的設定亦會反應在 __Logger 的階層中__ </span> 。
     * 當 Logger 輸出一筆 log 時，__父階層的 Appender 和自己的 Appender 輸出設定都會反應到這筆 log__  中。
     * 例如: __package.insect__ Logger 有一個 Appender 將 message 輸出到 console，而 __package.insect.totem__ 有一個 Appender 將 message 輸出到檔案。當 package.insect.totem 輸出 log 時，console 和檔案都會出現這筆 log。  
     * 例外情況是: 當 logger 將 <code>additivity 屬性設為 false</code>，則此 <span style={{color: '#996633'}}>__logger 與它的子 logger 都不會承襲父層__</span>的設定。
@@ -58,7 +58,7 @@ keywords: [Log4j]
 
 
 ## Layout <span id="log4j_layout">&nbsp;</span>
-* <span style={{color: '#0044FF'}}>Layout 的設定亦會反映在 __Logger 的階層中__ </span>
+* <span style={{color: '#0044FF'}}>Layout 的設定亦會反應在 __Logger 的階層中__ </span>
 * 開發人員藉由 Layout 的設定，改變 message 所輸出的格式。
     * 例如: 為 Logger 加入一個 conversion pattern 為 <code>%r %t %-5p %c - %m%n</code> 的 PatternLayout，則輸出的 message 就可能會像下列這樣:
 
