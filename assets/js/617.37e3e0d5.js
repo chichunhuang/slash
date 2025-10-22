@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkinsect_totem=globalThis.webpackChunkinsect_totem||[]).push([[617],{50617:(e,t,s)=>{s.d(t,{createPieServices:()=>c.f});var c=s(69150);s(87960)}}]);

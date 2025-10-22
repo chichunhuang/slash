@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkinsect_totem=globalThis.webpackChunkinsect_totem||[]).push([[3490],{3490:(e,t,s)=>{s.d(t,{createInfoServices:()=>c.v});var c=s(91885);s(87960)}}]);

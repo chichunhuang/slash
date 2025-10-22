@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkinsect_totem=self.webpackChunkinsect_totem||[]).push([[9647],{18122:(e,s,t)=>{t.r(s),t.d(s,{default:()=>l});t(96540);var r=t(34164),c=t(81082),n=t(204),u=t(22831),a=t(38383),i=t(74848);function l(e){return(0,i.jsx)(c.e3,{className:(0,r.A)(n.G.wrapper.docsPages),children:(0,i.jsx)(a.A,{children:(0,u.v)(e.route.routes)})})}}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkinsect_totem=globalThis.webpackChunkinsect_totem||[]).push([[5901],{75901:(e,t,s)=>{s.d(t,{createTreemapServices:()=>a.d});var a=s(51633);s(87960)}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkinsect_totem=globalThis.webpackChunkinsect_totem||[]).push([[1903],{1912:t=>{t.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"Blog","authorsListPath":"/blog/authors"}')}}]);

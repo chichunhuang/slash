@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkinsect_totem=globalThis.webpackChunkinsect_totem||[]).push([[1e3],{91e3:(e,t,a)=>{a.d(t,{createRadarServices:()=>s.f});var s=a(65465);a(87960)}}]);
