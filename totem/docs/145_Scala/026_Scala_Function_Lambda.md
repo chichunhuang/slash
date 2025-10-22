@@ -6,7 +6,7 @@ keywords: [Scala,function,lambda]
 
 ## 關於 Scala Function/Lambda
 
-* 可以與 [Scala Lazy Fields](./Scala_Lazy_Fields) 相互比較
+* 可以與 [Scala Lazy Fields](./Scala_Class) 相互比較
 
 ### 關於 Function 語法結構
 * scala function 的參數都是 <code>__val__</code> 的 ___不可修改___

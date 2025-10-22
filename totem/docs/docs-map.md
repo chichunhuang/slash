@@ -5,7 +5,7 @@ sidebar_position: 1
 # Document List (docs)
 
 
-最後更版時間:Wed Oct 22 15:47:08 GMT+08:00 2025
+最後更版時間:Wed Oct 22 15:55:46 GMT+08:00 2025
 
 ## 010_Ant
 * [Ant執行外部程式 - Ant執行外部程式](/docs/Ant/Ant_External_Script)
@@ -91,7 +91,7 @@ sidebar_position: 1
 * [Jsonb 內容的 where 查詢 - Key value 是否存在於 Jsonb](/docs/PostgreSQL/JSONB/PostgreSQL_Contains)
 * [functions - PostgreSQL JSONB 函數](/docs/PostgreSQL/JSONB/PostgreSQL_Functions)
 * [輸出 JSON 格式資料 - PostgreSQL 輸出 Json 格式資料](/docs/PostgreSQL/JSONB/PostgreSQL_Export_As_Json)
-* [JSONB.md](/docs/PostgreSQL/JSONB/JSONB)
+* [JSONB.md](/docs/PostgreSQL/JSONB)
 * [PostgreSQL JSONB 內容縮排 - PostgreSQL Format JSONB Object](/docs/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
 * [PostgreSQL Jsonb 硬碟占用空間 - Jsonb 資料比數與記憶體占用計算](/docs/PostgreSQL/JSONB/PostgreSQL_Size_Memory)
 ## 145_Scala
@@ -230,24 +230,24 @@ sidebar_position: 1
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly Secure SameSite](/docs/DevTech/Tomcat/Tomcat_Httponly)
 ## 410_Management
 * [Extreme Programming - Extreme Programming](/docs/Management/XP)
-### Scrum 回顧
-* [Scrum Retrospective 筆記 - Scrum Retrospective 筆記](/docs/Management/Scrum 回顧/Scrum_Retro)
-* [6思考帽 Thinking Hats - Scrum Thinking Hats](/docs/Management/Scrum 回顧/Thinking_Hats)
-* [蛛網敏捷回顧 - Pilars of Agile Spiderweb](/docs/Management/Scrum 回顧/Pilars_of_Agile_Spiderweb)
-* [讚揚式回顧 - Appreciative Retrospective](/docs/Management/Scrum 回顧/Appreciative_Retrospective)
-* [強項導向回顧 - Strengths-Based_Retrospective](/docs/Management/Scrum 回顧/Strengths_Based_Retrospective)
-* [Top5 Retrospective - Top5 Retrospective](/docs/Management/Scrum 回顧/Top5_Retrospective)
-* [Plan Of Action - Plan Of Action](/docs/Management/Scrum 回顧/Plan_Of_Action)
-* [XXX - XXX](/docs/Management/Scrum 回顧/Start_Stop_Continue_MoreOf_LessOf_Wheel)
-* [Each One Meets All - Each One Meets All](/docs/Management/Scrum 回顧/Each_One_Meets_All)
-* [The_Complexity_Retrospective - The Complexity Retrospective](/docs/Management/Scrum 回顧/The_Complexity_Retrospective)
-* [力場分析 - Force Field Analysis](/docs/Management/Scrum 回顧/Force_Field_Analysis)
-* [番茄鐘計時技術 - Pomdoro Technique](/docs/Management/Scrum 回顧/Pomdoro_Technique)
-* [回顧手術法 - Retrospective_Surgery](/docs/Management/Scrum 回顧/Retrospective_Surgery)
-* [Questions Retrospective - Triple Nickels 迴圈式筆談回顧法](/docs/Management/Scrum 回顧/Questions_Retrospective)
-* [Everyday Retrospective - Everyday Retrospective](/docs/Management/Scrum 回顧/Everyday_Retrospective)
-* [紅綠卡回顧 - Red Green Index Cards](/docs/Management/Scrum 回顧/Retro_Index_Cards)
-* [4 L 回顧 - Four Ls Retrospective](/docs/Management/Scrum 回顧/Four_Ls_Retrospective)
+### Scrum_Retrospective
+* [Scrum Retrospective 筆記 - Scrum Retrospective 筆記](/docs/Management/Scrum_Retrospective/Scrum_Retro)
+* [6思考帽 Thinking Hats - Scrum Thinking Hats](/docs/Management/Scrum_Retrospective/Thinking_Hats)
+* [蛛網敏捷回顧 - Pilars of Agile Spiderweb](/docs/Management/Scrum_Retrospective/Pilars_of_Agile_Spiderweb)
+* [讚揚式回顧 - Appreciative Retrospective](/docs/Management/Scrum_Retrospective/Appreciative_Retrospective)
+* [強項導向回顧 - Strengths-Based_Retrospective](/docs/Management/Scrum_Retrospective/Strengths_Based_Retrospective)
+* [Top5 Retrospective - Top5 Retrospective](/docs/Management/Scrum_Retrospective/Top5_Retrospective)
+* [Plan Of Action - Plan Of Action](/docs/Management/Scrum_Retrospective/Plan_Of_Action)
+* [XXX - XXX](/docs/Management/Scrum_Retrospective/Start_Stop_Continue_MoreOf_LessOf_Wheel)
+* [Each One Meets All - Each One Meets All](/docs/Management/Scrum_Retrospective/Each_One_Meets_All)
+* [The_Complexity_Retrospective - The Complexity Retrospective](/docs/Management/Scrum_Retrospective/The_Complexity_Retrospective)
+* [力場分析 - Force Field Analysis](/docs/Management/Scrum_Retrospective/Force_Field_Analysis)
+* [番茄鐘計時技術 - Pomdoro Technique](/docs/Management/Scrum_Retrospective/Pomdoro_Technique)
+* [回顧手術法 - Retrospective_Surgery](/docs/Management/Scrum_Retrospective/Retrospective_Surgery)
+* [Questions Retrospective - Triple Nickels 迴圈式筆談回顧法](/docs/Management/Scrum_Retrospective/Questions_Retrospective)
+* [Everyday Retrospective - Everyday Retrospective](/docs/Management/Scrum_Retrospective/Everyday_Retrospective)
+* [紅綠卡回顧 - Red Green Index Cards](/docs/Management/Scrum_Retrospective/Retro_Index_Cards)
+* [4 L 回顧 - Four Ls Retrospective](/docs/Management/Scrum_Retrospective/Four_Ls_Retrospective)
 ## 500_MISC
 * [OSI 模型 7 層網路架構模型 - OSI-Open System Interconnection Reference Model 模型 7 層模型](/docs/MISC/OSI_Model_7_Layers)
 * [SSH 無密碼登入 - SSH 無密碼登入相關設定](/docs/MISC/SSH_WO_Pwd)
@@ -268,7 +268,7 @@ sidebar_position: 1
 * [Stag Beetle - Insect-Totem Stag Beetle](/docs/Graphics/Stag_Beetle_01)
 * [Stag Beetle-rainbow - Insect-Totem Stag Beetle-rainbow](/docs/Graphics/Stag_Beetle_Rainbow)
 #### VA_PT
-* [弱掃與滲透測試 - Vulnerability Assessment and Penetration Testing](/docs/ISO/27001/VA_PT/VA_PT)
+* [弱掃與滲透測試 - Vulnerability Assessment and Penetration Testing](/docs/ISO/27001/VA_PT)
 * [XFS Cross Frame Scripting - XFS、跨框架腳本攻擊](/docs/ISO/27001/VA_PT/XFS)
 ### SBOM
 * [SBOM - 軟體物料清單](/docs/ISO/SBOM/SBOM)

@@ -67,23 +67,23 @@ https://insect-totem.net/docs/MISC/OSI_Model_7_Layers
 https://insect-totem.net/docs/MISC/SSH_WO_Pwd
 https://insect-totem.net/docs/MISC/TCPIP_4_Layers
 https://insect-totem.net/docs/Mail/Mail_MimeUtility_Attatch_Garbled
-https://insect-totem.net/docs/Management/Scrum 回顧/Appreciative_Retrospective
-https://insect-totem.net/docs/Management/Scrum 回顧/Each_One_Meets_All
-https://insect-totem.net/docs/Management/Scrum 回顧/Everyday_Retrospective
-https://insect-totem.net/docs/Management/Scrum 回顧/Force_Field_Analysis
-https://insect-totem.net/docs/Management/Scrum 回顧/Four_Ls_Retrospective
-https://insect-totem.net/docs/Management/Scrum 回顧/Pilars_of_Agile_Spiderweb
-https://insect-totem.net/docs/Management/Scrum 回顧/Plan_Of_Action
-https://insect-totem.net/docs/Management/Scrum 回顧/Pomdoro_Technique
-https://insect-totem.net/docs/Management/Scrum 回顧/Questions_Retrospective
-https://insect-totem.net/docs/Management/Scrum 回顧/Retro_Index_Cards
-https://insect-totem.net/docs/Management/Scrum 回顧/Retrospective_Surgery
-https://insect-totem.net/docs/Management/Scrum 回顧/Scrum_Retro
-https://insect-totem.net/docs/Management/Scrum 回顧/Start_Stop_Continue_MoreOf_LessOf_Wheel
-https://insect-totem.net/docs/Management/Scrum 回顧/Strengths_Based_Retrospective
-https://insect-totem.net/docs/Management/Scrum 回顧/The_Complexity_Retrospective
-https://insect-totem.net/docs/Management/Scrum 回顧/Thinking_Hats
-https://insect-totem.net/docs/Management/Scrum 回顧/Top5_Retrospective
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Appreciative_Retrospective
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Each_One_Meets_All
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Everyday_Retrospective
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Force_Field_Analysis
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Four_Ls_Retrospective
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Pilars_of_Agile_Spiderweb
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Plan_Of_Action
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Pomdoro_Technique
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Questions_Retrospective
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Retro_Index_Cards
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Retrospective_Surgery
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Scrum_Retro
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Start_Stop_Continue_MoreOf_LessOf_Wheel
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Strengths_Based_Retrospective
+https://insect-totem.net/docs/Management/Scrum_Retrospective/The_Complexity_Retrospective
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Thinking_Hats
+https://insect-totem.net/docs/Management/Scrum_Retrospective/Top5_Retrospective
 https://insect-totem.net/docs/Management/XP
 https://insect-totem.net/docs/Notion/NotionBasic
 https://insect-totem.net/docs/Notion/Notion_Automation

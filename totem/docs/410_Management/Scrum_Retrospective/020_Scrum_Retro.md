@@ -30,10 +30,11 @@ keywords: [Scrum,Retrospective]
 * [思考帽 6_Thinking_Hats](./Thinking_Hats)
 * [蛛網敏捷回顧 Pilars of Agile Spiderweb: 回顧自己對專案, 對自己能力的期許](./Pilars_of_Agile_Spiderweb)
 * [Appreciative_Retrospective: 讚揚式回顧](./Appreciative_Retrospective)
-* [Strengths-Based_Retrospective](./Strengths-Based_Retrospective)
+                                
+* [Strengths-Based_Retrospective](./Strengths_Based_Retrospective)
 * [Top5_Retrospective](./Top5_Retrospective)
 * [Plan_Of_Action](./Plan_Of_Action)
-* [Start_Stop_COntinue_MoreOf_LessOf_Wheel](./Start_Stop_COntinue_MoreOf_LessOf_Wheel)
+* [Start_Stop_COntinue_MoreOf_LessOf_Wheel](./Start_Stop_Continue_MoreOf_LessOf_Wheel)
 * [Each_One_Meets_All](./Each_One_Meets_All)
 * [The_Complexity_Retrospective](./The_Complexity_Retrospective)
 * [Force_Field_Analysis](./Force_Field_Analysis)
@@ -42,7 +43,7 @@ keywords: [Scrum,Retrospective]
 * [Questions_Retrospective: 同件事得到不同觀點,整合大家的想法, Triple Nickels](./Questions_Retrospective)
 * [Everyday_Retrospective : 每日的例行回顧計畫](./Everyday_Retrospective)
 * [Four_Ls_Retrospective : Liked – Learned – Lacked – Longed](./Four_Ls_Retrospective)
-* [Red Green Index Cards](./Retro_Index_Cards.md)
+* [Red Green Index Cards](./Retro_Index_Cards)
 * Sailboat
 * Weekly_Retrospective_Simple_and_delta
 * Jeopardy_Retrospective
