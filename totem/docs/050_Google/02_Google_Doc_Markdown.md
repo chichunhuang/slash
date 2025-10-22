@@ -1,6 +1,6 @@
 ---
 title: Google Doc 中自動渲染 markdown 語法
-description: Google App Script 取 File ID
+description: Google Doc 中自動渲染 markdown 語法
 keywords: [Google App Script] 
 ---
 
