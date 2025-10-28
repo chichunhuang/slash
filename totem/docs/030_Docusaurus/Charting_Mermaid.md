@@ -58,7 +58,9 @@ config 下加上下列三項設定
 
 ## 基本語法 in mdx
 
-以 code block 封裝流程，語言選 mermaid
+* code block 封裝流程，語言選 mermaid
+* graph TD: 縱向圖
+* graph LR: 橫向圖
 
 <pre>
     \`\`\`mermaid
