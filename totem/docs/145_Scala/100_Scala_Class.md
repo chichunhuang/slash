@@ -14,16 +14,16 @@ keywords: [Scala,Class]
 |**Companion Object** |類似 Singleton, Static class  |  object class    |  搭配 apply methods|
 
 
-## Scala 的 Class 結構
+## Scala 的 Class 結構 <span id="scala_class_structure">&nbsp;</span>
 
-### <code>__Scala 的 Companion Object__</code>
+### <code>__Scala 的 Companion Object__</code> <span id="scala_Companion_Object">&nbsp;</span>
 * 是一個 Singleton
 * 一定會有一個同名的 Companion Class
 * Companion Class 與 Companion Object 的 private fields 可以互通
 * Companion Class 與 Companion Object 間 __推測應該是被 Compile 成一個 class 與 inner static class 間的關係__
 * Scala 中沒有靜態修飾符, 但是 Companion Object 下的成員都是 static
 
-### Scala Default Constructor
+### Scala Default Constructor <span id="scala_Default_Constructor">&nbsp;</span>
 * 點運算的同義 method _$eq\(\)
 * constructor parameters 的存取限制
     * var/val 決定是否建立 getter/setter
@@ -69,7 +69,7 @@ keywords: [Scala,Class]
     p.firstName_$eq("Mary")   
 ```
 
-## Scala 子類的建構子
+## Scala 子類的建構子 <span id="scala_sub_constructor">&nbsp;</span>
 * 子類建構子參數的存取
     * 子類新建的 parameters 仍需定義 var/val
     * Constructor parameter 的 var/val 關鍵字 以及他的型別宣告在第一次出現處
@@ -85,7 +85,7 @@ keywords: [Scala,Class]
     val m = new Magazine("1234", "SPORTS")
 ```
 
-## Scala private Constructor/Fields
+## Scala private Constructor/Fields <span id="scala_private_constructor">&nbsp;</span>
 * 注意 private 寫在 constructor code block 前
 * ex: singleton example
 * Object-private fields
@@ -110,7 +110,7 @@ keywords: [Scala,Class]
     val brain = Brain.getInstance
 ```
 
-## Scala Object-Private Fields
+## Scala Object-Private Fields <span id="scala_object_private_fields">&nbsp;</span>
 * 關鍵字: 在變數定義前加上 private\[this\]
 * 限制只能在 scala object 中使用變數
 * 加上 private\[this\] 會變成類似 private static variable, 其他 instance 也無法存取
@@ -130,7 +130,13 @@ keywords: [Scala,Class]
     }
 ```
 
-## Scala Auxiliary Constructor \(輔助建構子\)
+## Scala this and super <span id="scala_this_super">&nbsp;</span>
+* this
+    * 在輔助建構子 [Scala Auxiliary Constructor] 用法同 Java this, delegate to 其他建構子
+    * 另外用在 [Object-Private Fields]
+* super
+
+## Scala Auxiliary Constructor \(輔助建構子\) <span id="scala_Auxiliary_Constructor">&nbsp;</span>
 * Scala 中有 named-param, default-param, 所以減少建構子的數量
 * Auxiliary Constructors 指的是 Java 中,以 <code>__this__</code> 呼叫其他建構子的技巧
 * 以 <code>__this__</code> 為 method name 的其他 methods 稱 Auxiliary Constructors.
@@ -206,7 +212,7 @@ keywords: [Scala,Class]
     val c = PersonC("William Shatner", 82)
 ```
 
-## 複寫預設的 Scala Getter/Setter 技巧
+## 複寫預設的 Scala Getter/Setter 技巧 <span id="scala_get_set">&nbsp;</span>
 * 可達到利用點運算取直與設值的功能
     * a.name / a.name="new name"
     * Scala style 的語法, 但是 name 只能定義一次的限制
@@ -229,7 +235,7 @@ keywords: [Scala,Class]
       person.name ="Totem"
 ```
 
-## Scala Lazy Fields \(Performance)
+## Scala Lazy Fields \(Performance) <span id="scala_lazy_field">&nbsp;</span>
 * 如果一個變數值需要大量運算, 可採用 lazy field 的技巧
 * 需使用 lazy 關鍵字
 * 將 Code Block or Function 指定給一個變數
@@ -261,7 +267,7 @@ keywords: [Scala,Class]
     }
 ```
 
-## Scala 沒初始值 fields 定義
+## Scala 沒初始值 fields 定義 <span id="scala_field_init">&nbsp;</span>
 * 改用 \[Option\] 來處理 None / Some
 * 範例中的 Person.address 預設是 None
 
@@ -280,7 +286,7 @@ keywords: [Scala,Class]
     p.address = Some(Address("Talkeetna", "AK", "99676"))
 ```
 
-## Abstract class/Abstract Fields/Trait 下如何建立屬性\(Properties)
+## Abstract class/Abstract Fields/Trait 下如何建立屬性\(Properties) <span id="scala_abstract">&nbsp;</span>
 * 只有 abstract class 可以建立 abstract fields \(greeting/age)
 * abstract fields 在 <code>__concrete class 中實作時要再 需告 var/val__</code>
     * abstract fields(限定子類要實作), Scala compiler 只會幫忙建立 get/set methods.
@@ -307,7 +313,7 @@ keywords: [Scala,Class]
     }
 ```
 
-## Scala 物件全等判斷
+## Scala 物件全等判斷 <span id="scala_obj_equality">&nbsp;</span>
 * Object Equality \(Equals and Hashcode)，JVM 語言基本上 <span style={{color: '#0044FF'}}>__概念同 Java__</span>。
 * <code>__==__</code>, <code>__equals__</code>, <code>__eq__</code>
 * Scala 中 equals / hashcode methods
@@ -330,7 +336,7 @@ keywords: [Scala,Class]
     } 
 ```
 
-## Scala Inner Class
+## Scala Inner Class <span id="scala_inner_class">&nbsp;</span>
 * Scala 中實現 Inner class 的方式
     * 在 outer class scope 中定義一個 Case class
 * 先定義 Inner class 的目的
@@ -359,7 +365,7 @@ keywords: [Scala,Class]
     p.things.foreach(println)
 ```
 
-## Scala 的 Methods
+## Scala 的 Methods  <span id="scala_method">&nbsp;</span>
 * Scopes of Scala Methods
 
 | Type | Scope | Syntax | Desc | 

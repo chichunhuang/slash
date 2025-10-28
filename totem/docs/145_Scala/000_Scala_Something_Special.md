@@ -35,19 +35,19 @@ keywords: [Scala]
 * [Scala 數值相關處理](./Scala_Numeric_Operation)
 * [Scala 三元運算子\(Ternary Operator)](./Scala_Ternary_Operator)
 * [Scala 的 Class 種類](./Scala_Class)
-    * Scala 的 Class 結構
-    * Scala 的 Companion Object
-    * Scala Default Constructor
-    * Scala 子類的建構子
-    * Scala private Constructor/Fields
-    * Scala Object-Private Fields
-    * Scala Class 中的 this 與 super
-    * Scala Auxiliary Constructor \(輔助建構子)
-    * 複寫預設的 Scala Getter/Setter 技巧
-    * Scala Lazy Fields \(Performance)
-    * Scala 沒初始值 fields 定義
-    * Abstract class/下如何建立屬性\(Properties) / Abstract Fields
-    * Scala Object Equality \(Equals and Hashcode)
-    * Scala Inner Class
-    * Scala 的 Methods
+    * [Scala 的 Class 結構](./Scala_Class#scala_class_structure)
+    * [Scala 的 Companion Object](./Scala_Class#scala_Companion_Object)
+    * [Scala Default Constructor](./Scala_Class#scala_Default_Constructor)
+    * [Scala 子類的建構子](./Scala_Class#scala_sub_constructor)
+    * [Scala private Constructor/Fields](./Scala_Class#scala_private_constructor)
+    * [Scala Object-Private Fields](./Scala_Class#scala_object_private_fields)
+    * [Scala Class 中的 this 與 super](./Scala_Class#scala_this_super)
+    * [Scala Auxiliary Constructor \(輔助建構子)](./Scala_Class#scala_Auxiliary_Constructor)
+    * [複寫預設的 Scala Getter/Setter 技巧](./Scala_Class#scala_get_set)
+    * [Scala Lazy Fields \(Performance)](./Scala_Class#scala_lazy_field)
+    * [Scala 沒初始值 fields 定義](./Scala_Class#scala_field_init)
+    * [Abstract class/下如何建立屬性\(Properties) / Abstract Fields](./Scala_Class#scala_abstract)
+    * [Scala Object Equality \(Equals and Hashcode)](./Scala_Class#scala_obj_equality)
+    * [Scala Inner Class](./Scala_Class#scala_inner_class)
+    * [Scala 的 Methods](./Scala_Class#scala_method)
     * Scala Methods 呼叫的方式
