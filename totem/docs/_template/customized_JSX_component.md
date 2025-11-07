@@ -11,7 +11,7 @@ import {Talk} from "@site/src/components/SayHelloComponent";
 </h1>
 
 <h1>
-import pure js function : 
+i_m_p_o_r_t pure js function : 
 {Sum(1, 10)}, {Square(2)}
 </h1>
 
