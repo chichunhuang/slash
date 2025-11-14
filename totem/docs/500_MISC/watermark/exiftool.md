@@ -9,7 +9,7 @@ keywords: [exiftool]
 ## exiftool 授權方式
 * 授權方式: [Perl (可選 GPL 或 Artistic License)](https://github.com/exiftool/exiftool/pull/177?utm_source=chatgpt.com)
 * 官方網站位置: [https://exiftool.org/](https://exiftool.org/)
-* [exiftool GUI](https://exiftool.org/gui/): 相同作者的擴充工具。
+* [exiftool GUI](https://exiftool.org/gui/): exiftool的擴充工具。
 
 
 ___安裝 exiftool___ 
