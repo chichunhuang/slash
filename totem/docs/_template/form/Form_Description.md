@@ -111,12 +111,16 @@ ___service example 2___
 	import { useForm } from '../hooks/useForm';
 	import { calculateBMI } from '../services/bmiService';
 	//import {xx} from "@site/src/service/TemplateService";
-	
-	export default function BMI() {
-	  const { form, handleChange, handleSubmit, status } = useForm(
-	    { height: '', weight: '' },  // 初始值
-	    calculateBMI                 // 傳入 service
-	  );
+
+//注意 Jsx function: export 關鍵字,前方不可以有 space=> 不然
+//Error: MDX compilation failed for file
+//[webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item...
+
+export default function BMI() {
+  const { form, handleChange, handleSubmit, status } = useForm(
+    { height: '', weight: '' },  // 初始值
+    calculateBMI                 // 傳入 service
+  );
 	
 	  return (
 	    <div>
