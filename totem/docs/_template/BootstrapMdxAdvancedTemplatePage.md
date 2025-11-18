@@ -6,6 +6,7 @@ keywords: [BootstrapMdxTemplatePage]
 //import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import './bootstrapCustomizedCssTemplate.css';
+import Link from '@docusaurus/Link'
 
 <h1 className='customTitle'>這段文字使用客製樣式: MDX 相關設定與頁面</h1>
 

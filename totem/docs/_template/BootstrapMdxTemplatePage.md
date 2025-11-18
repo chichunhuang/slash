@@ -3,7 +3,7 @@ title: BootstrapMdxTemplatePage title
 description: BootstrapMdxTemplatePage desc
 keywords: [BootstrapMdxTemplatePage]
 ---
-
+import Link from '@docusaurus/Link'
 
     <ul>
         <li>npm install bootstrap..</li>
