@@ -1,6 +1,6 @@
 ---
-title:  JavaScript 命名慣例 
-description:  JavaScript Naming Conventions
+title: JavaScript 命名慣例 
+description: JavaScript Naming Conventions
 keywords: [javascript,Naming]
 ---
 

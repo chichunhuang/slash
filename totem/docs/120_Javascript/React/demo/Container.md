@@ -47,6 +47,7 @@ export default function Run() {
   return (
   <>
     <h1>以相同元件封裝</h1>
+    註: children 是 React 隱式插入的
     <Toolbar
       onPlayMovie={() => alert('A!')}
       onUploadImage={() => alert('B!')}

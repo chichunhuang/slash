@@ -4,8 +4,6 @@ description: State Changing
 ---
 import React, { useState } from "react";
 
-
-
 export default function BucketList() {
 
     const initialList = [
