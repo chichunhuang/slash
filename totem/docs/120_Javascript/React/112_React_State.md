@@ -376,6 +376,65 @@ export default function BucketList() {
  // example from: https://react.dev/learn/adding-interactivity
 ```
 
+## state props 差異
+* props: 從外部傳進來的 __唯讀__ 資料
+* state: 元件 __自己管理__ 、 __會變動__ 的資料
+* props 是別人給的，state 是自己顧的
+
+### props
+* props 一定是從父元件來。React 的資料流是 __單向資料流 One-way data flow__ ，不允許子元件修改 props，避免發生資料異常。
+* 不能被子元件修改
+* 當父元件改動子元件將自動重 render
+* 可是任何型別 值、物件、函式
+
+### state
+* state 指的是存在元件中的資料
+* 當 state 改變會造成元件重新 render
+* 須經由 useState hook 來修改，不能直接改值因為 react 需管理後續 render 所需相關動作。
+
+```javascript
+    import { useState } from "react"
+    
+    function Counter() {
+      const [count, setCount] = useState(0)
+    
+      return (
+        <button onClick={() => setCount(count + 1)}>
+          點了 {count} 次
+        </button>
+      )
+    }
+```
+
+### props 與 state 實際應用場景
+
+* state 在 Parent
+* Child 用 props 顯示
+* Child 用 props \(onEvent ) 呼叫改 state 的方法 \(Lifting State Up 狀態提升技法)
+
+```javascript
+    function Parent() {
+      const [count, setCount] = useState(0)
+    
+      return (
+        <Child
+          count={count}
+          onAdd={() => setCount(count + 1)}
+        />
+      )
+    }
+    
+    function Child({ count, onAdd }) {
+      return (
+        <>
+          <p>{count}</p>
+          <button onClick={onAdd}>+1</button>
+        </>
+      )
+    }
+```
+
+
 ## State 共用
 * [React State Sharing Between Components](./React_State_Sharing)
 
