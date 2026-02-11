@@ -437,6 +437,4 @@ export default function BucketList() {
 
 ## State 共用
 * [React State Sharing Between Components](./React_State_Sharing)
-
-
-## 
+* https://react.dev/learn/sharing-state-between-components
