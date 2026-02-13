@@ -114,7 +114,6 @@ sidebar_position: 1
 * [Jsonb 內容的 where 查詢 - Key value 是否存在於 Jsonb](/docs/PostgreSQL/JSONB/PostgreSQL_Contains)
 * [functions - PostgreSQL JSONB 函數](/docs/PostgreSQL/JSONB/PostgreSQL_Functions)
 * [輸出 JSON 格式資料 - PostgreSQL 輸出 Json 格式資料](/docs/PostgreSQL/JSONB/PostgreSQL_Export_As_Json)
-* [JSONB.md](/docs/PostgreSQL/JSONB/JSONB)
 * [PostgreSQL JSONB 內容縮排 - PostgreSQL Format JSONB Object](/docs/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
 * [PostgreSQL Jsonb 硬碟占用空間 - Jsonb 資料比數與記憶體占用計算](/docs/PostgreSQL/JSONB/PostgreSQL_Size_Memory)
 ## 145_Scala
@@ -280,7 +279,7 @@ sidebar_position: 1
 * [exiftool 基本使用 - exiftool](/docs/MISC/watermark/exiftool)
 * [exiftool GUI 基本使用 - exiftool GUI](/docs/MISC/watermark/exiftoolgui)
 * [imagemagick 基本使用 - imagemagick](/docs/MISC/watermark/imagemagick)
-* [浮水印三兩事 - Watermark](/docs/MISC/watermark/watermark)
+* [浮水印三兩事 - Watermark](/docs/MISC/watermark)
 ## 890_Tools
 * [Mermaid 學習紀錄 - Mermaid UML Chart](/docs/Tools/Mermaid)
 * [NotebookLM 筆記 - NotebookLM 筆記](/docs/Tools/NotebookLM)
