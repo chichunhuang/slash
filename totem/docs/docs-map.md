@@ -279,7 +279,7 @@ sidebar_position: 1
 * [exiftool 基本使用 - exiftool](/docs/MISC/watermark/exiftool)
 * [exiftool GUI 基本使用 - exiftool GUI](/docs/MISC/watermark/exiftoolgui)
 * [imagemagick 基本使用 - imagemagick](/docs/MISC/watermark/imagemagick)
-* [浮水印三兩事 - Watermark](/docs/MISC/watermark)
+* [浮水印三兩事 - Watermark](/docs/MISC/watermark/watermarks)
 ## 890_Tools
 * [Mermaid 學習紀錄 - Mermaid UML Chart](/docs/Tools/Mermaid)
 * [NotebookLM 筆記 - NotebookLM 筆記](/docs/Tools/NotebookLM)
