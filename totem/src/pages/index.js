@@ -26,7 +26,8 @@ function HomepageHeader() {
                   <span >{siteConfig.tagline} / &nbsp;<Link to="/docs/docs-map"> 主題清單 &gt;&gt;&gt;  </Link></span>
               </div>
           </div>
-        <Breaknews h2={totem.latestTitle} items={totem.latestItems}/>
+          
+        { /* <Breaknews h2={totem.latestTitle} items={totem.latestItems}/> */}
     </div>
   );
 }
