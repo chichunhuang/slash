@@ -13,12 +13,13 @@ keywords: [javascript,React,State]
 * Local Variables 改變也 __不會觸發 Rendering__ 。
 
 ### React State
-* state 指的是 UI component 所暫存的資料內容，由 React 經由 Hook 管理生命週期的資料。受 React 管理才會觸發渲染。   
+* state 指的是 UI component 所暫存的資料內容，由 React 經由 __Hook 管理生命週期__ 的資料。受 React 管理的資料異動才會觸發渲染。   
 * state 被異動或設定時會觸發 Browser 進行重新渲染。渲染時則會讀取 state 某個時間點的快照值。  
 * <span style={{color: '#0044FF'}}>__state 與 component instance 相依，每個 instance 採用自己獨立副本__</span> 。
 * State 變數指的是，經由 useState 所宣告的變數。
 * useState 會回傳變數的 getter 與 setter。
 * 為確保 React 能正確管理 State 與正確進行渲染，<span style={{color: '#FF1100'}}>__React 要求 state Hooks 必須在元件 Top Level 呼叫__</span>。也就是模組或元件的頂層，不可出現在 function 或其他會變動內嵌結構中。   
+* 在 React 中，隨時間變化的資料稱為 state \(data that changes over time is called state)   
 
 ```javascript
 import { useState } from 'react';
@@ -62,7 +63,7 @@ __state__
 
 __Snapshot__
 
-* Snapshot vs Expression
+* Snapshot vs <span style={{color: '#FF1100'}}>__Expression__</span>
 
 ```javascript
 export default function Counter() {
@@ -124,14 +125,16 @@ export default function Counter() {
 ### 更新槽串物件 state
 * 因為要視 state 為不可變的，僅能被取代。所以必須遞迴地複製內容。
 * 每一層複製都借用 ... spread syntax
+* [範例](#spread_syntax)
 
 ### 更新物件 state: \[ \] 操作子
-* \[e.target.name\]: e.target.value  
+* <span style={{color: '#0044FF'}}>__\[e.target.name\]: e.target.value__</span>  
 * 在更新物件 State 時，React 提供了 <code>&nbsp; [e.target.name] &nbsp;</code> 簡化語法，利用中括號來動態指向特定屬性。讓物件屬性更新時無須一對一撰寫更新方法。
 * 以 \[e.target.name\] 隱式取代顯式屬性名稱指定，來達到共用目的。
-
+* [範例](#square_op)
 
 ### 更新陣列 state
+* [範例](#array_mod)
 * JavaScript 中，陣列是 mutable，但若使用在 State，仍然應該視為 immutable 與 read-only。所以 state 設值時須進行適當資料複製。
 * 相關回傳新 array api: concat, filter, slice, map, spread syntax。
     * filtet: 過濾 Array 並回傳符合條件的元素
@@ -144,7 +147,7 @@ export default function Counter() {
     * key 必須是定值，不可隨時間變動。
     * 避免以 Array, 集合物件的 index 當 key，除非確定 key value pair 不隨時間異動，因為 React state 使用資料時會需要複製或 clone 新的物件，插入/刪除/排序/input/狀態等改變會間接造成物件的排序變化。
 
-__更新物件 state: spread syntax__
+__更新物件 state: spread syntax__ <span id="spread_syntax"></span>
 
 ```javascript
   // 起始建立的物件
@@ -205,7 +208,9 @@ __更新槽串物件 state: spread syntax__
 // example from: https://react.dev/learn      
 ```
 
-__更新物件 state: \[ ] 操作子__
+__更新物件 state: \[ ] 操作子__ <span id="square_op"></span>
+* 數個 input 共用同一個 onChange handler
+* <span style={{color: '#0044FF'}}>__[e.target.name]: e.target.value__</span>
 
 ```javascript
 import { useState } from 'react';
@@ -262,7 +267,7 @@ export default function Form() {
  // example from: https://react.dev/learn/updating-objects-in-state
 ```
 
-__更新陣列 state__
+__更新陣列 state__ <span id="array_mod"></span>
 
 ```javascript
 export default function BucketList() {

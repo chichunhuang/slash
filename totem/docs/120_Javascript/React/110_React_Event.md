@@ -15,6 +15,7 @@ keywords: [javascript,React,Event_Handller]
 * 注意: 
     * snapshot，event handler 預期應該是一個 js function。  
     * 使用時是傳遞註冊 event function 還是呼叫，別不小心加上小括號。
+* 若要將獨立的 eventHandler 當作 props 傳給 UI 元件時，此時 handler 變數的命名通常為以 onAction 格式命名。
     
 ## Event
 * 指使用者 clicking、hovering、focusing on form 等互動操作時觸發的函數
@@ -30,11 +31,32 @@ __Handler 註冊方式: 註冊與呼叫__
 註冊一個函式
 <button onClick={handleClick}>
 <button onClick={() => alert('...')}>
+<button onClick={() => { alert('...');  }}>
+<button onClick={function handleClick() {
+  alert('...');
+}}>
 
 
 錯誤方式，會直接執行doSomething
 <button onClick={doSomething()}>
 ```
+
+* 先定義 js handleClick 函數，然後將其作為 prop 傳遞給了 button 的 onClick 事件處理程序
+
+```javascript
+export default function Button() {
+  function handleClick() {
+    alert('You clicked me!');
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
+}
+```
+
 
 __自訂 Event: onSmash__
 * 範例: 除了自定義的 onSmash event 外，也經由 children 演示客製化元件的外觀動態設定方式。

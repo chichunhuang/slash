@@ -18,7 +18,7 @@ keywords: [javascript,JSX]
 
     
 ## JSX 變數與參數使用方式
-* JSX 中可以藉由大括號直接存取 JavaScript 中的參數，變數或表達式回傳值。
+* JSX 中可以藉由大括號直接存取 JavaScript 中的 <span style={{color: '#0044FF'}}>__參數__</span>，<span style={{color: '#0044FF'}}>__變數__</span>或<span style={{color: '#0044FF'}}>__表達式回傳值__</span>。
     * attribute 等號後的參數
     * JSX tag 的內容部分
 
@@ -44,7 +44,7 @@ export default function TodoList() {
 ```
  
 ___JSX 中使用雙大括號情境___
-* JSX 下也允許你以物件方式傳遞資料，因物件結構本身有一層大括號，因而看起來像是有兩層大括號。
+* JSX 下也允許你以物件方式傳遞資料，因 __物件結構本身有一層大括號__，因而看起來像是有兩層大括號。
 * 常見情形是傳遞 CSS style
 * 此處須注意: JSX 變數命名與轉換規則，backgroundColor 採用 camelCase。
     * 以 javascript 物件結構傳遞多項資訊

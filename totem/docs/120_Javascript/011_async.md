@@ -14,7 +14,7 @@ keywords: [javascript,async]
 * 語法結構\(語法糖):
     * 以 async 需告指定函數允許採用 async 非同步操作
     * 流程中需等待的動作呼叫前加上 await，讓 JS 進行等待。
-    * JS 遇到 await 回傳結果一律鋒裝成 Promise
+    * JS 遇到 await 回傳結果一律封裝成 Promise
 
 ```javascript
 //結構

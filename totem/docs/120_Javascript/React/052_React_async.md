@@ -6,12 +6,15 @@ keywords: [javascript,useEffect,async]
 
 * [JavaScript async 基本](./../async)  
 
-> async 的目的，是為了讓你可以在函式內 <span style={{color: '#0044FF'}}>__以同步的寫法處理非同步\(平行執行)流程__</span>  
+> async 的目的，是為了讓你可以在函式內 <span style={{color: '#0044FF'}}>__以同步的寫法處理非同步\(平行執行)流程__</span>   
+> useEffect 的功用在，將 js 回傳的 Promise 轉成 JSX 供 React 使用。   
 > 
 > React 中使用 async 語法時，因為 await 回傳的是 Promise，而非 JSX。  
-> 但是 React Component 必須回傳 JSX，於是 React 便以 <span style={{color: '#FF1100'}}>__useEffect Hook__</span> 來封裝與管理回傳的 Promise 並適當地轉換成 JSX。  
+> 但是 React Component 必須回傳 JSX，於是 React 便以 <span style={{color: '#FF1100'}}>__useEffect Hook__</span> 來封裝與管理回傳的 <span style={{color: '#FF1100'}}>__Promise 並適當地轉換成 JSX__</span>。  
 
 ## React 中使用 async 情境
+> 下方範例 __回傳的會是以 Promise 封裝的內容__。因部分動作被 React 封裝 \(語法糖) 所以沒看到 Promise 字眼。
+
 * 處理 API Request。等待遠端伺服器回應時使用。
 
 ```javascript
@@ -50,10 +53,13 @@ keywords: [javascript,useEffect,async]
 ```
 
 ## React 中的 UI Component
+* 簡單說: useEffect 幫忙將 Promise 轉成 JSX。
 * React 在實作 Component 時也常以 function 作為結構定義。而此時 js function 回傳的必須是 JSX。
 * 當 Component 的 state 須由其他 API Server 取得時，則不可直接在 function 前加上 async，因為 UI Component 回傳的必須是 JSX 而不是 Promise。
 * React 提供 useEffect Hook 來處理非同步動作行為。
 * React 架構下將 async 動作傳給 useEffect，由 React 來管理異步操作。
+* useEffect 將所得的資料傳給 state 供後續渲染使用
+* [useEffect 使用概念範例](./React_Exe#useEffect)
 
 ```javascript
     function MyComponent() {

@@ -60,9 +60,3 @@ __Console__
 ```
     Warning: Each child in a list should have a unique “key” prop.
 ```
-
-__Example__
-
-```
-
-```

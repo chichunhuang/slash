@@ -5,7 +5,7 @@ keywords: [javascript,React]
 ---
 
 ## React 中見的父元件與子元件
-* 子元件: 通常指的是 Presentation Component，也就是一個字定義的 UI 單元。
+* 子元件: 通常指的是 Presentation Component，也就是一個自定義的 UI 單元。
 * 父元件: 通常指的是子元件被註冊的地方。也就是 UI 元件被使用的外層元件。
 
 ## props: UI 元件中的唯一參數
@@ -13,7 +13,7 @@ keywords: [javascript,React]
     * 注意: React 元件函數只接受一個參數，即一個 props 物件。
 * 以 Java 來比喻可想像成是 arguments，但仍有差異。
     * 在 React 的語法結構中，僅能 <span style={{color: '#FF1100'}}>接受唯一的一個參數</span> ，那就是 props。
-    * 注意: 語法糖，使用時同常會將參數定義與解構同時寫在一起。
+    * 注意: 語法糖，使用時通常會將參數定義與解構同時寫在一起。
 
 ```javascript
 
@@ -33,6 +33,7 @@ keywords: [javascript,React]
     
 ```javascript
 
+// JS function: 可 Argument list
 function getImageUrl(person, size = 's') {
   return (
     'https://i.imgur.com/' +
@@ -42,6 +43,8 @@ function getImageUrl(person, size = 's') {
   );
 }
 
+// React UI component: 只收 props 物件
+// 下方範例中搭配解構語法，所以有大括號
 function Avatar({ person, size=10 }) {
   return (
     <img
@@ -124,6 +127,8 @@ function Card({ children }) {
 ```
 
 __Markup 嵌套方式__
+* 本範例: 在 markup 決定實際嵌套的 children 實例
+* 與此[範例比較](./React_children_var): 在 jsx 傳入 children props
 
 ```javascript
 // UI 元件嵌套範例

@@ -4,7 +4,7 @@ description: State children 變數
 ---
 
 > children 是 React JSX 中隱含的一個 props 變數  
-> Reaact 有為此 props 做特殊調整以增加程式可讀性
+> React 有為此 props 做特殊調整以增加程式可讀性
 
 
 ## children 隱含 props

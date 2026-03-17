@@ -37,7 +37,7 @@ keywords: [React,Conditional_Rendering]
     }
 ```
 
-### ?:
+### ?: 三元運算
 
 ```javascript
     function Item({ name, isChecked}) {
