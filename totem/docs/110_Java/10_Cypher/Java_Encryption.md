@@ -44,11 +44,11 @@ keywords: [java,cipher,aes,sha,hash]
 ## PBEWITHMD5andDES
 > 類似對稱式加密，只是收送雙方保存的不是金鑰而是一組密碼。
 > 收送雙方持有密碼，App管理人(ex:MIS)則保有雜湊碼，程式中則內藏演算遞迴次數。
-> PBEWITHMD5andDES 演算法多了機個參數
+> PBEWITHMD5andDES 演算法多了幾個參數
 > 1. 使用 pwd 來建立 encryption key。
 > 2. salt string
 > 3. 演算的遞迴次數
 > 也就是說相較於一般將 salt 加入資料加密演算外，
 > PBEWITHMD5andDES A:還會檢查解密金鑰是否正確。
 > 另外，B:也會依據 iteration count 設定值來重複加密所得出的結果。
-> 利用增加 A/B 兩項措施增加北破解的難度。
+> 利用增加 A/B 兩項措施增加被破解的難度。
