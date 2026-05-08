@@ -23,7 +23,7 @@ keywords: [React]
     * SSR : Server Side Rendering \(由 server 進行首次渲染，後由 Browser 接續)
     * RSC : React Server Components
 
-### CSR : Client Side Rendering
+### CSR : Client Side Rendering <span id="CSR"></span>
 * 最原始的 React 用法，Server 只是 __檔案提供者__，所有 __執行與渲染__ 都在 client 發生。
 * 運作流程：
  * 使用者打開網頁
@@ -31,7 +31,7 @@ keywords: [React]
  * React 在 Browser 裡執行
  * React 產生畫面、綁定事件
 
-### SSR : Server Side Rendering
+### SSR : Server Side Rendering <span id="SSR"></span>
 * 運作流程：
  * 使用者請求
  * Server 端執行 React
@@ -39,7 +39,7 @@ keywords: [React]
  * Browser 收到 HTML 先顯示 server 傳來的渲染畫面
  * Browser 端待 JS 載入後，改由 React 接管 \(Hydration)
  
-### RSC : React Server Components
+### RSC : React Server Components <span id="RSC"></span>
 * 與上方差異處在於，部分 Component 只在 Server 端跑，永遠不送到 Browser 端。
 * 相關程式不會出現在 JS bundle，通常是用來存取 DB 或 FS 時使用，並將結果回傳給 Browser。
 

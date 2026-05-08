@@ -271,7 +271,6 @@ __更新陣列 state__ <span id="array_mod"></span>
 
 ```javascript
 export default function BucketList() {
-  let nextId = 0;
   
   const initialList = [
       { id: 0, title: 'Eggs', checked: false },
@@ -279,6 +278,8 @@ export default function BucketList() {
       { id: 2, title: 'Bread flour', checked: true },
   ];
 
+  let nextId = 4;
+  
   const [name, setName] = useState('');
   const [artists, setArtists] = useState([]);
   const [list, setList] = useState(

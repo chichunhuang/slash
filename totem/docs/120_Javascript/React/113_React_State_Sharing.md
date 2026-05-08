@@ -9,7 +9,7 @@ keywords: [javascript,React,State]
 [State Lifting Example](./demo/State_Lifting)  
 
 ## state 被多個 components 共享
-* 多個相依元件實例經由 __同一個 state 狀態變動進行同步渲染__ 
+* <span style={{color: '#0044FF'}}>__Lifting State Up 狀態提升__</span> : 多個相依元件實例經由 __同一個 state 狀態變動進行同步渲染__ 
 * React 中 state 共享的術語稱 lifting state up，包含下列概念。
     * 元件所管理的會變成類似 instance variable，各自獨立。
     * state 在元件外管理，元件被動受 state 狀態改變重新渲染。    

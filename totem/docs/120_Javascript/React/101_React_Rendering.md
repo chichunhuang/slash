@@ -10,9 +10,17 @@ keywords: [React,Conditional_Rendering]
 > 注意 三元運算 與 && 相關運算子的特殊用法   
 
 ## 渲染發生時機
+* 流程: Trigger &gt;&gt; Render &gt;&gt; DOM for html 
 * 渲染指的是 React 呼叫元件 \(Component 本身就是一段 JavaScript 程式片段) 的過程。
 * 初始渲染，元件首次被 React 呼叫並畫出相關外觀。
 * 元件狀態更新之後，因 set 函數引起 state 改變進而觸發後續渲染。
+
+## Render 種類
+* [CSR Client Side Rendering](./React_Exe#CSR): Server 只是 檔案提供者，所有 執行與渲染 都在 client 發生
+* [SSR Server Side Rendering](./React_Exe#SSR): Browser 收到 HTML DOM 先顯示 server 傳來的渲染畫面，Browser 端待 JS 載入後，改由 React 接管 \(Hydration)
+* 若依時機分: 
+    * 初始渲染
+    * 狀態更新時重新渲染
 
 ## 渲染與元件設計
 > 在相同的輸入前提下，渲染應該得到相同的呈現結果。  
