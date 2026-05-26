@@ -5,7 +5,7 @@ sidebar_position: 1
 # Document List (docs)
 
 
-最後更版時間:Fri Feb 13 11:04:00 GMT+08:00 2026
+最後更版時間:Tue May 26 13:48:59 GMT+08:00 2026
 
 ## 010_Ant
 * [Ant執行外部程式 - Ant執行外部程式](/docs/Ant/Ant_External_Script)
@@ -40,7 +40,7 @@ sidebar_position: 1
 * [關閉 Browser or Tab 自動登出 - 關閉 Browser or Tab 自動登出](/docs/Java/Web_Auto_Logout)
 ### 10_Cypher
 * [Java AES 加解密 - 以 Java AES 進行資料加解密](/docs/Java/Cypher/Java_Aes_Cipher)
-* [Java Cipher Intro - Java 加密方式簡介](/docs/Java/Cypher/Java_Encryption)
+* [Java 加密方式簡介 - Java Cipher Intro](/docs/Java/Cypher/Java_Encryption)
 * [KeyPairGenerator 公私鑰 - Java KeyPairGenerator 基本使用方式](/docs/Java/Cypher/Java_KeyPairGenerator)
 * [Java PBE 加解密 - "以 Java PBE PBEWITHMD5andDES 進行資料加解密"](/docs/Java/Cypher/Java_Pbe_Cipher)
 * [Java RSA 加解密 - 以 Java RSA 進行資料加解密](/docs/Java/Cypher/Java_Rsa_Cipher)
@@ -71,7 +71,11 @@ sidebar_position: 1
 * [React 狀態與事件 - React State and Event](/docs/Javascript/React/React_Event)
 * [React 狀態 - React State](/docs/Javascript/React/React_State)
 * [React State 共享 - React State 共享](/docs/Javascript/React/React_State_Sharing)
+* [React State 操作概要 - React State Operation](/docs/Javascript/React/React_State_Sum)
+* [React State 陣列物件操作 - React Array State Operation](/docs/Javascript/React/React_State_Array)
+* [State Immer 套件 - State Immer API](/docs/Javascript/React/React_State_Immer)
 #### demo
+* [React State 陣列物件操作練習 - React Array State Operation Examples](/docs/Javascript/React/demo/React_State_Array_demo)
 * [Toolbar - Toolbar](/docs/Javascript/React/demo/Container)
 * [Input with state - Input with state](/docs/Javascript/React/demo/Input_with_State)
 * [Propagation - Propagation](/docs/Javascript/React/demo/Propagation)
@@ -94,6 +98,7 @@ sidebar_position: 1
 * [PostgreSQL SQL 日誌紀錄 - PostgreSQL Query Log](/docs/PostgreSQL/PostgreSQL_Query_Log)
 * [PostgreSQL Sequence 操作 - PostgreSQL Sequence](/docs/PostgreSQL/PostgreSQL_Sequence)
 * [PostgreSQL Vacuum 操作 - PostgreSQL Vacuum](/docs/PostgreSQL/PostgreSQL_Vacuum)
+* [PostgreSQL varchar 長度 - PostgreSQL varchar 欄位長度](/docs/PostgreSQL/PostgreSQL_VarChar_size)
 * [PostgreSQL 資料匯出成 CSV - PostgreSQL copy CSV to table](/docs/PostgreSQL/PostgreSQL_copy_CSV_to_table)
 * [PostgreSQL 自 CSV 檔匯入資料 - PostgreSQL copy from CSV](/docs/PostgreSQL/PostgreSQL_copy_from_CSV)
 * [PostgresSQL psql 雜項指令 - PostgresSQL psql misc](/docs/PostgreSQL/PostgreSQL_psql_misc)
@@ -114,6 +119,7 @@ sidebar_position: 1
 * [Jsonb 內容的 where 查詢 - Key value 是否存在於 Jsonb](/docs/PostgreSQL/JSONB/PostgreSQL_Contains)
 * [functions - PostgreSQL JSONB 函數](/docs/PostgreSQL/JSONB/PostgreSQL_Functions)
 * [輸出 JSON 格式資料 - PostgreSQL 輸出 Json 格式資料](/docs/PostgreSQL/JSONB/PostgreSQL_Export_As_Json)
+* [JSONB.md](/docs/PostgreSQL/JSONB/JSONB)
 * [PostgreSQL JSONB 內容縮排 - PostgreSQL Format JSONB Object](/docs/PostgreSQL/JSONB/PostgreSQL_Format_JSONB_Object)
 * [PostgreSQL Jsonb 硬碟占用空間 - Jsonb 資料比數與記憶體占用計算](/docs/PostgreSQL/JSONB/PostgreSQL_Size_Memory)
 ## 145_Scala
@@ -153,6 +159,7 @@ sidebar_position: 1
 * [Tomcat Cookie 安全性設定 - Tomcat Cookie 安全性設定- HttpOnly/Secure/SameSite](/docs/Tomcat/Tomcat_Httponly)
 * [Tomcat https 設定 - Tomcat Https Setting](/docs/Tomcat/Tomcat_Https_Private)
 * [Tomcat 自動切割 Log 檔 - Tomcat Log Rotate](/docs/Tomcat/Tomcat_Log_Rotate)
+* [Tomcat 佈署多 Apps - Tomcat 同時佈署多個 Apps 所需設定](/docs/Tomcat/Tomcat_Multi_Apps_SSL)
 * [Tomcat 效能調教 - Tomcat Performernce Tuning](/docs/Tomcat/Tomcat_Performernce_Tuning)
 * [Tomcat 編碼 - Tomcat encoding](/docs/Tomcat/Tomcat_encoding)
 ## 181_Linux
@@ -295,11 +302,6 @@ sidebar_position: 1
 * [Rhinoceros Beetles - Insect-Totem Rhinoceros Beetles](/docs/Graphics/Rhino_01)
 * [Stag Beetle - Insect-Totem Stag Beetle](/docs/Graphics/Stag_Beetle_01)
 * [Stag Beetle-rainbow - Insect-Totem Stag Beetle-rainbow](/docs/Graphics/Stag_Beetle_Rainbow)
-#### VA_PT
-* [弱掃與滲透測試 - Vulnerability Assessment and Penetration Testing](/docs/ISO/27001/VA_PT/VA_PT_Desc)
-* [XFS Cross Frame Scripting - XFS、跨框架腳本攻擊](/docs/ISO/27001/VA_PT/XFS)
-### SBOM
-* [SBOM - 軟體物料清單](/docs/ISO/SBOM/SBOM)
 ## 999_GDPR
 * [Privacy Policy - Privacy Policy](/docs/GDPR/PrivacyPolicy_Eng)
 * [隱私權政策 - 中文版隱私權政策](/docs/GDPR/PrivacyPolicy_zh_tw)
