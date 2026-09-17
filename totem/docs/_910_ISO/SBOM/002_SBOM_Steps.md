@@ -4,6 +4,8 @@ description: 軟體物料清單Windows下建立步驟
 keywords: [ISMS,SBOM]
 ---
 
+import {GoogleImage} from "@site/src/components/google/GoogleImage";
+
 
 ## Step1 Install WinGet
 * 藉由微軟商店安裝winget
@@ -19,7 +21,6 @@ keywords: [ISMS,SBOM]
 ```
     winget install Microsoft.SbomTool
 ```
-import {GoogleImage} from "@site/src/components/google/GoogleImage";
 
 <div>
  {GoogleImage( 'google_file_id',  '001_install_SBOMTool.jpg', {width:'320px', height:'240px', hidden:false, degree:0})}
@@ -29,14 +30,18 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage";
 * 專案資料夾旁建立 SBOM_Report 資料夾
 * 執行掃描
     * 安裝 Microsoft.SbomTool 時已自動設定別名為 sbom
-    * 下列範例專案名為 Zeus
+    * 下列範例專案名為 Totem
+```
+    sbom generate -b "./Totem_SBOM" -bc "./Totem" -pn "Totem" -pv "v1" -ps "nics" -D "true"
+```
 
-```
-    sbom generate -b "./Zeus_SBOM" -bc "./Zeus" -pn "Zeus" -pv "v1" -ps "nics" -D "true"
-```
+<div>
+ {GoogleImage( 'google_file_id',  '002_SBOMResult.jpg', {width:'320px', height:'240px', hidden:false, degree:0})}
+</div>
+
 
 ## Step4 查看 SBOM Report
-* Zeus_SBOM\_manifest\spdx_2.2 下會出現兩個檔案
+* Totem_SBOM\_manifest\spdx_2.2 下會出現兩個檔案
     * manifest.spdx.json 
     * manifest.spdx.json.sha256
 * manifest.spdx.json 下 packages 節點可查看元件版本
@@ -73,10 +78,10 @@ import {GoogleImage} from "@site/src/components/google/GoogleImage";
 ## Summary 
 
 ```
-    sbom generate -b "./Zeus_SBOM_202609" -bc "./Zeus" -pn "Zeus" -pv "v1" -ps "nics" -D "true"
+    sbom generate -b "./Totem_SBOM_202609" -bc "./Totem" -pn "Totem" -pv "v1" -ps "nics" -D "true"
     
-    osv-scanner --sbom="./manifest.spdx.json" --format markdown > "./osv_report_Zeus.md"
-    osv-scanner --sbom="./manifest.spdx.json" --format html > "./osv_report_Zeus.html"
+    osv-scanner --sbom="./manifest.spdx.json" --format markdown > "./osv_report_Totem.md"
+    osv-scanner --sbom="./manifest.spdx.json" --format html > "./osv_report_Totem.html"
 ```
 
 
