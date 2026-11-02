@@ -131,6 +131,94 @@ int * ptr = new int;
 cout << *ptr;
 ```
 
+* 關於陣列 Pointer ATP
+    * Array-to-pointer conversion\(陣列到指標的轉換\)
+    * 陣列自動轉換成指標\(Pointer\)，因此不需要使用 & 取得位址
+    * <span style={{color: '#0044FF'}}>__int* pElement = nums;__</span>，此處未使用 &，自動轉單一元素的指標。
+    * <span style={{color: '#0044FF'}}>__int (*pArray)[3] = &nums;__</span>，指定陣列指標宣告，長度也須提供。
+    
+```
+     int nums[] = {10, 20, 30};
+     int* pElement = nums; //AtP, ptr 單一元素指標。 右側陣列名(nums)，自轉成指標(&nums, 不須&)
+     
+     int (*pArray)[3] = &nums; // pArray 整個陣列的指標
+     //左側括號=> 指標陣列. 型別非 int
+     //右側 &
+
+     cout << "逐個拿元素的指標" << endl;
+     cout << (pElement) << endl; // pointer1, AtP 語法
+     cout << (pElement+1) << endl; // pointer2, 移動一個 int 指標的距離
+     cout << (pElement+2) << endl; // pointer3, 缺括號會變成 address 值+1
+
+     cout << & nums [0] << endl; // pointer1, 由元素查 pointer
+     cout << & (nums [1]) << endl; // pointer2
+     cout << & (nums [2]) << endl; // pointer3
+     cout << "++++++++++++++++"<< endl;
+
+     cout << "指標解參照" << endl;
+     cout << *(pElement+1) << endl;  // 2nd pointer 解參照, 單一元素指標解參照
+     cout <<  (*pArray)[1] << endl; // 陣列參照解參照變成陣列後,再取元素
+     cout << "++++++++++++++++"<< endl;
+```
+
+* 關於陣列\(C-style array\) Pointer ATP 的特殊情境
+    * char 陣列有例外行為, 同樣省略 &。陣列名也自動轉指標名
+    * <span style={{color: '#0044FF'}}>__char* ptr = name;__</span>
+    * char pointer cout 結果完全等同於一般變數
+    
+```
+
+   cout << "--------------特殊 ATP" << endl;
+
+    char name[] = "Tom"; // 同於 : char name[] = {'T', 'o', 'm'};
+    char* ptr = name; //ATP 省略 &,
+    // 一般運算式中，陣列名稱會轉換成第一個元素的指標。
+    // @@ => char 陣列也是
+
+    cout << "(ptr==name)  : "  << (ptr==name) << endl;  // true
+
+    // char pointer 在 cout 輸出時完全等同於一般變數
+    cout << ptr << endl;  // Tom
+    cout << ptr[0] << name[0] << endl;  // TT, 一個是char 指標輸出, 一個是變數值輸出
+    cout << ptr[1] << name[1] << endl;  // oo
+    cout << ptr[2] << name[2] << endl;  // mm
+
+    cout << (ptr) << endl;  // Tom
+    cout << (ptr+1) << endl;  // om, 與 int nums[] = {10, 20, 30}; 取 2nd元素指標 行為不同。此處向右一個 char 位移。
+    cout << (ptr+2) << endl;  // m
+
+    cout << "-----------------------" << endl;
+
+    string name2 = "May";
+    string* ptr2 = &name2; // with &
+
+    cout << ptr2 << endl;  // 0x0000
+    cout << ptr2[0] << endl;  // May
+
+    cout << ptr2[0][0] << endl;  // M
+    cout << ptr2[0][1] << endl;  // a
+    cout << ptr2[0][2] << endl;  // y
+```
+
+* 其他無 ATP 資料結構
+    * Vector 型別有 __函數__ 轉換 pointer。故變數名稱不自動轉指標名。
+    * string 型別也有函數轉換 pointer。
+
+```
+    vector<int> nums = {10, 20, 30};
+
+    int* ptr = nums.data(); 
+    // 非 C-style arrayATP 類，不提供 
+    //int* ptr = nums; 此種用法
+
+    // 取元素方式同於一般陣列。
+    cout << *ptr << endl;      // 10
+    cout << *(ptr + 1) << endl; // 20
+```
+
+```
+
+```
 
 ## friend 授權
 * 在 friend 的 Scope 之內 main class 的 object 可以存取 main object 的 private members。
