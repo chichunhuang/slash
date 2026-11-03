@@ -103,17 +103,19 @@ string & meal = food;    // reference to food
 ```
 
 # Pointer
-* \* 左側
+* \* 號在左側
     * 新建指標變數:由一般變數\(已有資料\)
     * 新建指標變數:先取記憶體，\(尚未有資料\)
 
-* 右側
+* \* 號在右側
     * 由變數取指標: &variable 
     * 由指標取變數值: *ptr 
     * 由指標呼叫成員函數,括號與星: \(*ptr\).function() 
     * 由指標呼叫成員函數,箭頭: ptr -> function() 
 
-```
+* 註: 除了指標宣告與解參照時使用 asterisk，iterator 也使用 \* 解參考取值。但 iterator 指向的非記憶體位置，所以無支援 +1 的 index 操作。
+
+```C
 // Method A
 string food = "Pizza";  // A food variable of type string
 
@@ -136,8 +138,9 @@ cout << *ptr;
     * 陣列自動轉換成指標\(Pointer\)，因此不需要使用 & 取得位址
     * <span style={{color: '#0044FF'}}>__int* pElement = nums;__</span>，此處未使用 &，自動轉單一元素的指標。
     * <span style={{color: '#0044FF'}}>__int (*pArray)[3] = &nums;__</span>，指定陣列指標宣告，長度也須提供。
+    * 陣列元素解參照取值語法 __*(ptr + index)____ ，<span style={{color: '#0044FF'}}>__元素在記憶體中採連續排列__</span>。
     
-```
+```C
      int nums[] = {10, 20, 30};
      int* pElement = nums; //AtP, ptr 單一元素指標。 右側陣列名(nums)，自轉成指標(&nums, 不須&)
      
@@ -162,12 +165,11 @@ cout << *ptr;
 ```
 
 * 關於陣列\(C-style array\) Pointer ATP 的特殊情境
-    * char 陣列有例外行為, 同樣省略 &。陣列名也自動轉指標名
+    * char 陣列有例外行為, 同樣省略 &。陣列名也自動轉指標名 ie ATP
     * <span style={{color: '#0044FF'}}>__char* ptr = name;__</span>
     * char pointer cout 結果完全等同於一般變數
     
-```
-
+```C
    cout << "--------------特殊 ATP" << endl;
 
     char name[] = "Tom"; // 同於 : char name[] = {'T', 'o', 'm'};
@@ -186,6 +188,11 @@ cout << *ptr;
     cout << (ptr) << endl;  // Tom
     cout << (ptr+1) << endl;  // om, 與 int nums[] = {10, 20, 30}; 取 2nd元素指標 行為不同。此處向右一個 char 位移。
     cout << (ptr+2) << endl;  // m
+    
+    cout << "de reference -----------------------" << endl;
+    cout << *(ptr) << endl;  // T, 同於 ptr[0], pointer 解參照取值
+    cout << *(ptr+1) << endl;  // o, 同於 ptr[1]
+    cout << *(ptr+2) << endl;  // m, 同於 ptr[2]
 
     cout << "-----------------------" << endl;
 
@@ -200,11 +207,12 @@ cout << *ptr;
     cout << ptr2[0][2] << endl;  // y
 ```
 
-* 其他無 ATP 資料結構
-    * Vector 型別有 __函數__ 轉換 pointer。故變數名稱不自動轉指標名。
-    * string 型別也有函數轉換 pointer。
+* 其他無 ATP 資料結構: Vector-data
+    * Vector 型別有 __data 函數__ 轉換 pointer。故變數名稱不自動轉指標名，沒有 ATP。
+    * 解參照取值方式與 陣列 相同。__*(ptr + 1)__
+    * 須注意: vector 容量不足時，可能重新配置整段記憶體而造成先前取出指標失效。
 
-```
+```C
     vector<int> nums = {10, 20, 30};
 
     int* ptr = nums.data(); 
@@ -216,9 +224,58 @@ cout << *ptr;
     cout << *(ptr + 1) << endl; // 20
 ```
 
+* 其他無 ATP 資料結構: string-data
+    * string 型別也有 __data 函數__ 轉換 pointer。變數名稱也不自動轉指標名，沒有 ATP。
+
+```C
+    string text = "Hello";
+    char* ptr = text.data();
+    cout << ptr << endl; // Hello
+
+    cout << ptr[0] << text[0] << *(ptr) << endl;  // H H H
+    cout << ptr[1] << text[1] << *(ptr+1) << endl;  // e e e
+    cout << ptr[2] << text[2] << *(ptr+2) << endl;  // l l l
+
+
+    cout << "dereference -----------------------" << endl; // 與 陣列 相同的指標去解參照
+    cout << *(ptr) << endl;  // H
+    cout << *(ptr+1) << endl;  // e
+    cout << *(ptr+2) << endl;  // l
+
+    cout << "string operation-----------------------" << endl;
+    cout << (ptr) << endl;  // Hello
+    cout << (ptr+1) << endl;  // substring, ello
+
+    cout << text.size() << endl;  // size 5
+    cout << text.length() << endl;  // size 5
 ```
 
+* 其他無 ATP 資料結構: array-data
+
+```C
+#include <array>
+using namespace std;
+
+   array<int, 3> nums = {10, 20, 30};
+
+    int* ptr = nums.data();
+
+    cout << *ptr << endl;  // 10
 ```
+
+
+* 速查表
+
+| 資料結構 | 能否直接轉成元素指標 | 取得元素起始位址 |
+| ---- | ---- | ---- |
+| int nums[3] | 可以 | nums 或 &nums[0] |
+| vector\<int\> | 不可以 | nums.data() |
+| array\<int, 3\> | 不可以 | nums.data() |
+| string | 不可以 | text.data() |
+| list\<int\> | 不可以 | 沒有連續元素起始位址 API |
+| deque\<int\> | 不可以 | 沒有 .data() |
+| map\<int,int\> | 不可以 | 使用 iterator 存取元素 |
+| set\<int\> | 不可以 | 使用 iterator 存取元素 |
 
 ## friend 授權
 * 在 friend 的 Scope 之內 main class 的 object 可以存取 main object 的 private members。
@@ -226,7 +283,7 @@ cout << *ptr;
 
 __friend function__
 
-```
+```C
 class Rectangle {
 private:
     double width = 10;
@@ -244,7 +301,7 @@ double area(const Rectangle& r) {
 
 __friend class__
 
-```
+```C
     class Engine {
     private:
         int temperature = 90;
@@ -272,7 +329,7 @@ __friend class__
 * 逗號 Multiple Inheritance
     * Diamond ?? 
 
-```
+```C
     // Base class
     class MyClass {
       public:
@@ -313,7 +370,7 @@ __friend class__
 __C++ 基本多型__
 * 範例無 virtual，多型時 Parent 為顯性
 
-```
+```C
     // Base class
     class Animal {
       public:
@@ -361,7 +418,7 @@ __C++ 多型: Virtual__
 * Base 有 virtual，多型時 Parent 為隱性
 * 多型情境下，使用父類別的原始 function implementation 
 
-```
+```C
 #include <iostream>
 using namespace std;
 
@@ -398,7 +455,7 @@ int main() {
 
 __Function Template__
 
-```
+```C
 // Syntax
     template <typename T>
     return_type function_name(T parameter) {
@@ -422,7 +479,7 @@ __Function Template__
 * 多型\(Polymorphism\)：讓程式依實際物件型別呼叫對應函式。
 * C++20 支援 requires derived_from: 限制泛型可接受範圍
 
-```
+```C
     #include <iostream>
     using namespace std;
     
@@ -473,7 +530,7 @@ __Function Template__
 
 __Class Template__
 
-```
+```C
     template <typename T>
     class ClassName {
       // members and methods using T
