@@ -133,8 +133,9 @@ int * ptr = new int;
 cout << *ptr;
 ```
 
+### ATP Array-to-pointer conversion
 * 關於陣列 Pointer ATP
-    * Array-to-pointer conversion\(陣列到指標的轉換\)
+    * __Array-to-pointer conversion__ \(陣列到指標的轉換\)
     * 陣列自動轉換成指標\(Pointer\)，因此不需要使用 & 取得位址
     * <span style={{color: '#0044FF'}}>__int* pElement = nums;__</span>，此處未使用 &，自動轉單一元素的指標。
     * <span style={{color: '#0044FF'}}>__int (*pArray)[3] = &nums;__</span>，指定陣列指標宣告，長度也須提供。
@@ -276,6 +277,25 @@ using namespace std;
 | deque\<int\> | 不可以 | 沒有 .data() |
 | map\<int,int\> | 不可以 | 使用 iterator 存取元素 |
 | set\<int\> | 不可以 | 使用 iterator 存取元素 |
+
+### Address
+* 宣告原始指標變數\(raw pointer\)，您會建立 __記憶體位址變數__ ，而不是實際的數據變數，且指標宣告 __不會配置儲存資料值所需的記憶體\(backing store\)__ 。
+* 所以，宣告指標後再去參照並給值會拋出錯誤，因資料所需記憶體尚未配置。
+
+```C
+    // 下列範例會發生錯誤
+    int* pNumber;       // 指標變數宣告(僅配置指標所需位址,資料所需記憶體尚未配置, void)
+    *pNumber = 10;      // 語法正確，compile 也能進行。但無法賦值(尚未配置資料記憶體)
+```
+
+```C
+    int number = 10;         //先有資料記憶體   
+    int* pNumber = &number;  //宣告指標變數，address 所指向的記憶體位置存在並且有值。  
+
+    *pNumber = 41;           //允許指標去參考，並重新梗改記憶體內容。
+```
+
+
 
 ## friend 授權
 * 在 friend 的 Scope 之內 main class 的 object 可以存取 main object 的 private members。
